@@ -1,0 +1,9 @@
+[[redirects]]
+from = /:slug
+to = /posts/:slug
+status = 301
+
+[[redirects]]
+from = /:year/:month/:slug
+to = /posts/:year/:month/:slug
+status = 301
