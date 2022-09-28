@@ -1,3 +1,31 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+p {
+    margin-bottom: 15px;
+}
+
+h2, h3, h4, h5 {
+    margin: 15px 0 5px 0;
+    font-weight: bold;
+}
+h2 {
+    font-size: 1.2rem;
+    color: saddlebrown;
+}
+
+h3 {
+    font-size: 1.1rem;
+    color: #B89685;
+}
+
+ul {
+    list-style: square;
+}
+
+ol, ul {
+    margin: auto;
+    padding: 0.5rem 2rem;
+}
+
