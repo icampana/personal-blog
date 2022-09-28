@@ -1,6 +1,6 @@
 import type { Post } from "contentlayer/generated";
 import Link from "next/link";
-import { format, parseISO } from "date-fns";
+import DateComponent from 'components/blocks/Date';
 import Image from 'next/image'
 import striptags from 'striptags';
 
@@ -8,14 +8,14 @@ const getImage = (post: Post) => {
   const { featuredImage, title } = post;
   const imagePath = featuredImage ? featuredImage?.replace('./', '/photos/') : '/images/placeholder.png';
 
-  return <Image src={imagePath} alt={title} layout="responsive" width={320} height={200} placeholder="blur" />
+  return <Image src={imagePath} alt={title} layout="responsive" width={320} height={200} placeholder="blur" blurDataURL='iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mM0SeuuBwADoQGm9h5VIAAAAABJRU5ErkJggg==' />
 };
 
 const PostCard = (post: Post) => {
     return (
       <div className="mb-8">
         <div>
-          <Link href={post.url}>{getImage(post)}</Link>
+          <Link href={post.url}><a>{getImage(post)}</a></Link>
         </div>
 
         <h2 className="text-xl min-h-[60px]">
@@ -24,9 +24,7 @@ const PostCard = (post: Post) => {
           </Link>
         </h2>
 
-        <time dateTime={post.date} className="block text-xs text-gray-600 mb-2">
-          {format(parseISO(post.date), "LLLL d, yyyy")}
-        </time>
+        <DateComponent postDate={post.date} />
 
         <div
           className="text-sm"
