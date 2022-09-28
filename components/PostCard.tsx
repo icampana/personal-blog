@@ -8,7 +8,7 @@ const getImage = (post: Post) => {
   const { featuredImage, title } = post;
   const imagePath = featuredImage ? featuredImage?.replace('./', '/photos/') : '/images/placeholder.png';
 
-  return <Image src={imagePath} alt={title} layout="responsive" width={320} height={200} placeholder="blur" blurDataURL='iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mM0SeuuBwADoQGm9h5VIAAAAABJRU5ErkJggg==' />
+  return <Image src={imagePath} alt={title} layout="responsive" width={320} height={200} placeholder="blur" blurDataURL='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mM0SeuuBwADoQGm9h5VIAAAAABJRU5ErkJggg==' />
 };
 
 const PostCard = (post: Post) => {

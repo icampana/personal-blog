@@ -83,7 +83,7 @@ const PostLayout = ({ post }: { post: Post }) => {
         </div>
 
         <div style={{ position: 'relative', width: '100%', height: '250px', marginBottom: '10px' }}>
-          {imagePath && <Image src={imagePath} alt={post.title} layout="fill" objectFit="cover"  placeholder="blur" blurDataURL='iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mM0SeuuBwADoQGm9h5VIAAAAABJRU5ErkJggg==' />}
+          {imagePath && <Image src={imagePath} alt={post.title} layout="fill" objectFit="cover"  placeholder="blur" blurDataURL='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mM0SeuuBwADoQGm9h5VIAAAAABJRU5ErkJggg==' />}
         </div>
 
         <div className='leading-7' dangerouslySetInnerHTML={{ __html: post.body.html }} />
