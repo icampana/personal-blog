@@ -6,6 +6,7 @@ import BioCard from 'components/BioCard';
 import DateComponent from 'components/blocks/Date';
 import meta from 'metadata.json';
 import { MouseEvent, useState, useEffect } from 'react';
+import Footer from 'components/Footer';
 
 export async function getStaticPaths() {
   const paths: string[] = allPosts.map((post) => post.url);
@@ -70,9 +71,9 @@ const PostLayout = ({ post }: { post: Post }) => {
       </Head>
       <article className="min-w-min max-w-2xl mx-auto py-8">
         <div className='text-left'>
-          <h1 className='font-sans font-bold text-3xl mb-6 hover:underline'>
+          <strong className='font-sans font-bold text-3xl mb-6 hover:underline'>
             <Link href={"/"}>{ site.title }</Link>
-          </h1>
+          </strong>
         </div>
         <div className="text-center mb-8">
           <h1 className='font-sans font-bold text-3xl'>{post.title}</h1>
@@ -94,6 +95,8 @@ const PostLayout = ({ post }: { post: Post }) => {
         <hr />
 
         <BioCard />
+
+        <Footer />
       </article>
     </>
   );

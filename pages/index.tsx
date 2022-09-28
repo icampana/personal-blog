@@ -8,6 +8,7 @@ import { compareDesc } from "date-fns";
 import { allPosts, Post } from "contentlayer/generated";
 import BioCard from 'components/BioCard';
 import meta from 'metadata.json';
+import Footer from 'components/Footer';
 
 export async function getStaticProps() {
   const { posts: postsConfig } = meta;
@@ -51,7 +52,7 @@ const Home: NextPage<{ posts: Post[]}> = (props) => {
         </div>
       </main>
 
-      <footer></footer>
+      <Footer />
     </div>
   )
 }

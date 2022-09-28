@@ -8,6 +8,7 @@ import { compareDesc } from "date-fns";
 import { allPosts, Post } from "contentlayer/generated";
 import BioCard from 'components/BioCard';
 import meta from 'metadata.json';
+import Footer from 'components/Footer';
 
 export async function getStaticPaths() {
   const { posts: postsConfig } = meta;
@@ -51,8 +52,13 @@ const Home: NextPage<{ posts: Post[], currentPage: number}> = (props) => {
       </Head>
 
       <main className='max-w-6xl mx-auto'>
-        <h1 className='font-sans font-bold text-3xl hover:underline'>
-          <Link href={"/"}><>Lista de publicaciones en el blog de { site.title }</></Link>
+        <div className='text-left'>
+          <strong className='font-sans font-bold text-4xl mb-6 hover:underline'>
+            <Link href={"/"}>{ site.title }</Link>
+          </strong>
+        </div>
+        <h1 className='font-sans font-bold text-2xl'>
+          Lista de publicaciones por fecha
         </h1>
 
         <BioCard />
@@ -64,7 +70,7 @@ const Home: NextPage<{ posts: Post[], currentPage: number}> = (props) => {
             ))}
           </div>
 
-          <div className='h-50'>
+          <div>
             {(currentPage > 1) && <Link href={`/posts/page/${currentPage - 1}`}>
               <a className="block float-left py-5 font-bold text-xl text-red-700">← Anterior</a>
             </Link>}
@@ -72,12 +78,13 @@ const Home: NextPage<{ posts: Post[], currentPage: number}> = (props) => {
             <Link href={`/posts/page/${currentPage + 1}`}>
               <a className="block float-right py-5 font-bold text-xl text-red-700">Siguiente →</a>
             </Link>
+            <div className='clear-both' />
           </div>
 
         </div>
       </main>
 
-      <footer></footer>
+      <Footer />
     </div>
   )
 }
