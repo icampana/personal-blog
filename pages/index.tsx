@@ -30,14 +30,16 @@ const Home: NextPage<{ posts: Post[]}> = (props) => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className='max-w-6xl mx-auto sm:px-3'>
-        <h1 className='font-sans font-bold text-5xl hover:underline'>
-          <Link href={"/"}>{ site.title }</Link>
-        </h1>
+      <main className='max-w-6xl mx-auto'>
+        <header className='px-1'>
+          <h1 className='font-sans font-bold text-5xl'>
+            <Link href={"/"}><a>{ site.title }</a></Link>
+          </h1>
 
-        <BioCard />
+          <BioCard />
+        </header>
 
-        <div>
+        <div className='px-2'>
           <h2 className='my-10 grow text-xl font-bold'>Últimas publicaciones</h2>
           <div className="mx-auto py-5 grid grid-cols-1 lg:grid-cols-3 gap-6">
             {posts.map((post, idx) => (
@@ -50,9 +52,8 @@ const Home: NextPage<{ posts: Post[]}> = (props) => {
           </Link>
 
         </div>
+        <Footer />
       </main>
-
-      <Footer />
     </div>
   )
 }
