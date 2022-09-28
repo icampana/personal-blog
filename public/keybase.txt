@@ -1,0 +1,56 @@
+==================================================================
+https://keybase.io/icampana
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://ivan.campananaranjo.com
+  * I am icampana (https://keybase.io/icampana) on keybase.
+  * I have a public key ASA1jggqmFLhj3LylK-06uHCu1ry2l7E5yWPaDM65B6mUwo
+
+To do so, I am signing this object:
+
+{
+  "body": {
+    "key": {
+      "eldest_kid": "0120358e082a9852e18f72f294afb4eae1c2bb5af2da5ec4e7258f68333ae41ea6530a",
+      "host": "keybase.io",
+      "kid": "0120358e082a9852e18f72f294afb4eae1c2bb5af2da5ec4e7258f68333ae41ea6530a",
+      "uid": "80d31116f2bc0e017d91234670b92b19",
+      "username": "icampana"
+    },
+    "merkle_root": {
+      "ctime": 1572408991,
+      "hash": "a6f5d5167f433a3a9ab33585e6ff7b97850d6e5f666ab97525022a37c99d357f0941859995257161a8845c67c0591a15b74a96a1d936a64432c0fd279cb9e4e1",
+      "hash_meta": "46b382c4c51d9c79a30089a4d0f58dd0665af7885be399390d384d5f7cdee3f0",
+      "seqno": 8511668
+    },
+    "service": {
+      "entropy": "4EjrAHkVrzvV3nVlCgAN03Mb",
+      "hostname": "ivan.campananaranjo.com",
+      "protocol": "https:"
+    },
+    "type": "web_service_binding",
+    "version": 2
+  },
+  "client": {
+    "name": "keybase.io go client",
+    "version": "4.7.2"
+  },
+  "ctime": 1572409013,
+  "expire_in": 504576000,
+  "prev": "103e79ee0740d9b21dfedc9ff62a8d24065d042c9f95eb41365ee5e111e00937",
+  "seqno": 6,
+  "tag": "signature"
+}
+
+which yields the signature:
+
+hKRib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEgNY4IKphS4Y9y8pSvtOrhwrta8tpexOclj2gzOuQeplMKp3BheWxvYWTESpcCBsQgED557gdA2bId/tyf9iqNJAZdBCyfletBNl7l4RHgCTfEIDhphNntSxPhAXYegTb7FRvRx0iPEIyJXLojgGiTUzidAgHCo3NpZ8RAL7yjEoH1iK6KwZ8xUSdEtgIb0VLUAD+g636V4vCtshsmro+0AXU9mcvFjxy2QM0fStVEIR5veT7/RLbqBJ80AqhzaWdfdHlwZSCkaGFzaIKkdHlwZQildmFsdWXEICp6HiN9v3jjYQ1mTlDLAhT/36IDcEx27aAcJF4DXh5yo3RhZ80CAqd2ZXJzaW9uAQ==
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/icampana
+
+==================================================================
