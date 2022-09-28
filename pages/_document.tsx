@@ -1,4 +1,5 @@
 import Document, { Html, Head, Main, NextScript, DocumentContext } from 'next/document'
+import Script from 'next/script'
 
 class MyDocument extends Document {
   static async getInitialProps(ctx: DocumentContext) {
@@ -7,6 +8,8 @@ class MyDocument extends Document {
   }
 
   render() {
+    const propertyID = 'UA-275823-1';
+
     return (
       <Html>
         <Head>
@@ -17,6 +20,21 @@ class MyDocument extends Document {
         <body>
           <Main />
           <NextScript />
+
+          {/* Global site tag (gtag.js) - Google Analytics */}
+          <Script
+            src={`https://www.googletagmanager.com/gtag/js?id=${propertyID}`}
+            strategy="afterInteractive"
+          />
+          <Script id="google-analytics" strategy="afterInteractive">
+            {`
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){window.dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              gtag('config', '${propertyID}');
+            `}
+          </Script>
         </body>
       </Html>
     )
