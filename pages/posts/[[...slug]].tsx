@@ -5,7 +5,7 @@ import Image from 'next/image'
 import BioCard from 'components/BioCard';
 import DateComponent from 'components/blocks/Date';
 import meta from 'metadata.json';
-import { MouseEvent, useState } from 'react';
+import { MouseEvent, useState, useEffect } from 'react';
 
 export async function getStaticPaths() {
   const paths: string[] = allPosts.map((post) => post.url);
@@ -47,13 +47,21 @@ const PostLayout = ({ post }: { post: Post }) => {
     window.scrollTo({top: 0, left: 0, behavior: 'smooth'});
   }
 
-  window.onscroll = function () {
-    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-      setShowReturn(true);
-    } else {
-      setShowReturn(false);
+  useEffect(() => {
+    function onScroll() {
+      if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        setShowReturn(true);
+      } else {
+        setShowReturn(false);
+      }
     }
-  };
+
+    window.addEventListener("scroll", onScroll);
+
+    return function unMount() {
+      window.removeEventListener("scroll", onScroll);
+    };
+  }), [];
 
   return (
     <>
