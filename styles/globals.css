@@ -3,21 +3,18 @@
 @tailwind utilities;
 
 p {
-    margin-bottom: 15px;
+    @apply mb-4;
 }
 
 h2, h3, h4, h5 {
-    margin: 15px 0 5px 0;
-    font-weight: bold;
+    @apply font-bold mt-4 mx-0 mb-1;
 }
 h2 {
-    font-size: 1.2rem;
-    color: saddlebrown;
+    @apply text-xl text-amber-800;
 }
 
 h3 {
-    font-size: 1.1rem;
-    color: #B89685;
+    @apply text-yellow-900 text-lg;
 }
 
 ul {
@@ -25,7 +22,6 @@ ul {
 }
 
 ol, ul {
-    margin: auto;
-    padding: 0.5rem 2rem;
+    @apply mx-auto my-auto py-2 px-8;
 }
 
