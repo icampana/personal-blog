@@ -43,11 +43,11 @@ const PostLayout = ({ post }: { post: Post }) => {
   return (
     <>
       <Head>
-        <title>{post.title}</title>
+        <title>{post.title} | { site.title }</title>
       </Head>
       <article className="min-w-min max-w-2xl mx-auto py-8">
         <div className='text-left'>
-          <h1 className='font-sans font-bold text-5xl mb-6 hover:underline'>
+          <h1 className='font-sans font-bold text-3xl mb-6 hover:underline'>
             <Link href={"/"}>{ site.title }</Link>
           </h1>
         </div>
