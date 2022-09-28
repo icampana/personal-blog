@@ -5,6 +5,8 @@ import Image from 'next/image'
 import BioCard from 'components/BioCard';
 import DateComponent from 'components/blocks/Date';
 import meta from 'metadata.json';
+import { NextSeo } from 'next-seo';
+import striptags from 'striptags';
 import { MouseEvent, useState, useEffect } from 'react';
 import Footer from 'components/Footer';
 
@@ -42,6 +44,8 @@ const PostLayout = ({ post }: { post: Post }) => {
   const { site } = meta;
   const imagePath = post.featuredImage || '/images/placeholder.png';
   const readingTime = `${Math.round(post.readingTime.minutes)} minutos`;
+  const postCanonical = `${site.siteUrl}${post.url}`;
+  const postDescription = post.description || striptags(post.body.html).slice(0, 200);
 
   const backToTop = (event: MouseEvent<HTMLButtonElement>) => {
     event.preventDefault();
@@ -69,6 +73,19 @@ const PostLayout = ({ post }: { post: Post }) => {
       <Head>
         <title>{post.title} | { site.title }</title>
       </Head>
+      <NextSeo
+        title={`${post.title} | ${site.title}` }
+        description={postDescription}
+        canonical={postCanonical}
+        openGraph={{
+          url: postCanonical,
+          title: post.title,
+          description: postDescription,
+          images: [
+            { url: `${site.siteUrl}${imagePath}` },
+          ],
+        }}
+      />
       <article className="min-w-min max-w-4xl mx-auto py-8 sm:px-3">
         <header className='px-2'>
           <div className='text-left'>
