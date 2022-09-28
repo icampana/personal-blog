@@ -1,4 +1,7 @@
-[[redirects]]
-from = "/:year/:month/:slug"
-to = "/posts/:year/:month/:slug"
-status = 301
+[[plugins]]
+package = "@netlify/plugin-nextjs"
+
+#[[redirects]]
+#from = "/:year/:month/:slug"
+#to = "/posts/:year/:month/:slug"
+#status = 301
