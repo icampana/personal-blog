@@ -3,8 +3,8 @@ author: ivan
 categories:
 - Sin categoría
 comments: true
-date: 2009-01-05 10:16:00+00:00
-featuredImage: ./dsc04008-Modificada.jpg
+date: 2009-01-05 10:16:00
+featuredImage: /photos/dsc04008-Modificada.jpg
 layout: post
 path: /2009/01/nuevo-ao-sueo-cumplido-playa-y-diversin
 slug: nuevo-ao-sueo-cumplido-playa-y-diversin

@@ -3,8 +3,8 @@ author: ivan
 categories:
 - Sin categoría
 comments: true
-date: 2008-07-23 09:49:00+00:00
-featuredImage: ./dreamsa.jpg
+date: 2008-07-23 09:49:00
+featuredImage: /photos/dreamsa.jpg
 layout: post
 path: /2008/07/el-fantasma-en-la-mquina
 slug: el-fantasma-en-la-mquina

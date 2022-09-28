@@ -3,8 +3,8 @@ author: ivan
 categories:
 - Sin categoría
 comments: true
-date: 2009-05-13 21:16:00+00:00
-featuredImage: ./pdas.jpg
+date: 2009-05-13 21:16:00
+featuredImage: /photos/pdas.jpg
 layout: post
 path: /2009/05/good-bye-my-lover-good-by-my-friend-you
 slug: good-bye-my-lover-good-by-my-friend-you

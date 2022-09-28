@@ -3,8 +3,8 @@ author: ivan
 categories:
 - Sin categoría
 comments: true
-date: 2008-10-17 10:32:00+00:00
-featuredImage: ./Cains-BallRoom.jpg
+date: 2008-10-17 10:32:00
+featuredImage: /photos/Cains-BallRoom.jpg
 layout: post
 path: /2008/10/recordar-viejos-tiempos
 slug: recordar-viejos-tiempos

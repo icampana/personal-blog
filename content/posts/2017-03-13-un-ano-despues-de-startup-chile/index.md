@@ -6,8 +6,8 @@ categories:
 - Empresa
 - Tecnología
 comments: true
-date: 2017-03-13 06:26:25+00:00
-featuredImage: ./article-sup-chile-e1489386563729.jpg
+date: 2017-03-13 06:26:25
+featuredImage: /photos/article-sup-chile-e1489386563729.jpg
 layout: post
 path: /2017/03/un-ano-despues-de-startup-chile
 slug: un-ano-despues-de-startup-chile

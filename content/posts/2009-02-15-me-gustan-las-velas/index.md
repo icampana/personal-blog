@@ -3,8 +3,8 @@ author: ivan
 categories:
 - Sin categoría
 comments: true
-date: 2009-02-15 09:14:00+00:00
-featuredImage: ./img_0195.jpg
+date: 2009-02-15 09:14:00
+featuredImage: /photos/img_0195.jpg
 layout: post
 path: /2009/02/me-gustan-las-velas
 slug: me-gustan-las-velas

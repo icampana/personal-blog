@@ -3,8 +3,8 @@ author: ivan
 categories:
 - Sin categoría
 comments: true
-date: 2008-10-11 06:44:00+00:00
-featuredImage: ./fruitpromo.jpg
+date: 2008-10-11 06:44:00
+featuredImage: /photos/fruitpromo.jpg
 layout: post
 path: /2008/10/el-ataque-de-las-frutas-mutantes-de
 slug: el-ataque-de-las-frutas-mutantes-de

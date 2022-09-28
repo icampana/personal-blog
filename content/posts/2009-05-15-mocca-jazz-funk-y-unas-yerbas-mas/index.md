@@ -3,8 +3,8 @@ author: ivan
 categories:
 - Sin categoría
 comments: true
-date: 2009-05-15 23:21:00+00:00
-featuredImage: ./Mocca.png
+date: 2009-05-15 23:21:00
+featuredImage: /photos/Mocca.png
 layout: post
 path: /2009/05/mocca-jazz-funk-y-unas-yerbas-mas
 slug: mocca-jazz-funk-y-unas-yerbas-mas

@@ -3,8 +3,8 @@ author: ivan
 categories:
 - Sin categoría
 comments: true
-date: 2005-07-15 07:38:00+00:00
-featuredImage: ./Toaster.jpg
+date: 2005-07-15 07:38:00
+featuredImage: /photos/Toaster.jpg
 layout: post
 path: /2005/07/geekie-cmo-usar-el-winamp-para-mostrar
 slug: geekie-cmo-usar-el-winamp-para-mostrar

@@ -3,8 +3,8 @@ author: ivan
 categories:
 - Sin categoría
 comments: true
-date: 2008-08-07 22:26:00+00:00
-featuredImage: ./2734896340_df57bc403e_m.jpg
+date: 2008-08-07 22:26:00
+featuredImage: /photos/2734896340_df57bc403e_m.jpg
 layout: post
 path: /2008/08/viaje-al-cajas-azuay-ecuador
 slug: viaje-al-cajas-azuay-ecuador

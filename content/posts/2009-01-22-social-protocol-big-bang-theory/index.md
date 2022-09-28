@@ -3,8 +3,8 @@ author: ivan
 categories:
 - Sin categoría
 comments: true
-date: 2009-01-22 18:18:00+00:00
-featuredImage: ./jim-parsons-sheldon-big-bang-theory-photo.jpg
+date: 2009-01-22 18:18:00
+featuredImage: /photos/jim-parsons-sheldon-big-bang-theory-photo.jpg
 layout: post
 path: /2009/01/social-protocol-big-bang-theory
 slug: social-protocol-big-bang-theory

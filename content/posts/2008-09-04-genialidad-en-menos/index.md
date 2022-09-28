@@ -3,8 +3,8 @@ author: ivan
 categories:
 - Sin categoría
 comments: true
-date: 2008-09-04 09:07:00+00:00
-featuredImage: ./minimalist.jpg
+date: 2008-09-04 09:07:00
+featuredImage: /photos/minimalist.jpg
 layout: post
 path: /2008/09/genialidad-en-menos
 slug: genialidad-en-menos

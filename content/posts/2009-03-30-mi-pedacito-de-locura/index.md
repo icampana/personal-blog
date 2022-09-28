@@ -3,8 +3,8 @@ author: ivan
 categories:
 - Sin categoría
 comments: true
-date: 2009-03-30 17:28:00+00:00
-featuredImage: ./img_0803.jpg
+date: 2009-03-30 17:28:00
+featuredImage: /photos/img_0803.jpg
 layout: post
 path: /2009/03/mi-pedacito-de-locura
 slug: mi-pedacito-de-locura

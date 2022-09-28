@@ -6,8 +6,8 @@ categories:
 - Empresa
 - Tecnología
 comments: true
-date: 2017-08-12 04:16:42+00:00
-featuredImage: ./working-remotely.jpg
+date: 2017-08-12 04:16:42
+featuredImage: /photos/working-remotely.jpg
 layout: post
 path: /2017/08/trabajo-remoto-ecuador-posible
 slug: trabajo-remoto-ecuador-posible

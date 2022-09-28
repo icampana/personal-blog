@@ -3,8 +3,8 @@ author: ivan
 categories:
 - Sin categoría
 comments: true
-date: 2010-10-01 13:01:00+00:00
-featuredImage: ./social_networking.jpg
+date: 2010-10-01 13:01:00
+featuredImage: /photos/social_networking.jpg
 layout: post
 path: /2010/10/estados-de-animo-y-el-efecto-de-las
 slug: estados-de-animo-y-el-efecto-de-las

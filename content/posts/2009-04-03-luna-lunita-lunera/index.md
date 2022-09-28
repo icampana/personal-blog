@@ -3,8 +3,8 @@ author: ivan
 categories:
 - Sin categoría
 comments: true
-date: 2009-04-03 18:51:00+00:00
-featuredImage: ./luna_corregida.jpg
+date: 2009-04-03 18:51:00
+featuredImage: /photos/luna_corregida.jpg
 layout: post
 path: /2009/04/luna-lunita-lunera
 slug: luna-lunita-lunera

@@ -3,8 +3,8 @@ author: ivan
 categories:
 - Sin categoría
 comments: true
-date: 2008-08-14 04:15:00+00:00
-featuredImage: ./Comfortably1.jpg
+date: 2008-08-14 04:15:00
+featuredImage: /photos/Comfortably1.jpg
 layout: post
 path: /2008/08/comfortably-numb
 slug: comfortably-numb

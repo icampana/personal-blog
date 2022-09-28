@@ -3,8 +3,8 @@ author: ivan
 categories:
 - Sin categoría
 comments: true
-date: 2008-08-06 09:25:00+00:00
-featuredImage: ./clavo1.jpg
+date: 2008-08-06 09:25:00
+featuredImage: /photos/clavo1.jpg
 layout: post
 path: /2008/08/un-clavo-saca-otro-clavo
 slug: un-clavo-saca-otro-clavo

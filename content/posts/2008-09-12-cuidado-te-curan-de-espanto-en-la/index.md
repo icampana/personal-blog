@@ -3,8 +3,8 @@ author: ivan
 categories:
 - Sin categoría
 comments: true
-date: 2008-09-12 05:31:00+00:00
-featuredImage: ./GC_Blogpic2_metrovi2.jpg
+date: 2008-09-12 05:31:00
+featuredImage: /photos/GC_Blogpic2_metrovi2.jpg
 layout: post
 path: /2008/09/cuidado-te-curan-de-espanto-en-la
 slug: cuidado-te-curan-de-espanto-en-la

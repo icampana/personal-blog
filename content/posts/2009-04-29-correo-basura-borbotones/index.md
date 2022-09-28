@@ -3,8 +3,8 @@ author: ivan
 categories:
 - Sin categoría
 comments: true
-date: 2009-04-29 20:34:00+00:00
-featuredImage: ./spam-mail.jpg
+date: 2009-04-29 20:34:00
+featuredImage: /photos/spam-mail.jpg
 layout: post
 path: /2009/04/correo-basura-borbotones
 slug: correo-basura-borbotones

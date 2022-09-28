@@ -3,8 +3,8 @@ author: ivan
 categories:
 - Sin categoría
 comments: true
-date: 2008-12-19 11:57:00+00:00
-featuredImage: ./DSC03878.jpg
+date: 2008-12-19 11:57:00
+featuredImage: /photos/DSC03878.jpg
 layout: post
 path: /2008/12/les-presento-el-chiphone
 slug: les-presento-el-chiphone

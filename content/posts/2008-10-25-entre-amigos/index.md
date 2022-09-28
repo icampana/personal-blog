@@ -3,8 +3,8 @@ author: ivan
 categories:
 - Sin categoría
 comments: true
-date: 2008-10-25 10:57:00+00:00
-featuredImage: ./Imagen052.jpg
+date: 2008-10-25 10:57:00
+featuredImage: /photos/Imagen052.jpg
 layout: post
 path: /2008/10/entre-amigos
 slug: entre-amigos

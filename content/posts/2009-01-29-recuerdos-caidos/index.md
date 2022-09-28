@@ -3,8 +3,8 @@ author: ivan
 categories:
 - Sin categoría
 comments: true
-date: 2009-01-29 07:19:00+00:00
-featuredImage: ./2273147576_a46d34d44b_b.jpg
+date: 2009-01-29 07:19:00
+featuredImage: /photos/2273147576_a46d34d44b_b.jpg
 layout: post
 path: /2009/01/recuerdos-caidos
 slug: recuerdos-caidos

@@ -3,8 +3,8 @@ author: ivan
 categories:
 - Sin categoría
 comments: true
-date: 2004-12-25 02:20:00+00:00
-featuredImage: ./xmas_e-van.jpg
+date: 2004-12-25 02:20:00
+featuredImage: /photos/xmas_e-van.jpg
 layout: post
 path: /2004/12/tiempo-de-navidad
 slug: tiempo-de-navidad

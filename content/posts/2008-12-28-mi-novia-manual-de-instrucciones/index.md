@@ -3,8 +3,8 @@ author: ivan
 categories:
 - Sin categoría
 comments: true
-date: 2008-12-28 06:30:00+00:00
-featuredImage: ./portada_libro.jpg
+date: 2008-12-28 06:30:00
+featuredImage: /photos/portada_libro.jpg
 layout: post
 path: /2008/12/mi-novia-manual-de-instrucciones
 slug: mi-novia-manual-de-instrucciones

@@ -3,8 +3,8 @@ author: ivan
 categories:
 - Palabras
 comments: true
-date: 2009-02-26 11:44:00+00:00
-featuredImage: ./no_love.jpg
+date: 2009-02-26 11:44:00
+featuredImage: /photos/no_love.jpg
 layout: post
 path: /2009/02/no-es-amor
 post_format:

@@ -3,8 +3,8 @@ author: ivan
 categories:
 - Sin categoría
 comments: true
-date: 2009-03-27 01:34:00+00:00
-featuredImage: ./piscis.jpg
+date: 2009-03-27 01:34:00
+featuredImage: /photos/piscis.jpg
 layout: post
 path: /2009/03/sera-de-creerles
 slug: sera-de-creerles

@@ -3,8 +3,8 @@ author: ivan
 categories:
 - Sin categoría
 comments: true
-date: 2006-06-28 06:25:00+00:00
-featuredImage: ./bandera_ecuador.jpg
+date: 2006-06-28 06:25:00
+featuredImage: /photos/bandera_ecuador.jpg
 layout: post
 path: /2006/06/de-alegras-mundiales-y-falsos
 slug: de-alegras-mundiales-y-falsos

@@ -3,8 +3,8 @@ author: ivan
 categories:
 - Sin categoría
 comments: true
-date: 2008-03-05 10:53:00+00:00
-featuredImage: ./Pantallazo-Mozilla-Firefox.png
+date: 2008-03-05 10:53:00
+featuredImage: /photos/Pantallazo-Mozilla-Firefox.png
 layout: post
 path: /2008/03/bolivariano-wtf
 slug: bolivariano-wtf

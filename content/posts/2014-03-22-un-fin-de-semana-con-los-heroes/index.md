@@ -3,8 +3,8 @@ author: ivan
 categories:
 - Sin categoría
 comments: true
-date: 2014-03-22 03:59:00+00:00
-featuredImage: ./mariano_diego_lucho-1.jpg
+date: 2014-03-22 03:59:00
+featuredImage: /photos/mariano_diego_lucho-1.jpg
 layout: post
 path: /2014/03/un-fin-de-semana-con-los-heroes
 slug: un-fin-de-semana-con-los-heroes

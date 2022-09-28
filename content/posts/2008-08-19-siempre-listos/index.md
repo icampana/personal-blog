@@ -3,8 +3,8 @@ author: ivan
 categories:
 - Sin categoría
 comments: true
-date: 2008-08-19 09:25:00+00:00
-featuredImage: ./baden-powel.png
+date: 2008-08-19 09:25:00
+featuredImage: /photos/baden-powel.png
 layout: post
 path: /2008/08/siempre-listos
 slug: siempre-listos

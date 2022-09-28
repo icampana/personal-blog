@@ -3,8 +3,8 @@ author: ivan
 categories:
 - Sin categoría
 comments: true
-date: 2008-09-17 06:35:00+00:00
-featuredImage: ./dsc03517.jpg
+date: 2008-09-17 06:35:00
+featuredImage: /photos/dsc03517.jpg
 layout: post
 path: /2008/09/venciendo-miedos-y-paseando-en-e
 slug: venciendo-miedos-y-paseando-en-e

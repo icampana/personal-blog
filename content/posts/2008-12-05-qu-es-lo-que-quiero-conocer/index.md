@@ -3,8 +3,8 @@ author: ivan
 categories:
 - Sin categoría
 comments: true
-date: 2008-12-05 03:33:00+00:00
-featuredImage: ./diva_nicotina.jpg
+date: 2008-12-05 03:33:00
+featuredImage: /photos/diva_nicotina.jpg
 layout: post
 path: /2008/12/qu-es-lo-que-quiero-conocer
 slug: qu-es-lo-que-quiero-conocer

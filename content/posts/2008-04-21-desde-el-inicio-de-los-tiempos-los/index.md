@@ -3,8 +3,8 @@ author: ivan
 categories:
 - Sin categoría
 comments: true
-date: 2008-04-21 04:37:00+00:00
-featuredImage: ./hombresvsmujerescolorweb.jpg
+date: 2008-04-21 04:37:00
+featuredImage: /photos/hombresvsmujerescolorweb.jpg
 layout: post
 path: /2008/04/desde-el-inicio-de-los-tiempos-los
 slug: desde-el-inicio-de-los-tiempos-los

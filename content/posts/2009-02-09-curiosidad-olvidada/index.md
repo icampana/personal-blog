@@ -3,8 +3,8 @@ author: ivan
 categories:
 - Sin categoría
 comments: true
-date: 2009-02-09 22:30:00+00:00
-featuredImage: ./Imagen021.jpg
+date: 2009-02-09 22:30:00
+featuredImage: /photos/Imagen021.jpg
 layout: post
 path: /2009/02/curiosidad-olvidada
 slug: curiosidad-olvidada

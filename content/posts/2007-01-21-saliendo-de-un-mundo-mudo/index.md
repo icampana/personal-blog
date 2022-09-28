@@ -3,8 +3,8 @@ author: ivan
 categories:
 - Sin categoría
 comments: true
-date: 2007-01-21 02:57:00+00:00
-featuredImage: ./audifonos.png
+date: 2007-01-21 02:57:00
+featuredImage: /photos/audifonos.png
 layout: post
 path: /2007/01/saliendo-de-un-mundo-mudo
 slug: saliendo-de-un-mundo-mudo

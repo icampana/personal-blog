@@ -3,8 +3,8 @@ author: ivan
 categories:
 - Sin categoría
 comments: true
-date: 2006-08-10 03:41:00+00:00
-featuredImage: ./wontfix.jpg
+date: 2006-08-10 03:41:00
+featuredImage: /photos/wontfix.jpg
 layout: post
 path: /2006/08/no-i-will-not-fix-your-computer
 slug: no-i-will-not-fix-your-computer

@@ -3,8 +3,8 @@ author: ivan
 categories:
 - Sin categoría
 comments: true
-date: 2009-02-03 10:55:00+00:00
-featuredImage: ./6.13-angry-man.jpg
+date: 2009-02-03 10:55:00
+featuredImage: /photos/6.13-angry-man.jpg
 layout: post
 path: /2009/02/angry-man-training-method
 slug: angry-man-training-method

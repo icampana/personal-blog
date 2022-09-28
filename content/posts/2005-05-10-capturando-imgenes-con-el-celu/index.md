@@ -3,8 +3,8 @@ author: ivan
 categories:
 - Sin categoría
 comments: true
-date: 2005-05-10 09:24:00+00:00
-featuredImage: ./collage_camara.jpg
+date: 2005-05-10 09:24:00
+featuredImage: /photos/collage_camara.jpg
 layout: post
 path: /2005/05/capturando-imgenes-con-el-celu
 slug: capturando-imgenes-con-el-celu

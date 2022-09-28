@@ -3,8 +3,8 @@ author: ivan
 categories:
 - Sin categoría
 comments: true
-date: 2006-01-13 07:40:00+00:00
-featuredImage: ./contrato_virginidad.jpg
+date: 2006-01-13 07:40:00
+featuredImage: /photos/contrato_virginidad.jpg
 layout: post
 path: /2006/01/contrato-de-virginidad
 slug: contrato-de-virginidad

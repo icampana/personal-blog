@@ -3,8 +3,8 @@ author: ivan
 categories:
 - Sin categoría
 comments: true
-date: 2009-01-31 12:25:00+00:00
-featuredImage: ./Eres-un-Pendejo-Youre-My_B8B57720.jpg
+date: 2009-01-31 12:25:00
+featuredImage: /photos/Eres-un-Pendejo-Youre-My_B8B57720.jpg
 layout: post
 path: /2009/01/los-pendejos-y-zeitgeis
 slug: los-pendejos-y-zeitgeis

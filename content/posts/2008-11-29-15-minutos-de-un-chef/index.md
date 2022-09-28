@@ -3,8 +3,8 @@ author: ivan
 categories:
 - Sin categoría
 comments: true
-date: 2008-11-29 05:31:00+00:00
-featuredImage: ./DSC03782.jpg
+date: 2008-11-29 05:31:00
+featuredImage: /photos/DSC03782.jpg
 layout: post
 path: /2008/11/15-minutos-de-un-chef
 post_format:

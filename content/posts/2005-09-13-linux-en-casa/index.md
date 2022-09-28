@@ -3,8 +3,8 @@ author: ivan
 categories:
 - Sin categoría
 comments: true
-date: 2005-09-13 04:25:00+00:00
-featuredImage: ./linux_caleta.jpg
+date: 2005-09-13 04:25:00
+featuredImage: /photos/linux_caleta.jpg
 layout: post
 path: /2005/09/linux-en-casa
 slug: linux-en-casa

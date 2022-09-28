@@ -3,8 +3,8 @@ author: ivan
 categories:
 - Sin categoría
 comments: true
-date: 2005-09-02 04:32:00+00:00
-featuredImage: ./happy-girlfriend1.jpg
+date: 2005-09-02 04:32:00
+featuredImage: /photos/happy-girlfriend1.jpg
 layout: post
 path: /2005/09/pensamientos-porqu-las-mujeren-te
 slug: pensamientos-porqu-las-mujeren-te

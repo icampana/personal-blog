@@ -3,8 +3,8 @@ author: ivan
 categories:
 - Sin categoría
 comments: true
-date: 2005-01-22 11:35:00+00:00
-featuredImage: ./Smurf_AngelDevil.jpg
+date: 2005-01-22 11:35:00
+featuredImage: /photos/Smurf_AngelDevil.jpg
 layout: post
 path: /2005/01/la-dualidad
 slug: la-dualidad

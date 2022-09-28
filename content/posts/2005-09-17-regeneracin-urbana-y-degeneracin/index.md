@@ -3,8 +3,8 @@ author: ivan
 categories:
 - Sin categoría
 comments: true
-date: 2005-09-17 05:27:00+00:00
-featuredImage: ./gye1.jpg
+date: 2005-09-17 05:27:00
+featuredImage: /photos/gye1.jpg
 layout: post
 path: /2005/09/regeneracin-urbana-y-degeneracin
 slug: regeneracin-urbana-y-degeneracin

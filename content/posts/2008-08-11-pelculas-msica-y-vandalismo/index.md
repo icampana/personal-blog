@@ -3,8 +3,8 @@ author: ivan
 categories:
 - Sin categoría
 comments: true
-date: 2008-08-11 13:51:00+00:00
-featuredImage: ./Lolita.jpg
+date: 2008-08-11 13:51:00
+featuredImage: /photos/Lolita.jpg
 layout: post
 path: /2008/08/pelculas-msica-y-vandalismo
 slug: pelculas-msica-y-vandalismo

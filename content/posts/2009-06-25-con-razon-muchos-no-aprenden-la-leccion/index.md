@@ -3,8 +3,8 @@ author: ivan
 categories:
 - Sin categoría
 comments: true
-date: 2009-06-25 18:08:00+00:00
-featuredImage: ./hedgehogSOLENT2708_800x495.jpg
+date: 2009-06-25 18:08:00
+featuredImage: /photos/hedgehogSOLENT2708_800x495.jpg
 layout: post
 path: /2009/06/con-razon-muchos-no-aprenden-la-leccion
 slug: con-razon-muchos-no-aprenden-la-leccion

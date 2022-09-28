@@ -3,8 +3,8 @@ author: ivan
 categories:
 - Sin categoría
 comments: true
-date: 2005-10-18 06:36:00+00:00
-featuredImage: ./midp.jpg
+date: 2005-10-18 06:36:00
+featuredImage: /photos/midp.jpg
 layout: post
 path: /2005/10/mi-primer-programa-para-celular
 slug: mi-primer-programa-para-celular

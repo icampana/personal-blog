@@ -3,8 +3,8 @@ author: ivan
 categories:
 - Sin categoría
 comments: true
-date: 2005-09-28 04:39:00+00:00
-featuredImage: ./06-02-2005-002.jpg
+date: 2005-09-28 04:39:00
+featuredImage: /photos/06-02-2005-002.jpg
 layout: post
 path: /2005/09/unas-cuantas-imgenes-del-ecuador-de
 slug: unas-cuantas-imgenes-del-ecuador-de

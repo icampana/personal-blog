@@ -3,8 +3,8 @@ author: ivan
 categories:
 - Sin categoría
 comments: true
-date: 2005-01-17 19:02:00+00:00
-featuredImage: ./telefonos.jpg
+date: 2005-01-17 19:02:00
+featuredImage: /photos/telefonos.jpg
 layout: post
 path: /2005/01/esta-es-la-comparacin-del-fono-que
 slug: esta-es-la-comparacin-del-fono-que

@@ -3,8 +3,8 @@ author: ivan
 categories:
 - Sin categoría
 comments: true
-date: 2008-08-27 10:11:00+00:00
-featuredImage: ./dsc03482-Modificada.jpg
+date: 2008-08-27 10:11:00
+featuredImage: /photos/dsc03482-Modificada.jpg
 layout: post
 path: /2008/08/lo-necesario-y-lo-superficia
 slug: lo-necesario-y-lo-superficia

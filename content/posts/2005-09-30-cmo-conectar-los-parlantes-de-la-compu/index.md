@@ -3,8 +3,8 @@ author: ivan
 categories:
 - Sin categoría
 comments: true
-date: 2005-09-30 00:28:00+00:00
-featuredImage: ./pasos_armado.jpg
+date: 2005-09-30 00:28:00
+featuredImage: /photos/pasos_armado.jpg
 layout: post
 path: /2005/09/cmo-conectar-los-parlantes-de-la-compu
 slug: cmo-conectar-los-parlantes-de-la-compu

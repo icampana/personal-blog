@@ -3,8 +3,8 @@ author: ivan
 categories:
 - Sin categoría
 comments: true
-date: 2009-05-07 09:37:00+00:00
-featuredImage: ./6404.jpg
+date: 2009-05-07 09:37:00
+featuredImage: /photos/6404.jpg
 layout: post
 path: /2009/05/ayudando-al-enemigo-y-siendo-herido-en
 slug: ayudando-al-enemigo-y-siendo-herido-en

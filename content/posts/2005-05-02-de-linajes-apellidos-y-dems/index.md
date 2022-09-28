@@ -3,8 +3,8 @@ author: ivan
 categories:
 - Sin categoría
 comments: true
-date: 2005-05-02 10:32:00+00:00
-featuredImage: ./escudos_armas.jpg
+date: 2005-05-02 10:32:00
+featuredImage: /photos/escudos_armas.jpg
 layout: post
 path: /2005/05/de-linajes-apellidos-y-dems
 slug: de-linajes-apellidos-y-dems

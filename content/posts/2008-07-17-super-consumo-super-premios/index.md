@@ -3,8 +3,8 @@ author: ivan
 categories:
 - Sin categoría
 comments: true
-date: 2008-07-17 09:30:00+00:00
-featuredImage: ./ticket_tia.jpg
+date: 2008-07-17 09:30:00
+featuredImage: /photos/ticket_tia.jpg
 layout: post
 path: /2008/07/super-consumo-super-premios
 slug: super-consumo-super-premios

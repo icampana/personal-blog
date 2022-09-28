@@ -6,8 +6,8 @@ categories:
 - Empresa
 - Recuerdos
 comments: true
-date: 2015-04-20 09:16:00+00:00
-featuredImage: ./start-ups-1.jpg
+date: 2015-04-20 09:16:00
+featuredImage: /photos/start-ups-1.jpg
 layout: post
 path: /2015/04/emprendimiento-startups-y-co-working
 slug: emprendimiento-startups-y-co-working

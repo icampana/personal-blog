@@ -3,8 +3,8 @@ author: ivan
 categories:
 - Sin categoría
 comments: true
-date: 2009-03-20 02:12:00+00:00
-featuredImage: ./einstein.jpg
+date: 2009-03-20 02:12:00
+featuredImage: /photos/einstein.jpg
 layout: post
 path: /2009/03/somos-parte-de-la-solucion-o-de
 slug: somos-parte-de-la-solucion-o-de

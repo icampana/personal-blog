@@ -3,8 +3,8 @@ author: ivan
 categories:
 - Sin categoría
 comments: true
-date: 2008-08-20 19:03:00+00:00
-featuredImage: ./bambu2.jpg
+date: 2008-08-20 19:03:00
+featuredImage: /photos/bambu2.jpg
 layout: post
 path: /2008/08/para-reflexionar-un-poco
 slug: para-reflexionar-un-poco

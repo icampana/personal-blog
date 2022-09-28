@@ -3,8 +3,8 @@ author: ivan
 categories:
 - Sin categoría
 comments: true
-date: 2007-07-03 22:26:00+00:00
-featuredImage: ./686780170_b6765b12fb.jpg
+date: 2007-07-03 22:26:00
+featuredImage: /photos/686780170_b6765b12fb.jpg
 layout: post
 path: /2007/07/thank-you-come-again
 slug: thank-you-come-again

@@ -3,8 +3,8 @@ author: ivan
 categories:
 - Sin categoría
 comments: true
-date: 2009-06-09 11:59:00+00:00
-featuredImage: ./img_1281.jpg
+date: 2009-06-09 11:59:00
+featuredImage: /photos/img_1281.jpg
 layout: post
 path: /2009/06/playa-personal-completa
 slug: playa-personal-completa

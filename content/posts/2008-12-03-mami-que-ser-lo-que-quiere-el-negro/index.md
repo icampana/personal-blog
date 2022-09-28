@@ -3,8 +3,8 @@ author: ivan
 categories:
 - Sin categoría
 comments: true
-date: 2008-12-03 10:40:00+00:00
-featuredImage: ./memin-pinguin.jpg
+date: 2008-12-03 10:40:00
+featuredImage: /photos/memin-pinguin.jpg
 layout: post
 path: /2008/12/mami-que-ser-lo-que-quiere-el-negro
 slug: mami-que-ser-lo-que-quiere-el-negro

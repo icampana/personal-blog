@@ -3,8 +3,8 @@ author: ivan
 categories:
 - Sin categoría
 comments: true
-date: 2005-02-09 09:48:00+00:00
-featuredImage: ./collage.jpg
+date: 2005-02-09 09:48:00
+featuredImage: /photos/collage.jpg
 layout: post
 path: /2005/02/mi-carnava
 slug: mi-carnava

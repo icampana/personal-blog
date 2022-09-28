@@ -1,7 +1,7 @@
 ---
 title: ¿Vale la pena entrenar con Kettlebells?
 date: 2020-12-26T03:34:15.248Z
-featuredImage: setkb08-32kg-1.jpg
+featuredImage: /photos/setkb08-32kg-1.jpg
 description: Análisis rápido sobre el entrenamiento con Kettlebells para mejorar
   el estado físico con equipo mínimo.
 ---

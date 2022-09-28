@@ -3,8 +3,8 @@ author: ivan
 categories:
 - Sin categoría
 comments: true
-date: 2005-01-02 01:34:00+00:00
-featuredImage: ./viejos-2004-005.jpg
+date: 2005-01-02 01:34:00
+featuredImage: /photos/viejos-2004-005.jpg
 layout: post
 path: /2005/01/los-viejos
 slug: los-viejos

@@ -3,8 +3,8 @@ author: ivan
 categories:
 - Sin categoría
 comments: true
-date: 2007-07-10 07:43:00+00:00
-featuredImage: ./archangel.jpg
+date: 2007-07-10 07:43:00
+featuredImage: /photos/archangel.jpg
 layout: post
 path: /2007/07/sacrificio-vs-xito-vs-satisfaccin
 slug: sacrificio-vs-xito-vs-satisfaccin

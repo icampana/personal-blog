@@ -3,8 +3,8 @@ author: ivan
 categories:
 - Sin categoría
 comments: true
-date: 2006-12-29 08:46:00+00:00
-featuredImage: ./playing_song.jpg
+date: 2006-12-29 08:46:00
+featuredImage: /photos/playing_song.jpg
 layout: post
 path: /2006/12/controlando-tu-msica-desde-el-celular
 slug: controlando-tu-msica-desde-el-celular

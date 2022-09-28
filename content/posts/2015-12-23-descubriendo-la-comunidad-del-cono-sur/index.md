@@ -3,8 +3,8 @@ author: ivan
 categories:
 - Sin categoría
 comments: true
-date: 2015-12-23 10:53:00+00:00
-featuredImage: ./logo-1024-1.png
+date: 2015-12-23 10:53:00
+featuredImage: /photos/logo-1024-1.png
 layout: post
 path: /2015/12/descubriendo-la-comunidad-del-cono-sur
 slug: descubriendo-la-comunidad-del-cono-sur

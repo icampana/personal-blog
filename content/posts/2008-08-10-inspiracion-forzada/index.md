@@ -3,8 +3,8 @@ author: ivan
 categories:
 - Sin categoría
 comments: true
-date: 2008-08-10 06:10:00+00:00
-featuredImage: ./oscura-inspiracion.jpg
+date: 2008-08-10 06:10:00
+featuredImage: /photos/oscura-inspiracion.jpg
 layout: post
 path: /2008/08/inspiracion-forzada
 slug: inspiracion-forzada

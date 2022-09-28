@@ -3,8 +3,8 @@ author: ivan
 categories:
 - Sin categoría
 comments: true
-date: 2008-11-04 07:55:00+00:00
-featuredImage: ./dsc03697.jpg
+date: 2008-11-04 07:55:00
+featuredImage: /photos/dsc03697.jpg
 layout: post
 path: /2008/11/intentos-de-fotografa
 post_format:

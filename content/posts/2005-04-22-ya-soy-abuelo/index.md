@@ -3,8 +3,8 @@ author: ivan
 categories:
 - Sin categoría
 comments: true
-date: 2005-04-22 18:31:00+00:00
-featuredImage: ./gateeta.jpg
+date: 2005-04-22 18:31:00
+featuredImage: /photos/gateeta.jpg
 layout: post
 path: /2005/04/ya-soy-abuelo
 slug: ya-soy-abuelo

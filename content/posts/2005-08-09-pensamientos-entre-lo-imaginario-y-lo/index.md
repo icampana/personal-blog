@@ -3,8 +3,8 @@ author: ivan
 categories:
 - Sin categoría
 comments: true
-date: 2005-08-09 09:23:00+00:00
-featuredImage: ./entre2tierras.jpg
+date: 2005-08-09 09:23:00
+featuredImage: /photos/entre2tierras.jpg
 layout: post
 path: /2005/08/pensamientos-entre-lo-imaginario-y-lo
 slug: pensamientos-entre-lo-imaginario-y-lo

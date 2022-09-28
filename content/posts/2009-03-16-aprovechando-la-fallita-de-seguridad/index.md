@@ -3,8 +3,8 @@ author: ivan
 categories:
 - Sin categoría
 comments: true
-date: 2009-03-16 07:42:00+00:00
-featuredImage: ./Pantallazo-Facebook.png
+date: 2009-03-16 07:42:00
+featuredImage: /photos/Pantallazo-Facebook.png
 layout: post
 path: /2009/03/aprovechando-la-fallita-de-seguridad
 slug: aprovechando-la-fallita-de-seguridad

@@ -3,8 +3,8 @@ author: ivan
 categories:
 - Sin categoría
 comments: true
-date: 2006-12-20 07:09:00+00:00
-featuredImage: ./ServerIBM.jpg
+date: 2006-12-20 07:09:00
+featuredImage: /photos/ServerIBM.jpg
 layout: post
 path: /2006/12/sobreviviendo-un-sco-con-cobol-y
 slug: sobreviviendo-un-sco-con-cobol-y

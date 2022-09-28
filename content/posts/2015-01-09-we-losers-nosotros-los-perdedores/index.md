@@ -3,8 +3,8 @@ author: ivan
 categories:
 - Sin categoría
 comments: true
-date: 2015-01-09 18:30:00+00:00
-featuredImage: ./artie_loser_png_by_gleelosersforever-d4x8ijg-1.png
+date: 2015-01-09 18:30:00
+featuredImage: /photos/artie_loser_png_by_gleelosersforever-d4x8ijg-1.png
 layout: post
 path: /2015/01/we-losers-nosotros-los-perdedores
 slug: we-losers-nosotros-los-perdedores

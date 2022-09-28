@@ -3,8 +3,8 @@ author: ivan
 categories:
 - Sin categoría
 comments: true
-date: 2005-10-31 10:37:00+00:00
-featuredImage: ./laquidara2.jpg
+date: 2005-10-31 10:37:00
+featuredImage: /photos/laquidara2.jpg
 layout: post
 path: /2005/10/patrizia-laquidara-jazz-fusin-y-pasin
 slug: patrizia-laquidara-jazz-fusin-y-pasin

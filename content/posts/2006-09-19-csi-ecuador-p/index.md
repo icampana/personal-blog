@@ -3,8 +3,8 @@ author: ivan
 categories:
 - Sin categoría
 comments: true
-date: 2006-09-19 12:32:00+00:00
-featuredImage: ./cleanroom.jpg
+date: 2006-09-19 12:32:00
+featuredImage: /photos/cleanroom.jpg
 layout: post
 path: /2006/09/csi-ecuador-p
 slug: csi-ecuador-p

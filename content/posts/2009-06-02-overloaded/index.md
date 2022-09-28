@@ -3,8 +3,8 @@ author: ivan
 categories:
 - Sin categoría
 comments: true
-date: 2009-06-02 09:54:00+00:00
-featuredImage: ./bcp034008.jpg
+date: 2009-06-02 09:54:00
+featuredImage: /photos/bcp034008.jpg
 layout: post
 path: /2009/06/overloaded
 slug: overloaded

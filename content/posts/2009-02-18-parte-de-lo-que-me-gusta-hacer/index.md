@@ -3,8 +3,8 @@ author: ivan
 categories:
 - Sin categoría
 comments: true
-date: 2009-02-18 17:13:00+00:00
-featuredImage: ./img_0355.jpg
+date: 2009-02-18 17:13:00
+featuredImage: /photos/img_0355.jpg
 layout: post
 path: /2009/02/parte-de-lo-que-me-gusta-hacer
 slug: parte-de-lo-que-me-gusta-hacer

@@ -3,8 +3,8 @@ author: ivan
 categories:
 - Sin categoría
 comments: true
-date: 2005-08-23 04:04:00+00:00
-featuredImage: ./gatitos.jpg
+date: 2005-08-23 04:04:00
+featuredImage: /photos/gatitos.jpg
 layout: post
 path: /2005/08/anuncio-se-busca-padres-o-madres
 slug: anuncio-se-busca-padres-o-madres

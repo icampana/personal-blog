@@ -3,8 +3,8 @@ author: ivan
 categories:
 - Sin categoría
 comments: true
-date: 2008-12-08 12:00:00+00:00
-featuredImage: ./Facebook-Toolbar.jpg
+date: 2008-12-08 12:00:00
+featuredImage: /photos/Facebook-Toolbar.jpg
 layout: post
 path: /2008/12/facebook-toolbar
 slug: facebook-toolbar

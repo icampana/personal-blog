@@ -3,8 +3,8 @@ author: ivan
 categories:
 - Sin categoría
 comments: true
-date: 2008-11-10 10:14:00+00:00
-featuredImage: ./breast.jpg
+date: 2008-11-10 10:14:00
+featuredImage: /photos/breast.jpg
 layout: post
 path: /2008/11/un-tributo-las-bubis
 slug: un-tributo-las-bubis

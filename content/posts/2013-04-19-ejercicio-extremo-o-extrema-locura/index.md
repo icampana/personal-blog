@@ -3,8 +3,8 @@ author: ivan
 categories:
 - Sin categoría
 comments: true
-date: 2013-04-19 19:15:00+00:00
-featuredImage: ./exhaustion_main-1.jpg
+date: 2013-04-19 19:15:00
+featuredImage: /photos/exhaustion_main-1.jpg
 layout: post
 path: /2013/04/ejercicio-extremo-o-extrema-locura
 slug: ejercicio-extremo-o-extrema-locura

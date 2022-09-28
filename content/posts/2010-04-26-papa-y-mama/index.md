@@ -3,8 +3,8 @@ author: ivan
 categories:
 - Sin categoría
 comments: true
-date: 2010-04-26 01:44:00+00:00
-featuredImage: ./padres_blog.jpg
+date: 2010-04-26 01:44:00
+featuredImage: /photos/padres_blog.jpg
 layout: post
 path: /2010/04/papa-y-mama
 slug: papa-y-mama

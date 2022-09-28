@@ -3,8 +3,8 @@ author: ivan
 categories:
 - Sin categoría
 comments: true
-date: 2008-08-18 10:15:00+00:00
-featuredImage: ./amigos_blog.jpg
+date: 2008-08-18 10:15:00
+featuredImage: /photos/amigos_blog.jpg
 layout: post
 path: /2008/08/with-little-help-from-my-friends
 slug: with-little-help-from-my-friends

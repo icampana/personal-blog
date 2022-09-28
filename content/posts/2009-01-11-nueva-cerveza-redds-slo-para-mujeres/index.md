@@ -3,8 +3,8 @@ author: ivan
 categories:
 - Sin categoría
 comments: true
-date: 2009-01-11 04:17:00+00:00
-featuredImage: ./Pantallazo.png
+date: 2009-01-11 04:17:00
+featuredImage: /photos/Pantallazo.png
 layout: post
 path: /2009/01/nueva-cerveza-redds-slo-para-mujeres
 slug: nueva-cerveza-redds-slo-para-mujeres

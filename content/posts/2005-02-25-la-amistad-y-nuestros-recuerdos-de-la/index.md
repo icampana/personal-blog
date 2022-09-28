@@ -3,8 +3,8 @@ author: ivan
 categories:
 - Sin categoría
 comments: true
-date: 2005-02-25 10:27:00+00:00
-featuredImage: ./palito.jpg
+date: 2005-02-25 10:27:00
+featuredImage: /photos/palito.jpg
 layout: post
 path: /2005/02/la-amistad-y-nuestros-recuerdos-de-la
 slug: la-amistad-y-nuestros-recuerdos-de-la

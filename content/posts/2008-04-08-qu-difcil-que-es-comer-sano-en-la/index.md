@@ -3,8 +3,8 @@ author: ivan
 categories:
 - Sin categoría
 comments: true
-date: 2008-04-08 10:00:00+00:00
-featuredImage: ./Imagen021.jpg
+date: 2008-04-08 10:00:00
+featuredImage: /photos/Imagen021.jpg
 layout: post
 path: /2008/04/qu-difcil-que-es-comer-sano-en-la
 slug: qu-difcil-que-es-comer-sano-en-la

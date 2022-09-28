@@ -3,8 +3,8 @@ author: ivan
 categories:
 - Sin categoría
 comments: true
-date: 2009-04-03 12:02:00+00:00
-featuredImage: ./bosc_de_les_fades.jpeg
+date: 2009-04-03 12:02:00
+featuredImage: /photos/bosc_de_les_fades.jpeg
 layout: post
 path: /2009/04/vicky-cristina-barcelona
 slug: vicky-cristina-barcelona

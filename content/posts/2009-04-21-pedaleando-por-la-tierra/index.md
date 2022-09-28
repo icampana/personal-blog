@@ -3,8 +3,8 @@ author: ivan
 categories:
 - Sin categoría
 comments: true
-date: 2009-04-21 17:11:00+00:00
-featuredImage: ./img_0875.jpg
+date: 2009-04-21 17:11:00
+featuredImage: /photos/img_0875.jpg
 layout: post
 path: /2009/04/pedaleando-por-la-tierra
 slug: pedaleando-por-la-tierra

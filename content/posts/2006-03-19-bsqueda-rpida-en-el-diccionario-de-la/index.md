@@ -3,8 +3,8 @@ author: ivan
 categories:
 - Sin categoría
 comments: true
-date: 2006-03-19 01:14:00+00:00
-featuredImage: ./ejemplo_boton.jpg
+date: 2006-03-19 01:14:00
+featuredImage: /photos/ejemplo_boton.jpg
 layout: post
 path: /2006/03/bsqueda-rpida-en-el-diccionario-de-la
 slug: bsqueda-rpida-en-el-diccionario-de-la

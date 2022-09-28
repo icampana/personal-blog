@@ -3,8 +3,8 @@ author: ivan
 categories:
 - Sin categoría
 comments: true
-date: 2005-01-17 19:08:00+00:00
-featuredImage: ./lentes-viejos.jpg
+date: 2005-01-17 19:08:00
+featuredImage: /photos/lentes-viejos.jpg
 layout: post
 path: /2005/01/los-lentes-que-utilizaba-cuando-estaba
 slug: los-lentes-que-utilizaba-cuando-estaba

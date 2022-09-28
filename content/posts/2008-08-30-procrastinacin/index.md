@@ -3,8 +3,8 @@ author: ivan
 categories:
 - Sin categoría
 comments: true
-date: 2008-08-30 19:59:00+00:00
-featuredImage: ./blackboard_procrastinate2.jpg
+date: 2008-08-30 19:59:00
+featuredImage: /photos/blackboard_procrastinate2.jpg
 layout: post
 path: /2008/08/procrastinacin
 slug: procrastinacin

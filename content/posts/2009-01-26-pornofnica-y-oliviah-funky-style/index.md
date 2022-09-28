@@ -3,8 +3,8 @@ author: ivan
 categories:
 - Sin categoría
 comments: true
-date: 2009-01-26 03:08:00+00:00
-featuredImage: ./dsc04151.jpg
+date: 2009-01-26 03:08:00
+featuredImage: /photos/dsc04151.jpg
 layout: post
 path: /2009/01/pornofnica-y-oliviah-funky-style
 slug: pornofnica-y-oliviah-funky-style

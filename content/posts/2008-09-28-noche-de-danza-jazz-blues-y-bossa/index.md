@@ -3,8 +3,8 @@ author: ivan
 categories:
 - Sin categoría
 comments: true
-date: 2008-09-28 11:31:00+00:00
-featuredImage: ./RochiVernaza2.jpg
+date: 2008-09-28 11:31:00
+featuredImage: /photos/RochiVernaza2.jpg
 layout: post
 path: /2008/09/noche-de-danza-jazz-blues-y-bossa
 slug: noche-de-danza-jazz-blues-y-bossa

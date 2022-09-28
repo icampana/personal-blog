@@ -3,8 +3,8 @@ author: ivan
 categories:
 - Sin categoría
 comments: true
-date: 2009-04-01 08:25:00+00:00
-featuredImage: ./luis-rueda.jpg
+date: 2009-04-01 08:25:00
+featuredImage: /photos/luis-rueda.jpg
 layout: post
 path: /2009/04/luis-rueda-un-rockero-hasta-las-mismas
 slug: luis-rueda-un-rockero-hasta-las-mismas

@@ -3,8 +3,8 @@ author: ivan
 categories:
 - Sin categoría
 comments: true
-date: 2006-06-29 07:25:00+00:00
-featuredImage: ./wecanhelp.jpg
+date: 2006-06-29 07:25:00
+featuredImage: /photos/wecanhelp.jpg
 layout: post
 path: /2006/06/mujeres-protegidas-o-enjauladas
 slug: mujeres-protegidas-o-enjauladas

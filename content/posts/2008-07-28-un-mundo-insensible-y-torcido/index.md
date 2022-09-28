@@ -3,8 +3,8 @@ author: ivan
 categories:
 - Sin categoría
 comments: true
-date: 2008-07-28 05:55:00+00:00
-featuredImage: ./watchmen.jpg
+date: 2008-07-28 05:55:00
+featuredImage: /photos/watchmen.jpg
 layout: post
 path: /2008/07/un-mundo-insensible-y-torcido
 slug: un-mundo-insensible-y-torcido

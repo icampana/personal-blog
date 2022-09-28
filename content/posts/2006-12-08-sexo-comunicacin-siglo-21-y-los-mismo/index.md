@@ -3,8 +3,8 @@ author: ivan
 categories:
 - Sin categoría
 comments: true
-date: 2006-12-08 07:14:00+00:00
-featuredImage: ./tabu.jpg
+date: 2006-12-08 07:14:00
+featuredImage: /photos/tabu.jpg
 layout: post
 path: /2006/12/sexo-comunicacin-siglo-21-y-los-mismo
 slug: sexo-comunicacin-siglo-21-y-los-mismo

@@ -3,8 +3,8 @@ author: ivan
 categories:
 - Sin categoría
 comments: true
-date: 2009-01-20 12:02:00+00:00
-featuredImage: ./weight-watchers-snickers-candy-bar-recipe.jpg
+date: 2009-01-20 12:02:00
+featuredImage: /photos/weight-watchers-snickers-candy-bar-recipe.jpg
 layout: post
 path: /2009/01/comer-manicho-tomar-zhumir-y-usar
 slug: comer-manicho-tomar-zhumir-y-usar

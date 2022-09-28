@@ -3,8 +3,8 @@ author: ivan
 categories:
 - Sin categoría
 comments: true
-date: 2009-03-27 20:02:00+00:00
-featuredImage: ./cansancio.jpg
+date: 2009-03-27 20:02:00
+featuredImage: /photos/cansancio.jpg
 layout: post
 path: /2009/03/cansancio-dolor-y-estres-convertidos-en
 slug: cansancio-dolor-y-estres-convertidos-en

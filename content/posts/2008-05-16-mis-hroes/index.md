@@ -3,8 +3,8 @@ author: ivan
 categories:
 - Sin categoría
 comments: true
-date: 2008-05-16 03:43:00+00:00
-featuredImage: ./1978_Superman_The_Movie.jpg
+date: 2008-05-16 03:43:00
+featuredImage: /photos/1978_Superman_The_Movie.jpg
 layout: post
 path: /2008/05/mis-hroes
 slug: mis-hroes

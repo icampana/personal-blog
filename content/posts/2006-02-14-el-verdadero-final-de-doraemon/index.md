@@ -3,8 +3,8 @@ author: ivan
 categories:
 - Sin categoría
 comments: true
-date: 2006-02-14 00:20:00+00:00
-featuredImage: ./nestor.png
+date: 2006-02-14 00:20:00
+featuredImage: /photos/nestor.png
 layout: post
 path: /2006/02/el-verdadero-final-de-doraemon
 slug: el-verdadero-final-de-doraemon

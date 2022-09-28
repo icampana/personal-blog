@@ -3,8 +3,8 @@ author: ivan
 categories:
 - Sin categoría
 comments: true
-date: 2012-11-21 12:36:00+00:00
-featuredImage: ./HIIT-exercises-300x223-1.jpg
+date: 2012-11-21 12:36:00
+featuredImage: /photos/HIIT-exercises-300x223-1.jpg
 layout: post
 path: /2012/11/entrenamiento-hiit-para-principiantes
 slug: entrenamiento-hiit-para-principiantes

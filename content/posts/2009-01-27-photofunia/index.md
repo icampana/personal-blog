@@ -3,8 +3,8 @@ author: ivan
 categories:
 - Sin categoría
 comments: true
-date: 2009-01-27 10:43:00+00:00
-featuredImage: ./PhotoFunia_dc3c86.jpg
+date: 2009-01-27 10:43:00
+featuredImage: /photos/PhotoFunia_dc3c86.jpg
 layout: post
 path: /2009/01/photofunia
 slug: photofunia

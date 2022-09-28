@@ -3,8 +3,8 @@ author: ivan
 categories:
 - Sin categoría
 comments: true
-date: 2008-10-27 04:34:00+00:00
-featuredImage: ./babelposter.jpg
+date: 2008-10-27 04:34:00
+featuredImage: /photos/babelposter.jpg
 layout: post
 path: /2008/10/maldita-humanidad-o-sociedad
 slug: maldita-humanidad-o-sociedad

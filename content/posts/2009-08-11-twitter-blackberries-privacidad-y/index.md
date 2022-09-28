@@ -3,8 +3,8 @@ author: ivan
 categories:
 - Sin categoría
 comments: true
-date: 2009-08-11 09:51:00+00:00
-featuredImage: ./twitter_chat.jpg
+date: 2009-08-11 09:51:00
+featuredImage: /photos/twitter_chat.jpg
 layout: post
 path: /2009/08/twitter-blackberries-privacidad-y
 slug: twitter-blackberries-privacidad-y

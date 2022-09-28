@@ -3,8 +3,8 @@ author: ivan
 categories:
 - Sin categoría
 comments: true
-date: 2009-02-25 09:52:00+00:00
-featuredImage: ./3308516954_6478bc0dd2_m.jpg
+date: 2009-02-25 09:52:00
+featuredImage: /photos/3308516954_6478bc0dd2_m.jpg
 layout: post
 path: /2009/02/waiting-for-sunse
 slug: waiting-for-sunse

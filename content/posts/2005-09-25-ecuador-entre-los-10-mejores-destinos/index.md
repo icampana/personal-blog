@@ -3,8 +3,8 @@ author: ivan
 categories:
 - Sin categoría
 comments: true
-date: 2005-09-25 00:17:00+00:00
-featuredImage: ./riachuelo.jpg
+date: 2005-09-25 00:17:00
+featuredImage: /photos/riachuelo.jpg
 layout: post
 path: /2005/09/ecuador-entre-los-10-mejores-destinos
 slug: ecuador-entre-los-10-mejores-destinos

@@ -3,8 +3,8 @@ author: ivan
 categories:
 - Sin categoría
 comments: true
-date: 2008-06-17 02:51:00+00:00
-featuredImage: ./avengers_sketchups_2_by_chachaman.jpg
+date: 2008-06-17 02:51:00
+featuredImage: /photos/avengers_sketchups_2_by_chachaman.jpg
 layout: post
 path: /2008/06/coloreando-dibujos-con-el-gimp
 slug: coloreando-dibujos-con-el-gimp

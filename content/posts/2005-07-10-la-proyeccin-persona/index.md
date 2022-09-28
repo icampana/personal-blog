@@ -3,8 +3,8 @@ author: ivan
 categories:
 - Sin categoría
 comments: true
-date: 2005-07-10 12:02:00+00:00
-featuredImage: ./nio_espejo.jpg
+date: 2005-07-10 12:02:00
+featuredImage: /photos/nio_espejo.jpg
 layout: post
 path: /2005/07/la-proyeccin-persona
 slug: la-proyeccin-persona

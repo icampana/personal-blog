@@ -3,8 +3,8 @@ author: ivan
 categories:
 - Sin categoría
 comments: true
-date: 2005-07-08 08:47:00+00:00
-featuredImage: ./the-flash.jpg
+date: 2005-07-08 08:47:00
+featuredImage: /photos/the-flash.jpg
 layout: post
 path: /2005/07/sueos-infantiles-y-un-ao-ms
 slug: sueos-infantiles-y-un-ao-ms

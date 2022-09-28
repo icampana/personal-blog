@@ -3,8 +3,8 @@ author: ivan
 categories:
 - Sin categoría
 comments: true
-date: 2012-06-18 05:25:00+00:00
-featuredImage: ./IronPost-1.jpg
+date: 2012-06-18 05:25:00
+featuredImage: /photos/IronPost-1.jpg
 layout: post
 path: /2012/06/mi-experiencia-como-un-iron-runner
 slug: mi-experiencia-como-un-iron-runner

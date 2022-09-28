@@ -3,8 +3,8 @@ author: ivan
 categories:
 - Sin categoría
 comments: true
-date: 2009-06-29 05:58:00+00:00
-featuredImage: ./img_1385-Modificada.jpg
+date: 2009-06-29 05:58:00
+featuredImage: /photos/img_1385-Modificada.jpg
 layout: post
 path: /2009/06/encuentren-el-rostro
 slug: encuentren-el-rostro

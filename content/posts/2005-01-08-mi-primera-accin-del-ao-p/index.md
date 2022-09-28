@@ -3,8 +3,8 @@ author: ivan
 categories:
 - Sin categoría
 comments: true
-date: 2005-01-08 23:00:00+00:00
-featuredImage: ./antes_s.jpg
+date: 2005-01-08 23:00:00
+featuredImage: /photos/antes_s.jpg
 layout: post
 path: /2005/01/mi-primera-accin-del-ao-p
 slug: mi-primera-accin-del-ao-p

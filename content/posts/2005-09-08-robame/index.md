@@ -3,8 +3,8 @@ author: ivan
 categories:
 - Sin categoría
 comments: true
-date: 2005-09-08 21:41:00+00:00
-featuredImage: ./robo_de_M.jpg
+date: 2005-09-08 21:41:00
+featuredImage: /photos/robo_de_M.jpg
 layout: post
 path: /2005/09/robame
 slug: robame

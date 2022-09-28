@@ -3,8 +3,8 @@ author: ivan
 categories:
 - Sin categoría
 comments: true
-date: 2009-02-07 09:39:00+00:00
-featuredImage: ./mouse-vi.jpg
+date: 2009-02-07 09:39:00
+featuredImage: /photos/mouse-vi.jpg
 layout: post
 path: /2009/02/analfabetismo-digita
 slug: analfabetismo-digita

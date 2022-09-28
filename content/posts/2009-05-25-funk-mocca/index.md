@@ -3,8 +3,8 @@ author: ivan
 categories:
 - Sin categoría
 comments: true
-date: 2009-05-25 08:05:00+00:00
-featuredImage: ./4738_98611447296_674927296_1922889_4749393_n.jpg
+date: 2009-05-25 08:05:00
+featuredImage: /photos/4738_98611447296_674927296_1922889_4749393_n.jpg
 layout: post
 path: /2009/05/funk-mocca
 slug: funk-mocca

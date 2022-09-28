@@ -3,8 +3,8 @@ author: ivan
 categories:
 - Sin categoría
 comments: true
-date: 2008-12-09 21:46:00+00:00
-featuredImage: ./Hijo-de-OBAMA.jpg
+date: 2008-12-09 21:46:00
+featuredImage: /photos/Hijo-de-OBAMA.jpg
 layout: post
 path: /2008/12/el-hijo-ecuatoriano-no-reconocido-de
 slug: el-hijo-ecuatoriano-no-reconocido-de

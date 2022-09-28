@@ -3,8 +3,8 @@ author: ivan
 categories:
 - Sin categoría
 comments: true
-date: 2009-05-20 03:52:00+00:00
-featuredImage: ./IMG_0016.jpg
+date: 2009-05-20 03:52:00
+featuredImage: /photos/IMG_0016.jpg
 layout: post
 path: /2009/05/veces-me-hacen-pensar-que-en-serio-hay
 slug: veces-me-hacen-pensar-que-en-serio-hay

@@ -3,8 +3,8 @@ author: ivan
 categories:
 - Sin categoría
 comments: true
-date: 2009-01-12 22:26:00+00:00
-featuredImage: ./Imagen035.jpg
+date: 2009-01-12 22:26:00
+featuredImage: /photos/Imagen035.jpg
 layout: post
 path: /2009/01/pinche-delincuencia
 slug: pinche-delincuencia

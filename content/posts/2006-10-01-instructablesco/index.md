@@ -3,8 +3,8 @@ author: ivan
 categories:
 - Sin categoría
 comments: true
-date: 2006-10-01 20:52:00+00:00
-featuredImage: ./laptop_stand.medium.jpg
+date: 2006-10-01 20:52:00
+featuredImage: /photos/laptop_stand.medium.jpg
 layout: post
 path: /2006/10/instructablesco
 slug: instructablesco

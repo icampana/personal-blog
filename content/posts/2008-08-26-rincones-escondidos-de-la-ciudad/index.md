@@ -3,8 +3,8 @@ author: ivan
 categories:
 - Sin categoría
 comments: true
-date: 2008-08-26 21:24:00+00:00
-featuredImage: ./dsc03485.jpg
+date: 2008-08-26 21:24:00
+featuredImage: /photos/dsc03485.jpg
 layout: post
 path: /2008/08/rincones-escondidos-de-la-ciudad
 slug: rincones-escondidos-de-la-ciudad

@@ -3,8 +3,8 @@ author: ivan
 categories:
 - Sin categoría
 comments: true
-date: 2007-03-27 05:02:00+00:00
-featuredImage: ./431642738_c1d486d8aa_m.jpg
+date: 2007-03-27 05:02:00
+featuredImage: /photos/431642738_c1d486d8aa_m.jpg
 layout: post
 path: /2007/03/google-talk-en-firefox
 slug: google-talk-en-firefox

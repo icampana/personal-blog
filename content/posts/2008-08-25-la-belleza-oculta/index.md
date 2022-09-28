@@ -3,8 +3,8 @@ author: ivan
 categories:
 - Sin categoría
 comments: true
-date: 2008-08-25 07:53:00+00:00
-featuredImage: ./muslim-woman_64.jpg
+date: 2008-08-25 07:53:00
+featuredImage: /photos/muslim-woman_64.jpg
 layout: post
 path: /2008/08/la-belleza-oculta
 slug: la-belleza-oculta

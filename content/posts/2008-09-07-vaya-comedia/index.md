@@ -3,8 +3,8 @@ author: ivan
 categories:
 - Sin categoría
 comments: true
-date: 2008-09-07 06:55:00+00:00
-featuredImage: ./funny-pictures-comedy-tragedy-kittens.jpg
+date: 2008-09-07 06:55:00
+featuredImage: /photos/funny-pictures-comedy-tragedy-kittens.jpg
 layout: post
 path: /2008/09/vaya-comedia
 slug: vaya-comedia

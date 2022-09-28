@@ -3,8 +3,8 @@ author: ivan
 categories:
 - Sin categoría
 comments: true
-date: 2008-09-01 04:18:00+00:00
-featuredImage: ./tyler-durden.jpg
+date: 2008-09-01 04:18:00
+featuredImage: /photos/tyler-durden.jpg
 layout: post
 path: /2008/08/anger-managemen
 slug: anger-managemen

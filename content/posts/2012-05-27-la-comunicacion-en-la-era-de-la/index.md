@@ -3,8 +3,8 @@ author: ivan
 categories:
 - Sin categoría
 comments: true
-date: 2012-05-27 11:26:00+00:00
-featuredImage: ./redes_moviles-1.jpg
+date: 2012-05-27 11:26:00
+featuredImage: /photos/redes_moviles-1.jpg
 layout: post
 path: /2012/05/la-comunicacion-en-la-era-de-la
 slug: la-comunicacion-en-la-era-de-la

@@ -3,8 +3,8 @@ author: ivan
 categories:
 - Sin categoría
 comments: true
-date: 2008-07-30 20:39:00+00:00
-featuredImage: ./Medardo.jpg
+date: 2008-07-30 20:39:00
+featuredImage: /photos/Medardo.jpg
 layout: post
 path: /2008/07/el-primer-emo-ecuatoriano
 slug: el-primer-emo-ecuatoriano

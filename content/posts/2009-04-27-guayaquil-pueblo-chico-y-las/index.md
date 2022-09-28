@@ -3,8 +3,8 @@ author: ivan
 categories:
 - Sin categoría
 comments: true
-date: 2009-04-27 19:35:00+00:00
-featuredImage: ./ciudad324.jpg
+date: 2009-04-27 19:35:00
+featuredImage: /photos/ciudad324.jpg
 layout: post
 path: /2009/04/guayaquil-pueblo-chico-y-las
 slug: guayaquil-pueblo-chico-y-las

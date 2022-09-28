@@ -1,13 +1,5 @@
 ---
 author: ivan
-comments: false
-date: 2018-06-10T00:37:50.000+00:00
-layout: post
-path: "/2018/06/que-paso-con-el-ecuador-de-bernard"
-slug: que-paso-con-el-ecuador-de-bernard
-title: "¿Qué pasó con el Ecuador de Bernard?"
-wordpress_id: 1804
-featuredImage: "./bernard-fougeres.jpg"
 categories:
 - Aprendizaje
 - Ecuador
@@ -15,11 +7,19 @@ categories:
 - Mundo
 - Pensamientos
 - Personal
+comments: false
+date: 2018-06-10 00:37:50
+featuredImage: /photos/bernard-fougeres.jpg
+layout: post
+path: /2018/06/que-paso-con-el-ecuador-de-bernard
+slug: que-paso-con-el-ecuador-de-bernard
 tags:
 - Aprendizaje
 - Ecuador
-
+title: ¿Qué pasó con el Ecuador de Bernard?
+wordpress_id: 1804
 ---
+
 El 5 de mayo pasado falleció en Ecuador Bernard Fougeres, un francés que llegó al Ecuador en 1965 como muchos otros extranjeros, pensando que sería una pequeña temporada conociendo el país, aprendiendo y luego seguiría su camino, sin embargo se quedó y dejó una huella porque quiso compartir su cultura,  la música su gusto por la buena comida, su visión del mundo y por ello fue recordado con cariño por muchos ecuatorianos que crecimos viéndolo frente a la tele, sin embargo, estas líneas que escribo no son sobre él, sino sobre qué es lo que pasó con ese país del cual él se enamoró.
 
 Entre [uno de los artículos](https://www.eluniverso.com/vida/2018/05/07/nota/6747887/bernard-fougeres-frances-que-se-enamoro-ecuador-su-gente) que lo describen hablan de un hombre que disfrutó tanto del país que terminó haciendo cosas como tocar el piano dentro del crater del volcán Cotopaxi, ser un viajero incansable y disfrutar de cada pequeña cosa que podía encontrar.

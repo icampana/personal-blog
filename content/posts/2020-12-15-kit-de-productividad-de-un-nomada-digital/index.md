@@ -1,12 +1,13 @@
 ---
-title: Kit de productividad de un nómada digital.
-path: "/2020/12/15-kit-de-productividad-de-un-nomada-digital"
+date: 2020-12-15 01:55:26.032000
+description: Cómo mantenerte productivo y cómodo al estar moviéndote por diferentes
+  ubicaciones en el mundo.
+featuredImage: /photos/2020-02-13-15.40.15.jpg
+path: /2020/12/15-kit-de-productividad-de-un-nomada-digital
 slug: kit-de-productividad-de-un-nomada-digital
-date: 2020-12-15T01:55:26.032Z
-featuredImage: 2020-02-13-15.40.15.jpg
-description: Cómo mantenerte productivo y cómodo al estar moviéndote por
-  diferentes ubicaciones en el mundo.
+title: Kit de productividad de un nómada digital.
 ---
+
 Hace unos días hablaba en mi [podcast](https://anchor.fm/e-van) sobre algunas [estrategias para mantener la productividad con el trabajo remoto](https://anchor.fm/e-van/episodes/ep-6---Estrategias-para-mejorar-tu-productividad-en-la-vida-remota-enm85c) y aunque 2020 ha sido un año en el que no se ha podido viajar mucho, hay algunas herramientas que nos permiten estar cómodos y sacarle provecho al máximo a nuestro espacio de trabajo aunque no estemos en una oficina formal.
 
 La foto que abre este post muestra mi configuración estándar al estar fuera de casa, de hecho lo que ven ahí es un Coworking al cual fui por un día (pre-pandemia) para cambiar de ambiente y pude seguir trabajando con la misma comodidad que en mi casa (donde tengo un espacio adecuado como oficina).

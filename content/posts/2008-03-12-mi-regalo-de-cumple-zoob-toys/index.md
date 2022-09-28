@@ -3,8 +3,8 @@ author: ivan
 categories:
 - Sin categoría
 comments: true
-date: 2008-03-12 03:36:00+00:00
-featuredImage: ./2327432322_defabe74b5_m.jpg
+date: 2008-03-12 03:36:00
+featuredImage: /photos/2327432322_defabe74b5_m.jpg
 layout: post
 path: /2008/03/mi-regalo-de-cumple-zoob-toys
 slug: mi-regalo-de-cumple-zoob-toys

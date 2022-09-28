@@ -3,8 +3,8 @@ author: ivan
 categories:
 - Sin categoría
 comments: true
-date: 2011-02-09 13:54:00+00:00
-featuredImage: ./estudiantes-1.jpg
+date: 2011-02-09 13:54:00
+featuredImage: /photos/estudiantes-1.jpg
 layout: post
 path: /2011/02/se-aprende-todo-en-la-universidad
 slug: se-aprende-todo-en-la-universidad

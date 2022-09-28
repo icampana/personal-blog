@@ -3,8 +3,8 @@ author: ivan
 categories:
 - Sin categoría
 comments: true
-date: 2009-05-14 18:37:00+00:00
-featuredImage: ./mobile_138740c_en.png
+date: 2009-05-14 18:37:00
+featuredImage: /photos/mobile_138740c_en.png
 layout: post
 path: /2009/05/correo-contactos-y-calendario-via-pus
 slug: correo-contactos-y-calendario-via-pus

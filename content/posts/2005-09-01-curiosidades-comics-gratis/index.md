@@ -3,8 +3,8 @@ author: ivan
 categories:
 - Sin categoría
 comments: true
-date: 2005-09-01 07:31:00+00:00
-featuredImage: ./pvcomics2.jpg
+date: 2005-09-01 07:31:00
+featuredImage: /photos/pvcomics2.jpg
 layout: post
 path: /2005/09/curiosidades-comics-gratis
 slug: curiosidades-comics-gratis

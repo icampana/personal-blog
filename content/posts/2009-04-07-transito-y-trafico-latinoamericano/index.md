@@ -3,8 +3,8 @@ author: ivan
 categories:
 - Sin categoría
 comments: true
-date: 2009-04-07 06:52:00+00:00
-featuredImage: ./traffic_lights_mist.jpg
+date: 2009-04-07 06:52:00
+featuredImage: /photos/traffic_lights_mist.jpg
 layout: post
 path: /2009/04/transito-y-trafico-latinoamericano
 slug: transito-y-trafico-latinoamericano

@@ -3,8 +3,8 @@ author: ivan
 categories:
 - Sin categoría
 comments: true
-date: 2005-11-22 09:50:00+00:00
-featuredImage: ./63564911_91acdcefbd_o.jpg
+date: 2005-11-22 09:50:00
+featuredImage: /photos/63564911_91acdcefbd_o.jpg
 layout: post
 path: /2005/11/berni-zeg-la-ladilla-y-fumanc
 slug: berni-zeg-la-ladilla-y-fumanc

@@ -3,8 +3,8 @@ author: ivan
 categories:
 - Sin categoría
 comments: true
-date: 2006-04-01 21:01:00+00:00
-featuredImage: ./logo-small_FLISOL.0.jpg
+date: 2006-04-01 21:01:00
+featuredImage: /photos/logo-small_FLISOL.0.jpg
 layout: post
 path: /2006/04/el-software-en-ecuador
 slug: el-software-en-ecuador

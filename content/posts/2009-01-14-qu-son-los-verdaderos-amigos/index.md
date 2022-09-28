@@ -3,8 +3,8 @@ author: ivan
 categories:
 - Sin categoría
 comments: true
-date: 2009-01-14 19:26:00+00:00
-featuredImage: ./dsc04133.jpg
+date: 2009-01-14 19:26:00
+featuredImage: /photos/dsc04133.jpg
 layout: post
 path: /2009/01/qu-son-los-verdaderos-amigos
 slug: qu-son-los-verdaderos-amigos

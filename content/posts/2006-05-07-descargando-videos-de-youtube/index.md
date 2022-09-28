@@ -3,8 +3,8 @@ author: ivan
 categories:
 - Sin categoría
 comments: true
-date: 2006-05-07 03:08:00+00:00
-featuredImage: ./logo_tagline_sm.png
+date: 2006-05-07 03:08:00
+featuredImage: /photos/logo_tagline_sm.png
 layout: post
 path: /2006/05/descargando-videos-de-youtube
 slug: descargando-videos-de-youtube

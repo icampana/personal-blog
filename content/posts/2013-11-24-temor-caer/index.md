@@ -3,8 +3,8 @@ author: ivan
 categories:
 - Sin categoría
 comments: true
-date: 2013-11-24 23:12:00+00:00
-featuredImage: ./bftg.afraidtofall-1.jpg
+date: 2013-11-24 23:12:00
+featuredImage: /photos/bftg.afraidtofall-1.jpg
 layout: post
 path: /2013/11/temor-caer
 slug: temor-caer

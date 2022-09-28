@@ -3,8 +3,8 @@ author: ivan
 categories:
 - Sin categoría
 comments: true
-date: 2006-01-13 05:38:00+00:00
-featuredImage: ./buseta_paradero_red.jpg
+date: 2006-01-13 05:38:00
+featuredImage: /photos/buseta_paradero_red.jpg
 layout: post
 path: /2006/01/costumbre-o-ley-del-borrego
 slug: costumbre-o-ley-del-borrego

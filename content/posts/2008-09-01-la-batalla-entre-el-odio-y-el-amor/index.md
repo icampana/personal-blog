@@ -3,8 +3,8 @@ author: ivan
 categories:
 - Sin categoría
 comments: true
-date: 2008-09-01 10:02:00+00:00
-featuredImage: ./lovehate.jpg
+date: 2008-09-01 10:02:00
+featuredImage: /photos/lovehate.jpg
 layout: post
 path: /2008/09/la-batalla-entre-el-odio-y-el-amor
 slug: la-batalla-entre-el-odio-y-el-amor

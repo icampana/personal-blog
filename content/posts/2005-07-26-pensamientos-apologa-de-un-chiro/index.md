@@ -3,8 +3,8 @@ author: ivan
 categories:
 - Sin categoría
 comments: true
-date: 2005-07-26 12:31:00+00:00
-featuredImage: ./no_money.jpg
+date: 2005-07-26 12:31:00
+featuredImage: /photos/no_money.jpg
 layout: post
 path: /2005/07/pensamientos-apologa-de-un-chiro
 slug: pensamientos-apologa-de-un-chiro

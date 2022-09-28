@@ -4,8 +4,8 @@ categories:
 - Aprendizaje
 - Pensamientos
 comments: true
-date: 2016-06-16 06:31:00+00:00
-featuredImage: ./the-secret-to11-1.jpg
+date: 2016-06-16 06:31:00
+featuredImage: /photos/the-secret-to11-1.jpg
 layout: post
 path: /2016/06/abrirle-la-puerta-la-felicidad
 slug: abrirle-la-puerta-la-felicidad

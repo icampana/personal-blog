@@ -6,8 +6,8 @@ categories:
 - Comunicación
 - Palabras
 comments: true
-date: 2017-08-31 05:34:13+00:00
-featuredImage: ./gg0pedale6.jpg
+date: 2017-08-31 05:34:13
+featuredImage: /photos/gg0pedale6.jpg
 layout: post
 path: /2017/08/pedalear-una-ciudad-sin-caminos
 slug: pedalear-una-ciudad-sin-caminos

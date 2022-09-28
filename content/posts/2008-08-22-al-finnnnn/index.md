@@ -3,8 +3,8 @@ author: ivan
 categories:
 - Sin categoría
 comments: true
-date: 2008-08-22 09:23:00+00:00
-featuredImage: ./Imagen000.jpg
+date: 2008-08-22 09:23:00
+featuredImage: /photos/Imagen000.jpg
 layout: post
 path: /2008/08/al-finnnnn
 slug: al-finnnnn

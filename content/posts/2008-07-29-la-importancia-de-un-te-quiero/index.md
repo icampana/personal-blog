@@ -3,8 +3,8 @@ author: ivan
 categories:
 - Sin categoría
 comments: true
-date: 2008-07-29 10:39:00+00:00
-featuredImage: ./Romi.jpg
+date: 2008-07-29 10:39:00
+featuredImage: /photos/Romi.jpg
 layout: post
 path: /2008/07/la-importancia-de-un-te-quiero
 slug: la-importancia-de-un-te-quiero

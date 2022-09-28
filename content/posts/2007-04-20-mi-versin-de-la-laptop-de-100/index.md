@@ -3,8 +3,8 @@ author: ivan
 categories:
 - Sin categoría
 comments: true
-date: 2007-04-20 07:33:00+00:00
-featuredImage: ./465836267_a877d86a9a_m.jpg
+date: 2007-04-20 07:33:00
+featuredImage: /photos/465836267_a877d86a9a_m.jpg
 layout: post
 path: /2007/04/mi-versin-de-la-laptop-de-100
 slug: mi-versin-de-la-laptop-de-100

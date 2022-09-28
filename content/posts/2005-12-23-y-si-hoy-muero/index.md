@@ -3,8 +3,8 @@ author: ivan
 categories:
 - Sin categoría
 comments: true
-date: 2005-12-23 06:33:00+00:00
-featuredImage: ./death_grim.png
+date: 2005-12-23 06:33:00
+featuredImage: /photos/death_grim.png
 layout: post
 path: /2005/12/y-si-hoy-muero
 slug: y-si-hoy-muero

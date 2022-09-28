@@ -3,8 +3,8 @@ author: ivan
 categories:
 - Sin categoría
 comments: true
-date: 2008-08-15 09:02:00+00:00
-featuredImage: ./ftsurv.jpg
+date: 2008-08-15 09:02:00
+featuredImage: /photos/ftsurv.jpg
 layout: post
 path: /2008/08/el-peligro-de-la-falta-de-privacidad
 slug: el-peligro-de-la-falta-de-privacidad

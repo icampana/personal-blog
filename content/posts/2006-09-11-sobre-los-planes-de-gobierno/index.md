@@ -3,8 +3,8 @@ author: ivan
 categories:
 - Sin categoría
 comments: true
-date: 2006-09-11 10:10:00+00:00
-featuredImage: ./ghost_rider.jpg
+date: 2006-09-11 10:10:00
+featuredImage: /photos/ghost_rider.jpg
 layout: post
 path: /2006/09/sobre-los-planes-de-gobierno
 slug: sobre-los-planes-de-gobierno

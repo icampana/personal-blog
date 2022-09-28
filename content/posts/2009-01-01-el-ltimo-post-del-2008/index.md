@@ -3,8 +3,8 @@ author: ivan
 categories:
 - Sin categoría
 comments: true
-date: 2009-01-01 07:46:00+00:00
-featuredImage: ./DSC03917.jpg
+date: 2009-01-01 07:46:00
+featuredImage: /photos/DSC03917.jpg
 layout: post
 path: /2009/01/el-ltimo-post-del-2008
 slug: el-ltimo-post-del-2008

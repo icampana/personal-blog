@@ -3,8 +3,8 @@ author: ivan
 categories:
 - Sin categoría
 comments: true
-date: 2008-08-04 08:39:00+00:00
-featuredImage: ./Facundo-2.jpg
+date: 2008-08-04 08:39:00
+featuredImage: /photos/Facundo-2.jpg
 layout: post
 path: /2008/08/cuando-te-sobra-amor
 slug: cuando-te-sobra-amor

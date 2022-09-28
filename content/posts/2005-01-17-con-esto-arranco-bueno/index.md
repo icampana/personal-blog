@@ -3,8 +3,8 @@ author: ivan
 categories:
 - Sin categoría
 comments: true
-date: 2005-01-17 19:19:00+00:00
-featuredImage: ./cadena-sol.jpg
+date: 2005-01-17 19:19:00
+featuredImage: /photos/cadena-sol.jpg
 layout: post
 path: /2005/01/con-esto-arranco-bueno
 slug: con-esto-arranco-bueno

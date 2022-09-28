@@ -3,8 +3,8 @@ author: ivan
 categories:
 - Sin categoría
 comments: true
-date: 2009-01-16 23:10:00+00:00
-featuredImage: ./IMG_0056.jpg
+date: 2009-01-16 23:10:00
+featuredImage: /photos/IMG_0056.jpg
 layout: post
 path: /2009/01/aprovechando-la-penumbra
 slug: aprovechando-la-penumbra

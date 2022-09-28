@@ -3,8 +3,8 @@ author: ivan
 categories:
 - Sin categoría
 comments: true
-date: 2011-05-26 13:00:00+00:00
-featuredImage: ./kaffe_fika-1.jpg
+date: 2011-05-26 13:00:00
+featuredImage: /photos/kaffe_fika-1.jpg
 layout: post
 path: /2011/05/kaffe-fika
 slug: kaffe-fika

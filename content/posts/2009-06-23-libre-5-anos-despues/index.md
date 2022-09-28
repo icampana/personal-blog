@@ -3,8 +3,8 @@ author: ivan
 categories:
 - Sin categoría
 comments: true
-date: 2009-06-23 20:23:00+00:00
-featuredImage: ./img_1381-Modificada.jpg
+date: 2009-06-23 20:23:00
+featuredImage: /photos/img_1381-Modificada.jpg
 layout: post
 path: /2009/06/libre-5-anos-despues
 slug: libre-5-anos-despues

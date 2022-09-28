@@ -3,8 +3,8 @@ author: ivan
 categories:
 - Sin categoría
 comments: true
-date: 2005-11-20 05:34:00+00:00
-featuredImage: ./parque_central.jpg
+date: 2005-11-20 05:34:00
+featuredImage: /photos/parque_central.jpg
 layout: post
 path: /2005/11/machala-city-boy
 slug: machala-city-boy

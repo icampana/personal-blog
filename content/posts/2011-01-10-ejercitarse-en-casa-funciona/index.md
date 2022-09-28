@@ -3,8 +3,8 @@ author: ivan
 categories:
 - Sin categoría
 comments: true
-date: 2011-01-10 03:09:00+00:00
-featuredImage: ./antes_despues_p90X.jpg
+date: 2011-01-10 03:09:00
+featuredImage: /photos/antes_despues_p90X.jpg
 layout: post
 path: /2011/01/ejercitarse-en-casa-funciona
 slug: ejercitarse-en-casa-funciona

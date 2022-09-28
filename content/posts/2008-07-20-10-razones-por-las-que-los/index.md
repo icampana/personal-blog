@@ -3,8 +3,8 @@ author: ivan
 categories:
 - Sin categoría
 comments: true
-date: 2008-07-20 20:32:00+00:00
-featuredImage: ./galapagos1.jpg
+date: 2008-07-20 20:32:00
+featuredImage: /photos/galapagos1.jpg
 layout: post
 path: /2008/07/10-razones-por-las-que-los
 slug: 10-razones-por-las-que-los

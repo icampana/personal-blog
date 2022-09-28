@@ -3,8 +3,8 @@ author: ivan
 categories:
 - Sin categoría
 comments: true
-date: 2006-01-09 18:30:00+00:00
-featuredImage: ./Imagen026.jpg
+date: 2006-01-09 18:30:00
+featuredImage: /photos/Imagen026.jpg
 layout: post
 path: /2006/01/fin-de-semana-de-ciclismo
 slug: fin-de-semana-de-ciclismo

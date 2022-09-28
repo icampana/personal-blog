@@ -3,8 +3,8 @@ author: ivan
 categories:
 - Sin categoría
 comments: true
-date: 2005-09-11 11:21:00+00:00
-featuredImage: ./imagen0011.jpg
+date: 2005-09-11 11:21:00
+featuredImage: /photos/imagen0011.jpg
 layout: post
 path: /2005/09/batida-de-pelcula-en-plena-victor
 slug: batida-de-pelcula-en-plena-victor

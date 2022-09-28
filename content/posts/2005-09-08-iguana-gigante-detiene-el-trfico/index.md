@@ -3,8 +3,8 @@ author: ivan
 categories:
 - Sin categoría
 comments: true
-date: 2005-09-08 05:39:00+00:00
-featuredImage: ./Iguana2.jpg
+date: 2005-09-08 05:39:00
+featuredImage: /photos/Iguana2.jpg
 layout: post
 path: /2005/09/iguana-gigante-detiene-el-trfico
 slug: iguana-gigante-detiene-el-trfico

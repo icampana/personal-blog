@@ -1,7 +1,7 @@
 ---
 title: Mi top de extensiones para VSCode
 date: 2021-09-14T18:53:52.220Z
-featuredImage: vscode.png
+featuredImage: /photos/vscode.png
 description: Las extensiones de Visual Studio Code que más utilizo.
 tags:
   - vscode

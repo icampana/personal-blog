@@ -3,8 +3,8 @@ author: ivan
 categories:
 - Sin categoría
 comments: true
-date: 2009-06-07 00:43:00+00:00
-featuredImage: ./photo-722745.jpg
+date: 2009-06-07 00:43:00
+featuredImage: /photos/photo-722745.jpg
 layout: post
 path: /2009/06/mi-iphone-con-beatmania
 slug: mi-iphone-con-beatmania

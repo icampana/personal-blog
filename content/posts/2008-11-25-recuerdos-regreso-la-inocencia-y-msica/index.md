@@ -3,8 +3,8 @@ author: ivan
 categories:
 - Sin categoría
 comments: true
-date: 2008-11-25 09:44:00+00:00
-featuredImage: ./capitan_memo.jpg
+date: 2008-11-25 09:44:00
+featuredImage: /photos/capitan_memo.jpg
 layout: post
 path: /2008/11/recuerdos-regreso-la-inocencia-y-msica
 slug: recuerdos-regreso-la-inocencia-y-msica

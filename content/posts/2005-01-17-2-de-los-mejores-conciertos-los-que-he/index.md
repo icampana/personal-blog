@@ -3,8 +3,8 @@ author: ivan
 categories:
 - Sin categoría
 comments: true
-date: 2005-01-17 19:06:00+00:00
-featuredImage: ./tickets.jpg
+date: 2005-01-17 19:06:00
+featuredImage: /photos/tickets.jpg
 layout: post
 path: /2005/01/2-de-los-mejores-conciertos-los-que-he
 slug: 2-de-los-mejores-conciertos-los-que-he

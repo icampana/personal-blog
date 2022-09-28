@@ -3,8 +3,8 @@ author: ivan
 categories:
 - Sin categoría
 comments: true
-date: 2009-03-10 22:36:00+00:00
-featuredImage: ./img_0585.jpg
+date: 2009-03-10 22:36:00
+featuredImage: /photos/img_0585.jpg
 layout: post
 path: /2009/03/torta-de-cumpleanos-geek
 slug: torta-de-cumpleanos-geek

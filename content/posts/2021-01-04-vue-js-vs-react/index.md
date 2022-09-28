@@ -1,7 +1,7 @@
 ---
 title: Vue.JS vs React
 date: 2022-01-23T07:01:10.093Z
-featuredImage: vue-vs-react.jpg
+featuredImage: /photos/vue-vs-react.jpg
 description: Comparación entre dos de las tecnologías más utilizadas para
   frontend en los últimos años
 tags:

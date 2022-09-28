@@ -3,8 +3,8 @@ author: ivan
 categories:
 - Sin categoría
 comments: true
-date: 2009-01-15 11:40:00+00:00
-featuredImage: ./camarita.jpg
+date: 2009-01-15 11:40:00
+featuredImage: /photos/camarita.jpg
 layout: post
 path: /2009/01/y-hasta-que-lleg-mi-beb
 slug: y-hasta-que-lleg-mi-beb

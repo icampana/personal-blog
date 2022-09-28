@@ -3,8 +3,8 @@ author: ivan
 categories:
 - Sin categoría
 comments: true
-date: 2007-05-18 07:32:00+00:00
-featuredImage: ./women.png
+date: 2007-05-18 07:32:00
+featuredImage: /photos/women.png
 layout: post
 path: /2007/05/porqu-debe-haber-slo-una-mujer-para-un
 slug: porqu-debe-haber-slo-una-mujer-para-un

@@ -3,8 +3,8 @@ author: ivan
 categories:
 - Sin categoría
 comments: true
-date: 2013-08-13 19:03:00+00:00
-featuredImage: ./website-libra-1.jpg
+date: 2013-08-13 19:03:00
+featuredImage: /photos/website-libra-1.jpg
 layout: post
 path: /2013/08/desarrollando-software-por-libra
 slug: desarrollando-software-por-libra

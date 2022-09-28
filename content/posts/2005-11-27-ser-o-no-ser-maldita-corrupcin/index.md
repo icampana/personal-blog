@@ -3,8 +3,8 @@ author: ivan
 categories:
 - Sin categoría
 comments: true
-date: 2005-11-27 11:25:00+00:00
-featuredImage: ./corrupcion.jpg
+date: 2005-11-27 11:25:00
+featuredImage: /photos/corrupcion.jpg
 layout: post
 path: /2005/11/ser-o-no-ser-maldita-corrupcin
 slug: ser-o-no-ser-maldita-corrupcin

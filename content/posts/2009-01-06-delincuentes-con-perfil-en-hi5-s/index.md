@@ -3,8 +3,8 @@ author: ivan
 categories:
 - Sin categoría
 comments: true
-date: 2009-01-06 20:30:00+00:00
-featuredImage: ./GG04A060109photo02_456_336.jpg
+date: 2009-01-06 20:30:00
+featuredImage: /photos/GG04A060109photo02_456_336.jpg
 layout: post
 path: /2009/01/delincuentes-con-perfil-en-hi5-s
 slug: delincuentes-con-perfil-en-hi5-s

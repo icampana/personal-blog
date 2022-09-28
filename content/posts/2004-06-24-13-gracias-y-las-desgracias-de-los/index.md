@@ -1,17 +1,17 @@
 ---
 author: ivan
+categories:
+- Sin categoría
 comments: true
-date: 2004-06-24 05:21:00+00:00
+date: 2004-06-24 05:21:00
+featuredImage: /photos/portada-13-gracias.jpg
 layout: post
 path: /2004/06/13-gracias-y-las-desgracias-de-los
 slug: 13-gracias-y-las-desgracias-de-los
+tags:
+- Música
 title: 13 gracias! y las desgracias de los piratas
 wordpress_id: 1060
-featuredImage: ./portada-13-gracias.jpg
-categories:
-  - Sin categoría
-tags:
-  - Música
 ---
 
 Hace unos dí­as compré el CD nuevo de los **Cruks en Karnak**, se llama 13 gracias, el disco es muy bueno, considerando que han hecho un esfuerzo para sacar un buen material con un costo mí­nimo. A primera instancia, de las 16 canciones al menos unas 9 se me pegaron de inmediato.

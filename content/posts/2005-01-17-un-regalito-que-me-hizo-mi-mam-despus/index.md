@@ -3,8 +3,8 @@ author: ivan
 categories:
 - Sin categoría
 comments: true
-date: 2005-01-17 19:04:00+00:00
-featuredImage: ./chupete-tetas.jpg
+date: 2005-01-17 19:04:00
+featuredImage: /photos/chupete-tetas.jpg
 layout: post
 path: /2005/01/un-regalito-que-me-hizo-mi-mam-despus
 slug: un-regalito-que-me-hizo-mi-mam-despus

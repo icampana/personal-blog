@@ -3,8 +3,8 @@ author: ivan
 categories:
 - Sin categoría
 comments: true
-date: 2005-01-17 19:11:00+00:00
-featuredImage: ./spiderman-dedo.jpg
+date: 2005-01-17 19:11:00
+featuredImage: /photos/spiderman-dedo.jpg
 layout: post
 path: /2005/01/un-spiderman-hecho-de-lanita-p-se
 slug: un-spiderman-hecho-de-lanita-p-se

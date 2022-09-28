@@ -3,8 +3,8 @@ author: ivan
 categories:
 - Sin categoría
 comments: true
-date: 2009-02-10 18:04:00+00:00
-featuredImage: ./yes-man-carrey-set.jpg
+date: 2009-02-10 18:04:00
+featuredImage: /photos/yes-man-carrey-set.jpg
 layout: post
 path: /2009/02/si-senor
 slug: si-senor

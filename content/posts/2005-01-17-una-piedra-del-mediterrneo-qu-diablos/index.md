@@ -3,8 +3,8 @@ author: ivan
 categories:
 - Sin categoría
 comments: true
-date: 2005-01-17 19:14:00+00:00
-featuredImage: ./piedra-mediterraneo.jpg
+date: 2005-01-17 19:14:00
+featuredImage: /photos/piedra-mediterraneo.jpg
 layout: post
 path: /2005/01/una-piedra-del-mediterrneo-qu-diablos
 slug: una-piedra-del-mediterrneo-qu-diablos

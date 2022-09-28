@@ -3,8 +3,8 @@ author: ivan
 categories:
 - Sin categoría
 comments: true
-date: 2008-11-05 10:09:00+00:00
-featuredImage: ./Image000.jpg
+date: 2008-11-05 10:09:00
+featuredImage: /photos/Image000.jpg
 layout: post
 path: /2008/11/hablemos-de-cultura
 slug: hablemos-de-cultura

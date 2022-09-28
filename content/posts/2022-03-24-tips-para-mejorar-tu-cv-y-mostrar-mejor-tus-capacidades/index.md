@@ -1,7 +1,7 @@
 ---
 title: Tips para mejorar tu CV y mostrar mejor tus capacidades.
 date: 2022-03-24T20:06:59.624Z
-featuredImage: mixkit-exhausted-man-in-front-of-a-computer-with-his-head-69-original.png
+featuredImage: /photos/mixkit-exhausted-man-in-front-of-a-computer-with-his-head-69-original.png
 description: "En mi experiencia profesional he pasado desde ser dueño de
   empresa, hasta pasar por montones de entrevistas para tratar de conseguir el
   trabajo que quería, y en ambos casos siempre se regresa al mismo punto: hay
@@ -29,9 +29,9 @@ Si es para Estados Unidos o en general para salir del país, el mínimo es tener
 
 Esto es algo que funciona tanto para el CV normal o para la versión en línea, es recomendable en 1 sola línea explicar de manera clara y concisa qué es exactamente lo que haces, de forma que los reclutadores (head hunters) puedan con apenas leer esa línea saber qué tipo de perfil se van a encontrar.
 
-Además que cuando hablamos de la versión electrónica, las palabras que pongas aquí van a ser utilizadas por los buscadores para identificarte. Algunos ejemplos: 
+Además que cuando hablamos de la versión electrónica, las palabras que pongas aquí van a ser utilizadas por los buscadores para identificarte. Algunos ejemplos:
 
-Algunos ejemplos: 
+Algunos ejemplos:
 
 * Senior Full Stack Engineer
 * React Developer at X.Y.Z

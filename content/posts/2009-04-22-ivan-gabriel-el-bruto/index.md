@@ -3,8 +3,8 @@ author: ivan
 categories:
 - Sin categoría
 comments: true
-date: 2009-04-22 00:16:00+00:00
-featuredImage: ./IvanGabriel-El-Bruto.png
+date: 2009-04-22 00:16:00
+featuredImage: /photos/IvanGabriel-El-Bruto.png
 layout: post
 path: /2009/04/ivan-gabriel-el-bruto
 slug: ivan-gabriel-el-bruto

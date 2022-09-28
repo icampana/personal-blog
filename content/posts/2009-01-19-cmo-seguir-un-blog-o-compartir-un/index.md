@@ -3,8 +3,8 @@ author: ivan
 categories:
 - Sin categoría
 comments: true
-date: 2009-01-19 09:55:00+00:00
-featuredImage: ./follow_blog.jpg
+date: 2009-01-19 09:55:00
+featuredImage: /photos/follow_blog.jpg
 layout: post
 path: /2009/01/cmo-seguir-un-blog-o-compartir-un
 slug: cmo-seguir-un-blog-o-compartir-un

@@ -3,8 +3,8 @@ author: ivan
 categories:
 - Sin categoría
 comments: true
-date: 2008-05-29 01:13:00+00:00
-featuredImage: ./Pantallazo-Kangun-video-converter.png
+date: 2008-05-29 01:13:00
+featuredImage: /photos/Pantallazo-Kangun-video-converter.png
 layout: post
 path: /2008/05/cmo-convertir-los-videos-de
 slug: cmo-convertir-los-videos-de
