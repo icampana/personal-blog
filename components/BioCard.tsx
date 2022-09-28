@@ -10,8 +10,8 @@ import meta from 'metadata.json';
 
    const { author, social } = meta.site;
    return (
-     <div className="grid sm:grid-cols-1 sm:min-w-fit lg:grid-cols-2 my-5">
-       <div className="flex justfy-start my-4">
+     <div className="grid sm:grid-cols-1 sm:min-w-fit lg:grid-cols-3 my-5">
+       <div className="flex justfy-start my-4 lg:col-span-2">
          <div className='mr-5'>
             <Image src={Logo} alt={author} className="rounded-full" layout='fixed' width='50' height={50} />
          </div>
