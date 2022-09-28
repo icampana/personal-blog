@@ -70,7 +70,7 @@ const PostLayout = ({ post }: { post: Post }) => {
         <title>{post.title} | { site.title }</title>
       </Head>
       <article className="min-w-min max-w-2xl mx-auto py-8 sm:px-3">
-        <header>
+        <header className='px-2'>
           <div className='text-left'>
             <strong className='font-sans font-bold text-3xl mb-6'>
               <Link href={"/"}><a>{ site.title }</a></Link>
