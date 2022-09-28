@@ -1,5 +1,5 @@
 ---
-title: Tips para mejorar tu CV y mostrar mejor tus capacidades.
+title: Tips para mejorar tu CV y mostrar mejor tus capacidades
 date: 2022-03-24T20:06:59.624Z
 featuredImage: /photos/mixkit-exhausted-man-in-front-of-a-computer-with-his-head-69-original.png
 description: "En mi experiencia profesional he pasado desde ser dueño de
@@ -29,7 +29,7 @@ Si es para Estados Unidos o en general para salir del país, el mínimo es tener
 
 Esto es algo que funciona tanto para el CV normal o para la versión en línea, es recomendable en 1 sola línea explicar de manera clara y concisa qué es exactamente lo que haces, de forma que los reclutadores (head hunters) puedan con apenas leer esa línea saber qué tipo de perfil se van a encontrar.
 
-Además que cuando hablamos de la versión electrónica, las palabras que pongas aquí van a ser utilizadas por los buscadores para identificarte. Algunos ejemplos:
+Además que cuando hablamos de la versión electrónica, las palabras que pongas aquí van a ser utilizadas por los buscadores para identificarte.
 
 Algunos ejemplos:
 
@@ -73,7 +73,7 @@ Intenta (de ser posible) incluir como palabras claves las habilidades duras que 
 
 Si tienes algún tipo de certificación, o cualquier tipo de credencial, es el momento de hacerlas brillar. Pero tampoco hay que llenar por llenar, que sean aquellas que se consideren relevantes para los puestos a los que estés aplicando.
 
-Algo que se puede aplicar tanto en papel como en Linkedin y es fácil, es utilizar el certificado de dominio de un idioma, como en el caso del inglés el test de English Proficiency que se puede obtener de lugares como [EF de forma gratuita](<https://www.efset.org/english-certificate/>) y una vez terminados incluyen las instrucciones para agregarlo a nuestro perfil profesional:  https://www.efset.org/add-to-profile/
+Algo que se puede aplicar tanto en papel como en Linkedin y es fácil, es utilizar el certificado de dominio de un idioma, como en el caso del inglés el test de English Proficiency que se puede obtener de lugares como [EF de forma gratuita](https://www.efset.org/english-certificate) y una vez terminados incluyen las instrucciones para [agregarlo a nuestro perfil profesional](https://www.efset.org/add-to-profile/).
 
 Algo específico de Linkedin son las Insignias o "Badges" que permiten mostrar conocimiento validado, es decir, que de alguna de las cosas que pongo como habilidad "dura" puedo demostrar que tengo ese conocimiento, normalmente son pruebas de 15 minutos que principalmente son de temas técnicos, pero también hay algunas sobre manejo de proyectos y otro tipo de habilidades.  Esto ayuda a que salgamos entre los primeros resultados cuando alguien busca a alguien con esa habilidad en específico.
 
