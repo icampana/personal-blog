@@ -17,6 +17,9 @@ function MyApp({ Component, pageProps }: AppProps) {
         locale: 'es',
         url: site.siteUrl,
         site_name: site.title,
+        images: [
+          { url: `${site.siteUrl}/images/profile-pic.jpg` },
+        ]
       }}
       twitter={{
         handle: `@${site.social.twitter}`,

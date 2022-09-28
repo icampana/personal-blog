@@ -8,6 +8,7 @@ import { compareDesc } from "date-fns";
 import { allPosts, Post } from "contentlayer/generated";
 import BioCard from 'components/BioCard';
 import meta from 'metadata.json';
+import { NextSeo } from 'next-seo';
 import Footer from 'components/Footer';
 
 export async function getStaticProps() {
@@ -26,9 +27,13 @@ const Home: NextPage<{ posts: Post[]}> = (props) => {
     <div className="container mx-auto">
       <Head>
         <title>Home | { site.title }</title>
-        <meta name="description" content={ site.description } />
         <link rel="icon" href="/favicon.ico" />
       </Head>
+      <NextSeo
+        title={site.title}
+        description={site.description}
+        canonical={site.siteUrl}
+      />
 
       <main className='max-w-6xl mx-auto'>
         <header className='px-1'>
