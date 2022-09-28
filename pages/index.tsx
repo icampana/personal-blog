@@ -30,7 +30,7 @@ const Home: NextPage<{ posts: Post[]}> = (props) => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className='max-w-6xl mx-auto'>
+      <main className='max-w-6xl mx-auto sm:px-3'>
         <h1 className='font-sans font-bold text-5xl hover:underline'>
           <Link href={"/"}>{ site.title }</Link>
         </h1>

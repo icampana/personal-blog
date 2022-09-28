@@ -69,7 +69,7 @@ const PostLayout = ({ post }: { post: Post }) => {
       <Head>
         <title>{post.title} | { site.title }</title>
       </Head>
-      <article className="min-w-min max-w-2xl mx-auto py-8">
+      <article className="min-w-min max-w-2xl mx-auto py-8 sm:px-3">
         <div className='text-left'>
           <strong className='font-sans font-bold text-3xl mb-6 hover:underline'>
             <Link href={"/"}>{ site.title }</Link>
