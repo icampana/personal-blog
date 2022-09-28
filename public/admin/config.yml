@@ -1,0 +1,69 @@
+backend:
+  name: github
+  repo: icampana/personal-blog
+  branch: main
+
+site_url: https://ivan.campananaranjo.com
+
+publish_mode: editorial_workflow
+locale: "es"
+
+slug:
+  encoding: "ascii"
+  clean_accents: true
+  sanitize_replacement: "-"
+
+media_folder: "public/photos"
+public_folder: "/photos"
+
+collections:
+  - name: "blog"
+    label: "Blog Posts"
+    label_singular: "Blog Post"
+    folder: "content/posts"
+    path: "{{slug}}/index"
+    identifier_field: "title"
+    create: true
+    extension: "md"
+    format: "yaml-frontmatter"
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    editor:
+     preview: true
+    summary: "{{title}} - {{commit_date}}"
+    sort: 'date:desc'
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Publish Date", name: "date", widget: "datetime" }
+      - { label: "Featured Image", name: "featuredImage", widget: "image" }
+      - { label: "Description", name: "description", widget: "string" }
+      - { label: "Body", name: "body", widget: "markdown" }
+      - { label: "Tags", name: "tags", widget: "tags", separator: ",", required: false }
+    view_filters:
+      - label: 'Posts published in 2020'
+        field: date
+        pattern: '2020'
+      - label: Drafts
+        field: draft
+        pattern: true
+    view_groups:
+      - label: Year
+        field: date
+        # groups items based on the value matched by the pattern
+        pattern: \d{4}
+      - label: Drafts
+        field: draft
+
+  - name: "page"
+    label: "Pages"
+    label_singular: "Page"
+    folder: "content/pages"
+    create: true
+    extension: "md"
+    format: "yaml-frontmatter"
+    slug: "{{slug}}"
+    editor:
+     preview: false
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Body", name: "body", widget: "markdown" }
+      - { label: "Publish Date", name: "date", widget: "datetime" }
