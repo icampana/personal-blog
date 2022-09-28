@@ -1,8 +1,10 @@
 import Head from "next/head";
-import { format, parseISO } from "date-fns";
+import Link from "next/link";
 import { allPosts, Post } from "contentlayer/generated";
 import Image from 'next/image'
 import BioCard from 'components/BioCard';
+import DateComponent from 'components/blocks/Date';
+import meta from 'metadata.json';
 
 export async function getStaticPaths() {
   const paths: string[] = allPosts.map((post) => post.url);
@@ -34,7 +36,8 @@ export async function getStaticProps(props: any) {
 }
 
 const PostLayout = ({ post }: { post: Post }) => {
-  const featuredImage = post.featuredImage?.replace('./', '');
+  const { site } = meta;
+  const imagePath = post.featuredImage || '/images/placeholder.png';
   const readingTime = `${Math.round(post.readingTime.minutes)} minutos`;
 
   return (
@@ -43,18 +46,21 @@ const PostLayout = ({ post }: { post: Post }) => {
         <title>{post.title}</title>
       </Head>
       <article className="min-w-min max-w-2xl mx-auto py-8">
+        <div className='text-left'>
+          <h1 className='font-sans font-bold text-5xl mb-6 hover:underline'>
+            <Link href={"/"}>{ site.title }</Link>
+          </h1>
+        </div>
         <div className="text-center mb-8">
-          <h1 className='font-sans font-bold text-3xl hover:underline'>{post.title}</h1>
+          <h1 className='font-sans font-bold text-3xl'>{post.title}</h1>
           <div className='float-right text-gray-400 text-xs'>
             <em>Tiempo de lectura:</em> {readingTime}
           </div>
-          <time dateTime={post.date} className="text-xs text-gray-600 mb-1">
-            {format(parseISO(post.date), "LLLL d, yyyy")}
-          </time>
+          <DateComponent postDate={post.date} />
         </div>
 
-        <div>
-          {post.featuredImage && <Image src={`/photos/${featuredImage}`} alt={post.title} layout="responsive" width={700} height={250} />}
+        <div style={{ position: 'relative', width: '100%', height: '250px', marginBottom: '10px' }}>
+          {imagePath && <Image src={imagePath} alt={post.title} layout="fill" objectFit="cover"  placeholder="blur" blurDataURL='iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mM0SeuuBwADoQGm9h5VIAAAAABJRU5ErkJggg==' />}
         </div>
 
         <div className='leading-7' dangerouslySetInnerHTML={{ __html: post.body.html }} />
