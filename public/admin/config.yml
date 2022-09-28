@@ -16,6 +16,9 @@ slug:
 media_folder: "public/photos"
 public_folder: "/photos"
 
+media_library:
+  name: uploadcare
+
 collections:
   - name: "blog"
     label: "Blog Posts"
@@ -30,7 +33,7 @@ collections:
     editor:
      preview: true
     summary: "{{title}} - {{commit_date}}"
-    sort: 'date:desc'
+    sortable_fields: ['commit_date', 'title']
     fields:
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Publish Date", name: "date", widget: "datetime" }
