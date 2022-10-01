@@ -7,7 +7,8 @@
     "build": "next build",
     "export": "next export",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "build:admin-css": "npx tailwindcss build -i styles/globals.css -o public/admin.css"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.2.0",
@@ -16,7 +17,9 @@
     "@fortawesome/react-fontawesome": "^0.2.0",
     "contentlayer": "^0.2.8",
     "date-fns": "^2.29.3",
+    "marked": "^4.1.1",
     "netlify-cms-app": "^2.15.72",
+    "netlify-cms-media-library-uploadcare": "^0.5.10",
     "next": "12.3.1",
     "next-contentlayer": "^0.2.8",
     "next-seo": "^5.5.0",
@@ -26,6 +29,7 @@
     "striptags": "^3.2.0"
   },
   "devDependencies": {
+    "@types/marked": "^4.0.7",
     "@types/node": "18.7.20",
     "@types/react": "18.0.21",
     "@types/react-dom": "18.0.6",
