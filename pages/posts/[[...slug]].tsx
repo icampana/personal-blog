@@ -93,7 +93,7 @@ const PostLayout = ({ post }: { post: Post }) => {
               <Link href={"/"}><a>{ site.title }</a></Link>
             </strong>
           </div>
-          <div className="mb-8 mt-3">
+          <div className="mb-3 mt-3">
             <h1 className='text-center font-sans font-bold text-3xl text-orange-900'>{post.title}</h1>
             <div className='float-right text-gray-400 text-xs'>
               <em>Tiempo de lectura:</em> {readingTime}

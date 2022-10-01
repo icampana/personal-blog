@@ -13,7 +13,7 @@ const getImage = (post: Post) => {
 
 const PostCard = (post: Post) => {
     return (
-      <div className="mb-8">
+      <div className="mb-5">
         <div>
           <Link href={post.url}><a>{getImage(post)}</a></Link>
         </div>
