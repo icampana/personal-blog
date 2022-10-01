@@ -1,14 +1,12 @@
 import Head from "next/head";
-import Link from "next/link";
 import { allPosts, Post } from "contentlayer/generated";
-import Image from 'next/image'
 import BioCard from 'components/BioCard';
-import DateComponent from 'components/blocks/Date';
 import meta from 'metadata.json';
 import { NextSeo } from 'next-seo';
 import striptags from 'striptags';
 import { MouseEvent, useState, useEffect } from 'react';
 import Footer from 'components/Footer';
+import BlogPost from 'components/blocks/BlogPost';
 
 export async function getStaticPaths() {
   const paths: string[] = allPosts.map((post) => post.url);
@@ -43,7 +41,6 @@ const PostLayout = ({ post }: { post: Post }) => {
   const [showReturn, setShowReturn] = useState(false);
   const { site } = meta;
   const imagePath = post.featuredImage || '/images/placeholder.png';
-  const readingTime = `${Math.round(post.readingTime.minutes)} minutos`;
   const postCanonical = `${site.siteUrl}${post.url}`;
   const postDescription = post.description || striptags(post.body.html).slice(0, 200);
 
@@ -87,26 +84,7 @@ const PostLayout = ({ post }: { post: Post }) => {
         }}
       />
       <article className="min-w-min max-w-4xl mx-auto py-8 sm:px-3">
-        <header className='px-2'>
-          <div className='text-left'>
-            <strong className='font-sans font-bold text-3xl mb-6'>
-              <Link href={"/"}><a>{ site.title }</a></Link>
-            </strong>
-          </div>
-          <div className="mb-3 mt-3">
-            <h1 className='text-center font-sans font-bold text-3xl text-orange-900'>{post.title}</h1>
-            <div className='float-right text-gray-400 text-xs'>
-              <em>Tiempo de lectura:</em> {readingTime}
-            </div>
-            <DateComponent postDate={post.date} />
-          </div>
-        </header>
-
-        <div className='relative mb-4 w-full h-64'>
-          {imagePath && <Image src={imagePath} alt={post.title} layout="fill" objectFit="cover"  placeholder="blur" blurDataURL='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mM0SeuuBwADoQGm9h5VIAAAAABJRU5ErkJggg==' />}
-        </div>
-
-        <div className='leading-7 px-2' dangerouslySetInnerHTML={{ __html: post.body.html }} />
+        <BlogPost post={post} />
 
          {/* Back to top button */}
         {showReturn && <button onClick={backToTop} type="button" data-mdb-ripple="true" data-mdb-ripple-color="light" className="fixed inline-block p-3 bg-red-600 text-white font-medium text-xs leading-tight uppercase rounded-full shadow-md hover:bg-red-700 hover:shadow-lg focus:bg-red-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-red-800 active:shadow-lg transition duration-150 ease-in-out bottom-5 right-5" id="btn-back-to-top">
