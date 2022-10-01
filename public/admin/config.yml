@@ -32,8 +32,8 @@ collections:
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     editor:
      preview: true
-    summary: "{{title}} - {{commit_date}}"
-    sortable_fields: ['commit_date', 'title']
+    summary: "{{title}} - {{date}}"
+    sortable_fields: ['date', 'title']
     fields:
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Publish Date", name: "date", widget: "datetime" }
