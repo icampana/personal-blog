@@ -16,9 +16,6 @@ slug:
 media_folder: "public/photos"
 public_folder: "/photos"
 
-media_library:
-  name: uploadcare
-
 collections:
   - name: "blog"
     label: "Blog Posts"
