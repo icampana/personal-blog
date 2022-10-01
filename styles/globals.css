@@ -26,5 +26,11 @@ ol, ul {
 }
 
 p > img {
-    @apply mx-auto max-w-screen-sm px-2 py-1 sm:max-w-xs;
+    @apply mx-auto max-w-screen-sm px-2 py-1
+
 }
+@media screen(sm) {
+    p > img {
+        @apply max-w-xs;
+    }
+  }
