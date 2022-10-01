@@ -102,7 +102,7 @@ const PostLayout = ({ post }: { post: Post }) => {
           </div>
         </header>
 
-        <div style={{ position: 'relative', width: '100%', height: '250px', marginBottom: '10px' }}>
+        <div className='relative mb-4 w-full h-64'>
           {imagePath && <Image src={imagePath} alt={post.title} layout="fill" objectFit="cover"  placeholder="blur" blurDataURL='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mM0SeuuBwADoQGm9h5VIAAAAABJRU5ErkJggg==' />}
         </div>
 
