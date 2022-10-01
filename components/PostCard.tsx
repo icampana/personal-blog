@@ -28,7 +28,7 @@ const PostCard = (post: Post) => {
 
         <div
           className="text-sm"
-          dangerouslySetInnerHTML={{ __html: post.description || striptags(post.body.html).slice(0, 200) }}
+          dangerouslySetInnerHTML={{ __html: post.description || striptags(post.body.html).slice(0, 200) + '...' }}
         />
       </div>
     );
