@@ -29,11 +29,11 @@ p > img {
     @apply mx-auto max-w-screen-sm px-2 py-1
 }
 
-article a {
+.article-content a {
     @apply text-amber-800;
 }
 
-article a:hover {
+a:hover {
     @apply underline;
 }
 

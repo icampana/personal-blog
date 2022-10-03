@@ -36,7 +36,7 @@ const BlogPost = (props: BlogPostProps) => {
             {imagePath && <Image src={imagePath} alt={post.title} layout="fill" objectFit="cover"  placeholder="blur" blurDataURL='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mM0SeuuBwADoQGm9h5VIAAAAABJRU5ErkJggg==' />}
             </div>
 
-            <div className='leading-7 px-2' dangerouslySetInnerHTML={{ __html: post.body.html }} />
+            <div className='article-content leading-7 px-2' dangerouslySetInnerHTML={{ __html: post.body.html }} />
         </>
     );
 }
