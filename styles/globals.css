@@ -28,6 +28,15 @@ ol, ul {
 p > img {
     @apply mx-auto max-w-screen-sm px-2 py-1
 }
+
+article a {
+    @apply text-amber-800;
+}
+
+article a:hover {
+    @apply underline;
+}
+
 @media screen(sm) {
     p > img {
         @apply max-w-xs;
