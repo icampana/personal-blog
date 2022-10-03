@@ -33,15 +33,12 @@ collections:
     sortable_fields: ['date', 'title']
     fields:
       - { label: "Title", name: "title", widget: "string" }
-      - { label: "Publish Date", name: "date", widget: "datetime" }
+      - { label: "Publish Date", name: "date", widget: "datetime", date_format: "YYYY-MM-DD HH:mm:ss" }
       - { label: "Featured Image", name: "featuredImage", widget: "image", media_folder: '/public/photos' }
       - { label: "Description", name: "description", widget: "string" }
       - { label: "Body", name: "body", widget: "markdown" }
       - { label: "Tags", name: "tags", widget: "list", max: 3, separator: ",", required: false }
     view_filters:
-      - label: 'Posts published in 2020'
-        field: date
-        pattern: '2020'
       - label: Drafts
         field: draft
         pattern: true
