@@ -9,17 +9,17 @@ interface BlogPostPreviewProps {
 }
 
 const BlogPostPreview = ({ entry }: BlogPostPreviewProps) => {
-    const title = entry.getIn(['data', 'title']) || '';
+    const data = entry.getIn(['data']).toJS();
+
     const featuredImage = '';
     // const featuredImage = entry.getIn(['data', 'featuredImage']) || '';
-    const content = entry.getIn(['data', 'body']) ||'';
-    const date = formatISO(endOfDay(entry.getIn(['data', 'date'])));
+    const date = formatISO(endOfDay(data.date));
     console.debug(entry.getIn(['data', 'featuredImage']));
 
     const post = {
-        title,
+        title: data.title || '',
         featuredImage,
-        body: {html: marked(content)},
+        body: {html: marked(data?.body ||'')},
         date
     } as Post
 
