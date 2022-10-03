@@ -1,7 +1,7 @@
 ---
 title: ¿Dónde encontrar ofertas de trabajo remoto?
 date: 2022-10-01T23:29:59.126Z
-featuredImage: busqueda-trabajo.jpeg
+featuredImage: /photos/busqueda-trabajo.jpeg
 description: "Buscar trabajo remoto luego de la pandemia se ha vuelto algo más
   común de lo que pensábamos, sin embargo no es tan fácil encontrar esas ofertas
   que nos permitan tener una buena oportunidad. "
@@ -14,7 +14,7 @@ Uno de los primeros retos al plantearse la posibilidad de trabajar de forma remo
 
 Es cierto que la mayor cantidad de oportunidades de trabajo remoto o al menos las más fáciles de encontrar desde antes de 2020 han sido las del área de tecnología (desarrollo de software, manejo de proyectos, diseño, UX, etc), sin embargo no quiere decir que son las únicas opciones, hay muchas opciones y plataformas, dentro de esta publicación voy a enumerar algunas opciones que considero son útiles y ofrecen un poco de todo.
 
-Recomendaría antes de lanzarte a buscar y aplicar a trabajos, tomar un poco de tiempo y actualizar tu hoja de vida / CV con algunas de estas [recomendaciones básicas](/2022-03-24-tips-para-mejorar-tu-cv-y-mostrar-mejor-tus-capacidades/). 
+Recomendaría antes de lanzarte a buscar y aplicar a trabajos, tomar un poco de tiempo y actualizar tu hoja de vida / CV con algunas de estas [recomendaciones básicas](/2022-03-24-tips-para-mejorar-tu-cv-y-mostrar-mejor-tus-capacidades/).
 
 ## ¿Necesito saber inglés?
 Si bien no es un requisito indispensable, tener como mínimo un [nivel B2](https://www.britishcouncil.es/ingles/niveles/b2) (de acuerdo al marco [MCERL/CEFR](https://es.wikipedia.org/wiki/Marco_Com%C3%BAn_Europeo_de_Referencia_para_las_lenguas)) te abre las puertas a muchísimas más oportunidades en cualquier país, inclusive muchos que no tienen el inglés como idioma oficial.  Sin embargo, sí existen también vacantes para personas que sólo hablan español, pero no con el mismo nivel de sueldos y oportunidades.
@@ -33,14 +33,14 @@ De forma remota lo más común es trabajar en 2 posibles modalidades, no son las
 Probablemente lo que a más de uno le llama la atención, saber dónde se pueden encontrar esas ofertas o vacantes, en el siguiente listado incluyo las más populares, muchas son para encontrar trabajo en Startups, otras son para ser asistentes, varias son para TI, pero hay otras que son más genéricas y tienen ofertas desde asistentes virtuales, hasta trabajos de diseño y publicidad:
 
 * [AngelList](angel.co)
-* [Vivilia](https://vivilia.com/) 
-* [Torre](https://torre.co/) 
+* [Vivilia](https://vivilia.com/)
+* [Torre](https://torre.co/)
 * [Workana](https://www.workana.com/es/)
 * [FlatWorld](https://flatworld.co/)
 * [Remotive](remotive.com)
 * [VanHack](https://vanhack.com/)
 * [BairesDev](https://jobs.bairesdev.com/)
-* [Remote OK](remoteok.io) 
+* [Remote OK](remoteok.io)
 * [Turing](https://www.turing.com/)
 * [Awana](https://www.awana.io/job-openings)
 * [Working Nomads](workingnomads.co)
@@ -61,7 +61,7 @@ Esto lo agrego como una opción adicional que es la de una herramienta que permi
 
 ![Huntr Preview](https://huntr.co/images/discovery-hero-new.png)
 
-La nota final que pondría con respecto a las búsquedas laborales, independiente de si son remotas o no es que 
+La nota final que pondría con respecto a las búsquedas laborales, independiente de si son remotas o no es que
 
 ## ¿Cómo recibir el pago?
 Esto es otro punto adicional, muchas veces la mayor preocupación es cómo poder recibir el pago por tus servicios, porque las transferencias bancarias suelen ser costosas o a veces no están disponibles en todos los países.
