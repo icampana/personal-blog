@@ -5,6 +5,9 @@ featuredImage: busqueda-trabajo.jpeg
 description: "Buscar trabajo remoto luego de la pandemia se ha vuelto algo más
   común de lo que pensábamos, sin embargo no es tan fácil encontrar esas ofertas
   que nos permitan tener una buena oportunidad. "
+tags:
+  - Remote
+  - ""
 ---
 ## ¿Por Dónde Comenzar ?
 Uno de los primeros retos al plantearse la posibilidad de trabajar de forma remota es por don﻿de comenzar a buscar, junto con la pregunta también de si hay oportunidades para lo que yo hago?
