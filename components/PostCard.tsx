@@ -12,6 +12,8 @@ const getImage = (post: Post) => {
 };
 
 const PostCard = (post: Post) => {
+    const readTime = post.readingTime?.minutes || 0;
+    const readingTime = `${Math.round(readTime)} minutos`;
     return (
       <div className="mb-5">
         <div>
@@ -24,7 +26,12 @@ const PostCard = (post: Post) => {
           </Link>
         </h2>
 
-        <DateComponent postDate={post.date} />
+        <div className='text-xs'>
+          <div className='float-right text-gray-400 text-xs'>
+              <em>Lectura:</em> {readingTime}
+          </div>
+            <DateComponent postDate={post.date} />
+        </div>
 
         <div
           className="text-sm"

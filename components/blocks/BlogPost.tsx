@@ -26,7 +26,7 @@ const BlogPost = (props: BlogPostProps) => {
             <div className="mb-3 mt-3">
                 <h1 className='text-center font-sans font-bold text-3xl text-orange-900'>{post.title}</h1>
                 <div className='float-right text-gray-400 text-xs'>
-                <em>Tiempo de lectura:</em> {readingTime}
+                    <em>Tiempo de lectura:</em> {readingTime}
                 </div>
                 <DateComponent postDate={post.date} />
             </div>
