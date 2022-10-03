@@ -11,10 +11,12 @@ interface BlogPostPreviewProps {
 const BlogPostPreview = ({ entry }: BlogPostPreviewProps) => {
     const data = entry.getIn(['data']).toJS();
 
-    const featuredImage = '';
-    // const featuredImage = entry.getIn(['data', 'featuredImage']) || '';
+    if (!data) {
+        return <div>Loading...</div>;
+    }
+
+    const featuredImage = data.featuredImage || '';
     const date = formatISO(endOfDay(data.date));
-    console.debug(entry.getIn(['data', 'featuredImage']));
 
     const post = {
         title: data.title || '',
