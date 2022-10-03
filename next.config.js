@@ -17,7 +17,13 @@ const nextConfig = {
         source: '/:year(\\d{4})/:month(\\d{2})/:slug([a-zA-Z\-]{1,})',
         destination: '/posts/:year/:month/:slug',
         permanent: true
-      }
+      },
+      // Previous pagination.
+      {
+        source: '/:page(\\d{1,2})',
+        destination: '/posts/page/:page',
+        permanent: true
+      },
     ]
   }
 }
