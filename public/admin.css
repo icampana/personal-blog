@@ -981,6 +981,15 @@ p > img {
   padding-bottom: 0.25rem;
 }
 
+article a {
+  --tw-text-opacity: 1;
+  color: rgb(146 64 14 / var(--tw-text-opacity));
+}
+
+article a:hover {
+  text-decoration-line: underline;
+}
+
 @media (min-width: 640px) {
   p > img {
     max-width: 20rem;
