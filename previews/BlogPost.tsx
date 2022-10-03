@@ -1,8 +1,8 @@
-import React, { useEffect, useState } from 'react'
 import BlogPost from 'components/blocks/BlogPost'
 import type { Post } from 'contentlayer/generated'
 import { formatISO, endOfDay } from 'date-fns';
 import { marked } from 'marked';
+import readingTime from 'reading-time';
 
 interface BlogPostPreviewProps {
     entry: any
@@ -15,14 +15,16 @@ const BlogPostPreview = ({ entry }: BlogPostPreviewProps) => {
         return <div>Loading...</div>;
     }
 
-    const featuredImage = data.featuredImage || '';
-    const date = formatISO(endOfDay(data.date));
+    const featuredImage = data.featuredImage?.replace('/public', '') || '';
+    const date = formatISO(endOfDay(new Date(data.date)));
+    const htmlBody = marked(data?.body ||'');
 
     const post = {
         title: data.title || '',
         featuredImage,
-        body: {html: marked(data?.body ||'')},
-        date
+        body: {html: htmlBody},
+        date,
+        readingTime: readingTime(htmlBody)
     } as Post
 
     return <BlogPost post={{ ...post }} />
