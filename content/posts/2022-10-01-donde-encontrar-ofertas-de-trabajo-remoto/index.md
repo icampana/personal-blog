@@ -55,14 +55,14 @@ Probablemente lo que a más de uno le llama la atención, saber dónde se pueden
 * [Remote CoWorker](https://remotecoworker.com/)
 * [Fiverr](https://www.fiverr.com/)
 
+***Nota:*** *LinkedIn siempre será el punto de referencia para las empresas de afuera, así que hay que tener un perfil completo y bien armado, independiente de si se aplica a través de su opción de [trabajos](https://www.linkedin.com/jobs/) (que también es buena opción).*
+
 ## Gestionar las solicitudes / ofertas de trabajo
 Esto lo agrego como una opción adicional que es la de una herramienta que permite ingresar a las ofertas, ver la información básica y registrarla en un tablero donde puedes tomar notas y hacer el seguimiento.
 
 [Huntr](https://huntr.co/) funciona como una especie de CRM personal, es gratis para quienes buscan trabajo y tiene un costo para las empresas que lo quieren utilizar.
 
 ![Huntr Preview](https://huntr.co/images/discovery-hero-new.png)
-
-La nota final que pondría con respecto a las búsquedas laborales, independiente de si son remotas o no es que
 
 ## ¿Cómo recibir el pago?
 Esto es otro punto adicional, muchas veces la mayor preocupación es cómo poder recibir el pago por tus servicios, porque las transferencias bancarias suelen ser costosas o a veces no están disponibles en todos los países.
@@ -72,3 +72,5 @@ Las dos menciones importantes que consideraría son:
 - [Wise](https://wise.com/invite/u/ivanc1094), .- permite tener una cuenta de banco de EEUU (de uso temporal), donde se puede recibir el pago y luego transferirlo a una cuenta bancaria en tu país, convertirlo a otra moneda (pasarlo de dólares a euros por ejemplo) o inclusive utilizar ese dinero con una tarjeta de débito que ellos emiten (no disponible en todos los países).
 
 Una vez más, hay muchas otras opciones, pero estas son las que considero que al momento de escribir este artículo son las más sencillas y que funcionan bastante bien.
+
+La nota final que pondría con respecto a las búsquedas laborales, independiente de si son remotas o no es que hay que enfocarse en resaltar los logros alcanzados, y tratar de diferenciarse, mostrar cuales son las capacidades principales y que no sean únicamente limitadas a las actividades realizadas, sino también poder hablar de aprendizajes, logros y metas dentro de las experiencias anteriores.
