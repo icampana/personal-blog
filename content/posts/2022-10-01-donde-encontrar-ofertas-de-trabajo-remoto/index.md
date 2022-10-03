@@ -43,6 +43,7 @@ Probablemente lo que a más de uno le llama la atención, saber dónde se pueden
 * [Remote OK](https://remoteok.io/)
 * [Turing](https://www.turing.com/)
 * [Awana](https://www.awana.io/job-openings)
+* [Talently](https://talently.tech/)
 * [Working Nomads](https://workingnomads.co/)
 * [TripleByte](https://triplebyte.com)
 * [Remote Hunt](https://remotehunt.com)
