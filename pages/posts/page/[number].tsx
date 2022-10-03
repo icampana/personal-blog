@@ -82,9 +82,8 @@ const Home: NextPage<{ posts: Post[], currentPage: number}> = (props) => {
           </div>
 
         </div>
+        <Footer />
       </main>
-
-      <Footer />
     </div>
   )
 }
