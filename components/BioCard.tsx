@@ -20,19 +20,19 @@ import meta from 'metadata.json';
          </div>
        </div>
        <div className='flex justify-around md:justify-end my-4'>
-         <a href={`https://twitter.com/${social.twitter}`} className="shadow-none hover:text-xl">
+         <a href={`https://twitter.com/${social.twitter}`} className="shadow-none hover:text-xl" aria-label='Twitter Profile'>
            <FontAwesomeIcon icon={ faTwitter }  size='1x' />
          </a>
          &nbsp;
-         <a href={`https://github.com/${social.github}`} className="shadow-none hover:text-xl">
+         <a href={`https://github.com/${social.github}`} className="shadow-none hover:text-xl" aria-label='Github Profile'>
            <FontAwesomeIcon icon={ faGithub }  size='1x' />
          </a>
          &nbsp;
-         <a href={`https://linkedin.com/in/${social.linkedin}`} className="shadow-none hover:text-xl">
+         <a href={`https://linkedin.com/in/${social.linkedin}`} className="shadow-none hover:text-xl" aria-label='Linkedin Profile'>
            <FontAwesomeIcon icon={ faLinkedin }  size='1x' />
          </a>
          &nbsp;
-         <a href={`https://anchor.fm/${social.anchor}`} className="shadow-none hover:text-xl">
+         <a href={`https://anchor.fm/${social.anchor}`} className="shadow-none hover:text-xl" aria-label='Podcast Link'>
            <FontAwesomeIcon icon={ faPodcast }  size='1x' />
          </a>
        </div>
