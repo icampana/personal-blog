@@ -6,8 +6,7 @@ description: "Buscar trabajo remoto luego de la pandemia se ha vuelto algo más
   común de lo que pensábamos, sin embargo no es tan fácil encontrar esas ofertas
   que nos permitan tener una buena oportunidad. "
 tags:
-  - Remote
-  - ""
+  - Remote Work
 ---
 ## ¿Por Dónde Comenzar ?
 Uno de los primeros retos al plantearse la posibilidad de trabajar de forma remota es por don﻿de comenzar a buscar, junto con la pregunta también de si hay oportunidades para lo que yo hago?
@@ -32,22 +31,23 @@ De forma remota lo más común es trabajar en 2 posibles modalidades, no son las
 ## ¿Dónde Buscar?
 Probablemente lo que a más de uno le llama la atención, saber dónde se pueden encontrar esas ofertas o vacantes, en el siguiente listado incluyo las más populares, muchas son para encontrar trabajo en Startups, otras son para ser asistentes, varias son para TI, pero hay otras que son más genéricas y tienen ofertas desde asistentes virtuales, hasta trabajos de diseño y publicidad:
 
-* [AngelList](angel.co)
+* [AngelList](https://angel.co)
 * [Vivilia](https://vivilia.com/)
 * [Torre](https://torre.co/)
 * [Workana](https://www.workana.com/es/)
 * [FlatWorld](https://flatworld.co/)
-* [Remotive](remotive.com)
+* [Remotive](https://remotive.com/)
 * [VanHack](https://vanhack.com/)
 * [BairesDev](https://jobs.bairesdev.com/)
-* [Remote OK](remoteok.io)
+* [Velozient](https://velozient.com/careers/)
+* [Remote OK](https://remoteok.io/)
 * [Turing](https://www.turing.com/)
 * [Awana](https://www.awana.io/job-openings)
-* [Working Nomads](workingnomads.co)
-* [TripleByte](triplebyte.com)
-* [Remote Hunt](remotehunt.com)
-* [We Work Remotely](weworkremotely.com)
-* [Flex Jobs](flexjobs.com)
+* [Working Nomads](https://workingnomads.co/)
+* [TripleByte](https://triplebyte.com)
+* [Remote Hunt](https://remotehunt.com)
+* [We Work Remotely](https://weworkremotely.com)
+* [Flex Jobs](https://flexjobs.com)
 * [Hireline](https://hireline.io/)
 * [UpWork](https://www.upwork.com/)
 * [HubStaff Talent](https://talent.hubstaff.com/)
