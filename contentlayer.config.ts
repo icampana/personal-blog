@@ -1,5 +1,13 @@
 import { defineDocumentType, makeSource } from 'contentlayer/source-files'
 import readingTime from 'reading-time';
+import remarkEmoji from 'remark-emoji';
+import remarkHtml from 'remark-html';
+
+import fauxRemarkEmbedder from '@remark-embedder/core'
+import fauxOembedTransformer from '@remark-embedder/transformer-oembed'
+const remarkEmbedder = fauxRemarkEmbedder.default
+const oembedTransformer = fauxOembedTransformer.default
+
 
 const Post = defineDocumentType(() => ({
   name: 'Post',
@@ -56,5 +64,7 @@ const Post = defineDocumentType(() => ({
 export default makeSource({
   contentDirPath: 'content/posts',
   documentTypes: [Post],
-  onExtraFieldData: 'ignore'
+  onExtraFieldData: 'ignore',
+  markdown: { remarkPlugins: [ [remarkEmbedder, {transformers: [oembedTransformer]}], remarkEmoji, remarkHtml] }
 })
+//
