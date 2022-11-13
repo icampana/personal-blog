@@ -87,12 +87,16 @@ const Search: NextPage<{ posts: Post[], searchIndex: any[]}> = (props) => {
                 </tr>
             </thead>
             <tbody>
-                {searchResults.map(({item}, idx) => (
-                    <tr key={idx}>
-                        <td><Link href={item.url}>{item.title}</Link></td>
-                        <td><DateComponent postDate={item.date} /></td>
-                    </tr>
-                ))}
+                {searchResults.map(({item}, idx) => {
+                    const post = (item as searchResult);
+                    return (
+                      <tr key={idx}>
+                          <td><Link href={post.url}>{post.title}</Link></td>
+                          <td><DateComponent postDate={post.date} /></td>
+                      </tr>
+                    );
+                  }
+              )}
             </tbody>
             </table>}
           </div>
