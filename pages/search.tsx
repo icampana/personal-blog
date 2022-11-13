@@ -11,6 +11,7 @@ import Footer from 'components/Footer';
 import { useRouter } from 'next/router';
 import React from 'react';
 import DateComponent from 'components/blocks/Date';
+import Fuse from 'fuse.js'
 
 type searchResult = {
     title: string,
@@ -19,6 +20,8 @@ type searchResult = {
     date: string,
     description: string | undefined
 };
+
+const fuseOptions = { keys: ['title', 'description'], minMatchCharLength: 2, threshold: 0.3 }
 
 export async function getStaticProps() {
   const posts: searchResult[] = allPosts.map(post => {
@@ -32,15 +35,23 @@ export async function getStaticProps() {
   }).sort((a, b) => {
     return compareDesc(new Date(a.date), new Date(b.date));
   });
-  return { props: { posts } };
+
+  // Create the Fuse index
+  const searchIndex = Fuse.createIndex(fuseOptions.keys, posts);
+
+  return { props: { posts, searchIndex: searchIndex.toJSON() } };
 }
 
-const Search: NextPage<{ posts: Post[]}> = (props) => {
+const Search: NextPage<{ posts: Post[], searchIndex: any[]}> = (props) => {
   const { site } = meta;
-  const { posts } = props;
+  const { posts, searchIndex } = props;
   const { query } = useRouter();
+
+  const articlesIndex = Fuse.parseIndex(searchIndex);
+  // initialize Fuse with the index
+  const fuse = new Fuse(posts, fuseOptions, articlesIndex)
   const searchQuery = (query && query.q) ? query.q.toString() : '';
-  const searchResults = (searchQuery) ? posts.filter((post) => (post.title.toLowerCase().includes(searchQuery) || (post.description && post.description.toLowerCase().includes(searchQuery)))) : [];
+  const searchResults = (searchQuery) ? fuse.search(searchQuery) : [];
 
   return (
     <div className="container mx-auto">
@@ -76,10 +87,10 @@ const Search: NextPage<{ posts: Post[]}> = (props) => {
                 </tr>
             </thead>
             <tbody>
-                {searchResults.map((post, idx) => (
+                {searchResults.map(({item}, idx) => (
                     <tr key={idx}>
-                        <td><Link href={post.url}>{post.title}</Link></td>
-                        <td><DateComponent postDate={post.date} /></td>
+                        <td><Link href={item.url}>{item.title}</Link></td>
+                        <td><DateComponent postDate={item.date} /></td>
                     </tr>
                 ))}
             </tbody>
