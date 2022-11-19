@@ -5,7 +5,6 @@ backend:
 
 site_url: https://ivan.campananaranjo.com
 
-publish_mode: editorial_workflow
 locale: "es"
 
 slug:
