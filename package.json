@@ -8,7 +8,8 @@
     "export": "yarn build:admin-css && next build && next export",
     "start": "next start",
     "lint": "next lint",
-    "build:admin-css": "npx tailwindcss build -i styles/globals.css -o public/admin.css"
+    "build:admin-css": "npx tailwindcss build -i styles/globals.css -o public/admin.css",
+    "postbuild": "next-sitemap"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.2.0",
@@ -25,6 +26,7 @@
     "next": "12.3.1",
     "next-contentlayer": "^0.2.9",
     "next-seo": "^5.5.0",
+    "next-sitemap": "^3.1.32",
     "react": "^17.0.0",
     "react-dom": "^17.0.0",
     "reading-time": "^1.5.0",

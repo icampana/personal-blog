@@ -1,2 +1,9 @@
+# *
 User-agent: *
-Disallow:
+Allow: /
+
+# Host
+Host: https://ivan.campananaranjo.com
+
+# Sitemaps
+Sitemap: https://ivan.campananaranjo.com/sitemap.xml
