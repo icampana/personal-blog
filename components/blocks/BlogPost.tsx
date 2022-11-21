@@ -15,6 +15,20 @@ const BlogPost = (props: BlogPostProps) => {
     const readingTime = `${Math.round(readTime)} minutos`;
     const imagePath = post.featuredImage || '/images/placeholder.png';
 
+    const getTags = () => {
+        if (post.tags) {
+            return <>
+                <em className='text-orange-900'>Tags:</em> {post.tags.map(tag => {
+                    const cleanTag = tag.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+
+                    return (<Link href={`/tag/${cleanTag}`} key={cleanTag}>
+                        <a className='inline-block px-1'>{tag} |</a>
+                    </Link>);
+                })}
+            </>;
+        }
+    }
+
     return (
         <>
             <Header>
@@ -32,6 +46,8 @@ const BlogPost = (props: BlogPostProps) => {
             </div>
 
             <div className='article-content leading-7 px-2' dangerouslySetInnerHTML={{ __html: post.body.html }} />
+            {getTags()}
+
         </>
     );
 }
