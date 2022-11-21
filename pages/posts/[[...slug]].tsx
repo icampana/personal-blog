@@ -3,7 +3,6 @@ import { allPosts, Post } from "contentlayer/generated";
 import BioCard from 'components/BioCard';
 import meta from 'metadata.json';
 import { NextSeo } from 'next-seo';
-import striptags from 'striptags';
 import { MouseEvent, useState, useEffect } from 'react';
 import Footer from 'components/Footer';
 import BlogPost from 'components/blocks/BlogPost';
@@ -42,7 +41,7 @@ const PostLayout = ({ post }: { post: Post }) => {
   const { site } = meta;
   const imagePath = post.featuredImage || '/images/placeholder.png';
   const postCanonical = `${site.siteUrl}${post.url}`;
-  const postDescription = post.description || striptags(post.body.html).slice(0, 200);
+  const postDescription = post.description || post.summary;
 
   const backToTop = (event: MouseEvent<HTMLButtonElement>) => {
     event.preventDefault();

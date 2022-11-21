@@ -8,6 +8,7 @@ import remarkParse from 'remark-parse'
 import remarkGfm from 'remark-gfm'
 import remarkBreaks from 'remark-breaks'
 import { visit } from 'unist-util-visit';
+import striptags from 'striptags';
 
 // import remarkEmbedder from '@remark-embedder/core'
 // import oembedTransformer from '@remark-embedder/transformer-oembed'
@@ -62,6 +63,7 @@ const Post = defineDocumentType(() => ({
         return `/posts/${doc._raw.flattenedPath}`;
       },
     },
+    summary: { type: 'string', resolve: (doc) => striptags(doc.body.html).slice(0, 200) }
   },
 }))
 

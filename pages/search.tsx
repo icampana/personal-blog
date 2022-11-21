@@ -12,7 +12,6 @@ import { useRouter } from 'next/router';
 import React from 'react';
 import DateComponent from 'components/blocks/Date';
 import Fuse from 'fuse.js'
-import striptags from 'striptags';
 import Header from 'components/Header';
 
 type searchResult = {
@@ -30,7 +29,7 @@ export async function getStaticProps() {
     return ({
         title: post.title,
         date: post.date,
-        description: post.description || striptags(post.body.html).slice(0, 200),
+        description: post.description || post.summary,
         type: post.type,
         url: post.url,
     });

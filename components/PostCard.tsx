@@ -2,7 +2,6 @@ import type { Post } from "contentlayer/generated";
 import Link from "next/link";
 import DateComponent from 'components/blocks/Date';
 import Image from 'next/image'
-import striptags from 'striptags';
 
 const getImage = (post: Post) => {
   const { featuredImage, title } = post;
@@ -35,7 +34,7 @@ const PostCard = (post: Post) => {
 
         <div
           className="text-sm"
-          dangerouslySetInnerHTML={{ __html: post.description || striptags(post.body.html).slice(0, 200) + '...' }}
+          dangerouslySetInnerHTML={{ __html: post.description || post.summary + '...' }}
         />
       </div>
     );
