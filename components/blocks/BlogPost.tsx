@@ -17,16 +17,15 @@ const BlogPost = (props: BlogPostProps) => {
 
     return (
         <>
-            <header className='px-2'>
-            <Header topLevel={false} />
-            <div className="mb-3 mt-3">
-                <h1 className='text-center font-sans font-bold text-3xl text-orange-900'>{post.title}</h1>
-                <div className='float-right text-gray-400 text-xs'>
-                    <em>Tiempo de lectura:</em> {readingTime}
+            <Header topLevel={false}>
+                <div className="mb-3 mt-3">
+                    <h1 className='text-center font-sans font-bold text-3xl text-orange-900'>{post.title}</h1>
+                    <div className='float-right text-gray-400 text-xs'>
+                        <em>Tiempo de lectura:</em> {readingTime}
+                    </div>
+                    <DateComponent postDate={post.date} />
                 </div>
-                <DateComponent postDate={post.date} />
-            </div>
-            </header>
+            </Header>
 
             <div className='relative mb-4 w-full h-64'>
             {imagePath && <Image src={imagePath} alt={post.title} layout="fill" objectFit="cover"  placeholder="blur" blurDataURL='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mM0SeuuBwADoQGm9h5VIAAAAABJRU5ErkJggg==' />}

@@ -10,7 +10,7 @@ import meta from 'metadata.json';
 
    const { author, social } = meta.site;
    return (
-     <div className="grid sm:grid-cols-1 sm:min-w-fit lg:grid-cols-4 my-5">
+     <div className="grid sm:grid-cols-1 sm:min-w-fit lg:grid-cols-3 my-5">
        <div className="flex justfy-start my-4 lg:col-span-2">
          <div className='mr-5'>
             <Image src={Logo} alt={author} className="rounded-full" layout='fixed' width='50' height={50} />
@@ -19,12 +19,7 @@ import meta from 'metadata.json';
            Escrito por <strong>{author}</strong> <br />Informático, Emprendedor, Desarrollador y Curioso a tiempo completo.
          </div>
        </div>
-       <div className='flex justify-center my-6 text-sm text-center'>
-        <form action='/search' method='GET'>
-          <label htmlFor='q' className='px-4 block font-bold'>Buscar:</label>
-          <input name='q' type='text' defaultValue='' className='border-2 rounded border-gray-400' />
-        </form>
-       </div>
+
        <div className='flex justify-around md:justify-end my-4'>
          <a href={`https://twitter.com/${social.twitter}`} className="shadow-none hover:text-xl" aria-label='Twitter Profile'>
            <FontAwesomeIcon icon={ faTwitter }  size='1x' />

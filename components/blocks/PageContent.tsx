@@ -12,14 +12,12 @@ const PageContent = (props: PageContentProps) => {
 
     return (
         <>
-            <header className='px-2'>
-            <Header topLevel={false} />
-            <div className="mb-3 mt-3">
-                <h1 className='text-center font-sans font-bold text-3xl text-orange-900'>{page.title}</h1>
-                <DateComponent postDate={page.date} />
-            </div>
-            </header>
-
+            <Header topLevel={false}>
+                <div className="mb-3 mt-3">
+                    <h1 className='text-center font-sans font-bold text-3xl text-orange-900'>{page.title}</h1>
+                    <DateComponent postDate={page.date} />
+                </div>
+            </Header>
             <div className='article-content leading-7 px-2' dangerouslySetInnerHTML={{ __html: page.body.html }} />
         </>
     );
