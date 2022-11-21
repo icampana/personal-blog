@@ -56,13 +56,13 @@ const Header = (props: HeaderProps) => {
                     <ul className='list-none'>{menuLinks}</ul>
                 </div>
                 <div className="flex justify-end lg:hidden">
-                    <div className="space-y-2 fixed right-4 top-4 z-50" onClick={toggleMenu} role={'button'} tabIndex={0} aria-hidden="true" style={{width: 32, height: 32}}>
+                    <div className="space-y-2 fixed right-2 top-0 bg-white z-50 p-2" onClick={toggleMenu} role={'button'} tabIndex={0} aria-hidden="true">
                         <span className="block w-8 h-0.5 bg-gray-600 animate-pulse"></span>
                         <span className="block w-8 h-0.5 bg-gray-600 animate-pulse"></span>
                         <span className="block w-8 h-0.5 bg-gray-600 animate-pulse"></span>
                     </div>
 
-                    <div className={`${ (!menuVisible) ? 'hidden' : ''} space-x-8 justify-end lg:flex fixed bg-white shadow-sm right-3 left-1 px-3 py-0 shadow-black my-7 z-50`}>
+                    <div className={`${ (!menuVisible) ? 'hidden' : ''} space-x-8 justify-end lg:flex fixed bg-white shadow-sm top-2 right-3 left-1 px-3 py-0 shadow-black my-7 z-50`}>
                         <ul className='list-none px-0 mx-0'>
                             {menuLinks}
                             <li>
