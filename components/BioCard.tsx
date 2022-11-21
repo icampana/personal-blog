@@ -19,9 +19,9 @@ import meta from 'metadata.json';
            Escrito por <strong>{author}</strong> <br />Informático, Emprendedor, Desarrollador y Curioso a tiempo completo.
          </div>
        </div>
-       <div className='flex justify-center my-6'>
+       <div className='flex justify-center my-6 text-sm text-center'>
         <form action='/search' method='GET'>
-          <label htmlFor='q' className='px-4'>Buscar:</label>
+          <label htmlFor='q' className='px-4 block font-bold'>Buscar:</label>
           <input name='q' type='text' defaultValue='' className='border-2 rounded border-gray-400' />
         </form>
        </div>
