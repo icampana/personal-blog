@@ -9,6 +9,7 @@ import BioCard from 'components/BioCard';
 import meta from 'metadata.json';
 import Footer from 'components/Footer';
 import Header from 'components/Header';
+import { NextSeo } from 'next-seo';
 
 const getCleanTags = (post: Post) => {
   if (post.tags) {
@@ -44,30 +45,48 @@ export async function getStaticProps(context: any) {
   });
   return {
     props: {
-      posts
+      posts,
+      currentTag: tagName
     }
   };
 }
 
-const TagPage: NextPage<{ posts: Post[], currentPage: number}> = (props) => {
+const TagPage: NextPage<{ posts: Post[], currentTag: string}> = (props) => {
   const { site } = meta;
-  const { posts, currentPage } = props;
+  const { posts, currentTag } = props;
+
+  const tagTitle = `Publicaciones de ${currentTag}`;
+  const tagCanonical = `${site.siteUrl}/tag/${currentTag}`;
+  const postImages = posts.filter(post => post.featuredImage).map(post => (
+    {
+      url: `${site.siteUrl}${post.featuredImage}`
+    }
+  ));
+  const tagDescription = `Publicaciones sobre el tema ${currentTag}`;
 
   return (
     <div className="container mx-auto">
       <Head>
-        <title>Listado de Posts - Página {currentPage} | { site.title }</title>
+        <title>Listado de publicaciones sobre: {currentTag} | { site.title }</title>
         <meta name="description" content={ site.description } />
         <link rel="icon" href="/favicon.ico" />
       </Head>
+      <NextSeo
+        title={`${currentTag} | ${site.title}` }
+        description={tagDescription}
+        canonical={tagCanonical}
+        openGraph={{
+          url: tagCanonical,
+          title: tagTitle,
+          description: tagDescription,
+          images: postImages,
+        }}
+      />
 
       <main className='max-w-6xl mx-auto'>
-        <Header />
-        <h1 className='font-sans font-bold text-2xl'>
-          Lista de publicaciones por fecha
-        </h1>
-
-        <BioCard />
+        <Header>
+          <h1 className='font-sans font-bold text-2xl capitalize'>Publicaciones sobre <em>{currentTag}</em></h1>
+        </Header>
 
         <div>
           <div className="mx-auto py-5 grid grid-cols-1 lg:grid-cols-3 gap-6">
@@ -76,6 +95,8 @@ const TagPage: NextPage<{ posts: Post[], currentPage: number}> = (props) => {
             ))}
           </div>
         </div>
+
+        <BioCard />
         <Footer />
       </main>
     </div>
