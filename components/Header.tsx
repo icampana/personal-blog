@@ -10,7 +10,7 @@ interface HeaderProps {
 
 const Header = (props: HeaderProps) => {
     const { site } = meta;
-    const { children, topLevel = true } = props;
+    const { children, topLevel = false } = props;
     const [menuVisible, setMenuVisible] = useState(false);
 
     const formatLink = (url: string, title: string) => {
@@ -47,7 +47,7 @@ const Header = (props: HeaderProps) => {
         <div className="grid sm:grid-cols-1 sm:min-w-fit lg:grid-cols-3 my-1">
             {TitleComponent}
 
-            <div className='justify-center my-6 text-sm text-center hidden lg:flex'>
+            <div className='justify-center my-4 text-sm text-center hidden lg:flex'>
                 {SearchComponent}
             </div>
 

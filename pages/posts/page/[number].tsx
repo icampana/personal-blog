@@ -9,6 +9,7 @@ import { allPosts, Post } from "contentlayer/generated";
 import BioCard from 'components/BioCard';
 import meta from 'metadata.json';
 import Footer from 'components/Footer';
+import Header from 'components/Header';
 
 export async function getStaticPaths() {
   const { posts: postsConfig } = meta;
@@ -52,11 +53,7 @@ const Home: NextPage<{ posts: Post[], currentPage: number}> = (props) => {
       </Head>
 
       <main className='max-w-6xl mx-auto'>
-        <div className='text-left'>
-          <strong className='font-sans font-bold text-4xl mb-6 hover:underline'>
-            <Link href={"/"}>{ site.title }</Link>
-          </strong>
-        </div>
+        <Header />
         <h1 className='font-sans font-bold text-2xl'>
           Lista de publicaciones por fecha
         </h1>

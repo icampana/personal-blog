@@ -12,6 +12,8 @@ import { useRouter } from 'next/router';
 import React from 'react';
 import DateComponent from 'components/blocks/Date';
 import Fuse from 'fuse.js'
+import striptags from 'striptags';
+import Header from 'components/Header';
 
 type searchResult = {
     title: string,
@@ -28,7 +30,7 @@ export async function getStaticProps() {
     return ({
         title: post.title,
         date: post.date,
-        description: post.description || '',
+        description: post.description || striptags(post.body.html).slice(0, 200),
         type: post.type,
         url: post.url,
     });
@@ -66,16 +68,10 @@ const Search: NextPage<{ posts: Post[], searchIndex: any[]}> = (props) => {
       />
 
       <main className='max-w-6xl mx-auto'>
-        <header className='px-1'>
-          <h1 className='font-sans font-bold text-5xl'>
-            <Link href={"/"}><a>{ site.title }</a></Link>
-          </h1>
-
-          <BioCard />
-        </header>
+        <Header />
 
         <div className='px-2'>
-          <h2 className='mb-2 grow text-xl font-bold'>Resultados de la búsqueda</h2>
+          <h1 className='mb-2 grow text-xl font-bold my-5'>Resultados de la búsqueda</h1>
           <div className="mx-auto grid grid-cols-2">
             {!query.q && <div>Por favor escribe el texto a buscar</div>}
             {query.q && searchResults.length === 0 && <div>No se encontró ningún resultado para esa búsqueda.</div>}
@@ -102,10 +98,11 @@ const Search: NextPage<{ posts: Post[], searchIndex: any[]}> = (props) => {
           </div>
 
           <Link href={'/posts/page/1'}>
-            <a className="block justify-center py-5 font-bold text-sm text-red-700">Ver todas las publicaciones...</a>
+            <a className="block justify-center text-right py-5 font-bold text-sm text-red-700">Ver todas las publicaciones...</a>
           </Link>
 
         </div>
+        <BioCard />
         <Footer />
       </main>
     </div>

@@ -12,7 +12,7 @@ const PageContent = (props: PageContentProps) => {
 
     return (
         <>
-            <Header topLevel={false}>
+            <Header>
                 <div className="mb-3 mt-3">
                     <h1 className='text-center font-sans font-bold text-3xl text-orange-900'>{page.title}</h1>
                     <DateComponent postDate={page.date} />

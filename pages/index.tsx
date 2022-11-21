@@ -37,7 +37,7 @@ const Home: NextPage<{ posts: Post[]}> = (props) => {
       />
 
       <main className='max-w-6xl mx-auto'>
-        <Header>
+        <Header topLevel={true}>
           <BioCard />
         </Header>
 
