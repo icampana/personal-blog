@@ -77,9 +77,15 @@ const PostLayout = ({ post }: { post: Post }) => {
           url: postCanonical,
           title: post.title,
           description: postDescription,
+          type: 'article',
+          article: {
+            publishedTime: post.date,
+            modifiedTime: post.date,
+            tags: post.tags,
+          },
           images: [
             { url: `${site.siteUrl}${imagePath}` },
-          ],
+          ]
         }}
       />
       <article className="min-w-min max-w-4xl mx-auto py-8 sm:px-3">
