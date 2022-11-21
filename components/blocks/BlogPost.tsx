@@ -2,7 +2,8 @@ import Image from 'next/image'
 import DateComponent from 'components/blocks/Date';
 import Link from "next/link";
 import type { Post } from 'contentlayer/generated';
-import meta from 'metadata.json';
+
+import Header from 'components/Header';
 
 interface BlogPostProps {
     post: Post
@@ -10,7 +11,6 @@ interface BlogPostProps {
 
 const BlogPost = (props: BlogPostProps) => {
     const { post } = props;
-    const { site } = meta;
     const readTime = post.readingTime?.minutes || 0;
     const readingTime = `${Math.round(readTime)} minutos`;
     const imagePath = post.featuredImage || '/images/placeholder.png';
@@ -18,11 +18,7 @@ const BlogPost = (props: BlogPostProps) => {
     return (
         <>
             <header className='px-2'>
-            <div className='text-left'>
-                <strong className='font-sans font-bold text-3xl mb-6'>
-                <Link href={"/"}><a>{ site.title }</a></Link>
-                </strong>
-            </div>
+            <Header topLevel={false} />
             <div className="mb-3 mt-3">
                 <h1 className='text-center font-sans font-bold text-3xl text-orange-900'>{post.title}</h1>
                 <div className='float-right text-gray-400 text-xs'>
