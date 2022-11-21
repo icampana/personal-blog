@@ -6,7 +6,9 @@ description: Trabajar de manera remota y exitosa con clientes con los que probab
 featuredImage: /photos/international-clients-852x568.jpg
 path: /2020/02/guia-basica-para-trabajar-con-clientes-foraneos-eeuu-europa-siendo-latino
 slug: 2020-02-06-guía-básica-para-trabajar-con-clientes-foráneos-eeuu-europa-siendo-latino
-title: Guía básica para trabajar con clientes foráneos (EEUU/Europa), siendo latino.
+title: Guía básica para trabajar con extranjeros, siendo latino.
+tags:
+  - Remote Work
 ---
 
 Después de algunos años trabajando de forma remota con clientes principalmente de Estados Unidos y Europa, se entiende claramente porqué el nearshore outsourcing va tomando más fuerza, no sólo es por temas de cercanía geográfica e idioma, sino también la comprensión cultural, es verdad que latinoamérica es diferente a EEUU y mucho más a Europa, pero hay ciertos factores que facilitan un poco más el proceso que cuando alguna empresa decide hacer negocios con alguien de China, India, o Rusia donde las diferencias culturales son muchísimo más marcadas aún.

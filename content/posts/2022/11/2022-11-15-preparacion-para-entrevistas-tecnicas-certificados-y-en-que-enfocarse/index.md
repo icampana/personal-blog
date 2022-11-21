@@ -3,6 +3,9 @@ title: Preparación para entrevistas técnicas, por dónde comenzar y en qué en
 date: 2022-11-18T14:10:09.168Z
 featuredImage: /photos/interview-questions.png
 description: "Cuando comienzas a aplicar a un nuevo trabajo en el área de tecnología y en una empresa de fuera de LATAM, puede ser una experiencia completamente distinta a lo que estamos acostumbrados, por dónde comenzar o qué utilizar como apoyo?"
+tags:
+  - Remote Work
+  - Entrevistas
 ---
 
 Al crecer en Latinoamérica llevamos cierto bagaje cultural que tiene que ver con la forma de relacionarnos, comunicarnos y al llegar al momento de manejar entrevistas profesionales, también hay algunos escenarios a los que estamos acostumbrados, pero si queremos trabajar para una empresa de EEUU o Europa, vamos a tener que enfrentarnos a un esquema bastante diferente, especialmente cuando hablamos de entrevistas para procesos de entrevista de puestos técnicos (específicamente hablando de todo lo relacionado con TI).

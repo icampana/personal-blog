@@ -7,6 +7,7 @@ description: "En mi experiencia profesional he pasado desde ser dueño de
   trabajo que quería, y en ambos casos siempre se regresa al mismo punto: hay
   que saber venderse a sí mismo"
 tags:
+  - Remote Work
   - Trabajo
   - Work
   - Life

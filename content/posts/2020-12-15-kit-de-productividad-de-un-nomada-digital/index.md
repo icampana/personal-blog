@@ -6,6 +6,8 @@ featuredImage: /photos/2020-02-13-15.40.15.jpg
 path: /2020/12/15-kit-de-productividad-de-un-nomada-digital
 slug: kit-de-productividad-de-un-nomada-digital
 title: Kit de productividad de un nómada digital.
+tags:
+  - Remote Work
 ---
 
 Hace unos días hablaba en mi [podcast](https://anchor.fm/e-van) sobre algunas [estrategias para mantener la productividad con el trabajo remoto](https://anchor.fm/e-van/episodes/ep-6---Estrategias-para-mejorar-tu-productividad-en-la-vida-remota-enm85c) y aunque 2020 ha sido un año en el que no se ha podido viajar mucho, hay algunas herramientas que nos permiten estar cómodos y sacarle provecho al máximo a nuestro espacio de trabajo aunque no estemos en una oficina formal.
