@@ -15,8 +15,8 @@ const PostCard = (post: Post) => {
     const readTime = post.readingTime?.minutes || 0;
     const readingTime = `${Math.round(readTime)} minutos`;
     return (
-      <div className="mb-5">
-        <div>
+      <div className="mb-5 mx-2 lg:mx-0">
+        <div className='text-center'>
           <Link href={post.url}><a>{getImage(post)}</a></Link>
         </div>
 
