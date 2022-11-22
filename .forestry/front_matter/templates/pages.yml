@@ -1,10 +1,10 @@
 ---
-label: Posts
+label: Pages
 hide_body: false
 fields:
 - type: text
   name: title
-  label: Article Title
+  label: Page Title
   config:
     required: true
 - type: datetime
@@ -15,19 +15,10 @@ fields:
     time_format: h:mm
     required: true
   default: now
-- type: file
-  name: featuredImage
-  label: Featured Image
-  description: Main image that will be used for the article
 - type: textarea
   name: description
   label: Short Description
   description: This allows describing the overall contents of the article.
   config:
     max: 250
-- type: list
-  name: tags
-  label: Tags
-  description: Tags used to categorize the content
-  config:
-    use_select: false
+
