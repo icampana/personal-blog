@@ -4,16 +4,30 @@ hide_body: false
 fields:
 - type: text
   name: title
-  label: title
+  label: Article Title
+  config:
+    required: true
 - type: datetime
   name: date
-  label: date
+  label: Publication Date
+  config:
+    date_format: DD/MM/YYYY
+    time_format: h:mm
+    required: true
+  default: now
 - type: file
   name: featuredImage
-  label: featuredImage
+  label: Featured Image
+  description: Main image that will be used for the article
 - type: textarea
   name: description
-  label: description
+  label: Short Description
+  description: This allows describing the overall contents of the article.
+  config:
+    max: 250
 - type: list
   name: tags
-  label: tags
+  label: Tags
+  description: Tags used to categorize the content
+  config:
+    use_select: false
