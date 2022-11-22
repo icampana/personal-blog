@@ -16,7 +16,7 @@ const BlogPostPreview = ({ entry }: BlogPostPreviewProps) => {
     }
 
     const featuredImage = data.featuredImage?.replace('/public', '') || '';
-    const date = formatISO(endOfDay(new Date(data.date)));
+    const date = formatISO(endOfDay(new Date(data.date || 0)));
     const htmlBody = marked(data?.body ||'');
 
     const post = {

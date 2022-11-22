@@ -1,5 +1,6 @@
 import { useEffect } from 'react'
 import BlogPostPreview from '../previews/BlogPost'
+import ContentPagePreview from '../previews/ContentPage'
 
 const Admin = () => {
     useEffect(() => {
@@ -11,6 +12,7 @@ const Admin = () => {
 
             // hook our preview up to the cms
             CMS.registerPreviewTemplate('blog', BlogPostPreview)
+            CMS.registerPreviewTemplate('page', ContentPagePreview)
         })()
     }, [])
 

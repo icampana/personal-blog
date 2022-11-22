@@ -13,10 +13,12 @@ class MyDocument extends Document {
     return (
       <Html lang='es'>
         <Head>
-            <link rel="preconnect" href="https://fonts.googleapis.com" />
-            <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin='true' />
-            <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet" />
-            <meta name="google-site-verification" content="b5jnO_8lDhyKJ6m0nMqj0ZD0DMuvGkgBA0JSwUTcTf8" />
+          <meta charSet="utf-8" />
+          <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+          <link rel="preconnect" href="https://fonts.googleapis.com" />
+          <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin='true' />
+          <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet" />
+          <meta name="google-site-verification" content="b5jnO_8lDhyKJ6m0nMqj0ZD0DMuvGkgBA0JSwUTcTf8" />
         </Head>
         <body>
           <Main />

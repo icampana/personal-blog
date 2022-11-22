@@ -5,8 +5,6 @@ backend:
 
 site_url: https://ivan.campananaranjo.com
 
-locale: "es"
-
 slug:
   encoding: "ascii"
   clean_accents: true
@@ -53,12 +51,13 @@ collections:
     label: "Pages"
     label_singular: "Page"
     folder: "content/pages"
+    identifier_field: "title"
     create: true
     extension: "md"
     format: "yaml-frontmatter"
     slug: "{{slug}}"
     editor:
-     preview: false
+     preview: true
     fields:
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Body", name: "body", widget: "markdown" }
