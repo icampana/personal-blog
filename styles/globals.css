@@ -26,7 +26,7 @@ ol, ul {
 }
 
 p > img {
-    @apply mx-auto max-w-screen-sm px-2 py-1
+    @apply mx-auto max-w-full px-2 py-1
 }
 
 .article-content a {
@@ -38,7 +38,12 @@ a:hover {
 }
 
 @media screen(sm) {
+    img,
     p > img {
         @apply max-w-xs;
+    }
+
+    .article-content img {
+        @apply max-w-2xl mx-auto;
     }
   }
