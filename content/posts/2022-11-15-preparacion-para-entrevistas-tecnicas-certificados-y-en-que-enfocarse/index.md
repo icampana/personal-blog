@@ -1,13 +1,15 @@
 ---
 title: Preparación para entrevistas técnicas, por dónde comenzar y en qué enfocarse
-date: 2022-11-18T14:10:09.168Z
-featuredImage: /photos/interview-questions.png
-description: "Cuando comienzas a aplicar a un nuevo trabajo en el área de tecnología y en una empresa de fuera de LATAM, puede ser una experiencia completamente distinta a lo que estamos acostumbrados, por dónde comenzar o qué utilizar como apoyo?"
+date: 2022-11-18T14:10:09.168+00:00
+featuredImage: "/photos/interview-questions.png"
+description: Cuando comienzas a aplicar a un nuevo trabajo en el área de tecnología
+  y en una empresa de fuera de LATAM, puede ser una experiencia completamente distinta
+  a lo que estamos acostumbrados, por dónde comenzar o qué utilizar como apoyo?
 tags:
-  - Remote Work
-  - Entrevistas
----
+- Remote Work
+- Entrevistas
 
+---
 Al crecer en Latinoamérica llevamos cierto bagaje cultural que tiene que ver con la forma de relacionarnos, comunicarnos y al llegar al momento de manejar entrevistas profesionales, también hay algunos escenarios a los que estamos acostumbrados, pero si queremos trabajar para una empresa de EEUU o Europa, vamos a tener que enfrentarnos a un esquema bastante diferente, especialmente cuando hablamos de entrevistas para procesos de entrevista de puestos técnicos (específicamente hablando de todo lo relacionado con TI).
 
 En este artículo trataré de resumir los puntos importantes a tomar en cuenta desde varias perspectivas, tanto lo netamente técnico, como lo humano /  social.
@@ -67,7 +69,7 @@ Como referencia, algunas de las preguntas típicas que se pueden encontrar, depe
 
 Otra opción son las pruebas de validación de conocimientos, existen múltiples plataformas, algunas de las más conocidas: [HackerRank](https://www.hackerrank.com/), [Pluralsight](https://www.pluralsight.com/), [Leetcode](https://leetcode.com/), [CodeChef](https://www.codechef.com/).  Personalmente me gustan mucho las pruebas de conocimiento de Pluralsight, acá algunas de las más comunes:
 
-* [Java Fundamentals](https://app.pluralsight.com/score/skill-assessment/java-fundamentals/intro) 
+* [Java Fundamentals](https://app.pluralsight.com/score/skill-assessment/java-fundamentals/intro)
 * [Javascript](https://app.pluralsight.com/score/skill-assessment/javascript/intro)
 * [TypeScript](https://app.pluralsight.com/score/skill-assessment/typescript/summary?context=profile)
 * [Angular](https://app.pluralsight.com/score/skill-assessment/angular/intro?context=profile#/v2/landing)
@@ -81,9 +83,7 @@ Si sientes que estás "oxidado" y necesitas practicar lo que se refiere a resolu
 
 En el caso de Pluralsight, te permite tener un tablero con tus conocimientos que es demostrable y puede servir de apoyo para alguna entrevista, [incluyo el mío como ejemplo](https://app.pluralsight.com/profile/ivan-campana)
 
-[![Pluralsight profile](/photos/pluralsight-profile.png)](/photos/pluralsight-profile.png)
-
-
+[![Pluralsight profile](/photos/pluralsight-profile.png)](/photos/pluralsight-profile.png "Pluralsight Profile ")
 
 ## Entrevista Técnica / Diseño de Sistemas
 
@@ -114,11 +114,11 @@ Si nos llaman a esta parte es porque les gusta el perfil que tenemos, coincidimo
 
 Otra consideración importante es el valor del contrato, por lo general con las empresas de EEUU se suele hablar ya sea de valor por hora o de valor anual, en LATAM estamos acostumbrados a pensar en un valor fijo mensual, la forma rápida de calcularlo si es por horas, es multiplicar el valor por hora por 160 (número aproximado de horas en un mes), ej:
 
-* Valor por hora en USD 20, valor mensual = 3,200, valor anual = $ 38,400
+* Valor por hora en **USD** 20, **valor mensual** = 3,200, **valor anual** = $ 38,400
 
 De esto debemos tomar en cuenta las condiciones bajo las que nos vayamos a sentir bien, por ejemplo descontar de este valor (si fuera lo que quisiéramos): costo del internet, seguro médico, seguro social personal (en los países donde se pueda hacer aporte voluntario), valores de vacaciones.   Y si al final de eso nuestro sueldo **neto**, nos sigue dejando contentos, pues suena como una buena oferta, pero antes de aceptar una propuesta a ojos cerrados, recomendaría revisar alguna [tabla referencial de valores](https://www.accelerance.com/hubfs/Accelerance%20-%202020%20Guide%20to%20Global%20Outsourcing%20Rates.pdf?utm_campaign=The%20Accelerance%202020%20Guide%20to%20Global%20Software%20Outsourcing%20Rates&utm_medium=email&_hsmi=100147777&_hsenc=p2ANqtz-_-c_YzMsErvj0Crpca0NBnVDlSu4si5YUF0Pooujfqm-rXW1Y8tWj_ISmAeC4MufocnxyERAb1xiwiyFFrxeI9vZx3dw&utm_content=100147777&utm_source=hs_automation), como esta:
 
-[![Rango de valores por hora segun la region](/photos/hourly-rates-per-region.png)](/photos/hourly-rates-per-region.png)
+[![Rango de valores por hora segun la region](/photos/hourly-rates-per-region.png)](/photos/hourly-rates-per-region.png "Hourly Rates")
 
 Como nota personal, en mi caso, mantenerme como contratista y pagar mis propios "beneficios" aún sigue representando un valor muy superior a lo que una empresa local podría ofrecer, así que se mantiene el balance.
 
