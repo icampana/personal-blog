@@ -24,6 +24,12 @@ const nextConfig = {
         destination: '/posts/page/:page',
         permanent: true
       },
+      // Categories to tags:
+      {
+        source: '/category/:tag([a-zA-Z\-]{1,})',
+        destination: '/tag/:tag',
+        permanent: true
+      },
     ]
   }
 }
