@@ -12,6 +12,12 @@ const nextConfig = {
         destination: '/posts/:slug',
         permanent: true
       },
+      // By date listings
+      {
+        source: '/:year(\\d{4})/:month(\\d{2})',
+        destination: '/by-date/:year/:month',
+        permanent: true
+      },
       // Old Posts that came from Blogger / Wordpress
       {
         source: '/:year(\\d{4})/:month(\\d{2})/:slug([a-zA-Z\-]{1,})',
