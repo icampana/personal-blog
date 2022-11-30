@@ -56,7 +56,7 @@ const TagPage: NextPage<{ posts: Post[], currentTag: string}> = (props) => {
   const { posts, currentTag } = props;
 
   const tagTitle = `Publicaciones de ${currentTag}`;
-  const tagCanonical = `${site.siteUrl}/tag/${currentTag}`;
+  const tagCanonical = `${site.siteUrl}/tag/${currentTag}/`;
   const postImages = posts.filter(post => post.featuredImage).map(post => (
     {
       url: `${site.siteUrl}${post.featuredImage}`
