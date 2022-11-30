@@ -60,7 +60,7 @@ const Post = defineDocumentType(() => ({
           return `/posts${doc.path}`;
         }
 
-        return `/posts/${doc._raw.flattenedPath}`;
+        return `/${doc._raw.flattenedPath}`;
       },
     },
     summary: { type: 'string', resolve: (doc) => striptags(doc.body.html).slice(0, 200) }

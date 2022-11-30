@@ -25,7 +25,7 @@ export async function getStaticProps(props: any) {
             return post.path === singleUrl || (post.path === `/${singleUrl}`);
         }
 
-        return (post._raw.flattenedPath === singleUrl);
+        return (post._raw.flattenedPath === singleUrl || post._raw.flattenedPath === `posts/${singleUrl}`);
     }
   );
 
