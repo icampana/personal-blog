@@ -3,10 +3,10 @@ author: ivan
 categories:
 - Sin categoría
 comments: true
-date: 2011-05-26 13:00:00
-featuredImage: /photos/kaffe_fika-1.jpg
+date: 2011-05-26T13:00:00.000+00:00
+featuredImage: "/photos/kaffe_fika-1.jpg"
 layout: post
-path: /2011/05/kaffe-fika
+path: "/2011/05/kaffe-fika"
 slug: kaffe-fika
 tags:
 - Ciudad
@@ -15,8 +15,8 @@ tags:
 - Ocio
 title: Kaffe & Fika
 wordpress_id: 731
----
 
+---
 Ecuador es conocido por ser exportador de cacao, banano, camarones y granos de café; sin embargo no se lo reconoce por exportar productos terminados, buena parte de nuestro cacao termina siendo convertido en chocolate en alguna otra parte del mundo, suiza por ejemplo, acá apenas nos acostumbramos a consumir sucedáneos, lo mismo pasa con otros productos, como el café.
 
 Recuerdo hace unos 8 años cuando tuve una profesora de la universidad que vino de la USM de Chile y se quedó enamorada de nuestro café, inclusive la ayudamos a buscar lugares donde pudiera comprar café para pasar de las distintas variedades que hay acá.
@@ -29,7 +29,9 @@ El nombre del lugar es Kaffe & Fika, esto está en sueco, la primera palabra es 
 
 De acuerdo a la Wikipedia, la definición de [Fika](https://es.wikipedia.org/wiki/Fika) es:
 
-<blockquote>[![](/photos/IMG_4810-1.jpg)](https://1.bp.blogspot.com/-YxXdQfUMJpw/TdC7_jsBywI/AAAAAAAACOg/X2iiu4vhaTc/s1600/IMG_4810.jpg)Fika es una institución social en Suecia: significa tomar una "pausa del café" del trabajo o de otras actividades y beber un café con sus colegas, amigos, o familia. Esta práctica de tomar una pausa para un café y un bocado ligero (algunas galletas, tarta (torta), o un emparedado) entre comidas más substanciales como almuerzo y la temprana cena. Los suecos están entre los mayores consumidores de café en el mundo.</blockquote>
+[![](/photos/IMG_4810-1.jpg)](https://1.bp.blogspot.com/-YxXdQfUMJpw/TdC7_jsBywI/AAAAAAAACOg/X2iiu4vhaTc/s1600/IMG_4810.jpg)
+
+Fika es una institución social en Suecia: significa tomar una "pausa del café" del trabajo o de otras actividades y beber un café con sus colegas, amigos, o familia. Esta práctica de tomar una pausa para un café y un bocado ligero (algunas galletas, tarta (torta), o un emparedado) entre comidas más substanciales como almuerzo y la temprana cena. Los suecos están entre los mayores consumidores de café en el mundo.</blockquote>
 
 El lugar es acogedor, con algo que Luis ha querido resaltar como punto importante, el poder tomar un buen café, preparado con mucho cuidado y para asegurar un excelente sabor. Algo que también va de acorde al concepto de Fika es que es un buen lugar para compartir con amigos, escuchar buena música y conversar tranquilamente, es un sitio de amigos y amantes del café.
 
@@ -37,24 +39,8 @@ Parte de la experiencia que pudimos experimentar con mis amigos en Kaffe & Fika 
 
 En resumen, es un lugar al que volveré cada vez que pueda e invito a mis amigos a que lo hagan, no sólo es un buen rato, encontrarán buen trato y un espacio donde también se puede hacer nuevos amigos.
 
-Para los más curiosos, acá unas cuantas fotos del lugar y finalmente cómo llegar: está justo diagonal al C.C. Plaza Triángulo en Urdesa Central, Av. Victor Emilio Estrada #419 C, del lado del Naturíssimo.
-
-<table cellpadding="0" cellspacing="0" align="center" border="1" ><tbody >
-<tr >   
-<td >[![](/photos/IMG_4801-1.jpg)](https://4.bp.blogspot.com/-GAD7MOdnVQ8/TdC76l4NfdI/AAAAAAAACOM/vSKI6hqBKME/s1600/IMG_4801.jpg)
-</td>  
-<td >[![](/photos/IMG_4804-1.jpg)](https://1.bp.blogspot.com/-Q2a7ybuShLA/TdC77gs7_BI/AAAAAAAACOQ/8aLXgVN0Ze8/s1600/IMG_4804.jpg)
-</td>
-<td >![](/photos/IMG_4811-1.jpg)
-</td>  </tr>
-<tr >
-<td >![](/photos/IMG_4805-1.jpg)
-</td>  
-<td >[![](/photos/IMG_4809-1.jpg)](https://1.bp.blogspot.com/-Durwt_gD1Ng/TdC7-kI160I/AAAAAAAACOc/25o0mjBnKUw/s1600/IMG_4809.jpg)
-</td>  
-<td >[![](/photos/IMG_4807-1.jpg)](https://1.bp.blogspot.com/-_eNSM2-P72s/TdC79qaPoaI/AAAAAAAACOY/t9u1Rq6Kb0Q/s1600/IMG_4807.jpg)
-</td> </tr>
-<tr >
-<td colspan="3" align="center" >[![](/photos/IMG_4799-1.jpg)](https://4.bp.blogspot.com/-T_skoPbcvkM/TdC75sJ8oHI/AAAAAAAACOI/Oq1eIms_LiY/s1600/IMG_4799.jpg)
-</td> </tr>
-</tbody></table>
+Para los más curiosos, acá unas cuantas fotos del lugar y finalmente cómo llegar: está justo diagonal al C.C. Plaza Triángulo en Urdesa Central, Av. Victor Emilio Estrada #419 C, del lado del Naturíssimo.  
+  
+[![](/photos/IMG_4801-1.jpg)](https://4.bp.blogspot.com/-GAD7MOdnVQ8/TdC76l4NfdI/AAAAAAAACOM/vSKI6hqBKME/s1600/IMG_4801.jpg) [![](/photos/IMG_4804-1.jpg)](https://1.bp.blogspot.com/-Q2a7ybuShLA/TdC77gs7_BI/AAAAAAAACOQ/8aLXgVN0Ze8/s1600/IMG_4804.jpg)
+![](/photos/IMG_4811-1.jpg) ![](/photos/IMG_4805-1.jpg)[![](/photos/IMG_4809-1.jpg)](https://1.bp.blogspot.com/-Durwt_gD1Ng/TdC7-kI160I/AAAAAAAACOc/25o0mjBnKUw/s1600/IMG_4809.jpg)  
+[![](/photos/IMG_4807-1.jpg)](https://1.bp.blogspot.com/-_eNSM2-P72s/TdC79qaPoaI/AAAAAAAACOY/t9u1Rq6Kb0Q/s1600/IMG_4807.jpg) [![](/photos/IMG_4799-1.jpg)](https://4.bp.blogspot.com/-T_skoPbcvkM/TdC75sJ8oHI/AAAAAAAACOI/Oq1eIms_LiY/s1600/IMG_4799.jpg)
