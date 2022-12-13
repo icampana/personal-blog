@@ -13,7 +13,7 @@ import { NextSeo } from 'next-seo';
 
 const getCleanTags = (post: Post) => {
   if (post.tags) {
-    return post.tags?.map(tag => tag.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, ""))
+    return post.tags?.map(tag => tag.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "").replace(' ', '-'))
   }
 
   return [];
@@ -55,24 +55,25 @@ const TagPage: NextPage<{ posts: Post[], currentTag: string}> = (props) => {
   const { site } = meta;
   const { posts, currentTag } = props;
 
-  const tagTitle = `Publicaciones de ${currentTag}`;
+  const tagName = currentTag.replace('-', ' ');
+  const tagTitle = `Publicaciones de ${tagName}`;
   const tagCanonical = `${site.siteUrl}/tag/${currentTag}/`;
   const postImages = posts.filter(post => post.featuredImage).map(post => (
     {
       url: `${site.siteUrl}${post.featuredImage}`
     }
   ));
-  const tagDescription = `Publicaciones sobre el tema ${currentTag}`;
+  const tagDescription = `Publicaciones sobre el tema ${tagName}`;
 
   return (
     <div className="container mx-auto">
       <Head>
-        <title>Listado de publicaciones sobre: {currentTag} | { site.title }</title>
+        <title>Listado de publicaciones sobre: {tagName} | { site.title }</title>
         <meta name="description" content={ site.description } />
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <NextSeo
-        title={`${currentTag} | ${site.title}` }
+        title={`${tagName} | ${site.title}` }
         description={tagDescription}
         canonical={tagCanonical}
         openGraph={{
@@ -85,7 +86,7 @@ const TagPage: NextPage<{ posts: Post[], currentTag: string}> = (props) => {
 
       <main className='max-w-6xl mx-auto'>
         <Header>
-          <h1 className='font-sans font-bold text-2xl capitalize'>Publicaciones sobre <em>{currentTag}</em></h1>
+          <h1 className='font-sans font-bold text-2xl capitalize'>Publicaciones sobre <em>{tagName}</em></h1>
         </Header>
 
         <div>
