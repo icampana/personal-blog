@@ -13,13 +13,13 @@ const BlogPost = (props: BlogPostProps) => {
     const { post } = props;
     const readTime = post.readingTime?.minutes || 0;
     const readingTime = `${Math.round(readTime)} minutos`;
-    const imagePath = post.featuredImage || '/images/placeholder.png';
+    const imagePath = post.featuredImage;
 
     const getTags = () => {
         if (post.tags) {
             return <>
                 <em className='text-orange-900'>Tags:</em> {post.tags.map(tag => {
-                    const cleanTag = tag.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+                    const cleanTag = tag.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "").replace(' ', '-');
 
                     return (<Link href={`/tag/${cleanTag}`} key={cleanTag}>
                         <a className='inline-block px-1'>{tag} |</a>
@@ -41,9 +41,9 @@ const BlogPost = (props: BlogPostProps) => {
                 </div>
             </Header>
 
-            <div className='relative mb-4 w-full h-64'>
-            {imagePath && <Image src={imagePath} alt={post.title} layout="fill" objectFit="cover"  placeholder="blur" blurDataURL='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mM0SeuuBwADoQGm9h5VIAAAAABJRU5ErkJggg==' />}
-            </div>
+            {imagePath && <div className='relative mb-4 w-full h-64'>
+                <Image src={imagePath} alt={post.title} layout="fill" objectFit="cover"  placeholder="blur" blurDataURL='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mM0SeuuBwADoQGm9h5VIAAAAABJRU5ErkJggg==' />
+            </div>}
 
             <div className='article-content leading-7 px-2' dangerouslySetInnerHTML={{ __html: post.body.html }} />
             {getTags()}
