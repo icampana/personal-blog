@@ -24,6 +24,12 @@ const nextConfig = {
         destination: '/posts/:year/:month/:slug',
         permanent: true
       },
+      // Old Posts that came from Blogger / Wordpress
+      {
+        source: '/:year(\\d{4})/:month(\\d{2})/:slug([a-zA-Z\-]{1,})/amp',
+        destination: '/posts/:year/:month/:slug',
+        permanent: true
+      },
       // Previous pagination.
       {
         source: '/:page(\\d{1,2})',
