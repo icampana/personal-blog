@@ -21,7 +21,7 @@ Lo principal que hay que aclarar es que de forma general podríamos decir que ca
 * Engineer I, Entry Level, Mid Level, Senior Engineer, Staff Engineer, Principal Engineer
 * Software Engineer, Senior Engineer, Staff Engineer, Principal Engineer, Distinguished Engineer / Fellow
 
-Unos suenan más rimbombantes que los otros, pero al final sólo quieren representar una cosa, el nivel de madurez como ingeniero de software que se puede medir por su capacidad para resolver problemas de forma autónoma, poder de análisis, pensamiento crítico, entendimiento de las herramientas de tecnología, conocimiento de diseño de sistemas, etc.
+Unos suenan más rimbombantes que otros, pero al final sólo quieren representar una cosa, el nivel de madurez como ingeniero de software que se puede medir por su capacidad para resolver problemas de forma autónoma, poder de análisis, pensamiento crítico, entendimiento de las herramientas de tecnología, conocimiento de diseño de sistemas, etc.
 
 Lo primero que me interesa aclarar es que es un proceso, no se puede pasar de forma acelerada de un nivel inicial a uno de Senior sin haber experimentado y conocido diferentes problemáticas.
 
@@ -30,6 +30,34 @@ Aquí sin entrar en polémica hay muchas discusiones en torno a quienes se han d
 He conocido ingenieros graduados de universidad y que sabían muy poco, así como autodidactas que le podían ganar al mejor de la clase de cualquier institución educativa.
 
 ![](/photos/senior-support-junior.jpeg)
+
+## Conocimientos por nivel
+
+Para hacer más simple la comprensión, de forma general esto es lo que representa cada uno de los niveles.
+
+### Junior
+
+* Necesita supervisión
+* Tiene conocimientos básicos de software y hardware.
+* Maneja al menos un lenguaje de programación.
+* Participa en la planificación inicial del proyecto.
+* Trabaja en funciones y herramientas internas de software.
+
+### Mid Level
+
+* Capaz de realizar tareas técnicas con menos supervisión.
+* Entiende claramente el proceso de desarrollo, incluyendo análisis, desarrollo, implementación, etc.
+* Puede configurar un ambiente de desarrollo por sí mismo.
+* Identifica errores al hacer análisis de código, puede participar en peer reviews.
+* Puede implementar pruebas unitarias simples.
+
+### Senior
+
+* Puede supervisar y dirigir a un grupo de desarrolladores
+* Es capaz de entender el alcance de un proyecto, planificar y estimar el nivel de esfuerzo.
+* Es un mentor para desarrolladores junior y mid level.
+* Se encarga de las revisiones de código de sus compañeros.
+* Mejora la estructura y la calidad del código.
 
 ## ¿Qué aprender para avanzar en mi carrera?
 
