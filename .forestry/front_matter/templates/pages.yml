@@ -21,3 +21,5 @@ fields:
   description: This allows describing the overall contents of the article.
   config:
     max: 250
+pages:
+- content/pages/portafolio.md
