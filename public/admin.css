@@ -985,14 +985,14 @@ video {
   line-height: 1.25rem;
 }
 
-.text-xs {
-  font-size: 0.75rem;
-  line-height: 1rem;
-}
-
 .text-2xl {
   font-size: 1.5rem;
   line-height: 2rem;
+}
+
+.text-xs {
+  font-size: 0.75rem;
+  line-height: 1rem;
 }
 
 .text-5xl {
@@ -1157,7 +1157,7 @@ ol,  ul {
 p > img {
   margin-left: auto;
   margin-right: auto;
-  max-width: 640px;
+  max-width: 100%;
   padding-left: 0.5rem;
   padding-right: 0.5rem;
   padding-top: 0.25rem;
@@ -1174,8 +1174,15 @@ a:hover {
 }
 
 @media (min-width: 640px) {
-  p > img {
+  img, 
+    p > img {
     max-width: 20rem;
+  }
+
+  .article-content img {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 42rem;
   }
 }
 

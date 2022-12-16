@@ -24,7 +24,7 @@ front_matter_path: ''
 use_front_matter_path: false
 file_template: ":filename:"
 build:
-  preview_output_directory: out
+  preview_output_directory: .next
   install_dependencies_command: yarn install
   preview_docker_image: forestryio/node:16
   mount_path: "/srv"
