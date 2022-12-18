@@ -10,10 +10,11 @@ import meta from 'metadata.json';
 import Footer from 'components/Footer';
 import Header from 'components/Header';
 import { NextSeo } from 'next-seo';
+import { cleanTag } from 'components/utils/text';
 
 const getCleanTags = (post: Post) => {
   if (post.tags) {
-    return post.tags?.map(tag => tag.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "").replace(' ', '-'))
+    return post.tags?.map(tag => cleanTag(tag))
   }
 
   return [];
