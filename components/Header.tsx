@@ -19,7 +19,7 @@ const Header = (props: HeaderProps) => {
         </Link>);
     }
 
-    const menuLinks = allPages.map((item, index) => <li key={index} className="float-none lg:float-left">{formatLink(item.url, item.title)}</li>);
+    const menuLinks = allPages.map((item, index) => item && <li key={index} className="float-none lg:float-left">{formatLink(item.url, item.title)}</li>);
 
     const toggleMenu = (event: MouseEvent<HTMLDivElement>) => {
         event.preventDefault();
