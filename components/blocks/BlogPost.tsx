@@ -4,6 +4,7 @@ import Link from "next/link";
 import type { Post } from 'contentlayer/generated';
 
 import Header from 'components/Header';
+import { cleanTag } from 'components/utils/text';
 
 interface BlogPostProps {
     post: Post
@@ -16,13 +17,14 @@ const BlogPost = (props: BlogPostProps) => {
     const imagePath = post.featuredImage;
 
     const getTags = () => {
+        const totalTags = post.tags?.length || 0;
         if (post.tags) {
             return <>
-                <em className='text-orange-900'>Tags:</em> {post.tags.map(tag => {
-                    const cleanTag = tag.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "").replace(' ', '-');
+                <em className='text-orange-900'>Tags:</em> {post.tags.map((tag, tagIndex) => {
+                    const tagSlug = cleanTag(tag);
 
-                    return (<Link href={`/tag/${cleanTag}`} key={cleanTag}>
-                        <a className='inline-block px-1'>{tag} |</a>
+                    return (<Link href={`/tag/${tagSlug}`} key={tagSlug}>
+                        <a className='inline-block px-1'>{tag} {((tagIndex + 1) < totalTags) ? ' |' : ''}</a>
                     </Link>);
                 })}
             </>;
