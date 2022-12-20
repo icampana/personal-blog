@@ -39,6 +39,7 @@ Probablemente lo que a más de uno le llama la atención, saber dónde se pueden
 
 * [AngelList](https://angel.co)
 * [Vivilia](https://vivilia.com/)
+* [Superside](https://superside.pinpointhq.com/jobs "Superside Jobs list")
 * [Torre](https://torre.co/)
 * [Workana](https://www.workana.com/es/)
 * [FlatWorld](https://flatworld.co/)
@@ -46,6 +47,7 @@ Probablemente lo que a más de uno le llama la atención, saber dónde se pueden
 * [VanHack](https://vanhack.com/)
 * [BairesDev](https://jobs.bairesdev.com/)
 * [Velozient](https://velozient.com/careers/)
+* [BEON.Tech](https://beon.tech/remote-jobs "BeOn Tech")
 * [Remote OK](https://remoteok.io/)
 * [Turing](https://www.turing.com/)
 * [Awana](https://www.awana.io/job-openings)
