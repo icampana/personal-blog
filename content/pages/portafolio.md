@@ -1,9 +1,10 @@
 ---
-date: 2022-12-15T21:40:47.000-05:00
+date: 2022-12-16T02:40:47.000Z
 title: Portafolio
 description: Portafolio de proyectos realizados
-
+_template: pages
 ---
+
 Algunos de los proyectos desarrollados a lo largo de mi carrera como desarrollador web.
 
 ## G/O Media (Gawkermedia)

@@ -1,14 +1,16 @@
 ---
-title: "¿Dónde encontrar ofertas de trabajo remoto?"
-date: 2022-10-01T23:29:59.126+00:00
-featuredImage: "/photos/busqueda-trabajo.jpeg"
-description: 'Buscar trabajo remoto luego de la pandemia se ha vuelto algo más común
-  de lo que pensábamos, sin embargo no es tan fácil encontrar esas ofertas que nos
-  permitan tener una buena oportunidad. '
+title: ¿Dónde encontrar ofertas de trabajo remoto?
+date: 2022-10-01T23:29:59.126Z
+featuredImage: /photos/busqueda-trabajo.jpeg
+description: >-
+  Buscar trabajo remoto luego de la pandemia se ha vuelto algo más común de lo
+  que pensábamos, sin embargo no es tan fácil encontrar esas ofertas que nos
+  permitan tener una buena oportunidad. 
 tags:
-- Remote Work
-
+  - Remote Work
+_template: posts
 ---
+
 ## ¿Por Dónde Comenzar ?
 
 Uno de los primeros retos al plantearse la posibilidad de trabajar de forma remota es por don﻿de comenzar a buscar, junto con la pregunta también de si hay oportunidades para lo que yo hago?

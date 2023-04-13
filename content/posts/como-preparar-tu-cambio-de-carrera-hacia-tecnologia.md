@@ -1,14 +1,16 @@
 ---
-date: 2023-01-26T01:45:20-05:00
-title: "¿Cómo preparar tu cambio de carrera hacia tecnología?"
-featuredImage: "/photos/2023/01/career-change-featured-image.jpg"
-description: A qué debo prestarle atención si es que quiero comenzar un cambio de
-  carrera enfocándome hacia el área técnica, qué consideraciones tener.
+date: 2023-01-26T06:45:20.000Z
+title: ¿Cómo preparar tu cambio de carrera hacia tecnología?
+featuredImage: /photos/2023/01/career-change-featured-image.jpg
+description: >-
+  A qué debo prestarle atención si es que quiero comenzar un cambio de carrera
+  enfocándome hacia el área técnica, qué consideraciones tener.
 tags:
-- Jobs
-- Career Switch
-
+  - Jobs
+  - Career Switch
+_template: posts
 ---
+
 En los últimos años hay cada vez más personas interesadas en hacer un giro en su área de desarrollo profesional, especialmente hacia tecnología, tomando en cuenta el déficit existente (sí, a pesar de los [despidos de las Big Tech](https://cincodias.elpais.com/cincodias/2023/01/24/opinion/1674563983_274509.html) - Google, Amazon, Facebook, Spotify, etc-), la demanda por profesionales de tecnología no ha disminuido, la gran diferencia es que si comienzas a buscar trabajo ahora, existirá un enfoque mucho mayor hacia la eficiencia (es decir, buscarán personas que puedan demostrar que son capaces de resolver problemas, que manejen pensamiento crítico, entienden completamente la problemática y ofrecer una solución factible) puesto que la idea es lograr que esa inversión que realizarán en las nuevas contrataciones, pueda generar un retorno sobre la inversión en el menor tiempo posible.
 
 Y esto no es algo nuevo, por nombrar unos ejemplos, ya en 2016 se hablaba en Argentina de un [déficit de aproximadamente 5,000 puestos](https://www.semana.com/pais/articulo/el-pais-tiene--un-deficit-de-75000-ingenieros-de-sistemas/283977/) por año en el área de software, y 2020 en [Colombia se hablaba de un déficit de 75,000](https://www.semana.com/pais/articulo/el-pais-tiene--un-deficit-de-75000-ingenieros-de-sistemas/283977/) profesionales de TIC y que sólo se graduaban aproximadamente 5,000 por año, mientras que en España en junio 2022 se decía que [existía un déficit inalcanzable](https://www.mastermania.com/noticias_masters/la-escasez-de-titulados-en-informatica-deja-sin-cubrir-miles-de-vacantes-de-empleo-org-7129.html) al tener apenas cerca de 8,000 graduados al año y más de 14,000 empresas con procesos abiertos.

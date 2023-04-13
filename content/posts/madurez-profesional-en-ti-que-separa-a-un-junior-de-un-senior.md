@@ -1,15 +1,17 @@
 ---
-date: 2022-12-13T00:22:43-05:00
-title: "¿Madurez profesional en TI, qué separa a un Junior de un Senior?"
-featuredImage: "/photos/senior-mid-junior.png"
-description: En cualquier carrera debe existir crecimiento profesional, qué implica
-  esto cuando hablamos de TI, cuáles son las fortalezas y qué deberíamos buscar en
-  un candidato senior o cómo me puedo convertir en uno.
+date: 2022-12-13T05:22:43.000Z
+title: '¿Madurez profesional en TI, qué separa a un Junior de un Senior?'
+featuredImage: /photos/senior-mid-junior.png
+description: >-
+  En cualquier carrera debe existir crecimiento profesional, qué implica esto
+  cuando hablamos de TI, cuáles son las fortalezas y qué deberíamos buscar en un
+  candidato senior o cómo me puedo convertir en uno.
 tags:
-- Software Engineering
-- Recruitment
-
+  - Software Engineering
+  - Recruitment
+_template: posts
 ---
+
 Cuando hablamos de profesionales de tecnología, la eterna discusión que se suele tener es en qué momento se pasa de un nivel al otro, o cuantos niveles hay, qué implica estar en uno o el otro.
 
 ## Niveles en ingeniería. ¿Dónde estoy?

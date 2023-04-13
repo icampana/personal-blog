@@ -1,17 +1,19 @@
 ---
-date: 2023-03-27T23:15:09-05:00
+date: 2023-03-28T04:15:09.000Z
 title: Emigrar como trabajador remoto (nómada digital) en 2023
-featuredImage: "/photos/2023/03/computer-travel-photo.jpg"
-description: Migrar a otro país sin necesidad de ser patrocinado por una empresa ahora
-  es posible si tienes un trabajo remoto, aquí algunas de las opciones y las cosas
+featuredImage: /photos/2023/03/computer-travel-photo.jpg
+description: >-
+  Migrar a otro país sin necesidad de ser patrocinado por una empresa ahora es
+  posible si tienes un trabajo remoto, aquí algunas de las opciones y las cosas
   básicas que necesitas saber.
 tags:
-- Migracion
-- Live Abroad
-- Remote Work
-- Digital Nomad
-
+  - Migracion
+  - Live Abroad
+  - Remote Work
+  - Digital Nomad
+_template: posts
 ---
+
 Al escribir este artículo estamos pasando por lo que definieron en el Foro Económico Mundial en Davos como una "policrisis", es decir, múltiples crisis sucediendo al mismo tiempo, lo cual no presenta un escenario muy alentador en general, pero históricamente siempre ha sido bastante más fuerte para LATAM (Latinoamérica), algunas de las cosas que se mezclan:
 
 * Inflación global
