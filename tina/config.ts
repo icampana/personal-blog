@@ -1,0 +1,64 @@
+import { defineConfig } from "tinacms";
+import { postsFields, pagesFields } from "./templates";
+
+// Your hosting provider likely exposes this as an environment variable
+const branch = process.env.HEAD || process.env.VERCEL_GIT_COMMIT_REF || "main";
+
+export default defineConfig({
+  branch,
+  clientId: "da403933-32db-4dcf-b799-ebc141c1fd51", // Get this from tina.io
+  token: "d34d778eb69b883ddc7b48c0757e4bfa7999ec25", // Get this from tina.io
+  client: { skip: true },
+  build: {
+    outputFolder: "admin",
+    publicFolder: "public",
+  },
+  media: {
+    tina: {
+      mediaRoot: "",
+      publicFolder: "public",
+    },
+  },
+  schema: {
+    collections: [
+      {
+        format: "md",
+        label: "Posts",
+        name: "posts",
+        path: "content/posts",
+        match: {
+          include: "**/*",
+        },
+        fields: [
+          {
+            type: "rich-text",
+            name: "body",
+            label: "Body of Document",
+            description: "This is the markdown body",
+            isBody: true,
+          },
+          ...postsFields(),
+        ],
+      },
+      {
+        format: "md",
+        label: "Pages",
+        name: "pages",
+        path: "content/pages",
+        match: {
+          include: "**/*",
+        },
+        fields: [
+          {
+            type: "rich-text",
+            name: "body",
+            label: "Body of Document",
+            description: "This is the markdown body",
+            isBody: true,
+          },
+          ...pagesFields(),
+        ],
+      },
+    ],
+  },
+});
