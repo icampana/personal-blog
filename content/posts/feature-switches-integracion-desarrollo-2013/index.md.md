@@ -37,7 +37,7 @@ Las "Feature Flags" ofrecen varios beneficios clave:
 3. Desarrollo Centrado en el Usuario: Se puede priorizar los comentarios y preferencias de los usuarios adaptando la experiencia del usuario en función de su comportamiento y necesidades.
 4. Experimentación Mejorada: Las pruebas A/B y los lanzamientos graduales permiten la toma de decisiones basadas en datos, lo cual puede ser crucial especialmente si el equipo aún no está totalmente acostumbrado al uso de herramientas de CI/CD.
 
-Un Caso de uso real en el Comercio Electrónico: Motor de Recomendación
+## Un Caso de uso real en el Comercio Electrónico: Motor de Recomendación
 
 Imaginemos que estás trabajando en un sitio web de comercio electrónico, y tu equipo acaba de desarrollar un sofisticado motor de recomendación. Este motor proporciona recomendaciones de productos a los usuarios en función de su historial de navegación, hábitos de compra y preferencias. Es una característica que puede mejorar significativamente la experiencia del usuario y aumentar las ventas. Sin embargo, existen algunos riesgos potenciales en su implementación.
 
@@ -47,11 +47,11 @@ Imaginemos que estás trabajando en un sitio web de comercio electrónico, y tu 
 2. Pruebas A/B: Para evaluar el impacto del motor de recomendación en las ventas, puedes configurar una prueba A/B. La mitad de tus usuarios verá las recomendaciones y la otra mitad no. Con las "Feature Flags", puedes dividir fácilmente tu base de usuarios y medir las tasas de conversión y la satisfacción del usuario.
 3. Configuración en Tiempo Real: Imagina que hay un problema con el motor de recomendación. Tal vez está recomendando productos incorrectos, lo que podría provocar una caída en las ventas. Con una "Feature Flag", puedes apagarlo instantáneamente para todos los usuarios hasta que se solucione el problema. Esto evita un impacto potencialmente negativo en tu negocio.
 
-Los Feature Flags no solo garantizan una implementación más suave y segura del motor de recomendación, sino que también te permiten tomar decisiones basadas en datos y adaptarte a las características de tu grupo objetivo. 
+Los Feature Flags no solo garantizan una implementación más suave y segura del motor de recomendación, sino que también te permiten tomar decisiones basadas en datos y adaptarte a las características de tu grupo objetivo.
 
 ## ¿Cómo puedo implementarlo?
 
-Hay muchas formas de hacerlo, y va a depender desde los recursos disponibles, hasta la forma de trabajo del equipo.  La forma más sencilla de implementación podría ser definiendo un archivo público donde se indique el estado de las FS, pero esto no habilita el uso de pruebas A/B y es bastante "rústico". 
+Hay muchas formas de hacerlo, y va a depender desde los recursos disponibles, hasta la forma de trabajo del equipo.  La forma más sencilla de implementación podría ser definiendo un archivo público donde se indique el estado de las FS, pero esto no habilita el uso de pruebas A/B y es bastante "rústico".
 
 En mi experiencia profesional las 3 formas más comunes son:
 
