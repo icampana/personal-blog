@@ -1,7 +1,7 @@
 ---
 title: 'Domina React: Patrones de Diseño y Trucos para Desarrolladores Junior'
 date: 2023-10-23T05:00:00.000Z
-featuredImage: /images/Design patterns in React.png
+featuredImage: /images/design-patterns-react.png
 description: >-
   Descubre los Patrones de Diseño y Mejores Prácticas de React en este tutorial
   para desarrolladores junior. Aprende cómo construir aplicaciones más
@@ -61,7 +61,7 @@ En React, existen varios patrones de diseño y mejores prácticas que te ayudar�
 6. Componentes Controlados:
    * Mejor Práctica: Almacena los datos de un formulario en un componente padre, de esta forma el componente que recibe los datos no necesita saber cómo se actualiza o como se manejan los datos, se enfoca sólo en mostrarlos (renderizarlos).
    * Por Qué: Te da un mejor control sobre los datos y el comportamiento de tus formularios.\
-     ![](/images/react//control-props.png)
+     ![Controlled Props](/images/react/control-props.png "Controlled Props")![](/images/react/control-props.png)
 7. Renderizado Condicional:
    * Mejor Práctica: Utiliza condiciones para mostrar u ocultar partes de tu interfaz.
    * Por Qué: Puedes cambiar dinámicamente lo que ven los usuarios, haciendo que tu aplicación sea interactiva.
