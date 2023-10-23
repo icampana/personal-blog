@@ -1,6 +1,7 @@
 ---
 title: 'Domina React: Patrones de Diseño y Trucos para Desarrolladores Junior'
 date: 2023-10-23T05:00:00.000Z
+featuredImage: /images//Design patterns in React.png
 description: >-
   Descubre los Patrones de Diseño y Mejores Prácticas de React en este tutorial
   para desarrolladores junior. Aprende cómo construir aplicaciones más
@@ -18,7 +19,7 @@ De forma general hay un sinnúmero de patrones de diseño en software, por ejemp
 
 * Patrón Observador (Pub/Sub)
 * Proxy
-* Brigde 
+* Brigde
 * Factory
 * Builder
 * Composite
