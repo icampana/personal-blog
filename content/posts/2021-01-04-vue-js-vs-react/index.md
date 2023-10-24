@@ -5,8 +5,8 @@ featuredImage: /photos/vue-vs-react.jpg
 description: Comparación entre dos de las tecnologías más utilizadas para
   frontend en los últimos años
 tags:
-  - Programación
-  - Desarrollo
+  - React
+  - Development
   - Tecnología
   - Javascript
 ---

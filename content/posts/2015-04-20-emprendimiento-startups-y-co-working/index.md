@@ -47,23 +47,12 @@ Aprendimos y crecimos hasta que nuestra fuerza nos lo permitió, logramos sacar 
 
 Esto hizo que los problemas encontramos luego de 5 años y que quizá hubieran podido ser resueltos con algo del ingenio de los primeros años, se convirtieran en algo que ya nadie sabía cómo solucionar, o simplemente nadie quería solucionar.  Cuando sucedió no había terminado de entender qué pasaba, sabía que habíamos cometido algunos errores, y creo que inclusive podría decir que fue paulatino, pero como en una relación de pareja de la cual ves los problemas, pero te niegas a aceptarlos, cuando ya nos dimos cuenta, era demasiado tarde.
 
-<table cellpadding="0" style="float: right; margin-left: 1em; text-align: right;" cellspacing="0" class="tr-caption-container" >
-<tbody >
-<tr >
 
-<td style="text-align: center;" >[![](/photos/PortadaRevista.jpg)](/photos/PortadaRevista.jpg)
-</td>
-</tr>
-<tr >
 
-<td style="text-align: center;" class="tr-caption" >Orgullosamente ecuatorianos y
-de paso 2 compañeros de
-universidad en la misma
-portada de revista.
-</td>
-</tr>
-</tbody>
-</table>
+
+[![](/photos/PortadaRevista.jpg)](/photos/PortadaRevista.jpg)
+Orgullosamente ecuatorianos y de paso 2 compañeros de universidad en la misma portada de revista.
+
 Al día de hoy mis ex-compañeros y ex-socios se han convertido en directores de área de empresas grandes, trabajando para multinacionales, y lo que aunque da mucho orgullo, poca gente sabe, también uno de ellos es ingeniero a tiempo completo en Google. No doy nombres de empresas simplemente porque como dije antes, no les he pedido permiso y creo que son las historias individuales de cada uno de ellos.  En todo caso, esto lo digo no por alardear, sino porque me interesa dejar claro que no éramos un grupo de tipos sin idea, simplemente gastamos todos nuestros recursos física y mentalmente.
 
 Por mi parte hasta el día de hoy he formado parte como accionista de 3 empresas, de las cuales 2 al momento están con vida y funcionando, creo que puedo decir sin miedo que de manera exitosa.  Y no puedo negar que gran parte de ello se lo debo a la experiencia de empresa que tuvimos durante la época de Amauta, fue nuestra escuela y punto de partida.

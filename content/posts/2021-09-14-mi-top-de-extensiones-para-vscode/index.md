@@ -5,7 +5,7 @@ featuredImage: /photos/vscode.png
 description: Las extensiones de Visual Studio Code que más utilizo.
 tags:
   - vscode
-  - coding
+  - Development
   - extensions
 ---
 Si eres un programador hoy en día, lo más probable es que uses alguno de los "grandes" editores, o los más populares, y la idea es que hagan nuestra vida más sencilla, en mi caso el que prefiero es VS Code (a pesar de haber huido de todo lo relacionado a Microsoft por un tiempo debo reconocer que lo hicieron bien esta vez).

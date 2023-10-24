@@ -10,7 +10,7 @@ tags:
   - Remote Work
   - Trabajo
   - Work
-  - Life
+  - Recruitment
 ---
 En mi experiencia profesional he pasado desde ser dueño de empresa, hasta pasar por montones de entrevistas para tratar de conseguir el trabajo que quería, y en ambos casos siempre se regresa al mismo punto: hay que saber venderse a sí mismo, porque necesitamos que se fijen en nuestro "producto número uno" que somos nosotros mismos.
 

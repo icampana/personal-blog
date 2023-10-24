@@ -1,10 +1,8 @@
 ---
 author: ivan
-categories:
-- Aprendizaje
+tags:
 - Ciclismo
 - Comunicación
-- Palabras
 comments: true
 date: 2017-08-31 05:34:13
 featuredImage: /photos/gg0pedale6.jpg

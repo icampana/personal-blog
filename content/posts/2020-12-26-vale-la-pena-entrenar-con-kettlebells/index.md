@@ -4,6 +4,10 @@ date: 2020-12-26T03:34:15.248Z
 featuredImage: /photos/setkb08-32kg-1.jpg
 description: Análisis rápido sobre el entrenamiento con Kettlebells para mejorar
   el estado físico con equipo mínimo.
+tags:
+  - Fitness
+  - Training
+  - Workout
 ---
 Durante todo el tiempo que hemos estado en confinamiento muchos comenzaron a entrenar en casa ante la imposibilidad de ir a un gimnasio, por una parte para mantenerse en forma, por otra parte para mantener algo de sanidad mental .  Sin embargo contar con un equipo completo como para entrenar sería muy costoso, o inclusive difícil tener espacio para muchas cosas, la solución para algunos ha sido:
 
