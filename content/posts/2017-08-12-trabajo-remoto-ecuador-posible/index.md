@@ -1,8 +1,8 @@
 ---
 author: ivan
-categories:
+tags:
 - Educación
-- Emprendimiento
+- Remote Work
 - Empresa
 - Tecnología
 comments: true

@@ -7,7 +7,7 @@ description: >-
   para que puedas hacer deployments graduales de nuevas funcionalidades sin
   temor a que algo se "rompa" en producción.
 tags:
-  - Programming
+  - Development
   - Tools
   - Software Development
 ---
