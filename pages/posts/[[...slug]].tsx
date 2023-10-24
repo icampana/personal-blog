@@ -6,6 +6,7 @@ import { NextSeo } from 'next-seo';
 import { MouseEvent, useState, useEffect } from 'react';
 import Footer from 'components/Footer';
 import BlogPost from 'components/blocks/BlogPost';
+import { compareDesc } from "date-fns";
 
 export async function getStaticPaths() {
   const paths: string[] = allPosts.map((post) => post.url);
@@ -29,14 +30,27 @@ export async function getStaticProps(props: any) {
     }
   );
 
+  // Return 3 related posts.
+  const relatedPosts = allPosts.filter((otherPost) => {
+    if (otherPost.tags && post?.tags && otherPost._id !== post._id) {
+      return otherPost.tags.some(tag => post?.tags?.includes(tag));
+    }
+    return false;
+  })
+  .sort((a, b) => {
+    return compareDesc(new Date(a.date), new Date(b.date));
+  })
+  .slice(0, 3);
+
   return {
     props: {
-      post
+      post,
+      relatedPosts
     },
   };
 }
 
-const PostLayout = ({ post }: { post: Post }) => {
+const PostLayout = ({ post, relatedPosts }: { post: Post, relatedPosts?: Post[] }) => {
   const [showReturn, setShowReturn] = useState(false);
   const { site } = meta;
   const imagePath = post.featuredImage || '/images/placeholder.png';
@@ -89,7 +103,7 @@ const PostLayout = ({ post }: { post: Post }) => {
         }}
       />
       <article className="min-w-min max-w-4xl mx-auto py-8 sm:px-3">
-        <BlogPost post={post} />
+        <BlogPost post={post} relatedPosts={relatedPosts} />
 
          {/* Back to top button */}
         {showReturn && <button onClick={backToTop} type="button" data-mdb-ripple="true" data-mdb-ripple-color="light" className="fixed inline-block p-3 bg-red-600 text-white font-medium text-xs leading-tight uppercase rounded-full shadow-md hover:bg-red-700 hover:shadow-lg focus:bg-red-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-red-800 active:shadow-lg transition duration-150 ease-in-out bottom-5 right-5" id="btn-back-to-top">
