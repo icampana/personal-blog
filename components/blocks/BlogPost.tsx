@@ -38,16 +38,18 @@ const BlogPost = (props: BlogPostProps) => {
       if (typeof window === 'undefined') {
         return null;
       }
-      const pageURL = encodeURIComponent('https://ivan.campananaranjo.com' + window.location.pathname); // encodeURIComponent(window.location.href);
+      const pageURL = encodeURIComponent(window.location.href);
       const articleContentSelector = encodeURIComponent('.article-content');
 
       return (
-        <Script
-          src={`https://trinitymedia.ai/player/trinity/2900014922/?pageURL=${pageURL}&language=es&textSelector=${articleContentSelector};`}
-          strategy='lazyOnload'
-          onLoad={() => console.log(`TTS Player loaded.`)}
-          data-fetchpriority='high'
-        />
+        <div className='lg:float-right max-w-xs border-slate-200 border-2 min-h-[150px] ml-3 p-2'>
+          <Script
+            src={`https://trinitymedia.ai/player/trinity/2900014922/?pageURL=${pageURL}&language=es&textSelector=${articleContentSelector};`}
+            strategy='lazyOnload'
+            onLoad={() => console.log(`TTS Player loaded.`)}
+            data-fetchpriority='high'
+          />
+        </div>
       );
     };
 
@@ -68,9 +70,7 @@ const BlogPost = (props: BlogPostProps) => {
             </div>}
 
             <div className='article-container relative'>
-              <div className='lg:float-right max-w-xs border-slate-200 border-2 min-h-[150px] p-2'>
               {renderPlayer()}
-              </div>
               <div className='article-content leading-7 px-2' dangerouslySetInnerHTML={{ __html: post.body.html }} />
               <RelatedPosts posts={relatedPosts} />
             </div>
