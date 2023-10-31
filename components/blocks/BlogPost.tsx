@@ -39,12 +39,11 @@ const BlogPost = (props: BlogPostProps) => {
         return null;
       }
       const pageURL = encodeURIComponent(window.location.href);
-      const articleContentSelector = encodeURIComponent('.article-content');
 
       return (
         <div className='lg:float-right max-w-xs border-slate-200 border-2 min-h-[150px] ml-3 p-2'>
           <Script
-            src={`https://trinitymedia.ai/player/trinity/2900014922/?pageURL=${pageURL}&language=es&textSelector=${articleContentSelector};`}
+            src={`https://trinitymedia.ai/player/trinity/2900014922/?pageURL=${pageURL}`}
             strategy='lazyOnload'
             onLoad={() => console.log(`TTS Player loaded.`)}
             data-fetchpriority='high'
