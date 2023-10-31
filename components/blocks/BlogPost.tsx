@@ -13,8 +13,47 @@ interface BlogPostProps {
     relatedPosts?: Post[]
 }
 
-const BlogPost = (props: BlogPostProps) => {
-    const { post, relatedPosts } = props;
+const AudioPlayer: React.FC = () => {
+  if (typeof window === 'undefined') {
+    return <></>;
+  }
+  const pageURL = encodeURIComponent(window.location.href);
+  const articleContentSelector = encodeURIComponent(btoa('.article-content'));
+
+  return (
+      <Script
+        src={`https://trinitymedia.ai/player/trinity/2900014922/?pageURL=${pageURL}&language=es&textSelector=${articleContentSelector};`}
+        strategy='lazyOnload'
+        onLoad={() => console.log(`TTS Player loaded.`)}
+        data-fetchpriority='high'
+      />
+  );
+};
+
+const TagsList: React.FC<{ tags?: string[] }> = ({ tags }) => {
+  const totalTags = tags?.length || 0;
+  if (tags) {
+    return (
+      <>
+        <em className='text-orange-900'>Tags:</em>{' '}
+        {tags.map((tag, tagIndex) => {
+          const tagSlug = cleanTag(tag);
+
+          return (
+            <Link href={`/tag/${tagSlug}`} key={tagSlug}>
+              <a className='inline-block px-1' role='term'>
+                {tag} {tagIndex + 1 < totalTags ? ' |' : ''}
+              </a>
+            </Link>
+          );
+        })}
+      </>
+    );
+  }
+  return <></>;
+};
+
+const BlogPost: React.FC<BlogPostProps> = ({ post, relatedPosts }) => {
     const readTime = post.readingTime?.minutes || 0;
     const readingTime = `${Math.round(readTime)} minutos`;
     const imagePath = post.featuredImage;
@@ -34,25 +73,6 @@ const BlogPost = (props: BlogPostProps) => {
         }
     }
 
-    const renderPlayer = () => {
-      if (typeof window === 'undefined') {
-        return null;
-      }
-      const pageURL = encodeURIComponent(window.location.href);
-      const articleContentSelector = encodeURIComponent('.article-content');
-
-      return (
-        <div className='lg:float-right max-w-xs border-slate-200 border-2 min-h-[150px] ml-3 p-2'>
-          <Script
-            src={`https://trinitymedia.ai/player/trinity/2900014922/?pageURL=${pageURL}&language=es&textSelector=${articleContentSelector};`}
-            strategy='lazyOnload'
-            onLoad={() => console.log(`TTS Player loaded.`)}
-            data-fetchpriority='high'
-          />
-        </div>
-      );
-    };
-
     return (
         <>
             <Header>
@@ -70,11 +90,16 @@ const BlogPost = (props: BlogPostProps) => {
             </div>}
 
             <div className='article-container relative'>
-              {renderPlayer()}
+              {/* TTS Audio Player */}
+              <div className='lg:float-right max-w-xs border-slate-200 border-2 min-h-[150px] ml-3 p-2'>
+                <AudioPlayer />
+              </div>
+
               <div className='article-content leading-7 px-2' dangerouslySetInnerHTML={{ __html: post.body.html }} />
               <RelatedPosts posts={relatedPosts} />
             </div>
-            {getTags()}
+
+            <TagsList tags={post.tags} />
 
         </>
     );
