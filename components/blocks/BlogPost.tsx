@@ -21,12 +21,12 @@ const AudioPlayer: React.FC = () => {
   const articleContentSelector = encodeURIComponent(btoa('.article-content'));
 
   return (
-      <Script
-        src={`https://trinitymedia.ai/player/trinity/2900014922/?pageURL=${pageURL}&language=es&textSelector=${articleContentSelector};`}
-        strategy='lazyOnload'
-        onLoad={() => console.log(`TTS Player loaded.`)}
-        data-fetchpriority='high'
-      />
+    <Script
+      src={`https://trinitymedia.ai/player/trinity/2900014922/?pageURL=${pageURL}&language=es&textSelector=${articleContentSelector};`}
+      strategy='lazyOnload'
+      onLoad={() => console.log(`TTS Player loaded.`)}
+      data-fetchpriority='high'
+    />
   );
 };
 
@@ -92,6 +92,7 @@ const BlogPost: React.FC<BlogPostProps> = ({ post, relatedPosts }) => {
             <div className='article-container relative'>
               {/* TTS Audio Player */}
               <div className='lg:float-right max-w-xs border-slate-200 border-2 min-h-[150px] ml-3 p-2'>
+                <div className='trinityAudioPlaceholder'></div>
                 <AudioPlayer />
               </div>
 
