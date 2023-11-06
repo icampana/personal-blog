@@ -3,7 +3,7 @@ title: >-
   ¿Cuánto Puedes Ganar Como Desarrollador de Software en América Latina siendo
   Remoto?
 date: 2023-11-06T05:00:00.000Z
-featuredImage: /images/salary-comparison-money-1280.jpg
+featuredImage: /photos/2023/salary-comparison-money-1280.jpg
 description: >-
   Explora los Salarios de Desarrolladores de Software en América Latina y toma
   en cuenta cuales sonlas consideraciones financieras como Contratista. Este
