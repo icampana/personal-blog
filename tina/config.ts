@@ -29,6 +29,22 @@ export default defineConfig({
         match: {
           include: "**/*",
         },
+        ui: {
+          filename: {
+            // if disabled, the editor can not edit the filename
+            readonly: true,
+            // Example of using a custom slugify function
+            slugify: (values) => {
+              console.debug(values);
+              const articleDate = values?.date || new Date();
+
+              // Values is an object containing all the values of the form. In this case it is {title?: string, topic?: string}
+              return `${articleDate.getFullYear()}-${articleDate.getMonth() + 1}-${values?.title
+                ?.toLowerCase()
+                .replace(/ /g, '-')}`
+            },
+          },
+        },
         fields: [
           {
             type: "rich-text",

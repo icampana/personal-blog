@@ -30,6 +30,7 @@ export function postsFields() {
       name: "title",
       label: "Article Title",
       required: true,
+      isTitle: true,
     },
     {
       type: "datetime",
