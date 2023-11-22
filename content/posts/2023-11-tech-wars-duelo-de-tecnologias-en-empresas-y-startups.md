@@ -1,7 +1,7 @@
 ---
 title: 'Tech Wars: ¿Qué tecnología debo escoger para mi carrera?'
 date: 2023-11-22T05:00:00.000Z
-featuredImage: /images/technology stacks comparison.jpeg
+featuredImage: /photos/technology-stacks-comparison.jpg
 description: >-
   Exploración de Tendencias Tecnológicas: Un Análisis entre Empresas
   Consolidadas y Startups. Este artículo examina el enfrentamiento entre
