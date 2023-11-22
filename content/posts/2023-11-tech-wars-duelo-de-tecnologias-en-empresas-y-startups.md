@@ -1,5 +1,5 @@
 ---
-title: Tech Wars Duelo de Tecnologias en Empresas y Startups
+title: 'Tech Wars: ¿Qué tecnología debo escoger para mi carrera?'
 date: 2023-11-22T05:00:00.000Z
 featuredImage: /images/technology stacks comparison.jpeg
 description: >-
@@ -90,30 +90,25 @@ Salarios:
 
 Échale un ojo a Glassdoor o LinkedIn para tener una idea de los salarios promedio en tu región.  El artículo sobre [sueldos en LATAM](https://ivan.campananaranjo.com/posts/2023-11-06-salarios-desarrolladores-latam-remoto "Sueldos como desarrollador en LATAM") puede ayudarte.
 
-
 Esto puede servir como referencia, información de la [compañía Near](https://www.hirewithnear.com/blog/it-roles-salary-guide-us-vs-latin-america "Hire Salaries"):
 
 ![Taken from Hire With Near ](</photos/Near - Salaries - IT roles.jpg> "Salary ranges from Near")
 
 **Participación en la Comunidad:**
 
-Revisa la información en GitHub, foros, ¡todo cuenta! Una comunidad activa significa un respaldo sólido.  Mientras más información puedas encontrar, demostrará qué tan fácil es resolver problemas o encontrar alguien que te pueda ayudar con la tecnología en específico que estás utilizando.  Si es difícil encontrar una comunidad, será mucho más complicado encontrar soluciones.\
-
+Revisa la información en GitHub, foros, ¡todo cuenta! Una comunidad activa significa un respaldo sólido.  Mientras más información puedas encontrar, demostrará qué tan fácil es resolver problemas o encontrar alguien que te pueda ayudar con la tecnología en específico que estás utilizando.  Si es difícil encontrar una comunidad, será mucho más complicado encontrar soluciones.\\
 
 **Tendencias de la Industria:**
 
 Mantente al tanto de las encuestas y reportes de tecnología. ¿Qué están usando las grandes empresas? Para esto es importante leer un poco sobre las tendencias, cambios en los últimos 5 años y especialmente estadísticas de uso.
 
-
 **Alcance del Proyecto:**
 
 MERN/MEAN para aplicaciones web modernas, Laravel para ciertos tipos de aplicaciones web. ¡Todo depende del proyecto!
 
-
 **Stack Tecnológico de las Empresas:**
 
 Investiga los stacks tecnológicos de las empresas que te interesan. Ajusta tus habilidades según lo que están buscando.
-
 
 **Conclusión**: ¡Haz tu Propio Camino! 🌟
 
