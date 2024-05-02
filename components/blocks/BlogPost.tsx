@@ -1,3 +1,4 @@
+import React from 'react'
 import Image from "next/image"
 import DateComponent from 'components/blocks/Date';
 import Link from "next/link";
@@ -6,7 +7,6 @@ import type { Post } from 'contentlayer/generated';
 import Header from 'components/Header';
 import { cleanTag } from 'components/utils/text';
 import RelatedPosts from './RelatedPosts';
-import Script from 'next/script';
 
 interface BlogPostProps {
     post: Post
@@ -17,16 +17,17 @@ const AudioPlayer: React.FC = () => {
   if (typeof window === 'undefined') {
     return <></>;
   }
-  const pageURL = encodeURIComponent(window.location.href);
-  const articleContentSelector = encodeURIComponent(btoa('.article-content'));
 
   return (
-    <Script
-      src={`https://trinitymedia.ai/player/trinity/2900014922/?pageURL=${pageURL}&language=es&textSelector=${articleContentSelector};`}
-      strategy='lazyOnload'
-      onLoad={() => console.log(`TTS Player loaded.`)}
-      data-fetchpriority='high'
-    />
+    <div itemScope itemProp="AudioObject" itemType="https://schema.org/AudioObject" className="seo">
+      <meta itemProp="uploadDate" content="2024-05-02 09:05:30"/>
+      <meta itemProp="name" content="ivan_Audio_Reader"/>
+      <meta itemProp="description" content=""/>
+      <meta itemProp="thumbnailUrl" content=" "/>
+      <meta itemProp="embedUrl" content="//mowplayer.com/watch/ar-mcnaxnuduvp"/>
+
+      <div data-mow_video="ar-mcnaxnuduvp"></div>
+    </div>
   );
 };
 
@@ -100,7 +101,6 @@ const BlogPost: React.FC<BlogPostProps> = ({ post, relatedPosts }) => {
         <div className='article-container relative'>
           {/* TTS Audio Player */}
           <div className='lg:float-right max-w-xs border-slate-200 border-2 min-h-[150px] ml-3 p-2'>
-            <div className='trinityAudioPlaceholder'></div>
             <AudioPlayer />
           </div>
 

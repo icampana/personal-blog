@@ -37,6 +37,8 @@ class MyDocument extends Document {
               gtag('config', '${propertyID}');
             `}
           </Script>
+
+          <Script src="https://mowplayer.com/js/player/mhmrhbeR6H.js" strategy="afterInteractive"></Script>
         </body>
       </Html>
     )
