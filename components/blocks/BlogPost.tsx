@@ -41,9 +41,9 @@ const TagsList: React.FC<{ tags?: string[] }> = ({ tags }) => {
 
           return (
             <Link href={`/tag/${tagSlug}`} key={tagSlug}>
-              <a className='inline-block px-1' role='term'>
+              <span className='inline-block px-1' role='term'>
                 {tag} {tagIndex + 1 < totalTags ? ' |' : ''}
-              </a>
+              </span>
             </Link>
           );
         })}
@@ -66,7 +66,7 @@ const BlogPost: React.FC<BlogPostProps> = ({ post, relatedPosts }) => {
                     const tagSlug = cleanTag(tag);
 
                     return (<Link href={`/tag/${tagSlug}`} key={tagSlug}>
-                        <a className='inline-block px-1' role='term'>{tag} {((tagIndex + 1) < totalTags) ? ' |' : ''}</a>
+                        <span className='inline-block px-1' role='term'>{tag} {((tagIndex + 1) < totalTags) ? ' |' : ''}</span>
                     </Link>);
                 })}
             </>;

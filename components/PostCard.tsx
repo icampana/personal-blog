@@ -29,12 +29,12 @@ const PostCard = (post: Post) => {
     return (
       <div className="mb-5 mx-2 lg:mx-0">
         <div className='text-center'>
-          <Link href={post.url}><a>{getImage(post)}</a></Link>
+          <Link href={post.url}>{getImage(post)}</Link>
         </div>
 
         <h2 className="text-xl min-h-[60px]">
           <Link href={post.url}>
-            <a className="text-red-500 hover:text-blue-900">{post.title}</a>
+            <span className="text-red-500 hover:text-blue-900">{post.title}</span>
           </Link>
         </h2>
 
