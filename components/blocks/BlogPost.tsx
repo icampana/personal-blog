@@ -85,7 +85,7 @@ const BlogPost: React.FC<BlogPostProps> = ({ post, relatedPosts }) => {
 
         <div className='article-container relative'>
           {/* TTS Audio Player */}
-          <div className='lg:float-right max-w-xs border-slate-200 border-2 min-h-[150px] ml-3 p-2'>
+          <div className='lg:float-right max-w-sm border-slate-200 border-2 min-h-[150px] ml-3 p-2'>
             <AudioPlayer />
           </div>
 
