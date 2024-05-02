@@ -1,4 +1,4 @@
-import Image from "next/legacy/image"
+import Image from "next/image"
 import DateComponent from 'components/blocks/Date';
 import Link from "next/link";
 import type { Post } from 'contentlayer/generated';
@@ -73,37 +73,44 @@ const BlogPost: React.FC<BlogPostProps> = ({ post, relatedPosts }) => {
         }
     }
 
-    return (
-        <>
-            <Header>
-                <div className="mb-3 mt-3">
-                    <h1 className='text-center font-sans font-bold text-3xl text-orange-900'>{post.title}</h1>
-                    <div className='float-right text-gray-400 text-xs'>
-                        <em>Tiempo de lectura:</em> {readingTime}
-                    </div>
-                    <DateComponent postDate={post.date} />
+    return <>
+        <Header>
+            <div className="mb-3 mt-3">
+                <h1 className='text-center font-sans font-bold text-3xl text-orange-900'>{post.title}</h1>
+                <div className='float-right text-gray-400 text-xs'>
+                    <em>Tiempo de lectura:</em> {readingTime}
                 </div>
-            </Header>
-
-            {imagePath && <div className='relative mb-4 w-full h-64'>
-                <Image src={imagePath} alt={post.title} layout="fill" objectFit="cover"  placeholder="blur" blurDataURL='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mM0SeuuBwADoQGm9h5VIAAAAABJRU5ErkJggg==' />
-            </div>}
-
-            <div className='article-container relative'>
-              {/* TTS Audio Player */}
-              <div className='lg:float-right max-w-xs border-slate-200 border-2 min-h-[150px] ml-3 p-2'>
-                <div className='trinityAudioPlaceholder'></div>
-                <AudioPlayer />
-              </div>
-
-              <div className='article-content leading-7 px-2' dangerouslySetInnerHTML={{ __html: post.body.html }} />
-              <RelatedPosts posts={relatedPosts} />
+                <DateComponent postDate={post.date} />
             </div>
+        </Header>
 
-            <TagsList tags={post.tags} />
+        {imagePath && <div className='relative mb-4 w-full h-64'>
+            <Image
+              src={imagePath}
+              alt={post.title}
+              placeholder="blur"
+              blurDataURL='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mM0SeuuBwADoQGm9h5VIAAAAABJRU5ErkJggg=='
+              fill
+              sizes="100vw"
+              style={{
+                objectFit: "cover"
+              }} />
+        </div>}
 
-        </>
-    );
+        <div className='article-container relative'>
+          {/* TTS Audio Player */}
+          <div className='lg:float-right max-w-xs border-slate-200 border-2 min-h-[150px] ml-3 p-2'>
+            <div className='trinityAudioPlaceholder'></div>
+            <AudioPlayer />
+          </div>
+
+          <div className='article-content leading-7 px-2' dangerouslySetInnerHTML={{ __html: post.body.html }} />
+          <RelatedPosts posts={relatedPosts} />
+        </div>
+
+        <TagsList tags={post.tags} />
+
+    </>;
 }
 
 export default BlogPost;

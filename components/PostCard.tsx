@@ -1,13 +1,26 @@
 import type { Post } from "contentlayer/generated";
 import Link from "next/link";
 import DateComponent from 'components/blocks/Date';
-import Image from "next/legacy/image"
+import Image from "next/image"
 
 const getImage = (post: Post) => {
   const { featuredImage, title } = post;
   const imagePath = featuredImage ? featuredImage?.replace('./', '/photos/') : '/images/placeholder.png';
 
-  return <Image src={imagePath} alt={title} layout="responsive" width={320} height={200} placeholder="blur" blurDataURL='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mM0SeuuBwADoQGm9h5VIAAAAABJRU5ErkJggg==' />
+  return (
+    <Image
+      src={imagePath}
+      alt={title}
+      width={320}
+      height={200}
+      placeholder="blur"
+      blurDataURL='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mM0SeuuBwADoQGm9h5VIAAAAABJRU5ErkJggg=='
+      sizes="100vw"
+      style={{
+        width: "100%",
+        height: "auto"
+      }} />
+  );
 };
 
 const PostCard = (post: Post) => {
