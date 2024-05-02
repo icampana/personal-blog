@@ -14,19 +14,17 @@ interface BlogPostProps {
 }
 
 const AudioPlayer: React.FC = () => {
-  if (typeof window === 'undefined') {
-    return <></>;
-  }
-
   return (
-    <div itemScope itemProp="AudioObject" itemType="https://schema.org/AudioObject" className="seo">
-      <meta itemProp="uploadDate" content="2024-05-02 09:05:30"/>
-      <meta itemProp="name" content="ivan_Audio_Reader"/>
-      <meta itemProp="description" content=""/>
-      <meta itemProp="thumbnailUrl" content=" "/>
-      <meta itemProp="embedUrl" content="//mowplayer.com/watch/ar-mcnaxnuduvp"/>
+    <div className='lg:float-right max-w-sm border-slate-200 border-2 min-h-[120px] ml-3 p-2'>
+      <div itemScope itemProp="AudioObject" itemType="https://schema.org/AudioObject" className="seo">
+        <meta itemProp="uploadDate" content="2024-05-02 09:05:30"/>
+        <meta itemProp="name" content="ivan_Audio_Reader"/>
+        <meta itemProp="description" content=""/>
+        <meta itemProp="thumbnailUrl" content=" "/>
+        <meta itemProp="embedUrl" content="//mowplayer.com/watch/ar-mcnaxnuduvp"/>
 
-      <div data-mow_video="ar-mcnaxnuduvp"></div>
+        <div data-mow_video="ar-mcnaxnuduvp"></div>
+      </div>
     </div>
   );
 };
@@ -85,9 +83,7 @@ const BlogPost: React.FC<BlogPostProps> = ({ post, relatedPosts }) => {
 
         <div className='article-container relative'>
           {/* TTS Audio Player */}
-          <div className='lg:float-right max-w-sm border-slate-200 border-2 min-h-[150px] ml-3 p-2'>
-            <AudioPlayer />
-          </div>
+          <AudioPlayer />
 
           <div className='article-content leading-7 px-2' dangerouslySetInnerHTML={{ __html: post.body.html }} />
           <RelatedPosts posts={relatedPosts} />
