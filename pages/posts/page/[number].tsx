@@ -69,11 +69,11 @@ const Home: NextPage<{ posts: Post[], currentPage: number}> = (props) => {
 
           <div>
             {(currentPage > 1) && <Link href={`/posts/page/${currentPage - 1}`}>
-              <a className="block float-left py-5 font-bold text-xl text-red-700">← Anterior</a>
+              <span className="block float-left py-5 font-bold text-xl text-red-700">← Anterior</span>
             </Link>}
 
             <Link href={`/posts/page/${currentPage + 1}`}>
-              <a className="block float-right py-5 font-bold text-xl text-red-700">Siguiente →</a>
+              <span className="block float-right py-5 font-bold text-xl text-red-700">Siguiente →</span>
             </Link>
             <div className='clear-both' />
           </div>

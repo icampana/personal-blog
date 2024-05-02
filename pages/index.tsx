@@ -50,7 +50,7 @@ const Home: NextPage<{ posts: Post[]}> = (props) => {
           </div>
 
           <Link href={'/posts/page/2'}>
-            <a className="block justify-center py-5 font-bold text-xl text-red-700">Ver más...</a>
+            <span className="block justify-center py-5 font-bold text-xl text-red-700">Ver más...</span>
           </Link>
 
         </div>

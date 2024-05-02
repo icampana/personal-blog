@@ -38,7 +38,7 @@ export default defineConfig({
               // Values is an object containing all the values of the form. In this case it is {title?: string, topic?: string}
               return `${articleDate.getFullYear()}-${articleDate.getMonth() + 1}-${values?.title
                 ?.toLowerCase()
-                .replace(/ /g, '-')}`
+                .replace(/ /g, '-')}`;
             },
           },
         },

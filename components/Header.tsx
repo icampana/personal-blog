@@ -15,7 +15,7 @@ const Header = (props: HeaderProps) => {
 
     const formatLink = (url: string, title: string) => {
         return (<Link href={url}>
-            <a className='font-bold text-black inline-block px-2 py-1 leading-8 uppercase hover:underline'>{title}</a>
+            <span className='font-bold text-black inline-block px-2 py-1 leading-8 uppercase hover:underline'>{title}</span>
         </Link>);
     }
 
@@ -35,11 +35,11 @@ const Header = (props: HeaderProps) => {
 
     const TitleComponent = (topLevel) ?
         <h1 className='font-sans font-bold text-5xl'>
-            <Link href={"/"}><a>{site.title}</a></Link>
+            <Link href={"/"}>{site.title}</Link>
         </h1>
     :
         <strong className='font-sans font-bold text-3xl mb-6' aria-hidden>
-            <Link href={"/"}><a>{ site.title }</a></Link>
+            <Link href={"/"}>{ site.title }</Link>
         </strong>
     ;
 

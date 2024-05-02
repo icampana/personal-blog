@@ -16,9 +16,7 @@ const RelatedPosts: React.FC<RelatedPostsProps> = ({ posts = [] }) => {
       <ul>
         {posts.map((post, idx) => (
           <li key={idx} className='p-0 m-0'>
-            <Link href={post.url}>
-              <a>{post.title}</a>
-            </Link>
+            <Link href={post.url}>{post.title}</Link>
           </li>
         ))}
       </ul>
