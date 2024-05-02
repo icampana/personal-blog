@@ -1,9 +1,4 @@
-import Image from "next/image"
-interface FooterProps {
-
-}
-
-const Footer = (props: FooterProps) => {
+const Footer = () => {
     return (<footer className='bg-gray-800 mt-3 p-4 text-white'>
       <div className="grid sm:grid-cols-1 sm:min-w-fit lg:grid-cols-4 my-1">
         <div className="justify-start py-6 lg:col-span-2 align-middle text-center lg:text-left">

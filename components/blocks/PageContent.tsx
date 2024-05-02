@@ -1,4 +1,3 @@
-import Image from "next/image"
 import DateComponent from 'components/blocks/Date';
 import type { Page } from 'contentlayer/generated';
 import Header from 'components/Header';

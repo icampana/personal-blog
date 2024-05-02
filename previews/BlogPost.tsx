@@ -8,7 +8,7 @@ interface BlogPostPreviewProps {
     entry: any
 }
 
-const BlogPostPreview = ({ entry }: BlogPostPreviewProps) => {
+const BlogPostPreview = async ({ entry }: BlogPostPreviewProps) => {
     const data = entry.getIn(['data']).toJS();
 
     if (!data) {
@@ -17,7 +17,7 @@ const BlogPostPreview = ({ entry }: BlogPostPreviewProps) => {
 
     const featuredImage = data.featuredImage?.replace('/public', '') || '';
     const date = formatISO(endOfDay(new Date(data.date || 0)));
-    const htmlBody = marked(data?.body ||'');
+    const htmlBody = await marked(data?.body ||'');
 
     const post = {
         title: data.title || '',

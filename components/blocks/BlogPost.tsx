@@ -59,21 +59,6 @@ const BlogPost: React.FC<BlogPostProps> = ({ post, relatedPosts }) => {
     const readingTime = `${Math.round(readTime)} minutos`;
     const imagePath = post.featuredImage;
 
-    const getTags = () => {
-        const totalTags = post.tags?.length || 0;
-        if (post.tags) {
-            return <>
-                <em className='text-orange-900'>Tags:</em> {post.tags.map((tag, tagIndex) => {
-                    const tagSlug = cleanTag(tag);
-
-                    return (<Link href={`/tag/${tagSlug}`} key={tagSlug}>
-                        <span className='inline-block px-1' role='term'>{tag} {((tagIndex + 1) < totalTags) ? ' |' : ''}</span>
-                    </Link>);
-                })}
-            </>;
-        }
-    }
-
     return <>
         <Header>
             <div className="mb-3 mt-3">
