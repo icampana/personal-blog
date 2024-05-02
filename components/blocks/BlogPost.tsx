@@ -1,4 +1,4 @@
-import Image from 'next/image'
+import Image from "next/legacy/image"
 import DateComponent from 'components/blocks/Date';
 import Link from "next/link";
 import type { Post } from 'contentlayer/generated';

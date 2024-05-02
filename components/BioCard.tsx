@@ -1,4 +1,4 @@
-import Image from 'next/image'
+import Image from "next/legacy/image"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTwitter, faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons';
 import { faPodcast } from '@fortawesome/free-solid-svg-icons';

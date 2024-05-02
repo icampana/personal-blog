@@ -1,4 +1,4 @@
-import Image from 'next/image'
+import Image from "next/legacy/image"
 import DateComponent from 'components/blocks/Date';
 import type { Page } from 'contentlayer/generated';
 import Header from 'components/Header';

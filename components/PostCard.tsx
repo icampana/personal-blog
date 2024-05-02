@@ -1,7 +1,7 @@
 import type { Post } from "contentlayer/generated";
 import Link from "next/link";
 import DateComponent from 'components/blocks/Date';
-import Image from 'next/image'
+import Image from "next/legacy/image"
 
 const getImage = (post: Post) => {
   const { featuredImage, title } = post;
