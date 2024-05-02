@@ -36,14 +36,3 @@ p > img {
 a:hover {
     @apply underline;
 }
-
-@media screen(sm) {
-    img,
-    p > img {
-        @apply max-w-xs;
-    }
-
-    .article-content img {
-        @apply max-w-2xl mx-auto;
-    }
-  }

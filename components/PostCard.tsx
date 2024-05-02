@@ -11,15 +11,12 @@ const getImage = (post: Post) => {
     <Image
       src={imagePath}
       alt={title}
-      width={320}
-      height={200}
+      fill
       placeholder="blur"
       blurDataURL='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mM0SeuuBwADoQGm9h5VIAAAAABJRU5ErkJggg=='
-      sizes="100vw"
-      style={{
-        width: "100%",
-        height: "auto"
-      }} />
+      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+      style={{ objectFit: 'cover', overflow: 'hidden' }}
+    />
   );
 };
 
@@ -29,7 +26,7 @@ const PostCard = (post: Post) => {
     return (
       <div className="mb-5 mx-2 lg:mx-0">
         <div className='text-center'>
-          <Link href={post.url}>{getImage(post)}</Link>
+          <Link href={post.url} className="relative block h-52">{getImage(post)}</Link>
         </div>
 
         <h2 className="text-xl min-h-[60px]">

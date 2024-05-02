@@ -74,11 +74,10 @@ const BlogPost: React.FC<BlogPostProps> = ({ post, relatedPosts }) => {
               alt={post.title}
               placeholder="blur"
               blurDataURL='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mM0SeuuBwADoQGm9h5VIAAAAABJRU5ErkJggg=='
-              fill
-              sizes="100vw"
-              style={{
-                objectFit: "cover"
-              }} />
+              fill={true}
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+              style={{ objectFit: 'cover', overflow: 'hidden' }}
+              />
         </div>}
 
         <div className='article-container relative'>
