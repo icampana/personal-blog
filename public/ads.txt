@@ -1,0 +1,87 @@
+# Mowplayer
+google.com, pub-9219954761243535, RESELLER, f08c47fec0942fa0
+google.com, pub-6864402317197092, RESELLER, f08c47fec0942fa0
+google.com, pub-5081196879566290, RESELLER, f08c47fec0942fa0
+mowplayer.com, igcn, DIRECT
+
+
+rubiconproject.com, 22884, RESELLER, 0bfd66d529a55807
+lijit.com, 498531, DIRECT, fafdf38b16bf6b2b
+lijit.com, 498531-eb, DIRECT, fafdf38b16bf6b2b
+openx.com, 538959099, RESELLER, 6a698e2ec38604c6
+pubmatic.com, 137711, RESELLER, 5d62403b186f2ace
+pubmatic.com, 156212, RESELLER, 5d62403b186f2ace
+rubiconproject.com, 17960, RESELLER, 0bfd66d529a55807
+appnexus.com, 1019, RESELLER, f5ab79cb980f11d1
+video.unrulymedia.com, 2444764291, RESELLER
+contextweb.com, 558511, RESELLER,
+krushmedia.com, AJxF6R572a9M6CaTvK, RESELLER
+smartadserver.com, 4194-OB, RESELLER, 060d053dcf45cbf3
+smartadserver.com, 4194, RESELLER, 060d053dcf45cbf3
+onetag.com, 863d3f1155de000, DIRECT
+onetag.com, 863d3f1155de000-OB, DIRECT
+appnexus.com, 13099, RESELLER
+pubmatic.com, 161593, RESELLER, 5d62403b186f2ace
+rubiconproject.com, 11006, RESELLER, 0bfd66d529a55807
+freewheel.tv, 20393, RESELLER
+freewheel.tv, 24377, RESELLER
+themoneytizer.com,110691,DIRECT
+smartadserver.com,1097,DIRECT
+loopme.com,s-2411,RESELLER,6c8d5f95897a5a3b
+districtm.io,101760,RESELLER,3fd707be9c4527c3
+rubiconproject.com,16114,RESELLER,0bfd66d529a55807
+appnexus.com,3703,RESELLER,f5ab79cb980f11d1
+openx.com,537149888,RESELLER,6a698e2ec38604c6
+pubmatic.com,156439,RESELLER,5d62403b186f2ace
+rubiconproject.com, 11740, RESELLER, 0bfd66d529a55807
+improvedigital.com, 1033, RESELLER
+appnexus.com, 2579, RESELLER
+improvedigital.com, 1220, RESELLER
+quantum-advertising.com, 4758, RESELLER
+improvedigital.com, 1602, RESELLER
+adagio.io,1015,RESELLER
+rubiconproject.com,19116,RESELLER,0bfd66d529a55807
+pubmatic.com,159110,RESELLER,5d62403b186f2ace
+pubmatic.com,161784,RESELLER,5d62403b186f2ace
+improvedigital.com,1790,RESELLER
+onetag.com,6b859b96c564fbe,RESELLER
+triplelift.com, 4338, DIRECT, 6c33edb13117fd86
+RTBHOUSE.COM,ofNe4Md3yOLt0qckkfER,DIRECT
+amxrtb.com,105199542,DIRECT
+indexexchange.com,191503,RESELLER,50b1c356f2c5c8fc
+lijit.com,260380,RESELLER,fafdf38b16bf6b2b
+sovrn.com,260380,RESELLER,fafdf38b16bf6b2b
+pubmatic.com,161527,RESELLER,5d62403b186f2ace
+appnexus.com,9393,RESELLER,f5ab79cb980f11d1
+yahoo.com,49648,RESELLER
+sharethrough.com, 8a03a67b, RESELLER, d53b998a7bd4ecd2
+pubmatic.com, 156557, RESELLER
+rubiconproject.com, 18694, RESELLER, 0bfd66d529a55807
+openx.com, 540274407, RESELLER, 6a698e2ec38604c6
+smaato.com, 1100047713, RESELLER, 07bcf65f187117b4
+yahoo.com, 59531, RESELLER, e1a5b5b6e3255540
+smartadserver.com, 4342, RESELLER
+appnexus.com, 9027, DIRECT
+jfacassoc.com, 1633, DIRECT
+e-planning.net,d6e04fe7533a7d3b,DIRECT,c1ba615865ed87b2
+rhythmone.com,1767353092,RESELLER,a670c89d4a324e47
+indexexchange.com, 190243, DIRECT
+axonix.com, 56222, RESELLER
+gumgum.com, 15500, RESELLER, ffdef49475d318a9
+gumgum.com, 2976, RESELLER, ffdef49475d318a9
+justpremium.com, 2976, RESELLER
+appnexus.com, 2758, RESELLER, f5ab79cb980f11d1
+rubiconproject.com, 23434, RESELLER, 0bfd66d529a55807
+missena.com,SID-43728762,DIRECT
+admanmedia.com,726,RESELLER
+advertising.com,28246,RESELLER
+adwmg.com,100700,DIRECT,c9688a22012618e7
+themediagrid.com,IPB3NX,DIRECT,35d5010d7789b49d
+themediagrid.com,JTQKMP,RESELLER,35d5010d7789b49d
+aps.amazon.com,a0dbece0-be46-4355-af6e-eaefdbf5391a,DIRECT
+onetag.com, 7b2ec27f127242e, DIRECT
+appnexus.com, 13099, RESELLER
+OWNERDOMAIN=mowplayer.com
+MANAGERDOMAIN=themoneytizer.com
+lijit.com,260380,RESELLER,fafdf38b16bf6b2b
+
