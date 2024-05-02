@@ -22,7 +22,7 @@
     "contentlayer": "^0.2.9",
     "date-fns": "^2.29.3",
     "fuse.js": "^6.6.2",
-    "marked": "^4.1.1",
+    "marked": "^12.0.2",
     "next": "13.5.0",
     "next-contentlayer": "^0.2.9",
     "next-seo": "^5.5.0",
