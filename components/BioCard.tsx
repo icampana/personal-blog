@@ -13,7 +13,7 @@ import meta from 'metadata.json';
      <div className="grid sm:grid-cols-1 sm:min-w-fit lg:grid-cols-3 my-5">
        <div className="flex justfy-start my-4 lg:col-span-2">
          <div className='mr-5'>
-            <Image src={Logo} alt={author} className="rounded-full" width='50' height={50} />
+            <Image src={Logo} alt={author} className="rounded-full" width='50' height='50' />
          </div>
          <div className='float-right'>
            Escrito por <strong>{author}</strong> <br />Informático, Emprendedor, Desarrollador y Curioso a tiempo completo.
