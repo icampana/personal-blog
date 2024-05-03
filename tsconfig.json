@@ -16,10 +16,10 @@
     "incremental": true,
     "baseUrl": ".",
     "paths": {
-      "contentlayer/generated": ["./.contentlayer/generated"]
+      "markdownlayer/generated": ["./.markdownlayer/generated"]
     },
     "plugins": [{ "name": "next" }]
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".contentlayer/generated"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", ".markdownlayer/generated"],
   "exclude": ["node_modules"]
 }

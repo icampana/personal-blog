@@ -1,5 +1,5 @@
 /** @type {import('next').NextConfig} */
-const { withContentlayer } = require('next-contentlayer');
+import { withMarkdownlayer } from 'markdownlayer';
 
 const nextConfig = {
   reactStrictMode: true,
@@ -50,5 +50,4 @@ const nextConfig = {
     ]
   }
 }
-
-module.exports = withContentlayer(nextConfig);
+export default withMarkdownlayer(nextConfig);
