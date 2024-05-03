@@ -4,9 +4,9 @@
   "private": true,
   "scripts": {
     "dev": "tinacms dev -c \"next dev\"",
-    "build": "tinacms build && contentlayer build && next build",
+    "build": "tinacms build && contentlayer2 build && next build",
     "build:admin-css": "npx tailwindcss build -i styles/globals.css -o public/admin.css",
-    "build:content": "contentlayer build --verbose",
+    "build:content": "contentlayer2 build --verbose",
     "export": "yarn build:admin-css && next build && next export",
     "start": "tinacms build && next start",
     "lint": "next lint",
