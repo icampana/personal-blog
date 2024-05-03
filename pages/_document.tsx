@@ -38,7 +38,7 @@ class MyDocument extends Document {
             `}
           </Script>
 
-          <Script src="https://mowplayer.com/js/player/mhmrhbeR6H.js" strategy="afterInteractive"></Script>
+          <Script src="https://mowplayer.com/js/player/mhmrhbeR6H.js" strategy="lazyOnload"></Script>
         </body>
       </Html>
     )
