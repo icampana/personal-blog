@@ -17,7 +17,7 @@
     "@fortawesome/fontawesome-svg-core": "^6.5.2",
     "@fortawesome/free-brands-svg-icons": "^6.5.2",
     "@fortawesome/free-solid-svg-icons": "^6.5.2",
-    "@fortawesome/react-fontawesome": "^0.2.0",
+    "@fortawesome/react-fontawesome": "^0.2.1",
     "@next/eslint-plugin-next": "^14.2.3",
     "@remark-embedder/core": "^3.0.2",
     "@remark-embedder/transformer-oembed": "^3.0.0",
