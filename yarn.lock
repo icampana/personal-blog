@@ -9219,7 +9219,7 @@ __metadata:
     eslint: "npm:^9.5.0"
     eslint-config-next: "npm:^14.2.3"
     fuse.js: "npm:^7.0.0"
-    marked: "npm:^12.0.2"
+    marked: "npm:^13.0.1"
     next: "npm:^14.2.3"
     next-contentlayer2: "npm:^0.4.6"
     next-seo: "npm:^6.5.0"
@@ -10677,12 +10677,21 @@ __metadata:
   languageName: node
   linkType: hard
 
-"marked@npm:*, marked@npm:^12.0.2":
+"marked@npm:*":
   version: 12.0.2
   resolution: "marked@npm:12.0.2"
   bin:
     marked: bin/marked.js
   checksum: 10c0/45ae2e1e3f06b30a5b5f64efc6cde9830c81d1d024fd7668772a3217f1bc0f326e66a6b8970482d9783edf1f581fecac7023a7fa160f2c14dbcc16e064b4eafb
+  languageName: node
+  linkType: hard
+
+"marked@npm:^13.0.1":
+  version: 13.0.1
+  resolution: "marked@npm:13.0.1"
+  bin:
+    marked: bin/marked.js
+  checksum: 10c0/f14b83b65397ce5c5c4703b2808db6ca0e580d89a52e0f61e204b2451774cd87a7d79a40127d3f7e867e6e03486d1b3f508eb9af7d74623dc7f57adb6a7f8890
   languageName: node
   linkType: hard
 
