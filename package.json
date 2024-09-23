@@ -18,7 +18,7 @@
     "@fortawesome/free-brands-svg-icons": "^6.6.0",
     "@fortawesome/free-solid-svg-icons": "^6.6.0",
     "@fortawesome/react-fontawesome": "^0.2.2",
-    "@next/eslint-plugin-next": "^14.2.12",
+    "@next/eslint-plugin-next": "^14.2.13",
     "@remark-embedder/core": "^3.0.3",
     "@remark-embedder/transformer-oembed": "^5.0.0",
     "@tinacms/cli": "^1.6.3",
