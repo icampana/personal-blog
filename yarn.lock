@@ -2370,21 +2370,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@next/eslint-plugin-next@npm:14.2.15":
+"@next/eslint-plugin-next@npm:14.2.15, @next/eslint-plugin-next@npm:^14.2.15":
   version: 14.2.15
   resolution: "@next/eslint-plugin-next@npm:14.2.15"
   dependencies:
     glob: "npm:10.3.10"
   checksum: 10c0/54dd8cd8fd47722528ffb7862a8e079bbc07d9131125502273ec88a706238d7a7d2e4abf3ba72ee2a21ea2890de53bf6dfec0308ddf9cfc7794a4b5bbc5d06cc
-  languageName: node
-  linkType: hard
-
-"@next/eslint-plugin-next@npm:^14.2.12":
-  version: 14.2.12
-  resolution: "@next/eslint-plugin-next@npm:14.2.12"
-  dependencies:
-    glob: "npm:10.3.10"
-  checksum: 10c0/cd0b8f155f868c32e5d945eef4c888e95fe85792de06a5bc1e8d4035643df9f7d0ca1f59830f46db7ba6d0b10c36149fed748c190d0b86e156a2ecb1a9af7c96
   languageName: node
   linkType: hard
 
@@ -9873,7 +9864,7 @@ __metadata:
     "@fortawesome/free-brands-svg-icons": "npm:^6.6.0"
     "@fortawesome/free-solid-svg-icons": "npm:^6.6.0"
     "@fortawesome/react-fontawesome": "npm:^0.2.2"
-    "@next/eslint-plugin-next": "npm:^14.2.12"
+    "@next/eslint-plugin-next": "npm:^14.2.15"
     "@remark-embedder/core": "npm:^3.0.3"
     "@remark-embedder/transformer-oembed": "npm:^5.0.0"
     "@tinacms/cli": "npm:^1.6.9"
