@@ -2,8 +2,6 @@ import type { NextPage } from 'next'
 import Head from 'next/head'
 import Link from "next/link";
 
-import { compareDesc } from "date-fns";
-import { allPosts } from "contentlayer/generated";
 import BioCard from 'components/BioCard';
 import meta from 'metadata.json';
 import { NextSeo } from 'next-seo';
@@ -11,8 +9,9 @@ import Footer from 'components/Footer';
 import { useRouter } from 'next/router';
 import React from 'react';
 import DateComponent from 'components/blocks/Date';
-import Fuse, { FuseIndex } from 'fuse.js'
+import Fuse, { FuseIndexRecords } from 'fuse.js'
 import Header from 'components/Header';
+import { getPostsListing } from 'components/utils/posts';
 
 type searchResult = {
     title: string,
@@ -25,28 +24,26 @@ type searchResult = {
 const fuseOptions = { keys: ['title', 'description'], minMatchCharLength: 2, threshold: 0.3 }
 
 export async function getStaticProps() {
-  const posts: searchResult[] = allPosts.map(post => {
-    return ({
-        title: post.title,
-        date: post.date,
-        description: post.description || post.summary,
-        type: post.type,
-        url: post.url,
-    });
-  }).sort((a, b) => {
-    return compareDesc(new Date(a.date), new Date(b.date));
-  });
+  const posts: searchResult[] = getPostsListing().map((post) => ({
+    title: post.title,
+    date: post.date,
+    description: post.description || post.summary,
+    type: post.type,
+    url: post.url,
+  }));
 
   // Create the Fuse index
   const searchIndex = Fuse.createIndex(fuseOptions.keys, posts);
 
-  return { props: { posts, articlesIndex: searchIndex } };
+  return { props: { posts, searchIndex: searchIndex.toJSON() } };
 }
 
-const Search: NextPage<{ posts: searchResult[], articlesIndex: FuseIndex<searchResult>}> = (props) => {
+const Search: NextPage<{ posts: searchResult[], searchIndex: { keys: ReadonlyArray<string>, records: FuseIndexRecords }}> = (props) => {
   const { site } = meta;
-  const { posts, articlesIndex } = props;
+  const { posts, searchIndex } = props;
   const { query } = useRouter();
+
+  const articlesIndex = Fuse.parseIndex(searchIndex);
 
   // initialize Fuse with the index
   const fuse = new Fuse(posts, fuseOptions, articlesIndex)
