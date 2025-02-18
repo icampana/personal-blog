@@ -4,12 +4,12 @@ import Link from "next/link";
 
 import PostCard from 'components/PostCard';
 
-import { compareDesc } from "date-fns";
 import { allPosts, Post } from "contentlayer/generated";
 import BioCard from 'components/BioCard';
 import meta from 'metadata.json';
 import Footer from 'components/Footer';
 import Header from 'components/Header';
+import { getPostsListing } from 'components/utils/posts';
 
 export async function getStaticPaths() {
   const { posts: postsConfig } = meta;
@@ -29,9 +29,7 @@ export async function getStaticProps(context: any) {
   const currentPage = parseInt(context.params.number) || 1;
   const queryStart = (currentPage - 1) * postsConfig.limit;
 
-  const posts: Post[] = allPosts.sort((a, b) => {
-    return compareDesc(new Date(a.date), new Date(b.date));
-  });
+  const posts: Post[] = getPostsListing();
   return {
     props: {
       posts: posts.slice(queryStart, queryStart + postsConfig.limit),

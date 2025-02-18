@@ -3,7 +3,6 @@ const { withContentlayer } = require('next-contentlayer2');
 
 const nextConfig = {
   reactStrictMode: true,
-  swcMinify: true,
   async redirects() {
     return [
       // Posts that came from the Gatsby format.

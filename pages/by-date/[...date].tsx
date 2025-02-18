@@ -3,7 +3,6 @@ import Head from 'next/head'
 
 import PostCard from 'components/PostCard';
 
-import { compareDesc } from "date-fns";
 import { allPosts, Post } from "contentlayer/generated";
 import BioCard from 'components/BioCard';
 import meta from 'metadata.json';
@@ -12,6 +11,7 @@ import Header from 'components/Header';
 import { NextSeo } from 'next-seo';
 import { format } from "date-fns";
 import { es } from 'date-fns/locale'
+import { getPostsListing } from 'components/utils/posts';
 
 export async function getStaticPaths() {
   const dateList: Array<string> = allPosts.reduce((acc: Array<string>, post) => {
@@ -35,13 +35,12 @@ export async function getStaticProps(context: any) {
   const [year, month] = dateParams;
   const selectedDate = `${year}/${month}`;
 
-  const posts: Post[] = allPosts.filter(post => {
+  const filterByDate = (post: Post) => {
     const postDate = format(new Date(post.date), "yyyy/MM");
     return (postDate === selectedDate);
-  })
-  .sort((a, b) => {
-    return compareDesc(new Date(a.date), new Date(b.date));
-  });
+  };
+
+  const posts: Post[] = getPostsListing(filterByDate);
   return {
     props: {
       posts,

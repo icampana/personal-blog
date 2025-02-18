@@ -3,7 +3,6 @@ import Head from 'next/head'
 
 import PostCard from 'components/PostCard';
 
-import { compareDesc } from "date-fns";
 import { allPosts, Post } from "contentlayer/generated";
 import BioCard from 'components/BioCard';
 import meta from 'metadata.json';
@@ -11,6 +10,7 @@ import Footer from 'components/Footer';
 import Header from 'components/Header';
 import { NextSeo } from 'next-seo';
 import { cleanTag } from 'components/utils/text';
+import { getPostsListing, PostFilter } from 'components/utils/posts';
 
 const getCleanTags = (post: Post) => {
   if (post.tags) {
@@ -40,10 +40,9 @@ export async function getStaticPaths() {
 export async function getStaticProps(context: any) {
   const tagName = context.params.tagName;
 
-  const posts: Post[] = allPosts.filter(post => getCleanTags(post).includes(tagName))
-  .sort((a, b) => {
-    return compareDesc(new Date(a.date), new Date(b.date));
-  });
+  const filterByTag: PostFilter = (post: Post) => getCleanTags(post).includes(tagName);
+  const posts: Post[] = getPostsListing(filterByTag);
+
   return {
     props: {
       posts,
@@ -63,7 +62,7 @@ const TagPage: NextPage<{ posts: Post[], currentTag: string}> = (props) => {
     {
       url: `${site.siteUrl}${post.featuredImage}`
     }
-  ));
+  )).slice(0, 5);
   const tagDescription = `Publicaciones sobre el tema ${tagName}`;
 
   return (

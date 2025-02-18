@@ -4,20 +4,19 @@ import Link from "next/link";
 
 import PostCard from 'components/PostCard';
 
-import { compareDesc } from "date-fns";
-import { allPosts, Post } from "contentlayer/generated";
 import BioCard from 'components/BioCard';
 import meta from 'metadata.json';
 import { NextSeo } from 'next-seo';
 import Footer from 'components/Footer';
 import Header from 'components/Header';
+import { getPostsListing } from 'components/utils/posts';
+import { Post } from 'contentlayer/generated';
 
 export async function getStaticProps() {
   const { posts: postsConfig } = meta;
 
-  const posts: Post[] = allPosts.sort((a, b) => {
-    return compareDesc(new Date(a.date), new Date(b.date));
-  });
+  const posts: Post[] = getPostsListing();
+
   return { props: { posts: posts.slice(0, postsConfig.limit) } };
 }
 
