@@ -3,7 +3,7 @@ import Head from 'next/head'
 import Link from "next/link";
 
 import { compareDesc } from "date-fns";
-import { allPosts, Post } from "contentlayer/generated";
+import { allPosts } from "contentlayer/generated";
 import BioCard from 'components/BioCard';
 import meta from 'metadata.json';
 import { NextSeo } from 'next-seo';
@@ -11,7 +11,7 @@ import Footer from 'components/Footer';
 import { useRouter } from 'next/router';
 import React from 'react';
 import DateComponent from 'components/blocks/Date';
-import Fuse from 'fuse.js'
+import Fuse, { FuseIndex } from 'fuse.js'
 import Header from 'components/Header';
 
 type searchResult = {
@@ -40,15 +40,14 @@ export async function getStaticProps() {
   // Create the Fuse index
   const searchIndex = Fuse.createIndex(fuseOptions.keys, posts);
 
-  return { props: { posts, searchIndex: searchIndex.toJSON() } };
+  return { props: { posts, articlesIndex: searchIndex } };
 }
 
-const Search: NextPage<{ posts: Post[], searchIndex: any[]}> = (props) => {
+const Search: NextPage<{ posts: searchResult[], articlesIndex: FuseIndex<searchResult>}> = (props) => {
   const { site } = meta;
-  const { posts, searchIndex } = props;
+  const { posts, articlesIndex } = props;
   const { query } = useRouter();
 
-  const articlesIndex = Fuse.parseIndex(searchIndex);
   // initialize Fuse with the index
   const fuse = new Fuse(posts, fuseOptions, articlesIndex)
   const searchQuery = (query && query.q) ? query.q.toString() : '';
