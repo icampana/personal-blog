@@ -1,4 +1,3 @@
-import type { NextPage } from 'next'
 import Head from 'next/head'
 import Link from "next/link";
 
@@ -7,11 +6,10 @@ import meta from 'metadata.json';
 import { NextSeo } from 'next-seo';
 import Footer from 'components/Footer';
 import { useRouter } from 'next/router';
-import React from 'react';
+import React, { useEffect } from 'react';
 import DateComponent from 'components/blocks/Date';
-import Fuse, { FuseIndexRecords } from 'fuse.js'
+import Fuse, { FuseIndex } from 'fuse.js'
 import Header from 'components/Header';
-import { getPostsListing } from 'components/utils/posts';
 
 type searchResult = {
     title: string,
@@ -23,27 +21,60 @@ type searchResult = {
 
 const fuseOptions = { keys: ['title', 'description'], minMatchCharLength: 2, threshold: 0.3 }
 
-export async function getStaticProps() {
-  const posts: searchResult[] = getPostsListing().map((post) => ({
-    title: post.title,
-    date: post.date,
-    description: post.description || post.summary,
-    type: post.type,
-    url: post.url,
-  }));
-
-  // Create the Fuse index
-  const searchIndex = Fuse.createIndex(fuseOptions.keys, posts);
-
-  return { props: { posts, searchIndex: searchIndex.toJSON() } };
-}
-
-const Search: NextPage<{ posts: searchResult[], searchIndex: { keys: ReadonlyArray<string>, records: FuseIndexRecords }}> = (props) => {
+const Search = () => {
   const { site } = meta;
-  const { posts, searchIndex } = props;
+  // const { posts, searchIndex } = props;
   const { query } = useRouter();
+  const [ loaded, setLoaded ] = React.useState(false);
+  const [ posts, setPosts ] = React.useState<searchResult[]>([]);
+  const [ articlesIndex, setArticlesIndex ] = React.useState<FuseIndex<searchResult>>();
 
-  const articlesIndex = Fuse.parseIndex(searchIndex);
+  useEffect(() => {
+    async function fetchSearchIndex() {
+      await fetch('/search-index.json')
+      .then(res => res.json())
+      .then(data => {
+        const articlesIndex: FuseIndex<searchResult> = Fuse.parseIndex(data);
+        setArticlesIndex(articlesIndex);
+      })
+    }
+
+    async function fetchPosts() {
+      await fetch('/search-posts.json')
+      .then(res => res.json())
+      .then(data => {
+        setPosts(data);
+      })
+    }
+
+    Promise.all([fetchSearchIndex(), fetchPosts()]).then(() => {
+      setLoaded(true);
+    })
+   }, []);
+
+   if (!loaded || !articlesIndex) {
+    return (
+      <div className="container mx-auto">
+        <Head>
+          <title>Home | { site.title }</title>
+          <link rel="icon" href="/favicon.ico" />
+        </Head>
+        <NextSeo
+          title={site.title}
+          description={site.description}
+          canonical={site.siteUrl}
+        />
+        <main className='max-w-6xl mx-auto'>
+          <Header />
+          <div className='px-2'>
+            <h1 className='mb-2 grow text-xl font-bold my-5'>Cargando...</h1>
+          </div>
+          <Footer />
+        </main>
+      </div>
+    )
+  }
+
 
   // initialize Fuse with the index
   const fuse = new Fuse(posts, fuseOptions, articlesIndex)
@@ -67,23 +98,25 @@ const Search: NextPage<{ posts: searchResult[], searchIndex: { keys: ReadonlyArr
 
         <div className='px-2'>
           <h1 className='mb-2 grow text-xl font-bold my-5'>Resultados de la búsqueda</h1>
-          <div className="mx-auto grid grid-cols-2">
+          <div className="mx-auto">
             {!query.q && <div>Por favor escribe el texto a buscar</div>}
             {query.q && searchResults.length === 0 && <div>No se encontró ningún resultado para esa búsqueda.</div>}
-            {searchResults.length > 0 && <table className="table-auto">
+            {searchResults.length > 0 && <table className="table-auto border-separate border border-gray-400 w-full">
             <thead>
                 <tr>
-                <th>Artículo</th>
-                <th>Fecha de publicación</th>
+                  <th className="text-left font-bold">Artículo</th>
+                  <th className="text-left font-bold">Descripción</th>
+                  <th className="text-right font-bold">Fecha de publicación</th>
                 </tr>
             </thead>
             <tbody>
-                {searchResults.map(({item}, idx) => {
+                {searchResults && searchResults.map(({item}, idx) => {
                     const post = (item as searchResult);
                     return (
                       <tr key={idx}>
-                          <td><Link href={post.url}>{post.title}</Link></td>
-                          <td><DateComponent postDate={post.date} /></td>
+                          <td width="25%"><Link href={post.url}>{post.title}</Link></td>
+                          <td>{post.description}</td>
+                          <td width="20%" className='text-right'><DateComponent postDate={post.date} /></td>
                       </tr>
                     );
                   }
@@ -92,8 +125,8 @@ const Search: NextPage<{ posts: searchResult[], searchIndex: { keys: ReadonlyArr
             </table>}
           </div>
 
-          <Link href={'/posts/page/1'}>
-            <a className="block justify-center text-right py-5 font-bold text-sm text-red-700">Ver todas las publicaciones...</a>
+          <Link href={'/posts/page/1'} className="block justify-center text-right py-5 font-bold text-sm text-red-700">
+            Ver todas las publicaciones...
           </Link>
 
         </div>
