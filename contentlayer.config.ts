@@ -107,6 +107,58 @@ const Page = defineDocumentType(() => ({
   },
 }))
 
+const Project = defineDocumentType(() => ({
+  name: 'Project',
+  filePathPattern: `projects/**/*.md`,
+  fields: {
+    title: {
+      type: 'string',
+      description: 'The title of the post',
+      required: true,
+    },
+    date: {
+      type: 'date',
+      description: 'The date of the post',
+      required: true,
+    },
+    path: {
+      type: 'string',
+      description: 'The custom slug for the post',
+      required: false,
+    },
+    description: {
+      type: 'string',
+      description: 'Simple text description',
+      required: false,
+    },
+    galleryImage: {
+      type: 'list',
+      of: { type: 'string' },
+      description: 'The gallery of images for the project',
+      required: false,
+    },
+    techStack: {
+      type: 'list',
+      of: { type: 'string' },
+      description: 'Associated technologies for this project',
+      required: false
+    }
+  },
+  computedFields: {
+    url: {
+      type: 'string',
+      resolve: (doc) => {
+
+        if (doc.path) {
+          return `/content${doc.path}`;
+        }
+
+        return `/content/${doc._raw.flattenedPath}`;
+      },
+    },
+  },
+}))
+
 function videoPlugin(options?: any | undefined): any | void {
   const youtubeSearch = RegExp(/(?:https?:\/\/)?(?:www\.)?youtu(?:\.be\/|be.com\/\S*(?:watch|embed)(?:(?:(?=\/[-a-zA-Z0-9_]{11,}(?!\S))\/)|(?:\S*v=|v\/)))([-a-zA-Z0-9_]{11,})/);
   function transformer (tree: any) {
@@ -135,7 +187,7 @@ function videoPlugin(options?: any | undefined): any | void {
 
 export default makeSource({
   contentDirPath: 'content',
-  documentTypes: [Post, Page],
+  documentTypes: [Post, Page, Project],
   onExtraFieldData: 'ignore',
   markdown: (builder) => {
     builder
