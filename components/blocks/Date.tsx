@@ -6,7 +6,7 @@ interface DateComponentProps {
 
 const DateComponent = ({ postDate } : DateComponentProps) => {
     return (
-        <time dateTime={postDate} className="capitalize text-xs text-gray-400 mb-1">
+        <time dateTime={postDate} className="capitalize text-xs text-accent mb-1">
             {format(parseISO(postDate), "MMMM d, yyyy", {locale: es})}
         </time>
     );

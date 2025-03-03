@@ -1,5 +1,7 @@
 @import "tailwindcss";
-@plugin "daisyui";
+@plugin "daisyui" {
+  themes: winter --default, night --prefersdark;
+};
 
 p {
     @apply mb-5 leading-7;
@@ -9,11 +11,19 @@ h2, h3, h4, h5 {
     @apply font-bold mt-4 mx-0 mb-1;
 }
 h2 {
-    @apply text-xl text-amber-800 mt-2;
+    @apply text-xl text-secondary mt-2;
 }
 
 h3 {
-    @apply text-yellow-900 text-lg;
+    @apply text-secondary text-lg;
+}
+
+h4 {
+  @apply text-secondary;
+}
+
+strong {
+  @apply text-accent;
 }
 
 ul {
@@ -29,9 +39,9 @@ p > img {
 }
 
 .article-content a {
-    @apply text-amber-800;
+  @apply text-accent;
 }
 
 a:hover {
-    @apply underline;
+  @apply underline;
 }

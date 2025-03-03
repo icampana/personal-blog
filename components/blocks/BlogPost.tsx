@@ -18,7 +18,7 @@ const TagsList: React.FC<{ tags?: string[] }> = ({ tags }) => {
   if (tags) {
     return (
       <>
-        <em className='text-orange-900'>Tags:</em>{' '}
+        <em className='text-secondary'>Tags:</em>{' '}
         {tags.map((tag, tagIndex) => {
           const tagSlug = cleanTag(tag);
 
@@ -44,8 +44,8 @@ const BlogPost: React.FC<BlogPostProps> = ({ post, relatedPosts }) => {
     return <>
         <Header>
             <div className="mb-3 mt-3">
-                <h1 className='text-center font-sans font-bold text-3xl text-orange-900'>{post.title}</h1>
-                <div className='float-right text-gray-400 text-xs'>
+                <h1 className='text-center font-sans font-bold text-3xl text-primary'>{post.title}</h1>
+                <div className='float-right text-accent text-xs'>
                     <em>Tiempo de lectura:</em> {readingTime}
                 </div>
                 <DateComponent postDate={post.date} />

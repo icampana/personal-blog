@@ -29,14 +29,12 @@ const PostCard = (post: Post) => {
           <Link href={post.url} className="relative block h-52">{getImage(post)}</Link>
         </div>
 
-        <h2 className="text-xl min-h-[60px]">
-          <Link href={post.url}>
-            <span className="text-red-500 hover:text-blue-900">{post.title}</span>
-          </Link>
-        </h2>
+        <Link href={post.url} className="text-xl min-h-[60px] block mb-2 text-accent">
+          {post.title}
+        </Link>
 
         <div className='text-xs'>
-          <div className='float-right text-gray-400 text-xs'>
+          <div className='float-right text-accent text-xs'>
               <em>Lectura:</em> {readingTime}
           </div>
             <DateComponent postDate={post.date} />

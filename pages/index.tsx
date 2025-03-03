@@ -41,15 +41,15 @@ const Home: NextPage<{ posts: Post[]}> = (props) => {
         </Header>
 
         <div className='px-2'>
-          <h2 className='mb-2 grow text-xl font-bold'>Últimas publicaciones</h2>
+          <h2 className='mb-2 grow'>Últimas publicaciones</h2>
           <div className="mx-auto py-3 grid grid-cols-1 lg:grid-cols-3 gap-6">
             {posts.map((post, idx) => (
               <PostCard key={idx} {...post} />
             ))}
           </div>
 
-          <Link href={'/posts/page/2'}>
-            <span className="block justify-center py-5 font-bold text-xl text-red-700">Ver más...</span>
+          <Link href={'/posts/page/2'} className="btn btn-primary">
+            Ver más...
           </Link>
 
         </div>
