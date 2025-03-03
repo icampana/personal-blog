@@ -35,7 +35,7 @@ const Portfolio: NextPage<{ projects: Project[] }> = (props) => {
       />
 
       <main className='max-w-6xl mx-auto'>
-        <Header topLevel={true}>
+        <Header>
           <BioCard />
         </Header>
 
@@ -57,12 +57,12 @@ const Portfolio: NextPage<{ projects: Project[] }> = (props) => {
                 <p>{project.description}</p>
                 <div>
                   {project.techStack?.map((tag, idx) => (
-                    <span
+                    <div
                       key={idx}
-                      className='inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mt-1 mb-1'
+                      className="badge badge-soft badge-success mx-1"
                     >
                       {tag}
-                    </span>
+                    </div>
                   ))}
                 </div>
               </div>
