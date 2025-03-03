@@ -21,13 +21,9 @@ wordpress_id: 784
 
 Ante la crisis que hay actualmente, que realmente no es nueva, es más vieja que todos nosotros, la mejor forma de explicar la solución:
 
-<blockquote><blockquote>"No se puede cambiar un sistema con la misma mente de quien lo creó"
+> "No se puede cambiar un sistema con la misma mente de quien lo creó"
+-- Albert Einstein
 
-> > -- Albert Einstein
-> >
-> > </blockquote>
->
-> </blockquote>
 
 Si no lo entienden, piensen un poco entonces si están siendo parte de la solución o del problema...
 
