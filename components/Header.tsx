@@ -8,18 +8,32 @@ interface HeaderProps {
     topLevel?: boolean
 }
 
+const formatLink = (url: string, title: string) => {
+  return (<Link href={url}>
+      <span className='font-bold text-black inline-block px-2 py-1 leading-8 uppercase hover:underline'>{title}</span>
+  </Link>);
+}
+
+const MenuItem = (url: string, label: string, key: number) => {
+    return (
+        <li  key={key} className="float-none lg:float-left">
+            {formatLink(url, label)}
+        </li>
+    );
+}
+
 const Header = (props: HeaderProps) => {
     const { site } = meta;
     const { children, topLevel = false } = props;
     const [menuVisible, setMenuVisible] = useState(false);
 
-    const formatLink = (url: string, title: string) => {
-        return (<Link href={url}>
-            <span className='font-bold text-black inline-block px-2 py-1 leading-8 uppercase hover:underline'>{title}</span>
-        </Link>);
-    }
 
-    const menuLinks = allPages.map((item, index) => item && <li key={index} className="float-none lg:float-left">{formatLink(item.url, item.title)}</li>);
+
+    const menuLinks = [
+        MenuItem("/", "Home", 0),
+        MenuItem("/portafolio", "Portfolio", 1),
+        ...allPages.map((item, index) => MenuItem(item.url, item.title, index + 2))
+    ]
 
     const toggleMenu = (event: MouseEvent<HTMLDivElement>) => {
         event.preventDefault();
