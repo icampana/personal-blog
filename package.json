@@ -3,7 +3,7 @@
   "version": "1.1.0",
   "private": true,
   "scripts": {
-    "dev": "tinacms dev -c \"next dev\"",
+    "dev": "tinacms dev -c \"next dev --turbopack\"",
     "build": "tinacms build && yarn build:content && yarn build:index && next build",
     "build:admin-css": "npx tailwindcss build -i styles/globals.css -o public/admin.css",
     "build:content": "contentlayer2 build --verbose",
@@ -54,6 +54,7 @@
     "@types/react": "^19.0.10",
     "@types/react-dom": "^19.0.4",
     "autoprefixer": "^10.4.20",
+    "daisyui": "^5.0.0",
     "eslint": "^9.21.0",
     "eslint-config-next": "^15.2.0",
     "postcss": "^8.5.3",
