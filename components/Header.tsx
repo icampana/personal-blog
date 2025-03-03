@@ -1,103 +1,88 @@
 import { allPages } from 'contentlayer/generated';
 import meta from 'metadata.json';
-import Link from "next/link";
-import { useState, MouseEvent } from 'react';
+import Link from 'next/link';
+import React from 'react';
 
 interface HeaderProps {
-    children?: any,
-    topLevel?: boolean
+  children?: any;
 }
 
 const formatLink = (url: string, title: string) => {
-  return (<Link href={url}>
-      <span className='font-bold text-black inline-block px-2 py-1 leading-8 uppercase hover:underline'>{title}</span>
-  </Link>);
-}
+  return <Link href={url}>{title}</Link>;
+};
 
 const MenuItem = (url: string, label: string, key: number) => {
-    return (
-        <li  key={key} className="float-none lg:float-left">
-            {formatLink(url, label)}
-        </li>
-    );
-}
+  return <li key={key}>{formatLink(url, label)}</li>;
+};
 
-const Header = (props: HeaderProps) => {
-    const { site } = meta;
-    const { children, topLevel = false } = props;
-    const [menuVisible, setMenuVisible] = useState(false);
+const SearchComponent = () => (
+  <form action='/search' method='GET'>
+    <label htmlFor='q' className='px-4 inline-block font-bold'>
+      Buscar:
+    </label>
+    <input
+      name='q'
+      type='text'
+      defaultValue=''
+      className='input input-bordered w-24 md:w-auto text-neutral-900'
+    />
+  </form>
+);
 
+const Header: React.FC<HeaderProps> = ({ children }) => {
+  const { site } = meta;
 
+  const menuLinks = [
+    MenuItem('/', 'Home', 0),
+    MenuItem('/portafolio', 'Portfolio', 1),
+    ...allPages.map((item, index) => MenuItem(item.url, item.title, index + 2)),
+  ];
 
-    const menuLinks = [
-        MenuItem("/", "Home", 0),
-        MenuItem("/portafolio", "Portfolio", 1),
-        ...allPages.map((item, index) => MenuItem(item.url, item.title, index + 2))
-    ]
-
-    const toggleMenu = (event: MouseEvent<HTMLDivElement>) => {
-        event.preventDefault();
-        setMenuVisible(!menuVisible);
-    }
-
-    const SearchComponent = (
-        <form action='/search' method='GET'>
-            <label htmlFor='q' className='px-4 inline-block font-bold'>Buscar:</label>
-            <input name='q' type='text' defaultValue='' className='border-2 rounded border-gray-400' />
-        </form>
-    );
-
-    const TitleComponent = (topLevel) ?
-        <h1 className='font-sans font-bold text-5xl'>
-            <Link href={"/"}>{site.title}</Link>
-        </h1>
-    :
-        <strong className='font-sans font-bold text-3xl mb-6' aria-hidden>
-            <Link href={"/"}>{ site.title }</Link>
-        </strong>
-    ;
-
-    return (<header className='px-1'>
-        <div className="grid sm:grid-cols-1 sm:min-w-fit lg:grid-cols-3 my-1">
-            {TitleComponent}
-
-            <div className='justify-center my-4 text-sm text-center hidden lg:flex'>
-                {SearchComponent}
+  return (
+    <header>
+      <div className='navbar bg-neutral text-neutral-content'>
+        <div className='navbar-start'>
+          <div className='dropdown'>
+            <div
+              tabIndex={0}
+              role='button'
+              className='btn btn-ghost btn-circle'>
+              <svg
+                xmlns='http://www.w3.org/2000/svg'
+                className='h-5 w-5'
+                fill='none'
+                viewBox='0 0 24 24'
+                stroke='currentColor'>
+                {' '}
+                <path
+                  strokeLinecap='round'
+                  strokeLinejoin='round'
+                  strokeWidth='2'
+                  d='M4 6h16M4 12h16M4 18h7'
+                />{' '}
+              </svg>
             </div>
-
-            <div>
-                <div className='hidden lg:block float-right'>
-                    <ul className='list-none'>{menuLinks}</ul>
-                </div>
-                <div className="flex justify-end lg:hidden">
-                    <div className="space-y-2 fixed right-2 top-0 bg-white z-50 p-2" onClick={toggleMenu} role={'button'} tabIndex={0} aria-hidden="true">
-                        <span className="block w-8 h-0.5 bg-gray-600 animate-pulse"></span>
-                        <span className="block w-8 h-0.5 bg-gray-600 animate-pulse"></span>
-                        <span className="block w-8 h-0.5 bg-gray-600 animate-pulse"></span>
-                    </div>
-
-                    <div className={`${ (!menuVisible) ? 'hidden' : ''} space-x-8 justify-end lg:flex fixed bg-white shadow-sm top-2 right-3 left-1 px-3 py-0 shadow-black my-7 z-50`}>
-                        <ul className='list-none px-0 mx-0'>
-                            {menuLinks}
-                            <li>
-                                <div className='my-5 border-b-4' />
-                                {formatLink('/posts/page/1', 'Ver todos los artículos')}
-                                <div className='my-5' />
-                            </li>
-                            <li>
-                                <div className='my-5 border-b-4' />
-                                {SearchComponent}
-                                <div className='my-5' />
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
+            <ul
+              tabIndex={0}
+              className='menu menu-sm dropdown-content bg-neutral rounded-box z-1 mt-3 w-52 p-2 shadow'>
+              {menuLinks}
+            </ul>
+          </div>
         </div>
-
-
+        <div className='navbar-center'>
+          <Link className='btn btn-ghost text-xl' href={'/'}>
+            {site.title}
+          </Link>
+        </div>
+        <div className='navbar-end'>
+          <SearchComponent />
+        </div>
+      </div>
+      <div>
         {children}
-    </header>);
-}
+      </div>
+    </header>
+  );
+};
 
 export default Header;
