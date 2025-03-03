@@ -11449,6 +11449,7 @@ __metadata:
     remark-rehype: "npm:^11.1.1"
     striptags: "npm:^3.2.0"
     tailwindcss: "npm:^4.0.9"
+    theme-change: "npm:^2.5.0"
     tinacms: "npm:^2.7.2"
     typescript: "npm:^5.8.2"
   languageName: unknown
@@ -18648,6 +18649,13 @@ __metadata:
   version: 1.0.0
   resolution: "term-vector@npm:1.0.0"
   checksum: 10c0/5d52298d6f38bedd3c92e15a34a17b370e20e41a2fa76cd7a9adc7685a00e872c56bb202ab760fdd57313c58d4577447a7cc03ad3836f93090ccf92937016390
+  languageName: node
+  linkType: hard
+
+"theme-change@npm:^2.5.0":
+  version: 2.5.0
+  resolution: "theme-change@npm:2.5.0"
+  checksum: 10c0/6f4824856f9e3d86eb59c2f798418ad8b3d86de42180b734fcc80ac5b2ba587b848712414c8111f99393d21ba63cc4c00099258138fa2f2ad231aaefa5f61465
   languageName: node
   linkType: hard
 
