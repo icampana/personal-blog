@@ -3,6 +3,16 @@ const { withContentlayer } = require('next-contentlayer2');
 
 const nextConfig = {
   reactStrictMode: true,
+  experimental: {
+    turbo: {
+      rules: {
+        '*.svg': {
+          loaders: ['@svgr/webpack'],
+          as: '*.js',
+        },
+      },
+    },
+  },
   async redirects() {
     return [
       // Posts that came from the Gatsby format.
