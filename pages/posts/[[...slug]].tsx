@@ -53,7 +53,7 @@ export async function getStaticProps(props: any) {
 const PostLayout = ({ post, relatedPosts }: { post: Post, relatedPosts?: Post[] }) => {
   const [showReturn, setShowReturn] = useState(false);
   const { site } = meta;
-  const imagePath = post.featuredImage || '/images/placeholder.png';
+  let imagePath = post.featuredImage;
   const postCanonical = `${site.siteUrl}${post.url}`;
   const postDescription = post.description || post.summary;
 
@@ -78,6 +78,19 @@ const PostLayout = ({ post, relatedPosts }: { post: Post, relatedPosts?: Post[] 
     };
   }), [];
 
+  if (imagePath) {
+    // Reference the optimized image so that's shown in the correct size
+    const params = new URLSearchParams();
+    params.set('w', '1200');
+    params.set('h', '680');
+    params.set('fit', 'crop');
+    params.set('auto', 'format,compress');
+
+    imagePath = `https://igcn-ws.imgix.net/${imagePath}?${params.toString()}`;
+  } else {
+    imagePath = `${site.siteUrl}/images/placeholder.png`;
+  }
+
   return (
     <>
       <Head>
@@ -98,8 +111,14 @@ const PostLayout = ({ post, relatedPosts }: { post: Post, relatedPosts?: Post[] 
             tags: post.tags,
           },
           images: [
-            { url: `${site.siteUrl}${imagePath}` },
-          ]
+            { url: imagePath },
+          ],
+          defaultImageWidth: 1200
+        }}
+        twitter={{
+          handle: `@${site.social.twitter}`,
+          site: '@site',
+          cardType: 'summary_large_image',
         }}
       />
       <article className="min-w-min max-w-4xl mx-auto py-8 sm:px-3">
