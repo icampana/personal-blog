@@ -86,7 +86,7 @@ const PostLayout = ({ post, relatedPosts }: { post: Post, relatedPosts?: Post[] 
     params.set('fit', 'crop');
     params.set('auto', 'format,compress');
 
-    imagePath = `https://igcn-ws.imgix.net/${imagePath}?${params.toString()}`;
+    imagePath = `https://igcn-ws.imgix.net${imagePath}?${params.toString()}`;
   } else {
     imagePath = `${site.siteUrl}/images/placeholder.png`;
   }
@@ -111,7 +111,7 @@ const PostLayout = ({ post, relatedPosts }: { post: Post, relatedPosts?: Post[] 
             tags: post.tags,
           },
           images: [
-            { url: imagePath },
+            { url: decodeURIComponent(imagePath) },
           ],
           defaultImageWidth: 1200
         }}
