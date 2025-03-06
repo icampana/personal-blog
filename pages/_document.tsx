@@ -38,7 +38,7 @@ class MyDocument extends Document {
             `}
           </Script>
 
-          <Script src="https://mowplayer.com/js/player/mhmrhbeR6H.js" strategy="lazyOnload"></Script>
+          <Script src="https://cdn.consentmanager.net/delivery/autoblocking/8c643b22226c1.js" data-cmp-host="d.delivery.consentmanager.net" data-cmp-cdn="cdn.consentmanager.net" data-cmp-codesrc="16"></Script>
         </body>
       </Html>
     )
