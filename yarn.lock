@@ -2869,7 +2869,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@next/eslint-plugin-next@npm:15.2.0, @next/eslint-plugin-next@npm:^15.2.0":
+"@next/eslint-plugin-next@npm:15.2.2":
+  version: 15.2.2
+  resolution: "@next/eslint-plugin-next@npm:15.2.2"
+  dependencies:
+    fast-glob: "npm:3.3.1"
+  checksum: 10c0/fce7a9f4be9541b1a67ca6a94903559bfdcec293e658a94ca8dac987de5dc7039d317b8d0c90eb119bf701eba12dab425875d3478aceca7b29fe6bd1cfd886ef
+  languageName: node
+  linkType: hard
+
+"@next/eslint-plugin-next@npm:^15.2.0":
   version: 15.2.0
   resolution: "@next/eslint-plugin-next@npm:15.2.0"
   dependencies:
@@ -9717,11 +9726,11 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-config-next@npm:^15.2.0":
-  version: 15.2.0
-  resolution: "eslint-config-next@npm:15.2.0"
+"eslint-config-next@npm:^15.2.2":
+  version: 15.2.2
+  resolution: "eslint-config-next@npm:15.2.2"
   dependencies:
-    "@next/eslint-plugin-next": "npm:15.2.0"
+    "@next/eslint-plugin-next": "npm:15.2.2"
     "@rushstack/eslint-patch": "npm:^1.10.3"
     "@typescript-eslint/eslint-plugin": "npm:^5.4.2 || ^6.0.0 || ^7.0.0 || ^8.0.0"
     "@typescript-eslint/parser": "npm:^5.4.2 || ^6.0.0 || ^7.0.0 || ^8.0.0"
@@ -9737,7 +9746,7 @@ __metadata:
   peerDependenciesMeta:
     typescript:
       optional: true
-  checksum: 10c0/3ba8a99ac1dc3de5d438011b1b857956734754577fe48984643fd99c4158d356f416a9b6ea012d39c06e15a88d9a7f953f06b930ff6f67e6609d9c858846bed0
+  checksum: 10c0/b59c19a1c269ba7715fa3fc4b41bf0480ae2065999139ac5a14cb275fb3a8999c615f977769f0d7a7c18578f3cd33afcbb8756d6df4b65b5a727466c4aff70ea
   languageName: node
   linkType: hard
 
@@ -11426,7 +11435,7 @@ __metadata:
     daisyui: "npm:^5.0.0"
     date-fns: "npm:^4.1.0"
     eslint: "npm:^9.21.0"
-    eslint-config-next: "npm:^15.2.0"
+    eslint-config-next: "npm:^15.2.2"
     fuse.js: "npm:^7.1.0"
     marked: "npm:^15.0.7"
     next: "npm:^15.2.0"
@@ -18559,7 +18568,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"tailwindcss@npm:4.0.12":
+"tailwindcss@npm:4.0.12, tailwindcss@npm:^4.0.12":
   version: 4.0.12
   resolution: "tailwindcss@npm:4.0.12"
   checksum: 10c0/186e94e49b97e974daf999c350bfc50e727039f22c44baf9144b987b6c9b754bc983e8c9ef5b99a3ca2d399115eb7811967f66cf9e88edc08ac729746d80dc56
@@ -18596,13 +18605,6 @@ __metadata:
     tailwind: lib/cli.js
     tailwindcss: lib/cli.js
   checksum: 10c0/cc42c6e7fdf88a5507a0d7fea37f1b4122bec158977f8c017b2ae6828741f9e6f8cb90282c6bf2bd5951fd1220a53e0a50ca58f5c1c00eb7f5d9f8b80dc4523c
-  languageName: node
-  linkType: hard
-
-"tailwindcss@npm:^4.0.12":
-  version: 4.0.12
-  resolution: "tailwindcss@npm:4.0.12"
-  checksum: 10c0/186e94e49b97e974daf999c350bfc50e727039f22c44baf9144b987b6c9b754bc983e8c9ef5b99a3ca2d399115eb7811967f66cf9e88edc08ac729746d80dc56
   languageName: node
   linkType: hard
 
