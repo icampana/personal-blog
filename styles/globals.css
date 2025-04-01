@@ -42,6 +42,11 @@ p > img {
   @apply text-accent;
 }
 
+.article-content code {
+  @apply bg-black text-emerald-400;
+  @apply p-3 block border border-accent border-spacing-x-1.5 rounded-sm bg-blend-darken mb-1 font-sans text-xs;
+}
+
 a:hover {
   @apply underline;
 }
