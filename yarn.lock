@@ -991,35 +991,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@contentlayer2/core@npm:0.5.4":
-  version: 0.5.4
-  resolution: "@contentlayer2/core@npm:0.5.4"
-  dependencies:
-    "@contentlayer2/utils": "npm:0.5.4"
-    camel-case: "npm:^4.1.2"
-    comment-json: "npm:^4.2.3"
-    esbuild: "npm:>=0.17"
-    gray-matter: "npm:^4.0.3"
-    mdx-bundler: "npm:^10.0.2"
-    rehype-stringify: "npm:^10.0.0"
-    remark-frontmatter: "npm:^5.0.0"
-    remark-parse: "npm:^11.0.0"
-    remark-rehype: "npm:^11.1.0"
-    source-map-support: "npm:^0.5.21"
-    type-fest: "npm:^4.10.0"
-    unified: "npm:^11.0.4"
-  peerDependencies:
-    esbuild: ">=0.17"
-    markdown-wasm: 1.x
-  peerDependenciesMeta:
-    esbuild:
-      optional: true
-    markdown-wasm:
-      optional: true
-  checksum: 10c0/e390d3afeae5f215356766b3b2931b76ac3689abc12c0a36ed143c6fa46113f5ebfecc777c842587084d30c4068b9c9e055b524adbb8881d65fb89de769d0a7a
-  languageName: node
-  linkType: hard
-
 "@contentlayer2/core@npm:0.5.8":
   version: 0.5.8
   resolution: "@contentlayer2/core@npm:0.5.8"
@@ -1076,39 +1047,6 @@ __metadata:
     "@contentlayer2/source-files": "npm:0.5.8"
     "@contentlayer2/utils": "npm:0.5.8"
   checksum: 10c0/e9d44751aa3957c90ac1f4bb08018c08f7417ec88ede294d2f6045ddb6e23bd89e478dde05bd9e54e48c325d52076b8f2ef41031d3482c5613b1d8236f21e510
-  languageName: node
-  linkType: hard
-
-"@contentlayer2/utils@npm:0.5.4":
-  version: 0.5.4
-  resolution: "@contentlayer2/utils@npm:0.5.4"
-  dependencies:
-    "@effect-ts/core": "npm:^0.60.5"
-    "@effect-ts/otel": "npm:^0.15.1"
-    "@effect-ts/otel-sdk-trace-node": "npm:^0.15.1"
-    "@js-temporal/polyfill": "npm:^0.4.4"
-    "@opentelemetry/api": "npm:^1.9.0"
-    "@opentelemetry/core": "npm:^1.30.1"
-    "@opentelemetry/exporter-trace-otlp-grpc": "npm:^0.57.1"
-    "@opentelemetry/resources": "npm:^1.30.1"
-    "@opentelemetry/sdk-trace-base": "npm:^1.30.1"
-    "@opentelemetry/sdk-trace-node": "npm:^1.30.1"
-    "@opentelemetry/semantic-conventions": "npm:^1.28.0"
-    chokidar: "npm:^3.5.3"
-    hash-wasm: "npm:^4.11.0"
-    inflection: "npm:^3.0.0"
-    memfs: "npm:^4.8.2"
-    oo-ascii-tree: "npm:^1.94.0"
-    ts-pattern: "npm:^5.0.6"
-    type-fest: "npm:^4.10.0"
-  peerDependenciesMeta:
-    "@effect-ts/core":
-      optional: true
-    "@effect-ts/otel":
-      optional: true
-    "@effect-ts/otel-node":
-      optional: true
-  checksum: 10c0/69d3fbc728555cc4f2d4753f6d3f4726dc04c08d4a69d6e3b5f2645dd8c10660bff8542287105c67830314be71ca1896ebd7bfe155c2caeee75af6c727bf3ee9
   languageName: node
   linkType: hard
 
@@ -11646,7 +11584,7 @@ __metadata:
     fuse.js: "npm:^7.1.0"
     marked: "npm:^15.0.7"
     next: "npm:^15.3.1"
-    next-contentlayer2: "npm:^0.5.4"
+    next-contentlayer2: "npm:^0.5.8"
     next-seo: "npm:^6.6.0"
     next-sitemap: "npm:^4.2.3"
     postcss: "npm:^8.5.3"
@@ -13934,25 +13872,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"mdx-bundler@npm:^10.0.2":
-  version: 10.0.2
-  resolution: "mdx-bundler@npm:10.0.2"
-  dependencies:
-    "@babel/runtime": "npm:^7.23.2"
-    "@esbuild-plugins/node-resolve": "npm:^0.2.2"
-    "@fal-works/esbuild-plugin-global-externals": "npm:^2.1.2"
-    "@mdx-js/esbuild": "npm:^3.0.0"
-    gray-matter: "npm:^4.0.3"
-    remark-frontmatter: "npm:^5.0.0"
-    remark-mdx-frontmatter: "npm:^4.0.0"
-    uuid: "npm:^9.0.1"
-    vfile: "npm:^6.0.1"
-  peerDependencies:
-    esbuild: 0.*
-  checksum: 10c0/24fb9f4eb1f5a85b5e5927cb4f215475adc6417072ce220224e6c3400c2c4f0b6d8c2f80b33c4d1159c8ea4a7ea6e2c739e02d3ed06cd25cdb6a85e53d51e7fd
-  languageName: node
-  linkType: hard
-
 "mdx-bundler@npm:^10.1.1":
   version: 10.1.1
   resolution: "mdx-bundler@npm:10.1.1"
@@ -15350,18 +15269,18 @@ __metadata:
   languageName: node
   linkType: hard
 
-"next-contentlayer2@npm:^0.5.4":
-  version: 0.5.4
-  resolution: "next-contentlayer2@npm:0.5.4"
+"next-contentlayer2@npm:^0.5.8":
+  version: 0.5.8
+  resolution: "next-contentlayer2@npm:0.5.8"
   dependencies:
-    "@contentlayer2/core": "npm:0.5.4"
-    "@contentlayer2/utils": "npm:0.5.4"
+    "@contentlayer2/core": "npm:0.5.8"
+    "@contentlayer2/utils": "npm:0.5.8"
   peerDependencies:
-    contentlayer2: 0.5.4
+    contentlayer2: 0.5.8
     next: ">=12.0.0"
     react: ^18 || ^19 || ^19.0.0-rc
     react-dom: ^18 || ^19 || ^19.0.0-rc
-  checksum: 10c0/9bd6b5a6695d4f8d209f0403399517b300d7061c17f0bc2eee32ad90eef67fef0d1e04221d37cc4f4e4eed5aa0fe98d66a6afe911e06fe73c3658dd7c7da273e
+  checksum: 10c0/0dcbad1367bd0da818067e5d49ee90062b2309a02556cc9222ac8f438d270464f4ba382dad7b6a5a02290054d4ea7b555970d979b4539acbf57c95f909ced45e
   languageName: node
   linkType: hard
 
