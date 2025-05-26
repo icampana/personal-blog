@@ -10222,11 +10222,11 @@ __metadata:
   linkType: hard
 
 "estree-util-value-to-estree@npm:^3.0.0":
-  version: 3.3.3
-  resolution: "estree-util-value-to-estree@npm:3.3.3"
+  version: 3.4.0
+  resolution: "estree-util-value-to-estree@npm:3.4.0"
   dependencies:
     "@types/estree": "npm:^1.0.0"
-  checksum: 10c0/cc90e277bff949f49d08dbca28237821506839ab729cafc93105a5a1b02af1a308c1d1f6221ade840351f60ef03faedd2197be454318a16a9e1a7c5af0480c69
+  checksum: 10c0/e90e0c784b29182a3feb471589ab3c031be3ff1ab068b2b473e9ee96467f99442f2c571b2708ee3493906af5bf1a0aa9712d9f90fb113a30d99669100235ba4f
   languageName: node
   linkType: hard
 
@@ -20074,8 +20074,8 @@ __metadata:
   linkType: hard
 
 "vite@npm:^4.5.9":
-  version: 4.5.13
-  resolution: "vite@npm:4.5.13"
+  version: 4.5.14
+  resolution: "vite@npm:4.5.14"
   dependencies:
     esbuild: "npm:^0.18.10"
     fsevents: "npm:~2.3.2"
@@ -20109,7 +20109,7 @@ __metadata:
       optional: true
   bin:
     vite: bin/vite.js
-  checksum: 10c0/2a9e0c4649a647ade588817843101a51c414cbfa8034ba27ccdd0fde632e7d5f6d14e543f408ee760793c81baf1256d73b582cc2076267be0dd6121d98b70bc3
+  checksum: 10c0/58fdbb7e14650f78ebe290bb67f873900b914cee906c7367ad1c9786fb323ec60c3f085447341953b5e411a17703f86ed33723b31f98778d94f0ead06370b306
   languageName: node
   linkType: hard
 
