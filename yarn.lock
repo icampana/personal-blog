@@ -5996,12 +5996,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:^22.13.13":
-  version: 22.13.13
-  resolution: "@types/node@npm:22.13.13"
+"@types/node@npm:^24.0.1":
+  version: 24.0.1
+  resolution: "@types/node@npm:24.0.1"
   dependencies:
-    undici-types: "npm:~6.20.0"
-  checksum: 10c0/daf792ba5dcff1316abf4b33680f94b792f8d54d6ae495efc8929531e0ba1284a248d29aab117d2259f9280284d986ad5799b193b0516e2b926d713aab835f7d
+    undici-types: "npm:~7.8.0"
+  checksum: 10c0/91cd50d1ac32a2172cbc67b65c78391fbd469b24743e3665427aa60bebaf4620cb9ac2e91c09a8081a78d08855c00faca659c287c1725ce8ca5e80ece3a20520
   languageName: node
   linkType: hard
 
@@ -11783,7 +11783,7 @@ __metadata:
     "@tailwindcss/postcss": "npm:^4.0.15"
     "@tinacms/cli": "npm:^1.9.8"
     "@types/marked": "npm:^6.0.0"
-    "@types/node": "npm:^22.13.13"
+    "@types/node": "npm:^24.0.1"
     "@types/react": "npm:^19.0.12"
     "@types/react-dom": "npm:^19.0.4"
     autoprefixer: "npm:^10.4.21"
@@ -19580,10 +19580,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"undici-types@npm:~6.20.0":
-  version: 6.20.0
-  resolution: "undici-types@npm:6.20.0"
-  checksum: 10c0/68e659a98898d6a836a9a59e6adf14a5d799707f5ea629433e025ac90d239f75e408e2e5ff086afc3cace26f8b26ee52155293564593fbb4a2f666af57fc59bf
+"undici-types@npm:~7.8.0":
+  version: 7.8.0
+  resolution: "undici-types@npm:7.8.0"
+  checksum: 10c0/9d9d246d1dc32f318d46116efe3cfca5a72d4f16828febc1918d94e58f6ffcf39c158aa28bf5b4fc52f410446bc7858f35151367bd7a49f21746cab6497b709b
   languageName: node
   linkType: hard
 
