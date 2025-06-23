@@ -8979,10 +8979,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"daisyui@npm:^5.0.37":
-  version: 5.0.37
-  resolution: "daisyui@npm:5.0.37"
-  checksum: 10c0/6003e110b95178b9ce95da3fd158df55e3cb1219e0502003210d9d12f2651446e7250fb1090250c7eb1aa3bc4d7c63c3653a6bf9eaab4433f85df32d1e2c8b27
+"daisyui@npm:^5.0.43":
+  version: 5.0.43
+  resolution: "daisyui@npm:5.0.43"
+  checksum: 10c0/c493eaf699677729d204558aa08d9d80329e80371d32e044fa635b53ffd29c80a87c270aa82b3535e0b25af89c0ab8ba4fec255bf026046ccf3c9018ffcb347e
   languageName: node
   linkType: hard
 
@@ -11788,7 +11788,7 @@ __metadata:
     "@types/react-dom": "npm:^19.1.5"
     autoprefixer: "npm:^10.4.21"
     contentlayer2: "npm:^0.5.8"
-    daisyui: "npm:^5.0.37"
+    daisyui: "npm:^5.0.43"
     date-fns: "npm:^4.1.0"
     eslint: "npm:^9.23.0"
     eslint-config-next: "npm:^15.3.2"
