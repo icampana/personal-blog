@@ -1,13 +1,8 @@
-
 /**
- * Cleans a tag string by removing accents and converting spaces to hyphens for slug usage.
- * @param tag The tag string to clean
- * @returns The cleaned slug string
+ * Removes accents, and transforms a tag into a valid slug.
+ * @param tag string
+ * @returns
  */
-export function cleanTag(tag: string): string {
-  return tag
-    .toLowerCase()
-    .normalize('NFD')
-    .replace(/[\u0300-\u036f]/g, '')
-    .replace(/\s+/g, '-')
+export const cleanTag = (tag: string) => {
+  return tag.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "").replace(' ', '-');
 }
