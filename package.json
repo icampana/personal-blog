@@ -22,7 +22,7 @@
     "@remark-embedder/core": "^3.0.3",
     "@remark-embedder/transformer-oembed": "^5.0.1",
     "@tailwindcss/postcss": "^4.1.11",
-    "@tinacms/cli": "^1.10.1",
+    "@tinacms/cli": "^1.10.2",
     "contentlayer2": "^0.5.8",
     "date-fns": "^4.1.0",
     "fuse.js": "^7.1.0",
