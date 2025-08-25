@@ -3013,12 +3013,21 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@next/eslint-plugin-next@npm:15.4.5, @next/eslint-plugin-next@npm:^15.4.5":
+"@next/eslint-plugin-next@npm:15.4.5":
   version: 15.4.5
   resolution: "@next/eslint-plugin-next@npm:15.4.5"
   dependencies:
     fast-glob: "npm:3.3.1"
   checksum: 10c0/38f8037d36af3432d1c86e2070c7b4f0f70085ab1080622d91f3f416b306c320e32f22a18680a3df1651faeaa60f61c1a1a1eee4e8d7382b7ee101f6f0ec7571
+  languageName: node
+  linkType: hard
+
+"@next/eslint-plugin-next@npm:^15.5.0":
+  version: 15.5.0
+  resolution: "@next/eslint-plugin-next@npm:15.5.0"
+  dependencies:
+    fast-glob: "npm:3.3.1"
+  checksum: 10c0/87009afd39817f69b6b0f8afb8220c08f934ea7280630e77015ae56fe24ad06a1569417288280e9a8a18358e41de55a92efb6502e75b5b134180496701f85707
   languageName: node
   linkType: hard
 
@@ -11467,7 +11476,7 @@ __metadata:
     "@fortawesome/free-brands-svg-icons": "npm:^7.0.0"
     "@fortawesome/free-solid-svg-icons": "npm:^7.0.0"
     "@fortawesome/react-fontawesome": "npm:^0.2.3"
-    "@next/eslint-plugin-next": "npm:^15.4.5"
+    "@next/eslint-plugin-next": "npm:^15.5.0"
     "@remark-embedder/core": "npm:^3.0.3"
     "@remark-embedder/transformer-oembed": "npm:^5.0.1"
     "@tailwindcss/postcss": "npm:^4.1.11"
