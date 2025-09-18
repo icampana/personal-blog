@@ -1,6 +1,7 @@
 import type { NextPage } from 'next';
 import Head from 'next/head';
-import Image from 'next/image';
+import Link from "next/link";
+
 
 import BioCard from 'components/common/BioCard';
 import meta from 'metadata.json';
@@ -51,9 +52,9 @@ const Portfolio: NextPage<{ projects: Project[] }> = (props) => {
         </div>
 
         <div className="text-center my-8">
-          <a href="/content/sobre-el-autor" className="btn btn-primary btn-lg">
+          <Link href="/sobre-el-autor" className="btn btn-primary btn-lg">
             Contáctame
-          </a>
+          </Link>
         </div>
 
         <Footer />
