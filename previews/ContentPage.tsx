@@ -1,28 +1,28 @@
-import PageContent from 'components/blocks/PageContent'
-import type { Page } from 'contentlayer/generated'
-import { formatISO, endOfDay } from 'date-fns';
-import { marked } from 'marked';
+import PageContent from "components/blocks/PageContent";
+import type { Page } from "contentlayer/generated";
+import { endOfDay, formatISO } from "date-fns";
+import { marked } from "marked";
 
 interface ContentPagePreviewProps {
-    entry: any
+	entry: unknown;
 }
 
 const ContentPagePreview = ({ entry }: ContentPagePreviewProps) => {
-    const data = entry.getIn(['data']).toJS();
+	const data = entry.getIn(["data"]).toJS();
 
-    if (!data) {
-        return <div>Loading...</div>;
-    }
+	if (!data) {
+		return <div>Loading...</div>;
+	}
 
-    const date = formatISO(endOfDay(new Date(data.date || 0)));
-    const htmlBody = marked(data?.body ||'');
+	const date = formatISO(endOfDay(new Date(data.date || 0)));
+	const htmlBody = marked(data?.body || "");
 
-    const page = {
-        title: data.title || '',
-        body: {html: htmlBody},
-        date,
-    } as Page
+	const page = {
+		title: data.title || "",
+		body: { html: htmlBody },
+		date,
+	} as Page;
 
-    return <PageContent page={{ ...page }} />
-}
-export default ContentPagePreview
+	return <PageContent page={{ ...page }} />;
+};
+export default ContentPagePreview;
