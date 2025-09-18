@@ -6,6 +6,7 @@ import { createContext, useContext, useState, useEffect, ReactNode } from 'react
 
 interface ThemeContextType {
   theme: string;
+  // eslint-disable-next-line no-unused-vars
   setTheme: (theme: string) => void;
 }
 
