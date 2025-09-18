@@ -4,5 +4,9 @@
  * @returns
  */
 export const cleanTag = (tag: string) => {
-  return tag.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "").replace(' ', '-');
-}
+	return tag
+		.toLowerCase()
+		.normalize("NFD")
+		.replace(/[\u0300-\u036f]/g, "")
+		.replace(" ", "-");
+};
