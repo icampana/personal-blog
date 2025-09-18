@@ -28,6 +28,11 @@ export async function getStaticPaths() {
 
 export async function getStaticProps(context: GetStaticPropsContext) {
 	const { posts: postsConfig } = meta;
+	if (!context.params || typeof context.params.number !== 'string') {
+		return {
+			notFound: true,
+		};
+	}
 	const currentPage = parseInt(context.params.number, 10) || 1;
 	const queryStart = (currentPage - 1) * postsConfig.limit;
 

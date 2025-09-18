@@ -39,6 +39,11 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps(context: GetStaticPropsContext) {
+	if (!context.params || typeof context.params.tagName !== 'string') {
+		return {
+			notFound: true,
+		};
+	}
 	const tagName = context.params.tagName;
 
 	const filterByTag: PostFilter = (post: Post) =>

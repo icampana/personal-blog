@@ -8,7 +8,7 @@ interface ContentPagePreviewProps {
 }
 
 const ContentPagePreview = ({ entry }: ContentPagePreviewProps) => {
-	const data = entry.getIn(["data"]).toJS();
+  const data = (entry as any).getIn(["data"]).toJS();
 
 	if (!data) {
 		return <div>Loading...</div>;
