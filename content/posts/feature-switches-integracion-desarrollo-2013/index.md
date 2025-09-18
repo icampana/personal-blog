@@ -1,7 +1,7 @@
 ---
 title: 'Feature Flags, una herramienta para integrar cambios en tus desarrollos'
 date: 2023-10-15T05:00:00.000Z
-featuredImage: /images//blue-featureflag.png
+featuredImage: /images/blue-featureflag.png
 description: >-
   Sabes qué es un feature flag? Aprende cómo integrarlo en tu flujo de trabajo
   para que puedas hacer deployments graduales de nuevas funcionalidades sin
