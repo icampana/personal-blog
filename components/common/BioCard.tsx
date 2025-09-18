@@ -8,8 +8,6 @@ import {
 import { faPodcast } from '@fortawesome/free-solid-svg-icons';
 import meta from 'metadata.json';
 
-import Logo from '../public/images/profile-pic.jpg';
-
 const BioCard = () => {
   const { author, social } = meta.site;
   return (
@@ -19,7 +17,7 @@ const BioCard = () => {
           <div className='avatar'>
             <div className='w-24 rounded'>
               <Image
-                src={Logo}
+                src="/images/profile-pic.jpg"
                 alt={author}
                 className='rounded-full'
                 width='50'

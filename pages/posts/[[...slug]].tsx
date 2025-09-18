@@ -1,6 +1,6 @@
 import Head from "next/head";
 import { allPosts, Post } from "contentlayer/generated";
-import BioCard from 'components/BioCard';
+import BioCard from 'components/common/BioCard';
 import meta from 'metadata.json';
 import { NextSeo } from 'next-seo';
 import { MouseEvent, useState, useEffect } from 'react';

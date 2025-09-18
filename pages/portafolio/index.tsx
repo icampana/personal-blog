@@ -2,7 +2,7 @@ import type { NextPage } from 'next';
 import Head from 'next/head';
 import Image from 'next/image';
 
-import BioCard from 'components/BioCard';
+import BioCard from 'components/common/BioCard';
 import meta from 'metadata.json';
 import { NextSeo } from 'next-seo';
 import Footer from 'components/Footer';

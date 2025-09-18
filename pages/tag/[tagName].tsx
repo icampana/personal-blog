@@ -4,7 +4,7 @@ import Head from 'next/head'
 import PostCard from 'components/PostCard';
 
 import { allPosts, Post } from "contentlayer/generated";
-import BioCard from 'components/BioCard';
+import BioCard from 'components/common/BioCard';
 import meta from 'metadata.json';
 import Footer from 'components/Footer';
 import Header from 'components/Header';

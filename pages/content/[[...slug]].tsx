@@ -1,6 +1,6 @@
 import Head from "next/head";
 import { allPages, Page } from "contentlayer/generated";
-import BioCard from 'components/BioCard';
+import BioCard from 'components/common/BioCard';
 import meta from 'metadata.json';
 import { NextSeo } from 'next-seo';
 import striptags from 'striptags';
