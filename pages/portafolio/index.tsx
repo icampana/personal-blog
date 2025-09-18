@@ -8,6 +8,8 @@ import { NextSeo } from 'next-seo';
 import Footer from 'components/Footer';
 import Header from 'components/Header';
 
+import ProjectCard from 'components/ProjectCard';
+
 import { allProjects, Project } from 'contentlayer/generated';
 import { compareDesc } from 'date-fns';
 
@@ -25,13 +27,13 @@ const Portfolio: NextPage<{ projects: Project[] }> = (props) => {
   return (
     <div className='container mx-auto'>
       <Head>
-        <title>Home | {site.title}</title>
+        <title>Portafolio | {site.title}</title>
         <link rel='icon' href='/favicon.ico' />
       </Head>
       <NextSeo
-        title={site.title}
+        title={`Portafolio | ${site.title}`}
         description={site.description}
-        canonical={site.siteUrl}
+        canonical={`${site.siteUrl}/portafolio`}
       />
 
       <main className='max-w-6xl mx-auto'>
@@ -40,35 +42,20 @@ const Portfolio: NextPage<{ projects: Project[] }> = (props) => {
         </Header>
 
         <div className='px-2'>
-          <h2 className='mb-2 grow text-xl font-bold'>Portafolio</h2>
-          <div className='mx-auto py-3 grid grid-cols-1 lg:grid-cols-3 gap-6'>
+          <h1 className='text-4xl font-bold text-center my-8'>Mi Trabajo</h1>
+          <div className='mx-auto py-3 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
             {projects.map((project, idx) => (
-              <div key={idx}>
-                <h3 className='text-lg font-bold'>{project.title}</h3>
-                <Image
-                  src={project.galleryImage?.[0] || "/images/placeholder.png"}
-                  alt={project.title}
-                  placeholder="blur"
-                  height={200}
-                  width={320}
-                  blurDataURL='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mM0SeuuBwADoQGm9h5VIAAAAABJRU5ErkJggg=='
-                  style={{ objectFit: 'scale-down', overflow: 'hidden' }}
-                />
-                <p>{project.description}</p>
-                <div>
-                  {project.techStack?.map((tag, idx) => (
-                    <div
-                      key={idx}
-                      className="badge badge-soft badge-success mx-1"
-                    >
-                      {tag}
-                    </div>
-                  ))}
-                </div>
-              </div>
+              <ProjectCard key={idx} project={project} />
             ))}
           </div>
         </div>
+
+        <div className="text-center my-8">
+          <a href="/content/sobre-el-autor" className="btn btn-primary btn-lg">
+            Contáctame
+          </a>
+        </div>
+
         <Footer />
       </main>
     </div>
