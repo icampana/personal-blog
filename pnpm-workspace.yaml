@@ -1,0 +1,9 @@
+ignoredBuiltDependencies:
+  - better-sqlite3
+  - protobufjs
+
+onlyBuiltDependencies:
+  - '@tailwindcss/oxide'
+  - contentlayer2
+  - esbuild
+  - sharp

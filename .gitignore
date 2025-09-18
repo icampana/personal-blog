@@ -19,35 +19,11 @@
 .DS_Store
 *.pem
 
+## Generated files
+.contentlayer
+
 # debug
 npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
 .pnpm-debug.log*
-
-# local env files
-.env*.local
-
-# vercel
-.vercel
-
-# typescript
-*.tsbuildinfo
-next-env.d.ts
-
-
-.contentlayer
-.DS_Store
-
-node_modules
-
-## Yarn 4 upgrade
-.pnp.*
-.yarn/*
-!.yarn/patches
-!.yarn/plugins
-!.yarn/releases
-!.yarn/sdks
-!.yarn/versions
 
 public/search-*.json
