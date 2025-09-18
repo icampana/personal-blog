@@ -180,22 +180,26 @@ function videoPlugin(_options?: unknown): (tree: Node) => void {
 	);
 	function transformer(tree: Node) {
 		visit(tree, "paragraph", (paragraphNode) => {
-			const { children } = paragraphNode;
-			const node = children[0];
+			const { children } = paragraphNode as { children: Node[] };
+			if (children.length > 0) {
+				const node = children[0];
 
-			if (node.type === "link") {
-				const matches = youtubeSearch.exec(node.url);
-				if (
-					matches &&
-					node.children &&
-					node.children[0].type === "text" &&
-					node.children[0].value === node.url
-				) {
-					const videoId = matches[1];
-					node.type = "html";
-					node.value = `<iframe width="320" height="240" src="https://www.youtube.com/embed/${videoId}?&autoplay=1" frameborder="0" allowfullscreen style="margin: 0 auto;"></iframe>`;
-					delete node.children;
-					delete node.url;
+				if (node.type === "link") {
+					const linkNode = node as unknown as { url: string; children?: Node[] };
+					const matches = youtubeSearch.exec(linkNode.url);
+					if (
+						matches &&
+						linkNode.children &&
+						linkNode.children[0].type === "text" &&
+						(linkNode.children[0] as unknown as { value: string }).value === linkNode.url
+					) {
+						const videoId = matches[1];
+						const htmlNode = node as unknown as { type: string; value: string };
+						htmlNode.type = "html";
+						htmlNode.value = `<iframe width="320" height="240" src="https://www.youtube.com/embed/${videoId}?&autoplay=1" frameborder="0" allowfullscreen style="margin: 0 auto;"></iframe>`;
+						delete (linkNode as any).children;
+						delete (linkNode as any).url;
+					}
 				}
 			}
 		});
