@@ -4,8 +4,8 @@ import DateComponent from 'components/blocks/Date';
 import Link from "next/link";
 import type { Post } from 'contentlayer/generated';
 
-import Header from '../common/Header';
-import { cleanTag } from '../../utils/text';
+import Header from './Header';
+import { cleanTag } from './utils/text';
 import RelatedPosts from './RelatedPosts';
 
 interface BlogPostProps {

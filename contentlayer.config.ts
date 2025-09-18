@@ -11,7 +11,8 @@ import { visit } from 'unist-util-visit';
 import striptags from 'striptags';
 import rehypeHighlight from 'rehype-highlight';
 import rehypeSlug from 'rehype-slug';
-import remarkAdmonitions from 'remark-admonitions';
+import unifiedAdmonitions from './lib/unified-admonitions';
+import remarkDirective from 'remark-directive';
 
 // import remarkEmbedder from '@remark-embedder/core'
 // import oembedTransformer from '@remark-embedder/transformer-oembed'
@@ -206,7 +207,8 @@ export default makeSource({
     builder
       .use(remarkFrontmatter)
       .use(remarkParse)
-      .use(remarkAdmonitions)
+      .use(remarkDirective)
+      .use(unifiedAdmonitions)
       .use(videoPlugin)
       // .use(remarkEmbedder, {
       //   transformers: [

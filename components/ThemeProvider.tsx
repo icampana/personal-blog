@@ -36,5 +36,6 @@ export function useTheme() {
   if (context === undefined) {
     throw new Error('useTheme must be used within a ThemeProvider');
   }
-  return { theme: context.theme, setTheme: context.setTheme };
+  const { theme, setTheme } = context;
+  return { theme, setTheme };
 }
