@@ -1,18 +1,18 @@
 {
-  "site": {
-     "title":"Iván Gabriel",
-     "author":"Iván Campaña",
-     "description":"Diario de un Informático, Emprendedor, Desarrollador y Curioso a tiempo completo.",
-     "siteUrl":"https://ivan.campananaranjo.com",
-     "social":{
-        "twitter":"icampana",
-        "github":"icampana",
-        "linkedin":"icampana",
-        "anchor":"e-van"
-     },
-     "image":"/images/logo.png"
-   },
-   "posts": {
-      "limit": 12
-   }
+	"site": {
+		"title": "Iván Gabriel",
+		"author": "Iván Campaña",
+		"description": "Diario de un Informático, Emprendedor, Desarrollador y Curioso a tiempo completo.",
+		"siteUrl": "https://ivan.campananaranjo.com",
+		"social": {
+			"twitter": "icampana",
+			"github": "icampana",
+			"linkedin": "icampana",
+			"anchor": "e-van"
+		},
+		"image": "/images/logo.png"
+	},
+	"posts": {
+		"limit": 12
+	}
 }
