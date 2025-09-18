@@ -17,7 +17,7 @@ const RelatedPosts: React.FC<RelatedPostsProps> = ({ posts = [] }) => {
 				<li className="p-4 pb-2 text-md text-secondary tracking-wide">
 					También te puede interesar
 				</li>
-				{posts.map((post) => (
+				{posts.map((post, idx) => (
 					<li key={post.url} className="list-row">
 						<div className="text-4xl text-accent font-thin opacity-30 tabular-nums">
 							0{idx + 1}
