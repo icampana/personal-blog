@@ -9,6 +9,9 @@ import remarkGfm from 'remark-gfm'
 import remarkBreaks from 'remark-breaks'
 import { visit } from 'unist-util-visit';
 import striptags from 'striptags';
+import rehypeHighlight from 'rehype-highlight';
+import rehypeSlug from 'rehype-slug';
+import remarkAdmonitions from 'remark-admonitions';
 
 // import remarkEmbedder from '@remark-embedder/core'
 // import oembedTransformer from '@remark-embedder/transformer-oembed'
@@ -142,6 +145,16 @@ const Project = defineDocumentType(() => ({
       of: { type: 'string' },
       description: 'Associated technologies for this project',
       required: false
+    },
+    liveUrl: {
+      type: 'string',
+      description: 'The live URL of the project',
+      required: false
+    },
+    repoUrl: {
+      type: 'string',
+      description: 'The repository URL of the project',
+      required: false
     }
   },
   computedFields: {
@@ -193,6 +206,7 @@ export default makeSource({
     builder
       .use(remarkFrontmatter)
       .use(remarkParse)
+      .use(remarkAdmonitions)
       .use(videoPlugin)
       // .use(remarkEmbedder, {
       //   transformers: [
@@ -203,6 +217,8 @@ export default makeSource({
       .use(remarkBreaks)
       .use(remarkEmoji)
       .use(remark2rehype, {allowDangerousHtml: true})
+      .use(rehypeSlug)
+      .use(rehypeHighlight)
       .use(rehypeStringify, {allowDangerousHtml: true})
       // .use(() => (tree: any) => {
       //   console.dir(tree.children.slice(-1)[0].children)
