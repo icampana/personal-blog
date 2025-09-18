@@ -11,8 +11,8 @@ import remarkGfm from "remark-gfm";
 import remarkParse from "remark-parse";
 import remark2rehype from "remark-rehype";
 import striptags from "striptags";
-import { visit } from "unist-util-visit";
 import { type Node } from "unist";
+import { visit } from "unist-util-visit";
 import unifiedAdmonitions from "./lib/unified-admonitions";
 
 // import remarkEmbedder from '@remark-embedder/core'
@@ -185,13 +185,17 @@ function videoPlugin(_options?: unknown): (tree: Node) => void {
 				const node = children[0];
 
 				if (node.type === "link") {
-					const linkNode = node as unknown as { url: string; children?: Node[] };
+					const linkNode = node as unknown as {
+						url: string;
+						children?: Node[];
+					};
 					const matches = youtubeSearch.exec(linkNode.url);
 					if (
 						matches &&
 						linkNode.children &&
 						linkNode.children[0].type === "text" &&
-						(linkNode.children[0] as unknown as { value: string }).value === linkNode.url
+						(linkNode.children[0] as unknown as { value: string }).value ===
+							linkNode.url
 					) {
 						const videoId = matches[1];
 						const htmlNode = node as unknown as { type: string; value: string };
