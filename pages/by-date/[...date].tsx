@@ -32,8 +32,22 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps(context: GetStaticPropsContext) {
-	const dateParams = context.params.date || [];
-	const [year, month] = dateParams;
+	if (!context.params || !context.params.date) {
+		return {
+			notFound: true,
+		};
+	}
+
+	const dateParams = context.params.date;
+	const dateArray = Array.isArray(dateParams) ? dateParams : [dateParams];
+	const [year, month] = dateArray;
+
+	if (!year || !month) {
+		return {
+			notFound: true,
+		};
+	}
+
 	const selectedDate = `${year}/${month}`;
 
 	const filterByDate = (post: Post) => {

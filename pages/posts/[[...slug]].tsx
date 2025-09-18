@@ -4,6 +4,7 @@ import Footer from "components/Footer";
 import { allPosts, type Post } from "contentlayer/generated";
 import { compareDesc } from "date-fns";
 import meta from "metadata.json";
+import { GetStaticPropsContext } from "next";
 import Head from "next/head";
 import { NextSeo } from "next-seo";
 import { type MouseEvent, useEffect, useState } from "react";
@@ -18,6 +19,11 @@ export async function getStaticPaths() {
 
 export async function getStaticProps(props: GetStaticPropsContext) {
 	const { params } = props;
+	if (!params || !params.slug || !Array.isArray(params.slug)) {
+		return {
+			notFound: true,
+		};
+	}
 	const singleUrl = params.slug.join("/");
 
 	const post: Post | undefined = allPosts.find((post) => {
