@@ -1,7 +1,7 @@
-import Fuse from 'fuse.js';
-import { beforeEach, describe, expect, it } from 'vitest';
 import { readFileSync } from 'fs';
+import Fuse from 'fuse.js';
 import { join } from 'path';
+import { beforeEach, describe, expect, it } from 'vitest';
 
 describe('Search Functionality', () => {
   let fuse: Fuse<any>;
@@ -48,9 +48,10 @@ describe('Search Functionality', () => {
     it('should find posts by title', () => {
       const results = fuse.search('React');
       expect(results.length).toBeGreaterThan(0);
-      const found = results.some(r =>
-        r.item.title.toLowerCase().includes('react') ||
-        r.item.content.toLowerCase().includes('react')
+      const found = results.some(
+        (r) =>
+          r.item.title.toLowerCase().includes('react') ||
+          r.item.content.toLowerCase().includes('react'),
       );
       expect(found).toBe(true);
     });
@@ -58,9 +59,10 @@ describe('Search Functionality', () => {
     it('should find posts by summary', () => {
       const results = fuse.search('programador');
       expect(results.length).toBeGreaterThan(0);
-      const found = results.some(r =>
-        r.item.summary.toLowerCase().includes('programador') ||
-        r.item.content.toLowerCase().includes('programador')
+      const found = results.some(
+        (r) =>
+          r.item.summary.toLowerCase().includes('programador') ||
+          r.item.content.toLowerCase().includes('programador'),
       );
       expect(found).toBe(true);
     });

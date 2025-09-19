@@ -11,7 +11,7 @@ describe('SearchComponent', () => {
         href: 'http://localhost:3000/',
         pathname: '/',
         search: '',
-        assign: vi.fn()
+        assign: vi.fn(),
       },
     });
   });
@@ -33,7 +33,9 @@ describe('SearchComponent', () => {
     render(<SearchComponent />);
     const searchIcon = screen.getByTestId('search-icon');
     fireEvent.click(searchIcon);
-    const searchInput = screen.getByPlaceholderText(/buscar/i) as HTMLInputElement;
+    const searchInput = screen.getByPlaceholderText(
+      /buscar/i,
+    ) as HTMLInputElement;
     fireEvent.change(searchInput, { target: { value: 'test query' } });
     expect(searchInput.value).toBe('test query');
   });
@@ -57,7 +59,9 @@ describe('SearchComponent', () => {
     render(<SearchComponent />);
     const searchIcon = screen.getByTestId('search-icon');
     fireEvent.click(searchIcon);
-    const searchInput = screen.getByPlaceholderText(/buscar/i) as HTMLInputElement;
+    const searchInput = screen.getByPlaceholderText(
+      /buscar/i,
+    ) as HTMLInputElement;
     fireEvent.change(searchInput, { target: { value: 'test query' } });
 
     const clearButton = screen.getByTitle(/limpiar/i);

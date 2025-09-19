@@ -10,7 +10,7 @@ export function getReadingTime(content: string) {
       minutes: 0,
       text: '0 min read',
       time: 0,
-      words: 0
+      words: 0,
     };
   }
   return readingTime(content);

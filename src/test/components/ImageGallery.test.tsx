@@ -152,7 +152,7 @@ describe('ImageGallery', () => {
 
     // Should show loading spinners initially
     await waitFor(() => {
-        expect(screen.getAllByRole('img')).toHaveLength(mockImages.length);
+      expect(screen.getAllByRole('img')).toHaveLength(mockImages.length);
     });
   });
 });
