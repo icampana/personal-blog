@@ -14,7 +14,7 @@ Iván Gabriel Campaña Naranjo, nacido en 1981 en Guayaquil, Ecuador.
 * Alumni de la generación 15 de [Startup Chile](https://startupchile.org/) Seed.
 * Trabajando de forma remota desde 2016.
 
-Para mayor información, consultar mi [Hoja de vida actualizada](/documents/cv.pdf).
+Para mayor información, consultar mi [Hoja de vida actualizada](/documents/cv-20250703.pdf).
 
 ### Tecnologías con las que trabajo:
 
