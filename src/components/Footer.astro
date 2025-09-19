@@ -1,0 +1,50 @@
+---
+const currentYear = new Date().getFullYear();
+---
+
+<footer class="bg-gray-800 mt-3 p-4 text-white">
+  <div class="grid sm:grid-cols-1 sm:min-w-fit lg:grid-cols-4 my-1">
+    <div class="justify-start py-6 lg:col-span-2 align-middle text-center lg:text-left">
+      © {currentYear}, Hecho con{" "}
+      <a href="https://astro.build/">Astro</a>
+      &nbsp; + &nbsp;<a href="https://netlify.com/">Netlify</a>&nbsp; y
+      &nbsp; <a href="https://docs.astro.build/en/guides/content-collections/">Content Collections</a>
+    </div>
+
+    <div class="text-center my-4">
+      <a
+        href="https://www.codementor.io/@ivncampaanaranjo?refer=badge"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <img
+          src="https://www.codementor.io/m-badges/ivncampaanaranjo/find-me-on-cm-b.svg"
+          alt="Codementor badge"
+          class="inline-block"
+        />
+      </a>
+    </div>
+
+    <div class="text-center md:justify-end my-4">
+      <div class="text-center mt-1">
+        <a
+          href="https://www.buymeacoffee.com/icampana"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img
+            src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png"
+            alt="Buy Me A Coffee"
+            width="217"
+            height="60"
+            class="inline-block"
+          />
+        </a>
+      </div>
+      <div class="text-xs">
+        Si algo de lo que lees aquí te resulta útil, puedes invitarme un
+        café :D
+      </div>
+    </div>
+  </div>
+</footer>

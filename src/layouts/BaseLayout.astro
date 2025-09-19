@@ -1,0 +1,93 @@
+---
+import { ViewTransitions } from 'astro:transitions';
+import SEO from '../components/SEO.astro';
+import '../styles/globals.css';
+
+export interface Props {
+  title?: string;
+  description?: string;
+  image?: string;
+  url?: string;
+  type?: 'website' | 'article' | 'profile';
+  publishedTime?: string;
+  modifiedTime?: string;
+  tags?: string[];
+  noindex?: boolean;
+}
+
+const {
+  title,
+  description,
+  image,
+  url,
+  type,
+  publishedTime,
+  modifiedTime,
+  tags,
+  noindex
+} = Astro.props;
+---
+
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet" />
+
+    <!-- RSS Feed -->
+    <link rel="alternate" type="application/rss+xml" title="Iván Gabriel - Blog RSS Feed" href="/rss.xml" />
+
+    <!-- SEO Component -->
+    <SEO
+      title={title}
+      description={description}
+      image={image}
+      url={url}
+      type={type}
+      publishedTime={publishedTime}
+      modifiedTime={modifiedTime}
+      tags={tags}
+      noindex={noindex}
+    />
+
+    <!-- Google Site Verification -->
+    <meta name="google-site-verification" content="b5jnO_8lDhyKJ6m0nMqj0ZD0DMuvGkgBA0JSwUTcTf8" />
+
+    <!-- View Transitions -->
+    <ViewTransitions />
+  </head>
+  <body>
+    <slot />
+
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-275823-1" is:inline></script>
+    <script is:inline>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'UA-275823-1');
+    </script>
+
+    <!-- Consent Manager -->
+    <script
+      is:inline
+      src="https://cdn.consentmanager.net/delivery/autoblocking/8c643b22226c1.js"
+      data-cmp-host="d.delivery.consentmanager.net"
+      data-cmp-cdn="cdn.consentmanager.net"
+      data-cmp-codesrc="16">
+    </script>
+
+    <!-- Theme Change Script -->
+    <script>
+      import { themeChange } from 'theme-change';
+      themeChange(false);
+    </script>
+  </body>
+</html>

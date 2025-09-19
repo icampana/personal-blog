@@ -1,9 +1,16 @@
-# *
 User-agent: *
 Allow: /
 
-# Host
-Host: https://ivan.campananaranjo.com
+# Disallow admin and system files
+Disallow: /admin/
+Disallow: /_astro/
+Disallow: /api/
 
-# Sitemaps
-Sitemap: https://ivan.campananaranjo.com/sitemap.xml
+# Allow search engines to crawl important pages
+Allow: /posts/
+Allow: /tag/
+Allow: /portafolio/
+Allow: /content/
+
+# Sitemap location
+Sitemap: https://ivan.campananaranjo.com/sitemap-index.xml

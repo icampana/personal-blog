@@ -1,0 +1,54 @@
+---
+import { getCollection } from 'astro:content';
+import BlogLayout from '../layouts/BlogLayout.astro';
+import SearchResults from '../components/SearchResults';
+import PostCard from '../components/PostCard.astro';
+import { sortPostsByDate } from '../utils';
+
+const title = "Búsqueda";
+const description = "Busca contenido en el blog";
+
+// Get recent posts to show when no search is performed
+const allPosts = await getCollection('posts');
+const recentPosts = sortPostsByDate(allPosts).slice(0, 6);
+---
+
+<BlogLayout title={title} description={description}>
+  <div class="px-2">
+    <h1 class="mb-6 text-3xl font-bold">
+      Búsqueda
+    </h1>
+
+    <SearchResults client:load />
+
+    <!-- Show recent posts when no search query -->
+    <div id="recent-posts" class="mt-12">
+      <h2 class="text-2xl font-bold mb-6">Publicaciones recientes</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {recentPosts.map((post) => (
+          <PostCard post={post} />
+        ))}
+      </div>
+    </div>
+
+    <div class="text-center mt-8">
+      <a
+        href="/posts"
+        class="btn btn-outline"
+      >
+        Ver todas las publicaciones
+      </a>
+    </div>
+  </div>
+</BlogLayout>
+
+<script>
+  // Hide recent posts when there's a search query
+  const urlParams = new URLSearchParams(window.location.search);
+  const hasQuery = urlParams.get('q');
+  const recentPostsSection = document.getElementById('recent-posts');
+
+  if (hasQuery && recentPostsSection) {
+    recentPostsSection.style.display = 'none';
+  }
+</script>

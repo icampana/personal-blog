@@ -1,7 +1,223 @@
-[[plugins]]
-package = "@netlify/plugin-nextjs"
+[build]
+  publish = "dist"
+  command = "pnpm run build"
 
-#[[redirects]]
-#from = "/:year/:month/:slug"
-#to = "/posts/:year/:month/:slug"
-#status = 301
+[build.environment]
+  NODE_VERSION = "20"
+  PNPM_VERSION = "9"
+
+# Build settings
+[context.production]
+  command = "pnpm run build:production"
+
+[context.deploy-preview]
+  command = "pnpm run build:preview"
+
+[context.branch-deploy]
+  command = "pnpm run build"
+
+# Headers for security and performance
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-XSS-Protection = "1; mode=block"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Permissions-Policy = "camera=(), microphone=(), geolocation=()"
+
+[[headers]]
+  for = "/assets/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/_astro/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/images/*"
+  [headers.values]
+    Cache-Control = "public, max-age=2592000"
+
+[[headers]]
+  for = "/photos/*"
+  [headers.values]
+    Cache-Control = "public, max-age=2592000"
+
+[[headers]]
+  for = "*.js"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "*.css"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+# Redirects for legacy URLs (WordPress/Gatsby/Blogger compatibility)
+[[redirects]]
+  from = "/wp-login.php"
+  to = "/"
+  status = 301
+
+[[redirects]]
+  from = "/wp-login.php/"
+  to = "/"
+  status = 301
+
+# Legacy pagination redirects
+[[redirects]]
+  from = "/1"
+  to = "/posts/page/1"
+  status = 301
+
+[[redirects]]
+  from = "/2"
+  to = "/posts/page/2"
+  status = 301
+
+[[redirects]]
+  from = "/3"
+  to = "/posts/page/3"
+  status = 301
+
+[[redirects]]
+  from = "/4"
+  to = "/posts/page/4"
+  status = 301
+
+[[redirects]]
+  from = "/5"
+  to = "/posts/page/5"
+  status = 301
+
+[[redirects]]
+  from = "/6"
+  to = "/posts/page/6"
+  status = 301
+
+[[redirects]]
+  from = "/7"
+  to = "/posts/page/7"
+  status = 301
+
+[[redirects]]
+  from = "/8"
+  to = "/posts/page/8"
+  status = 301
+
+[[redirects]]
+  from = "/9"
+  to = "/posts/page/9"
+  status = 301
+
+[[redirects]]
+  from = "/10"
+  to = "/posts/page/10"
+  status = 301
+
+[[redirects]]
+  from = "/11"
+  to = "/posts/page/11"
+  status = 301
+
+[[redirects]]
+  from = "/12"
+  to = "/posts/page/12"
+  status = 301
+
+# Category to tag redirects
+[[redirects]]
+  from = "/category/development"
+  to = "/tag/development"
+  status = 301
+
+[[redirects]]
+  from = "/category/programming"
+  to = "/tag/programming"
+  status = 301
+
+[[redirects]]
+  from = "/category/technology"
+  to = "/tag/technology"
+  status = 301
+
+[[redirects]]
+  from = "/category/javascript"
+  to = "/tag/javascript"
+  status = 301
+
+[[redirects]]
+  from = "/category/react"
+  to = "/tag/react"
+  status = 301
+
+[[redirects]]
+  from = "/category/nodejs"
+  to = "/tag/nodejs"
+  status = 301
+
+[[redirects]]
+  from = "/category/python"
+  to = "/tag/python"
+  status = 301
+
+[[redirects]]
+  from = "/category/web-development"
+  to = "/tag/web-development"
+  status = 301
+
+[[redirects]]
+  from = "/category/tutorial"
+  to = "/tag/tutorial"
+  status = 301
+
+[[redirects]]
+  from = "/category/tips"
+  to = "/tag/tips"
+  status = 301
+
+[[redirects]]
+  from = "/category/personal"
+  to = "/tag/personal"
+  status = 301
+
+[[redirects]]
+  from = "/category/entrepreneurship"
+  to = "/tag/entrepreneurship"
+  status = 301
+
+[[redirects]]
+  from = "/category/startup"
+  to = "/tag/startup"
+  status = 301
+
+[[redirects]]
+  from = "/category/remote-work"
+  to = "/tag/remote-work"
+  status = 301
+
+[[redirects]]
+  from = "/category/freelancing"
+  to = "/tag/freelancing"
+  status = 301
+
+# Catch-all for old post URLs (Gatsby format)
+[[redirects]]
+  from = "/:year/:month/:slug"
+  to = "/posts/:slug"
+  status = 301
+
+# Admin panel redirect for TinaCMS
+[[redirects]]
+  from = "/admin/*"
+  to = "/admin/index.html"
+  status = 200
+
+# SPA fallback for client-side routing
+[[redirects]]
+  from = "/*"
+  to = "/404.html"
+  status = 404

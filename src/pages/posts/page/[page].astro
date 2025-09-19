@@ -1,0 +1,56 @@
+---
+import { getCollection } from 'astro:content';
+import BlogLayout from '../../../layouts/BlogLayout.astro';
+import PostCard from '../../../components/PostCard.astro';
+import Pagination from '../../../components/Pagination.astro';
+import { sortPostsByDate } from '../../../utils';
+
+export async function getStaticPaths() {
+  const allPosts = await getCollection('posts');
+  const postsPerPage = 12;
+  const totalPages = Math.ceil(allPosts.length / postsPerPage);
+
+  return Array.from({ length: totalPages }, (_, i) => ({
+    params: { page: (i + 1).toString() },
+  }));
+}
+
+const { page } = Astro.params;
+const currentPage = parseInt(page || '1', 10);
+
+// Get all posts and sort by date
+const allPosts = await getCollection('posts');
+const posts = sortPostsByDate(allPosts);
+
+// Pagination settings
+const postsPerPage = 12;
+const totalPages = Math.ceil(posts.length / postsPerPage);
+const startIndex = (currentPage - 1) * postsPerPage;
+const endIndex = startIndex + postsPerPage;
+
+// Get posts for current page
+const paginatedPosts = posts.slice(startIndex, endIndex);
+
+const title = `Publicaciones - Página ${currentPage}`;
+const description = `Lista de publicaciones del blog - Página ${currentPage} de ${totalPages}`;
+---
+
+<BlogLayout title={title} description={description}>
+  <div class="px-2">
+    <h1 class="font-sans font-bold text-2xl mb-6">
+      Lista de publicaciones por fecha
+    </h1>
+
+    <div class="mx-auto py-5 grid grid-cols-1 lg:grid-cols-3 gap-6">
+      {paginatedPosts.map((post) => (
+        <PostCard post={post} />
+      ))}
+    </div>
+
+    <Pagination
+      currentPage={currentPage}
+      totalPages={totalPages}
+      baseUrl="/posts"
+    />
+  </div>
+</BlogLayout>

@@ -1,0 +1,122 @@
+---
+import BlogLayout from './BlogLayout.astro';
+import BackToTop from '../components/BackToTop';
+import ShareButtons from '../components/ShareButtons';
+import ResponsiveImage from '../components/ResponsiveImage.astro';
+import { formatDate, getReadingTime } from '../utils';
+import { normalizeImagePath } from '../utils/imageUtils';
+import type { CollectionEntry } from 'astro:content';
+
+export interface Props {
+  post: CollectionEntry<'posts'>;
+}
+
+const { post } = Astro.props;
+const { title, description, featuredImage, tags, date } = post.data;
+const { Content } = await post.render();
+
+const readingTime = getReadingTime(post.body);
+const readingTimeText = `${Math.round(readingTime.minutes)} minutos`;
+
+const imagePath = normalizeImagePath(featuredImage);
+---
+
+<BlogLayout
+  title={title}
+  description={description}
+  image={imagePath}
+  type="article"
+  publishedTime={date.toISOString()}
+  modifiedTime={date.toISOString()}
+  tags={tags}
+>
+  <article class="max-w-4xl mx-auto">
+    <!-- Featured Image -->
+    {featuredImage && (
+      <div class="mb-8">
+        <ResponsiveImage
+          src={imagePath}
+          alt={title}
+          class="w-full h-64 object-cover rounded-lg shadow-lg"
+          loading="eager"
+          aspectRatio="16/9"
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 80vw, 1200px"
+        />
+      </div>
+    )}
+
+    <!-- Post Header -->
+    <header class="mb-8">
+      <h1 class="text-4xl font-bold mb-4">{title}</h1>
+
+      <div class="flex flex-wrap items-center gap-4 text-sm text-gray-600 mb-4">
+        <time datetime={date.toISOString()}>
+          {formatDate(date)}
+        </time>
+        <span>•</span>
+        <span>{readingTimeText} de lectura</span>
+      </div>
+
+      {description && (
+        <p class="text-lg text-gray-700 mb-6">{description}</p>
+      )}
+
+      {tags && tags.length > 0 && (
+        <div class="flex flex-wrap gap-2">
+          {tags.map((tag) => (
+            <a
+              href={`/tag/${tag.toLowerCase()}`}
+              class="badge badge-outline hover:badge-primary"
+            >
+              {tag}
+            </a>
+          ))}
+        </div>
+      )}
+    </header>
+
+    <!-- Post Content -->
+    <div class="prose prose-lg max-w-none">
+      <Content />
+    </div>
+
+    <!-- Share buttons -->
+    <div class="mt-8 pt-6 border-t border-base-300">
+      <ShareButtons
+        url={Astro.url.href}
+        title={title}
+        description={description}
+        client:load
+      />
+    </div>
+  </article>
+
+  <!-- Back to top button -->
+  <BackToTop client:load />
+</BlogLayout>
+
+<style>
+  .prose {
+    @apply text-base-content;
+  }
+
+  .prose h1, .prose h2, .prose h3, .prose h4, .prose h5, .prose h6 {
+    @apply text-base-content;
+  }
+
+  .prose a {
+    @apply text-primary hover:text-primary-content;
+  }
+
+  .prose code {
+    @apply bg-base-200 text-base-content px-1 py-0.5 rounded;
+  }
+
+  .prose pre {
+    @apply bg-base-200 text-base-content;
+  }
+
+  .prose blockquote {
+    @apply border-l-primary text-base-content;
+  }
+</style>

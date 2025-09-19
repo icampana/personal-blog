@@ -1,0 +1,29 @@
+---
+export interface Props {
+  tags: string[];
+  currentTag?: string;
+  showCounts?: boolean;
+  tagCounts?: Record<string, number>;
+}
+
+const { tags, currentTag, showCounts = false, tagCounts = {} } = Astro.props;
+---
+
+<div class="flex flex-wrap gap-2">
+  {tags.map((tag) => {
+    const isActive = currentTag === tag;
+    const count = tagCounts[tag] || 0;
+
+    return (
+      <a
+        href={`/tag/${tag.toLowerCase()}`}
+        class={`badge ${isActive ? 'badge-primary' : 'badge-outline'} hover:badge-primary transition-colors`}
+      >
+        {tag}
+        {showCounts && count > 0 && (
+          <span class="ml-1 text-xs opacity-70">({count})</span>
+        )}
+      </a>
+    );
+  })}
+</div>

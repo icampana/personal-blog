@@ -1,0 +1,42 @@
+---
+import { getCollection } from 'astro:content';
+import BlogLayout from '../../layouts/BlogLayout.astro';
+import PostCard from '../../components/PostCard.astro';
+import Pagination from '../../components/Pagination.astro';
+import { sortPostsByDate } from '../../utils';
+
+// Get all posts and sort by date
+const allPosts = await getCollection('posts');
+const posts = sortPostsByDate(allPosts);
+
+// Pagination settings
+const postsPerPage = 12;
+const totalPages = Math.ceil(posts.length / postsPerPage);
+const currentPage = 1;
+
+// Get posts for current page
+const paginatedPosts = posts.slice(0, postsPerPage);
+
+const title = "Todas las Publicaciones";
+const description = "Lista completa de todas las publicaciones del blog";
+---
+
+<BlogLayout title={title} description={description}>
+  <div class="px-2">
+    <h1 class="font-sans font-bold text-2xl mb-6">
+      Lista de publicaciones por fecha
+    </h1>
+
+    <div class="mx-auto py-5 grid grid-cols-1 lg:grid-cols-3 gap-6">
+      {paginatedPosts.map((post) => (
+        <PostCard post={post} />
+      ))}
+    </div>
+
+    <Pagination
+      currentPage={currentPage}
+      totalPages={totalPages}
+      baseUrl="/posts"
+    />
+  </div>
+</BlogLayout>

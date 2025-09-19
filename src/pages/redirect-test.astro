@@ -1,0 +1,63 @@
+---
+// This page is for testing redirects during development
+// Remove this file before production deployment
+
+const redirectTests = [
+  { from: '/wp-login.php', to: '/', description: 'WordPress login redirect' },
+  { from: '/1', to: '/posts/page/1', description: 'Legacy pagination' },
+  { from: '/category/development', to: '/tag/development', description: 'Category to tag' },
+  { from: '/2024/01', to: '/by-date/2024/01', description: 'Date-based URL' },
+  { from: '/2024/01/sample-post', to: '/posts/2024/01/sample-post', description: 'Legacy post URL' },
+];
+---
+
+<html lang="es">
+<head>
+  <title>Redirect Test Page</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body { font-family: Arial, sans-serif; max-width: 800px; margin: 0 auto; padding: 20px; }
+    .test-item { margin: 20px 0; padding: 15px; border: 1px solid #ddd; border-radius: 5px; }
+    .test-link { display: inline-block; margin: 5px 10px 5px 0; padding: 8px 12px; background: #007acc; color: white; text-decoration: none; border-radius: 3px; }
+    .test-link:hover { background: #005a9e; }
+    .warning { background: #fff3cd; border: 1px solid #ffeaa7; padding: 15px; border-radius: 5px; margin-bottom: 20px; }
+  </style>
+</head>
+<body>
+  <h1>Redirect Test Page</h1>
+
+  <div class="warning">
+    <strong>⚠️ Development Only:</strong> This page is for testing redirects during development.
+    Remove this file before production deployment.
+  </div>
+
+  <p>Click the links below to test various redirect patterns:</p>
+
+  {redirectTests.map(test => (
+    <div class="test-item">
+      <h3>{test.description}</h3>
+      <p>
+        <strong>From:</strong> <code>{test.from}</code> →
+        <strong>To:</strong> <code>{test.to}</code>
+      </p>
+      <a href={test.from} class="test-link">Test Redirect</a>
+      <a href={test.to} class="test-link">Direct Link</a>
+    </div>
+  ))}
+
+  <div class="test-item">
+    <h3>Additional Tests</h3>
+    <p>Test these URLs manually in the browser:</p>
+    <ul>
+      <li><code>/2023-12-25-christmas-post</code> (Gatsby format)</li>
+      <li><code>/2023/12/christmas-post</code> (Blogger format)</li>
+      <li><code>/2023/12/christmas-post.html</code> (HTML format)</li>
+      <li><code>/wp-admin</code> (WordPress admin)</li>
+      <li><code>/administrator</code> (Spam URL)</li>
+    </ul>
+  </div>
+
+  <p><a href="/">← Back to Home</a></p>
+</body>
+</html>

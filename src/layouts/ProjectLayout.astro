@@ -1,0 +1,108 @@
+---
+import BlogLayout from './BlogLayout.astro';
+import ImageGallery from '../components/ImageGallery';
+import { formatDate } from '../utils';
+import type { CollectionEntry } from 'astro:content';
+
+export interface Props {
+  project: CollectionEntry<'projects'>;
+}
+
+const { project } = Astro.props;
+const { title, description, galleryImage, techStack, liveUrl, repoUrl, date } = project.data;
+const { Content } = await project.render();
+---
+
+<BlogLayout title={title} description={description}>
+  <article class="max-w-4xl mx-auto">
+    <!-- Project Header -->
+    <header class="mb-8">
+      <h1 class="text-4xl font-bold mb-4">{title}</h1>
+
+      <div class="flex flex-wrap items-center gap-4 text-sm text-gray-600 mb-4">
+        <time datetime={date.toISOString()}>
+          {formatDate(date)}
+        </time>
+      </div>
+
+      {description && (
+        <p class="text-lg text-gray-700 mb-6">{description}</p>
+      )}
+
+      <!-- Project Links -->
+      <div class="flex flex-wrap gap-4 mb-6">
+        {liveUrl && (
+          <a
+            href={liveUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="btn btn-primary"
+          >
+            Ver Proyecto
+          </a>
+        )}
+        {repoUrl && (
+          <a
+            href={repoUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="btn btn-outline"
+          >
+            Ver Código
+          </a>
+        )}
+      </div>
+
+      <!-- Tech Stack -->
+      {techStack && techStack.length > 0 && (
+        <div class="mb-6">
+          <h3 class="text-lg font-semibold mb-2">Tecnologías utilizadas:</h3>
+          <div class="flex flex-wrap gap-2">
+            {techStack.map((tech) => (
+              <span class="badge badge-secondary">{tech}</span>
+            ))}
+          </div>
+        </div>
+      )}
+    </header>
+
+    <!-- Project Gallery -->
+    {galleryImage && galleryImage.length > 0 && (
+      <div class="mb-8">
+        <h3 class="text-lg font-semibold mb-4">Galería de imágenes</h3>
+        <ImageGallery images={galleryImage} title={title} client:load />
+      </div>
+    )}
+
+    <!-- Project Content -->
+    <div class="prose prose-lg max-w-none">
+      <Content />
+    </div>
+  </article>
+</BlogLayout>
+
+<style>
+  .prose {
+    @apply text-base-content;
+  }
+
+  .prose h1, .prose h2, .prose h3, .prose h4, .prose h5, .prose h6 {
+    @apply text-base-content;
+  }
+
+  .prose a {
+    @apply text-primary hover:text-primary-content;
+  }
+
+  .prose code {
+    @apply bg-base-200 text-base-content px-1 py-0.5 rounded;
+  }
+
+  .prose pre {
+    @apply bg-base-200 text-base-content;
+  }
+
+  .prose blockquote {
+    @apply border-l-primary text-base-content;
+  }
+</style>

@@ -1,3 +1,6 @@
+packages:
+  - 'astro-blog'
+
 ignoredBuiltDependencies:
   - better-sqlite3
   - protobufjs

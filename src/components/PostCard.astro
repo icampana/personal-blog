@@ -1,0 +1,64 @@
+---
+import { formatDate, getReadingTime, getPostUrl } from '../utils';
+import { normalizeImagePath } from '../utils/imageUtils';
+import type { CollectionEntry } from 'astro:content';
+import ResponsiveImage from './ResponsiveImage.astro';
+
+export interface Props {
+  post: CollectionEntry<'posts'>;
+}
+
+const { post } = Astro.props;
+const { title, description, featuredImage, tags, date } = post.data;
+
+const readingTime = getReadingTime(post.body);
+const readingTimeText = `${Math.round(readingTime.minutes)} minutos`;
+
+const imagePath = normalizeImagePath(featuredImage);
+
+const postUrl = getPostUrl(post);
+const summary = description || post.body.slice(0, 200) + '...';
+---
+
+<div class="card bg-base-100 shadow-xl">
+  <figure>
+    <a href={postUrl}>
+      <ResponsiveImage
+        src={imagePath}
+        alt={title}
+        class="object-cover w-full h-48"
+        loading="lazy"
+        aspectRatio="16/9"
+        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 400px"
+      />
+    </a>
+  </figure>
+  <div class="card-body">
+    <h2 class="card-title">
+      <a href={postUrl} class="hover:text-primary">{title}</a>
+    </h2>
+    <p class="text-sm text-base-content/70">{summary}</p>
+
+    {tags && tags.length > 0 && (
+      <div class="card-actions justify-end">
+        {tags.map((tag) => (
+          <a
+            href={`/tag/${tag.toLowerCase()}`}
+            class="badge badge-outline hover:badge-primary"
+          >
+            {tag}
+          </a>
+        ))}
+      </div>
+    )}
+
+    <div class="card-footer text-xs mt-4 flex justify-between items-center">
+      <time datetime={date.toISOString()} class="capitalize text-accent">
+        {formatDate(date)}
+      </time>
+      <div class="text-base-content/60">
+        <em>Lectura:</em> {readingTimeText}
+      </div>
+    </div>
+  </div>
+</div>

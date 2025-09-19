@@ -1,0 +1,39 @@
+---
+import { getCollection } from 'astro:content';
+import BlogLayout from '../../layouts/BlogLayout.astro';
+import ProjectCard from '../../components/ProjectCard.astro';
+
+// Get all projects and sort by date
+const allProjects = await getCollection('projects');
+const projects = allProjects.sort((a, b) =>
+  new Date(b.data.date).getTime() - new Date(a.data.date).getTime()
+);
+
+const title = "Portfolio";
+const description = "Proyectos y trabajos realizados por Iván Gabriel";
+---
+
+<BlogLayout title={title} description={description}>
+  <div class="px-2">
+    <div class="mb-8">
+      <h1 class="text-4xl font-bold mb-4">Portfolio</h1>
+      <p class="text-lg text-base-content/70">
+        Una selección de proyectos y trabajos que he realizado a lo largo de mi carrera profesional.
+      </p>
+    </div>
+
+    {projects.length > 0 ? (
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {projects.map((project) => (
+          <ProjectCard project={project} />
+        ))}
+      </div>
+    ) : (
+      <div class="text-center py-12">
+        <p class="text-xl text-base-content/60">
+          Próximamente se añadirán más proyectos al portfolio.
+        </p>
+      </div>
+    )}
+  </div>
+</BlogLayout>
