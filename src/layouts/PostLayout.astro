@@ -1,7 +1,7 @@
 ---
 import type { CollectionEntry } from 'astro:content';
 import BackToTop from '../components/BackToTop';
-import ImgxImage from '../components/ImgxImage.astro';
+import { Image } from 'astro:assets';
 import ShareButtons from '../components/ShareButtons';
 import { formatDate, getReadingTime } from '../utils';
 import { normalizeImagePath } from '../utils/imageUtils';
@@ -34,13 +34,13 @@ const imagePath = normalizeImagePath(featuredImage);
     <!-- Featured Image -->
     {featuredImage && (
       <div class="mb-8">
-        <ImgxImage
+        <Image
           src={imagePath}
           alt={title}
           class="w-full h-64 object-cover rounded-lg shadow-lg"
           loading="eager"
-          aspectRatio="16/9"
-          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 80vw, 1200px"
+          width={1200} // Provide a default width
+          height={675} // Provide a default height (16/9 aspect ratio)
         />
       </div>
     )}

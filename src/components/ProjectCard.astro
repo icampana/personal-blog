@@ -2,7 +2,7 @@
 import type { CollectionEntry } from 'astro:content';
 import { getProjectUrl } from '../utils';
 import { normalizeImagePath } from '../utils/imageUtils';
-import ImgxImage from './ImgxImage.astro';
+import { Image } from 'astro:assets';
 
 export interface Props {
   project: CollectionEntry<'projects'>;
@@ -19,13 +19,13 @@ const imagePath = normalizeImagePath(galleryImage?.[0]);
 <div class="card bg-base-100 shadow-xl">
   <figure>
     <a href={projectUrl}>
-      <ImgxImage
+      <Image
         src={imagePath}
         alt={title}
         class="object-cover w-full h-48"
         loading="lazy"
-        aspectRatio="16/9"
-        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 400px"
+        width={400} // Provide a default width
+        height={225} // Provide a default height (16/9 aspect ratio)
       />
     </a>
   </figure>

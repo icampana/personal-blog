@@ -1,5 +1,5 @@
 ---
-import ImgxImage from './ImgxImage.astro';
+import { Image } from 'astro:assets';
 const currentYear = new Date().getFullYear();
 ---
 
@@ -18,7 +18,7 @@ const currentYear = new Date().getFullYear();
         target="_blank"
         rel="noopener noreferrer"
       >
-        <ImgxImage
+        <Image
           src="https://www.codementor.io/m-badges/ivncampaanaranjo/find-me-on-cm-b.svg"
           alt="Codementor badge"
           class="inline-block"
@@ -35,11 +35,11 @@ const currentYear = new Date().getFullYear();
           target="_blank"
           rel="noopener noreferrer"
         >
-          <ImgxImage
+          <Image
             src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png"
             alt="Buy Me A Coffee"
-            width="217"
-            height="60"
+            width={217}
+            height={60}
             class="inline-block"
           />
         </a>

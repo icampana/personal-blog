@@ -18,6 +18,17 @@ import unifiedAdmonitions from './src/lib/unified-admonitions.js';
 export default defineConfig({
   site: 'https://ivan.campananaranjo.com',
   output: 'static',
+  image: {
+    domains: ['igcn-ws.imgix.net'],
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'igcn-ws.imgix.net',
+        port: '',
+        pathname: '/**',
+      },
+    ],
+  },
   integrations: [
     react(),
     tailwind({
