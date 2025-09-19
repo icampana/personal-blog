@@ -11,8 +11,8 @@
       "**",
       "**",
       "!**/.astro",
+      "!**/.netlify",
       "!**/.husky",
-      "!**/.storybook",
       "!**/node_modules",
       "!**/dist"
     ]
