@@ -63,19 +63,21 @@ const mockProjects = [
 ];
 
 // Mock getCollection function
+const mockGetCollection = vi.fn((collection: string) => {
+  switch (collection) {
+    case 'posts':
+      return Promise.resolve(mockPosts);
+    case 'pages':
+      return Promise.resolve(mockPages);
+    case 'projects':
+      return Promise.resolve(mockProjects);
+    default:
+      return Promise.resolve([]);
+  }
+});
+
 vi.mock('astro:content', () => ({
-  getCollection: vi.fn((collection: string) => {
-    switch (collection) {
-      case 'posts':
-        return Promise.resolve(mockPosts);
-      case 'pages':
-        return Promise.resolve(mockPages);
-      case 'projects':
-        return Promise.resolve(mockProjects);
-      default:
-        return Promise.resolve([]);
-    }
-  }),
+  getCollection: mockGetCollection,
   z: {
     object: vi.fn(() => ({ parse: vi.fn() })),
     string: vi.fn(),
@@ -93,8 +95,7 @@ vi.mock('astro:content', () => ({
 describe('Content Collection Integration', () => {
   describe('Posts Collection', () => {
     it('should load posts correctly', async () => {
-      const { getCollection } = await import('astro:content');
-      const posts = await getCollection('posts');
+      const posts = await mockGetCollection('posts');
 
       expect(posts).toHaveLength(2);
       expect(posts[0].data.title).toBe('Test Post 1');
@@ -102,8 +103,7 @@ describe('Content Collection Integration', () => {
     });
 
     it('should have required frontmatter fields', async () => {
-      const { getCollection } = await import('astro:content');
-      const posts = await getCollection('posts');
+      const posts = await mockGetCollection('posts');
 
       posts.forEach((post) => {
         expect(post.data.title).toBeDefined();
@@ -114,8 +114,7 @@ describe('Content Collection Integration', () => {
     });
 
     it('should sort posts by date correctly', async () => {
-      const { getCollection } = await import('astro:content');
-      const posts = await getCollection('posts');
+      const posts = await mockGetCollection('posts');
 
       const sortedPosts = posts.sort(
         (a, b) =>
@@ -129,8 +128,7 @@ describe('Content Collection Integration', () => {
 
   describe('Pages Collection', () => {
     it('should load pages correctly', async () => {
-      const { getCollection } = await import('astro:content');
-      const pages = await getCollection('pages');
+      const pages = await mockGetCollection('pages');
 
       expect(pages).toHaveLength(1);
       expect(pages[0].data.title).toBe('About');
@@ -138,8 +136,7 @@ describe('Content Collection Integration', () => {
     });
 
     it('should have required page fields', async () => {
-      const { getCollection } = await import('astro:content');
-      const pages = await getCollection('pages');
+      const pages = await mockGetCollection('pages');
 
       pages.forEach((page) => {
         expect(page.data.title).toBeDefined();
@@ -150,8 +147,7 @@ describe('Content Collection Integration', () => {
 
   describe('Projects Collection', () => {
     it('should load projects correctly', async () => {
-      const { getCollection } = await import('astro:content');
-      const projects = await getCollection('projects');
+      const projects = await mockGetCollection('projects');
 
       expect(projects).toHaveLength(1);
       expect(projects[0].data.title).toBe('Test Project');
@@ -159,8 +155,7 @@ describe('Content Collection Integration', () => {
     });
 
     it('should have required project fields', async () => {
-      const { getCollection } = await import('astro:content');
-      const projects = await getCollection('projects');
+      const projects = await mockGetCollection('projects');
 
       projects.forEach((project) => {
         expect(project.data.title).toBeDefined();
@@ -170,8 +165,7 @@ describe('Content Collection Integration', () => {
     });
 
     it('should handle optional project fields', async () => {
-      const { getCollection } = await import('astro:content');
-      const projects = await getCollection('projects');
+      const projects = await mockGetCollection('projects');
 
       const project = projects[0];
       expect(project.data.liveUrl).toBe('https://example.com');
@@ -182,8 +176,7 @@ describe('Content Collection Integration', () => {
 
   describe('Content Validation', () => {
     it('should validate post schema', async () => {
-      const { getCollection } = await import('astro:content');
-      const posts = await getCollection('posts');
+      const posts = await mockGetCollection('posts');
 
       posts.forEach((post) => {
         // Check required fields
@@ -201,8 +194,7 @@ describe('Content Collection Integration', () => {
     });
 
     it('should validate page schema', async () => {
-      const { getCollection } = await import('astro:content');
-      const pages = await getCollection('pages');
+      const pages = await mockGetCollection('pages');
 
       pages.forEach((page) => {
         expect(typeof page.data.title).toBe('string');
@@ -216,8 +208,7 @@ describe('Content Collection Integration', () => {
     });
 
     it('should validate project schema', async () => {
-      const { getCollection } = await import('astro:content');
-      const projects = await getCollection('projects');
+      const projects = await mockGetCollection('projects');
 
       projects.forEach((project) => {
         expect(typeof project.data.title).toBe('string');

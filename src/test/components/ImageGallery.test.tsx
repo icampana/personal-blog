@@ -39,7 +39,9 @@ describe('ImageGallery', () => {
   it('should show loading state initially', () => {
     render(<ImageGallery images={mockImages} title="Test Gallery" />);
 
-    expect(screen.getAllByText(/loading/i)).toHaveLength(mockImages.length);
+    // Check for the pulsing placeholders
+    const placeholders = screen.getAllByTestId('loading-placeholder');
+    expect(placeholders).toHaveLength(mockImages.length);
   });
 
   it('should open lightbox when image is clicked', async () => {
@@ -119,32 +121,38 @@ describe('ImageGallery', () => {
     expect(screen.queryByRole('img')).not.toBeInTheDocument();
   });
 
-  it('should support lazy loading', () => {
+  it('should support lazy loading', async () => {
     render(
       <ImageGallery images={mockImages} title="Test Gallery" lazy={true} />,
     );
 
-    const images = screen.getAllByRole('img');
-    images.forEach((img) => {
-      expect(img).toHaveAttribute('loading', 'lazy');
+    await waitFor(() => {
+      const images = screen.getAllByRole('img');
+      images.forEach((img) => {
+        expect(img).toHaveAttribute('loading', 'lazy');
+      });
     });
   });
 
-  it('should support eager loading', () => {
+  it('should support eager loading', async () => {
     render(
       <ImageGallery images={mockImages} title="Test Gallery" lazy={false} />,
     );
 
-    const images = screen.getAllByRole('img');
-    images.forEach((img) => {
-      expect(img).toHaveAttribute('loading', 'eager');
+    await waitFor(() => {
+      const images = screen.getAllByRole('img');
+      images.forEach((img) => {
+        expect(img).toHaveAttribute('loading', 'eager');
+      });
     });
   });
 
-  it('should show loading spinner for unloaded images', () => {
+  it('should show loading spinner for unloaded images', async () => {
     render(<ImageGallery images={mockImages} title="Test Gallery" />);
 
     // Should show loading spinners initially
-    expect(screen.getAllByRole('img')).toHaveLength(mockImages.length);
+    await waitFor(() => {
+        expect(screen.getAllByRole('img')).toHaveLength(mockImages.length);
+    });
   });
 });
