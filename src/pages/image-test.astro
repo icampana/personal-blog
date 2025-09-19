@@ -2,6 +2,7 @@
 import ImageGallery from '../components/ImageGallery';
 import { Image } from 'astro:assets';
 import BaseLayout from '../layouts/BaseLayout.astro';
+import { generateImgxUrl } from '../utils/imgxUtils';
 ---
 
 <BaseLayout title="Image Optimization Test">
@@ -11,7 +12,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     <section class="mb-12">
       <h2 class="text-2xl font-bold mb-4">Responsive Image Component</h2>
       <Image
-        src="/images/sample-post-1.svg"
+        src={generateImgxUrl('/images/sample-post-1.svg', 800, 450)}
         alt="Sample Post Image"
         class="w-full max-w-md rounded-lg shadow-lg"
         loading="eager"
@@ -23,7 +24,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     <section class="mb-12">
       <h2 class="text-2xl font-bold mb-4">Optimized Image Component</h2>
       <Image
-        src="/images/sample-project-1.svg"
+        src={generateImgxUrl('/images/sample-project-1.svg', 400, 300)}
         alt="Sample Project Image"
         width={400}
         height={300}

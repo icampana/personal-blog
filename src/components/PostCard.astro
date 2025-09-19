@@ -2,7 +2,7 @@
 import type { CollectionEntry } from 'astro:content';
 import { formatDate, getPostUrl, getReadingTime } from '../utils';
 import { normalizeImagePath } from '../utils/imageUtils';
-import { Image } from 'astro:assets';
+import { generateImgxUrl } from '../utils/imgxUtils';
 
 export interface Props {
   post: CollectionEntry<'posts'>;
@@ -23,13 +23,13 @@ const summary = description || post.body.slice(0, 200) + '...';
 <div class="card bg-base-100 shadow-xl">
   <figure>
     <a href={postUrl}>
-      <Image
-        src={imagePath}
+      <img
+        src={imagePath.startsWith('http') || imagePath.startsWith('//') ? imagePath : generateImgxUrl(imagePath, 400, 225)}
         alt={title}
         class="object-cover w-full h-48"
         loading="lazy"
-        width={400} // Provide a default width
-        height={225} // Provide a default height (16/9 aspect ratio)
+        width="400"
+        height="225"
       />
     </a>
   </figure>

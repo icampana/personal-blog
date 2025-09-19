@@ -3,24 +3,14 @@ import type { CollectionEntry } from 'astro:content';
 import { getProjectUrl } from '../utils';
 import { normalizeImagePath } from '../utils/imageUtils';
 import { Image } from 'astro:assets';
-
-export interface Props {
-  project: CollectionEntry<'projects'>;
-}
-
-const { project } = Astro.props;
-const { title, description, galleryImage, techStack, liveUrl, repoUrl } =
-  project.data;
-
-const projectUrl = getProjectUrl(project);
-const imagePath = normalizeImagePath(galleryImage?.[0]);
+import { generateImgxUrl } from '../utils/imgxUtils';
 ---
 
 <div class="card bg-base-100 shadow-xl">
   <figure>
     <a href={projectUrl}>
       <Image
-        src={imagePath}
+        src={imagePath.startsWith('http') || imagePath.startsWith('//') ? imagePath : generateImgxUrl(imagePath, 400, 225)}
         alt={title}
         class="object-cover w-full h-48"
         loading="lazy"

@@ -6,19 +6,7 @@ import ShareButtons from '../components/ShareButtons';
 import { formatDate, getReadingTime } from '../utils';
 import { normalizeImagePath } from '../utils/imageUtils';
 import BlogLayout from './BlogLayout.astro';
-
-export interface Props {
-  post: CollectionEntry<'posts'>;
-}
-
-const { post } = Astro.props;
-const { title, description, featuredImage, tags, date } = post.data;
-const { Content } = await post.render();
-
-const readingTime = getReadingTime(post.body);
-const readingTimeText = `${Math.round(readingTime.minutes)} minutos`;
-
-const imagePath = normalizeImagePath(featuredImage);
+import { generateImgxUrl } from '../utils/imgxUtils';
 ---
 
 <BlogLayout
@@ -35,7 +23,7 @@ const imagePath = normalizeImagePath(featuredImage);
     {featuredImage && (
       <div class="mb-8">
         <Image
-          src={imagePath}
+          src={imagePath.startsWith('http') || imagePath.startsWith('//') ? imagePath : generateImgxUrl(imagePath, 1200, 675)}
           alt={title}
           class="w-full h-64 object-cover rounded-lg shadow-lg"
           loading="eager"

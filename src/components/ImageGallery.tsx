@@ -11,6 +11,11 @@ function generateImgxUrl(
 ): string {
   const IMGX_DOMAIN = import.meta.env.PUBLIC_IMGX_DOMAIN;
 
+  // If it's an external URL, return it as is.
+  if (originalSrc.startsWith('http') || originalSrc.startsWith('//')) {
+    return originalSrc;
+  }
+
   let imagePath = originalSrc;
 
   // If it's a relative path, remove the leading slash if present, as Imgix expects paths relative to the source root
