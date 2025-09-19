@@ -4,6 +4,7 @@ export function generateImgxUrl(
   height?: number,
   quality: number = 80,
   format: string = 'auto',
+  skipCrop: boolean = false,
 ): string {
   const IMGX_DOMAIN = import.meta.env.PUBLIC_IMGX_DOMAIN;
 
@@ -25,7 +26,11 @@ export function generateImgxUrl(
   if (height) params.set('h', height.toString());
   params.set('q', quality.toString());
   if (format !== 'auto') params.set('f', format);
-  params.set('fit', 'crop');
+
+  if (!skipCrop) {
+    params.set('fit', 'crop');
+  }
+  // Always set these parameters
   params.set('ar', '2:1');
   params.set('fill', 'solid');
   params.set('fill-color', 'gray');
