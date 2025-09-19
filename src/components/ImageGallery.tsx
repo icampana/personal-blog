@@ -60,7 +60,7 @@ const ImageGallery: React.FC<ImageGalleryProps> = ({
 
       switch (event.key) {
         case 'Escape':
-          setIsLightboxOpen(false);
+          closeLightbox();
           break;
         case 'ArrowLeft':
           goToPrevious();
@@ -104,6 +104,7 @@ const ImageGallery: React.FC<ImageGalleryProps> = ({
         {images.map((_, index) => (
           <div
             key={index}
+            data-testid="loading-placeholder"
             className="w-full h-64 bg-base-200 rounded-lg animate-pulse"
           />
         ))}
