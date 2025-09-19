@@ -2,7 +2,6 @@
 import type { CollectionEntry } from 'astro:content';
 import { getProjectUrl } from '../utils';
 import { normalizeImagePath } from '../utils/imageUtils';
-import { Image } from 'astro:assets';
 import { generateImgxUrl } from '../utils/imgxUtils';
 
 export interface Props {
@@ -20,7 +19,7 @@ const imagePath = normalizeImagePath(galleryImage?.[0]);
 <div class="card bg-base-100 shadow-xl">
   <figure>
     <a href={projectUrl}>
-      <Image
+      <img
         src={imagePath.startsWith('http') || imagePath.startsWith('//') ? imagePath : generateImgxUrl(imagePath, 400, 225)}
         alt={title}
         class="object-cover w-full h-48"

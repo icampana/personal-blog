@@ -1,7 +1,6 @@
 ---
 import type { CollectionEntry } from 'astro:content';
 import BackToTop from '../components/BackToTop';
-import { Image } from 'astro:assets';
 import ShareButtons from '../components/ShareButtons';
 import { formatDate, getReadingTime } from '../utils';
 import { normalizeImagePath } from '../utils/imageUtils';
@@ -35,7 +34,7 @@ const imagePath = normalizeImagePath(featuredImage);
     <!-- Featured Image -->
     {featuredImage && (
       <div class="mb-8">
-        <Image
+        <img
           src={imagePath.startsWith('http') || imagePath.startsWith('//') ? imagePath : generateImgxUrl(imagePath, 1200, 675)}
           alt={title}
           class="w-full h-64 object-cover rounded-lg shadow-lg"
