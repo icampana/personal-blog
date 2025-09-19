@@ -5,6 +5,7 @@
 [build.environment]
   NODE_VERSION = "20"
   PNPM_VERSION = "9"
+  NETLIFY_NEXT_PLUGIN_SKIP = "true"
 
 # Build settings
 [context.production]
