@@ -2,9 +2,14 @@ import type React from 'react';
 import { useCallback, useEffect, useState } from 'react';
 
 // Re-introduce generateImgxUrl and generateImgxSrcSet functions
-function generateImgxUrl(originalSrc: string, width: number, height?: number, quality: number = 80, format: string = 'auto'): string {
+function generateImgxUrl(
+  originalSrc: string,
+  width: number,
+  height?: number,
+  quality: number = 80,
+  format: string = 'auto',
+): string {
   const IMGX_DOMAIN = import.meta.env.PUBLIC_IMGX_DOMAIN;
-  const SITE_BASE_URL = import.meta.env.PUBLIC_SITE_BASE_URL;
 
   let imagePath = originalSrc;
 
@@ -25,7 +30,13 @@ function generateImgxUrl(originalSrc: string, width: number, height?: number, qu
   return `${IMGX_DOMAIN}/${imagePath}?${params.toString()}`;
 }
 
-function generateImgxSrcSet(originalSrc: string, width: number, height?: number, quality: number = 80, format: string = 'auto'): string {
+function generateImgxSrcSet(
+  originalSrc: string,
+  width: number,
+  height?: number,
+  quality: number = 80,
+  format: string = 'auto',
+): string {
   return [
     `${generateImgxUrl(originalSrc, Math.round(width * 0.5), height ? Math.round(height * 0.5) : undefined, quality, format)} ${Math.round(width * 0.5)}w`,
     `${generateImgxUrl(originalSrc, width, height, quality, format)} ${width}w`,
