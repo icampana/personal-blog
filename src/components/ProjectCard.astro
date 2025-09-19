@@ -4,6 +4,17 @@ import { getProjectUrl } from '../utils';
 import { normalizeImagePath } from '../utils/imageUtils';
 import { Image } from 'astro:assets';
 import { generateImgxUrl } from '../utils/imgxUtils';
+
+export interface Props {
+  project: CollectionEntry<'projects'>;
+}
+
+const { project } = Astro.props;
+const { title, description, galleryImage, techStack, liveUrl, repoUrl } =
+  project.data;
+
+const projectUrl = getProjectUrl(project);
+const imagePath = normalizeImagePath(galleryImage?.[0]);
 ---
 
 <div class="card bg-base-100 shadow-xl">
@@ -14,8 +25,8 @@ import { generateImgxUrl } from '../utils/imgxUtils';
         alt={title}
         class="object-cover w-full h-48"
         loading="lazy"
-        width={400} // Provide a default width
-        height={225} // Provide a default height (16/9 aspect ratio)
+        width="400"
+        height="225"
       />
     </a>
   </figure>
