@@ -4,7 +4,6 @@ categories:
 - Sin categoría
 comments: true
 date: 2006-07-10 21:52:00
-featuredImage: /photos/125e067ac32841a86fc20e71015e584b.png
 path: /2006/07/round-one-fig
 title: Round one, Fight!!!
 wordpress_id: 934
