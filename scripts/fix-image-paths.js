@@ -6,9 +6,9 @@
  */
 
 import fs from 'fs';
+import { glob } from 'glob';
 import path from 'path';
 import { fileURLToPath } from 'url';
-import { glob } from 'glob';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -28,42 +28,56 @@ function processFile(filePath) {
     const imageImportPattern = /!\[([^\]]*)\]\(\.\/([^)]+)\)/g;
 
     // Pattern to match markdown image references like ![alt](image.jpg) without ./
-    const relativeImagePattern = /!\[([^\]]*)\]\((?!http|\/|#)([^)]+\.(jpg|jpeg|png|gif|webp|svg))\)/gi;
+    const relativeImagePattern =
+      /!\[([^\]]*)\]\((?!http|\/|#)([^)]+\.(jpg|jpeg|png|gif|webp|svg))\)/gi;
 
     // Fix relative imports starting with ./
-    newContent = newContent.replace(imageImportPattern, (match, alt, imagePath) => {
-      console.log(`  Fixing image import: ${match}`);
-      modified = true;
-      return `![${alt}](/photos/${imagePath})`;
-    });
+    newContent = newContent.replace(
+      imageImportPattern,
+      (match, alt, imagePath) => {
+        console.log(`  Fixing image import: ${match}`);
+        modified = true;
+        return `![${alt}](/photos/${imagePath})`;
+      },
+    );
 
     // Fix relative image references without ./
-    newContent = newContent.replace(relativeImagePattern, (match, alt, imagePath, ext) => {
-      // Skip if it's already a proper path
-      if (imagePath.startsWith('/')) {
-        return match;
-      }
+    newContent = newContent.replace(
+      relativeImagePattern,
+      (match, alt, imagePath, ext) => {
+        // Skip if it's already a proper path
+        if (imagePath.startsWith('/')) {
+          return match;
+        }
 
-      console.log(`  Fixing relative image: ${match}`);
-      modified = true;
-      return `![${alt}](/photos/${imagePath})`;
-    });
+        console.log(`  Fixing relative image: ${match}`);
+        modified = true;
+        return `![${alt}](/photos/${imagePath})`;
+      },
+    );
 
     // Also fix HTML img tags with relative sources
     const htmlImgPattern = /<img([^>]*)\s+src=["']\.\/([^"']+)["']([^>]*)>/gi;
-    newContent = newContent.replace(htmlImgPattern, (match, beforeSrc, imagePath, afterSrc) => {
-      console.log(`  Fixing HTML img tag: ${match}`);
-      modified = true;
-      return `<img${beforeSrc} src="/photos/${imagePath}"${afterSrc}>`;
-    });
+    newContent = newContent.replace(
+      htmlImgPattern,
+      (match, beforeSrc, imagePath, afterSrc) => {
+        console.log(`  Fixing HTML img tag: ${match}`);
+        modified = true;
+        return `<img${beforeSrc} src="/photos/${imagePath}"${afterSrc}>`;
+      },
+    );
 
     // Fix HTML img tags with relative sources (no ./)
-    const htmlImgRelativePattern = /<img([^>]*)\s+src=["'](?!http|\/|#)([^"']+\.(jpg|jpeg|png|gif|webp|svg))["']([^>]*)>/gi;
-    newContent = newContent.replace(htmlImgRelativePattern, (match, beforeSrc, imagePath, ext, afterSrc) => {
-      console.log(`  Fixing HTML relative img: ${match}`);
-      modified = true;
-      return `<img${beforeSrc} src="/photos/${imagePath}"${afterSrc}>`;
-    });
+    const htmlImgRelativePattern =
+      /<img([^>]*)\s+src=["'](?!http|\/|#)([^"']+\.(jpg|jpeg|png|gif|webp|svg))["']([^>]*)>/gi;
+    newContent = newContent.replace(
+      htmlImgRelativePattern,
+      (match, beforeSrc, imagePath, ext, afterSrc) => {
+        console.log(`  Fixing HTML relative img: ${match}`);
+        modified = true;
+        return `<img${beforeSrc} src="/photos/${imagePath}"${afterSrc}>`;
+      },
+    );
 
     if (modified) {
       fs.writeFileSync(filePath, newContent, 'utf8');
@@ -114,14 +128,16 @@ async function main() {
 
   if (modifiedCount > 0) {
     console.log('\n🎉 Image path cleanup completed successfully!');
-    console.log('\n💡 Note: Make sure to copy your actual image files to the public/photos/ directory');
+    console.log(
+      '\n💡 Note: Make sure to copy your actual image files to the public/photos/ directory',
+    );
   } else {
     console.log('\n✨ All image paths were already correct!');
   }
 }
 
 // Run the script
-main().catch(error => {
+main().catch((error) => {
   console.error('❌ Script failed:', error);
   process.exit(1);
 });

@@ -6,9 +6,9 @@
  */
 
 import fs from 'fs';
+import { glob } from 'glob';
 import path from 'path';
 import { fileURLToPath } from 'url';
-import { glob } from 'glob';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -25,7 +25,7 @@ const performanceMetrics = {
   largeFiles: [],
   duplicateAssets: [],
   unusedAssets: [],
-  compressionOpportunities: []
+  compressionOpportunities: [],
 };
 
 /**
@@ -60,7 +60,8 @@ function getFileType(filePath) {
   if (['.js', '.mjs', '.ts'].includes(ext)) return 'js';
   if (['.css', '.scss', '.sass'].includes(ext)) return 'css';
   if (['.html', '.htm'].includes(ext)) return 'html';
-  if (['.jpg', '.jpeg', '.png', '.gif', '.webp', '.svg', '.ico'].includes(ext)) return 'images';
+  if (['.jpg', '.jpeg', '.png', '.gif', '.webp', '.svg', '.ico'].includes(ext))
+    return 'images';
 
   return 'other';
 }
@@ -94,7 +95,7 @@ async function analyzeBundleSizes() {
         file,
         size,
         type,
-        sizeFormatted: formatBytes(size)
+        sizeFormatted: formatBytes(size),
       });
     }
 
@@ -105,7 +106,7 @@ async function analyzeBundleSizes() {
         size,
         type,
         sizeFormatted: formatBytes(size),
-        potentialSavings: Math.round(size * 0.7) // Estimate 70% compression
+        potentialSavings: Math.round(size * 0.7), // Estimate 70% compression
       });
     }
   }
@@ -141,7 +142,7 @@ function analyzeLargeFiles() {
   performanceMetrics.largeFiles
     .sort((a, b) => b.size - a.size)
     .slice(0, 10)
-    .forEach(file => {
+    .forEach((file) => {
       console.log(`  ${file.sizeFormatted} - ${file.file}`);
     });
 
@@ -161,16 +162,20 @@ function analyzeCompressionOpportunities() {
 
   console.log('\n💡 Compression Opportunities (>10KB text files):');
 
-  const totalSavings = performanceMetrics.compressionOpportunities
-    .reduce((sum, file) => sum + file.potentialSavings, 0);
+  const totalSavings = performanceMetrics.compressionOpportunities.reduce(
+    (sum, file) => sum + file.potentialSavings,
+    0,
+  );
 
   console.log(`  Potential savings: ${formatBytes(totalSavings)}`);
 
   performanceMetrics.compressionOpportunities
     .sort((a, b) => b.size - a.size)
     .slice(0, 5)
-    .forEach(file => {
-      console.log(`  ${file.sizeFormatted} → ~${formatBytes(file.size - file.potentialSavings)} - ${file.file}`);
+    .forEach((file) => {
+      console.log(
+        `  ${file.sizeFormatted} → ~${formatBytes(file.size - file.potentialSavings)} - ${file.file}`,
+      );
     });
 }
 
@@ -188,14 +193,22 @@ async function analyzeAstroOptimizations() {
       return sum + getFileSize(path.join(astroDir, file));
     }, 0);
 
-    console.log(`✅ Astro optimized assets: ${astroFiles.length} files, ${formatBytes(astroSize)}`);
+    console.log(
+      `✅ Astro optimized assets: ${astroFiles.length} files, ${formatBytes(astroSize)}`,
+    );
   }
 
   // Check for static assets
-  const staticAssets = await glob('**/*.{js,css,png,jpg,jpeg,gif,webp,svg}', { cwd: DIST_DIR });
-  const hashedAssets = staticAssets.filter(file => /\.[a-f0-9]{8,}\./i.test(file));
+  const staticAssets = await glob('**/*.{js,css,png,jpg,jpeg,gif,webp,svg}', {
+    cwd: DIST_DIR,
+  });
+  const hashedAssets = staticAssets.filter((file) =>
+    /\.[a-f0-9]{8,}\./i.test(file),
+  );
 
-  console.log(`✅ Hashed assets for caching: ${hashedAssets.length}/${staticAssets.length}`);
+  console.log(
+    `✅ Hashed assets for caching: ${hashedAssets.length}/${staticAssets.length}`,
+  );
 
   // Check for HTML files (SSG)
   const htmlFiles = await glob('**/*.html', { cwd: DIST_DIR });
@@ -266,7 +279,7 @@ async function checkPerformanceBestPractices() {
     checks.push('❌ File count is high (>200 files) - consider bundling');
   }
 
-  checks.forEach(check => console.log(check));
+  checks.forEach((check) => console.log(check));
 }
 
 /**
@@ -279,20 +292,28 @@ function generateRecommendations() {
 
   // Bundle size recommendations
   if (performanceMetrics.bundleSize.total > 10 * 1024 * 1024) {
-    recommendations.push('🔧 Consider code splitting and lazy loading for large bundles');
+    recommendations.push(
+      '🔧 Consider code splitting and lazy loading for large bundles',
+    );
   }
 
   if (performanceMetrics.bundleSize.js > 2 * 1024 * 1024) {
-    recommendations.push('🔧 Optimize JavaScript bundle with tree shaking and minification');
+    recommendations.push(
+      '🔧 Optimize JavaScript bundle with tree shaking and minification',
+    );
   }
 
   if (performanceMetrics.bundleSize.images > 5 * 1024 * 1024) {
-    recommendations.push('🔧 Optimize images with WebP format and responsive sizing');
+    recommendations.push(
+      '🔧 Optimize images with WebP format and responsive sizing',
+    );
   }
 
   // Large files recommendations
   if (performanceMetrics.largeFiles.length > 0) {
-    recommendations.push('🔧 Review large files and consider splitting or optimization');
+    recommendations.push(
+      '🔧 Review large files and consider splitting or optimization',
+    );
   }
 
   // Compression recommendations
@@ -310,7 +331,7 @@ function generateRecommendations() {
   if (recommendations.length === 0) {
     console.log('✅ No specific recommendations - performance looks good!');
   } else {
-    recommendations.forEach(rec => console.log(rec));
+    recommendations.forEach((rec) => console.log(rec));
   }
 }
 
@@ -331,10 +352,14 @@ async function main() {
   console.log('\n' + '='.repeat(50));
   console.log('📋 PERFORMANCE ANALYSIS SUMMARY');
   console.log('='.repeat(50));
-  console.log(`Total Bundle Size: ${formatBytes(performanceMetrics.bundleSize.total)}`);
+  console.log(
+    `Total Bundle Size: ${formatBytes(performanceMetrics.bundleSize.total)}`,
+  );
   console.log(`Total Files: ${performanceMetrics.fileCount.total}`);
   console.log(`Large Files: ${performanceMetrics.largeFiles.length}`);
-  console.log(`Compression Opportunities: ${performanceMetrics.compressionOpportunities.length}`);
+  console.log(
+    `Compression Opportunities: ${performanceMetrics.compressionOpportunities.length}`,
+  );
   console.log('='.repeat(50));
 
   const totalSizeMB = performanceMetrics.bundleSize.total / (1024 * 1024);

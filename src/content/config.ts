@@ -15,7 +15,7 @@ const posts = defineCollection({
     comments: z.boolean().optional(),
     layout: z.string().optional(),
     categories: z.array(z.string()).optional(),
-  })
+  }),
 });
 
 const pages = defineCollection({
@@ -30,7 +30,7 @@ const pages = defineCollection({
     author: z.string().optional(),
     comments: z.boolean().optional(),
     layout: z.string().optional(),
-  })
+  }),
 });
 
 const projects = defineCollection({
@@ -44,7 +44,7 @@ const projects = defineCollection({
     techStack: z.array(z.string()).optional(),
     liveUrl: z.string().optional(),
     repoUrl: z.string().optional(),
-  })
+  }),
 });
 
 export const collections = {

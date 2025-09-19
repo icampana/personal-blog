@@ -1,5 +1,6 @@
-import React, { useEffect, useState } from 'react';
 import Fuse, { type FuseIndex } from 'fuse.js';
+import type React from 'react';
+import { useEffect, useState } from 'react';
 import { formatDate } from '../utils';
 
 type SearchResult = {
@@ -70,20 +71,28 @@ const SearchResults: React.FC = () => {
 
   const getTypeLabel = (type: string) => {
     switch (type) {
-      case 'post': return 'Artículo';
-      case 'page': return 'Página';
-      case 'project': return 'Proyecto';
-      default: return type;
+      case 'post':
+        return 'Artículo';
+      case 'page':
+        return 'Página';
+      case 'project':
+        return 'Proyecto';
+      default:
+        return type;
     }
   };
 
   const getTypeBadge = (type: string) => {
-    const baseClass = "badge badge-sm";
+    const baseClass = 'badge badge-sm';
     switch (type) {
-      case 'post': return `${baseClass} badge-primary`;
-      case 'page': return `${baseClass} badge-secondary`;
-      case 'project': return `${baseClass} badge-accent`;
-      default: return `${baseClass} badge-outline`;
+      case 'post':
+        return `${baseClass} badge-primary`;
+      case 'page':
+        return `${baseClass} badge-secondary`;
+      case 'project':
+        return `${baseClass} badge-accent`;
+      default:
+        return `${baseClass} badge-outline`;
     }
   };
 
@@ -100,7 +109,8 @@ const SearchResults: React.FC = () => {
       {searchQuery && searchResults.length === 0 && (
         <div className="text-center py-8">
           <p className="text-lg text-base-content/70 mb-4">
-            No se encontró ningún resultado para "<strong>{searchQuery}</strong>"
+            No se encontró ningún resultado para "<strong>{searchQuery}</strong>
+            "
           </p>
           <p className="text-sm text-base-content/60">
             Intenta con términos diferentes o más generales
@@ -112,7 +122,9 @@ const SearchResults: React.FC = () => {
         <div>
           <div className="mb-4">
             <p className="text-sm text-base-content/70">
-              {searchResults.length} resultado{searchResults.length !== 1 ? 's' : ''} para "<strong>{searchQuery}</strong>"
+              {searchResults.length} resultado
+              {searchResults.length !== 1 ? 's' : ''} para "
+              <strong>{searchQuery}</strong>"
             </p>
           </div>
 
@@ -120,12 +132,18 @@ const SearchResults: React.FC = () => {
             {searchResults.map(({ item }, idx) => {
               const result = item as SearchResult;
               return (
-                <div key={`${result.url}-${idx}`} className="card bg-base-100 shadow-sm border border-base-300">
+                <div
+                  key={`${result.url}-${idx}`}
+                  className="card bg-base-100 shadow-sm border border-base-300"
+                >
                   <div className="card-body p-4">
                     <div className="flex items-start justify-between gap-4">
                       <div className="flex-1">
                         <h3 className="card-title text-lg mb-2">
-                          <a href={result.url} className="link link-primary hover:link-hover">
+                          <a
+                            href={result.url}
+                            className="link link-primary hover:link-hover"
+                          >
                             {result.title}
                           </a>
                         </h3>
@@ -146,7 +164,10 @@ const SearchResults: React.FC = () => {
                           {result.tags && result.tags.length > 0 && (
                             <div className="flex gap-1">
                               {result.tags.slice(0, 3).map((tag, tagIdx) => (
-                                <span key={tagIdx} className="badge badge-outline badge-xs">
+                                <span
+                                  key={tagIdx}
+                                  className="badge badge-outline badge-xs"
+                                >
                                   {tag}
                                 </span>
                               ))}

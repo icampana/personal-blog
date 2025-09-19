@@ -1,5 +1,5 @@
-import { describe, it, expect, vi, beforeEach } from 'vitest';
-import { render, screen, fireEvent, waitFor } from '@testing-library/react';
+import { fireEvent, render, screen, waitFor } from '@testing-library/react';
+import { beforeEach, describe, expect, it, vi } from 'vitest';
 import SearchComponent from '../../components/SearchComponent';
 
 // Mock fetch
@@ -11,15 +11,15 @@ const mockSearchData = [
     content: 'This is a test post about JavaScript',
     url: '/posts/test-post-1',
     tags: ['javascript', 'test'],
-    date: '2023-01-15'
+    date: '2023-01-15',
   },
   {
     title: 'Test Post 2',
     content: 'This is another test post about React',
     url: '/posts/test-post-2',
     tags: ['react', 'test'],
-    date: '2023-01-10'
-  }
+    date: '2023-01-10',
+  },
 ];
 
 describe('SearchComponent', () => {
@@ -68,7 +68,9 @@ describe('SearchComponent', () => {
     fireEvent.change(searchInput, { target: { value: 'nonexistent' } });
 
     await waitFor(() => {
-      expect(screen.getByText(/no se encontraron resultados/i)).toBeInTheDocument();
+      expect(
+        screen.getByText(/no se encontraron resultados/i),
+      ).toBeInTheDocument();
     });
   });
 

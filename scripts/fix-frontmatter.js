@@ -6,9 +6,9 @@
  */
 
 import fs from 'fs';
+import { glob } from 'glob';
 import path from 'path';
 import { fileURLToPath } from 'url';
-import { glob } from 'glob';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -24,13 +24,13 @@ function fixDateFormat(content) {
   // Replace ISO date strings with simple YYYY-MM-DD format
   fixedContent = fixedContent.replace(
     /date:\s*(\d{4}-\d{2}-\d{2})T\d{2}:\d{2}:\d{2}(\.\d{3})?Z?/g,
-    'date: $1'
+    'date: $1',
   );
 
   // Fix WordPress-style dates with timezone offset
   fixedContent = fixedContent.replace(
     /date:\s*(\d{4}-\d{2}-\d{2})\+\d{2}:\d{2}/g,
-    'date: $1'
+    'date: $1',
   );
 
   return fixedContent;
@@ -66,7 +66,7 @@ async function main() {
   // Find all markdown files in content directory
   const markdownFiles = await glob('**/*.md', {
     cwd: CONTENT_DIR,
-    absolute: true
+    absolute: true,
   });
 
   console.log(`Found ${markdownFiles.length} markdown files\n`);

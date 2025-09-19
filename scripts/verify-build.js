@@ -13,7 +13,6 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 const DIST_DIR = path.join(__dirname, '../dist');
-const PUBLIC_DIR = path.join(__dirname, '../public');
 
 /**
  * Check if a file or directory exists
@@ -148,7 +147,10 @@ function verifySitemap() {
     const sitemapContent = fs.readFileSync(sitemapPath, 'utf8');
 
     // Basic XML validation
-    if (!sitemapContent.includes('<?xml') || !sitemapContent.includes('<sitemapindex')) {
+    if (
+      !sitemapContent.includes('<?xml') ||
+      !sitemapContent.includes('<sitemapindex')
+    ) {
       console.log('❌ Sitemap format invalid');
       return false;
     }
@@ -204,7 +206,9 @@ function verifyBuildSize() {
   console.log('\n📊 Build size analysis...\n');
 
   const totalSize = getDirectorySizeKB(DIST_DIR);
-  console.log(`📦 Total build size: ${totalSize} KB (${Math.round(totalSize / 1024)} MB)`);
+  console.log(
+    `📦 Total build size: ${totalSize} KB (${Math.round(totalSize / 1024)} MB)`,
+  );
 
   // Check individual directories
   const directories = ['_astro', 'assets', 'images', 'photos'];
@@ -218,7 +222,8 @@ function verifyBuildSize() {
   }
 
   // Warn if build is too large
-  if (totalSize > 50000) { // 50MB
+  if (totalSize > 50000) {
+    // 50MB
     console.log('⚠️  Build size is quite large (>50MB)');
   } else {
     console.log('✅ Build size is reasonable');

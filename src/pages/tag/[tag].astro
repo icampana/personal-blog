@@ -1,7 +1,7 @@
 ---
 import { getCollection } from 'astro:content';
-import BlogLayout from '../../layouts/BlogLayout.astro';
 import PostCard from '../../components/PostCard.astro';
+import BlogLayout from '../../layouts/BlogLayout.astro';
 import { getAllTags, getPostsByTag, sortPostsByDate } from '../../utils';
 
 export async function getStaticPaths() {

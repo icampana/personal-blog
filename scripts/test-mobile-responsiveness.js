@@ -6,9 +6,9 @@
  */
 
 import fs from 'fs';
+import { glob } from 'glob';
 import path from 'path';
 import { fileURLToPath } from 'url';
-import { glob } from 'glob';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -23,7 +23,7 @@ const responsiveTests = {
   images: { passed: 0, failed: 0, errors: [] },
   typography: { passed: 0, failed: 0, errors: [] },
   layout: { passed: 0, failed: 0, errors: [] },
-  navigation: { passed: 0, failed: 0, errors: [] }
+  navigation: { passed: 0, failed: 0, errors: [] },
 };
 
 /**
@@ -52,13 +52,15 @@ async function testViewportMeta() {
         issues: [
           !hasViewport && 'Missing viewport meta tag',
           !hasResponsiveViewport && 'Missing width=device-width',
-          !hasInitialScale && 'Missing initial-scale=1'
-        ].filter(Boolean)
+          !hasInitialScale && 'Missing initial-scale=1',
+        ].filter(Boolean),
       });
     }
   }
 
-  console.log(`✅ Viewport tests: ${responsiveTests.viewport.passed}/${htmlFiles.length} passed`);
+  console.log(
+    `✅ Viewport tests: ${responsiveTests.viewport.passed}/${htmlFiles.length} passed`,
+  );
   if (responsiveTests.viewport.failed > 0) {
     console.log(`❌ Failed: ${responsiveTests.viewport.failed} files`);
   }
@@ -78,7 +80,6 @@ async function testResponsiveImages() {
 
     // Find all img tags
     const imgTags = content.match(/<img[^>]*>/g) || [];
-    let passedImages = 0;
     let failedImages = 0;
     const imageIssues = [];
 
@@ -115,14 +116,18 @@ async function testResponsiveImages() {
         file,
         totalImages: imgTags.length,
         failedImages,
-        issues: imageIssues.slice(0, 3) // Limit to first 3 issues
+        issues: imageIssues.slice(0, 3), // Limit to first 3 issues
       });
     }
   }
 
-  console.log(`✅ Image responsiveness: ${responsiveTests.images.passed}/${htmlFiles.length} files passed`);
+  console.log(
+    `✅ Image responsiveness: ${responsiveTests.images.passed}/${htmlFiles.length} files passed`,
+  );
   if (responsiveTests.images.failed > 0) {
-    console.log(`❌ Failed: ${responsiveTests.images.failed} files with image issues`);
+    console.log(
+      `❌ Failed: ${responsiveTests.images.failed} files with image issues`,
+    );
   }
 }
 
@@ -141,12 +146,20 @@ async function testResponsiveTypography() {
     const content = fs.readFileSync(filePath, 'utf8');
 
     // Check for responsive text classes
-    if (content.includes('text-sm') || content.includes('text-base') || content.includes('text-lg')) {
+    if (
+      content.includes('text-sm') ||
+      content.includes('text-base') ||
+      content.includes('text-lg')
+    ) {
       hasResponsiveText = true;
     }
 
     // Check for fluid typography (clamp, vw units, etc.)
-    if (content.includes('clamp(') || content.includes('vw') || content.includes('@media')) {
+    if (
+      content.includes('clamp(') ||
+      content.includes('vw') ||
+      content.includes('@media')
+    ) {
       hasFluidTypography = true;
     }
   }
@@ -164,7 +177,9 @@ async function testResponsiveTypography() {
     console.log('✅ Fluid typography patterns found');
   } else {
     responsiveTests.typography.failed++;
-    responsiveTests.typography.errors.push('No fluid typography patterns found');
+    responsiveTests.typography.errors.push(
+      'No fluid typography patterns found',
+    );
   }
 }
 
@@ -184,7 +199,11 @@ async function testResponsiveLayout() {
     const content = fs.readFileSync(filePath, 'utf8');
 
     // Check for grid system
-    if (content.includes('grid-cols') || content.includes('display:grid') || content.includes('grid-template')) {
+    if (
+      content.includes('grid-cols') ||
+      content.includes('display:grid') ||
+      content.includes('grid-template')
+    ) {
       hasGridSystem = true;
     }
 
@@ -194,7 +213,12 @@ async function testResponsiveLayout() {
     }
 
     // Check for responsive breakpoints
-    if (content.includes('sm:') || content.includes('md:') || content.includes('lg:') || content.includes('@media')) {
+    if (
+      content.includes('sm:') ||
+      content.includes('md:') ||
+      content.includes('lg:') ||
+      content.includes('@media')
+    ) {
       hasBreakpoints = true;
     }
   }
@@ -235,22 +259,34 @@ async function testMobileNavigation() {
   let hasHamburgerIcon = false;
   let hasResponsiveNav = false;
 
-  for (const file of htmlFiles.slice(0, 5)) { // Check first 5 files
+  for (const file of htmlFiles.slice(0, 5)) {
+    // Check first 5 files
     const filePath = path.join(DIST_DIR, file);
     const content = fs.readFileSync(filePath, 'utf8');
 
     // Check for mobile menu patterns
-    if (content.includes('mobile-menu') || content.includes('menu-toggle') || content.includes('navbar-toggle')) {
+    if (
+      content.includes('mobile-menu') ||
+      content.includes('menu-toggle') ||
+      content.includes('navbar-toggle')
+    ) {
       hasMobileMenu = true;
     }
 
     // Check for hamburger icon
-    if (content.includes('hamburger') || content.includes('menu-icon') || content.includes('☰')) {
+    if (
+      content.includes('hamburger') ||
+      content.includes('menu-icon') ||
+      content.includes('☰')
+    ) {
       hasHamburgerIcon = true;
     }
 
     // Check for responsive navigation classes
-    if (content.includes('hidden') && content.includes('md:block') || content.includes('sm:hidden')) {
+    if (
+      (content.includes('hidden') && content.includes('md:block')) ||
+      content.includes('sm:hidden')
+    ) {
       hasResponsiveNav = true;
     }
   }
@@ -260,7 +296,9 @@ async function testMobileNavigation() {
     console.log('✅ Mobile menu implementation found');
   } else {
     responsiveTests.navigation.failed++;
-    responsiveTests.navigation.errors.push('No mobile menu implementation found');
+    responsiveTests.navigation.errors.push(
+      'No mobile menu implementation found',
+    );
   }
 
   if (hasHamburgerIcon) {
@@ -276,7 +314,9 @@ async function testMobileNavigation() {
     console.log('✅ Responsive navigation classes found');
   } else {
     responsiveTests.navigation.failed++;
-    responsiveTests.navigation.errors.push('No responsive navigation classes found');
+    responsiveTests.navigation.errors.push(
+      'No responsive navigation classes found',
+    );
   }
 }
 
@@ -301,7 +341,9 @@ function generateResponsivenessReport() {
     console.log(`  Passed: ${results.passed}`);
     console.log(`  Failed: ${results.failed}`);
     if (categoryTotal > 0) {
-      console.log(`  Success Rate: ${Math.round((results.passed / categoryTotal) * 100)}%`);
+      console.log(
+        `  Success Rate: ${Math.round((results.passed / categoryTotal) * 100)}%`,
+      );
     }
     console.log('');
   });
@@ -310,45 +352,11 @@ function generateResponsivenessReport() {
   console.log(`  Total Tests: ${totalTests}`);
   console.log(`  Passed: ${totalPassed}`);
   console.log(`  Failed: ${totalFailed}`);
-  console.log(`  Success Rate: ${Math.round((totalPassed / totalTests) * 100)}%`);
+  console.log(
+    `  Success Rate: ${Math.round((totalPassed / totalTests) * 100)}%`,
+  );
 
   return totalFailed === 0;
-}
-
-/**
- * Display detailed errors
- */
-function displayResponsivenessErrors() {
-  let hasErrors = false;
-
-  Object.entries(responsiveTests).forEach(([category, results]) => {
-    if (results.errors && results.errors.length > 0) {
-      if (!hasErrors) {
-        console.log('\n❌ Detailed Responsiveness Issues:');
-        console.log('='.repeat(50));
-        hasErrors = true;
-      }
-
-      console.log(`\n${category.toUpperCase()} Issues:`);
-
-      results.errors.slice(0, 3).forEach(error => {
-        if (typeof error === 'string') {
-          console.log(`  - ${error}`);
-        } else {
-          console.log(`  ${error.file}:`);
-          if (error.issues) {
-            error.issues.forEach(issue => console.log(`    - ${issue}`));
-          }
-        }
-      });
-
-      if (results.errors.length > 3) {
-        console.log(`  ... and ${results.errors.length - 3} more issues`);
-      }
-    }
-  });
-
-  return hasErrors;
 }
 
 /**
@@ -364,7 +372,9 @@ function generateMobileRecommendations() {
   }
 
   if (responsiveTests.images.failed > 0) {
-    recommendations.push('🖼️  Implement responsive images with proper loading and alt attributes');
+    recommendations.push(
+      '🖼️  Implement responsive images with proper loading and alt attributes',
+    );
   }
 
   if (responsiveTests.typography.failed > 0) {
@@ -372,11 +382,15 @@ function generateMobileRecommendations() {
   }
 
   if (responsiveTests.layout.failed > 0) {
-    recommendations.push('📐 Implement responsive layout with CSS Grid and Flexbox');
+    recommendations.push(
+      '📐 Implement responsive layout with CSS Grid and Flexbox',
+    );
   }
 
   if (responsiveTests.navigation.failed > 0) {
-    recommendations.push('🧭 Add mobile-friendly navigation with hamburger menu');
+    recommendations.push(
+      '🧭 Add mobile-friendly navigation with hamburger menu',
+    );
   }
 
   // General mobile recommendations
@@ -389,7 +403,7 @@ function generateMobileRecommendations() {
   if (recommendations.length === 0) {
     console.log('✅ Mobile responsiveness looks good!');
   } else {
-    recommendations.forEach(rec => console.log(rec));
+    recommendations.forEach((rec) => console.log(rec));
   }
 }
 
@@ -413,9 +427,6 @@ async function main() {
 
   // Generate report
   const allTestsPassed = generateResponsivenessReport();
-
-  // Display errors
-  const hasErrors = displayResponsivenessErrors();
 
   // Generate recommendations
   generateMobileRecommendations();

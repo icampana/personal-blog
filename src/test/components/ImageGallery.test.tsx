@@ -1,5 +1,5 @@
-import { describe, it, expect, vi, beforeEach } from 'vitest';
-import { render, screen, fireEvent, waitFor } from '@testing-library/react';
+import { fireEvent, render, screen, waitFor } from '@testing-library/react';
+import { beforeEach, describe, expect, it, vi } from 'vitest';
 import ImageGallery from '../../components/ImageGallery';
 
 // Mock Image constructor
@@ -20,7 +20,7 @@ global.Image = class {
 const mockImages = [
   '/images/test1.jpg',
   '/images/test2.jpg',
-  '/images/test3.jpg'
+  '/images/test3.jpg',
 ];
 
 describe('ImageGallery', () => {
@@ -120,19 +120,23 @@ describe('ImageGallery', () => {
   });
 
   it('should support lazy loading', () => {
-    render(<ImageGallery images={mockImages} title="Test Gallery" lazy={true} />);
+    render(
+      <ImageGallery images={mockImages} title="Test Gallery" lazy={true} />,
+    );
 
     const images = screen.getAllByRole('img');
-    images.forEach(img => {
+    images.forEach((img) => {
       expect(img).toHaveAttribute('loading', 'lazy');
     });
   });
 
   it('should support eager loading', () => {
-    render(<ImageGallery images={mockImages} title="Test Gallery" lazy={false} />);
+    render(
+      <ImageGallery images={mockImages} title="Test Gallery" lazy={false} />,
+    );
 
     const images = screen.getAllByRole('img');
-    images.forEach(img => {
+    images.forEach((img) => {
       expect(img).toHaveAttribute('loading', 'eager');
     });
   });

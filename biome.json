@@ -13,8 +13,17 @@
       "!**/.astro",
       "!**/.netlify",
       "!**/.husky",
+      "!**/.contentlayer",
+      "!**/.migration-backup",
       "!**/node_modules",
-      "!**/dist"
+      "!**/dist",
+      "!**/public/admin",
+      "!**/tina/__generated__/",
+      "!**/src/styles/globals.css",
+      "!**/src/**/*.astro",
+      "!**/src/components/*.astro",
+      "!**/astro-blog",
+      "!**/scripts"
     ]
   },
   "formatter": {

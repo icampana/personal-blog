@@ -1,5 +1,5 @@
 import { getCollection } from 'astro:content';
-import { getPostUrl, getPageUrl, getProjectUrl } from '../utils';
+import { getPageUrl, getPostUrl, getProjectUrl } from '../utils';
 
 export async function GET() {
   const siteUrl = 'https://ivan.campananaranjo.com';
@@ -21,47 +21,51 @@ export async function GET() {
   // Generate sitemap entries
   const sitemapEntries = [
     // Static pages
-    ...staticPages.map(page => ({
+    ...staticPages.map((page) => ({
       url: `${siteUrl}${page.url}`,
       lastmod: new Date().toISOString().split('T')[0],
       changefreq: page.changefreq,
-      priority: page.priority
+      priority: page.priority,
     })),
 
     // Blog posts
-    ...posts.map(post => ({
+    ...posts.map((post) => ({
       url: `${siteUrl}${getPostUrl(post)}`,
       lastmod: post.data.date.toISOString().split('T')[0],
       changefreq: 'monthly',
-      priority: '0.8'
+      priority: '0.8',
     })),
 
     // Pages
-    ...pages.map(page => ({
+    ...pages.map((page) => ({
       url: `${siteUrl}${getPageUrl(page)}`,
       lastmod: page.data.date.toISOString().split('T')[0],
       changefreq: 'monthly',
-      priority: '0.7'
+      priority: '0.7',
     })),
 
     // Projects
-    ...projects.map(project => ({
+    ...projects.map((project) => ({
       url: `${siteUrl}${getProjectUrl(project)}`,
       lastmod: project.data.date.toISOString().split('T')[0],
       changefreq: 'monthly',
-      priority: '0.7'
+      priority: '0.7',
     })),
   ];
 
   // Generate XML
   const xml = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-${sitemapEntries.map(entry => `  <url>
+${sitemapEntries
+  .map(
+    (entry) => `  <url>
     <loc>${entry.url}</loc>
     <lastmod>${entry.lastmod}</lastmod>
     <changefreq>${entry.changefreq}</changefreq>
     <priority>${entry.priority}</priority>
-  </url>`).join('\n')}
+  </url>`,
+  )
+  .join('\n')}
 </urlset>`;
 
   return new Response(xml, {

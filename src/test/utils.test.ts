@@ -1,15 +1,15 @@
-import { describe, it, expect, beforeEach } from 'vitest';
+import type { CollectionEntry } from 'astro:content';
+import { beforeEach, describe, expect, it } from 'vitest';
 import {
   formatDate,
-  getReadingTime,
-  getPostUrl,
-  getPageUrl,
-  getProjectUrl,
   getAllTags,
+  getPageUrl,
   getPostsByTag,
-  sortPostsByDate
+  getPostUrl,
+  getProjectUrl,
+  getReadingTime,
+  sortPostsByDate,
 } from '../utils';
-import type { CollectionEntry } from 'astro:content';
 
 // Mock data
 const mockPost: CollectionEntry<'posts'> = {
@@ -72,7 +72,10 @@ describe('Utility Functions', () => {
 
   describe('getReadingTime', () => {
     it('should calculate reading time for content', () => {
-      const content = 'This is a test content with multiple words that should take some time to read. '.repeat(50);
+      const content =
+        'This is a test content with multiple words that should take some time to read. '.repeat(
+          50,
+        );
       const readingTime = getReadingTime(content);
       expect(readingTime.minutes).toBeGreaterThan(0);
       expect(readingTime.text).toContain('min');
@@ -93,7 +96,7 @@ describe('Utility Functions', () => {
     it('should generate correct post URL with custom path', () => {
       const postWithPath = {
         ...mockPost,
-        data: { ...mockPost.data, path: '/custom/path' }
+        data: { ...mockPost.data, path: '/custom/path' },
       };
       const url = getPostUrl(postWithPath);
       expect(url).toBe('/posts/custom/path');
@@ -107,7 +110,7 @@ describe('Utility Functions', () => {
     it('should generate correct page URL without custom path', () => {
       const pageWithoutPath = {
         ...mockPage,
-        data: { ...mockPage.data, path: undefined }
+        data: { ...mockPage.data, path: undefined },
       };
       const url = getPageUrl(pageWithoutPath);
       expect(url).toBe('/content/about');
@@ -126,14 +129,14 @@ describe('Utility Functions', () => {
         ...mockPost,
         id: 'post2.md',
         slug: 'post2',
-        data: { ...mockPost.data, tags: ['javascript', 'react'] }
+        data: { ...mockPost.data, tags: ['javascript', 'react'] },
       },
       {
         ...mockPost,
         id: 'post3.md',
         slug: 'post3',
-        data: { ...mockPost.data, tags: ['python'] }
-      }
+        data: { ...mockPost.data, tags: ['python'] },
+      },
     ] as CollectionEntry<'posts'>[];
 
     it('should get all unique tags', () => {
@@ -148,7 +151,9 @@ describe('Utility Functions', () => {
     it('should get posts by tag', () => {
       const jsPosts = getPostsByTag(mockPosts, 'javascript');
       expect(jsPosts.length).toBe(2);
-      expect(jsPosts.every(post => post.data.tags?.includes('javascript'))).toBe(true);
+      expect(
+        jsPosts.every((post) => post.data.tags?.includes('javascript')),
+      ).toBe(true);
     });
 
     it('should return empty array for non-existent tag', () => {
@@ -160,14 +165,27 @@ describe('Utility Functions', () => {
   describe('sortPostsByDate', () => {
     it('should sort posts by date descending', () => {
       const posts = [
-        { ...mockPost, data: { ...mockPost.data, date: new Date('2023-01-01') } },
-        { ...mockPost, data: { ...mockPost.data, date: new Date('2023-01-15') } },
-        { ...mockPost, data: { ...mockPost.data, date: new Date('2023-01-10') } },
+        {
+          ...mockPost,
+          data: { ...mockPost.data, date: new Date('2023-01-01') },
+        },
+        {
+          ...mockPost,
+          data: { ...mockPost.data, date: new Date('2023-01-15') },
+        },
+        {
+          ...mockPost,
+          data: { ...mockPost.data, date: new Date('2023-01-10') },
+        },
       ] as CollectionEntry<'posts'>[];
 
       const sorted = sortPostsByDate(posts);
-      expect(sorted[0].data.date.getTime()).toBeGreaterThan(sorted[1].data.date.getTime());
-      expect(sorted[1].data.date.getTime()).toBeGreaterThan(sorted[2].data.date.getTime());
+      expect(sorted[0].data.date.getTime()).toBeGreaterThan(
+        sorted[1].data.date.getTime(),
+      );
+      expect(sorted[1].data.date.getTime()).toBeGreaterThan(
+        sorted[2].data.date.getTime(),
+      );
     });
   });
 });

@@ -24,7 +24,7 @@ const testResults = {
   contentRendering: { passed: false, error: null },
   build: { passed: false, error: null },
   buildVerification: { passed: false, error: null },
-  performanceAnalysis: { passed: false, error: null }
+  performanceAnalysis: { passed: false, error: null },
 };
 
 /**
@@ -37,7 +37,7 @@ function runCommand(command, description) {
     const output = execSync(command, {
       encoding: 'utf8',
       stdio: 'pipe',
-      cwd: path.join(__dirname, '..')
+      cwd: path.join(__dirname, '..'),
     });
 
     console.log(`✅ ${description} passed`);
@@ -103,7 +103,10 @@ function runBuildVerification() {
  * Run performance analysis
  */
 function runPerformanceAnalysis() {
-  return runCommand('node scripts/analyze-performance.js', 'Performance analysis');
+  return runCommand(
+    'node scripts/analyze-performance.js',
+    'Performance analysis',
+  );
 }
 
 /**
@@ -117,7 +120,7 @@ function checkCriticalFiles() {
     'dist/search-index.json',
     'dist/rss.xml',
     'dist/sitemap-index.xml',
-    'dist/404.html'
+    'dist/404.html',
   ];
 
   const missingFiles = [];
@@ -134,7 +137,10 @@ function checkCriticalFiles() {
     return { passed: true, error: null };
   } else {
     console.log(`❌ Missing critical files: ${missingFiles.join(', ')}`);
-    return { passed: false, error: `Missing files: ${missingFiles.join(', ')}` };
+    return {
+      passed: false,
+      error: `Missing files: ${missingFiles.join(', ')}`,
+    };
   }
 }
 
@@ -149,7 +155,7 @@ function testSampleUrls() {
     'dist/posts/index.html',
     'dist/portafolio/index.html',
     'dist/search/index.html',
-    'dist/404.html'
+    'dist/404.html',
   ];
 
   const missingUrls = [];
@@ -263,7 +269,7 @@ async function main() {
   process.exit(allTestsPassed ? 0 : 1);
 }
 
-main().catch(error => {
+main().catch((error) => {
   console.error('❌ Final testing failed:', error);
   process.exit(1);
 });

@@ -1,7 +1,7 @@
 ---
 import { getCollection } from 'astro:content';
-import BlogLayout from '../../layouts/BlogLayout.astro';
 import TagList from '../../components/TagList.astro';
+import BlogLayout from '../../layouts/BlogLayout.astro';
 import { getAllTags } from '../../utils';
 
 // Get all posts and extract tags
@@ -10,16 +10,17 @@ const allTags = getAllTags(allPosts);
 
 // Count posts per tag
 const tagCounts: Record<string, number> = {};
-allPosts.forEach(post => {
+allPosts.forEach((post) => {
   if (post.data.tags) {
-    post.data.tags.forEach(tag => {
+    post.data.tags.forEach((tag) => {
       tagCounts[tag] = (tagCounts[tag] || 0) + 1;
     });
   }
 });
 
-const title = "Todas las Etiquetas";
-const description = "Explora el contenido del blog por etiquetas";
+const title = 'Todas las Etiquetas';
+// biome-ignore lint/correctness/noUnusedVariables: Used in Astro template
+const description = 'Explora el contenido del blog por etiquetas';
 ---
 
 <BlogLayout title={title} description={description}>

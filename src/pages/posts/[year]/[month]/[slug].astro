@@ -7,7 +7,7 @@ export async function getStaticPaths() {
   const posts = await getCollection('posts');
   const paths: any[] = [];
 
-  posts.forEach(post => {
+  posts.forEach((post) => {
     const postUrl = getPostUrl(post);
 
     // Check if this is a date-based URL pattern
@@ -35,7 +35,9 @@ const relatedPosts = allPosts
     }
     return false;
   })
-  .sort((a, b) => new Date(b.data.date).getTime() - new Date(a.data.date).getTime())
+  .sort(
+    (a, b) => new Date(b.data.date).getTime() - new Date(a.data.date).getTime(),
+  )
   .slice(0, 3);
 ---
 

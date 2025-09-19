@@ -1,5 +1,5 @@
-import { describe, it, expect, vi, beforeEach } from 'vitest';
 import Fuse from 'fuse.js';
+import { beforeEach, describe, expect, it, vi } from 'vitest';
 
 // Mock search data
 const mockSearchData = [
@@ -9,7 +9,7 @@ const mockSearchData = [
     url: '/posts/javascript-fundamentals',
     tags: ['javascript', 'programming', 'tutorial'],
     date: '2023-01-15',
-    description: 'A comprehensive guide to JavaScript basics'
+    description: 'A comprehensive guide to JavaScript basics',
   },
   {
     title: 'React Components Guide',
@@ -17,7 +17,7 @@ const mockSearchData = [
     url: '/posts/react-components-guide',
     tags: ['react', 'javascript', 'components'],
     date: '2023-01-10',
-    description: 'Deep dive into React components'
+    description: 'Deep dive into React components',
   },
   {
     title: 'Python for Beginners',
@@ -25,12 +25,12 @@ const mockSearchData = [
     url: '/posts/python-for-beginners',
     tags: ['python', 'programming', 'tutorial'],
     date: '2023-01-05',
-    description: 'Learn Python from scratch'
-  }
+    description: 'Learn Python from scratch',
+  },
 ];
 
 describe('Search Functionality', () => {
-  let fuse: Fuse<typeof mockSearchData[0]>;
+  let fuse: Fuse<(typeof mockSearchData)[0]>;
 
   beforeEach(() => {
     const fuseOptions = {
@@ -38,7 +38,7 @@ describe('Search Functionality', () => {
         { name: 'title', weight: 0.4 },
         { name: 'content', weight: 0.3 },
         { name: 'tags', weight: 0.2 },
-        { name: 'description', weight: 0.1 }
+        { name: 'description', weight: 0.1 },
       ],
       threshold: 0.3,
       includeScore: true,
@@ -53,7 +53,7 @@ describe('Search Functionality', () => {
       expect(fuse).toBeInstanceOf(Fuse);
       expect(mockSearchData).toHaveLength(3);
 
-      mockSearchData.forEach(item => {
+      mockSearchData.forEach((item) => {
         expect(item).toHaveProperty('title');
         expect(item).toHaveProperty('content');
         expect(item).toHaveProperty('url');
@@ -104,7 +104,7 @@ describe('Search Functionality', () => {
       const results = fuse.search('react');
 
       expect(results.length).toBeGreaterThan(0);
-      expect(results.some(r => r.item.tags.includes('react'))).toBe(true);
+      expect(results.some((r) => r.item.tags.includes('react'))).toBe(true);
     });
 
     it('should handle case insensitive search', () => {
@@ -135,7 +135,7 @@ describe('Search Functionality', () => {
     it('should return results with scores', () => {
       const results = fuse.search('JavaScript');
 
-      results.forEach(result => {
+      results.forEach((result) => {
         expect(result).toHaveProperty('score');
         expect(typeof result.score).toBe('number');
         expect(result.score).toBeGreaterThanOrEqual(0);
@@ -146,7 +146,7 @@ describe('Search Functionality', () => {
     it('should return results with match information', () => {
       const results = fuse.search('JavaScript');
 
-      results.forEach(result => {
+      results.forEach((result) => {
         expect(result).toHaveProperty('matches');
         expect(Array.isArray(result.matches)).toBe(true);
       });
@@ -192,7 +192,7 @@ describe('Search Functionality', () => {
     it('should handle special characters in search', () => {
       const specialQueries = ['@#$%', '()[]{}', '!@#$%^&*'];
 
-      specialQueries.forEach(query => {
+      specialQueries.forEach((query) => {
         const results = fuse.search(query);
         expect(Array.isArray(results)).toBe(true);
       });
@@ -204,10 +204,17 @@ describe('Search Functionality', () => {
       // This would test the actual search index generation script
       // For now, we'll test the expected structure
 
-      const expectedFields = ['title', 'content', 'url', 'tags', 'date', 'description'];
+      const expectedFields = [
+        'title',
+        'content',
+        'url',
+        'tags',
+        'date',
+        'description',
+      ];
 
-      mockSearchData.forEach(item => {
-        expectedFields.forEach(field => {
+      mockSearchData.forEach((item) => {
+        expectedFields.forEach((field) => {
           expect(item).toHaveProperty(field);
         });
       });
@@ -215,14 +222,14 @@ describe('Search Functionality', () => {
 
     it('should include all content types in search index', () => {
       // Should include posts, pages, and projects
-      const contentTypes = mockSearchData.map(item => {
+      const contentTypes = mockSearchData.map((item) => {
         if (item.url.startsWith('/posts/')) return 'post';
         if (item.url.startsWith('/content/')) return 'page';
         if (item.url.startsWith('/portafolio/')) return 'project';
         return 'unknown';
       });
 
-      expect(contentTypes.every(type => type !== 'unknown')).toBe(true);
+      expect(contentTypes.every((type) => type !== 'unknown')).toBe(true);
     });
   });
 });

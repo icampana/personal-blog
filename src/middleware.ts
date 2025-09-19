@@ -5,7 +5,9 @@ export const onRequest = defineMiddleware(async (context, next) => {
   const pathname = url.pathname;
 
   // Handle Gatsby format posts: /YYYY-MM-DD-slug -> /posts/YYYY-MM-DD-slug
-  const gatsbyPostMatch = pathname.match(/^\/(\d{4}-\d{2}-\d{2}-[a-zA-Z0-9-]+)$/);
+  const gatsbyPostMatch = pathname.match(
+    /^\/(\d{4}-\d{2}-\d{2}-[a-zA-Z0-9-]+)$/,
+  );
   if (gatsbyPostMatch) {
     return redirect(`/posts/${gatsbyPostMatch[1]}`, 301);
   }
@@ -17,15 +19,25 @@ export const onRequest = defineMiddleware(async (context, next) => {
   }
 
   // Handle old Blogger/WordPress posts: /YYYY/MM/slug -> /posts/YYYY/MM/slug
-  const bloggerPostMatch = pathname.match(/^\/(\d{4})\/(\d{2})\/([a-zA-Z0-9-]+)$/);
+  const bloggerPostMatch = pathname.match(
+    /^\/(\d{4})\/(\d{2})\/([a-zA-Z0-9-]+)$/,
+  );
   if (bloggerPostMatch) {
-    return redirect(`/posts/${bloggerPostMatch[1]}/${bloggerPostMatch[2]}/${bloggerPostMatch[3]}`, 301);
+    return redirect(
+      `/posts/${bloggerPostMatch[1]}/${bloggerPostMatch[2]}/${bloggerPostMatch[3]}`,
+      301,
+    );
   }
 
   // Handle old posts with formats: /YYYY/MM/slug.html or /YYYY/MM/slug/amp -> /posts/YYYY/MM/slug
-  const formatPostMatch = pathname.match(/^\/(\d{4})\/(\d{2})\/([a-zA-Z0-9-]+)(?:\.html|\/amp|\/feed)$/);
+  const formatPostMatch = pathname.match(
+    /^\/(\d{4})\/(\d{2})\/([a-zA-Z0-9-]+)(?:\.html|\/amp|\/feed)$/,
+  );
   if (formatPostMatch) {
-    return redirect(`/posts/${formatPostMatch[1]}/${formatPostMatch[2]}/${formatPostMatch[3]}`, 301);
+    return redirect(
+      `/posts/${formatPostMatch[1]}/${formatPostMatch[2]}/${formatPostMatch[3]}`,
+      301,
+    );
   }
 
   // Handle single digit pagination: /N -> /posts/page/N (for pages 1-99)
@@ -44,12 +56,14 @@ export const onRequest = defineMiddleware(async (context, next) => {
   }
 
   // Handle WordPress admin and other common WordPress URLs
-  if (pathname.startsWith('/wp-admin') ||
-      pathname.startsWith('/wp-content') ||
-      pathname.startsWith('/wp-includes') ||
-      pathname.includes('wp-login') ||
-      pathname.includes('xmlrpc.php') ||
-      pathname.includes('wp-config.php')) {
+  if (
+    pathname.startsWith('/wp-admin') ||
+    pathname.startsWith('/wp-content') ||
+    pathname.startsWith('/wp-includes') ||
+    pathname.includes('wp-login') ||
+    pathname.includes('xmlrpc.php') ||
+    pathname.includes('wp-config.php')
+  ) {
     return redirect('/', 301);
   }
 
@@ -65,10 +79,10 @@ export const onRequest = defineMiddleware(async (context, next) => {
     '/backup',
     '/test',
     '/demo',
-    '/staging'
+    '/staging',
   ];
 
-  if (spamPatterns.some(pattern => pathname.startsWith(pattern))) {
+  if (spamPatterns.some((pattern) => pathname.startsWith(pattern))) {
     return redirect('/', 301);
   }
 

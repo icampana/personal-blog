@@ -1,4 +1,5 @@
-import React, { useState, useEffect, useCallback } from 'react';
+import type React from 'react';
+import { useCallback, useEffect, useState } from 'react';
 
 interface ImageGalleryProps {
   images: string[];
@@ -6,7 +7,11 @@ interface ImageGalleryProps {
   lazy?: boolean;
 }
 
-const ImageGallery: React.FC<ImageGalleryProps> = ({ images, title, lazy = true }) => {
+const ImageGallery: React.FC<ImageGalleryProps> = ({
+  images,
+  title,
+  lazy = true,
+}) => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isLightboxOpen, setIsLightboxOpen] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
@@ -22,7 +27,7 @@ const ImageGallery: React.FC<ImageGalleryProps> = ({ images, title, lazy = true 
         return new Promise((resolve, reject) => {
           const img = new Image();
           img.onload = () => {
-            setLoadedImages(prev => new Set([...prev, index]));
+            setLoadedImages((prev) => new Set([...prev, index]));
             resolve(src);
           };
           img.onerror = reject;
@@ -46,7 +51,7 @@ const ImageGallery: React.FC<ImageGalleryProps> = ({ images, title, lazy = true 
 
   // Load image on demand when it becomes visible
   const handleImageLoad = useCallback((index: number) => {
-    setLoadedImages(prev => new Set([...prev, index]));
+    setLoadedImages((prev) => new Set([...prev, index]));
   }, []);
 
   useEffect(() => {
@@ -120,11 +125,11 @@ const ImageGallery: React.FC<ImageGalleryProps> = ({ images, title, lazy = true 
               src={image}
               alt={`${title} - Imagen ${index + 1}`}
               className="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105"
-              loading={lazy ? "lazy" : "eager"}
+              loading={lazy ? 'lazy' : 'eager'}
               onLoad={() => handleImageLoad(index)}
               style={{
                 opacity: loadedImages.has(index) ? 1 : 0,
-                transition: 'opacity 0.3s ease-in-out'
+                transition: 'opacity 0.3s ease-in-out',
               }}
             />
 
@@ -171,8 +176,18 @@ const ImageGallery: React.FC<ImageGalleryProps> = ({ images, title, lazy = true 
             className="absolute top-4 right-4 text-white hover:text-gray-300 z-10"
             aria-label="Cerrar galería"
           >
-            <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+            <svg
+              className="w-8 h-8"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M6 18L18 6M6 6l12 12"
+              />
             </svg>
           </button>
 
@@ -184,8 +199,18 @@ const ImageGallery: React.FC<ImageGalleryProps> = ({ images, title, lazy = true 
                 className="absolute left-4 top-1/2 transform -translate-y-1/2 text-white hover:text-gray-300 z-10"
                 aria-label="Imagen anterior"
               >
-                <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+                <svg
+                  className="w-8 h-8"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M15 19l-7-7 7-7"
+                  />
                 </svg>
               </button>
 
@@ -194,8 +219,18 @@ const ImageGallery: React.FC<ImageGalleryProps> = ({ images, title, lazy = true 
                 className="absolute right-4 top-1/2 transform -translate-y-1/2 text-white hover:text-gray-300 z-10"
                 aria-label="Siguiente imagen"
               >
-                <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                <svg
+                  className="w-8 h-8"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M9 5l7 7-7 7"
+                  />
                 </svg>
               </button>
             </>

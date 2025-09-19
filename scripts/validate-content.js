@@ -6,10 +6,10 @@
  */
 
 import fs from 'fs';
-import path from 'path';
-import { fileURLToPath } from 'url';
 import { glob } from 'glob';
 import matter from 'gray-matter';
+import path from 'path';
+import { fileURLToPath } from 'url';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -25,7 +25,7 @@ const validationResults = {
   pages: { total: 0, valid: 0, errors: [] },
   projects: { total: 0, valid: 0, errors: [] },
   images: { total: 0, missing: 0, errors: [] },
-  links: { total: 0, broken: 0, errors: [] }
+  links: { total: 0, broken: 0, errors: [] },
 };
 
 /**
@@ -34,7 +34,7 @@ const validationResults = {
 const requiredFields = {
   posts: ['title', 'date'],
   pages: ['title', 'date'],
-  projects: ['title', 'date', 'description']
+  projects: ['title', 'date', 'description'],
 };
 
 /**
@@ -70,7 +70,11 @@ function validateFrontmatter(data, type, filePath) {
   }
 
   // Validate galleryImage for projects (if present)
-  if (type === 'projects' && data.galleryImage && !Array.isArray(data.galleryImage)) {
+  if (
+    type === 'projects' &&
+    data.galleryImage &&
+    !Array.isArray(data.galleryImage)
+  ) {
     errors.push('galleryImage must be an array');
   }
 
@@ -85,7 +89,7 @@ function extractImageReferences(content) {
 
   // Match markdown images: ![alt](src)
   const markdownImages = content.match(/!\[.*?\]\((.*?)\)/g) || [];
-  markdownImages.forEach(match => {
+  markdownImages.forEach((match) => {
     const src = match.match(/!\[.*?\]\((.*?)\)/)[1];
     if (src && !src.startsWith('http')) {
       images.push(src);
@@ -93,8 +97,9 @@ function extractImageReferences(content) {
   });
 
   // Match HTML images: <img src="...">
-  const htmlImages = content.match(/<img[^>]+src=["']([^"']+)["'][^>]*>/g) || [];
-  htmlImages.forEach(match => {
+  const htmlImages =
+    content.match(/<img[^>]+src=["']([^"']+)["'][^>]*>/g) || [];
+  htmlImages.forEach((match) => {
     const src = match.match(/src=["']([^"']+)["']/)[1];
     if (src && !src.startsWith('http')) {
       images.push(src);
@@ -173,15 +178,14 @@ function validateContentFile(filePath, type) {
       valid: errors.length === 0,
       errors,
       data,
-      body
+      body,
     };
-
   } catch (error) {
     return {
       valid: false,
       errors: [`Failed to parse file: ${error.message}`],
       data: null,
-      body: null
+      body: null,
     };
   }
 }
@@ -212,7 +216,7 @@ async function validateContentType(type) {
     } else {
       validationResults[type].errors.push({
         file,
-        errors: result.errors
+        errors: result.errors,
       });
     }
   }
@@ -233,7 +237,9 @@ async function validateContentType(type) {
 async function checkDuplicates() {
   console.log('\n🔍 Checking for duplicate content...');
 
-  const allPosts = await glob('**/*.md', { cwd: path.join(CONTENT_DIR, 'posts') });
+  const allPosts = await glob('**/*.md', {
+    cwd: path.join(CONTENT_DIR, 'posts'),
+  });
   const titles = new Map();
   const duplicates = [];
 
@@ -247,22 +253,22 @@ async function checkDuplicates() {
         if (titles.has(normalizedTitle)) {
           duplicates.push({
             title: data.title,
-            files: [titles.get(normalizedTitle), file]
+            files: [titles.get(normalizedTitle), file],
           });
         } else {
           titles.set(normalizedTitle, file);
         }
       }
-    } catch (error) {
+    } catch (_error) {
       // Skip files that can't be parsed
     }
   }
 
   if (duplicates.length > 0) {
     console.log(`⚠️  Found ${duplicates.length} potential duplicate titles:`);
-    duplicates.forEach(dup => {
+    duplicates.forEach((dup) => {
       console.log(`   "${dup.title}"`);
-      dup.files.forEach(file => console.log(`     - ${file}`));
+      dup.files.forEach((file) => console.log(`     - ${file}`));
     });
   } else {
     console.log('✅ No duplicate titles found');
@@ -292,14 +298,22 @@ async function validateInternalLinks() {
         const href = link.match(/\[.*?\]\(([^)]+)\)/)[1];
 
         // Skip external links
-        if (href.startsWith('http') || href.startsWith('//') || href.startsWith('mailto:')) {
+        if (
+          href.startsWith('http') ||
+          href.startsWith('//') ||
+          href.startsWith('mailto:')
+        ) {
           continue;
         }
 
         totalLinks++;
 
         // Check if internal link exists (simplified check)
-        if (href.startsWith('/posts/') || href.startsWith('/content/') || href.startsWith('/portafolio/')) {
+        if (
+          href.startsWith('/posts/') ||
+          href.startsWith('/content/') ||
+          href.startsWith('/portafolio/')
+        ) {
           // These should be handled by the routing system
           continue;
         }
@@ -312,12 +326,12 @@ async function validateInternalLinks() {
             validationResults.links.errors.push({
               file,
               link: href,
-              error: 'File not found'
+              error: 'File not found',
             });
           }
         }
       }
-    } catch (error) {
+    } catch (_error) {
       // Skip files that can't be parsed
     }
   }
@@ -325,7 +339,9 @@ async function validateInternalLinks() {
   validationResults.links.total = totalLinks;
   validationResults.links.broken = brokenLinks;
 
-  console.log(`✅ Internal links: ${totalLinks - brokenLinks}/${totalLinks} valid`);
+  console.log(
+    `✅ Internal links: ${totalLinks - brokenLinks}/${totalLinks} valid`,
+  );
   if (brokenLinks > 0) {
     console.log(`❌ Broken links: ${brokenLinks}`);
   }
@@ -376,19 +392,21 @@ function displayErrors() {
       console.log(`\n${type.toUpperCase()} Errors:`);
 
       if (type === 'images' || type === 'links') {
-        results.errors.slice(0, 10).forEach(error => {
+        results.errors.slice(0, 10).forEach((error) => {
           console.log(`  ${error.file}: ${error.error || error.link}`);
         });
         if (results.errors.length > 10) {
           console.log(`  ... and ${results.errors.length - 10} more`);
         }
       } else {
-        results.errors.slice(0, 5).forEach(error => {
+        results.errors.slice(0, 5).forEach((error) => {
           console.log(`  ${error.file}:`);
-          error.errors.forEach(err => console.log(`    - ${err}`));
+          error.errors.forEach((err) => console.log(`    - ${err}`));
         });
         if (results.errors.length > 5) {
-          console.log(`  ... and ${results.errors.length - 5} more files with errors`);
+          console.log(
+            `  ... and ${results.errors.length - 5} more files with errors`,
+          );
         }
       }
     }
@@ -423,21 +441,35 @@ async function main() {
   console.log('📋 VALIDATION SUMMARY');
   console.log('='.repeat(50));
 
-  const totalContent = validationResults.posts.total + validationResults.pages.total + validationResults.projects.total;
-  const validContent = validationResults.posts.valid + validationResults.pages.valid + validationResults.projects.valid;
+  const totalContent =
+    validationResults.posts.total +
+    validationResults.pages.total +
+    validationResults.projects.total;
+  const validContent =
+    validationResults.posts.valid +
+    validationResults.pages.valid +
+    validationResults.projects.valid;
 
   console.log(`Total Content Files: ${totalContent}`);
   console.log(`Valid Content Files: ${validContent}`);
-  console.log(`Content Success Rate: ${Math.round((validContent / totalContent) * 100)}%`);
+  console.log(
+    `Content Success Rate: ${Math.round((validContent / totalContent) * 100)}%`,
+  );
 
   if (validationResults.images.total > 0) {
-    const validImages = validationResults.images.total - validationResults.images.missing;
-    console.log(`Image References: ${validImages}/${validationResults.images.total} valid`);
+    const validImages =
+      validationResults.images.total - validationResults.images.missing;
+    console.log(
+      `Image References: ${validImages}/${validationResults.images.total} valid`,
+    );
   }
 
   if (validationResults.links.total > 0) {
-    const validLinks = validationResults.links.total - validationResults.links.broken;
-    console.log(`Internal Links: ${validLinks}/${validationResults.links.total} valid`);
+    const validLinks =
+      validationResults.links.total - validationResults.links.broken;
+    console.log(
+      `Internal Links: ${validLinks}/${validationResults.links.total} valid`,
+    );
   }
 
   console.log('='.repeat(50));

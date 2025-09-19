@@ -1,17 +1,18 @@
 // @ts-check
-import { defineConfig } from 'astro/config';
-import react from '@astrojs/react';
-import tailwind from '@astrojs/tailwind';
-import sitemap from '@astrojs/sitemap';
+
 import mdx from '@astrojs/mdx';
-import remarkGfm from 'remark-gfm';
-import remarkBreaks from 'remark-breaks';
-import remarkEmoji from 'remark-emoji';
-import remarkDirective from 'remark-directive';
-import rehypeSlug from 'rehype-slug';
+import react from '@astrojs/react';
+import sitemap from '@astrojs/sitemap';
+import tailwind from '@astrojs/tailwind';
+import { defineConfig } from 'astro/config';
 import rehypeHighlight from 'rehype-highlight';
-import unifiedAdmonitions from './src/lib/unified-admonitions.js';
+import rehypeSlug from 'rehype-slug';
+import remarkBreaks from 'remark-breaks';
+import remarkDirective from 'remark-directive';
+import remarkEmoji from 'remark-emoji';
+import remarkGfm from 'remark-gfm';
 import remarkYoutube from './src/lib/remark-youtube.js';
+import unifiedAdmonitions from './src/lib/unified-admonitions.js';
 
 // https://astro.build/config
 export default defineConfig({
@@ -23,7 +24,7 @@ export default defineConfig({
       applyBaseStyles: false, // Let DaisyUI handle base styles
     }),
     sitemap(),
-    mdx()
+    mdx(),
   ],
   build: {
     inlineStylesheets: 'auto',
@@ -35,14 +36,14 @@ export default defineConfig({
           manualChunks: {
             'react-vendor': ['react', 'react-dom'],
             'search-vendor': ['fuse.js'],
-            'utils-vendor': ['date-fns', 'reading-time']
-          }
-        }
-      }
+            'utils-vendor': ['date-fns', 'reading-time'],
+          },
+        },
+      },
     },
     ssr: {
-      noExternal: ['date-fns']
-    }
+      noExternal: ['date-fns'],
+    },
   },
   markdown: {
     remarkPlugins: [
@@ -51,19 +52,22 @@ export default defineConfig({
       remarkEmoji,
       remarkDirective,
       unifiedAdmonitions,
-      remarkYoutube
+      remarkYoutube,
     ],
     rehypePlugins: [
       rehypeSlug,
-      [rehypeHighlight, {
-        ignoreMissing: true,
-        plainText: ['txt', 'text']
-      }]
+      [
+        rehypeHighlight,
+        {
+          ignoreMissing: true,
+          plainText: ['txt', 'text'],
+        },
+      ],
     ],
     shikiConfig: {
       theme: 'github-dark',
-      wrap: true
-    }
+      wrap: true,
+    },
   },
   // Content collection caching is now enabled by default in Astro 5
   redirects: {
@@ -101,5 +105,5 @@ export default defineConfig({
     '/category/startup': '/tag/startup',
     '/category/remote-work': '/tag/remote-work',
     '/category/freelancing': '/tag/freelancing',
-  }
+  },
 });

@@ -5,9 +5,17 @@
 const redirectTests = [
   { from: '/wp-login.php', to: '/', description: 'WordPress login redirect' },
   { from: '/1', to: '/posts/page/1', description: 'Legacy pagination' },
-  { from: '/category/development', to: '/tag/development', description: 'Category to tag' },
+  {
+    from: '/category/development',
+    to: '/tag/development',
+    description: 'Category to tag',
+  },
   { from: '/2024/01', to: '/by-date/2024/01', description: 'Date-based URL' },
-  { from: '/2024/01/sample-post', to: '/posts/2024/01/sample-post', description: 'Legacy post URL' },
+  {
+    from: '/2024/01/sample-post',
+    to: '/posts/2024/01/sample-post',
+    description: 'Legacy post URL',
+  },
 ];
 ---
 

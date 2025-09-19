@@ -6,7 +6,7 @@ export interface Props {
   className?: string;
 }
 
-const { date, className = "capitalize text-xs text-accent mb-1" } = Astro.props;
+const { date, className = 'capitalize text-xs text-accent mb-1' } = Astro.props;
 ---
 
 <time datetime={date.toISOString()} class={className}>

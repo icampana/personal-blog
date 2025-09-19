@@ -1,11 +1,11 @@
 ---
-import BlogLayout from './BlogLayout.astro';
+import type { CollectionEntry } from 'astro:content';
 import BackToTop from '../components/BackToTop';
-import ShareButtons from '../components/ShareButtons';
 import ResponsiveImage from '../components/ResponsiveImage.astro';
+import ShareButtons from '../components/ShareButtons';
 import { formatDate, getReadingTime } from '../utils';
 import { normalizeImagePath } from '../utils/imageUtils';
-import type { CollectionEntry } from 'astro:content';
+import BlogLayout from './BlogLayout.astro';
 
 export interface Props {
   post: CollectionEntry<'posts'>;

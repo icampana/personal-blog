@@ -1,6 +1,6 @@
-import rss from '@astrojs/rss';
 import { getCollection } from 'astro:content';
-import { sortPostsByDate, getPostUrl } from '../utils';
+import rss from '@astrojs/rss';
+import { getPostUrl, sortPostsByDate } from '../utils';
 
 export async function GET(context: { site?: string }) {
   const posts = await getCollection('posts');
@@ -8,7 +8,8 @@ export async function GET(context: { site?: string }) {
 
   return rss({
     title: 'Iván Gabriel - Blog',
-    description: 'Diario de un Informático, Emprendedor, Desarrollador y Curioso a tiempo completo.',
+    description:
+      'Diario de un Informático, Emprendedor, Desarrollador y Curioso a tiempo completo.',
     site: context.site || 'https://ivan.campananaranjo.com',
     items: sortedPosts.map((post) => ({
       title: post.data.title,

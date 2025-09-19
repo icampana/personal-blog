@@ -1,7 +1,7 @@
 ---
+import type { CollectionEntry } from 'astro:content';
 import { getProjectUrl } from '../utils';
 import { normalizeImagePath } from '../utils/imageUtils';
-import type { CollectionEntry } from 'astro:content';
 import ResponsiveImage from './ResponsiveImage.astro';
 
 export interface Props {
@@ -9,7 +9,8 @@ export interface Props {
 }
 
 const { project } = Astro.props;
-const { title, description, galleryImage, techStack, liveUrl, repoUrl } = project.data;
+const { title, description, galleryImage, techStack, liveUrl, repoUrl } =
+  project.data;
 
 const projectUrl = getProjectUrl(project);
 const imagePath = normalizeImagePath(galleryImage?.[0]);

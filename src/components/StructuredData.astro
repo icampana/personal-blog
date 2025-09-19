@@ -5,134 +5,138 @@ export interface Props {
 }
 
 const { type, data = {} } = Astro.props;
-const siteUrl = "https://ivan.campananaranjo.com";
+const siteUrl = 'https://ivan.campananaranjo.com';
 
 let structuredData = {};
 
 switch (type) {
   case 'organization':
     structuredData = {
-      "@context": "https://schema.org",
-      "@type": "Organization",
-      "name": "Iván Gabriel",
-      "url": siteUrl,
-      "logo": `${siteUrl}/images/logo.png`,
-      "description": "Diario de un Informático, Emprendedor, Desarrollador y Curioso a tiempo completo.",
-      "founder": {
-        "@type": "Person",
-        "name": "Iván Campaña",
-        "jobTitle": "Software Developer & Entrepreneur",
-        "url": `${siteUrl}/content/sobre-el-autor`
+      '@context': 'https://schema.org',
+      '@type': 'Organization',
+      name: 'Iván Gabriel',
+      url: siteUrl,
+      logo: `${siteUrl}/images/logo.png`,
+      description:
+        'Diario de un Informático, Emprendedor, Desarrollador y Curioso a tiempo completo.',
+      founder: {
+        '@type': 'Person',
+        name: 'Iván Campaña',
+        jobTitle: 'Software Developer & Entrepreneur',
+        url: `${siteUrl}/content/sobre-el-autor`,
       },
-      "sameAs": [
-        "https://twitter.com/icampana",
-        "https://github.com/icampana",
-        "https://linkedin.com/in/icampana"
+      sameAs: [
+        'https://twitter.com/icampana',
+        'https://github.com/icampana',
+        'https://linkedin.com/in/icampana',
       ],
-      "contactPoint": {
-        "@type": "ContactPoint",
-        "contactType": "customer service",
-        "availableLanguage": ["Spanish", "English"]
-      }
+      contactPoint: {
+        '@type': 'ContactPoint',
+        contactType: 'customer service',
+        availableLanguage: ['Spanish', 'English'],
+      },
     };
     break;
 
   case 'person':
     structuredData = {
-      "@context": "https://schema.org",
-      "@type": "Person",
-      "name": "Iván Campaña",
-      "alternateName": "Iván Gabriel",
-      "jobTitle": "Software Developer & Entrepreneur",
-      "description": "Ingeniero informático, emprendedor y desarrollador con más de 20 años de experiencia.",
-      "url": `${siteUrl}/content/sobre-el-autor`,
-      "image": `${siteUrl}/images/profile-pic.jpg`,
-      "sameAs": [
-        "https://twitter.com/icampana",
-        "https://github.com/icampana",
-        "https://linkedin.com/in/icampana"
+      '@context': 'https://schema.org',
+      '@type': 'Person',
+      name: 'Iván Campaña',
+      alternateName: 'Iván Gabriel',
+      jobTitle: 'Software Developer & Entrepreneur',
+      description:
+        'Ingeniero informático, emprendedor y desarrollador con más de 20 años de experiencia.',
+      url: `${siteUrl}/content/sobre-el-autor`,
+      image: `${siteUrl}/images/profile-pic.jpg`,
+      sameAs: [
+        'https://twitter.com/icampana',
+        'https://github.com/icampana',
+        'https://linkedin.com/in/icampana',
       ],
-      "knowsAbout": [
-        "JavaScript",
-        "TypeScript",
-        "React",
-        "Vue.js",
-        "Python",
-        "Web Development",
-        "Software Architecture",
-        "Entrepreneurship"
+      knowsAbout: [
+        'JavaScript',
+        'TypeScript',
+        'React',
+        'Vue.js',
+        'Python',
+        'Web Development',
+        'Software Architecture',
+        'Entrepreneurship',
       ],
-      "alumniOf": {
-        "@type": "EducationalOrganization",
-        "name": "Universidad Técnica Federico Santa María"
+      alumniOf: {
+        '@type': 'EducationalOrganization',
+        name: 'Universidad Técnica Federico Santa María',
       },
-      "worksFor": {
-        "@type": "Organization",
-        "name": "DOMO Soluciones Web & T.I."
-      }
+      worksFor: {
+        '@type': 'Organization',
+        name: 'DOMO Soluciones Web & T.I.',
+      },
     };
     break;
 
   case 'website':
     structuredData = {
-      "@context": "https://schema.org",
-      "@type": "WebSite",
-      "name": "Iván Gabriel",
-      "url": siteUrl,
-      "description": "Diario de un Informático, Emprendedor, Desarrollador y Curioso a tiempo completo.",
-      "inLanguage": "es-ES",
-      "author": {
-        "@type": "Person",
-        "name": "Iván Campaña"
+      '@context': 'https://schema.org',
+      '@type': 'WebSite',
+      name: 'Iván Gabriel',
+      url: siteUrl,
+      description:
+        'Diario de un Informático, Emprendedor, Desarrollador y Curioso a tiempo completo.',
+      inLanguage: 'es-ES',
+      author: {
+        '@type': 'Person',
+        name: 'Iván Campaña',
       },
-      "publisher": {
-        "@type": "Organization",
-        "name": "Iván Gabriel",
-        "logo": {
-          "@type": "ImageObject",
-          "url": `${siteUrl}/images/logo.png`
-        }
-      },
-      "potentialAction": {
-        "@type": "SearchAction",
-        "target": {
-          "@type": "EntryPoint",
-          "urlTemplate": `${siteUrl}/search?q={search_term_string}`
+      publisher: {
+        '@type': 'Organization',
+        name: 'Iván Gabriel',
+        logo: {
+          '@type': 'ImageObject',
+          url: `${siteUrl}/images/logo.png`,
         },
-        "query-input": "required name=search_term_string"
-      }
+      },
+      potentialAction: {
+        '@type': 'SearchAction',
+        target: {
+          '@type': 'EntryPoint',
+          urlTemplate: `${siteUrl}/search?q={search_term_string}`,
+        },
+        'query-input': 'required name=search_term_string',
+      },
     };
     break;
 
   case 'blog':
     structuredData = {
-      "@context": "https://schema.org",
-      "@type": "Blog",
-      "name": "Iván Gabriel - Blog",
-      "url": `${siteUrl}/posts`,
-      "description": "Blog sobre desarrollo de software, emprendimiento y tecnología.",
-      "inLanguage": "es-ES",
-      "author": {
-        "@type": "Person",
-        "name": "Iván Campaña",
-        "url": `${siteUrl}/content/sobre-el-autor`
+      '@context': 'https://schema.org',
+      '@type': 'Blog',
+      name: 'Iván Gabriel - Blog',
+      url: `${siteUrl}/posts`,
+      description:
+        'Blog sobre desarrollo de software, emprendimiento y tecnología.',
+      inLanguage: 'es-ES',
+      author: {
+        '@type': 'Person',
+        name: 'Iván Campaña',
+        url: `${siteUrl}/content/sobre-el-autor`,
       },
-      "publisher": {
-        "@type": "Organization",
-        "name": "Iván Gabriel",
-        "logo": {
-          "@type": "ImageObject",
-          "url": `${siteUrl}/images/logo.png`
-        }
-      }
+      publisher: {
+        '@type': 'Organization',
+        name: 'Iván Gabriel',
+        logo: {
+          '@type': 'ImageObject',
+          url: `${siteUrl}/images/logo.png`,
+        },
+      },
     };
     break;
 
   case 'faq':
     structuredData = {
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
-      "mainEntity": data.questions || []
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      mainEntity: data.questions || [],
     };
     break;
 

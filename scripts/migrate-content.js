@@ -6,10 +6,10 @@
  */
 
 import fs from 'fs';
-import path from 'path';
-import { fileURLToPath } from 'url';
 import { glob } from 'glob';
 import matter from 'gray-matter';
+import path from 'path';
+import { fileURLToPath } from 'url';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -26,7 +26,7 @@ const migrationStats = {
   posts: { migrated: 0, skipped: 0, errors: 0 },
   pages: { migrated: 0, skipped: 0, errors: 0 },
   projects: { migrated: 0, skipped: 0, errors: 0 },
-  images: { migrated: 0, skipped: 0, errors: 0 }
+  images: { migrated: 0, skipped: 0, errors: 0 },
 };
 
 /**
@@ -104,16 +104,34 @@ function transformContent(content) {
   let transformed = content;
 
   // Transform image references
-  transformed = transformed.replace(/!\[([^\]]*)\]\(\.\/([^)]+)\)/g, '![$1](/photos/$2)');
-  transformed = transformed.replace(/!\[([^\]]*)\]\(\.\.\/([^)]+)\)/g, '![$1](/$2)');
+  transformed = transformed.replace(
+    /!\[([^\]]*)\]\(\.\/([^)]+)\)/g,
+    '![$1](/photos/$2)',
+  );
+  transformed = transformed.replace(
+    /!\[([^\]]*)\]\(\.\.\/([^)]+)\)/g,
+    '![$1](/$2)',
+  );
 
   // Transform HTML image tags
-  transformed = transformed.replace(/<img([^>]+)src=["']\.\/([^"']+)["']/g, '<img$1src="/photos/$2"');
-  transformed = transformed.replace(/<img([^>]+)src=["']\.\.\/([^"']+)["']/g, '<img$1src="/$2"');
+  transformed = transformed.replace(
+    /<img([^>]+)src=["']\.\/([^"']+)["']/g,
+    '<img$1src="/photos/$2"',
+  );
+  transformed = transformed.replace(
+    /<img([^>]+)src=["']\.\.\/([^"']+)["']/g,
+    '<img$1src="/$2"',
+  );
 
   // Transform internal links
-  transformed = transformed.replace(/\[([^\]]+)\]\(\/posts\/([^)]+)\)/g, '[$1](/posts/$2)');
-  transformed = transformed.replace(/\[([^\]]+)\]\(\/pages\/([^)]+)\)/g, '[$1](/content/$2)');
+  transformed = transformed.replace(
+    /\[([^\]]+)\]\(\/posts\/([^)]+)\)/g,
+    '[$1](/posts/$2)',
+  );
+  transformed = transformed.replace(
+    /\[([^\]]+)\]\(\/pages\/([^)]+)\)/g,
+    '[$1](/content/$2)',
+  );
 
   return transformed;
 }
@@ -157,7 +175,6 @@ function migrateContentFile(sourcePath, targetPath, type) {
 
     migrationStats[type].migrated++;
     return { success: true, skipped: false };
-
   } catch (error) {
     migrationStats[type].errors++;
     return { success: false, error: error.message };
@@ -221,7 +238,9 @@ async function migrateImages() {
     fs.mkdirSync(targetImagesDir, { recursive: true });
   }
 
-  const images = await glob('**/*.{jpg,jpeg,png,gif,webp,svg}', { cwd: sourceImagesDir });
+  const images = await glob('**/*.{jpg,jpeg,png,gif,webp,svg}', {
+    cwd: sourceImagesDir,
+  });
   console.log(`Found ${images.length} images to migrate`);
 
   for (const image of images) {
@@ -247,7 +266,6 @@ async function migrateImages() {
 
       migrationStats.images.migrated++;
       console.log(`✅ Migrated: ${image}`);
-
     } catch (error) {
       migrationStats.images.errors++;
       console.log(`❌ Failed: ${image} - ${error.message}`);
@@ -298,8 +316,14 @@ async function main() {
   generateMigrationReport();
 
   // Final summary
-  const totalMigrated = Object.values(migrationStats).reduce((sum, stats) => sum + stats.migrated, 0);
-  const totalErrors = Object.values(migrationStats).reduce((sum, stats) => sum + stats.errors, 0);
+  const totalMigrated = Object.values(migrationStats).reduce(
+    (sum, stats) => sum + stats.migrated,
+    0,
+  );
+  const totalErrors = Object.values(migrationStats).reduce(
+    (sum, stats) => sum + stats.errors,
+    0,
+  );
 
   console.log('='.repeat(50));
   console.log('📋 MIGRATION SUMMARY');

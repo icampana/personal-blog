@@ -1,15 +1,16 @@
 ---
-import BlogLayout from './BlogLayout.astro';
+import type { CollectionEntry } from 'astro:content';
 import ImageGallery from '../components/ImageGallery';
 import { formatDate } from '../utils';
-import type { CollectionEntry } from 'astro:content';
+import BlogLayout from './BlogLayout.astro';
 
 export interface Props {
   project: CollectionEntry<'projects'>;
 }
 
 const { project } = Astro.props;
-const { title, description, galleryImage, techStack, liveUrl, repoUrl, date } = project.data;
+const { title, description, galleryImage, techStack, liveUrl, repoUrl, date } =
+  project.data;
 const { Content } = await project.render();
 ---
 

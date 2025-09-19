@@ -1,12 +1,12 @@
 ---
 import { getCollection } from 'astro:content';
-import BlogLayout from '../layouts/BlogLayout.astro';
-import SearchResults from '../components/SearchResults';
 import PostCard from '../components/PostCard.astro';
+import SearchResults from '../components/SearchResults';
+import BlogLayout from '../layouts/BlogLayout.astro';
 import { sortPostsByDate } from '../utils';
 
-const title = "Búsqueda";
-const description = "Busca contenido en el blog";
+const title = 'Búsqueda';
+const description = 'Busca contenido en el blog';
 
 // Get recent posts to show when no search is performed
 const allPosts = await getCollection('posts');

@@ -1,4 +1,5 @@
-import React, { useState, useRef, useEffect } from 'react';
+import type React from 'react';
+import { useEffect, useRef, useState } from 'react';
 
 const SearchComponent: React.FC = () => {
   const [toggleSearch, setToggleSearch] = useState(false);
@@ -46,7 +47,7 @@ const SearchComponent: React.FC = () => {
       <span className="inline-block mr-2">
         <button
           type="button"
-          className={`btn btn-square btn-ghost ${toggleSearch ? "hidden" : "block"}`}
+          className={`btn btn-square btn-ghost ${toggleSearch ? 'hidden' : 'block'}`}
           onClick={handleToggle}
           title="Buscar"
         >
@@ -68,7 +69,7 @@ const SearchComponent: React.FC = () => {
         </button>
       </span>
 
-      <div className={`inline-block ${toggleSearch ? "block" : "hidden"}`}>
+      <div className={`inline-block ${toggleSearch ? 'block' : 'hidden'}`}>
         <div className="relative">
           <input
             ref={controlRef}

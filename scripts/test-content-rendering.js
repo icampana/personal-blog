@@ -6,10 +6,10 @@
  */
 
 import fs from 'fs';
-import path from 'path';
-import { fileURLToPath } from 'url';
 import { glob } from 'glob';
 import matter from 'gray-matter';
+import path from 'path';
+import { fileURLToPath } from 'url';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -22,7 +22,7 @@ const CONTENT_DIR = path.join(__dirname, '../src/content');
 const testResults = {
   posts: { total: 0, passed: 0, failed: 0, errors: [] },
   pages: { total: 0, passed: 0, failed: 0, errors: [] },
-  projects: { total: 0, passed: 0, failed: 0, errors: [] }
+  projects: { total: 0, passed: 0, failed: 0, errors: [] },
 };
 
 /**
@@ -80,15 +80,14 @@ function testMarkdownParsing(filePath, type) {
       success: errors.length === 0,
       errors,
       data,
-      body
+      body,
     };
-
   } catch (error) {
     return {
       success: false,
       errors: [`Parse error: ${error.message}`],
       data: null,
-      body: null
+      body: null,
     };
   }
 }
@@ -124,13 +123,19 @@ function testUrlGeneration(data, slug, type) {
     // Generate expected URLs based on type
     let expectedUrl;
     if (data.path) {
-      expectedUrl = type === 'posts' ? `/posts${data.path}` :
-                   type === 'pages' ? `/content${data.path}` :
-                   `/portafolio${data.path}`;
+      expectedUrl =
+        type === 'posts'
+          ? `/posts${data.path}`
+          : type === 'pages'
+            ? `/content${data.path}`
+            : `/portafolio${data.path}`;
     } else {
-      expectedUrl = type === 'posts' ? `/posts/${slug}` :
-                   type === 'pages' ? `/content/${slug}` :
-                   `/portafolio/${slug}`;
+      expectedUrl =
+        type === 'posts'
+          ? `/posts/${slug}`
+          : type === 'pages'
+            ? `/content/${slug}`
+            : `/portafolio/${slug}`;
     }
 
     // Validate URL format
@@ -139,7 +144,6 @@ function testUrlGeneration(data, slug, type) {
     } catch (urlError) {
       errors.push('Generated URL is invalid');
     }
-
   } catch (error) {
     errors.push(`URL generation error: ${error.message}`);
   }
@@ -215,7 +219,7 @@ function testContentFile(filePath, type) {
   if (!parseResult.success) {
     return {
       success: false,
-      errors: parseResult.errors
+      errors: parseResult.errors,
     };
   }
 
@@ -233,7 +237,7 @@ function testContentFile(filePath, type) {
     success: errors.length === 0,
     errors: [...parseResult.errors, ...errors],
     data: parseResult.data,
-    body: parseResult.body
+    body: parseResult.body,
   };
 }
 
@@ -267,14 +271,16 @@ async function testContentType(type) {
       testResults[type].failed++;
       testResults[type].errors.push({
         file,
-        errors: result.errors
+        errors: result.errors,
       });
     }
 
     progressCount++;
     if (progressCount % progressInterval === 0) {
       const progress = Math.round((progressCount / files.length) * 100);
-      console.log(`  Progress: ${progress}% (${progressCount}/${files.length})`);
+      console.log(
+        `  Progress: ${progress}% (${progressCount}/${files.length})`,
+      );
     }
   }
 
@@ -297,9 +303,15 @@ async function testSearchIndexGeneration() {
   try {
     // This would normally import and test the search index generation
     // For now, we'll do a basic check
-    const allPosts = await glob('**/*.md', { cwd: path.join(CONTENT_DIR, 'posts') });
-    const allPages = await glob('**/*.md', { cwd: path.join(CONTENT_DIR, 'pages') });
-    const allProjects = await glob('**/*.md', { cwd: path.join(CONTENT_DIR, 'projects') });
+    const allPosts = await glob('**/*.md', {
+      cwd: path.join(CONTENT_DIR, 'posts'),
+    });
+    const allPages = await glob('**/*.md', {
+      cwd: path.join(CONTENT_DIR, 'pages'),
+    });
+    const allProjects = await glob('**/*.md', {
+      cwd: path.join(CONTENT_DIR, 'projects'),
+    });
 
     const totalContent = allPosts.length + allPages.length + allProjects.length;
 
@@ -331,7 +343,9 @@ function generateTestReport() {
     console.log(`  Total: ${results.total}`);
     console.log(`  Passed: ${results.passed}`);
     console.log(`  Failed: ${results.failed}`);
-    console.log(`  Success Rate: ${Math.round((results.passed / results.total) * 100)}%`);
+    console.log(
+      `  Success Rate: ${Math.round((results.passed / results.total) * 100)}%`,
+    );
     console.log('');
 
     totalPassed += results.passed;
@@ -343,7 +357,9 @@ function generateTestReport() {
   console.log(`  Total Files: ${totalFiles}`);
   console.log(`  Passed: ${totalPassed}`);
   console.log(`  Failed: ${totalFailed}`);
-  console.log(`  Success Rate: ${Math.round((totalPassed / totalFiles) * 100)}%`);
+  console.log(
+    `  Success Rate: ${Math.round((totalPassed / totalFiles) * 100)}%`,
+  );
 }
 
 /**
@@ -362,13 +378,15 @@ function displayDetailedErrors() {
 
       console.log(`\n${type.toUpperCase()} Errors:`);
 
-      results.errors.slice(0, 5).forEach(error => {
+      results.errors.slice(0, 5).forEach((error) => {
         console.log(`  ${error.file}:`);
-        error.errors.forEach(err => console.log(`    - ${err}`));
+        error.errors.forEach((err) => console.log(`    - ${err}`));
       });
 
       if (results.errors.length > 5) {
-        console.log(`  ... and ${results.errors.length - 5} more files with errors`);
+        console.log(
+          `  ... and ${results.errors.length - 5} more files with errors`,
+        );
       }
     }
   });
@@ -397,9 +415,18 @@ async function main() {
   const hasErrors = displayDetailedErrors();
 
   // Final summary
-  const totalFiles = Object.values(testResults).reduce((sum, results) => sum + results.total, 0);
-  const totalPassed = Object.values(testResults).reduce((sum, results) => sum + results.passed, 0);
-  const totalFailed = Object.values(testResults).reduce((sum, results) => sum + results.failed, 0);
+  const totalFiles = Object.values(testResults).reduce(
+    (sum, results) => sum + results.total,
+    0,
+  );
+  const totalPassed = Object.values(testResults).reduce(
+    (sum, results) => sum + results.passed,
+    0,
+  );
+  const totalFailed = Object.values(testResults).reduce(
+    (sum, results) => sum + results.failed,
+    0,
+  );
 
   console.log('\n' + '='.repeat(50));
   console.log('📋 CONTENT RENDERING TEST SUMMARY');
@@ -407,8 +434,12 @@ async function main() {
   console.log(`Total Content Files: ${totalFiles}`);
   console.log(`Rendering Tests Passed: ${totalPassed}`);
   console.log(`Rendering Tests Failed: ${totalFailed}`);
-  console.log(`Overall Success Rate: ${Math.round((totalPassed / totalFiles) * 100)}%`);
-  console.log(`Search Index Generation: ${searchIndexOk ? '✅ OK' : '❌ Failed'}`);
+  console.log(
+    `Overall Success Rate: ${Math.round((totalPassed / totalFiles) * 100)}%`,
+  );
+  console.log(
+    `Search Index Generation: ${searchIndexOk ? '✅ OK' : '❌ Failed'}`,
+  );
   console.log('='.repeat(50));
 
   if (hasErrors || totalFailed > 0 || !searchIndexOk) {

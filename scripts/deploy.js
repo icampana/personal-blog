@@ -5,10 +5,10 @@
  * Handles pre-deployment checks and environment-specific configurations
  */
 
+import { execSync } from 'child_process';
 import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
-import { execSync } from 'child_process';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -39,7 +39,9 @@ const ENVIRONMENTS = {
  */
 function getCurrentBranch() {
   try {
-    return execSync('git rev-parse --abbrev-ref HEAD', { encoding: 'utf8' }).trim();
+    return execSync('git rev-parse --abbrev-ref HEAD', {
+      encoding: 'utf8',
+    }).trim();
   } catch (error) {
     console.log('⚠️  Could not determine git branch');
     return 'unknown';
@@ -200,7 +202,7 @@ function main() {
 
   if (!environment) {
     console.log('❌ Invalid environment. Available environments:');
-    Object.keys(ENVIRONMENTS).forEach(env => {
+    Object.keys(ENVIRONMENTS).forEach((env) => {
       console.log(`   - ${env}`);
     });
     process.exit(1);
@@ -212,7 +214,7 @@ function main() {
   const checkResults = runPreDeploymentChecks(environment);
 
   console.log('\n📋 Pre-deployment check results:');
-  checkResults.checks.forEach(check => console.log(`   ${check}`));
+  checkResults.checks.forEach((check) => console.log(`   ${check}`));
 
   if (!checkResults.passed) {
     console.log('\n❌ Pre-deployment checks failed');

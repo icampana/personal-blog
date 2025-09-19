@@ -9,13 +9,13 @@ const pages = await getCollection('pages');
 const menuItems = [
   { url: '/', title: 'Home' },
   { url: '/portafolio', title: 'Portfolio' },
-  ...pages.map(page => ({
+  ...pages.map((page) => ({
     url: page.data.path ? `/content${page.data.path}` : `/content/${page.slug}`,
-    title: page.data.title
-  }))
+    title: page.data.title,
+  })),
 ];
 
-const siteTitle = "Iván Gabriel";
+const siteTitle = 'Iván Gabriel';
 ---
 
 <header>

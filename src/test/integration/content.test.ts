@@ -1,4 +1,4 @@
-import { describe, it, expect, vi } from 'vitest';
+import { describe, expect, it, vi } from 'vitest';
 
 // Mock Astro content collections
 const mockPosts = [
@@ -105,7 +105,7 @@ describe('Content Collection Integration', () => {
       const { getCollection } = await import('astro:content');
       const posts = await getCollection('posts');
 
-      posts.forEach(post => {
+      posts.forEach((post) => {
         expect(post.data.title).toBeDefined();
         expect(post.data.date).toBeInstanceOf(Date);
         expect(post.data.tags).toBeDefined();
@@ -117,8 +117,9 @@ describe('Content Collection Integration', () => {
       const { getCollection } = await import('astro:content');
       const posts = await getCollection('posts');
 
-      const sortedPosts = posts.sort((a, b) =>
-        new Date(b.data.date).getTime() - new Date(a.data.date).getTime()
+      const sortedPosts = posts.sort(
+        (a, b) =>
+          new Date(b.data.date).getTime() - new Date(a.data.date).getTime(),
       );
 
       expect(sortedPosts[0].data.title).toBe('Test Post 1');
@@ -140,7 +141,7 @@ describe('Content Collection Integration', () => {
       const { getCollection } = await import('astro:content');
       const pages = await getCollection('pages');
 
-      pages.forEach(page => {
+      pages.forEach((page) => {
         expect(page.data.title).toBeDefined();
         expect(page.data.date).toBeInstanceOf(Date);
       });
@@ -161,7 +162,7 @@ describe('Content Collection Integration', () => {
       const { getCollection } = await import('astro:content');
       const projects = await getCollection('projects');
 
-      projects.forEach(project => {
+      projects.forEach((project) => {
         expect(project.data.title).toBeDefined();
         expect(project.data.date).toBeInstanceOf(Date);
         expect(project.data.description).toBeDefined();
@@ -184,7 +185,7 @@ describe('Content Collection Integration', () => {
       const { getCollection } = await import('astro:content');
       const posts = await getCollection('posts');
 
-      posts.forEach(post => {
+      posts.forEach((post) => {
         // Check required fields
         expect(typeof post.data.title).toBe('string');
         expect(post.data.date).toBeInstanceOf(Date);
@@ -203,7 +204,7 @@ describe('Content Collection Integration', () => {
       const { getCollection } = await import('astro:content');
       const pages = await getCollection('pages');
 
-      pages.forEach(page => {
+      pages.forEach((page) => {
         expect(typeof page.data.title).toBe('string');
         expect(page.data.date).toBeInstanceOf(Date);
 
@@ -218,7 +219,7 @@ describe('Content Collection Integration', () => {
       const { getCollection } = await import('astro:content');
       const projects = await getCollection('projects');
 
-      projects.forEach(project => {
+      projects.forEach((project) => {
         expect(typeof project.data.title).toBe('string');
         expect(project.data.date).toBeInstanceOf(Date);
 

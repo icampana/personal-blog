@@ -1,9 +1,9 @@
 import fs from 'fs';
-import path from 'path';
-import { fileURLToPath } from 'url';
 import Fuse from 'fuse.js';
 import { glob } from 'glob';
 import matter from 'gray-matter';
+import path from 'path';
+import { fileURLToPath } from 'url';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -15,7 +15,9 @@ async function generateSearchIndex() {
     const searchItems = [];
 
     // Process posts
-    const postFiles = await glob('src/content/posts/**/*.md', { cwd: path.join(__dirname, '..') });
+    const postFiles = await glob('src/content/posts/**/*.md', {
+      cwd: path.join(__dirname, '..'),
+    });
     for (const file of postFiles) {
       const fullPath = path.join(__dirname, '..', file);
       const content = fs.readFileSync(fullPath, 'utf-8');
@@ -32,13 +34,15 @@ async function generateSearchIndex() {
           summary: data.description || body.slice(0, 200),
           tags: data.tags || [],
           date: data.date,
-          type: 'post'
+          type: 'post',
         });
       }
     }
 
     // Process pages
-    const pageFiles = await glob('src/content/pages/**/*.md', { cwd: path.join(__dirname, '..') });
+    const pageFiles = await glob('src/content/pages/**/*.md', {
+      cwd: path.join(__dirname, '..'),
+    });
     for (const file of pageFiles) {
       const fullPath = path.join(__dirname, '..', file);
       const content = fs.readFileSync(fullPath, 'utf-8');
@@ -54,13 +58,15 @@ async function generateSearchIndex() {
           content: body.slice(0, 500),
           summary: data.description || body.slice(0, 200),
           date: data.date,
-          type: 'page'
+          type: 'page',
         });
       }
     }
 
     // Process projects
-    const projectFiles = await glob('src/content/projects/**/*.md', { cwd: path.join(__dirname, '..') });
+    const projectFiles = await glob('src/content/projects/**/*.md', {
+      cwd: path.join(__dirname, '..'),
+    });
     for (const file of projectFiles) {
       const fullPath = path.join(__dirname, '..', file);
       const content = fs.readFileSync(fullPath, 'utf-8');
@@ -68,7 +74,9 @@ async function generateSearchIndex() {
 
       if (data.title) {
         const slug = path.basename(file, '.md');
-        const url = data.path ? `/portafolio${data.path}` : `/portafolio/${slug}`;
+        const url = data.path
+          ? `/portafolio${data.path}`
+          : `/portafolio/${slug}`;
 
         searchItems.push({
           title: data.title,
@@ -77,7 +85,7 @@ async function generateSearchIndex() {
           summary: data.description || body.slice(0, 200),
           tags: data.techStack || [],
           date: data.date,
-          type: 'project'
+          type: 'project',
         });
       }
     }
@@ -102,7 +110,6 @@ async function generateSearchIndex() {
     console.log('✅ Search posts generated at:', postsPath);
 
     console.log(`📊 Indexed ${searchItems.length} items total`);
-
   } catch (error) {
     console.error('❌ Error generating search index:', error);
     process.exit(1);

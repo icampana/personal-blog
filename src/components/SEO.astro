@@ -16,75 +16,77 @@ export interface Props {
 }
 
 const {
-  title = "Iván Gabriel",
-  description = "Diario de un Informático, Emprendedor, Desarrollador y Curioso a tiempo completo.",
-  image = "/images/profile-pic.jpg",
+  title = 'Iván Gabriel',
+  description = 'Diario de un Informático, Emprendedor, Desarrollador y Curioso a tiempo completo.',
+  image = '/images/profile-pic.jpg',
   url = Astro.url.href,
-  type = "website",
+  type = 'website',
   publishedTime,
   modifiedTime,
   tags = [],
-  author = "Iván Campaña",
-  siteName = "Iván Gabriel",
-  twitterHandle = "@icampana",
+  author = 'Iván Campaña',
+  siteName = 'Iván Gabriel',
+  twitterHandle = '@icampana',
   noindex = false,
-  canonical = url
+  canonical = url,
 } = Astro.props;
 
-const siteUrl = "https://ivan.campananaranjo.com";
-const fullTitle = title === "Iván Gabriel" ? title : `${title} | Iván Gabriel`;
+const siteUrl = 'https://ivan.campananaranjo.com';
+const fullTitle = title === 'Iván Gabriel' ? title : `${title} | Iván Gabriel`;
 const fullImage = image.startsWith('http') ? image : `${siteUrl}${image}`;
 const fullUrl = url.startsWith('http') ? url : `${siteUrl}${url}`;
-const canonicalUrl = canonical.startsWith('http') ? canonical : `${siteUrl}${canonical}`;
+const canonicalUrl = canonical.startsWith('http')
+  ? canonical
+  : `${siteUrl}${canonical}`;
 
 // Generate JSON-LD structured data
 const jsonLd = {
-  "@context": "https://schema.org",
-  "@type": type === "article" ? "BlogPosting" : "WebPage",
-  "headline": title,
-  "description": description,
-  "image": fullImage,
-  "url": fullUrl,
-  "author": {
-    "@type": "Person",
-    "name": author,
-    "url": `${siteUrl}/content/sobre-el-autor`,
-    "sameAs": [
-      "https://twitter.com/icampana",
-      "https://github.com/icampana",
-      "https://linkedin.com/in/icampana"
-    ]
+  '@context': 'https://schema.org',
+  '@type': type === 'article' ? 'BlogPosting' : 'WebPage',
+  headline: title,
+  description: description,
+  image: fullImage,
+  url: fullUrl,
+  author: {
+    '@type': 'Person',
+    name: author,
+    url: `${siteUrl}/content/sobre-el-autor`,
+    sameAs: [
+      'https://twitter.com/icampana',
+      'https://github.com/icampana',
+      'https://linkedin.com/in/icampana',
+    ],
   },
-  "publisher": {
-    "@type": "Organization",
-    "name": siteName,
-    "url": siteUrl,
-    "logo": {
-      "@type": "ImageObject",
-      "url": `${siteUrl}/images/logo.png`
-    }
+  publisher: {
+    '@type': 'Organization',
+    name: siteName,
+    url: siteUrl,
+    logo: {
+      '@type': 'ImageObject',
+      url: `${siteUrl}/images/logo.png`,
+    },
   },
-  ...(publishedTime && { "datePublished": publishedTime }),
-  ...(modifiedTime && { "dateModified": modifiedTime }),
-  ...(tags.length > 0 && { "keywords": tags.join(", ") }),
-  "mainEntityOfPage": {
-    "@type": "WebPage",
-    "@id": fullUrl
-  }
+  ...(publishedTime && { datePublished: publishedTime }),
+  ...(modifiedTime && { dateModified: modifiedTime }),
+  ...(tags.length > 0 && { keywords: tags.join(', ') }),
+  mainEntityOfPage: {
+    '@type': 'WebPage',
+    '@id': fullUrl,
+  },
 };
 
 // Add article-specific structured data
-if (type === "article") {
+if (type === 'article') {
   const articleData = {
     ...jsonLd,
-    "@type": "BlogPosting",
-    "articleSection": "Technology",
+    '@type': 'BlogPosting',
+    articleSection: 'Technology',
     ...(tags.length > 0 && {
-      "about": tags.map(tag => ({
-        "@type": "Thing",
-        "name": tag
-      }))
-    })
+      about: tags.map((tag) => ({
+        '@type': 'Thing',
+        name: tag,
+      })),
+    }),
   };
   Object.assign(jsonLd, articleData);
 }

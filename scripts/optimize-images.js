@@ -67,7 +67,9 @@ function analyzeImages() {
   const allImages = [...imagesDirFiles, ...photosDirFiles];
 
   if (allImages.length === 0) {
-    console.log('No images found in /public/images or /public/photos directories.');
+    console.log(
+      'No images found in /public/images or /public/photos directories.',
+    );
     return;
   }
 
@@ -84,25 +86,33 @@ function analyzeImages() {
     imageStats.push({
       path: relativePath,
       size: sizeKB,
-      extension: path.extname(imagePath).toLowerCase()
+      extension: path.extname(imagePath).toLowerCase(),
     });
 
     console.log(`📁 ${relativePath} - ${sizeKB} KB`);
   }
 
-  console.log(`\n📊 Total size: ${totalSize} KB (${Math.round(totalSize / 1024)} MB)`);
+  console.log(
+    `\n📊 Total size: ${totalSize} KB (${Math.round(totalSize / 1024)} MB)`,
+  );
 
   // Recommendations
   console.log('\n💡 Optimization recommendations:');
 
-  const largeImages = imageStats.filter(img => img.size > 500);
+  const largeImages = imageStats.filter((img) => img.size > 500);
   if (largeImages.length > 0) {
-    console.log(`   • ${largeImages.length} image(s) are larger than 500KB and could benefit from compression`);
+    console.log(
+      `   • ${largeImages.length} image(s) are larger than 500KB and could benefit from compression`,
+    );
   }
 
-  const nonWebpImages = imageStats.filter(img => !['.webp', '.avif'].includes(img.extension));
+  const nonWebpImages = imageStats.filter(
+    (img) => !['.webp', '.avif'].includes(img.extension),
+  );
   if (nonWebpImages.length > 0) {
-    console.log(`   • ${nonWebpImages.length} image(s) could be converted to WebP/AVIF for better compression`);
+    console.log(
+      `   • ${nonWebpImages.length} image(s) could be converted to WebP/AVIF for better compression`,
+    );
   }
 
   if (largeImages.length === 0 && nonWebpImages.length === 0) {
@@ -131,7 +141,7 @@ function createSampleImages() {
         <text x="50%" y="50%" font-family="Arial, sans-serif" font-size="32" fill="white" text-anchor="middle" dy=".3em">
           Sample Blog Post Image
         </text>
-      </svg>`
+      </svg>`,
     },
     {
       name: 'sample-project-1.svg',
@@ -146,7 +156,7 @@ function createSampleImages() {
         <text x="50%" y="50%" font-family="Arial, sans-serif" font-size="32" fill="white" text-anchor="middle" dy=".3em">
           Sample Project Image
         </text>
-      </svg>`
+      </svg>`,
     },
     {
       name: 'profile-pic.svg',
@@ -161,8 +171,8 @@ function createSampleImages() {
         <text x="50%" y="50%" font-family="Arial, sans-serif" font-size="24" fill="white" text-anchor="middle" dy=".3em">
           Profile Picture
         </text>
-      </svg>`
-    }
+      </svg>`,
+    },
   ];
 
   // Ensure directories exist
@@ -196,8 +206,12 @@ switch (command) {
   default:
     console.log('🖼️  Image Optimization Tool\n');
     console.log('Usage:');
-    console.log('  node scripts/optimize-images.js analyze        - Analyze existing images');
-    console.log('  node scripts/optimize-images.js create-samples - Create sample images for testing');
+    console.log(
+      '  node scripts/optimize-images.js analyze        - Analyze existing images',
+    );
+    console.log(
+      '  node scripts/optimize-images.js create-samples - Create sample images for testing',
+    );
     console.log('');
     break;
 }

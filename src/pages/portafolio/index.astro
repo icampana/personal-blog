@@ -1,16 +1,16 @@
 ---
 import { getCollection } from 'astro:content';
-import BlogLayout from '../../layouts/BlogLayout.astro';
 import ProjectCard from '../../components/ProjectCard.astro';
+import BlogLayout from '../../layouts/BlogLayout.astro';
 
 // Get all projects and sort by date
 const allProjects = await getCollection('projects');
-const projects = allProjects.sort((a, b) =>
-  new Date(b.data.date).getTime() - new Date(a.data.date).getTime()
+const projects = allProjects.sort(
+  (a, b) => new Date(b.data.date).getTime() - new Date(a.data.date).getTime(),
 );
 
-const title = "Portfolio";
-const description = "Proyectos y trabajos realizados por Iván Gabriel";
+const title = 'Portfolio';
+const description = 'Proyectos y trabajos realizados por Iván Gabriel';
 ---
 
 <BlogLayout title={title} description={description}>

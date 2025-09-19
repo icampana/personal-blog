@@ -1,17 +1,17 @@
 ---
 import { getCollection } from 'astro:content';
-import BlogLayout from '../../../layouts/BlogLayout.astro';
-import PostCard from '../../../components/PostCard.astro';
-import { sortPostsByDate } from '../../../utils';
 import { format } from 'date-fns';
 import { es } from 'date-fns/locale';
+import PostCard from '../../../components/PostCard.astro';
+import BlogLayout from '../../../layouts/BlogLayout.astro';
+import { sortPostsByDate } from '../../../utils';
 
 export async function getStaticPaths() {
   const allPosts = await getCollection('posts');
   const dateGroups = new Map<string, any[]>();
 
   // Group posts by year/month
-  allPosts.forEach(post => {
+  allPosts.forEach((post) => {
     const date = new Date(post.data.date);
     const year = date.getFullYear().toString();
     const month = (date.getMonth() + 1).toString().padStart(2, '0');

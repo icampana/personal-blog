@@ -10,7 +10,7 @@ export interface Props {
 const { headings } = Astro.props;
 
 // Filter out h1 headings and only show h2-h4
-const tocHeadings = headings.filter(h => h.depth >= 2 && h.depth <= 4);
+const tocHeadings = headings.filter((h) => h.depth >= 2 && h.depth <= 4);
 ---
 
 {tocHeadings.length > 0 && (

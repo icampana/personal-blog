@@ -1,4 +1,4 @@
-import { describe, it, expect } from 'vitest';
+import { describe, expect, it } from 'vitest';
 
 // Mock route configurations from astro.config.mjs
 const redirects = {
@@ -58,8 +58,9 @@ describe('URL Compatibility and Routing', () => {
     });
 
     it('should handle all defined category redirects', () => {
-      const categoryRedirects = Object.entries(redirects)
-        .filter(([from]) => from.startsWith('/category/'));
+      const categoryRedirects = Object.entries(redirects).filter(([from]) =>
+        from.startsWith('/category/'),
+      );
 
       expect(categoryRedirects.length).toBeGreaterThan(10);
 
@@ -78,7 +79,7 @@ describe('URL Compatibility and Routing', () => {
         '/posts/category/javascript/test-post',
       ];
 
-      postUrls.forEach(url => {
+      postUrls.forEach((url) => {
         expect(url).toMatch(/^\/posts\//);
       });
     });
@@ -90,7 +91,7 @@ describe('URL Compatibility and Routing', () => {
         '/content/nested/page',
       ];
 
-      pageUrls.forEach(url => {
+      pageUrls.forEach((url) => {
         expect(url).toMatch(/^\/content\//);
       });
     });
@@ -101,7 +102,7 @@ describe('URL Compatibility and Routing', () => {
         '/portafolio/nested/project',
       ];
 
-      projectUrls.forEach(url => {
+      projectUrls.forEach((url) => {
         expect(url).toMatch(/^\/portafolio\//);
       });
     });
@@ -113,18 +114,15 @@ describe('URL Compatibility and Routing', () => {
         '/tag/remote-work',
       ];
 
-      tagUrls.forEach(url => {
+      tagUrls.forEach((url) => {
         expect(url).toMatch(/^\/tag\/[\w-]+$/);
       });
     });
 
     it('should validate date-based URL patterns', () => {
-      const dateUrls = [
-        '/by-date/2023/01',
-        '/by-date/2023/12',
-      ];
+      const dateUrls = ['/by-date/2023/01', '/by-date/2023/12'];
 
-      dateUrls.forEach(url => {
+      dateUrls.forEach((url) => {
         expect(url).toMatch(/^\/by-date\/\d{4}\/\d{2}$/);
       });
     });
@@ -136,7 +134,7 @@ describe('URL Compatibility and Routing', () => {
         '/posts/page/100',
       ];
 
-      paginationUrls.forEach(url => {
+      paginationUrls.forEach((url) => {
         expect(url).toMatch(/^\/posts\/page\/\d+$/);
       });
     });
@@ -150,7 +148,7 @@ describe('URL Compatibility and Routing', () => {
     it('should generate consistent post URLs', () => {
       const mockPost = {
         slug: 'test-post',
-        data: { path: undefined }
+        data: { path: undefined },
       };
 
       const expectedUrl = `/posts/${mockPost.slug}`;
@@ -160,7 +158,7 @@ describe('URL Compatibility and Routing', () => {
     it('should generate consistent page URLs', () => {
       const mockPage = {
         slug: 'about',
-        data: { path: '/sobre-el-autor' }
+        data: { path: '/sobre-el-autor' },
       };
 
       const expectedUrl = `/content${mockPage.data.path}`;
@@ -170,7 +168,7 @@ describe('URL Compatibility and Routing', () => {
     it('should generate consistent project URLs', () => {
       const mockProject = {
         slug: 'test-project',
-        data: { path: undefined }
+        data: { path: undefined },
       };
 
       const expectedUrl = `/portafolio/${mockProject.slug}`;
@@ -188,20 +186,16 @@ describe('URL Compatibility and Routing', () => {
         '/tag/javascript',
       ];
 
-      paths.forEach(path => {
+      paths.forEach((path) => {
         const canonical = `${baseUrl}${path}`;
         expect(canonical).toMatch(/^https:\/\/ivan\.campananaranjo\.com\//);
       });
     });
 
     it('should handle trailing slashes consistently', () => {
-      const urls = [
-        '/posts/test-post',
-        '/content/about',
-        '/tag/javascript',
-      ];
+      const urls = ['/posts/test-post', '/content/about', '/tag/javascript'];
 
-      urls.forEach(url => {
+      urls.forEach((url) => {
         expect(url).not.toMatch(/\/$/); // Should not end with trailing slash
       });
     });

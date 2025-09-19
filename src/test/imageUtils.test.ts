@@ -1,11 +1,11 @@
-import { describe, it, expect } from 'vitest';
+import { describe, expect, it } from 'vitest';
 import {
-  normalizeImagePath,
+  DEFAULT_IMAGE_SIZES,
   generateSizes,
-  getOptimalFormat,
   generateSrcSet,
   getImageMetadata,
-  DEFAULT_IMAGE_SIZES
+  getOptimalFormat,
+  normalizeImagePath,
 } from '../utils/imageUtils';
 
 describe('Image Utilities', () => {
@@ -26,7 +26,9 @@ describe('Image Utilities', () => {
     });
 
     it('should handle relative paths from content', () => {
-      expect(normalizeImagePath('./photos/image.jpg')).toBe('/photos/image.jpg');
+      expect(normalizeImagePath('./photos/image.jpg')).toBe(
+        '/photos/image.jpg',
+      );
       expect(normalizeImagePath('./image.jpg')).toBe('/photos/image.jpg');
     });
 
@@ -41,7 +43,7 @@ describe('Image Utilities', () => {
       const breakpoints = {
         '(max-width: 768px)': '100vw',
         '(max-width: 1200px)': '50vw',
-        '': '33vw'
+        '': '33vw',
       };
 
       const sizes = generateSizes(breakpoints);
@@ -57,12 +59,14 @@ describe('Image Utilities', () => {
     });
 
     it('should detect AVIF support in newer Chrome', () => {
-      const chromeUA = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36';
+      const chromeUA =
+        'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36';
       expect(getOptimalFormat(chromeUA)).toBe('avif');
     });
 
     it('should detect WebP support in supported browsers', () => {
-      const firefoxUA = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:88.0) Gecko/20100101 Firefox/88.0';
+      const firefoxUA =
+        'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:88.0) Gecko/20100101 Firefox/88.0';
       expect(getOptimalFormat(firefoxUA)).toBe('webp');
     });
 
@@ -77,11 +81,13 @@ describe('Image Utilities', () => {
       const basePath = '/images/test.jpg';
       const sizes = [
         { width: 400, height: 300 },
-        { width: 800, height: 600 }
+        { width: 800, height: 600 },
       ];
 
       const srcSet = generateSrcSet(basePath, sizes);
-      expect(srcSet).toBe('/images/test.jpg?w=400 400w, /images/test.jpg?w=800 800w');
+      expect(srcSet).toBe(
+        '/images/test.jpg?w=400 400w, /images/test.jpg?w=800 800w',
+      );
     });
   });
 

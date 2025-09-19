@@ -1,8 +1,8 @@
 ---
 import { getCollection } from 'astro:content';
-import BlogLayout from '../../layouts/BlogLayout.astro';
-import PostCard from '../../components/PostCard.astro';
 import Pagination from '../../components/Pagination.astro';
+import PostCard from '../../components/PostCard.astro';
+import BlogLayout from '../../layouts/BlogLayout.astro';
 import { sortPostsByDate } from '../../utils';
 
 // Get all posts and sort by date
@@ -17,8 +17,8 @@ const currentPage = 1;
 // Get posts for current page
 const paginatedPosts = posts.slice(0, postsPerPage);
 
-const title = "Todas las Publicaciones";
-const description = "Lista completa de todas las publicaciones del blog";
+const title = 'Todas las Publicaciones';
+const description = 'Lista completa de todas las publicaciones del blog';
 ---
 
 <BlogLayout title={title} description={description}>

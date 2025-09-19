@@ -58,12 +58,19 @@ export function getOptimalFormat(userAgent?: string): 'webp' | 'avif' | 'jpg' {
   if (!userAgent) return 'webp';
 
   // Check for AVIF support (newer browsers)
-  if (userAgent.includes('Chrome/') && parseInt(userAgent.split('Chrome/')[1]) >= 85) {
+  if (
+    userAgent.includes('Chrome/') &&
+    parseInt(userAgent.split('Chrome/')[1]) >= 85
+  ) {
     return 'avif';
   }
 
   // Check for WebP support
-  if (userAgent.includes('Chrome/') || userAgent.includes('Firefox/') || userAgent.includes('Safari/')) {
+  if (
+    userAgent.includes('Chrome/') ||
+    userAgent.includes('Firefox/') ||
+    userAgent.includes('Safari/')
+  ) {
     return 'webp';
   }
 
@@ -91,7 +98,8 @@ export function getImageMetadata(imagePath: string) {
     path: normalizedPath,
     filename,
     extension,
-    isExternal: normalizedPath.startsWith('http') || normalizedPath.startsWith('//'),
+    isExternal:
+      normalizedPath.startsWith('http') || normalizedPath.startsWith('//'),
     isOptimizable: ['jpg', 'jpeg', 'png', 'webp'].includes(extension),
   };
 }

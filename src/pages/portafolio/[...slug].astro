@@ -1,5 +1,5 @@
 ---
-import { getCollection, type CollectionEntry } from 'astro:content';
+import { type CollectionEntry, getCollection } from 'astro:content';
 import ProjectLayout from '../../layouts/ProjectLayout.astro';
 import { getProjectUrl } from '../../utils';
 
@@ -9,7 +9,10 @@ export async function getStaticPaths() {
   return projects.map((project) => {
     const url = getProjectUrl(project);
     // Remove the /portafolio prefix and split into slug parts
-    const slugParts = url.replace('/portafolio/', '').split('/').filter(Boolean);
+    const slugParts = url
+      .replace('/portafolio/', '')
+      .split('/')
+      .filter(Boolean);
 
     return {
       params: { slug: slugParts.join('/') },

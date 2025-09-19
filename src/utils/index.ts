@@ -1,8 +1,8 @@
-import readingTime from 'reading-time';
-import striptags from 'striptags';
+import type { CollectionEntry } from 'astro:content';
 import { format } from 'date-fns';
 import { es } from 'date-fns/locale';
-import type { CollectionEntry } from 'astro:content';
+import readingTime from 'reading-time';
+import striptags from 'striptags';
 
 export function getReadingTime(content: string) {
   return readingTime(content);
@@ -51,22 +51,25 @@ export function getProjectUrl(project: CollectionEntry<'projects'>): string {
 
 export function getAllTags(posts: CollectionEntry<'posts'>[]): string[] {
   const tags = new Set<string>();
-  posts.forEach(post => {
+  posts.forEach((post) => {
     if (post.data.tags) {
-      post.data.tags.forEach(tag => tags.add(tag));
+      post.data.tags.forEach((tag) => tags.add(tag));
     }
   });
   return Array.from(tags).sort();
 }
 
-export function getPostsByTag(posts: CollectionEntry<'posts'>[], tag: string): CollectionEntry<'posts'>[] {
-  return posts.filter(post =>
-    post.data.tags && post.data.tags.includes(tag)
-  );
+export function getPostsByTag(
+  posts: CollectionEntry<'posts'>[],
+  tag: string,
+): CollectionEntry<'posts'>[] {
+  return posts.filter((post) => post.data.tags && post.data.tags.includes(tag));
 }
 
-export function sortPostsByDate(posts: CollectionEntry<'posts'>[]): CollectionEntry<'posts'>[] {
-  return posts.sort((a, b) =>
-    new Date(b.data.date).getTime() - new Date(a.data.date).getTime()
+export function sortPostsByDate(
+  posts: CollectionEntry<'posts'>[],
+): CollectionEntry<'posts'>[] {
+  return posts.sort(
+    (a, b) => new Date(b.data.date).getTime() - new Date(a.data.date).getTime(),
   );
 }
