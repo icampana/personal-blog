@@ -4,6 +4,7 @@ import PostCard from '../components/PostCard.astro';
 import StructuredData from '../components/StructuredData.astro';
 import BlogLayout from '../layouts/BlogLayout.astro';
 import { sortPostsByDate } from '../utils';
+import { generateImgxUrl } from '../utils/imgxUtils';
 
 // Get all posts and sort by date
 const allPosts = await getCollection('posts');
@@ -15,14 +16,19 @@ const featuredPosts = posts.slice(0, 12);
 const title = 'Iván Gabriel';
 const description =
   'Diario de un Informático, Emprendedor, Desarrollador y Curioso a tiempo completo.';
+const imagePhoto = generateImgxUrl('/photos/personal_image_ia.png', 300, 300);
+//const imagePhoto = '/photos/personal_image_ia.png';
 ---
 
 <BlogLayout title={title} description={description}>
   <div class="px-2">
-    <div class="hero bg-base-200 rounded-lg mb-8">
-      <div class="hero-content text-center">
+    <div class="hero bg-base-200 py-4">
+      <div class="hero-content flex-col lg:flex-row">
+        <img
+          src={imagePhoto}
+          class="max-w-sm rounded-lg shadow-2xl"
+        />
         <div class="max-w-md">
-          <h1 class="text-5xl font-bold">¡Hola!</h1>
           <p class="py-6">
             Soy Iván Gabriel, desarrollador y emprendedor con más de 15 años en tecnología.
             He trabajado en proyectos internacionales para medios, fintech y startups, liderando equipos y creando soluciones con IA, integraciones y plataformas web.
