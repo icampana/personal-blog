@@ -47,6 +47,7 @@ coverage/
 # temporary files
 *.tmp
 *.temp
+.cache
 
 # build info (generated at build time)
 public/build-info.json
