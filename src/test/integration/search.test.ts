@@ -1,16 +1,51 @@
-import { readFileSync } from 'fs';
 import Fuse from 'fuse.js';
-import { join } from 'path';
 import { beforeEach, describe, expect, it } from 'vitest';
+
+// Mock search data that matches the actual structure
+const mockSearchData = [
+  {
+    title:
+      'Domina React: Patrones de Diseño y Trucos para Desarrolladores Junior',
+    url: '/posts/react-patterns',
+    content:
+      'Si eres programador y has ido ganando experiencia, en algún momento de tu carrera encontrarás el término "patrones de diseño de software". React es una biblioteca muy popular para el desarrollo frontend.',
+    summary:
+      'Descubre los Patrones de Diseño y Mejores Prácticas de React en este tutorial para desarrolladores junior. Aprende cómo construir aplicaciones más eficientes.',
+    tags: ['React', 'Development', 'Frontend'],
+    date: '2023-10-23T00:00:00.000Z',
+    type: 'post',
+  },
+  {
+    title: 'Usando ChatGPT como tu Mentor para mejorar como programador',
+    url: '/posts/chatgpt-mentor',
+    content:
+      'Siendo desarrollador, lo que más tenemos es preguntas, especialmente si aún eres junior. ChatGPT puede ser tu mentor virtual.',
+    summary:
+      'Impulsa tus habilidades como programador con ChatGPT, un tutor virtual para desarrolladores junior.',
+    tags: ['Development', 'AI', 'Mentoring'],
+    date: '2023-11-13T00:00:00.000Z',
+    type: 'post',
+  },
+  {
+    title: 'Tech Wars: ¿Qué tecnología debo escoger para mi carrera?',
+    url: '/posts/tech-wars',
+    content:
+      'Estás metido en el mundo de la tecnología y quieres saber cuáles son los mejores stacks tecnológicos para lograr ese trabajo soñado en TI.',
+    summary:
+      'Exploración de Tendencias Tecnológicas: Un Análisis entre Empresas Consolidadas y Startups.',
+    tags: ['Development', 'Tech Stacks', 'Remote Work'],
+    date: '2023-11-22T00:00:00.000Z',
+    type: 'post',
+  },
+];
 
 describe('Search Functionality', () => {
   let fuse: Fuse<any>;
   let searchData: any[];
 
   beforeEach(() => {
-    // Load search data dynamically
-    const searchDataPath = join(process.cwd(), 'public', 'search-posts.json');
-    searchData = JSON.parse(readFileSync(searchDataPath, 'utf-8'));
+    // Use mock data instead of reading from filesystem
+    searchData = mockSearchData;
 
     const fuseOptions = {
       keys: ['title', 'summary', 'content'],
