@@ -7,6 +7,19 @@ import { formatDate, getReadingTime } from '../utils';
 import { normalizeImagePath } from '../utils/imageUtils';
 import BlogLayout from './BlogLayout.astro';
 import { generateImgxUrl } from '../utils/imgxUtils';
+
+export interface Props {
+  post: CollectionEntry<'posts'>;
+}
+
+const { post } = Astro.props;
+const { title, description, featuredImage, tags, date } = post.data;
+const { Content } = await post.render();
+
+const readingTime = getReadingTime(post.body);
+const readingTimeText = `${Math.round(readingTime.minutes)} minutos`;
+
+const imagePath = normalizeImagePath(featuredImage);
 ---
 
 <BlogLayout
@@ -27,8 +40,8 @@ import { generateImgxUrl } from '../utils/imgxUtils';
           alt={title}
           class="w-full h-64 object-cover rounded-lg shadow-lg"
           loading="eager"
-          width={1200} // Provide a default width
-          height={675} // Provide a default height (16/9 aspect ratio)
+          width="1200"
+          height="675"
         />
       </div>
     )}
