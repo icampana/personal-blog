@@ -1,0 +1,48 @@
+---
+import { getCollection } from 'astro:content';
+import BlogLayout from '../../layouts/BlogLayout.astro';
+import TagList from '../../components/TagList.astro';
+import { getAllTags } from '../../utils';
+
+// Get all posts and extract tags
+const allPosts = await getCollection('posts');
+const allTags = getAllTags(allPosts);
+
+// Count posts per tag
+const tagCounts: Record<string, number> = {};
+allPosts.forEach(post => {
+  if (post.data.tags) {
+    post.data.tags.forEach(tag => {
+      tagCounts[tag] = (tagCounts[tag] || 0) + 1;
+    });
+  }
+});
+
+const title = "Todas las Etiquetas";
+const description = "Explora el contenido del blog por etiquetas";
+---
+
+<BlogLayout title={title} description={description}>
+  <div class="px-2">
+    <h1 class="text-4xl font-bold mb-8">Todas las Etiquetas</h1>
+
+    <p class="text-lg mb-8 text-base-content/70">
+      Explora el contenido del blog organizizado por etiquetas.
+      Haz clic en cualquier etiqueta para ver todos los artículos relacionados.
+    </p>
+
+    <div class="bg-base-200 p-6 rounded-lg">
+      <TagList
+        tags={allTags}
+        showCounts={true}
+        tagCounts={tagCounts}
+      />
+    </div>
+
+    <div class="mt-8 text-center">
+      <p class="text-sm text-base-content/60">
+        Total de etiquetas: {allTags.length} | Total de artículos: {allPosts.length}
+      </p>
+    </div>
+  </div>
+</BlogLayout>

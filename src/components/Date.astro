@@ -1,0 +1,14 @@
+---
+import { formatDate } from '../utils';
+
+export interface Props {
+  date: Date;
+  className?: string;
+}
+
+const { date, className = "capitalize text-xs text-accent mb-1" } = Astro.props;
+---
+
+<time datetime={date.toISOString()} class={className}>
+  {formatDate(date)}
+</time>

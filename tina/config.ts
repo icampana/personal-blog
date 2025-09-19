@@ -15,7 +15,7 @@ export default defineConfig({
 	},
 	media: {
 		tina: {
-			mediaRoot: "",
+			mediaRoot: "photos",
 			publicFolder: "public",
 		},
 	},
@@ -25,7 +25,7 @@ export default defineConfig({
 				format: "md",
 				label: "Posts",
 				name: "posts",
-				path: "content/posts",
+				path: "src/content/posts",
 				match: {
 					include: "**/*",
 				},
@@ -59,7 +59,7 @@ export default defineConfig({
 				format: "md",
 				label: "Pages",
 				name: "pages",
-				path: "content/pages",
+				path: "src/content/pages",
 				match: {
 					include: "**/*",
 				},
@@ -78,7 +78,7 @@ export default defineConfig({
 				format: "md",
 				label: "Projects",
 				name: "projects",
-				path: "content/projects",
+				path: "src/content/projects",
 				match: {
 					include: "**/*",
 				},

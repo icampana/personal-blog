@@ -1,0 +1,40 @@
+---
+interface Props {
+  src: string;
+  alt: string;
+  width?: number;
+  height?: number;
+  class?: string;
+  loading?: 'lazy' | 'eager';
+  aspectRatio?: string;
+  sizes?: string;
+}
+
+const {
+  src,
+  alt,
+  width = 800,
+  height = 600,
+  class: className = '',
+  loading = 'lazy',
+  aspectRatio = '16/9',
+  sizes,
+  ...rest
+} = Astro.props;
+
+// For images in public directory, use regular img tag to avoid Astro Image issues
+// const isPublicImage = src.startsWith('/photos/') || src.startsWith('/images/');
+// const isExternal = src.startsWith('http') || src.startsWith('//');
+---
+
+<img
+  src={src}
+  alt={alt}
+  width={width}
+  height={height}
+  class={className}
+  loading={loading}
+  style={`aspect-ratio: ${aspectRatio}`}
+  sizes={sizes}
+  {...rest}
+/>

@@ -1,0 +1,90 @@
+---
+import { getCollection, type CollectionEntry } from 'astro:content';
+import PostLayout from '../../layouts/PostLayout.astro';
+import { getPostUrl } from '../../utils';
+
+export async function getStaticPaths() {
+  const posts = await getCollection('posts');
+
+  return posts.map((post) => {
+    const url = getPostUrl(post);
+    // Remove the /posts prefix and split into slug parts
+    const slugParts = url.replace('/posts/', '').split('/').filter(Boolean);
+
+    return {
+      params: { slug: slugParts.join('/') },
+      props: { post },
+    };
+  });
+}
+
+interface Props {
+  post: CollectionEntry<'posts'>;
+}
+
+const { post } = Astro.props;
+
+// Get related posts (posts with similar tags)
+const allPosts = await getCollection('posts');
+const relatedPosts = allPosts
+  .filter((otherPost) => {
+    if (otherPost.data.tags && post.data.tags && otherPost.id !== post.id) {
+      return otherPost.data.tags.some((tag) => post.data.tags?.includes(tag));
+    }
+    return false;
+  })
+  .sort((a, b) => new Date(b.data.date).getTime() - new Date(a.data.date).getTime())
+  .slice(0, 3);
+---
+
+<PostLayout post={post}>
+  <!-- Related posts section -->
+  {relatedPosts.length > 0 && (
+    <section class="mt-12 pt-8 border-t border-base-300">
+      <h3 class="text-2xl font-bold mb-6">Artículos relacionados</h3>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        {relatedPosts.map((relatedPost) => (
+          <div class="card bg-base-100 shadow-sm">
+            <div class="card-body p-4">
+              <h4 class="card-title text-sm">
+                <a href={getPostUrl(relatedPost)} class="hover:text-primary">
+                  {relatedPost.data.title}
+                </a>
+              </h4>
+              {relatedPost.data.description && (
+                <p class="text-xs text-base-content/70">
+                  {relatedPost.data.description.slice(0, 100)}...
+                </p>
+              )}
+            </div>
+          </div>
+        ))}
+      </div>
+    </section>
+  )}
+
+  <!-- Back to top button -->
+  <button
+    id="back-to-top"
+    class="fixed bottom-5 right-5 btn btn-circle btn-primary opacity-0 transition-opacity duration-300"
+    onclick="window.scrollTo({ top: 0, behavior: 'smooth' })"
+  >
+    ↑
+  </button>
+</PostLayout>
+
+<script>
+  // Show/hide back to top button
+  window.addEventListener('scroll', () => {
+    const button = document.getElementById('back-to-top');
+    if (button) {
+      if (window.scrollY > 300) {
+        button.classList.remove('opacity-0');
+        button.classList.add('opacity-100');
+      } else {
+        button.classList.remove('opacity-100');
+        button.classList.add('opacity-0');
+      }
+    }
+  });
+</script>

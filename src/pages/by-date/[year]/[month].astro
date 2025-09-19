@@ -1,0 +1,70 @@
+---
+import { getCollection } from 'astro:content';
+import BlogLayout from '../../../layouts/BlogLayout.astro';
+import PostCard from '../../../components/PostCard.astro';
+import { sortPostsByDate } from '../../../utils';
+import { format } from 'date-fns';
+import { es } from 'date-fns/locale';
+
+export async function getStaticPaths() {
+  const allPosts = await getCollection('posts');
+  const dateGroups = new Map<string, any[]>();
+
+  // Group posts by year/month
+  allPosts.forEach(post => {
+    const date = new Date(post.data.date);
+    const year = date.getFullYear().toString();
+    const month = (date.getMonth() + 1).toString().padStart(2, '0');
+    const key = `${year}/${month}`;
+
+    if (!dateGroups.has(key)) {
+      dateGroups.set(key, []);
+    }
+    dateGroups.get(key)?.push(post);
+  });
+
+  return Array.from(dateGroups.entries()).map(([dateKey, posts]) => {
+    const [year, month] = dateKey.split('/');
+    return {
+      params: { year, month },
+      props: { posts, year, month },
+    };
+  });
+}
+
+const { posts, year, month } = Astro.props;
+const sortedPosts = sortPostsByDate(posts);
+
+// Format the month name in Spanish
+const monthDate = new Date(parseInt(year), parseInt(month) - 1, 1);
+const monthName = format(monthDate, 'MMMM', { locale: es });
+const capitalizedMonth = monthName.charAt(0).toUpperCase() + monthName.slice(1);
+
+const title = `Artículos de ${capitalizedMonth} ${year}`;
+const description = `Todos los artículos publicados en ${capitalizedMonth} de ${year}`;
+---
+
+<BlogLayout title={title} description={description}>
+  <div class="px-2">
+    <div class="mb-8">
+      <h1 class="text-4xl font-bold mb-4">
+        Artículos de {capitalizedMonth} {year}
+      </h1>
+      <p class="text-lg text-base-content/70">
+        {sortedPosts.length} {sortedPosts.length === 1 ? 'artículo publicado' : 'artículos publicados'}
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      {sortedPosts.map((post) => (
+        <PostCard post={post} />
+      ))}
+    </div>
+
+    <div class="mt-12 text-center">
+      <a href="/posts" class="btn btn-outline">
+        ← Ver todas las publicaciones
+      </a>
+    </div>
+  </div>
+</BlogLayout>

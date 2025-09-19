@@ -27,3 +27,7 @@ npm-debug.log*
 .pnpm-debug.log*
 
 public/search-*.json
+
+## Ignore migration blog
+astro-blog
+.migration-backup

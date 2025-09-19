@@ -1,0 +1,68 @@
+---
+import { getProjectUrl } from '../utils';
+import { normalizeImagePath } from '../utils/imageUtils';
+import type { CollectionEntry } from 'astro:content';
+import ResponsiveImage from './ResponsiveImage.astro';
+
+export interface Props {
+  project: CollectionEntry<'projects'>;
+}
+
+const { project } = Astro.props;
+const { title, description, galleryImage, techStack, liveUrl, repoUrl } = project.data;
+
+const projectUrl = getProjectUrl(project);
+const imagePath = normalizeImagePath(galleryImage?.[0]);
+---
+
+<div class="card bg-base-100 shadow-xl">
+  <figure>
+    <a href={projectUrl}>
+      <ResponsiveImage
+        src={imagePath}
+        alt={title}
+        class="object-cover w-full h-48"
+        loading="lazy"
+        aspectRatio="16/9"
+        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 400px"
+      />
+    </a>
+  </figure>
+  <div class="card-body">
+    <h2 class="card-title">
+      <a href={projectUrl} class="hover:text-primary">{title}</a>
+    </h2>
+    <p class="text-sm text-base-content/70">{description}</p>
+
+    {techStack && techStack.length > 0 && (
+      <div class="card-actions justify-start">
+        {techStack.map((tech) => (
+          <div class="badge badge-outline">{tech}</div>
+        ))}
+      </div>
+    )}
+
+    <div class="card-actions justify-end mt-4">
+      {liveUrl && (
+        <a
+          href={liveUrl}
+          class="btn btn-primary btn-sm"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Ver Proyecto
+        </a>
+      )}
+      {repoUrl && (
+        <a
+          href={repoUrl}
+          class="btn btn-secondary btn-sm"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Ver Código
+        </a>
+      )}
+    </div>
+  </div>
+</div>

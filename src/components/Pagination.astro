@@ -1,0 +1,120 @@
+---
+export interface Props {
+  currentPage: number;
+  totalPages: number;
+  baseUrl: string;
+  showFirstLast?: boolean;
+}
+
+const { currentPage, totalPages, baseUrl, showFirstLast = true } = Astro.props;
+
+const prevPage = currentPage > 1 ? currentPage - 1 : null;
+const nextPage = currentPage < totalPages ? currentPage + 1 : null;
+
+// Generate page numbers to show
+const getPageNumbers = () => {
+  const pages: (number | string)[] = [];
+  const maxVisible = 5;
+
+  if (totalPages <= maxVisible) {
+    // Show all pages if total is small
+    for (let i = 1; i <= totalPages; i++) {
+      pages.push(i);
+    }
+  } else {
+    // Show first page
+    pages.push(1);
+
+    // Calculate range around current page
+    const start = Math.max(2, currentPage - 1);
+    const end = Math.min(totalPages - 1, currentPage + 1);
+
+    // Add ellipsis if needed
+    if (start > 2) {
+      pages.push('...');
+    }
+
+    // Add pages around current
+    for (let i = start; i <= end; i++) {
+      pages.push(i);
+    }
+
+    // Add ellipsis if needed
+    if (end < totalPages - 1) {
+      pages.push('...');
+    }
+
+    // Show last page
+    if (totalPages > 1) {
+      pages.push(totalPages);
+    }
+  }
+
+  return pages;
+};
+
+const pageNumbers = getPageNumbers();
+
+const getPageUrl = (page: number) => {
+  if (page === 1) {
+    return baseUrl;
+  }
+  return `${baseUrl}/page/${page}`;
+};
+---
+
+{totalPages > 1 && (
+  <nav class="flex justify-center mt-8" aria-label="Pagination">
+    <div class="join">
+      <!-- First page button -->
+      {showFirstLast && currentPage > 1 && (
+        <a href={getPageUrl(1)} class="join-item btn btn-outline">
+          «
+        </a>
+      )}
+
+      <!-- Previous page button -->
+      {prevPage && (
+        <a href={getPageUrl(prevPage)} class="join-item btn btn-outline">
+          ‹
+        </a>
+      )}
+
+      <!-- Page numbers -->
+      {pageNumbers.map((page) => {
+        if (page === '...') {
+          return (
+            <span class="join-item btn btn-disabled">...</span>
+          );
+        }
+
+        const pageNum = page as number;
+        const isActive = pageNum === currentPage;
+
+        return (
+          <a
+            href={getPageUrl(pageNum)}
+            class={`join-item btn ${isActive ? 'btn-active' : 'btn-outline'}`}
+            aria-current={isActive ? 'page' : undefined}
+          >
+            {pageNum}
+          </a>
+        );
+      })}
+
+      <!-- Next page button -->
+      {nextPage && (
+        <a href={getPageUrl(nextPage)} class="join-item btn btn-outline">
+          ›
+        </a>
+      )}
+
+      <!-- Last page button -->
+      {showFirstLast && currentPage < totalPages && (
+        <a href={getPageUrl(totalPages)} class="join-item btn btn-outline">
+          »
+        </a>
+      )}
+    </div>
+  </nav>
+)}

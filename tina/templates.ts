@@ -85,7 +85,7 @@ export function projectFields() {
 		{
 			type: "image",
 			name: "galleryImage",
-			label: "Project Image",
+			label: "Project Images",
 			list: true,
 		},
 		{
@@ -93,6 +93,16 @@ export function projectFields() {
 			name: "techStack",
 			label: "Technologies",
 			list: true,
+		},
+		{
+			type: "string",
+			name: "liveUrl",
+			label: "Live URL",
+		},
+		{
+			type: "string",
+			name: "repoUrl",
+			label: "Repository URL",
 		},
 	] as TinaField[];
 }

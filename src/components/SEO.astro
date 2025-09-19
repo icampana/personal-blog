@@ -1,0 +1,188 @@
+---
+export interface Props {
+  title?: string;
+  description?: string;
+  image?: string;
+  url?: string;
+  type?: 'website' | 'article' | 'profile';
+  publishedTime?: string;
+  modifiedTime?: string;
+  tags?: string[];
+  author?: string;
+  siteName?: string;
+  twitterHandle?: string;
+  noindex?: boolean;
+  canonical?: string;
+}
+
+const {
+  title = "Iván Gabriel",
+  description = "Diario de un Informático, Emprendedor, Desarrollador y Curioso a tiempo completo.",
+  image = "/images/profile-pic.jpg",
+  url = Astro.url.href,
+  type = "website",
+  publishedTime,
+  modifiedTime,
+  tags = [],
+  author = "Iván Campaña",
+  siteName = "Iván Gabriel",
+  twitterHandle = "@icampana",
+  noindex = false,
+  canonical = url
+} = Astro.props;
+
+const siteUrl = "https://ivan.campananaranjo.com";
+const fullTitle = title === "Iván Gabriel" ? title : `${title} | Iván Gabriel`;
+const fullImage = image.startsWith('http') ? image : `${siteUrl}${image}`;
+const fullUrl = url.startsWith('http') ? url : `${siteUrl}${url}`;
+const canonicalUrl = canonical.startsWith('http') ? canonical : `${siteUrl}${canonical}`;
+
+// Generate JSON-LD structured data
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": type === "article" ? "BlogPosting" : "WebPage",
+  "headline": title,
+  "description": description,
+  "image": fullImage,
+  "url": fullUrl,
+  "author": {
+    "@type": "Person",
+    "name": author,
+    "url": `${siteUrl}/content/sobre-el-autor`,
+    "sameAs": [
+      "https://twitter.com/icampana",
+      "https://github.com/icampana",
+      "https://linkedin.com/in/icampana"
+    ]
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": siteName,
+    "url": siteUrl,
+    "logo": {
+      "@type": "ImageObject",
+      "url": `${siteUrl}/images/logo.png`
+    }
+  },
+  ...(publishedTime && { "datePublished": publishedTime }),
+  ...(modifiedTime && { "dateModified": modifiedTime }),
+  ...(tags.length > 0 && { "keywords": tags.join(", ") }),
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": fullUrl
+  }
+};
+
+// Add article-specific structured data
+if (type === "article") {
+  const articleData = {
+    ...jsonLd,
+    "@type": "BlogPosting",
+    "articleSection": "Technology",
+    ...(tags.length > 0 && {
+      "about": tags.map(tag => ({
+        "@type": "Thing",
+        "name": tag
+      }))
+    })
+  };
+  Object.assign(jsonLd, articleData);
+}
+---
+
+<!-- Primary Meta Tags -->
+<title>{fullTitle}</title>
+<meta name="title" content={fullTitle} />
+<meta name="description" content={description} />
+<meta name="author" content={author} />
+<link rel="canonical" href={canonicalUrl} />
+
+<!-- Robots -->
+{noindex && <meta name="robots" content="noindex, nofollow" />}
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content={type} />
+<meta property="og:url" content={fullUrl} />
+<meta property="og:title" content={fullTitle} />
+<meta property="og:description" content={description} />
+<meta property="og:image" content={fullImage} />
+<meta property="og:site_name" content={siteName} />
+<meta property="og:locale" content="es_ES" />
+
+<!-- Article specific Open Graph -->
+{type === "article" && (
+  <>
+    {publishedTime && <meta property="article:published_time" content={publishedTime} />}
+    {modifiedTime && <meta property="article:modified_time" content={modifiedTime} />}
+    <meta property="article:author" content={author} />
+    <meta property="article:section" content="Technology" />
+    {tags.map(tag => <meta property="article:tag" content={tag} />)}
+  </>
+)}
+
+<!-- Twitter -->
+<meta property="twitter:card" content="summary_large_image" />
+<meta property="twitter:url" content={fullUrl} />
+<meta property="twitter:title" content={fullTitle} />
+<meta property="twitter:description" content={description} />
+<meta property="twitter:image" content={fullImage} />
+<meta property="twitter:site" content={twitterHandle} />
+<meta property="twitter:creator" content={twitterHandle} />
+
+<!-- Additional SEO Meta Tags -->
+<meta name="theme-color" content="#3b82f6" />
+<meta name="msapplication-TileColor" content="#3b82f6" />
+
+<!-- Structured Data -->
+<script type="application/ld+json" set:html={JSON.stringify(jsonLd)} is:inline />
+
+<!-- Additional structured data for website -->
+{type === "website" && (
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": siteName,
+    "url": siteUrl,
+    "description": description,
+    "author": {
+      "@type": "Person",
+      "name": author
+    },
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": {
+        "@type": "EntryPoint",
+        "urlTemplate": `${siteUrl}/search?q={search_term_string}`
+      },
+      "query-input": "required name=search_term_string"
+    }
+  })} is:inline />
+)}
+
+<!-- Breadcrumb structured data for articles -->
+{type === "article" && (
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": siteUrl
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Blog",
+        "item": `${siteUrl}/posts`
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": title,
+        "item": fullUrl
+      }
+    ]
+  })} is:inline />
+)}

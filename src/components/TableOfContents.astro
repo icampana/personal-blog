@@ -1,0 +1,52 @@
+---
+export interface Props {
+  headings: {
+    depth: number;
+    slug: string;
+    text: string;
+  }[];
+}
+
+const { headings } = Astro.props;
+
+// Filter out h1 headings and only show h2-h4
+const tocHeadings = headings.filter(h => h.depth >= 2 && h.depth <= 4);
+---
+
+{tocHeadings.length > 0 && (
+  <nav class="toc bg-base-200 p-4 rounded-lg mb-8">
+    <h2 class="text-lg font-semibold mb-3 text-base-content">
+      Tabla de Contenidos
+    </h2>
+    <ul class="space-y-1">
+      {tocHeadings.map((heading) => {
+        const indent = heading.depth === 2 ? '' :
+                     heading.depth === 3 ? 'ml-4' : 'ml-8';
+
+        return (
+          <li class={`${indent} text-sm`}>
+            <a
+              href={`#${heading.slug}`}
+              class="text-base-content/80 hover:text-primary transition-colors block py-1"
+            >
+              {heading.text}
+            </a>
+          </li>
+        );
+      })}
+    </ul>
+  </nav>
+)}
+
+<style>
+  .toc ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .toc li {
+    margin: 0;
+    padding: 0;
+  }
+</style>
