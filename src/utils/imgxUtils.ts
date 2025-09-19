@@ -25,7 +25,10 @@ export function generateImgxUrl(
   if (height) params.set('h', height.toString());
   params.set('q', quality.toString());
   if (format !== 'auto') params.set('f', format);
-  params.set('fit', 'cover');
+  params.set('fit', 'crop');
+  params.set('ar', '2:1');
+  params.set('fill', 'solid');
+  params.set('fill-color', 'gray');
 
   // Construct the URL directly
   return `${IMGX_DOMAIN}/${imagePath}?${params.toString()}`;
