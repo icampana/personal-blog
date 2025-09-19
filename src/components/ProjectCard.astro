@@ -2,7 +2,7 @@
 import type { CollectionEntry } from 'astro:content';
 import { getProjectUrl } from '../utils';
 import { normalizeImagePath } from '../utils/imageUtils';
-import ResponsiveImage from './ResponsiveImage.astro';
+import ImgxImage from './ImgxImage.astro';
 
 export interface Props {
   project: CollectionEntry<'projects'>;
@@ -19,7 +19,7 @@ const imagePath = normalizeImagePath(galleryImage?.[0]);
 <div class="card bg-base-100 shadow-xl">
   <figure>
     <a href={projectUrl}>
-      <ResponsiveImage
+      <ImgxImage
         src={imagePath}
         alt={title}
         class="object-cover w-full h-48"

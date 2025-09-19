@@ -1,5 +1,6 @@
 import type React from 'react';
 import { useCallback, useEffect, useState } from 'react';
+import { generateImgxSrcSet, generateImgxUrl } from '../utils/imgxUtils';
 
 interface ImageGalleryProps {
   images: string[];
@@ -31,7 +32,7 @@ const ImageGallery: React.FC<ImageGalleryProps> = ({
             resolve(src);
           };
           img.onerror = reject;
-          img.src = src;
+          img.src = generateImgxUrl(src, 600, 400); // Preload Imgix URL
         });
       });
 
@@ -123,7 +124,8 @@ const ImageGallery: React.FC<ImageGalleryProps> = ({
             onClick={() => openLightbox(index)}
           >
             <img
-              src={image}
+              src={generateImgxUrl(image, 600, 400)}
+              srcSet={generateImgxSrcSet(image, 600, 400)}
               alt={`${title} - Imagen ${index + 1}`}
               className="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105"
               loading={lazy ? 'lazy' : 'eager'}
@@ -240,7 +242,7 @@ const ImageGallery: React.FC<ImageGalleryProps> = ({
           {/* Main image */}
           <div className="max-w-full max-h-full flex items-center justify-center">
             <img
-              src={images[currentIndex]}
+              src={generateImgxUrl(images[currentIndex], 1200, 800)}
               alt={`${title} - Imagen ${currentIndex + 1}`}
               className="max-w-full max-h-full object-contain"
             />
@@ -268,7 +270,7 @@ const ImageGallery: React.FC<ImageGalleryProps> = ({
                   }`}
                 >
                   <img
-                    src={image}
+                    src={generateImgxUrl(image, 100, 100)}
                     alt={`Miniatura ${index + 1}`}
                     className="w-full h-full object-cover"
                   />

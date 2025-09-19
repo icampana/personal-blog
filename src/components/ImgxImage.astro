@@ -1,0 +1,75 @@
+---
+interface Props {
+  src: string;
+  alt: string;
+  width?: number;
+  height?: number;
+  class?: string;
+  loading?: 'lazy' | 'eager';
+  aspectRatio?: string;
+  sizes?: string;
+  quality?: number;
+  format?: 'webp' | 'avif' | 'jpg' | 'png' | 'auto';
+}
+
+const {
+  src,
+  alt,
+  width = 800,
+  height = 600,
+  class: className = '',
+  loading = 'lazy',
+  aspectRatio = '16/9',
+  sizes = '(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw',
+  quality = 80,
+  format = 'auto',
+  ...rest
+} = Astro.props;
+
+// Your imgx domain - replace with your actual imgx domain
+const IMGX_DOMAIN = import.meta.env.PUBLIC_IMGX_DOMAIN;
+const SITE_BASE_URL = import.meta.env.PUBLIC_SITE_BASE_URL;
+
+// Function to generate imgx URL
+function generateImgxUrl(originalSrc: string, width: number, height?: number, quality: number = 80, format: string = 'auto'): string {
+  let imagePath = originalSrc;
+
+  // If it's a relative path, remove the leading slash if present, as Imgix expects paths relative to the source root
+  if (imagePath.startsWith('/')) {
+    imagePath = imagePath.substring(1);
+  }
+
+  // Build imgx parameters
+  const params = new URLSearchParams();
+  params.set('w', width.toString());
+  if (height) params.set('h', height.toString());
+  params.set('q', quality.toString());
+  if (format !== 'auto') params.set('f', format);
+  params.set('fit', 'cover');
+
+  // Construct the URL directly
+  return `${IMGX_DOMAIN}/${imagePath}?${params.toString()}`;
+}
+
+// Generate different sizes for responsive images
+const imgxSrc = generateImgxUrl(src, width, height, quality, format);
+const imgxSrcSet = [
+  `${generateImgxUrl(src, Math.round(width * 0.5), height ? Math.round(height * 0.5) : undefined, quality, format)} ${Math.round(width * 0.5)}w`,
+  `${generateImgxUrl(src, width, height, quality, format)} ${width}w`,
+  `${generateImgxUrl(src, Math.round(width * 1.5), height ? Math.round(height * 1.5) : undefined, quality, format)} ${Math.round(width * 1.5)}w`,
+  `${generateImgxUrl(src, Math.round(width * 2), height ? Math.round(height * 2) : undefined, quality, format)} ${Math.round(width * 2)}w`,
+].join(', ');
+---
+
+<img
+  src={imgxSrc}
+  srcset={imgxSrcSet}
+  alt={alt}
+  width={width}
+  height={height}
+  class={className}
+  loading={loading}
+  style={`aspect-ratio: ${aspectRatio}`}
+  sizes={sizes}
+  {...rest}
+/>

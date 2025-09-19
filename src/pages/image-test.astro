@@ -1,7 +1,6 @@
 ---
 import ImageGallery from '../components/ImageGallery';
-import OptimizedImage from '../components/OptimizedImage.astro';
-import ResponsiveImage from '../components/ResponsiveImage.astro';
+import ImgxImage from '../components/ImgxImage.astro';
 import BaseLayout from '../layouts/BaseLayout.astro';
 ---
 
@@ -11,7 +10,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
     <section class="mb-12">
       <h2 class="text-2xl font-bold mb-4">Responsive Image Component</h2>
-      <ResponsiveImage
+      <ImgxImage
         src="/images/sample-post-1.svg"
         alt="Sample Post Image"
         class="w-full max-w-md rounded-lg shadow-lg"
@@ -23,7 +22,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
     <section class="mb-12">
       <h2 class="text-2xl font-bold mb-4">Optimized Image Component</h2>
-      <OptimizedImage
+      <ImgxImage
         src="/images/sample-project-1.svg"
         alt="Sample Project Image"
         width={400}
