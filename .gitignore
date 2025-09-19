@@ -8,12 +8,16 @@
 # testing
 /coverage
 
-# next.js
+# next.js (legacy - can be removed after migration)
 /.next/
 /out/
 
+# astro
+.astro/
+
 # production
 /build
+/dist
 
 # misc
 .DS_Store
@@ -25,9 +29,27 @@
 # debug
 npm-debug.log*
 .pnpm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
 
+# environment variables
+.env
+.env.local
+.env.production
+
+# search indexes (generated at build time)
 public/search-*.json
 
-## Ignore migration blog
-astro-blog
+# test coverage
+coverage/
+
+# temporary files
+*.tmp
+*.temp
+
+# build info (generated at build time)
+public/build-info.json
+
+## Migration backup (temporary)
 .migration-backup
