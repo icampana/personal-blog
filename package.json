@@ -48,7 +48,7 @@
     "@astrojs/tailwind": "^6.0.2",
     "@tinacms/cli": "^1.10.3",
     "astro": "^5.13.8",
-    "daisyui": "^4.12.24",
+    "daisyui": "^5.1.13",
     "date-fns": "^4.1.0",
     "fuse.js": "^7.1.0",
     "glob": "^11.0.0",
