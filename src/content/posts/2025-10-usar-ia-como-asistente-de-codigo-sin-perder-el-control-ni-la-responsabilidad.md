@@ -31,7 +31,7 @@ Ser específico no es solo una buena práctica, es una forma de documentar lo qu
 
 Uno de los errores más comunes es tratar de resolver todo en una conversación caótica con el modelo. En un entorno formal, eso no sirve.
 
-Lo que funciona es literalmente volver a las bases de la ingeniería, lo que aprendimos al estudiar, es decir volver a hacer Análisis, Diseño y finalmente Desarrollo (aún recuerdo el que fue nuestro “libro gordo de petete”, Análisis y diseño de sistemas de Kendall y Kendall.  
+Lo que funciona es literalmente volver a las bases de la ingeniería, lo que aprendimos al estudiar, es decir volver a hacer Análisis, Diseño y finalmente Desarrollo (aún recuerdo el que fue nuestro “libro gordo de petete”, Análisis y diseño de sistemas de Kendall y Kendall.
 
 Es decir, para que la IA funcione debe tener un plan de trabajo documentado, incluso algo tan simple como un archivo plan.md donde expliques qué vas a cambiar, qué archivos afectará y qué pasos debe seguir la IA.
 
@@ -72,6 +72,14 @@ En entornos corporativos o de producto, el objetivo no es escribir más código,
 El nuevo rol del desarrollador no es “quien teclea más rápido”, sino quien sabe guiar a la IA con propósito.
 
 El valor real está en definir qué se debe construir, cómo se valida y cómo se mantiene. En otras palabras, pasamos de ser productores de código a estrategas técnicos.
+
+## ¿Cuál es la mejor herramienta?
+
+La respuesta a esta pregunta siempre va a ser: La que mejor se adapte a ti.  Sin embargo, haciendo una comparación de estas 3 (no son las únicas, podría haber incluido a Deepseek Coder, Qwen, GPT-5, Mamba, etc).  Pero esto creo que sirve para tener una idea de las fortalezas de 3 de las más populares: Copilot de Microsoft, Gemini de Google y Claude Code de Anthropic.
+
+Poniéndolo en pocas palabras al menos para programación yo le pondría un 7/10 a Gemini, un 9/10 a Claude, y aunque Copilot se queda atrás, con la subscripción básica te permite usar diferentes modelos (entre esos Claude Sonnet 4.5) y la gran ventaja es la integración “nativa” con Github.
+
+![IA tools comparison: Gemini, Claude, Copilot](/photos/2025/ia-tools-comparison.png "IA tools comparison")
 
 ## Consejo final
 
