@@ -1,5 +1,6 @@
 ---
 import { ViewTransitions } from 'astro:transitions';
+import ConsentBanner from '../components/ConsentBanner';
 import SEO from '../components/SEO.astro';
 import '../styles/globals.css';
 
@@ -66,23 +67,8 @@ const {
   <body>
     <slot />
 
-    <!-- Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-275823-1" is:inline></script>
-    <script is:inline>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'UA-275823-1');
-    </script>
-
-    <!-- Consent Manager -->
-    <script
-      is:inline
-      src="https://cdn.consentmanager.net/delivery/autoblocking/8c643b22226c1.js"
-      data-cmp-host="d.delivery.consentmanager.net"
-      data-cmp-cdn="cdn.consentmanager.net"
-      data-cmp-codesrc="16">
-    </script>
+    <!-- GDPR Consent Banner -->
+    <ConsentBanner client:load />
 
     <!-- Theme Change Script -->
     <script>

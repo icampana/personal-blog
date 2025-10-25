@@ -1,0 +1,116 @@
+---
+import BlogLayout from '../layouts/BlogLayout.astro';
+---
+
+<BlogLayout
+  title="Configuración de Privacidad"
+  description="Gestiona tus preferencias de cookies y privacidad"
+>
+  <div class="max-w-4xl mx-auto">
+    <h1 class="text-4xl font-bold mb-6">Configuración de Privacidad</h1>
+
+    <div class="prose prose-lg max-w-none mb-8">
+      <p>
+        En esta página puedes gestionar tus preferencias de cookies y privacidad.
+        Tu privacidad es importante para nosotros.
+      </p>
+    </div>
+
+    <div class="card bg-base-200 shadow-xl mb-6">
+      <div class="card-body">
+        <h2 class="card-title">Estado Actual</h2>
+        <div id="consent-status" class="mb-4">
+          <div class="loading loading-spinner loading-lg"></div>
+        </div>
+
+        <div class="card-actions">
+          <button
+            id="revoke-consent"
+            type="button"
+            class="btn btn-warning"
+          >
+            Cambiar preferencias
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="card bg-base-200 shadow-xl">
+      <div class="card-body">
+        <h2 class="card-title">Tipos de Cookies</h2>
+
+        <div class="space-y-4">
+          <div>
+            <h3 class="font-bold mb-2">🔒 Cookies Esenciales</h3>
+            <p class="text-sm">
+              Estas cookies son necesarias para el funcionamiento básico del sitio,
+              como la preferencia de tema (modo claro/oscuro) y el almacenamiento
+              de tus preferencias de cookies. No se pueden desactivar.
+            </p>
+          </div>
+
+          <div>
+            <h3 class="font-bold mb-2">📊 Cookies Analíticas</h3>
+            <p class="text-sm">
+              Utilizamos Google Analytics para entender cómo los visitantes
+              interactúan con nuestro sitio. Esta información nos ayuda a mejorar
+              la experiencia del usuario. Los datos son anónimos y no se comparten
+              con terceros.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="mt-8">
+      <a href="/" class="btn btn-ghost">
+        ← Volver al inicio
+      </a>
+    </div>
+  </div>
+</BlogLayout>
+
+<script>
+  import { getConsentStatus, revokeConsent } from '../components/ConsentBanner';
+
+  // Display current consent status
+  function displayConsentStatus() {
+    const status = getConsentStatus();
+    const statusDiv = document.getElementById('consent-status');
+
+    if (statusDiv) {
+      if (status) {
+        const date = new Date(status.timestamp);
+        statusDiv.innerHTML = `
+          <div class="stats shadow">
+            <div class="stat">
+              <div class="stat-title">Cookies Analíticas</div>
+              <div class="stat-value text-2xl">${status.analytics ? 'Aceptadas' : 'Rechazadas'}</div>
+              <div class="stat-desc">Última actualización: ${date.toLocaleDateString('es-ES')}</div>
+            </div>
+          </div>
+        `;
+      } else {
+        statusDiv.innerHTML = `
+          <div class="alert alert-warning">
+            <svg xmlns="http://www.w3.org/2000/svg" class="stroke-current shrink-0 h-6 w-6" fill="none" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" /></svg>
+            <span>No has configurado tus preferencias de cookies aún.</span>
+          </div>
+        `;
+      }
+    }
+  }
+
+  // Revoke consent and reload
+  const revokeButton = document.getElementById('revoke-consent');
+  if (revokeButton) {
+    revokeButton.addEventListener('click', () => {
+      if (confirm('¿Estás seguro de que deseas cambiar tus preferencias? La página se recargará.')) {
+        revokeConsent();
+      }
+    });
+  }
+
+  // Display status on page load
+  displayConsentStatus();
+</script>
