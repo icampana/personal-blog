@@ -46,6 +46,7 @@
     "@astrojs/rss": "^4.0.13",
     "@astrojs/sitemap": "3.6.0",
     "@astrojs/tailwind": "^6.0.2",
+    "@tinacms/cli": "^1.11.0",
     "astro": "^5.15.1",
     "daisyui": "^4.12.24",
     "date-fns": "^4.1.0",
