@@ -83,7 +83,9 @@ export default function ConsentBanner() {
         {!showSettings ? (
           <div className="flex flex-col md:flex-row items-center justify-between gap-4">
             <div className="flex-1">
-              <h3 className="font-bold text-lg mb-2">🍪 Cookies y Privacidad</h3>
+              <h3 className="font-bold text-lg mb-2">
+                🍪 Cookies y Privacidad
+              </h3>
               <p className="text-sm">
                 Utilizamos cookies para mejorar tu experiencia. Las cookies
                 analíticas nos ayudan a entender cómo se usa el sitio. Puedes
