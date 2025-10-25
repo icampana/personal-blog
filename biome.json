@@ -17,6 +17,7 @@
       "!**/.migration-backup",
       "!**/node_modules",
       "!**/dist",
+      "!**/coverage",
       "!**/public/admin",
       "!**/public/*.json",
       "!**/tina/__generated__/*",
