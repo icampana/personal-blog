@@ -70,7 +70,6 @@ export const onRequest = defineMiddleware(async (context, next) => {
   // Handle common bot/spam URLs
   const spamPatterns = [
     '/administrator',
-    '/admin',
     '/phpmyadmin',
     '/mysql',
     '/database',
