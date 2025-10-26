@@ -1,3 +1,4 @@
 {
-  "kiroAgent.configureMCP": "Enabled"
+  "kiroAgent.configureMCP": "Enabled",
+  "typescript.tsdk": "node_modules/typescript/lib"
 }
