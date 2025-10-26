@@ -130,45 +130,37 @@ export default function ConsentBanner() {
             </div>
 
             <div className="space-y-3">
-              <div className="form-control">
-                <label className="label cursor-pointer justify-start gap-4">
-                  <input
-                    type="checkbox"
-                    checked={true}
-                    disabled
-                    className="checkbox checkbox-primary"
-                  />
-                  <div className="flex-1">
-                    <span className="label-text font-bold">
-                      Cookies Esenciales
-                    </span>
-                    <p className="text-xs text-base-content/70 mt-1">
-                      Necesarias para el funcionamiento básico del sitio. No se
-                      pueden desactivar.
-                    </p>
-                  </div>
-                </label>
-              </div>
+              <label className="flex items-start cursor-pointer gap-4 p-2">
+                <input
+                  type="checkbox"
+                  checked={true}
+                  disabled
+                  className="checkbox checkbox-primary"
+                />
+                <div className="flex-1">
+                  <span className="font-bold">Cookies Esenciales</span>
+                  <p className="text-xs text-base-content/70 mt-1">
+                    Necesarias para el funcionamiento básico del sitio. No se
+                    pueden desactivar.
+                  </p>
+                </div>
+              </label>
 
-              <div className="form-control">
-                <label className="label cursor-pointer justify-start gap-4">
-                  <input
-                    type="checkbox"
-                    id="analytics-checkbox"
-                    defaultChecked={false}
-                    className="checkbox checkbox-primary"
-                  />
-                  <div className="flex-1">
-                    <span className="label-text font-bold">
-                      Cookies Analíticas
-                    </span>
-                    <p className="text-xs text-base-content/70 mt-1">
-                      Nos ayudan a entender cómo los visitantes interactúan con
-                      el sitio (Google Analytics).
-                    </p>
-                  </div>
-                </label>
-              </div>
+              <label className="flex items-start cursor-pointer gap-4 p-2">
+                <input
+                  type="checkbox"
+                  id="analytics-checkbox"
+                  defaultChecked={false}
+                  className="checkbox checkbox-primary"
+                />
+                <div className="flex-1">
+                  <span className="font-bold">Cookies Analíticas</span>
+                  <p className="text-xs text-base-content/70 mt-1">
+                    Nos ayudan a entender cómo los visitantes interactúan con el
+                    sitio (Google Analytics).
+                  </p>
+                </div>
+              </label>
             </div>
 
             <div className="flex flex-wrap gap-2 justify-end">

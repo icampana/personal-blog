@@ -3,12 +3,14 @@ import type { CollectionEntry } from 'astro:content';
 import { formatDate, getPostUrl, getReadingTime } from '../utils';
 import { normalizeImagePath } from '../utils/imageUtils';
 import { generateImgxUrl } from '../utils/imgxUtils';
+import { Image } from 'astro:assets';
 
 export interface Props {
   post: CollectionEntry<'posts'>;
+  lazyLoad?: boolean;
 }
 
-const { post } = Astro.props;
+const { post, lazyLoad } = Astro.props;
 const { title, description, featuredImage, tags, date } = post.data;
 
 const readingTime = getReadingTime(post.body);
@@ -22,12 +24,12 @@ const summary = description || post.body.slice(0, 200) + '...';
 
 <div class="card bg-base-100 shadow-xl">
   <figure>
-    <a href={postUrl}>
-      <img
+    <a href={postUrl} aria-label={`Leer el post: ${title}`}>
+      <Image
         src={imagePath.startsWith('http') || imagePath.startsWith('//') ? imagePath : generateImgxUrl(imagePath, 400, 225)}
         alt={title}
         class="object-cover w-full h-48"
-        loading="lazy"
+        loading={lazyLoad ? 'lazy' : 'eager'}
         width="400"
         height="225"
       />
@@ -44,7 +46,7 @@ const summary = description || post.body.slice(0, 200) + '...';
         {tags.map((tag) => (
           <a
             href={`/tag/${tag.toLowerCase()}`}
-            class="badge badge-outline hover:badge-primary"
+            class="badge badge-info hover:badge-primary"
           >
             {tag}
           </a>

@@ -82,7 +82,7 @@ const SearchComponent: React.FC = () => {
               onChange={(e) => setSearchQuery(e.target.value)}
               onKeyDown={handleKeyDown}
               placeholder="Buscar..."
-              className="input input-bordered w-full lg:w-48 text-base-content pr-10"
+              className="input w-full lg:w-48 text-base-content pr-10"
             />
 
             {searchQuery && (

@@ -43,16 +43,14 @@ const { Content } = await page.render();
 </BlogLayout>
 
 <style>
+  @reference "../../styles/globals.css";
+
   .prose {
     @apply text-base-content;
   }
 
   .prose h1, .prose h2, .prose h3, .prose h4, .prose h5, .prose h6 {
     @apply text-base-content;
-  }
-
-  .prose a {
-    @apply text-primary hover:text-primary-content;
   }
 
   .prose code {

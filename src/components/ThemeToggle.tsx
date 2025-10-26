@@ -63,12 +63,13 @@ const ThemeToggle: React.FC = () => {
   }
 
   return (
-    <label className="swap swap-rotate text-base-content cursor-pointer">
+    <label className="swap swap-rotate text-base-content cursor-pointer" htmlFor="theme-toggle">
       <input
         type="checkbox"
         checked={isDark}
         onChange={toggleTheme}
         className="sr-only"
+        id="theme-toggle"
         aria-label={isDark ? 'Cambiar a tema claro' : 'Cambiar a tema oscuro'}
       />
 
