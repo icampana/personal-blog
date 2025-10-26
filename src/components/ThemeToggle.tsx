@@ -63,7 +63,10 @@ const ThemeToggle: React.FC = () => {
   }
 
   return (
-    <label className="swap swap-rotate text-base-content cursor-pointer" htmlFor="theme-toggle">
+    <label
+      className="swap swap-rotate text-base-content cursor-pointer"
+      htmlFor="theme-toggle"
+    >
       <input
         type="checkbox"
         checked={isDark}
