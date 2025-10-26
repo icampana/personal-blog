@@ -54,3 +54,6 @@ public/build-info.json
 
 ## Migration backup (temporary)
 .migration-backup
+
+## Skip Claude local files
+.claude
