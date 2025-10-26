@@ -161,10 +161,17 @@ Custom remark/rehype plugins configured in `astro.config.mjs`:
 
 ### Styling System
 
-- **Tailwind CSS**: Utility-first styling (config: `tailwind.config.js`)
-- **DaisyUI**: Component library with 29 themes available
+- **Tailwind CSS v4**: Utility-first styling using CSS-based configuration
+  - Uses `@tailwindcss/vite` plugin instead of PostCSS
+  - Configuration in `src/styles/globals.css` using `@import "tailwindcss"`
+  - **No `tailwind.config.js` or `postcss.config.cjs`** - configuration is now CSS-based
+  - Built-in autoprefixing (no separate autoprefixer dependency needed)
+  - Requires `@reference` directive in Astro `<style>` blocks that use `@apply` with theme variables
+- **DaisyUI v5**: Component library with 29 themes available
+  - Configured as CSS plugin: `@plugin "daisyui" { themes: ... }`
+  - Major class name changes from v4 (see upgrade notes below)
 - **Theme switching**: System preference detection with localStorage persistence
-- **Global styles**: `src/styles/` (minimal custom CSS)
+- **Global styles**: `src/styles/globals.css` (includes all Tailwind and DaisyUI config)
 
 ### React Islands
 
@@ -270,6 +277,90 @@ The test suite validates:
 - Content collections are cached by default in Astro 5
 - Google Analytics only loads if user consents via GDPR banner
 
+## Tailwind v4 & DaisyUI v5 Upgrade Notes
+
+**Upgraded on**: October 2025 from Tailwind CSS v3.4.18 and DaisyUI v4.12.24
+
+### Key Changes Made
+
+1. **Dependencies**:
+   - Added: `tailwindcss@4.1.16`, `daisyui@5.3.10`, `@tailwindcss/vite@4.1.16`
+   - Removed: `@astrojs/tailwind`, `autoprefixer`, `postcss`
+
+2. **Configuration Files**:
+   - **Deleted**: `tailwind.config.js` and `postcss.config.cjs` (no longer needed)
+   - **Updated**: `src/styles/globals.css` now contains all configuration
+   - **Updated**: `astro.config.mjs` uses `@tailwindcss/vite` plugin in `vite.plugins[]`
+
+3. **CSS Configuration** (`src/styles/globals.css`):
+   ```css
+   @import "tailwindcss";
+
+   @plugin "daisyui" {
+     themes: light --default, dark --prefersdark, cupcake, bumblebee, ...;
+   }
+   ```
+
+4. **Astro Components with Scoped Styles**:
+   - All `<style>` blocks using `@apply` with theme variables now require `@reference` directive
+   - Example:
+   ```astro
+   <style>
+     @reference "../styles/globals.css";
+
+     .prose {
+       @apply text-base-content;
+     }
+   </style>
+   ```
+   - Files updated: `PostLayout.astro`, `ProjectLayout.astro`, `content/[...slug].astro`, `portafolio/[...slug].astro`
+
+### DaisyUI v5 Breaking Changes Applied
+
+1. **Utility Name Changes**:
+   - `rounded-sm` → `rounded-xs`
+   - `shadow-sm` → `shadow-xs`
+   - `blur-sm` → `blur-xs`
+   - `ring` → `ring-3`
+   - `outline-none` → `outline-hidden`
+
+2. **Component Class Changes**:
+   - `input-bordered` → `input` (inputs now have borders by default)
+   - `form-control` → Removed (use standard HTML `<label>` or `<fieldset>`)
+   - `label-text` → Removed (use standard styling)
+   - Components updated: `ConsentBanner.tsx`, `SearchComponent.tsx`
+
+3. **Other Changes**:
+   - Inputs, selects, and textareas now have borders by default
+   - Use `*-ghost` variants to remove borders (e.g., `input-ghost`)
+   - Footer is vertical by default (use `footer-horizontal` for horizontal layout)
+
+### Important Considerations
+
+- **Browser Support**: Tailwind v4 requires Safari 16.4+, Chrome 111+, Firefox 128+
+- **No JavaScript Config**: All configuration must be done in CSS
+- **Scoped Styles**: Always use `@reference` in Astro `<style>` blocks that use theme variables
+- **CSS Variables**: All theme values are available as CSS variables (e.g., `var(--color-primary)`)
+- **Performance**: Vite plugin provides better performance than the old PostCSS integration
+
+### Rollback Instructions (if needed)
+
+If you need to rollback to Tailwind v3 + DaisyUI v4:
+
+```bash
+# Restore old dependencies
+pnpm add -D tailwindcss@3 daisyui@4 @astrojs/tailwind autoprefixer postcss
+pnpm remove @tailwindcss/vite
+
+# Restore config files from git history
+git checkout HEAD~1 -- tailwind.config.js postcss.config.cjs
+
+# Restore old globals.css imports
+# Restore old astro.config.mjs integration setup
+# Remove @reference directives from Astro components
+# Restore old DaisyUI class names
+```
+
 ## Common Issues & Solutions
 
 ### TinaCMS Admin Redirect Loop
@@ -286,3 +377,8 @@ The test suite validates:
 - **Reset consent**: Clear localStorage key `gdpr-consent-preferences` or visit `/privacy-settings`
 - **Analytics not loading**: Check browser console, verify consent was given, check Google Analytics ID in BaseLayout
 - **Testing**: Use incognito mode to see fresh banner on each page load
+
+### Tailwind v4 / DaisyUI v5 Build Errors
+- **Symptom**: Build fails with "Cannot apply unknown utility class `text-base-content`" or similar theme variable errors
+- **Cause**: Astro `<style>` blocks using `@apply` with DaisyUI theme variables need `@reference` directive
+- **Solution**: Add `@reference "../styles/globals.css"` (or appropriate relative path) at the top of the `<style>` block before any `@apply` statements
