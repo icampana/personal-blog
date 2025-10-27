@@ -78,7 +78,7 @@
     "@vitejs/plugin-react": "^5.1.0",
     "@vitest/coverage-v8": "2.1.9",
     "daisyui": "^5.3.10",
-    "jsdom": "^26.1.0",
+    "jsdom": "^27.0.1",
     "tailwindcss": "^4.1.16",
     "typescript": "^5.9.3",
     "vite": "^7.1.12",
