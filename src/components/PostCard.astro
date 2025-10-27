@@ -10,7 +10,7 @@ export interface Props {
   lazyLoad?: boolean;
 }
 
-const { post, lazyLoad } = Astro.props;
+const { post, lazyLoad = true } = Astro.props;
 const { title, description, featuredImage, tags, date } = post.data;
 
 const readingTime = getReadingTime(post.body);
