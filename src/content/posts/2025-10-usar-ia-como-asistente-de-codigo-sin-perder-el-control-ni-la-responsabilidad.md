@@ -101,3 +101,13 @@ Algunos de los cursos que me ayudaron a mejorar y entender IA en general más ta
 * [Claude Code: A Highly Agentic Coding Assistant](https://learn.deeplearning.ai/courses/claude-code-a-highly-agentic-coding-assistant)
 
 En cuanto a herramientas, las más populares y conocidas son Cursor, Claude Code y ZenCode, pero les recomiendo darle una mirada a [Kilo Code](https://kilocode.ai/) les permite usar múltiples modelos (incluido Claude Code) y pueden usarlo dentro de VSCode para hacer la arquitectura y planificación además de la ejecución.
+
+### Herramientas MCP
+
+Actualmente los LLM pueden comunicarse con otros servicios o inclusive pueden ejecutar herramientas que les permiten obtener contexto adicional y con ello poder obtener mejores respuestas, las básicas que recomendaría son:
+
+* [mcp-read-website-fast](https://github.com/just-every/mcp-read-website-fast) (Permite descargar páginas web y usarlas como contexto)
+* [context7](https://github.com/upstash/context7) (descarga documentación actualizada sobre las librerías/frameworks que estés usando).
+* [sequentialthinking](https://mcpservers.org/servers/modelcontextprotocol/sequentialthinking) (Herramienta que permite a las LLM llevar registro de sus “pensamientos” y poder descomponer mejor tareas complejas).
+
+ 
