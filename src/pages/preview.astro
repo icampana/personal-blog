@@ -1,0 +1,47 @@
+---
+import TinaPreview from '../components/TinaPreview';
+import '../styles/globals.css';
+
+// This page is used by TinaCMS to preview content in real-time
+---
+
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TinaCMS Preview</title>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  </head>
+  <body>
+    <div id="preview-root"></div>
+
+    <script is:inline>
+      // Listen for messages from TinaCMS iframe
+      window.addEventListener('message', (event) => {
+        // Verify the message is from TinaCMS
+        if (event.data && event.data.type === 'tina:preview') {
+          const { query, variables, data } = event.data;
+
+          // Update the preview with the new data
+          window.tinaPreviewData = { query, variables, data };
+
+          // Trigger a re-render
+          if (window.updatePreview) {
+            window.updatePreview();
+          }
+        }
+      });
+
+      // Notify TinaCMS that the preview is ready
+      window.parent.postMessage({ type: 'tina:preview:ready' }, '*');
+    </script>
+
+    <TinaPreview
+      client:only="react"
+      query=""
+      variables={{}}
+      data={{}}
+    />
+  </body>
+</html>
