@@ -106,8 +106,32 @@ if (isDev) {
     import('tinacms').then(({ RouteMappingPlugin }) => {
       const RouteMapping = new RouteMappingPlugin((collection, document) => {
         if (['posts', 'pages', 'projects'].includes(collection.name)) {
-          // Extract slug from filename
-          const slug = document.sys.breadcrumbs.join('/').replace(/\.md$/, '');
+          // Extract slug from filename - use multiple fallback methods
+          let slug = '';
+
+          // Try breadcrumbs first (most reliable when available)
+          if (
+            document.sys?.breadcrumbs &&
+            Array.isArray(document.sys.breadcrumbs)
+          ) {
+            slug = document.sys.breadcrumbs.join('/').replace(/\.md$/, '');
+          }
+          // Fallback to filename
+          else if (document.sys?.filename) {
+            slug = document.sys.filename.replace(/\.md$/, '');
+          }
+          // Last resort: use relativePath
+          else if (document.sys?.relativePath) {
+            slug = document.sys.relativePath.replace(/\.md$/, '');
+          }
+
+          if (!slug) {
+            console.warn(
+              'TinaCMS: Could not determine slug for document',
+              document,
+            );
+            return undefined;
+          }
 
           if (collection.name === 'posts') {
             return `/posts/${slug}`;
