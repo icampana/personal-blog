@@ -73,7 +73,7 @@ Preview includes:
 
 The preview system maps content to these URLs:
 
-- **Posts**: `/posts/{filename}` (e.g., `/posts/2024-11-my-post`)
+- **Posts**: `/posts/{filename}` (e.g., `/posts/2024-11-my-post-title`)
 - **Pages**: `/{filename}` (e.g., `/about`)
 - **Projects**: `/portafolio/{filename}` (e.g., `/portafolio/my-project`)
 
