@@ -4,7 +4,10 @@ import { pagesFields, postsFields, projectFields } from './templates';
 // Your hosting provider likely exposes this as an environment variable
 const branch = process.env.HEAD || process.env.VERCEL_GIT_COMMIT_REF || 'main';
 
-export default defineConfig({
+// Check if we're in development mode
+const isDev = process.env.NODE_ENV === 'development';
+
+const config: any = {
   branch,
   clientId: 'da403933-32db-4dcf-b799-ebc141c1fd51', // Get this from tina.io
   token: 'd34d778eb69b883ddc7b48c0757e4bfa7999ec25', // Get this from tina.io
@@ -18,32 +21,6 @@ export default defineConfig({
       mediaRoot: 'photos',
       publicFolder: 'public',
     },
-  },
-  // Configure preview URLs for live editing
-  cmsCallback: (cms) => {
-    import('tinacms').then(({ RouteMappingPlugin }) => {
-      const RouteMapping = new RouteMappingPlugin((collection, document) => {
-        if (['posts', 'pages', 'projects'].includes(collection.name)) {
-          // Extract slug from filename
-          const slug = document.sys.breadcrumbs.join('/').replace(/\.md$/, '');
-
-          if (collection.name === 'posts') {
-            return `/posts/${slug}`;
-          }
-
-          if (collection.name === 'pages') {
-            return `/${slug}`;
-          }
-
-          if (collection.name === 'projects') {
-            return `/portafolio/${slug}`;
-          }
-        }
-        return undefined;
-      });
-      cms.plugins.add(RouteMapping);
-    });
-    return cms;
   },
   schema: {
     collections: [
@@ -69,11 +46,6 @@ export default defineConfig({
                 .replace(/ /g, '-')}`;
             },
           },
-          // Enable preview button in the editor
-          allowedActions: {
-            create: true,
-            delete: true,
-          },
         },
         fields: [
           {
@@ -94,12 +66,6 @@ export default defineConfig({
         match: {
           include: '**/*',
         },
-        ui: {
-          allowedActions: {
-            create: true,
-            delete: true,
-          },
-        },
         fields: [
           {
             type: 'rich-text',
@@ -119,12 +85,6 @@ export default defineConfig({
         match: {
           include: '**/*',
         },
-        ui: {
-          allowedActions: {
-            create: true,
-            delete: true,
-          },
-        },
         fields: [
           {
             type: 'rich-text',
@@ -138,4 +98,35 @@ export default defineConfig({
       },
     ],
   },
-});
+};
+
+// Add cmsCallback only in development to avoid schema mismatch in production
+if (isDev) {
+  config.cmsCallback = (cms) => {
+    import('tinacms').then(({ RouteMappingPlugin }) => {
+      const RouteMapping = new RouteMappingPlugin((collection, document) => {
+        if (['posts', 'pages', 'projects'].includes(collection.name)) {
+          // Extract slug from filename
+          const slug = document.sys.breadcrumbs.join('/').replace(/\.md$/, '');
+
+          if (collection.name === 'posts') {
+            return `/posts/${slug}`;
+          }
+
+          if (collection.name === 'pages') {
+            return `/${slug}`;
+          }
+
+          if (collection.name === 'projects') {
+            return `/portafolio/${slug}`;
+          }
+        }
+        return undefined;
+      });
+      cms.plugins.add(RouteMapping);
+    });
+    return cms;
+  };
+}
+
+export default defineConfig(config);

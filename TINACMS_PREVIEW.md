@@ -13,10 +13,11 @@ A React component that renders live previews of your content as you edit it in T
 ### 2. Preview Page (`src/pages/preview.astro`)
 A dedicated preview route that TinaCMS can use to display content in an iframe.
 
-### 3. Route Mapping Configuration
+### 3. Route Mapping Configuration (Development Only)
 The TinaCMS config (`tina/config.ts`) now includes:
-- `RouteMappingPlugin`: Maps content to their actual URLs
+- `RouteMappingPlugin`: Maps content to their actual URLs (development mode only)
 - Preview URL configuration for all content types
+- **Note**: The route mapping plugin is only enabled in development mode to avoid schema validation issues in production builds
 
 ## How to Use
 
@@ -79,11 +80,12 @@ The preview system maps content to these URLs:
 
 ## Technical Details
 
-### Route Mapping Plugin
-The `RouteMappingPlugin` in `tina/config.ts` automatically:
+### Route Mapping Plugin (Development Mode Only)
+The `RouteMappingPlugin` in `tina/config.ts` is conditionally loaded only in development mode:
 - Extracts slugs from filenames
 - Maps collections to their respective URL patterns
 - Provides the "View on Site" button in the TinaCMS admin
+- **Production Note**: The plugin is disabled in production builds to prevent TinaCMS Cloud schema validation conflicts
 
 ### Preview Component
 The `TinaPreview` component:
@@ -125,9 +127,15 @@ The preview functionality works in both development and production environments.
 - Images should be relative to the `photos` folder (e.g., `2024/my-image.jpg`)
 
 ### "View on Site" Button Not Appearing
-- Make sure the content has been saved at least once
-- Check that the filename follows the expected pattern
-- Verify the route exists in Astro (run `pnpm run dev` and check the logs)
+- The "View on Site" button only appears in development mode (when `NODE_ENV=development`)
+- Make sure you're running `pnpm run dev` (not production build)
+- Check that the content has been saved at least once
+- Verify the route exists in Astro (check the dev server logs)
+
+### Production Build Failing with Schema Mismatch
+- This should not happen anymore as the `cmsCallback` is only enabled in development
+- If it does occur, ensure your `NODE_ENV` is not set to `development` during production builds
+- The preview functionality (preview page and component) still works in production, just without the "View on Site" button convenience
 
 ## Future Enhancements
 
