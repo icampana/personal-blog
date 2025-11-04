@@ -19,6 +19,32 @@ export default defineConfig({
       publicFolder: 'public',
     },
   },
+  // Configure preview URLs for live editing
+  cmsCallback: (cms) => {
+    import('tinacms').then(({ RouteMappingPlugin }) => {
+      const RouteMapping = new RouteMappingPlugin((collection, document) => {
+        if (['posts', 'pages', 'projects'].includes(collection.name)) {
+          // Extract slug from filename
+          const slug = document.sys.breadcrumbs.join('/').replace(/\.md$/, '');
+
+          if (collection.name === 'posts') {
+            return `/posts/${slug}`;
+          }
+
+          if (collection.name === 'pages') {
+            return `/${slug}`;
+          }
+
+          if (collection.name === 'projects') {
+            return `/portafolio/${slug}`;
+          }
+        }
+        return undefined;
+      });
+      cms.plugins.add(RouteMapping);
+    });
+    return cms;
+  },
   schema: {
     collections: [
       {
@@ -43,6 +69,11 @@ export default defineConfig({
                 .replace(/ /g, '-')}`;
             },
           },
+          // Enable preview button in the editor
+          allowedActions: {
+            create: true,
+            delete: true,
+          },
         },
         fields: [
           {
@@ -63,6 +94,12 @@ export default defineConfig({
         match: {
           include: '**/*',
         },
+        ui: {
+          allowedActions: {
+            create: true,
+            delete: true,
+          },
+        },
         fields: [
           {
             type: 'rich-text',
@@ -81,6 +118,12 @@ export default defineConfig({
         path: 'src/content/projects',
         match: {
           include: '**/*',
+        },
+        ui: {
+          allowedActions: {
+            create: true,
+            delete: true,
+          },
         },
         fields: [
           {
