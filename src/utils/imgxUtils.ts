@@ -6,7 +6,7 @@ export function generateImgxUrl(
   format: string = 'auto',
   skipCrop: boolean = false,
 ): string {
-  const IMGX_DOMAIN = import.meta.env.PUBLIC_IMGX_DOMAIN;
+  const IMGX_DOMAIN = import.meta.env.PUBLIC_IMGX_DOMAIN || 'https://igcn-ws.imgix.net';
 
   // If it's an external URL, return it as is.
   if (originalSrc.startsWith('http') || originalSrc.startsWith('//')) {
