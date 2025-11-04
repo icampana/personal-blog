@@ -9,6 +9,7 @@ const pages = await getCollection('pages');
 const menuItems = [
   { url: '/', title: 'Home' },
   { url: '/portafolio', title: 'Portfolio' },
+  { url: '/archivo', title: 'Archivo' },
   ...pages.map((page) => ({
     url: page.data.path ? `/content${page.data.path}` : `/content/${page.slug}`,
     title: page.data.title,
