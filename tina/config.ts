@@ -33,6 +33,27 @@ const config: any = {
           include: '**/*',
         },
         ui: {
+          router: (props) => {
+            // Enable visual editing by routing to the post page
+            if (props.document._sys?.breadcrumbs) {
+              const slug = props.document._sys.breadcrumbs
+                .join('/')
+                .replace(/\.md$/, '');
+              return `/posts/${slug}`;
+            }
+            if (props.document._sys?.filename) {
+              const slug = props.document._sys.filename.replace(/\.md$/, '');
+              return `/posts/${slug}`;
+            }
+            if (props.document._sys?.relativePath) {
+              const slug = props.document._sys.relativePath.replace(
+                /\.md$/,
+                '',
+              );
+              return `/posts/${slug}`;
+            }
+            return undefined;
+          },
           filename: {
             // Example of using a custom slugify function
             slugify: (values) => {
@@ -66,6 +87,29 @@ const config: any = {
         match: {
           include: '**/*',
         },
+        ui: {
+          router: (props) => {
+            // Enable visual editing by routing to the page
+            if (props.document._sys?.breadcrumbs) {
+              const slug = props.document._sys.breadcrumbs
+                .join('/')
+                .replace(/\.md$/, '');
+              return `/${slug}`;
+            }
+            if (props.document._sys?.filename) {
+              const slug = props.document._sys.filename.replace(/\.md$/, '');
+              return `/${slug}`;
+            }
+            if (props.document._sys?.relativePath) {
+              const slug = props.document._sys.relativePath.replace(
+                /\.md$/,
+                '',
+              );
+              return `/${slug}`;
+            }
+            return undefined;
+          },
+        },
         fields: [
           {
             type: 'rich-text',
@@ -84,6 +128,29 @@ const config: any = {
         path: 'src/content/projects',
         match: {
           include: '**/*',
+        },
+        ui: {
+          router: (props) => {
+            // Enable visual editing by routing to the project page
+            if (props.document._sys?.breadcrumbs) {
+              const slug = props.document._sys.breadcrumbs
+                .join('/')
+                .replace(/\.md$/, '');
+              return `/portafolio/${slug}`;
+            }
+            if (props.document._sys?.filename) {
+              const slug = props.document._sys.filename.replace(/\.md$/, '');
+              return `/portafolio/${slug}`;
+            }
+            if (props.document._sys?.relativePath) {
+              const slug = props.document._sys.relativePath.replace(
+                /\.md$/,
+                '',
+              );
+              return `/portafolio/${slug}`;
+            }
+            return undefined;
+          },
         },
         fields: [
           {
