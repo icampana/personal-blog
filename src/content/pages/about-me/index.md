@@ -9,15 +9,15 @@ date: 2020-12-18T00:00:00.000Z
 
 De Guayaquil a Porto: 20 años construyendo el futuro de la web 🚀
 
-Empecé mi carrera en 2003 cuando la web aún estaba definiendo su futuro. Desde entonces, he tenido el privilegio de trabajar en proyectos que impactan a millones de personas: desde medios digitales que generan 10+ millones de visitas mensuales, hasta plataformas fintech que empoderan asesores financieros con inteligencia artificial.
+Empecé mi carrera profesional en 2003 cuando la web aún estaba definiendo su futuro. Desde entonces, he tenido el privilegio de trabajar en proyectos que impactan a millones de personas: desde medios digitales que generan 10+ millones de visitas mensuales, hasta plataformas fintech que empoderan asesores financieros con inteligencia artificial.
 
 ## 💼 HOY:
 
-Lidero el desarrollo en AssetLink AI (Porto, Portugal), donde construimos una plataforma SaaS fintech certificada SOC2 que integra AI/LLM (OpenAI, Google Gemini) con vector databases y agentes personalizados. Conectamos advisors con Microsoft Dynamics, Salesforce y chatbots, creando una fuente única de verdad que mejora la toma de decisiones.
+Lidero el desarrollo en [AssetLink AI](https://assetlink.ai/) (NY, EEUU), donde construimos una plataforma SaaS fintech certificada SOC2 que integra AI/LLM (OpenAI, Google Gemini) con Bases de datos Vectoriales y agentes personalizados. Conectamos a los agentes financieros, integrando herramientas como Microsoft Dynamics y Salesforce con herramientas de IA, creando una fuente única de verdad que mejora la toma de decisiones.
 
 ## 🌟 MI TRAYECTORIA:
 
-• [G/O Media](https://g-omedia.com/): Mantuve la infraestructura de marcas icónicas (Gizmodo, Kotaku, Lifehacker, The Onion) con arquitecturas de microservicios y millones de usuarios simultáneos
+• [G/O Media](https://g-omedia.com/): Fui parte del equipo de desarrollo y mantenimiento de marcas icónicas (Gizmodo, Kotaku, Lifehacker, The Onion) con arquitecturas de microservicios y millones de usuarios simultáneos
 
 • [Tentrr (USA)](https://www.tentrr.com/): Lideré la transformación de monolito a serverless, diseñando arquitecturas modernas en AWS
 
@@ -31,15 +31,11 @@ Me especializo en arquitecturas escalables, código limpio y equipos de alto ren
 
 ## 👨‍🏫 COMPARTIENDO CONOCIMIENTO:
 
-• Blog técnico activo desde 2004 (370+ artículos) sobre desarrollo, arquitectura, clean code
-
-• Formador en bootcamps: Awana, Spotify Interview Preparation
-
-• Ex-profesor universitario (Universidad Santa María - Campus Guayaquil, Casa Grande)
-
-• Mentor en Techstars Startup Weekend y Lean Startup Machine
-
-• Co-organizador del primer Drupal Camp en Ecuador
+* Blog técnico desde 2004 (370+ artículos) sobre desarrollo, arquitectura, clean code y experiencias personales.
+* Formador en bootcamps: Awana, Spotify Interview Preparation
+* Ex-profesor universitario (Universidad Santa María - Campus Guayaquil, Casa Grande)
+* Mentor en Techstars Startup Weekend y Lean Startup Machine
+* Co-organizador del primer Drupal Camp en Ecuador
 
 ## 🌍 CIUDADANO DEL MUNDO:
 
