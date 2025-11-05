@@ -4,9 +4,6 @@ import { pagesFields, postsFields, projectFields } from './templates';
 // Your hosting provider likely exposes this as an environment variable
 const branch = process.env.HEAD || process.env.VERCEL_GIT_COMMIT_REF || 'main';
 
-// Check if we're in development mode
-const isDev = process.env.NODE_ENV === 'development';
-
 const config: any = {
   branch,
   clientId: 'da403933-32db-4dcf-b799-ebc141c1fd51', // Get this from tina.io
