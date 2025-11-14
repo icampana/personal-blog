@@ -41,7 +41,7 @@ export default defineConfig({
           manualChunks: {
             'react-vendor': ['react', 'react-dom'],
             'search-vendor': ['flexsearch'],
-            'utils-vendor': ['date-fns', 'reading-time'],
+            'utils-vendor': ['date-fns'],
           },
         },
       },

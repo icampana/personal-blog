@@ -7,9 +7,9 @@ import {
   getPostsByTag,
   getPostUrl,
   getProjectUrl,
-  getReadingTime,
   sortPostsByDate,
-} from '../utils';
+} from '../utils/client';
+import { getReadingTime } from '../utils';
 
 // Mock data
 const mockPost: CollectionEntry<'posts'> = {
