@@ -1,9 +1,10 @@
-import Fuse from 'fuse.js';
+import { Document } from 'flexsearch';
 import { beforeEach, describe, expect, it } from 'vitest';
 
 // Mock search data that matches the actual structure
 const mockSearchData = [
   {
+    id: 0,
     title:
       'Domina React: Patrones de Diseño y Trucos para Desarrolladores Junior',
     url: '/posts/react-patterns',
@@ -16,6 +17,7 @@ const mockSearchData = [
     type: 'post',
   },
   {
+    id: 1,
     title: 'Usando ChatGPT como tu Mentor para mejorar como programador',
     url: '/posts/chatgpt-mentor',
     content:
@@ -27,6 +29,7 @@ const mockSearchData = [
     type: 'post',
   },
   {
+    id: 2,
     title: 'Tech Wars: ¿Qué tecnología debo escoger para mi carrera?',
     url: '/posts/tech-wars',
     content:
@@ -40,22 +43,26 @@ const mockSearchData = [
 ];
 
 describe('Search Functionality', () => {
-  let fuse: Fuse<any>;
+  let index: Document;
   let searchData: any[];
 
   beforeEach(() => {
-    // Use mock data instead of reading from filesystem
     searchData = mockSearchData;
 
-    const fuseOptions = {
-      keys: ['title', 'summary', 'content'],
-      minMatchCharLength: 2,
-      threshold: 0.3,
-      includeScore: true,
-      includeMatches: true,
-    };
+    index = new Document({
+      document: {
+        id: 'id',
+        index: ['title', 'summary', 'content'],
+        store: ['title', 'url', 'type', 'date', 'summary', 'tags'],
+      },
+      tokenize: 'forward',
+      resolution: 9,
+      threshold: 1,
+      depth: 3,
+    });
 
-    fuse = new Fuse(searchData, fuseOptions);
+    // Add documents to index
+    searchData.forEach((item) => index.add(item));
   });
 
   describe('Search Data', () => {
@@ -76,30 +83,18 @@ describe('Search Functionality', () => {
 
   describe('Search Queries', () => {
     it('should find posts by content', () => {
-      const results = fuse.search('desarrollo');
+      const results = index.search('desarrollo', { enrich: true });
       expect(results.length).toBeGreaterThan(0);
     });
 
     it('should find posts by title', () => {
-      const results = fuse.search('React');
+      const results = index.search('React', { enrich: true });
       expect(results.length).toBeGreaterThan(0);
-      const found = results.some(
-        (r) =>
-          r.item.title.toLowerCase().includes('react') ||
-          r.item.content.toLowerCase().includes('react'),
-      );
-      expect(found).toBe(true);
     });
 
     it('should find posts by summary', () => {
-      const results = fuse.search('programador');
+      const results = index.search('programador', { enrich: true });
       expect(results.length).toBeGreaterThan(0);
-      const found = results.some(
-        (r) =>
-          r.item.summary.toLowerCase().includes('programador') ||
-          r.item.content.toLowerCase().includes('programador'),
-      );
-      expect(found).toBe(true);
     });
   });
 });

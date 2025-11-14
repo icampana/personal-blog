@@ -1,9 +1,10 @@
-import Fuse, { type FuseIndex } from 'fuse.js';
+import { Document } from 'flexsearch';
 import type React from 'react';
 import { useEffect, useState } from 'react';
 import { formatDate } from '../utils';
 
 type SearchResult = {
+  id: number;
   title: string;
   url: string;
   type: string;
@@ -12,19 +13,16 @@ type SearchResult = {
   tags?: string[];
 };
 
-const fuseOptions = {
-  keys: ['title', 'summary', 'content'],
-  minMatchCharLength: 2,
-  threshold: 0.3,
-};
-
 const SearchResults: React.FC = () => {
+  const [mounted, setMounted] = useState(false);
   const [loaded, setLoaded] = useState(false);
   const [posts, setPosts] = useState<SearchResult[]>([]);
-  const [articlesIndex, setArticlesIndex] = useState<FuseIndex<SearchResult>>();
+  const [searchIndex, setSearchIndex] = useState<any>();
   const [searchQuery, setSearchQuery] = useState('');
 
   useEffect(() => {
+    setMounted(true);
+
     // Get search query from URL
     const urlParams = new URLSearchParams(window.location.search);
     const query = urlParams.get('q') || '';
@@ -34,8 +32,22 @@ const SearchResults: React.FC = () => {
       try {
         const response = await fetch('/search-index.json');
         const data = await response.json();
-        const articlesIndex: FuseIndex<SearchResult> = Fuse.parseIndex(data);
-        setArticlesIndex(articlesIndex);
+
+        // Import FlexSearch index
+        const index = new Document({
+          document: {
+            id: 'id',
+            index: ['title', 'summary', 'content'],
+            store: ['title', 'url', 'type', 'date', 'summary', 'tags'],
+          },
+          tokenize: 'forward',
+          resolution: 9,
+        });
+
+        for (const key in data) {
+          await index.import(key, data[key]);
+        }
+        setSearchIndex(index);
       } catch (error) {
         console.error('Error loading search index:', error);
       }
@@ -56,7 +68,8 @@ const SearchResults: React.FC = () => {
     });
   }, []);
 
-  if (!loaded || !articlesIndex) {
+  // Prevent hydration mismatch by not rendering until mounted
+  if (!mounted) {
     return (
       <div className="flex items-center justify-center py-8">
         <div className="loading loading-spinner loading-lg"></div>
@@ -65,9 +78,19 @@ const SearchResults: React.FC = () => {
     );
   }
 
-  // Initialize Fuse with the index
-  const fuse = new Fuse(posts, fuseOptions, articlesIndex);
-  const searchResults = searchQuery ? fuse.search(searchQuery) : [];
+  if (!loaded || !searchIndex) {
+    return (
+      <div className="flex items-center justify-center py-8">
+        <div className="loading loading-spinner loading-lg"></div>
+        <span className="ml-2">Cargando índice de búsqueda...</span>
+      </div>
+    );
+  }
+
+  // Perform search with FlexSearch
+  const searchResults = searchQuery
+    ? searchIndex.search(searchQuery, { enrich: true })
+    : [];
 
   const getTypeLabel = (type: string) => {
     switch (type) {
@@ -129,11 +152,18 @@ const SearchResults: React.FC = () => {
           </div>
 
           <div className="space-y-4">
-            {searchResults.map(({ item }, idx) => {
-              const result = item as SearchResult;
+            {searchResults.map(({ result }: any, idx: number) => {
+              if (!result || result.length === 0) return null;
+
+              // Get the first match (FlexSearch returns array of matches)
+              const item = result[0];
+              const postData = posts.find((p) => p.id === item.id);
+
+              if (!postData) return null;
+
               return (
                 <div
-                  key={`${result.url}-${idx}`}
+                  key={`${postData.url}-${idx}`}
                   className="card bg-base-100 shadow-sm border border-base-300"
                 >
                   <div className="card-body p-4">
@@ -141,29 +171,29 @@ const SearchResults: React.FC = () => {
                       <div className="flex-1">
                         <h3 className="card-title text-lg mb-2">
                           <a
-                            href={result.url}
+                            href={postData.url}
                             className="link link-primary hover:link-hover"
                           >
-                            {result.title}
+                            {postData.title}
                           </a>
                         </h3>
 
                         <p className="text-sm text-base-content/70 mb-3">
-                          {result.summary}
+                          {postData.summary}
                         </p>
 
                         <div className="flex items-center gap-4 text-xs text-base-content/60">
-                          <span className={getTypeBadge(result.type)}>
-                            {getTypeLabel(result.type)}
+                          <span className={getTypeBadge(postData.type)}>
+                            {getTypeLabel(postData.type)}
                           </span>
 
                           <time className="capitalize">
-                            {formatDate(new Date(result.date))}
+                            {formatDate(new Date(postData.date))}
                           </time>
 
-                          {result.tags && result.tags.length > 0 && (
+                          {postData.tags && postData.tags.length > 0 && (
                             <div className="flex gap-1">
-                              {result.tags.slice(0, 3).map((tag, tagIdx) => (
+                              {postData.tags.slice(0, 3).map((tag, tagIdx) => (
                                 <span
                                   key={tagIdx}
                                   className="badge badge-outline badge-xs"
@@ -171,9 +201,9 @@ const SearchResults: React.FC = () => {
                                   {tag}
                                 </span>
                               ))}
-                              {result.tags.length > 3 && (
+                              {postData.tags.length > 3 && (
                                 <span className="text-xs text-base-content/50">
-                                  +{result.tags.length - 3} más
+                                  +{postData.tags.length - 3} más
                                 </span>
                               )}
                             </div>

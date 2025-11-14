@@ -40,7 +40,7 @@ export default defineConfig({
         output: {
           manualChunks: {
             'react-vendor': ['react', 'react-dom'],
-            'search-vendor': ['fuse.js'],
+            'search-vendor': ['flexsearch'],
             'utils-vendor': ['date-fns', 'reading-time'],
           },
         },

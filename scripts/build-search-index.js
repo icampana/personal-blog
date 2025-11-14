@@ -1,5 +1,5 @@
 import fs from 'fs';
-import Fuse from 'fuse.js';
+import { Document } from 'flexsearch';
 import { glob } from 'glob';
 import matter from 'gray-matter';
 import path from 'path';
@@ -10,9 +10,23 @@ const __dirname = path.dirname(__filename);
 
 async function generateSearchIndex() {
   try {
-    console.log('🔍 Generating search index...');
+    console.log('🔍 Generating search index with FlexSearch...');
+
+    // Create FlexSearch document index
+    const index = new Document({
+      document: {
+        id: 'id',
+        index: ['title', 'summary', 'content'],
+        store: ['title', 'url', 'type', 'date', 'summary', 'tags']
+      },
+      tokenize: 'forward',
+      resolution: 9,
+      threshold: 1,
+      depth: 3
+    });
 
     const searchItems = [];
+    let id = 0;
 
     // Process posts
     const postFiles = await glob('src/content/posts/**/*.md', {
@@ -27,7 +41,8 @@ async function generateSearchIndex() {
         const slug = path.basename(file, '.md');
         const url = data.path ? `/posts${data.path}` : `/posts/${slug}`;
 
-        searchItems.push({
+        const item = {
+          id: id++,
           title: data.title,
           url,
           content: body.slice(0, 500), // Limit content for search
@@ -35,7 +50,10 @@ async function generateSearchIndex() {
           tags: data.tags || [],
           date: data.date,
           type: 'post',
-        });
+        };
+
+        index.add(item);
+        searchItems.push(item);
       }
     }
 
@@ -52,14 +70,18 @@ async function generateSearchIndex() {
         const slug = path.basename(file, '.md');
         const url = data.path ? `/content${data.path}` : `/content/${slug}`;
 
-        searchItems.push({
+        const item = {
+          id: id++,
           title: data.title,
           url,
           content: body.slice(0, 500),
           summary: data.description || body.slice(0, 200),
           date: data.date,
           type: 'page',
-        });
+        };
+
+        index.add(item);
+        searchItems.push(item);
       }
     }
 
@@ -78,7 +100,8 @@ async function generateSearchIndex() {
           ? `/portafolio${data.path}`
           : `/portafolio/${slug}`;
 
-        searchItems.push({
+        const item = {
+          id: id++,
           title: data.title,
           url,
           content: body.slice(0, 500),
@@ -86,22 +109,22 @@ async function generateSearchIndex() {
           tags: data.techStack || [],
           date: data.date,
           type: 'project',
-        });
+        };
+
+        index.add(item);
+        searchItems.push(item);
       }
     }
 
-    const fuseOptions = {
-      keys: ['title', 'summary', 'content'],
-      minMatchCharLength: 2,
-      threshold: 0.3,
-    };
-
-    // Create the Fuse index
-    const searchIndex = Fuse.createIndex(fuseOptions.keys, searchItems);
+    // Export index
+    const exported = {};
+    index.export((key, data) => {
+      exported[key] = data;
+    });
 
     // Save the search index
     const indexPath = path.join(__dirname, '../public/search-index.json');
-    fs.writeFileSync(indexPath, JSON.stringify(searchIndex.toJSON(), null, 2));
+    fs.writeFileSync(indexPath, JSON.stringify(exported, null, 2));
     console.log('✅ Search index generated at:', indexPath);
 
     // Save the posts listing for search results
