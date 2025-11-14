@@ -92,6 +92,12 @@ const SearchResults: React.FC = () => {
     ? searchIndex.search(searchQuery, { enrich: true })
     : [];
 
+  // Flatten and deduplicate results by id
+  const allResults: any[] = searchResults.flatMap(({ result }: { result: any[] }) => result || []);
+  const uniqueResults: any[] = Array.from(
+    new Map(allResults.map((item: any) => [item.id, item])).values()
+  );
+
   const getTypeLabel = (type: string) => {
     switch (type) {
       case 'post':
@@ -129,7 +135,7 @@ const SearchResults: React.FC = () => {
         </div>
       )}
 
-      {searchQuery && searchResults.length === 0 && (
+      {searchQuery && uniqueResults.length === 0 && (
         <div className="text-center py-8">
           <p className="text-lg text-base-content/70 mb-4">
             No se encontró ningún resultado para "<strong>{searchQuery}</strong>
@@ -141,22 +147,18 @@ const SearchResults: React.FC = () => {
         </div>
       )}
 
-      {searchResults.length > 0 && (
+      {uniqueResults.length > 0 && (
         <div>
           <div className="mb-4">
             <p className="text-sm text-base-content/70">
-              {searchResults.length} resultado
-              {searchResults.length !== 1 ? 's' : ''} para "
+              {uniqueResults.length} resultado
+              {uniqueResults.length !== 1 ? 's' : ''} para "
               <strong>{searchQuery}</strong>"
             </p>
           </div>
 
           <div className="space-y-4">
-            {searchResults.map(({ result }: any, idx: number) => {
-              if (!result || result.length === 0) return null;
-
-              // Get the first match (FlexSearch returns array of matches)
-              const item = result[0];
+            {uniqueResults.map((item: any, idx: number) => {
               const postData = posts.find((p) => p.id === item.id);
 
               if (!postData) return null;
