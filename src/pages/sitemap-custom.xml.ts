@@ -1,5 +1,5 @@
 import { getCollection } from 'astro:content';
-import { getPageUrl, getPostUrl, getProjectUrl } from '../utils';
+import { getPageUrl, getPostUrl, getProjectUrl } from '../utils/client';
 
 export async function GET() {
   const siteUrl = 'https://ivan.campananaranjo.com';
