@@ -20,6 +20,7 @@
       "!**/public/admin",
       "!**/public/*.json",
       "!**/tina/__generated__/*",
+      "!**/tina/tina-lock.json",
       "!**/src/styles/globals.css",
       "!**/src/**/*.astro",
       "!**/src/components/*.astro",
