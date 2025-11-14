@@ -13,6 +13,13 @@ type SearchResult = {
   tags?: string[];
 };
 
+const LoadingIndicator: React.FC = () => (
+  <div className="flex items-center justify-center py-8">
+    <div className="loading loading-spinner loading-lg"></div>
+    <span className="ml-2">Cargando índice de búsqueda...</span>
+  </div>
+);
+
 const SearchResults: React.FC = () => {
   const [mounted, setMounted] = useState(false);
   const [loaded, setLoaded] = useState(false);
@@ -70,21 +77,11 @@ const SearchResults: React.FC = () => {
 
   // Prevent hydration mismatch by not rendering until mounted
   if (!mounted) {
-    return (
-      <div className="flex items-center justify-center py-8">
-        <div className="loading loading-spinner loading-lg"></div>
-        <span className="ml-2">Cargando índice de búsqueda...</span>
-      </div>
-    );
+    return <LoadingIndicator />;
   }
 
   if (!loaded || !searchIndex) {
-    return (
-      <div className="flex items-center justify-center py-8">
-        <div className="loading loading-spinner loading-lg"></div>
-        <span className="ml-2">Cargando índice de búsqueda...</span>
-      </div>
-    );
+    return <LoadingIndicator />;
   }
 
   // Perform search with FlexSearch
