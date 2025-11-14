@@ -1,5 +1,6 @@
 import type { CollectionEntry } from 'astro:content';
 import { beforeEach, describe, expect, it } from 'vitest';
+import { getReadingTime } from '../utils';
 import {
   formatDate,
   getAllTags,
@@ -9,7 +10,6 @@ import {
   getProjectUrl,
   sortPostsByDate,
 } from '../utils/client';
-import { getReadingTime } from '../utils';
 
 // Mock data
 const mockPost: CollectionEntry<'posts'> = {

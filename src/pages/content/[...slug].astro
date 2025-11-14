@@ -1,7 +1,7 @@
 ---
 import { type CollectionEntry, getCollection } from 'astro:content';
 import BlogLayout from '../../layouts/BlogLayout.astro';
-import { getPageUrl } from '../../utils';
+import { getPageUrl } from '../../utils/client';
 
 export async function getStaticPaths() {
   const pages = await getCollection('pages');

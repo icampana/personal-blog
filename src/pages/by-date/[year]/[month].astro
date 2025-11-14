@@ -4,7 +4,7 @@ import { format } from 'date-fns';
 import { es } from 'date-fns/locale';
 import PostCard from '../../../components/PostCard.astro';
 import BlogLayout from '../../../layouts/BlogLayout.astro';
-import { sortPostsByDate } from '../../../utils';
+import { sortPostsByDate } from '../../../utils/client';
 
 export async function getStaticPaths() {
   const allPosts = await getCollection('posts');

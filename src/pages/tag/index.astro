@@ -2,7 +2,7 @@
 import { getCollection } from 'astro:content';
 import TagList from '../../components/TagList.astro';
 import BlogLayout from '../../layouts/BlogLayout.astro';
-import { getAllTags } from '../../utils';
+import { getAllTags } from '../../utils/client';
 
 // Get all posts and extract tags
 const allPosts = await getCollection('posts');

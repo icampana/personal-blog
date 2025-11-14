@@ -3,7 +3,7 @@ import { getCollection } from 'astro:content';
 import Pagination from '../../components/Pagination.astro';
 import PostCard from '../../components/PostCard.astro';
 import BlogLayout from '../../layouts/BlogLayout.astro';
-import { sortPostsByDate } from '../../utils';
+import { sortPostsByDate } from '../../utils/client';
 
 // Get all posts and sort by date
 const allPosts = await getCollection('posts');

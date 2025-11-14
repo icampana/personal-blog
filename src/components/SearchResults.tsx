@@ -1,7 +1,7 @@
 import { Document } from 'flexsearch';
 import type React from 'react';
 import { useEffect, useState } from 'react';
-import { formatDate } from '../utils';
+import { formatDate } from '../utils/client';
 
 type SearchResult = {
   id: number;

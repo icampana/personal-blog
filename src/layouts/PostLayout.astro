@@ -2,7 +2,8 @@
 import type { CollectionEntry } from 'astro:content';
 import BackToTop from '../components/BackToTop';
 import ShareButtons from '../components/ShareButtons';
-import { formatDate, getReadingTime } from '../utils';
+import { formatDate } from '../utils/client';
+import { getReadingTime } from '../utils';
 import { normalizeImagePath } from '../utils/imageUtils';
 import BlogLayout from './BlogLayout.astro';
 import { generateImgxUrl } from '../utils/imgxUtils';
