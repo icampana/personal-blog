@@ -93,9 +93,11 @@ const SearchResults: React.FC = () => {
     : [];
 
   // Flatten and deduplicate results by id
-  const allResults: any[] = searchResults.flatMap(({ result }: { result: any[] }) => result || []);
+  const allResults: any[] = searchResults.flatMap(
+    ({ result }: { result: any[] }) => result || [],
+  );
   const uniqueResults: any[] = Array.from(
-    new Map(allResults.map((item: any) => [item.id, item])).values()
+    new Map(allResults.map((item: any) => [item.id, item])).values(),
   );
 
   const getTypeLabel = (type: string) => {
