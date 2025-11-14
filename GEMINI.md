@@ -4,13 +4,13 @@ This document provides context for the Gemini AI assistant to understand the pro
 
 ## Project Overview
 
-This is a blog website built with Next.js and TypeScript. It uses Contentlayer to manage content from Markdown files and TinaCMS for a visual editor. The styling is done with Tailwind CSS and daisyUI. The blog is entirely in **Spanish**.
+This is a blog website built with Astro and TypeScript. It uses Astro's native content collections to manage content from Markdown files and TinaCMS for a visual editor. The styling is done with Tailwind CSS and daisyUI. The blog is entirely in **Spanish**.
 
 ## Key Technologies
 
-- **Framework:** Next.js
+- **Framework:** Astro
 - **Language:** TypeScript
-- **Content:** Contentlayer (from Markdown files), TinaCMS
+- **Content:** Astro Content Collections (from Markdown files), TinaCMS
 - **Styling:** Tailwind CSS, daisyUI
 - **Linting:** Biome (previously ESLint)
 - **Package Manager:** PNPM
@@ -32,7 +32,7 @@ This project uses Biome for linting and formatting. The configuration is defined
 ## Important Commands
 
 - `pnpm dev`: Starts the development server with Turbopack and TinaCMS.
-- `pnpm build`: Builds the project, including Contentlayer, the search index, and the Next.js application.
+- `pnpm build`: Builds the project, including the search index, and the Astro application.
 - `pnpm start`: Starts the production server.
 - `pnpm lint`: Lints the codebase using Biome.
 - `pnpm lint:fix`: Automatically fixes linting and formatting issues using Biome.
@@ -69,7 +69,7 @@ This project uses Biome for linting and formatting. The configuration is defined
 
 ### Portfolio Page Improvements
 
--   **Enhanced Project Document Type:** Added `liveUrl` and `repoUrl` fields to the `Project` document type in `contentlayer.config.ts` to include links to live projects and source code.
+-   **Enhanced Project Document Type:** Added `liveUrl` and `repoUrl` fields to the `Project` collection in `src/content/config.ts` to include links to live projects and source code.
 -   **Improved Project Card Component:** Created a more visually appealing `ProjectCard` component to display projects, including a prominent image, title, description, technologies, and call-to-action buttons (translated to Spanish).
 -   **Spanish Translation:** All visible text on the portfolio page, including titles and buttons, has been translated to Spanish.
 -   **Call to Action:** Added a "Contáctame" button linking to the "sobre-el-autor" page.

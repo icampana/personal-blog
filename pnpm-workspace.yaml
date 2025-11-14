@@ -8,6 +8,5 @@ ignoredBuiltDependencies:
 
 onlyBuiltDependencies:
   - '@tailwindcss/oxide'
-  - contentlayer2
   - esbuild
   - sharp

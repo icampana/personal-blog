@@ -1,8 +1,23 @@
 import BlogPost from 'components/blocks/BlogPost';
-import type { Post } from 'contentlayer/generated';
 import { endOfDay, formatISO } from 'date-fns';
 import { marked } from 'marked';
 import readingTime from 'reading-time';
+
+interface Post {
+  title: string;
+  date: string;
+  path?: string;
+  featuredImage?: string;
+  description?: string;
+  tags?: string[];
+  wordpress_id?: number;
+  author?: string;
+  comments?: boolean;
+  layout?: string;
+  categories?: string[];
+  body: { html: string };
+  readingTime: { text: string; minutes: number; time: number; words: number };
+}
 
 interface BlogPostPreviewProps {
   entry: unknown;

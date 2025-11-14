@@ -23,9 +23,6 @@
 .DS_Store
 *.pem
 
-## Generated files
-.contentlayer
-
 # debug
 npm-debug.log*
 .pnpm-debug.log*

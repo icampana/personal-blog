@@ -1,7 +1,18 @@
 import PageContent from 'components/blocks/PageContent';
-import type { Page } from 'contentlayer/generated';
 import { endOfDay, formatISO } from 'date-fns';
 import { marked } from 'marked';
+
+interface Page {
+  title: string;
+  date: string;
+  path?: string;
+  description?: string;
+  wordpress_id?: number;
+  author?: string;
+  comments?: boolean;
+  layout?: string;
+  body: { html: string };
+}
 
 interface ContentPagePreviewProps {
   entry: unknown;

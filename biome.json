@@ -13,7 +13,6 @@
       "!**/.astro",
       "!**/.netlify",
       "!**/.husky",
-      "!**/.contentlayer",
       "!**/.migration-backup",
       "!**/node_modules",
       "!**/dist",
