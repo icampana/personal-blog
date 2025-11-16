@@ -6,8 +6,10 @@ const branch = process.env.HEAD || process.env.VERCEL_GIT_COMMIT_REF || 'main';
 
 const config: any = {
   branch,
-  clientId: 'da403933-32db-4dcf-b799-ebc141c1fd51', // Get this from tina.io
-  token: 'd34d778eb69b883ddc7b48c0757e4bfa7999ec25', // Get this from tina.io
+  // Use environment variables for TinaCMS credentials
+  // Get these from tina.io and set in your .env file
+  clientId: process.env.TINA_CLIENT_ID || null,
+  token: process.env.TINA_TOKEN || null,
   client: { skip: true },
   build: {
     outputFolder: 'admin',
