@@ -15,6 +15,8 @@ export interface Props {
   twitterHandle?: string;
   noindex?: boolean;
   canonical?: string;
+  wordCount?: number;
+  readingTime?: number;
 }
 
 const {
@@ -31,6 +33,8 @@ const {
   twitterHandle = '@icampana',
   noindex = false,
   canonical = url,
+  wordCount,
+  readingTime,
 } = Astro.props;
 
 const siteUrl = 'https://ivan.campananaranjo.com';
@@ -57,12 +61,19 @@ const jsonLd = {
   '@type': type === 'article' ? 'BlogPosting' : 'WebPage',
   headline: title,
   description: description,
-  image: fullImage,
+  image: {
+    '@type': 'ImageObject',
+    url: fullImage,
+    width: 1200,
+    height: 630,
+  },
   url: fullUrl,
+  inLanguage: 'es-ES',
   author: {
     '@type': 'Person',
     name: author,
     url: `${siteUrl}/content/sobre-el-autor`,
+    image: `${siteUrl}/images/profile-pic.jpg`,
     sameAs: [
       'https://twitter.com/icampana',
       'https://github.com/icampana',
@@ -76,6 +87,8 @@ const jsonLd = {
     logo: {
       '@type': 'ImageObject',
       url: `${siteUrl}/images/logo.png`,
+      width: 600,
+      height: 60,
     },
   },
   ...(publishedTime && { datePublished: publishedTime }),
@@ -92,7 +105,10 @@ if (type === 'article') {
   const articleData = {
     ...jsonLd,
     '@type': 'BlogPosting',
-    articleSection: 'Technology',
+    // Use the first tag as the primary article section, fallback to 'Technology'
+    articleSection: tags.length > 0 ? tags[0] : 'Technology',
+    ...(wordCount && { wordCount }),
+    ...(readingTime && { timeRequired: `PT${Math.round(readingTime)}M` }), // ISO 8601 duration format
     ...(tags.length > 0 && {
       about: tags.map((tag) => ({
         '@type': 'Thing',
