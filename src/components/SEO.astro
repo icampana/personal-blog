@@ -107,8 +107,8 @@ if (type === 'article') {
     '@type': 'BlogPosting',
     // Use the first tag as the primary article section, fallback to 'Technology'
     articleSection: tags.length > 0 ? tags[0] : 'Technology',
-    ...(wordCount && { wordCount }),
-    ...(readingTime && { timeRequired: `PT${Math.round(readingTime)}M` }), // ISO 8601 duration format
+    ...(wordCount !== undefined && { wordCount }),
+    ...(readingTime !== undefined && { timeRequired: `PT${Math.round(readingTime)}M` }), // ISO 8601 duration format
     ...(tags.length > 0 && {
       about: tags.map((tag) => ({
         '@type': 'Thing',
