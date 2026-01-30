@@ -78,86 +78,92 @@ export default function ConsentBanner() {
   }
 
   return (
-    <div className="fixed bottom-0 left-0 right-0 z-50 p-4 bg-base-200 shadow-lg border-t border-base-300">
-      <div className="container mx-auto max-w-6xl">
+    <div className="fixed bottom-0 left-0 right-0 z-50 p-4 bg-[#0a0a0c]/95 backdrop-blur-md border-t border-[#1e1e24] shadow-lg">
+      <div className="max-w-7xl mx-auto">
         {!showSettings ? (
           <div className="flex flex-col md:flex-row items-center justify-between gap-4">
             <div className="flex-1">
-              <h3 className="font-bold text-lg mb-2">
-                🍪 Cookies y Privacidad
+              <h3 className="mono font-bold text-lg mb-2 text-[var(--accent-neon)]">
+                🍪 COOKIES_SETTINGS
               </h3>
-              <p className="text-sm">
-                Utilizamos cookies para mejorar tu experiencia. Las cookies
-                analíticas nos ayudan a entender cómo se usa el sitio. Puedes
-                elegir qué cookies aceptar.
+              <p className="text-sm text-zinc-400">
+                We use cookies to improve your experience. Analytics cookies
+                help us understand how visitors interact with the site (Google
+                Analytics). You can choose which cookies to accept.
               </p>
             </div>
             <div className="flex flex-wrap gap-2 items-center">
               <button
                 type="button"
                 onClick={openSettings}
-                className="btn btn-sm btn-ghost"
+                className="mono text-xs font-bold bg-[var(--bg-panel)] text-zinc-300 hover:text-[var(--accent-neon)] border border-[var(--border-panel)] px-4 py-2 rounded transition-colors"
               >
-                Configurar
+                SETTINGS
               </button>
               <button
                 type="button"
                 onClick={rejectAll}
-                className="btn btn-sm btn-outline"
+                className="mono text-xs font-bold bg-[var(--bg-panel)] text-zinc-300 hover:text-white border border-[var(--border-panel)] px-4 py-2 rounded transition-colors"
               >
-                Rechazar todo
+                REJECT_ALL
               </button>
               <button
                 type="button"
                 onClick={acceptAll}
-                className="btn btn-sm btn-primary"
+                className="mono text-xs font-bold bg-[var(--accent-neon)] text-black hover:opacity-90 px-4 py-2 rounded transition-opacity"
               >
-                Aceptar todo
+                ACCEPT_ALL
               </button>
             </div>
           </div>
         ) : (
           <div className="space-y-4">
             <div className="flex items-center justify-between">
-              <h3 className="font-bold text-lg">Configuración de Cookies</h3>
+              <h3 className="mono font-bold text-lg text-zinc-200">
+                COOKIE_CONFIGURATION
+              </h3>
               <button
                 type="button"
                 onClick={() => setShowSettings(false)}
-                className="btn btn-sm btn-circle btn-ghost"
+                className="material-symbols-outlined text-zinc-400 hover:text-white cursor-pointer transition-colors"
               >
-                ✕
+                close
               </button>
             </div>
 
             <div className="space-y-3">
-              <label className="flex items-start cursor-pointer gap-4 p-2">
+              <label className="flex items-start cursor-pointer gap-4 p-3 bg-[var(--bg-panel)] border border-[var(--border-panel)] rounded-lg hover:border-[var(--accent-neon)] transition-colors">
                 <input
                   type="checkbox"
                   checked={true}
                   disabled
-                  className="checkbox checkbox-primary"
+                  className="sr-only"
                 />
                 <div className="flex-1">
-                  <span className="font-bold">Cookies Esenciales</span>
-                  <p className="text-xs text-base-content/70 mt-1">
-                    Necesarias para el funcionamiento básico del sitio. No se
-                    pueden desactivar.
+                  <span className="mono font-bold text-white">
+                    ESSENTIAL_COOKIES
+                  </span>
+                  <p className="text-xs text-zinc-400 mt-1">
+                    Necessary for the basic site functionality. Cannot be
+                    deactivated.
                   </p>
                 </div>
               </label>
 
-              <label className="flex items-start cursor-pointer gap-4 p-2">
+              <label className="flex items-start cursor-pointer gap-4 p-3 bg-[var(--bg-panel)] border border-[var(--border-panel)] rounded-lg hover:border-[var(--accent-neon)] transition-colors">
                 <input
                   type="checkbox"
                   id="analytics-checkbox"
                   defaultChecked={false}
-                  className="checkbox checkbox-primary"
+                  className="sr-only"
                 />
                 <div className="flex-1">
-                  <span className="font-bold">Cookies Analíticas</span>
-                  <p className="text-xs text-base-content/70 mt-1">
-                    Nos ayudan a entender cómo los visitantes interactúan con el
-                    sitio (Google Analytics).
+                  <span className="mono font-bold text-white">
+                    ANALYTICS_COOKIES
+                  </span>
+                  <p className="text-xs text-zinc-400 mt-1">
+                    Help us understand how visitors interact with the site
+                    (Google Analytics).
                   </p>
                 </div>
               </label>
@@ -167,9 +173,9 @@ export default function ConsentBanner() {
               <button
                 type="button"
                 onClick={rejectAll}
-                className="btn btn-sm btn-outline"
+                className="mono text-xs font-bold bg-[var(--bg-panel)] text-zinc-300 hover:text-white border border-[var(--border-panel)] px-4 py-2 rounded transition-colors"
               >
-                Rechazar todo
+                REJECT_ALL
               </button>
               <button
                 type="button"
@@ -179,9 +185,9 @@ export default function ConsentBanner() {
                   ) as HTMLInputElement;
                   saveConsent(analyticsCheckbox?.checked || false);
                 }}
-                className="btn btn-sm btn-primary"
+                className="mono text-xs font-bold bg-[var(--accent-neon)] text-black hover:opacity-90 px-4 py-2 rounded transition-opacity"
               >
-                Guardar preferencias
+                SAVE_PREFERENCES
               </button>
             </div>
           </div>

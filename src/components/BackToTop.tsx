@@ -27,28 +27,15 @@ const BackToTop: React.FC = () => {
 
   return (
     <button
-      className={`fixed bottom-5 right-5 btn btn-circle btn-primary z-40 transition-all duration-300 ${
+      className={`fixed bottom-5 right-5 material-symbols-outlined text-zinc-400 hover:text-[var(--accent-neon)] cursor-pointer transition-colors text-2xl bg-[var(--bg-panel)] border border-[var(--border-panel)] rounded-full p-2 shadow-lg z-40 transition-all duration-300 hover:bg-[var(--accent-neon)] hover:text-black ${
         isVisible
-          ? 'opacity-100 translate-y-0'
+          ? 'opacity-100'
           : 'opacity-0 translate-y-2 pointer-events-none'
       }`}
       onClick={scrollToTop}
-      aria-label="Volver arriba"
-      title="Volver arriba"
+      aria-label="Scroll to top"
     >
-      <svg
-        className="w-6 h-6"
-        fill="none"
-        stroke="currentColor"
-        viewBox="0 0 24 24"
-      >
-        <path
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          strokeWidth={2}
-          d="M5 10l7-7m0 0l7 7m-7-7v18"
-        />
-      </svg>
+      {isVisible ? 'keyboard_double_arrow_up' : 'keyboard_double_arrow_down'}
     </button>
   );
 };

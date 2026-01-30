@@ -23,10 +23,49 @@ h1, h2, h3, h4, .mono {
   font-family: 'JetBrains Mono', monospace;
 }
 
+/* Theme-aware dashboard panel - works in both light and dark mode */
 .dashboard-panel {
   background-color: var(--bg-panel);
   border: 1px solid var(--border-panel);
   position: relative;
+}
+
+/* Light mode overrides */
+[data-theme="winter"] .dashboard-panel,
+[data-theme="cupcake"] .dashboard-panel,
+[data-theme="bumblebee"] .dashboard-panel,
+[data-theme="emerald"] .dashboard-panel,
+[data-theme="corporate"] .dashboard-panel,
+[data-theme="synthwave"] .dashboard-panel,
+[data-theme="retro"] .dashboard-panel,
+[data-theme="valentine"] .dashboard-panel,
+[data-theme="halloween"] .dashboard-panel,
+[data-theme="garden"] .dashboard-panel,
+[data-theme="forest"] .dashboard-panel,
+[data-theme="aqua"] .dashboard-panel,
+[data-theme="lofi"] .dashboard-panel,
+[data-theme="pastel"] .dashboard-panel,
+[data-theme="fantasy"] .dashboard-panel,
+[data-theme="wireframe"] .dashboard-panel,
+[data-theme="luxury"] .dashboard-panel,
+[data-theme="dracula"] .dashboard-panel,
+[data-theme="cmyk"] .dashboard-panel,
+[data-theme="autumn"] .dashboard-panel,
+[data-theme="business"] .dashboard-panel,
+[data-theme="acid"] .dashboard-panel,
+[data-theme="lemonade"] .dashboard-panel {
+  --bg-panel: #f3f4f6;
+  --border-panel: #e5e5eb;
+  --accent-neon: #10b981;
+}
+
+/* Dark mode overrides */
+[data-theme="night"] .dashboard-panel,
+[data-theme="cyberpunk"] .dashboard-panel,
+[data-theme="black"] .dashboard-panel {
+  --bg-panel: #111114;
+  --border-panel: #1e1e24;
+  --accent-neon: #00ff9d;
 }
 
 .dashboard-panel::before {
@@ -48,6 +87,40 @@ h1, h2, h3, h4, .mono {
 .neon-text {
   color: var(--accent-neon);
   text-shadow: 0 0 10px rgba(0, 255, 157, 0.3);
+}
+
+/* Grid background - only in dark mode */
+[data-theme="night"] body,
+[data-theme="cyberpunk"] body,
+[data-theme="black"] body {
+  background-image: radial-gradient(circle at 1px 1px, #1e1e24 1px, transparent 0);
+  background-size: 40px 40px;
+}
+
+[data-theme="winter"] body,
+[data-theme="cupcake"] body,
+[data-theme="bumblebee"] body,
+[data-theme="emerald"] body,
+[data-theme="corporate"] body,
+[data-theme="synthwave"] body,
+[data-theme="retro"] body,
+[data-theme="valentine"] body,
+[data-theme="halloween"] body,
+[data-theme="garden"] body,
+[data-theme="forest"] body,
+[data-theme="aqua"] body,
+[data-theme="lofi"] body,
+[data-theme="pastel"] body,
+[data-theme="fantasy"] body,
+[data-theme="wireframe"] body,
+[data-theme="luxury"] body,
+[data-theme="dracula"] body,
+[data-theme="cmyk"] body,
+[data-theme="autumn"] body,
+[data-theme="business"] body,
+[data-theme="acid"] body,
+[data-theme="lemonade"] body {
+  background-image: none;
 }
 
 .grid-bg {
