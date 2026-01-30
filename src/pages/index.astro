@@ -7,41 +7,81 @@ import { sortPostsByDate } from '../utils/client';
 import { generateImgxUrl } from '../utils/imgxUtils';
 import { Image } from 'astro:assets';
 
-// Get all posts and sort by date
+// Get all posts for latest publications
 const allPosts = await getCollection('posts');
-const posts = sortPostsByDate(allPosts);
+const latestPosts = sortPostsByDate(allPosts).slice(0, 3);
 
-// Limit to first 12 posts for homepage
-const featuredPosts = posts.slice(0, 12);
-
-const title = 'Iván Gabriel';
+const title = 'Iván Gabriel | Portfolio & Blog';
 const description =
-  'Diario de un Informático, Emprendedor, Desarrollador y Curioso a tiempo completo.';
-const imagePhoto = generateImgxUrl('/photos/personal_image_ia.png', 350, 350, 90, 'auto', true);
+  'Tech entrepreneur and developer with 20+ years of experience leading international projects in media, fintech, and startups.';
+const imagePhoto = generateImgxUrl('/images/portrait-toon-gemini.png', 350, 450, 90, 'auto', true);
 ---
 
 <BlogLayout title={title} description={description}>
-  <div class="px-2">
-    <div class="hero bg-base-200 py-4">
-      <div class="hero-content flex-col lg:flex-row">
-        <Image
-          src={imagePhoto}
-          class="max-w-sm rounded-lg shadow-2xl"
-          alt="Foto de Iván Gabriel"
-          width="350"
-          height="350"
-          loading="eager"
-          fetchpriority="high"
-        />
-        <div class="max-w-md">
-          <p class="py-6">
-            Soy Iván Gabriel, desarrollador y emprendedor con más de 20 años de experiencia en tecnología.
-            He trabajado en proyectos internacionales para medios, fintech y startups, liderando equipos y creando soluciones con IA, integraciones y plataformas web.
-            En este espacio comparto mi portafolio, publicaciones y reflexiones.
-          </p>
-
-          <!-- Social Links -->
-          <div class="flex gap-4 mb-6">
+  <div class="space-y-10 flex-grow">
+    {/* Hero Section */}
+    <section class="grid grid-cols-1 lg:grid-cols-12 gap-6">
+      <div class="lg:col-span-8 dashboard-panel rounded-xl overflow-hidden flex flex-col md:flex-row">
+        <div class="w-full md:w-5/12 h-64 md:h-auto overflow-hidden">
+          <Image
+            src={imagePhoto}
+            alt="Iván Gabriel"
+            class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-500"
+            loading="eager"
+            width="350"
+            height="450"
+          />
+        </div>
+        <div class="w-full md:w-7/12 p-8 flex flex-col justify-between">
+          <div>
+            <div class="flex items-center space-x-2 mb-4">
+              <span class="px-2 py-1 bg-zinc-800 text-[10px] mono text-[var(--accent-neon)] border border-[var(--accent-neon)]/30 rounded">
+                SYSTEM_ACTIVE
+              </span>
+              <span class="text-zinc-500 mono text-[10px]">V.2.0.24</span>
+            </div>
+            <h1 class="text-4xl font-bold mb-4 tracking-tight leading-tight">
+              Ingeniería con visión global,<br/>
+              <span class="text-[var(--accent-blue)]">20+ años transformando ideas en soluciones</span>
+            </h1>
+            <p class="text-zinc-400 text-sm leading-relaxed mb-6">
+              Especialista en plataformas web y integraciones de IA generativa que resuelven problemas reales, no solo tendencias. Co-fundador, mentor y Lead Developer.
+            </p>
+          </div>
+          <div class="flex items-center justify-between">
+            <a href="/content/sobre-el-autor" class="mono text-xs font-bold bg-[var(--accent-neon)] text-black hover:opacity-90 transition-opacity flex items-center px-6 py-3 rounded">
+              CONOCE MÁS SOBRE MÍ
+              <span class="material-symbols-outlined text-sm ml-2">arrow_forward</span>
+            </a>
+            <div class="flex space-x-3 text-zinc-500">
+              <span class="material-symbols-outlined hover:text-white cursor-pointer transition-colors">public</span>
+              <span class="material-symbols-outlined hover:text-white cursor-pointer transition-colors">code</span>
+              <span class="material-symbols-outlined hover:text-white cursor-pointer transition-colors">link</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="lg:col-span-4 grid grid-cols-1 gap-6">
+        <div class="dashboard-panel rounded-xl p-6 flex flex-col justify-center items-center text-center">
+          <span class="mono text-4xl font-bold neon-text mb-1">20+</span>
+          <span class="text-xs uppercase tracking-widest text-zinc-500 font-semibold">
+            Years Experience
+          </span>
+        </div>
+        <div class="dashboard-panel rounded-xl p-6 flex flex-col justify-center items-center text-center">
+          <span class="mono text-4xl font-bold text-[var(--accent-blue)] mb-1">30+</span>
+          <span class="text-xs uppercase tracking-widest text-zinc-500 font-semibold">
+            Projects Led
+          </span>
+        </div>
+        <div class="dashboard-panel rounded-xl p-6 flex flex-col justify-center items-center text-center">
+          <span class="mono text-4xl font-bold text-white mb-1">10+</span>
+          <span class="text-xs uppercase tracking-widest text-zinc-500 font-semibold">
+            Startups Advised
+          </span>
+        </div>
+        <div class="dashboard-panel rounded-xl p-6 flex flex-col justify-center items-center text-center">
+          <span class="text-xs uppercase tracking-widest text-zinc-500 font-semibold">
             <a
               href="https://twitter.com/icampana"
               target="_blank"
@@ -93,29 +133,86 @@ const imagePhoto = generateImgxUrl('/photos/personal_image_ia.png', 350, 350, 90
                 <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.568 8.16l-6.56 3.79c-.307.178-.566.033-.566-.32V8.914c0-.353.259-.498.566-.32l6.56 3.79c.307.178.566.033.566.32V11.63c0 .353-.259.498-.566.32z"/>
               </svg>
             </a>
-          </div>
-
-          <a href="/content/sobre-el-autor" class="btn btn-primary">Conoce más sobre mí</a>
+          </span>
         </div>
       </div>
-    </div>
+    </section>
 
-    <h2 class="text-4xl font-bold text-center my-8">
-      Últimas Publicaciones
-    </h2>
-
-    <div class="mx-auto py-3 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-      {featuredPosts.map((post, index) => (
-        <PostCard post={post} lazyLoad={index > 2} />
-      ))}
-    </div>
-
-    <div class="text-center my-8">
-      <a href="/posts/page/2" class="btn btn-primary btn-lg">
-        Ver más...
-      </a>
-    </div>
+    {/* Core Services Section */}
+    <section class="space-y-4">
+      <div class="flex items-center space-x-4">
+        <h2 class="mono text-sm font-bold text-zinc-400 tracking-wider">
+          CORE_SERVICES
+        </h2>
+        <div class="h-[1px] flex-grow bg-zinc-800"></div>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+        <div class="dashboard-panel rounded-lg p-5 flex items-start space-x-4 hover:border-[var(--accent-neon)] hover:bg-zinc-900/30 transition-all duration-300 group cursor-default">
+          <div class="flex-shrink-0 mt-1 p-2 bg-zinc-900/80 rounded border border-zinc-800 text-zinc-400 group-hover:bg-[var(--accent-neon)] group-hover:text-black group-hover:border-[var(--accent-neon)] transition-colors">
+            <span class="material-symbols-outlined text-xl">psychology</span>
+          </div>
+          <div class="flex flex-col">
+            <h3 class="mono text-sm font-bold text-zinc-100 group-hover:text-[var(--accent-neon)] transition-colors mb-1">
+              Soluciones con AI
+            </h3>
+            <p class="text-zinc-500 text-xs leading-relaxed group-hover:text-zinc-400 transition-colors">
+              Integrar herramientas de inteligencia artificial con productos y aplicaciones reales.
+            </p>
+          </div>
+        </div>
+        <div class="dashboard-panel rounded-lg p-5 flex items-start space-x-4 hover:border-[var(--accent-blue)] hover:bg-zinc-900/30 transition-all duration-300 group cursor-default">
+          <div class="flex-shrink-0 mt-1 p-2 bg-zinc-900/80 rounded border border-zinc-800 text-zinc-400 group-hover:bg-[var(--accent-blue)] group-hover:text-black group-hover:border-[var(--accent-blue)] transition-colors">
+            <span class="material-symbols-outlined text-xl">terminal</span>
+          </div>
+          <div class="flex flex-col">
+            <h3 class="mono text-sm font-bold text-zinc-100 group-hover:text-[var(--accent-blue)] transition-colors mb-1">
+              Plataformas Web
+            </h3>
+            <p class="text-zinc-500 text-xs leading-relaxed group-hover:text-zinc-400 transition-colors">
+              Desarrollo web escalable enfocado en mejores prácticas.
+            </p>
+          </div>
+        </div>
+        <div class="dashboard-panel rounded-lg p-5 flex items-start space-x-4 hover:border-white hover:bg-zinc-900/30 transition-all duration-300 group cursor-default">
+          <div class="flex-shrink-0 mt-1 p-2 bg-zinc-900/80 rounded border border-zinc-800 text-zinc-400 group-hover:bg-white group-hover:text-black group-hover:border-white transition-colors">
+            <span class="material-symbols-outlined text-xl">groups</span>
+          </div>
+          <div class="flex flex-col">
+            <h3 class="mono text-sm font-bold text-zinc-100 group-hover:text-white transition-colors mb-1">
+              Liderazgo Tecnológico
+            </h3>
+            <p class="text-zinc-500 text-xs leading-relaxed group-hover:text-zinc-400 transition-colors">
+              Guiar equipos multifuncionales enfocados en mejores prácticas.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
   </div>
+
+  <!-- Latest Publications Section -->
+  <section class="w-full bg-[#050505] border-t border-zinc-900 py-20">
+    <div class="max-w-7xl mx-auto px-6 space-y-8">
+      <div class="flex items-center space-x-4">
+        <h2 class="mono text-lg font-bold text-zinc-200">
+          LATEST_PUBLICATIONS
+        </h2>
+        <div class="h-[1px] flex-grow bg-zinc-800"></div>
+        <a href="/archivo" class="text-xs mono text-zinc-500 hover:text-white transition-colors">
+          VIEW_ARCHIVE
+        </a>
+        <span>|</span>
+        <a href="/posts/page/2" class="text-xs mono text-zinc-500 hover:text-white transition-colors">
+          VIEW_RECENT_POSTS
+        </a>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {latestPosts.map((post) => (
+          <PostCard post={post} lazyLoad={true} />
+        ))}
+      </div>
+    </div>
+  </section>
 
   <!-- Structured Data -->
   <StructuredData type="organization" />
