@@ -16,54 +16,68 @@ const projectUrl = getProjectUrl(project);
 const imagePath = normalizeImagePath(galleryImage?.[0]);
 ---
 
-<div class="card bg-base-100 shadow-xl">
-  <figure>
-    <a href={projectUrl}>
+<div
+  class='dashboard-panel rounded-xl overflow-hidden hover:scale-[1.02] transition-transform duration-300 border border-[var(--border-panel)] bg-[var(--bg-panel)]'>
+  <a href={projectUrl} class='block'>
+    <figure>
       <img
-        src={imagePath.startsWith('http') || imagePath.startsWith('//') ? imagePath : generateImgxUrl(imagePath, 400, 225)}
         alt={title}
-        class="object-cover w-full h-48"
-        loading="lazy"
-        width="400"
-        height="225"
+        src={imagePath.startsWith('http') || imagePath.startsWith('//')
+          ? imagePath
+          : generateImgxUrl(imagePath, 400, 225)}
+        class='w-full object-cover'
+        loading='lazy'
+        width='400'
+        height='225'
       />
-    </a>
-  </figure>
-  <div class="card-body">
-    <h2 class="card-title">
-      <a href={projectUrl} class="hover:text-primary">{title}</a>
-    </h2>
-    <p class="text-sm text-base-content/70">{description}</p>
+    </figure>
+    <div class='p-6'>
+      <h2
+        class='mono text-lg font-bold text-zinc-100 mb-2 hover:text-[var(--accent-neon)] transition-colors'>
+        {title}
+      </h2>
+      <p class='text-zinc-400 text-sm leading-relaxed mb-4'>
+        {description}
+      </p>
 
-    {techStack && techStack.length > 0 && (
-      <div class="card-actions justify-start">
-        {techStack.map((tech) => (
-          <div class="badge badge-outline">{tech}</div>
-        ))}
+      {
+        techStack && techStack.length > 0 && (
+          <div class='flex flex-wrap gap-2 mb-4'>
+            {techStack.map((tech) => (
+              <span class='px-2 py-1 bg-zinc-800 text-zinc-300 mono text-xs border border-zinc-700 rounded'>
+                {tech}
+              </span>
+            ))}
+          </div>
+        )
+      }
+
+      <div class='flex gap-3'>
+        {
+          liveUrl && (
+            <a
+              href={liveUrl}
+              class='mono text-xs font-bold bg-[var(--accent-neon)] text-black hover:opacity-90 px-4 py-2 rounded transition-opacity flex items-center'
+              target='_blank'
+              rel='noopener noreferrer'>
+              VER PROYECTO
+            </a>
+          )
+        }
+
+        {
+          repoUrl && (
+            <a
+              href={repoUrl}
+              class='mono text-xs font-bold bg-zinc-800 text-zinc-300 border border-zinc-700 hover:border-[var(--accent-neon)] hover:text-[var(--accent-neon)] px-4 py-2 rounded transition-all flex items-center'
+              target='_blank'
+              rel='noopener noreferrer'>
+              <span class='material-symbols-outlined text-sm mr-1'>code</span>
+              VER CÓDIGO
+            </a>
+          )
+        }
       </div>
-    )}
-
-    <div class="card-actions justify-end mt-4">
-      {liveUrl && (
-        <a
-          href={liveUrl}
-          class="btn btn-primary btn-sm"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Ver Proyecto
-        </a>
-      )}
-      {repoUrl && (
-        <a
-          href={repoUrl}
-          class="btn btn-secondary btn-sm"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Ver Código
-        </a>
-      )}
     </div>
-  </div>
+  </a>
 </div>
