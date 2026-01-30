@@ -22,7 +22,9 @@ const ShareButtons: React.FC<ShareButtonsProps> = ({
   };
 
   useEffect(() => {
-    setCanShare(typeof navigator !== 'undefined' && typeof navigator.share === 'function');
+    setCanShare(
+      typeof navigator !== 'undefined' && typeof navigator.share === 'function',
+    );
   }, []);
 
   const handleNativeShare = async () => {
@@ -54,8 +56,8 @@ const ShareButtons: React.FC<ShareButtonsProps> = ({
   };
 
   return (
-    <div className="flex flex-wrap items-center gap-3">
-      <span className="mono text-xs font-medium text-zinc-400 uppercase tracking-wider mr-2">
+    <div className='flex flex-wrap items-center gap-3'>
+      <span className='mono text-xs font-medium text-zinc-400 uppercase tracking-wider mr-2'>
         SHARE_
       </span>
 
@@ -63,9 +65,8 @@ const ShareButtons: React.FC<ShareButtonsProps> = ({
       {canShare && (
         <button
           onClick={handleNativeShare}
-          className="material-symbols-outlined text-zinc-400 hover:text-[var(--accent-neon)] cursor-pointer transition-colors text-lg"
-          title="Share"
-        >
+          className='material-symbols-outlined text-zinc-400 hover:text-[var(--accent-neon)] cursor-pointer transition-colors text-lg'
+          title='Share'>
           share
         </button>
       )}
@@ -73,53 +74,48 @@ const ShareButtons: React.FC<ShareButtonsProps> = ({
       {/* Twitter */}
       <a
         href={shareUrls.twitter}
-        target="_blank"
-        rel="noopener noreferrer"
-        className="material-symbols-outlined text-zinc-400 hover:text-[var(--accent-neon)] cursor-pointer transition-colors text-lg"
-        title="Share on Twitter"
-      >
+        target='_blank'
+        rel='noopener noreferrer'
+        className='material-symbols-outlined text-zinc-400 hover:text-[var(--accent-neon)] cursor-pointer transition-colors text-lg'
+        title='Share on Twitter'>
         share
       </a>
 
       {/* Facebook */}
       <a
         href={shareUrls.facebook}
-        target="_blank"
-        rel="noopener noreferrer"
-        className="material-symbols-outlined text-zinc-400 hover:text-[var(--accent-neon)] cursor-pointer transition-colors text-lg"
-        title="Share on Facebook"
-      >
+        target='_blank'
+        rel='noopener noreferrer'
+        className='material-symbols-outlined text-zinc-400 hover:text-[var(--accent-neon)] cursor-pointer transition-colors text-lg'
+        title='Share on Facebook'>
         share
       </a>
 
       {/* LinkedIn */}
       <a
         href={shareUrls.linkedin}
-        target="_blank"
-        rel="noopener noreferrer"
-        className="material-symbols-outlined text-zinc-400 hover:text-[var(--accent-neon)] cursor-pointer transition-colors text-lg"
-        title="Share on LinkedIn"
-      >
+        target='_blank'
+        rel='noopener noreferrer'
+        className='material-symbols-outlined text-zinc-400 hover:text-[var(--accent-neon)] cursor-pointer transition-colors text-lg'
+        title='Share on LinkedIn'>
         work
       </a>
 
       {/* WhatsApp */}
       <a
         href={shareUrls.whatsapp}
-        target="_blank"
-        rel="noopener noreferrer"
-        className="material-symbols-outlined text-zinc-400 hover:text-[var(--accent-neon)] cursor-pointer transition-colors text-lg"
-        title="Share on WhatsApp"
-      >
+        target='_blank'
+        rel='noopener noreferrer'
+        className='material-symbols-outlined text-zinc-400 hover:text-[var(--accent-neon)] cursor-pointer transition-colors text-lg'
+        title='Share on WhatsApp'>
         chat
       </a>
 
       {/* Copy link */}
       <button
         onClick={copyToClipboard}
-        className="material-symbols-outlined text-zinc-400 hover:text-[var(--accent-neon)] cursor-pointer transition-colors text-lg"
-        title={copied ? 'Link copied!' : 'Copy link'}
-      >
+        className='material-symbols-outlined text-zinc-400 hover:text-[var(--accent-neon)] cursor-pointer transition-colors text-lg'
+        title={copied ? 'Link copied!' : 'Copy link'}>
         {copied ? 'check_circle' : 'content_copy'}
       </button>
     </div>
