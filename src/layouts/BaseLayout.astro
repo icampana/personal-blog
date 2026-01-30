@@ -14,6 +14,8 @@ export interface Props {
   modifiedTime?: string;
   tags?: string[];
   noindex?: boolean;
+  wordCount?: number;
+  readingTime?: number;
 }
 
 const {
@@ -26,6 +28,8 @@ const {
   modifiedTime,
   tags,
   noindex,
+  wordCount,
+  readingTime,
 } = Astro.props;
 ---
 
@@ -57,6 +61,8 @@ const {
       modifiedTime={modifiedTime}
       tags={tags}
       noindex={noindex}
+      wordCount={wordCount}
+      readingTime={readingTime}
     />
 
     <!-- Google Site Verification -->
