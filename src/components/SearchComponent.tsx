@@ -49,25 +49,11 @@ const SearchComponent: React.FC = () => {
           <button
             type="button"
             data-testid="search-icon"
-            className="btn btn-square btn-ghost"
+            className="material-symbols-outlined text-zinc-400 cursor-pointer hover:text-white"
             onClick={handleToggle}
             title="Buscar"
           >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              className="h-5 w-5"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-            >
-              <title>Search</title>
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="2"
-                d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
-              />
-            </svg>
+            terminal
           </button>
         </span>
       )}
@@ -82,7 +68,7 @@ const SearchComponent: React.FC = () => {
               onChange={(e) => setSearchQuery(e.target.value)}
               onKeyDown={handleKeyDown}
               placeholder="Buscar..."
-              className="input w-full lg:w-48 text-base-content pr-10"
+              className="bg-[#111114] border border-[#1e1e24] text-white px-3 py-2 rounded-lg w-full lg:w-48 focus:outline-none focus:ring-1 focus:ring-[var(--accent-neon)]"
             />
 
             {searchQuery && (
@@ -94,7 +80,7 @@ const SearchComponent: React.FC = () => {
                     controlRef.current.focus();
                   }
                 }}
-                className="absolute right-8 top-1/2 transform -translate-y-1/2 text-base-content/50 hover:text-base-content"
+                className="absolute right-8 top-1/2 transform -translate-y-1/2 text-zinc-400 hover:text-white"
                 title="Limpiar búsqueda"
               >
                 ×
@@ -103,7 +89,7 @@ const SearchComponent: React.FC = () => {
 
             <button
               type="submit"
-              className="absolute right-2 top-1/2 transform -translate-y-1/2 text-base-content/50 hover:text-base-content"
+              className="absolute right-2 top-1/2 transform -translate-y-1/2 text-zinc-400 hover:text-white"
               title="Buscar"
             >
               <svg

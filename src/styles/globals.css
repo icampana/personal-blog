@@ -4,6 +4,57 @@
   themes: winter --default, night --prefersdark, cupcake, bumblebee, emerald, corporate, synthwave, retro, cyberpunk, valentine, halloween, garden, forest, aqua, lofi, pastel, fantasy, wireframe, black, luxury, dracula, cmyk, autumn, business, acid, lemonade, night, coffee;
 }
 
+:root {
+  --bg-main: #0a0a0c;
+  --bg-panel: #111114;
+  --border-panel: #1e1e24;
+  --accent-neon: #00ff9d;
+  --accent-blue: #00d4ff;
+  --text-muted: #8e8e93;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: var(--bg-main);
+  color: #e4e4e7;
+}
+
+h1, h2, h3, h4, .mono {
+  font-family: 'JetBrains Mono', monospace;
+}
+
+.dashboard-panel {
+  background-color: var(--bg-panel);
+  border: 1px solid var(--border-panel);
+  position: relative;
+}
+
+.dashboard-panel::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 2px;
+  height: 100%;
+  background: var(--accent-neon);
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.dashboard-panel:hover::before {
+  opacity: 1;
+}
+
+.neon-text {
+  color: var(--accent-neon);
+  text-shadow: 0 0 10px rgba(0, 255, 157, 0.3);
+}
+
+.grid-bg {
+  background-image: radial-gradient(circle at 1px 1px, #1e1e24 1px, transparent 0);
+  background-size: 40px 40px;
+}
+
 p {
     @apply mb-5 leading-7;
 }

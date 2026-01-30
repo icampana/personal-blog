@@ -3,25 +3,23 @@ import { Image } from 'astro:assets';
 const currentYear = new Date().getFullYear();
 ---
 
-<footer class="bg-gray-800 mt-3 p-4 text-white">
-  <div class="grid sm:grid-cols-1 sm:min-w-fit lg:grid-cols-4 my-1">
-    <div class="justify-start py-6 lg:col-span-2 align-middle text-center lg:text-left">
-      © {currentYear}, Hecho con{" "}
-      <a href="https://astro.build/">Astro</a>
-      &nbsp; + &nbsp;<a href="https://netlify.com/">Netlify</a>&nbsp; y
-      &nbsp; <a href="https://docs.astro.build/en/guides/content-collections/">Content Collections</a>
-      <div class="mt-2 text-xs">
-        <a href="/privacy-settings" class="underline hover:text-gray-300">
+<footer class="border-t border-[#1e1e24] py-8 bg-[#0a0a0c]">
+  <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
+    <div class="mono text-[10px] text-zinc-500 uppercase tracking-widest">
+      © COPYRIGHT {currentYear} -- IVÁN GABRIEL [SECURE_NODE]
+      <div class="mt-2">
+        <a href="/privacy-settings" class="text-[var(--accent-neon)] hover:underline">
           🍪 Configuración de Cookies
         </a>
       </div>
     </div>
-
-    <div class="text-center my-4">
+    <div class="flex items-center space-x-6 text-zinc-400">
       <a
         href="https://www.codementor.io/@ivncampaanaranjo?refer=badge"
         target="_blank"
         rel="noopener noreferrer"
+        class="hover:text-[var(--accent-neon)] cursor-pointer transition-colors"
+        aria-label="Codementor Profile"
       >
         <Image
           src="https://www.codementor.io/m-badges/ivncampaanaranjo/find-me-on-cm-b.svg"
@@ -31,28 +29,24 @@ const currentYear = new Date().getFullYear();
           height="51"
         />
       </a>
-    </div>
-
-    <div class="text-center md:justify-end my-4">
-      <div class="text-center mt-1">
-        <a
-          href="https://www.buymeacoffee.com/icampana"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png"
-            alt="Buy Me A Coffee"
-            width="217"
-            height="60"
-            class="inline-block"
-          />
-        </a>
-      </div>
-      <div class="text-xs">
-        Si algo de lo que lees aquí te resulta útil, puedes invitarme un
-        café :D
-      </div>
+      <a
+        href="https://www.buymeacoffee.com/icampana"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="hover:text-[var(--accent-neon)] cursor-pointer transition-colors"
+        aria-label="Buy Me a Coffee"
+      >
+        <Image
+          src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png"
+          alt="Buy Me A Coffee"
+          width="217"
+          height="60"
+          class="inline-block"
+        />
+      </a>
+      <span class="material-symbols-outlined hover:text-[var(--accent-neon)] cursor-pointer transition-colors text-xl">brand_awareness</span>
+      <span class="material-symbols-outlined hover:text-[var(--accent-neon)] cursor-pointer transition-colors text-xl">terminal</span>
+      <span class="material-symbols-outlined hover:text-[var(--accent-neon)] cursor-pointer transition-colors text-xl">alternate_email</span>
     </div>
   </div>
 </footer>
