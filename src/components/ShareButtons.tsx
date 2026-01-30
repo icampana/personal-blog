@@ -1,5 +1,5 @@
 import type React from 'react';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 interface ShareButtonsProps {
   url: string;
@@ -13,6 +13,7 @@ const ShareButtons: React.FC<ShareButtonsProps> = ({
   description = '',
 }) => {
   const [copied, setCopied] = useState(false);
+  const [canShare, setCanShare] = useState(false);
 
   const shareData = {
     title,
@@ -20,7 +21,9 @@ const ShareButtons: React.FC<ShareButtonsProps> = ({
     url,
   };
 
-  const canShare = typeof navigator !== 'undefined' && navigator.share;
+  useEffect(() => {
+    setCanShare(typeof navigator !== 'undefined' && typeof navigator.share === 'function');
+  }, []);
 
   const handleNativeShare = async () => {
     if (canShare) {
@@ -45,7 +48,7 @@ const ShareButtons: React.FC<ShareButtonsProps> = ({
   const shareUrls = {
     twitter: `https://twitter.com/intent/tweet?url=${encodeURIComponent(url)}&text=${encodeURIComponent(title)}`,
     facebook: `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(url)}`,
-    linkedin: `https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(url)}`,
+    linkedin: `https://www.linkedin.com/feed/?shareActive=true&text=${encodeURIComponent(url)}`,
     whatsapp: `https://wa.me/?text=${encodeURIComponent(`${title} ${url}`)}`,
     telegram: `https://t.me/share/url?url=${encodeURIComponent(url)}&text=${encodeURIComponent(title)}`,
   };
