@@ -27,7 +27,7 @@ const BackToTop: React.FC = () => {
 
   return (
     <button
-      className={`fixed bottom-5 right-5 material-symbols-outlined text-zinc-400 hover:text-[var(--accent-neon)] cursor-pointer transition-colors text-2xl bg-[var(--bg-panel)] border border-[var(--border-panel)] rounded-full p-2 shadow-lg z-40 transition-all duration-300 hover:bg-[var(--accent-neon)] hover:text-black ${
+      className={`fixed bottom-5 right-5 material-symbols-outlined text-base-content/70 hover:text-[var(--accent-neon)] cursor-pointer transition-colors text-2xl bg-[var(--bg-panel)] border border-[var(--border-panel)] rounded-full p-2 shadow-lg z-40 transition-all duration-300 hover:bg-[var(--accent-neon)] hover:text-black ${
         isVisible
           ? 'opacity-100'
           : 'opacity-0 translate-y-2 pointer-events-none'

@@ -20,15 +20,15 @@ const menuItems = [
 const siteTitle = 'IVÁN GABRIEL';
 ---
 
-<nav class="sticky top-0 z-50 bg-[#0a0a0c]/80 backdrop-blur-md border-b border-[#1e1e24]">
+<nav class="sticky top-0 z-50 bg-base-100/80 backdrop-blur-md border-b border-base-content/20">
   <div class="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
     <div class="flex items-center space-x-2">
       <div class="w-3 h-3 rounded-full bg-[var(--accent-neon)]"></div>
-      <span class="mono font-bold tracking-tighter text-xl">{siteTitle}</span>
+      <span class="mono font-bold tracking-tighter text-xl text-base-content">{siteTitle}</span>
     </div>
     <div class="hidden md:flex items-center space-x-8">
       {menuItems.map((item) => (
-        <a class="mono text-sm font-medium hover:text-[var(--accent-neon)] transition-colors" href={item.url}>
+        <a class="mono text-sm font-medium text-base-content hover:text-[var(--accent-neon)] transition-colors" href={item.url}>
           {item.title}
         </a>
       ))}

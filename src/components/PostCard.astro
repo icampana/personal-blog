@@ -23,45 +23,55 @@ const postUrl = getPostUrl(post);
 const summary = description || post.body.slice(0, 200) + '...';
 ---
 
-<div class="card bg-base-100 shadow-xl">
+  <div
+    class='dashboard-panel flex flex-col rounded-xl overflow-hidden hover:scale-[1.02] transition-transform duration-300 border border-[var(--border-panel)] bg-[var(--bg-panel)]'>
   <figure>
-    <a href={postUrl} aria-label={`Leer el post: ${title}`}>
+    <a href={postUrl} class='block' aria-label={`Leer el post: ${title}`}>
       <Image
-        src={imagePath.startsWith('http') || imagePath.startsWith('//') ? imagePath : generateImgxUrl(imagePath, 400, 225)}
+        src={imagePath.startsWith('http') || imagePath.startsWith('//')
+          ? imagePath
+          : generateImgxUrl(imagePath, 400, 225)}
         alt={title}
-        class="object-cover w-full h-48"
+        class='w-full object-cover'
         loading={lazyLoad ? 'lazy' : 'eager'}
-        width="400"
-        height="225"
+        width='400'
+        height='225'
       />
     </a>
   </figure>
-  <div class="card-body">
-    <h2 class="card-title">
-      <a href={postUrl} class="hover:text-primary">{title}</a>
-    </h2>
-    <p class="text-sm text-base-content/70">{summary}</p>
+    <div class='p-6 flex flex-col flex-1'>
+      <h2
+        class='mono text-lg font-bold text-base-content mb-2 hover:text-[var(--accent-neon)] transition-colors'>
+        <a href={postUrl} class='hover:text-[var(--accent-neon)] transition-colors'>
+          {title}
+        </a>
+      </h2>
+      <p class='text-base-content/70 text-sm leading-relaxed mb-4'>
+        {summary}
+      </p>
 
-    {tags && tags.length > 0 && (
-      <div class="card-actions justify-end">
-        {tags.map((tag) => (
-          <a
-            href={`/tag/${tag.toLowerCase()}`}
-            class="badge badge-info hover:badge-primary"
-          >
-            {tag}
-          </a>
-        ))}
-      </div>
-    )}
+      {
+        tags && tags.length > 0 && (
+          <div class='flex flex-wrap gap-2 mb-4'>
+            {tags.map((tag) => (
+              <a
+                href={`/tag/${tag.toLowerCase()}`}
+                class='px-2 py-1 bg-base-200 text-base-content mono text-xs border border-base-content/20 rounded hover:border-[var(--accent-neon)] hover:text-[var(--accent-neon)] transition-colors'>
+                {tag}
+              </a>
+            ))}
+          </div>
+        )
+      }
 
-    <div class="card-footer text-xs mt-4 flex justify-between items-center">
-      <time datetime={date.toISOString()} class="capitalize text-accent">
-        {formatDate(date)}
-      </time>
-      <div class="text-base-content/60">
-        <em>Lectura:</em> {readingTimeText}
+      <div class='flex justify-between items-center text-xs text-base-content/50 mt-auto'>
+        <time datetime={date.toISOString()} class='capitalize'>
+          {formatDate(date)}
+        </time>
+        <div>
+          <em>Lectura:</em> {readingTimeText}
+        </div>
       </div>
     </div>
-  </div>
+</div>
 </div>

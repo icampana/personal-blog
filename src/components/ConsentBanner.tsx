@@ -78,7 +78,7 @@ export default function ConsentBanner() {
   }
 
   return (
-    <div className="fixed bottom-0 left-0 right-0 z-50 p-4 bg-[#0a0a0c]/95 backdrop-blur-md border-t border-[#1e1e24] shadow-lg">
+    <div className="fixed bottom-0 left-0 right-0 z-50 p-4 bg-base-100/95 backdrop-blur-md border-t border-base-content/20 shadow-lg">
       <div className="max-w-7xl mx-auto">
         {!showSettings ? (
           <div className="flex flex-col md:flex-row items-center justify-between gap-4">
@@ -86,7 +86,7 @@ export default function ConsentBanner() {
               <h3 className="mono font-bold text-lg mb-2 text-[var(--accent-neon)]">
                 🍪 COOKIES_SETTINGS
               </h3>
-              <p className="text-sm text-zinc-400">
+              <p className="text-sm text-base-content/70">
                 We use cookies to improve your experience. Analytics cookies
                 help us understand how visitors interact with the site (Google
                 Analytics). You can choose which cookies to accept.
@@ -96,14 +96,14 @@ export default function ConsentBanner() {
               <button
                 type="button"
                 onClick={openSettings}
-                className="mono text-xs font-bold bg-[var(--bg-panel)] text-zinc-300 hover:text-[var(--accent-neon)] border border-[var(--border-panel)] px-4 py-2 rounded transition-colors"
+                className="mono text-xs font-bold bg-base-200 text-base-content hover:text-[var(--accent-neon)] border border-base-content/20 px-4 py-2 rounded transition-colors"
               >
                 SETTINGS
               </button>
               <button
                 type="button"
                 onClick={rejectAll}
-                className="mono text-xs font-bold bg-[var(--bg-panel)] text-zinc-300 hover:text-white border border-[var(--border-panel)] px-4 py-2 rounded transition-colors"
+                className="mono text-xs font-bold bg-base-200 text-base-content hover:text-base-content border border-base-content/20 px-4 py-2 rounded transition-colors"
               >
                 REJECT_ALL
               </button>
@@ -119,20 +119,20 @@ export default function ConsentBanner() {
         ) : (
           <div className="space-y-4">
             <div className="flex items-center justify-between">
-              <h3 className="mono font-bold text-lg text-zinc-200">
+              <h3 className="mono font-bold text-lg text-base-content">
                 COOKIE_CONFIGURATION
               </h3>
               <button
                 type="button"
                 onClick={() => setShowSettings(false)}
-                className="material-symbols-outlined text-zinc-400 hover:text-white cursor-pointer transition-colors"
+                className="material-symbols-outlined text-base-content/70 hover:text-base-content cursor-pointer transition-colors"
               >
                 close
               </button>
             </div>
 
             <div className="space-y-3">
-              <label className="flex items-start cursor-pointer gap-4 p-3 bg-[var(--bg-panel)] border border-[var(--border-panel)] rounded-lg hover:border-[var(--accent-neon)] transition-colors">
+              <label className="flex items-start cursor-pointer gap-4 p-3 bg-base-200 border border-base-content/20 rounded-lg hover:border-[var(--accent-neon)] transition-colors">
                 <input
                   type="checkbox"
                   checked={true}
@@ -140,17 +140,17 @@ export default function ConsentBanner() {
                   className="sr-only"
                 />
                 <div className="flex-1">
-                  <span className="mono font-bold text-white">
+                  <span className="mono font-bold text-base-content">
                     ESSENTIAL_COOKIES
                   </span>
-                  <p className="text-xs text-zinc-400 mt-1">
+                  <p className="text-xs text-base-content/70 mt-1">
                     Necessary for the basic site functionality. Cannot be
                     deactivated.
                   </p>
                 </div>
               </label>
 
-              <label className="flex items-start cursor-pointer gap-4 p-3 bg-[var(--bg-panel)] border border-[var(--border-panel)] rounded-lg hover:border-[var(--accent-neon)] transition-colors">
+              <label className="flex items-start cursor-pointer gap-4 p-3 bg-base-200 border border-base-content/20 rounded-lg hover:border-[var(--accent-neon)] transition-colors">
                 <input
                   type="checkbox"
                   id="analytics-checkbox"
@@ -158,10 +158,10 @@ export default function ConsentBanner() {
                   className="sr-only"
                 />
                 <div className="flex-1">
-                  <span className="mono font-bold text-white">
+                  <span className="mono font-bold text-base-content">
                     ANALYTICS_COOKIES
                   </span>
-                  <p className="text-xs text-zinc-400 mt-1">
+                  <p className="text-xs text-base-content/70 mt-1">
                     Help us understand how visitors interact with the site
                     (Google Analytics).
                   </p>
@@ -173,7 +173,7 @@ export default function ConsentBanner() {
               <button
                 type="button"
                 onClick={rejectAll}
-                className="mono text-xs font-bold bg-[var(--bg-panel)] text-zinc-300 hover:text-white border border-[var(--border-panel)] px-4 py-2 rounded transition-colors"
+                className="mono text-xs font-bold bg-base-200 text-base-content hover:text-base-content border border-base-content/20 px-4 py-2 rounded transition-colors"
               >
                 REJECT_ALL
               </button>

@@ -12,7 +12,7 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ menuItems }) => {
       {/* Hamburger menu button */}
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="material-symbols-outlined text-zinc-400 hover:text-[var(--accent-neon)] cursor-pointer transition-colors text-xl"
+        className="material-symbols-outlined text-base-content/70 hover:text-[var(--accent-neon)] cursor-pointer transition-colors text-xl"
         aria-label="Toggle menu"
         aria-expanded={isOpen}
       >
@@ -35,7 +35,7 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ menuItems }) => {
                 <a
                   key={item.url}
                   href={item.url}
-                  className="block mono text-sm font-medium text-white hover:text-[var(--accent-neon)] transition-colors px-4 py-3 hover:bg-[var(--bg-main)] rounded"
+                  className="block mono text-sm font-medium text-base-content hover:text-[var(--accent-neon)] transition-colors px-4 py-3 hover:bg-[var(--bg-main)] rounded"
                   onClick={() => setIsOpen(false)}
                 >
                   {item.title}

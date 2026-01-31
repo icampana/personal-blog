@@ -3,9 +3,9 @@ import { Image } from 'astro:assets';
 const currentYear = new Date().getFullYear();
 ---
 
-<footer class="border-t border-[#1e1e24] py-8 bg-[#0a0a0c]">
+<footer class="border-t border-base-content/20 py-8 bg-base-100">
   <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
-    <div class="mono text-[10px] text-zinc-500 uppercase tracking-widest">
+    <div class="mono text-[10px] text-base-content/50 uppercase tracking-widest">
       © COPYRIGHT {currentYear} -- IVÁN GABRIEL [SECURE_NODE]
       <div class="mt-2">
         <a href="/privacy-settings" class="text-[var(--accent-neon)] hover:underline">
@@ -13,7 +13,7 @@ const currentYear = new Date().getFullYear();
         </a>
       </div>
     </div>
-    <div class="flex items-center space-x-6 text-zinc-400">
+    <div class="flex items-center space-x-6 text-base-content/70">
       <a
         href="https://www.codementor.io/@ivncampaanaranjo?refer=badge"
         target="_blank"

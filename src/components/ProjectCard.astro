@@ -3,6 +3,7 @@ import type { CollectionEntry } from 'astro:content';
 import { getProjectUrl } from '../utils/client';
 import { normalizeImagePath } from '../utils/imageUtils';
 import { generateImgxUrl } from '../utils/imgxUtils';
+import { Image } from 'astro:assets';
 
 export interface Props {
   project: CollectionEntry<'projects'>;
@@ -16,27 +17,30 @@ const projectUrl = getProjectUrl(project);
 const imagePath = normalizeImagePath(galleryImage?.[0]);
 ---
 
-<div
-  class='dashboard-panel rounded-xl overflow-hidden hover:scale-[1.02] transition-transform duration-300 border border-[var(--border-panel)] bg-[var(--bg-panel)]'>
-  <a href={projectUrl} class='block'>
-    <figure>
-      <img
-        alt={title}
+  <div
+    class='dashboard-panel flex flex-col rounded-xl overflow-hidden hover:scale-[1.02] transition-transform duration-300 border border-[var(--border-panel)] bg-[var(--bg-panel)]'>
+  <figure>
+    <a href={projectUrl} class='block'>
+      <Image
         src={imagePath.startsWith('http') || imagePath.startsWith('//')
           ? imagePath
           : generateImgxUrl(imagePath, 400, 225)}
+        alt={title}
         class='w-full object-cover'
         loading='lazy'
         width='400'
         height='225'
       />
-    </figure>
-    <div class='p-6'>
+    </a>
+  </figure>
+    <div class='p-6 flex flex-col flex-1'>
       <h2
-        class='mono text-lg font-bold text-zinc-100 mb-2 hover:text-[var(--accent-neon)] transition-colors'>
-        {title}
+        class='mono text-lg font-bold text-base-content mb-2 hover:text-[var(--accent-neon)] transition-colors'>
+        <a href={projectUrl} class='hover:text-[var(--accent-neon)] transition-colors'>
+          {title}
+        </a>
       </h2>
-      <p class='text-zinc-400 text-sm leading-relaxed mb-4'>
+      <p class='text-base-content/70 text-sm leading-relaxed mb-4'>
         {description}
       </p>
 
@@ -44,7 +48,7 @@ const imagePath = normalizeImagePath(galleryImage?.[0]);
         techStack && techStack.length > 0 && (
           <div class='flex flex-wrap gap-2 mb-4'>
             {techStack.map((tech) => (
-              <span class='px-2 py-1 bg-zinc-800 text-zinc-300 mono text-xs border border-zinc-700 rounded'>
+              <span class='px-2 py-1 bg-base-200 text-base-content mono text-xs border border-base-content/20 rounded'>
                 {tech}
               </span>
             ))}
@@ -52,7 +56,7 @@ const imagePath = normalizeImagePath(galleryImage?.[0]);
         )
       }
 
-      <div class='flex gap-3'>
+      <div class='flex gap-3 mt-auto'>
         {
           liveUrl && (
             <a
@@ -69,7 +73,7 @@ const imagePath = normalizeImagePath(galleryImage?.[0]);
           repoUrl && (
             <a
               href={repoUrl}
-              class='mono text-xs font-bold bg-zinc-800 text-zinc-300 border border-zinc-700 hover:border-[var(--accent-neon)] hover:text-[var(--accent-neon)] px-4 py-2 rounded transition-all flex items-center'
+              class='mono text-xs font-bold bg-base-200 text-base-content border border-base-content/20 hover:border-[var(--accent-neon)] hover:text-[var(--accent-neon)] px-4 py-2 rounded transition-all flex items-center'
               target='_blank'
               rel='noopener noreferrer'>
               <span class='material-symbols-outlined text-sm mr-1'>code</span>
@@ -79,5 +83,4 @@ const imagePath = normalizeImagePath(galleryImage?.[0]);
         }
       </div>
     </div>
-  </a>
 </div>
