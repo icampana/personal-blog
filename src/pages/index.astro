@@ -14,126 +14,166 @@ const latestPosts = sortPostsByDate(allPosts).slice(0, 3);
 const title = 'Iván Gabriel | Portfolio & Blog';
 const description =
   'Tech entrepreneur and developer with 20+ years of experience leading international projects in media, fintech, and startups.';
-const imagePhoto = generateImgxUrl('/images/portrait-toon-gemini.png', 350, 450, 90, 'auto', true);
+const imagePhoto = generateImgxUrl(
+  '/images/portrait-toon-gemini.png',
+  350,
+  450,
+  90,
+  'auto',
+  true,
+);
 ---
 
 <BlogLayout title={title} description={description}>
-  <div class="space-y-10 flex-grow overflow-hidden">
+  <div class='space-y-10 flex-grow overflow-hidden'>
     {/* Hero Section */}
-    <section class="grid grid-cols-1 lg:grid-cols-12 gap-6 overflow-hidden">
-      <div class="lg:col-span-8 dashboard-panel rounded-xl overflow-hidden flex flex-col md:flex-row">
-        <div class="w-full md:w-5/12 overflow-hidden flex-shrink-0">
-          <div class="aspect-video md:aspect-[7/9] w-full h-full md:h-auto">
+    <section class='grid grid-cols-1 lg:grid-cols-12 gap-6 overflow-hidden'>
+      <div
+        class='lg:col-span-8 dashboard-panel rounded-xl overflow-hidden flex flex-col md:flex-row'>
+        <div class='w-full md:w-5/12 overflow-hidden flex-shrink-0'>
+          <div class='aspect-video md:aspect-[7/9] w-full h-full md:h-auto'>
             <Image
               src={imagePhoto}
-              alt="Iván Gabriel"
-              class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-500"
-              loading="eager"
-              width="350"
-              height="450"
+              alt='Iván Gabriel'
+              class='w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-500'
+              loading='eager'
+              width='350'
+              height='450'
             />
           </div>
         </div>
-        <div class="w-full md:w-7/12 p-8 flex flex-col justify-between">
+        <div class='w-full md:w-7/12 p-8 flex flex-col justify-between'>
           <div>
-            <div class="flex items-center space-x-2 mb-4">
-              <span class="px-2 py-1 bg-base-200 text-[10px] mono text-[var(--accent-neon)] border border-[var(--accent-neon)]/30 rounded">
+            <div class='flex items-center space-x-2 mb-4'>
+              <span
+                class='px-2 py-1 bg-base-200 text-[10px] mono text-[var(--accent-neon)] border border-[var(--accent-neon)]/30 rounded'>
                 SYSTEM_ACTIVE
               </span>
-              <span class="text-base-content/50 mono text-[10px]">V.2.0.24</span>
+              <span class='text-base-content/50 mono text-[10px]'>V.2.0.24</span
+              >
             </div>
-            <h1 class="text-4xl font-bold mb-4 tracking-tight leading-tight text-base-content">
-              Ingeniería con visión global,<br/>
-              <span class="text-[var(--accent-blue)]">20+ años transformando ideas en soluciones</span>
+            <h1
+              class='text-4xl font-bold mb-4 tracking-tight leading-tight text-base-content'>
+              Ingeniería con visión global,<br />
+              <span class='text-[var(--accent-blue)]'
+                >20+ años transformando ideas en soluciones</span
+              >
             </h1>
-            <p class="text-base-content/70 text-sm leading-relaxed mb-6">
-              Especialista en plataformas web y integraciones de IA generativa que resuelven problemas reales, no solo tendencias. Co-fundador, mentor y Lead Developer.
+            <p class='text-base-content/70 text-sm leading-relaxed mb-6'>
+              Especialista en plataformas web y integraciones de IA generativa
+              que resuelven problemas reales, no solo tendencias. Co-fundador,
+              mentor y Lead Developer.
             </p>
           </div>
-          <div class="flex items-center justify-between">
-            <a href="/content/sobre-el-autor" class="mono text-xs font-bold bg-[var(--accent-neon)] text-black hover:opacity-90 transition-opacity flex items-center px-6 py-3 rounded">
+          <div class='flex items-center justify-between'>
+            <a
+              href='/content/sobre-el-autor'
+              class='mono text-xs font-bold bg-[var(--accent-neon)] text-black hover:opacity-90 transition-opacity flex items-center px-6 py-3 rounded'>
               CONOCE MÁS SOBRE MÍ
-              <span class="material-symbols-outlined text-sm ml-2">arrow_forward</span>
+              <span class='material-symbols-outlined text-sm ml-2'
+                >arrow_forward</span
+              >
             </a>
-            <div class="flex space-x-3 text-base-content/50">
-              <span class="material-symbols-outlined hover:text-base-content cursor-pointer transition-colors">public</span>
-              <span class="material-symbols-outlined hover:text-base-content cursor-pointer transition-colors">code</span>
-              <span class="material-symbols-outlined hover:text-base-content cursor-pointer transition-colors">link</span>
+            <div class='flex space-x-3 text-base-content/50'>
+              <span
+                class='material-symbols-outlined hover:text-base-content cursor-pointer transition-colors'
+                >public</span
+              >
+              <span
+                class='material-symbols-outlined hover:text-base-content cursor-pointer transition-colors'
+                >code</span
+              >
+              <span
+                class='material-symbols-outlined hover:text-base-content cursor-pointer transition-colors'
+                >link</span
+              >
             </div>
           </div>
         </div>
       </div>
-      <div class="lg:col-span-4 grid grid-cols-1 gap-6">
-                <div class="dashboard-panel rounded-xl p-6 flex flex-col justify-center items-center text-center">
-          <span class="text-xs uppercase tracking-widest text-base-content/50 font-semibold">
+      <div class='lg:col-span-4 grid grid-cols-1 gap-6'>
+        <div
+          class='dashboard-panel rounded-xl p-6 flex flex-col justify-center items-center text-center'>
+          <span
+            class='text-xs uppercase tracking-widest text-base-content/50 font-semibold'>
             <a
-              href="https://twitter.com/icampana"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="btn btn-ghost btn-sm text-blue-500 hover:bg-blue-50"
-              title="Sígueme en Twitter"
-            >
+              href='https://twitter.com/icampana'
+              target='_blank'
+              rel='noopener noreferrer'
+              class='btn btn-ghost btn-sm text-blue-500 hover:bg-blue-50'
+              title='Sígueme en Twitter'>
               <title>Twitter</title>
-              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/>
+              <svg class='w-5 h-5' fill='currentColor' viewBox='0 0 24 24'>
+                <path
+                  d='M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z'
+                ></path>
               </svg>
             </a>
 
             <a
-              href="https://github.com/icampana"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="btn btn-ghost btn-sm text-gray-700 hover:bg-gray-50"
-              title="Mi perfil en GitHub"
-            >
+              href='https://github.com/icampana'
+              target='_blank'
+              rel='noopener noreferrer'
+              class='btn btn-ghost btn-sm text-gray-700 hover:bg-gray-50'
+              title='Mi perfil en GitHub'>
               <title>GitHub</title>
-              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+              <svg class='w-5 h-5' fill='currentColor' viewBox='0 0 24 24'>
+                <path
+                  d='M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z'
+                ></path>
               </svg>
             </a>
 
             <a
-              href="https://linkedin.com/in/icampana"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="btn btn-ghost btn-sm text-blue-700 hover:bg-blue-50"
-              title="Mi perfil en LinkedIn"
-            >
+              href='https://linkedin.com/in/icampana'
+              target='_blank'
+              rel='noopener noreferrer'
+              class='btn btn-ghost btn-sm text-blue-700 hover:bg-blue-50'
+              title='Mi perfil en LinkedIn'>
               <title>LinkedIn</title>
-              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+              <svg class='w-5 h-5' fill='currentColor' viewBox='0 0 24 24'>
+                <path
+                  d='M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z'
+                ></path>
               </svg>
             </a>
 
             <a
-              href="https://anchor.fm/e-van"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="btn btn-ghost btn-sm text-orange-600 hover:bg-orange-50"
-              title="Mi podcast en Anchor"
-            >
+              href='https://anchor.fm/e-van'
+              target='_blank'
+              rel='noopener noreferrer'
+              class='btn btn-ghost btn-sm text-orange-600 hover:bg-orange-50'
+              title='Mi podcast en Anchor'>
               <title>Podcast</title>
-              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.568 8.16l-6.56 3.79c-.307.178-.566.033-.566-.32V8.914c0-.353.259-.498.566-.32l6.56 3.79c.307.178.566.033.566.32V11.63c0 .353-.259.498-.566.32z"/>
+              <svg class='w-5 h-5' fill='currentColor' viewBox='0 0 24 24'>
+                <path
+                  d='M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.568 8.16l-6.56 3.79c-.307.178-.566.033-.566-.32V8.914c0-.353.259-.498.566-.32l6.56 3.79c.307.178.566.033.566.32V11.63c0 .353-.259.498-.566.32z'
+                ></path>
               </svg>
             </a>
           </span>
         </div>
-        <div class="dashboard-panel rounded-xl p-6 flex flex-col justify-center items-center text-center">
-          <span class="mono text-4xl font-bold neon-text mb-1">20+</span>
-          <span class="text-xs uppercase tracking-widest text-base-content/50 font-semibold">
+        <div
+          class='dashboard-panel rounded-xl p-6 flex flex-col justify-center items-center text-center'>
+          <span class='mono text-4xl font-bold neon-text mb-1'>20+</span>
+          <span
+            class='text-xs uppercase tracking-widest text-base-content/50 font-semibold'>
             Years Experience
           </span>
         </div>
-        <div class="dashboard-panel rounded-xl p-6 flex flex-col justify-center items-center text-center">
-          <span class="mono text-4xl font-bold text-amber-600 mb-1">30+</span>
-          <span class="text-xs uppercase tracking-widest text-base-content/50 font-semibold">
+        <div
+          class='dashboard-panel rounded-xl p-6 flex flex-col justify-center items-center text-center'>
+          <span class='mono text-4xl font-bold text-amber-600 mb-1'>30+</span>
+          <span
+            class='text-xs uppercase tracking-widest text-base-content/50 font-semibold'>
             Projects Led
           </span>
         </div>
-        <div class="dashboard-panel rounded-xl p-6 flex flex-col justify-center items-center text-center">
-          <span class="mono text-4xl font-bold text-violet-600 mb-1">10+</span>
-          <span class="text-xs uppercase tracking-widest text-base-content/50 font-semibold">
+        <div
+          class='dashboard-panel rounded-xl p-6 flex flex-col justify-center items-center text-center'>
+          <span class='mono text-4xl font-bold text-violet-600 mb-1'>10+</span>
+          <span
+            class='text-xs uppercase tracking-widest text-base-content/50 font-semibold'>
             Startups Advised
           </span>
         </div>
@@ -141,49 +181,62 @@ const imagePhoto = generateImgxUrl('/images/portrait-toon-gemini.png', 350, 450,
     </section>
 
     {/* Core Services Section */}
-    <section class="space-y-4">
-      <div class="flex items-center space-x-4">
-        <h2 class="mono text-sm font-bold text-base-content/70 tracking-wider">
+    <section class='space-y-4'>
+      <div class='flex items-center space-x-4'>
+        <h2 class='mono text-sm font-bold text-base-content/70 tracking-wider'>
           CORE_SERVICES
         </h2>
-        <div class="h-[1px] flex-grow bg-base-content/20"></div>
+        <div class='h-[1px] flex-grow bg-base-content/20'></div>
       </div>
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-        <div class="dashboard-panel rounded-lg p-5 flex items-start space-x-4 hover:border-[var(--accent-neon)] hover:bg-base-200/50 transition-all duration-300 group cursor-default">
-          <div class="flex-shrink-0 mt-1 p-2 bg-base-200 rounded border border-base-content/20 text-base-content/70 group-hover:bg-[var(--accent-neon)] group-hover:text-black group-hover:border-[var(--accent-neon)] transition-colors">
-            <span class="material-symbols-outlined text-xl">psychology</span>
+      <div class='grid grid-cols-1 md:grid-cols-3 gap-4'>
+        <div
+          class='dashboard-panel rounded-lg p-5 flex items-start space-x-4 hover:border-[var(--accent-neon)] hover:bg-base-200/50 transition-all duration-300 group cursor-default'>
+          <div
+            class='flex-shrink-0 mt-1 p-2 bg-base-200 rounded border border-base-content/20 text-base-content/70 group-hover:bg-[var(--accent-neon)] group-hover:text-black group-hover:border-[var(--accent-neon)] transition-colors'>
+            <span class='material-symbols-outlined text-xl'>psychology</span>
           </div>
-          <div class="flex flex-col">
-            <h3 class="mono text-sm font-bold text-base-content group-hover:text-[var(--accent-neon)] transition-colors mb-1">
+          <div class='flex flex-col'>
+            <h3
+              class='mono text-sm font-bold text-base-content group-hover:text-[var(--accent-neon)] transition-colors mb-1'>
               Soluciones con AI
             </h3>
-            <p class="text-base-content/50 text-xs leading-relaxed group-hover:text-base-content/70 transition-colors">
-              Integrar herramientas de inteligencia artificial con productos y aplicaciones reales.
+            <p
+              class='text-base-content/50 text-xs leading-relaxed group-hover:text-base-content/70 transition-colors'>
+              Integrar herramientas de inteligencia artificial con productos y
+              aplicaciones reales.
             </p>
           </div>
         </div>
-        <div class="dashboard-panel rounded-lg p-5 flex items-start space-x-4 hover:border-[var(--accent-blue)] hover:bg-base-200/50 transition-all duration-300 group cursor-default">
-          <div class="flex-shrink-0 mt-1 p-2 bg-base-200 rounded border border-base-content/20 text-base-content/70 group-hover:bg-[var(--accent-blue)] group-hover:text-black group-hover:border-[var(--accent-blue)] transition-colors">
-            <span class="material-symbols-outlined text-xl">terminal</span>
+        <div
+          class='dashboard-panel rounded-lg p-5 flex items-start space-x-4 hover:border-[var(--accent-blue)] hover:bg-base-200/50 transition-all duration-300 group cursor-default'>
+          <div
+            class='flex-shrink-0 mt-1 p-2 bg-base-200 rounded border border-base-content/20 text-base-content/70 group-hover:bg-[var(--accent-blue)] group-hover:text-black group-hover:border-[var(--accent-blue)] transition-colors'>
+            <span class='material-symbols-outlined text-xl'>terminal</span>
           </div>
-          <div class="flex flex-col">
-            <h3 class="mono text-sm font-bold text-base-content group-hover:text-[var(--accent-blue)] transition-colors mb-1">
+          <div class='flex flex-col'>
+            <h3
+              class='mono text-sm font-bold text-base-content group-hover:text-[var(--accent-blue)] transition-colors mb-1'>
               Plataformas Web
             </h3>
-            <p class="text-base-content/50 text-xs leading-relaxed group-hover:text-base-content/70 transition-colors">
+            <p
+              class='text-base-content/50 text-xs leading-relaxed group-hover:text-base-content/70 transition-colors'>
               Desarrollo web escalable enfocado en mejores prácticas.
             </p>
           </div>
         </div>
-        <div class="dashboard-panel rounded-lg p-5 flex items-start space-x-4 hover:border-base-content hover:bg-base-200/50 transition-all duration-300 group cursor-default">
-          <div class="flex-shrink-0 mt-1 p-2 bg-base-200 rounded border border-base-content/20 text-base-content/70 group-hover:bg-base-content group-hover:text-base-100 group-hover:border-base-content transition-colors">
-            <span class="material-symbols-outlined text-xl">groups</span>
+        <div
+          class='dashboard-panel rounded-lg p-5 flex items-start space-x-4 hover:border-base-content hover:bg-base-200/50 transition-all duration-300 group cursor-default'>
+          <div
+            class='flex-shrink-0 mt-1 p-2 bg-base-200 rounded border border-base-content/20 text-base-content/70 group-hover:bg-base-content group-hover:text-base-100 group-hover:border-base-content transition-colors'>
+            <span class='material-symbols-outlined text-xl'>groups</span>
           </div>
-          <div class="flex flex-col">
-            <h3 class="mono text-sm font-bold text-base-content group-hover:text-base-content transition-colors mb-1">
+          <div class='flex flex-col'>
+            <h3
+              class='mono text-sm font-bold text-base-content group-hover:text-base-content transition-colors mb-1'>
               Liderazgo Tecnológico
             </h3>
-            <p class="text-base-content/50 text-xs leading-relaxed group-hover:text-base-content/70 transition-colors">
+            <p
+              class='text-base-content/50 text-xs leading-relaxed group-hover:text-base-content/70 transition-colors'>
               Guiar equipos multifuncionales enfocados en mejores prácticas.
             </p>
           </div>
@@ -193,31 +246,35 @@ const imagePhoto = generateImgxUrl('/images/portrait-toon-gemini.png', 350, 450,
   </div>
 
   <!-- Latest Publications Section -->
-  <section class="w-full bg-base-300/30 border-t border-base-content/20 py-20 overflow-hidden">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 space-y-8">
-      <div class="flex items-center space-x-4">
-        <h2 class="mono text-lg font-bold text-base-content">
+  <section
+    class='w-full bg-base-300/30 border-t border-base-content/20 py-20 overflow-hidden'>
+    <div class='max-w-7xl mx-auto px-4 sm:px-6 space-y-8'>
+      <div class='flex flex-wrap items-center gap-4'>
+        <h2 class='mono text-lg font-bold text-base-content'>
           LATEST_PUBLICATIONS
         </h2>
-        <div class="h-[1px] flex-grow bg-base-content/20"></div>
-        <a href="/archivo" class="text-xs mono text-base-content/70 hover:text-base-content transition-colors">
-          VIEW_ARCHIVE
-        </a>
-        <span>|</span>
-        <a href="/posts/page/2" class="text-xs mono text-base-content/70 hover:text-base-content transition-colors">
-          VIEW_RECENT_POSTS
-        </a>
+        <div class='hidden sm:block h-[1px] flex-grow bg-base-content/20'></div>
+        <div class='flex items-center gap-2 text-xs mono text-base-content/70'>
+          <a href='/archivo' class='hover:text-base-content transition-colors'>
+            VIEW_ARCHIVE
+          </a>
+          <span>|</span>
+          <a
+            href='/posts/page/2'
+            class='hover:text-base-content transition-colors'>
+            VIEW_RECENT_POSTS
+          </a>
+        </div>
       </div>
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
-        {latestPosts.map((post) => (
-          <PostCard post={post} lazyLoad={true} />
-        ))}
+      <div
+        class='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6'>
+        {latestPosts.map((post) => <PostCard post={post} lazyLoad={true} />)}
       </div>
     </div>
   </section>
 
   <!-- Structured Data -->
-  <StructuredData type="organization" />
-  <StructuredData type="person" />
-  <StructuredData type="website" />
+  <StructuredData type='organization' />
+  <StructuredData type='person' />
+  <StructuredData type='website' />
 </BlogLayout>
