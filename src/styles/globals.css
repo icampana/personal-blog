@@ -56,15 +56,36 @@ h1, h2, h3, h4, .mono {
   position: absolute;
   top: 0;
   left: 0;
-  width: 2px;
+  width: 4px;
   height: 100%;
   background: var(--accent-neon);
   opacity: 0;
   transition: opacity 0.3s;
+  box-shadow: 2px 0 8px color-mix(in srgb, var(--accent-neon), transparent 70%);
+  z-index: 10;
 }
 
 .dashboard-panel:hover::before {
   opacity: 1;
+}
+
+/* Light themes - also change border color on hover for extra visibility */
+.dashboard-panel:hover {
+  border-color: color-mix(in srgb, var(--accent-neon), oklch(from var(--bg-panel) calc(l - 0.1) c h) 50%);
+}
+
+/* Dark themes - override to use thinner line without glow */
+[data-theme="night"] .dashboard-panel::before,
+[data-theme="cyberpunk"] .dashboard-panel::before,
+[data-theme="black"] .dashboard-panel::before {
+  width: 2px;
+  box-shadow: none;
+}
+
+[data-theme="night"] .dashboard-panel:hover,
+[data-theme="cyberpunk"] .dashboard-panel:hover,
+[data-theme="black"] .dashboard-panel:hover {
+  border-color: var(--border-panel);
 }
 
 .neon-text {
