@@ -22,8 +22,8 @@ const imagePhoto = generateImgxUrl('/images/portrait-toon-gemini.png', 350, 450,
     {/* Hero Section */}
     <section class="grid grid-cols-1 lg:grid-cols-12 gap-6 overflow-hidden">
       <div class="lg:col-span-8 dashboard-panel rounded-xl overflow-hidden flex flex-col md:flex-row">
-        <div class="w-full md:w-5/12 h-56 md:h-auto overflow-hidden flex-shrink-0">
-          <div class="aspect-[7/9] w-full h-full">
+        <div class="w-full md:w-5/12 overflow-hidden flex-shrink-0">
+          <div class="aspect-video md:aspect-[7/9] w-full h-full md:h-auto">
             <Image
               src={imagePhoto}
               alt="Iván Gabriel"
@@ -64,25 +64,7 @@ const imagePhoto = generateImgxUrl('/images/portrait-toon-gemini.png', 350, 450,
         </div>
       </div>
       <div class="lg:col-span-4 grid grid-cols-1 gap-6">
-        <div class="dashboard-panel rounded-xl p-6 flex flex-col justify-center items-center text-center">
-          <span class="mono text-4xl font-bold neon-text mb-1">20+</span>
-          <span class="text-xs uppercase tracking-widest text-base-content/50 font-semibold">
-            Years Experience
-          </span>
-        </div>
-        <div class="dashboard-panel rounded-xl p-6 flex flex-col justify-center items-center text-center">
-          <span class="mono text-4xl font-bold text-[var(--accent-blue)] mb-1">30+</span>
-          <span class="text-xs uppercase tracking-widest text-base-content/50 font-semibold">
-            Projects Led
-          </span>
-        </div>
-        <div class="dashboard-panel rounded-xl p-6 flex flex-col justify-center items-center text-center">
-          <span class="mono text-4xl font-bold text-base-content mb-1">10+</span>
-          <span class="text-xs uppercase tracking-widest text-base-content/50 font-semibold">
-            Startups Advised
-          </span>
-        </div>
-        <div class="dashboard-panel rounded-xl p-6 flex flex-col justify-center items-center text-center">
+                <div class="dashboard-panel rounded-xl p-6 flex flex-col justify-center items-center text-center">
           <span class="text-xs uppercase tracking-widest text-base-content/50 font-semibold">
             <a
               href="https://twitter.com/icampana"
@@ -135,6 +117,24 @@ const imagePhoto = generateImgxUrl('/images/portrait-toon-gemini.png', 350, 450,
                 <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.568 8.16l-6.56 3.79c-.307.178-.566.033-.566-.32V8.914c0-.353.259-.498.566-.32l6.56 3.79c.307.178.566.033.566.32V11.63c0 .353-.259.498-.566.32z"/>
               </svg>
             </a>
+          </span>
+        </div>
+        <div class="dashboard-panel rounded-xl p-6 flex flex-col justify-center items-center text-center">
+          <span class="mono text-4xl font-bold neon-text mb-1">20+</span>
+          <span class="text-xs uppercase tracking-widest text-base-content/50 font-semibold">
+            Years Experience
+          </span>
+        </div>
+        <div class="dashboard-panel rounded-xl p-6 flex flex-col justify-center items-center text-center">
+          <span class="mono text-4xl font-bold text-amber-600 mb-1">30+</span>
+          <span class="text-xs uppercase tracking-widest text-base-content/50 font-semibold">
+            Projects Led
+          </span>
+        </div>
+        <div class="dashboard-panel rounded-xl p-6 flex flex-col justify-center items-center text-center">
+          <span class="mono text-4xl font-bold text-violet-600 mb-1">10+</span>
+          <span class="text-xs uppercase tracking-widest text-base-content/50 font-semibold">
+            Startups Advised
           </span>
         </div>
       </div>
