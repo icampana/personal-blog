@@ -49,7 +49,7 @@ const SearchComponent: React.FC = () => {
           <button
             type="button"
             data-testid="search-icon"
-            className="material-symbols-outlined text-zinc-400 cursor-pointer hover:text-white"
+            className="material-symbols-outlined text-base-content/70 cursor-pointer hover:text-base-content"
             onClick={handleToggle}
             title="Buscar"
           >
@@ -68,7 +68,7 @@ const SearchComponent: React.FC = () => {
               onChange={(e) => setSearchQuery(e.target.value)}
               onKeyDown={handleKeyDown}
               placeholder="Buscar..."
-              className="bg-[#111114] border border-[#1e1e24] text-white px-3 py-2 rounded-lg w-full lg:w-48 focus:outline-none focus:ring-1 focus:ring-[var(--accent-neon)]"
+              className="bg-base-200 border border-base-content/20 text-base-content px-3 py-2 rounded-lg w-full lg:w-48 focus:outline-none focus:ring-1 focus:ring-[var(--accent-neon)]"
             />
 
             {searchQuery && (
@@ -80,7 +80,7 @@ const SearchComponent: React.FC = () => {
                     controlRef.current.focus();
                   }
                 }}
-                className="absolute right-8 top-1/2 transform -translate-y-1/2 text-zinc-400 hover:text-white"
+                className="absolute right-8 top-1/2 transform -translate-y-1/2 text-base-content/70 hover:text-base-content"
                 title="Limpiar búsqueda"
               >
                 ×
@@ -89,7 +89,7 @@ const SearchComponent: React.FC = () => {
 
             <button
               type="submit"
-              className="absolute right-2 top-1/2 transform -translate-y-1/2 text-zinc-400 hover:text-white"
+              className="absolute right-2 top-1/2 transform -translate-y-1/2 text-base-content/70 hover:text-base-content"
               title="Buscar"
             >
               <svg

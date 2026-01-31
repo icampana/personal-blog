@@ -58,13 +58,15 @@ const ThemeToggle: React.FC = () => {
   // Don't render until mounted to avoid hydration mismatch
   if (!mounted) {
     return (
-      <span className="material-symbols-outlined text-zinc-400">dark_mode</span>
+      <span className="material-symbols-outlined text-base-content/70">
+        dark_mode
+      </span>
     );
   }
 
   return (
     <span
-      className="material-symbols-outlined text-zinc-400 cursor-pointer hover:text-white transition-colors"
+      className="material-symbols-outlined text-base-content/70 cursor-pointer hover:text-base-content transition-colors"
       onClick={toggleTheme}
       aria-label={isDark ? 'Cambiar a tema claro' : 'Cambiar a tema oscuro'}
     >

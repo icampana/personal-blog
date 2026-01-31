@@ -57,7 +57,7 @@ const ShareButtons: React.FC<ShareButtonsProps> = ({
 
   return (
     <div className="flex flex-wrap items-center gap-3">
-      <span className="mono text-xs font-medium text-zinc-400 uppercase tracking-wider mr-2">
+      <span className="mono text-xs font-medium text-base-content/70 uppercase tracking-wider mr-2">
         SHARE_
       </span>
 
@@ -65,7 +65,7 @@ const ShareButtons: React.FC<ShareButtonsProps> = ({
       {canShare && (
         <button
           onClick={handleNativeShare}
-          className="material-symbols-outlined text-zinc-400 hover:text-[var(--accent-neon)] cursor-pointer transition-colors text-lg"
+          className="material-symbols-outlined text-base-content/70 hover:text-[var(--accent-neon)] cursor-pointer transition-colors text-lg"
           title="Share"
         >
           share
@@ -77,7 +77,7 @@ const ShareButtons: React.FC<ShareButtonsProps> = ({
         href={shareUrls.twitter}
         target="_blank"
         rel="noopener noreferrer"
-        className="material-symbols-outlined text-zinc-400 hover:text-[var(--accent-neon)] cursor-pointer transition-colors text-lg"
+        className="material-symbols-outlined text-base-content/70 hover:text-[var(--accent-neon)] cursor-pointer transition-colors text-lg"
         title="Share on Twitter"
       >
         share
@@ -88,7 +88,7 @@ const ShareButtons: React.FC<ShareButtonsProps> = ({
         href={shareUrls.facebook}
         target="_blank"
         rel="noopener noreferrer"
-        className="material-symbols-outlined text-zinc-400 hover:text-[var(--accent-neon)] cursor-pointer transition-colors text-lg"
+        className="material-symbols-outlined text-base-content/70 hover:text-[var(--accent-neon)] cursor-pointer transition-colors text-lg"
         title="Share on Facebook"
       >
         share
@@ -99,7 +99,7 @@ const ShareButtons: React.FC<ShareButtonsProps> = ({
         href={shareUrls.linkedin}
         target="_blank"
         rel="noopener noreferrer"
-        className="material-symbols-outlined text-zinc-400 hover:text-[var(--accent-neon)] cursor-pointer transition-colors text-lg"
+        className="material-symbols-outlined text-base-content/70 hover:text-[var(--accent-neon)] cursor-pointer transition-colors text-lg"
         title="Share on LinkedIn"
       >
         work
@@ -110,7 +110,7 @@ const ShareButtons: React.FC<ShareButtonsProps> = ({
         href={shareUrls.whatsapp}
         target="_blank"
         rel="noopener noreferrer"
-        className="material-symbols-outlined text-zinc-400 hover:text-[var(--accent-neon)] cursor-pointer transition-colors text-lg"
+        className="material-symbols-outlined text-base-content/70 hover:text-[var(--accent-neon)] cursor-pointer transition-colors text-lg"
         title="Share on WhatsApp"
       >
         chat
@@ -119,7 +119,7 @@ const ShareButtons: React.FC<ShareButtonsProps> = ({
       {/* Copy link */}
       <button
         onClick={copyToClipboard}
-        className="material-symbols-outlined text-zinc-400 hover:text-[var(--accent-neon)] cursor-pointer transition-colors text-lg"
+        className="material-symbols-outlined text-base-content/70 hover:text-[var(--accent-neon)] cursor-pointer transition-colors text-lg"
         title={copied ? 'Link copied!' : 'Copy link'}
       >
         {copied ? 'check_circle' : 'content_copy'}
