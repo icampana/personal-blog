@@ -19,21 +19,16 @@ export default defineConfig({
   site: 'https://ivan.campananaranjo.com',
   output: 'static',
   image: {
-    domains: ['igcn-ws.imgix.net'],
-    remotePatterns: [
-      {
-        protocol: 'https',
-        hostname: 'igcn-ws.imgix.net',
-        port: '',
-        pathname: '/**',
-      },
-    ],
+    // Don't configure imgix here - we want to pass imgix URLs through without build-time validation
+    // This allows using imgix URLs that may not exist yet during the build
   },
   integrations: [react(), sitemap(), mdx()],
   build: {
     inlineStylesheets: 'auto',
   },
   vite: {
+    // @ts-ignore - Temporary Vite version mismatch: @tailwindcss/vite uses Vite 6.x types,
+    // but Astro 5.x requires Vite 7.x. This will be resolved when Tailwind updates to Vite 7.x.
     plugins: [tailwindcss()],
     build: {
       rollupOptions: {
