@@ -5,18 +5,27 @@
 }
 
 :root {
+  --bg-main: var(--p);  /* Use DaisyUI's primary base color */
+  --bg-panel: #f3f4f6;  /* Light panel by default */
+  --border-panel: #e5e5eb;
+  --accent-neon: #10b981;
+  --accent-blue: #00d4ff;
+  --text-muted: #8e8e93;
+}
+
+/* Dark theme default for variables */
+[data-theme="night"],
+[data-theme="cyberpunk"],
+[data-theme="black"] {
   --bg-main: #0a0a0c;
   --bg-panel: #111114;
   --border-panel: #1e1e24;
   --accent-neon: #00ff9d;
-  --accent-blue: #00d4ff;
   --text-muted: #8e8e93;
 }
 
 body {
   font-family: 'Inter', sans-serif;
-  background-color: var(--bg-main);
-  color: #e4e4e7;
 }
 
 h1, h2, h3, h4, .mono {
@@ -90,40 +99,47 @@ h1, h2, h3, h4, .mono {
 }
 
 /* Grid background - only in dark mode */
-[data-theme="night"] body,
-[data-theme="cyberpunk"] body,
-[data-theme="black"] body {
+[data-theme="night"] body.grid-bg,
+[data-theme="cyberpunk"] body.grid-bg,
+[data-theme="black"] body.grid-bg {
   background-image: radial-gradient(circle at 1px 1px, #1e1e24 1px, transparent 0);
   background-size: 40px 40px;
 }
 
-[data-theme="winter"] body,
-[data-theme="cupcake"] body,
-[data-theme="bumblebee"] body,
-[data-theme="emerald"] body,
-[data-theme="corporate"] body,
-[data-theme="synthwave"] body,
-[data-theme="retro"] body,
-[data-theme="valentine"] body,
-[data-theme="halloween"] body,
-[data-theme="garden"] body,
-[data-theme="forest"] body,
-[data-theme="aqua"] body,
-[data-theme="lofi"] body,
-[data-theme="pastel"] body,
-[data-theme="fantasy"] body,
-[data-theme="wireframe"] body,
-[data-theme="luxury"] body,
-[data-theme="dracula"] body,
-[data-theme="cmyk"] body,
-[data-theme="autumn"] body,
-[data-theme="business"] body,
-[data-theme="acid"] body,
-[data-theme="lemonade"] body {
+[data-theme="winter"] body.grid-bg,
+[data-theme="cupcake"] body.grid-bg,
+[data-theme="bumblebee"] body.grid-bg,
+[data-theme="emerald"] body.grid-bg,
+[data-theme="corporate"] body.grid-bg,
+[data-theme="synthwave"] body.grid-bg,
+[data-theme="retro"] body.grid-bg,
+[data-theme="valentine"] body.grid-bg,
+[data-theme="halloween"] body.grid-bg,
+[data-theme="garden"] body.grid-bg,
+[data-theme="forest"] body.grid-bg,
+[data-theme="aqua"] body.grid-bg,
+[data-theme="lofi"] body.grid-bg,
+[data-theme="pastel"] body.grid-bg,
+[data-theme="fantasy"] body.grid-bg,
+[data-theme="wireframe"] body.grid-bg,
+[data-theme="luxury"] body.grid-bg,
+[data-theme="dracula"] body.grid-bg,
+[data-theme="cmyk"] body.grid-bg,
+[data-theme="autumn"] body.grid-bg,
+[data-theme="business"] body.grid-bg,
+[data-theme="acid"] body.grid-bg,
+[data-theme="lemonade"] body.grid-bg,
+[data-theme="coffee"] body.grid-bg {
   background-image: none;
 }
 
 .grid-bg {
+  /* Default: no grid for light themes, grid for dark themes */
+}
+
+[data-theme="night"] .grid-bg,
+[data-theme="cyberpunk"] .grid-bg,
+[data-theme="black"] .grid-bg {
   background-image: radial-gradient(circle at 1px 1px, #1e1e24 1px, transparent 0);
   background-size: 40px 40px;
 }
