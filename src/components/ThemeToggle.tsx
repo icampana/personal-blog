@@ -29,7 +29,7 @@ const ThemeToggle: React.FC = () => {
     const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
     const handleChange = (e: MediaQueryListEvent) => {
       if (!localStorage.getItem('theme')) {
-        const newTheme = e.matches ? 'night' : 'winter';
+        const newTheme = e.matches ? 'night' : 'autumn';
         setIsDark(e.matches);
         document.documentElement.setAttribute('data-theme', newTheme);
       }
