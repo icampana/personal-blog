@@ -25,8 +25,8 @@ const summary = description || post.body.slice(0, 200) + '...';
 
   <div
     class='dashboard-panel flex flex-col rounded-xl overflow-hidden hover:scale-[1.02] transition-transform duration-300 border border-[var(--border-panel)] bg-[var(--bg-panel)] w-full'>
-  <figure class='overflow-hidden w-full'>
-    <a href={postUrl} class='block aspect-video w-full' aria-label={`Leer el post: ${title}`}>
+   <figure class='overflow-hidden w-full'>
+    <a href={postUrl} class='block aspect-[2/1] md:aspect-video w-full' aria-label={`Leer el post: ${title}`}>
       <Image
         src={imagePath.startsWith('http') || imagePath.startsWith('//')
           ? imagePath
