@@ -11,16 +11,16 @@ const ThemeToggle: React.FC = () => {
 
     // Get initial theme from localStorage or system preference
     const savedTheme = localStorage.getItem('theme');
-    const systemPrefersDark = window.matchMedia(
-      '(prefers-color-scheme: dark)',
+    const systemPrefersLight = window.matchMedia(
+      '(prefers-color-scheme: light)',
     ).matches;
 
-    let initialTheme: string = themeConfig.dark; // default dark theme
+    let initialTheme: string = themeConfig.dark; // default to dark
 
     if (savedTheme) {
       initialTheme = savedTheme;
-    } else if (systemPrefersDark) {
-      initialTheme = themeConfig.dark;
+    } else if (systemPrefersLight) {
+      initialTheme = themeConfig.light;
     }
 
     setIsDark(initialTheme === themeConfig.dark);

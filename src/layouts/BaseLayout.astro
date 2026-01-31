@@ -34,21 +34,32 @@ const {
 ---
 
 <!doctype html>
-<html lang="es">
+<html lang='es'>
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="generator" content={Astro.generator} />
+    <meta charset='UTF-8' />
+    <meta name='viewport' content='width=device-width, initial-scale=1.0' />
+    <link rel='icon' type='image/svg+xml' href='/favicon.svg' />
+    <meta name='generator' content={Astro.generator} />
 
     <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
-    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+    <link rel='preconnect' href='https://fonts.googleapis.com' />
+    <link rel='preconnect' href='https://fonts.gstatic.com' crossorigin />
+    <link
+      href='https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Inter:wght@300;400;500;600;700&display=swap'
+      rel='stylesheet'
+    />
+    <link
+      href='https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap'
+      rel='stylesheet'
+    />
 
     <!-- RSS Feed -->
-    <link rel="alternate" type="application/rss+xml" title="Iván Gabriel - Blog RSS Feed" href="/rss.xml" />
+    <link
+      rel='alternate'
+      type='application/rss+xml'
+      title='Iván Gabriel - Blog RSS Feed'
+      href='/rss.xml'
+    />
 
     <!-- SEO Component -->
     <SEO
@@ -66,12 +77,30 @@ const {
     />
 
     <!-- Google Site Verification -->
-    <meta name="google-site-verification" content="b5jnO_8lDhyKJ6m0nMqj0ZD0DMuvGkgBA0JSwUTcTf8" />
+    <meta
+      name='google-site-verification'
+      content='b5jnO_8lDhyKJ6m0nMqj0ZD0DMuvGkgBA0JSwUTcTf8'
+    />
 
     <!-- View Transitions -->
     <ViewTransitions />
+
+    <script is:inline>
+      // Initialize theme - avoid flash of wrong theme
+      const savedTheme = localStorage.getItem('theme');
+      if (savedTheme) {
+        document.documentElement.setAttribute('data-theme', savedTheme);
+      } else {
+        // Default to dark, but respect system light preference if explicit
+        const prefersLight = window.matchMedia(
+          '(prefers-color-scheme: light)',
+        ).matches;
+        const theme = prefersLight ? 'fantasy' : 'night';
+        document.documentElement.setAttribute('data-theme', theme);
+      }
+    </script>
   </head>
-  <body class="grid-bg min-h-screen flex flex-col">
+  <body class='grid-bg min-h-screen flex flex-col'>
     <slot />
 
     <!-- GDPR Consent Banner -->
