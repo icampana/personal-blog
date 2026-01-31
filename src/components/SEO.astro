@@ -38,7 +38,7 @@ const {
 } = Astro.props;
 
 const siteUrl = 'https://ivan.campananaranjo.com';
-const fullTitle = title === 'Iván Gabriel' ? title : `${title} | Iván Gabriel`;
+const fullTitle = title.includes('Iván Gabriel') ? title : `${title} | Iván Gabriel`;
 
 // Helper function to determine image MIME type from file extension
 function getImageMimeType(imagePath: string): string {
