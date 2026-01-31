@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useTina } from 'tinacms/dist/react';
 import { formatDate } from '../utils/client';
-import '../styles/globals.css';
 
 interface TinaPreviewProps {
   query: string;
