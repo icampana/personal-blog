@@ -5,7 +5,7 @@
 
 export const themeConfig = {
   /** Light theme name (default) */
-  light: 'autumn',
+  light: 'fantasy',
   /** Dark theme name */
   dark: 'night',
 } as const;
