@@ -53,7 +53,7 @@ const SearchComponent: React.FC = () => {
             onClick={handleToggle}
             title="Buscar"
           >
-            terminal
+            search
           </button>
         </span>
       )}
