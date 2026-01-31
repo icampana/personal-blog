@@ -18,19 +18,21 @@ const imagePhoto = generateImgxUrl('/images/portrait-toon-gemini.png', 350, 450,
 ---
 
 <BlogLayout title={title} description={description}>
-  <div class="space-y-10 flex-grow">
+  <div class="space-y-10 flex-grow overflow-hidden">
     {/* Hero Section */}
-    <section class="grid grid-cols-1 lg:grid-cols-12 gap-6">
+    <section class="grid grid-cols-1 lg:grid-cols-12 gap-6 overflow-hidden">
       <div class="lg:col-span-8 dashboard-panel rounded-xl overflow-hidden flex flex-col md:flex-row">
-        <div class="w-full md:w-5/12 h-64 md:h-auto overflow-hidden">
-          <Image
-            src={imagePhoto}
-            alt="Iván Gabriel"
-            class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-500"
-            loading="eager"
-            width="350"
-            height="450"
-          />
+        <div class="w-full md:w-5/12 h-56 md:h-auto overflow-hidden flex-shrink-0">
+          <div class="aspect-[7/9] w-full h-full">
+            <Image
+              src={imagePhoto}
+              alt="Iván Gabriel"
+              class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-500"
+              loading="eager"
+              width="350"
+              height="450"
+            />
+          </div>
         </div>
         <div class="w-full md:w-7/12 p-8 flex flex-col justify-between">
           <div>
@@ -191,8 +193,8 @@ const imagePhoto = generateImgxUrl('/images/portrait-toon-gemini.png', 350, 450,
   </div>
 
   <!-- Latest Publications Section -->
-  <section class="w-full bg-base-300/30 border-t border-base-content/20 py-20">
-    <div class="max-w-7xl mx-auto px-6 space-y-8">
+  <section class="w-full bg-base-300/30 border-t border-base-content/20 py-20 overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 space-y-8">
       <div class="flex items-center space-x-4">
         <h2 class="mono text-lg font-bold text-base-content">
           LATEST_PUBLICATIONS
@@ -206,7 +208,7 @@ const imagePhoto = generateImgxUrl('/images/portrait-toon-gemini.png', 350, 450,
           VIEW_RECENT_POSTS
         </a>
       </div>
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
         {latestPosts.map((post) => (
           <PostCard post={post} lazyLoad={true} />
         ))}

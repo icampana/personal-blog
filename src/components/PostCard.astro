@@ -24,15 +24,15 @@ const summary = description || post.body.slice(0, 200) + '...';
 ---
 
   <div
-    class='dashboard-panel flex flex-col rounded-xl overflow-hidden hover:scale-[1.02] transition-transform duration-300 border border-[var(--border-panel)] bg-[var(--bg-panel)]'>
-  <figure>
-    <a href={postUrl} class='block' aria-label={`Leer el post: ${title}`}>
+    class='dashboard-panel flex flex-col rounded-xl overflow-hidden hover:scale-[1.02] transition-transform duration-300 border border-[var(--border-panel)] bg-[var(--bg-panel)] w-full'>
+  <figure class='overflow-hidden w-full'>
+    <a href={postUrl} class='block aspect-video w-full' aria-label={`Leer el post: ${title}`}>
       <Image
         src={imagePath.startsWith('http') || imagePath.startsWith('//')
           ? imagePath
           : generateImgxUrl(imagePath, 400, 225)}
         alt={title}
-        class='w-full object-cover'
+        class='w-full h-full object-cover'
         loading={lazyLoad ? 'lazy' : 'eager'}
         width='400'
         height='225'
