@@ -1,5 +1,6 @@
 import type React from 'react';
 import { useEffect, useState } from 'react';
+import { themeConfig } from '../config/theme';
 
 const ThemeToggle: React.FC = () => {
   const [isDark, setIsDark] = useState(false);
@@ -14,22 +15,22 @@ const ThemeToggle: React.FC = () => {
       '(prefers-color-scheme: dark)',
     ).matches;
 
-    let initialTheme = 'night'; // default dark theme
+    let initialTheme: string = themeConfig.dark; // default dark theme
 
     if (savedTheme) {
       initialTheme = savedTheme;
     } else if (systemPrefersDark) {
-      initialTheme = 'night';
+      initialTheme = themeConfig.dark;
     }
 
-    setIsDark(initialTheme === 'night');
+    setIsDark(initialTheme === themeConfig.dark);
     document.documentElement.setAttribute('data-theme', initialTheme);
 
     // Listen for system theme changes
     const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
     const handleChange = (e: MediaQueryListEvent) => {
       if (!localStorage.getItem('theme')) {
-        const newTheme = e.matches ? 'night' : 'autumn';
+        const newTheme = e.matches ? themeConfig.dark : themeConfig.light;
         setIsDark(e.matches);
         document.documentElement.setAttribute('data-theme', newTheme);
       }
@@ -40,7 +41,7 @@ const ThemeToggle: React.FC = () => {
   }, []);
 
   const toggleTheme = () => {
-    const newTheme = isDark ? 'winter' : 'night';
+    const newTheme = isDark ? themeConfig.light : themeConfig.dark;
     const newIsDark = !isDark;
 
     setIsDark(newIsDark);
