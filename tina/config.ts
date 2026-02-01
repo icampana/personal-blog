@@ -95,6 +95,55 @@ const config: any = {
           ...projectFields(),
         ],
       },
+      {
+        format: 'md',
+        label: 'Videos',
+        name: 'videos',
+        path: 'src/content/videos',
+        match: {
+          include: '**/*',
+        },
+        fields: [
+          {
+            type: 'string',
+            name: 'title',
+            label: 'Title',
+            isTitle: true,
+            required: true,
+          },
+          {
+            type: 'string',
+            name: 'videoId',
+            label: 'YouTube Video ID',
+            required: true,
+          },
+          {
+            type: 'datetime',
+            name: 'date',
+            label: 'Date',
+            required: true,
+          },
+          {
+            type: 'string',
+            name: 'description',
+            label: 'Description',
+            ui: {
+              component: 'textarea',
+            },
+          },
+          {
+            type: 'boolean',
+            name: 'featured',
+            label: 'Featured',
+          },
+          {
+            type: 'rich-text',
+            name: 'body',
+            label: 'Body',
+            isBody: true,
+          },
+        ],
+      },
     ],
   },
 };

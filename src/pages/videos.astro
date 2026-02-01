@@ -1,0 +1,49 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { getCollection } from 'astro:content';
+import VideoCard from '../components/VideoCard.astro';
+
+const videos = (await getCollection('videos')).sort(
+    (a, b) => b.data.date.valueOf() - a.data.date.valueOf(),
+);
+
+const title = 'Mis Videos';
+const description =
+    'Una lista curada de mis videos de YouTube sobre desarrollo, tecnología y más.';
+---
+
+<BaseLayout title={title} description={description}>
+    <div class='max-w-7xl mx-auto px-6 py-12'>
+        <header class='mb-12 text-center'>
+            <h1
+                class='text-4xl font-bold tracking-tight text-base-content md:text-5xl mb-4'>
+                {title}
+            </h1>
+            <p class='text-xl text-base-content/80 max-w-2xl mx-auto'>
+                {description}
+            </p>
+        </header>
+
+        {
+            videos.length > 0 ? (
+                <div class='grid gap-8 sm:grid-cols-2 lg:grid-cols-3'>
+                    {videos.map((video) => (
+                        <VideoCard
+                            title={video.data.title}
+                            videoId={video.data.videoId}
+                            date={video.data.date}
+                            description={video.data.description}
+                            featured={video.data.featured}
+                        />
+                    ))}
+                </div>
+            ) : (
+                <div class='text-center py-12'>
+                    <p class='text-lg text-base-content/60'>
+                        No hay videos publicados aún. ¡Pronto más contenido!
+                    </p>
+                </div>
+            )
+        }
+    </div>
+</BaseLayout>

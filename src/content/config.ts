@@ -47,8 +47,21 @@ const projects = defineCollection({
   }),
 });
 
+const videos = defineCollection({
+  type: 'content',
+  schema: z.object({
+    title: z.string(),
+    description: z.string().optional(),
+    date: z.coerce.date(),
+    videoId: z.string(),
+    tags: z.array(z.string()).optional(),
+    featured: z.boolean().optional(),
+  }),
+});
+
 export const collections = {
   posts,
   pages,
   projects,
+  videos,
 };
