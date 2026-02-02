@@ -1,7 +1,7 @@
 ---
-import BaseLayout from '../layouts/BaseLayout.astro';
 import { getCollection } from 'astro:content';
 import VideoCard from '../components/VideoCard.astro';
+import BlogLayout from '../layouts/BlogLayout.astro';
 
 const videos = (await getCollection('videos')).sort(
     (a, b) => b.data.date.valueOf() - a.data.date.valueOf(),
@@ -12,7 +12,7 @@ const description =
     'Una lista curada de mis videos de YouTube sobre desarrollo, tecnología y más.';
 ---
 
-<BaseLayout title={title} description={description}>
+<BlogLayout title={title} description={description}>
     <div class='max-w-7xl mx-auto px-6 py-12'>
         <header class='mb-12 text-center'>
             <h1
@@ -46,4 +46,4 @@ const description =
             )
         }
     </div>
-</BaseLayout>
+</BlogLayout>
