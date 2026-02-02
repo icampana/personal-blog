@@ -6,10 +6,17 @@ import BlogLayout from '../layouts/BlogLayout.astro';
 import { sortPostsByDate } from '../utils/client';
 import { generateImgxUrl } from '../utils/imgxUtils';
 import { Image } from 'astro:assets';
+import VideoCard from '../components/VideoCard.astro';
 
 // Get all posts for latest publications
 const allPosts = await getCollection('posts');
 const latestPosts = sortPostsByDate(allPosts).slice(0, 3);
+
+// Get latest videos
+const allVideos = await getCollection('videos');
+const latestVideos = allVideos
+  .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf())
+  .slice(0, 3);
 
 const title = 'Iván Gabriel | Portfolio & Blog';
 const description =
@@ -269,6 +276,36 @@ const imagePhoto = generateImgxUrl(
       <div
         class='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6'>
         {latestPosts.map((post) => <PostCard post={post} lazyLoad={true} />)}
+      </div>
+    </div>
+  </section>
+
+  <!-- Latest Videos Section -->
+  <section
+    class='w-full bg-base-200/30 border-t border-base-content/20 py-20 overflow-hidden'>
+    <div class='max-w-7xl mx-auto px-4 sm:px-6 space-y-8'>
+      <div class='flex flex-wrap items-center gap-4'>
+        <h2 class='mono text-lg font-bold text-base-content'>LATEST_VIDEOS</h2>
+        <div class='hidden sm:block h-[1px] flex-grow bg-base-content/20'></div>
+        <div class='flex items-center gap-2 text-xs mono text-base-content/70'>
+          <a href='/videos' class='hover:text-base-content transition-colors'>
+            VIEW_ALL_VIDEOS
+          </a>
+        </div>
+      </div>
+      <div
+        class='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6'>
+        {
+          latestVideos.map((video) => (
+            <VideoCard
+              title={video.data.title}
+              videoId={video.data.videoId}
+              date={video.data.date}
+              description={video.data.description}
+              featured={video.data.featured}
+            />
+          ))
+        }
       </div>
     </div>
   </section>
