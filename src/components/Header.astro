@@ -5,25 +5,59 @@ import ThemeToggle from './ThemeToggle';
 import LanguageSwitcher from './LanguageSwitcher';
 import MobileMenu from './MobileMenu';
 import type { Locale } from '../utils/i18n';
+import { getPageUrl } from '../utils/client';
+import { getLanguageFromFilename, getCleanSlug, LOCALES } from '../utils/i18n';
 
 interface Props {
   translations?: Partial<Record<Locale, string>>;
+  locale?: Locale;
 }
 
-const { translations } = Astro.props;
+const { translations, locale = 'es' } = Astro.props;
 
 // Get all pages for navigation
 const pages = await getCollection('pages');
 
+// Group pages by their clean slug (e.g., "about-me")
+const pageGroups = new Map<string, typeof pages>();
+for (const page of pages) {
+  const cleanSlug = getCleanSlug(page.slug);
+  if (!pageGroups.has(cleanSlug)) {
+    pageGroups.set(cleanSlug, []);
+  }
+  pageGroups.get(cleanSlug)!.push(page);
+}
+
+// Build menu items with best-match strategy
+const navPages: { url: string; title: string }[] = [];
+
+for (const [, group] of pageGroups) {
+  // Sort by priority: current locale > Spanish > other
+  const currentLocalePage = group.find(
+    (p) => getLanguageFromFilename(p.id) === locale
+  );
+  const spanishPage = group.find(
+    (p) => getLanguageFromFilename(p.id) === null || getLanguageFromFilename(p.id) === LOCALES.DEFAULT
+  );
+  
+  // Select the best page for content, but always generate URL for current locale
+  // This enables the fallback banner to work correctly
+  const pageToRender = currentLocalePage || spanishPage || group[0];
+  
+  if (pageToRender) {
+    navPages.push({
+      url: getPageUrl(pageToRender, locale),
+      title: pageToRender.data.title,
+    });
+  }
+}
+
 const menuItems = [
-  { url: '/', title: 'HOME' },
-  { url: '/videos', title: 'VIDEOS' },
-  { url: '/portafolio', title: 'PORTFOLIO' },
-  { url: '/archivo', title: 'ARCHIVE' },
-  ...pages.map((page) => ({
-    url: page.data.path ? `/content${page.data.path}` : `/content/${page.slug}`,
-    title: page.data.title,
-  })),
+  { url: locale === 'es' ? '/' : `/${locale}`, title: 'HOME' },
+  { url: locale === 'es' ? '/videos' : `/${locale}/videos`, title: 'VIDEOS' },
+  { url: locale === 'es' ? '/portafolio' : `/${locale}/portafolio`, title: 'PORTFOLIO' },
+  { url: locale === 'es' ? '/archivo' : `/${locale}/archivo`, title: 'ARCHIVE' },
+  ...navPages,
 ];
 
 const siteTitle = 'IVÁN GABRIEL';

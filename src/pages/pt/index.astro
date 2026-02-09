@@ -36,9 +36,34 @@ const imagePhoto = generateImgxUrl(
   'auto',
   true,
 );
+
+// Build translations object for Header
+const translations = {
+  es: {
+    'content/sobre-el-autor': 'Sobre Mí',
+    'posts': 'Publicaciones',
+    'portfolio': 'Portafolio',
+    'videos': 'Vídeos',
+    'archive': 'Archivo',
+  },
+  en: {
+    'content/sobre-el-autor': 'About Me',
+    'posts': 'Publications',
+    'portfolio': 'Portfolio',
+    'videos': 'Videos',
+    'archive': 'Archive',
+  },
+  pt: {
+    'content/sobre-el-autor': 'Sobre Mim',
+    'posts': 'Publicações',
+    'portfolio': 'Portfólio',
+    'videos': 'Vídeos',
+    'archive': 'Arquivo',
+  },
+};
 ---
 
-<BlogLayout title={title} description={description} locale="pt">
+<BlogLayout title={title} description={description} locale="pt" translations={translations}>
   <div class="space-y-10 flex-grow overflow-hidden">
     {/* Hero Section */}
     <section class="grid grid-cols-1 lg:grid-cols-12 gap-6 overflow-hidden">
@@ -81,7 +106,7 @@ const imagePhoto = generateImgxUrl(
           </div>
           <div class="flex items-center justify-between">
             <a
-              href="/content/sobre-el-autor"
+              href="/pt/content/sobre-el-autor"
               class="mono text-xs font-bold bg-[var(--accent-neon)] text-black hover:opacity-90 transition-opacity flex items-center px-6 py-3 rounded">
               SAIBA MAIS SOBRE MIM
               <span class="material-symbols-outlined text-sm ml-2"

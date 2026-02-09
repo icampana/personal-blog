@@ -13,6 +13,8 @@ import {
   LOCALES,
   type Locale,
 } from '../utils/i18n';
+import { getPageUrl } from '../utils/client';
+import Header from '../components/Header.astro';
 
 // Detect current locale from URL
 const locale = getLocaleFromPath(Astro.url.pathname);
@@ -23,9 +25,7 @@ const allPosts = await getCollection('posts');
 // Filter posts by current locale
 const localePosts = allPosts.filter((post) => {
   const postLanguage = getLanguageFromFilename(post.id);
-  return locale === LOCALES.DEFAULT
-    ? !postLanguage  // Spanish: no language suffix
-    : postLanguage === locale;  // English/Portuguese: match language suffix
+  return postLanguage === locale || (postLanguage === null && locale === 'es');
 });
 
 const latestPosts = sortPostsByDate(localePosts).slice(0, 3);
@@ -34,9 +34,7 @@ const latestPosts = sortPostsByDate(localePosts).slice(0, 3);
 const allVideos = await getCollection('videos');
 const localeVideos = allVideos.filter((video) => {
   const videoLanguage = getLanguageFromFilename(video.id);
-  return locale === LOCALES.DEFAULT
-    ? !videoLanguage  // Spanish: no language suffix
-    : videoLanguage === locale;  // English/Portuguese: match language suffix
+  return videoLanguage === locale || (videoLanguage === null && locale === 'es');
 });
 
 const latestVideos = localeVideos
@@ -48,9 +46,10 @@ const title = locale === 'en'
   ? 'Iván Gabriel | Portfolio & Blog'
   : locale === 'pt'
   ? 'Iván Gabriel | Portfólio & Blog'
-  : 'Iván Gabriel | Portafolio & Blog';
+  : 'Iván Gabriel | Portfolio & Blog';
 
-const description = 'Emprendedor y desarrollador de tecnología con 20+ años de experiencia liderando proyectos internacionales en medios, fintech y startups.';
+const description = 'Tech entrepreneur and developer with 20+ years of experience leading international projects in media, fintech, and startups.';
+
 const imagePhoto = generateImgxUrl(
   '/images/portrait-toon-gemini.png',
   350,
@@ -59,52 +58,81 @@ const imagePhoto = generateImgxUrl(
   'auto',
   true,
 );
----
 
-<BlogLayout title={title} description={description}>
-  <div class='space-y-10 flex-grow overflow-hidden'>
+
+
+// Build menu items from filtered pages
+const menuItems = [
+  { url: '/', title: 'HOME' },
+  { url: '/videos', title: 'VIDEOS' },
+  { url: '/portafolio', title: 'PORTFOLIO' },
+  { url: '/archivo', title: 'ARCHIVE' },
+  ...allPosts.map((post) => getPageUrl(post)),
+];
+
+// Build translations object for Header
+const translations = {
+  es: {
+    'content/sobre-el-autor': 'Sobre Mí',
+    'posts': 'Publicaciones',
+    'portfolio': 'Portafolio',
+    'videos': 'Vídeos',
+    'archive': 'Archivo',
+  },
+  en: {
+    'content/sobre-el-autor': 'About Me',
+    'posts': 'Publications',
+    'portfolio': 'Portfolio',
+    'videos': 'Videos',
+    'archive': 'Archive',
+  },
+};
+
+---
+<BlogLayout title={title} description={description} locale={locale} translations={translations}>
+  <div class="space-y-10 flex-grow overflow-hidden">
     {/* Hero Section */}
-    <section class='grid grid-cols-1 lg:grid-cols-12 gap-6 overflow-hidden'>
-      <div
-        class='lg:col-span-8 dashboard-panel rounded-xl overflow-hidden flex flex-col md:flex-row'>
-        <div class='w-full md:w-5/12 overflow-hidden flex-shrink-0'>
-          <div class='aspect-video md:aspect-auto w-full h-full'>
+    <section class="grid grid-cols-1 lg:grid-cols-12 gap-6 overflow-hidden">
+      <div class="lg:col-span-8 dashboard-panel rounded-xl overflow-hidden flex flex-col md:flex-row">
+        <div class="w-full md:w-5/12 overflow-hidden flex-shrink-0">
+          <div class="aspect-video md:aspect-auto w-full h-full">
             <Image
               src={imagePhoto}
-              alt='Iván Gabriel'
-              class='w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-500'
-              loading='eager'
-              width='350'
-              height='450'
+              alt="Iván Gabriel"
+              class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-500"
+              loading="eager"
+              width="350"
+              height="450"
             />
           </div>
         </div>
-        <div class='w-full md:w-7/12 p-8 flex flex-col justify-between'>
+        <div class="w-full md:w-7/12 p-8 flex flex-col justify-between">
           <div>
-            <div class='flex items-center space-x-2 mb-4'>
+            <div class="flex items-center space-x-2 mb-4">
               <span
-                class='px-2 py-1 bg-base-200 text-[10px] mono text-[var(--accent-neon)] border border-[var(--accent-neon)]/30 rounded'>
+                class="px-2 py-1 bg-base-200 text-[10px] mono text-[var(--accent-neon)] border border-[var(--accent-neon)]/30 rounded">
                 SYSTEM_ACTIVE
               </span>
-              <span class='text-base-content/50 mono text-[10px]'>V.2.0.24</span
-              >
+              <span class="text-base-content/50 mono text-[10px]">V.2.0.24</span>
             </div>
             <h1
-              class='text-2xl md:text-4xl font-bold mb-4 tracking-tight leading-tight text-base-content'>
-              Ingeniería con visión global,<br /><span class="text-xl md:text-4xl text-[var(--accent-blue)]">20+ años transformando ideas en soluciones</span>
+              class="text-2xl md:text-4xl font-bold mb-4 tracking-tight leading-tight text-base-content">
+              Ingeniería con visión global,<br />
+              <span
+                class="text-xl md:text-4xl text-[var(--accent-blue)]"
+                >20+ años Transformando Ideas en Soluciones</span>
             </h1>
-            <p class='text-base-content/70 text-sm leading-relaxed mb-6'>
+            <p class="text-base-content/70 text-sm leading-relaxed mb-6">
               Especialista en plataformas web e integraciones de IA generativa que resuelven problemas reales, no solo tendencias. Co-fundador, mentor y Lead Developer.
             </p>
           </div>
-          <div class='flex items-center justify-between'>
+          <div class="flex items-center justify-between">
             <a
-              href='/content/sobre-el-autor'
-              class='mono text-xs font-bold bg-[var(--accent-neon)] text-black hover:opacity-90 transition-opacity flex items-center px-6 py-3 rounded'>
+              href="/content/sobre-el-autor"
+              class="mono text-xs font-bold bg-[var(--accent-neon)] text-black hover:opacity-90 transition-opacity flex items-center px-6 py-3 rounded">
               CONOCE MÁS SOBRE MÍ
-              <span class='material-symbols-outlined text-sm ml-2'
-                >arrow_forward</span
-              >
+              <span class="material-symbols-outlined text-sm ml-2">
+                arrow_forward</span>
             </a>
           </div>
         </div>
@@ -190,7 +218,7 @@ const imagePhoto = generateImgxUrl(
           <span class='mono text-4xl font-bold neon-text mb-1'>20+</span>
           <span
             class='text-xs uppercase tracking-widest text-base-content/50 font-semibold'>
-            Years Experience
+            Años de Experiencia
           </span>
         </div>
         <div
@@ -198,145 +226,144 @@ const imagePhoto = generateImgxUrl(
           <span class='mono text-4xl font-bold text-amber-600 mb-1'>30+</span>
           <span
             class='text-xs uppercase tracking-widest text-base-content/50 font-semibold'>
-            Projects Led
+            Proyects Liderados
           </span>
         </div>
-        <div
-          class='dashboard-panel rounded-xl p-6 flex flex-col justify-center items-center text-center'>
-          <span class='mono text-4xl font-bold text-violet-600 mb-1'>10+</span>
+        <div class="dashboard-panel rounded-xl p-6 flex flex-col justify-center items-center text-center">
+          <span class="mono text-4xl font-bold text-violet-600 mb-1">10+</span>
           <span
-            class='text-xs uppercase tracking-widest text-base-content/50 font-semibold'>
-            Startups Advised
+            class="text-xs uppercase tracking-widest text-base-content/50 font-semibold">
+            Startups Asesorados
           </span>
         </div>
       </div>
     </section>
 
     {/* Core Services Section */}
-    <section class='space-y-4'>
-      <div class='flex items-center space-x-4'>
-        <h2 class='mono text-sm font-bold text-base-content/70 tracking-wider'>
+    <section class="space-y-4">
+      <div class="flex items-center space-x-4">
+        <h2 class="mono text-sm font-bold text-base-content/70 tracking-wider">
           CORE_SERVICES
         </h2>
-        <div class='h-[1px] flex-grow bg-base-content/20'></div>
+        <div class="h-[1px] flex-grow bg-base-content/20"></div>
       </div>
-      <div class='grid grid-cols-1 md:grid-cols-3 gap-4'>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
         <div
-          class='dashboard-panel rounded-lg p-5 flex items-start space-x-4 hover:border-[var(--accent-neon)] hover:bg-base-200/50 transition-all duration-300 group cursor-default'>
-          <div
-            class='flex-shrink-0 mt-1 p-2 bg-base-200 rounded border border-base-content/20 text-base-content/70 group-hover:bg-[var(--accent-neon)] group-hover:text-black group-hover:border-[var(--accent-neon)] transition-colors'>
-            <span class='material-symbols-outlined text-xl'>psychology</span>
+          class="dashboard-panel rounded-lg p-5 flex items-start space-x-4 hover:border-[var(--accent-neon)] hover:bg-base-200/50 transition-all duration-300 group cursor-default">
+          <div class="flex-shrink-0 mt-1 p-2 bg-base-200 rounded border border-base-content/20 text-base-content/70 group-hover:bg-[var(--accent-neon)] group-hover:text-black group-hover:border-[var(--accent-neon)] transition-colors">
+            <span class="material-symbols-outlined text-xl">psychology</span>
           </div>
-          <div class='flex flex-col'>
+          <div class="flex flex-col">
             <h3
-              class='mono text-sm font-bold text-base-content group-hover:text-[var(--accent-neon)] transition-colors mb-1'>
-              Soluciones con AI
+              class="mono text-sm font-bold text-base-content group-hover:text-[var(--accent-neon)] transition-colors mb-1">
+              Soluciones con IA
             </h3>
             <p
-              class='text-base-content/50 text-xs leading-relaxed group-hover:text-base-content/70 transition-colors'>
+              class="text-base-content/50 text-xs leading-relaxed group-hover:text-base-content/70 transition-colors">
               Integrar herramientas de inteligencia artificial con productos y
               aplicaciones reales.
             </p>
           </div>
         </div>
         <div
-          class='dashboard-panel rounded-lg p-5 flex items-start space-x-4 hover:border-[var(--accent-blue)] hover:bg-base-200/50 transition-all duration-300 group cursor-default'>
-          <div
-            class='flex-shrink-0 mt-1 p-2 bg-base-200 rounded border border-base-content/20 text-base-content/70 group-hover:bg-[var(--accent-blue)] group-hover:text-black group-hover:border-[var(--accent-blue)] transition-colors'>
-            <span class='material-symbols-outlined text-xl'>terminal</span>
+          class="dashboard-panel rounded-lg p-5 flex items-start space-x-4 hover:border-[var(--accent-blue)] hover:bg-base-200/50 transition-all duration-300 group cursor-default">
+          <div class="flex-shrink-0 mt-1 p-2 bg-base-200 rounded border border-base-content/20 text-base-content/70 group-hover:bg-[var(--accent-blue)] group-hover:text-black group-hover:border-[var(--accent-blue)] transition-colors">
+            <span class="material-symbols-outlined text-xl">terminal</span>
           </div>
-          <div class='flex flex-col'>
+          <div class="flex flex-col">
             <h3
-              class='mono text-sm font-bold text-base-content group-hover:text-[var(--accent-blue)] transition-colors mb-1'>
+              class="mono text-sm font-bold text-base-content group-hover:text-[var(--accent-blue)] transition-colors mb-1">
               Plataformas Web
             </h3>
             <p
-              class='text-base-content/50 text-xs leading-relaxed group-hover:text-base-content/70 transition-colors'>
+              class="text-base-content/50 text-xs leading-relaxed group-hover:text-base-content/70 transition-colors">
               Desarrollo web escalable enfocado en mejores prácticas.
             </p>
           </div>
         </div>
         <div
-          class='dashboard-panel rounded-lg p-5 flex items-start space-x-4 hover:border-base-content hover:bg-base-200/50 transition-all duration-300 group cursor-default'>
+          class="dashboard-panel rounded-lg p-5 flex items-start space-x-4 hover:border-base-content hover:bg-base-200/50 transition-all duration-300 group cursor-default">
           <div
-            class='flex-shrink-0 mt-1 p-2 bg-base-200 rounded border border-base-content/20 text-base-content/70 group-hover:bg-base-content group-hover:text-base-100 group-hover:border-base-content transition-colors'>
-            <span class='material-symbols-outlined text-xl'>groups</span>
+            class="flex-shrink-0 mt-1 p-2 bg-base-200 rounded border border-base-content/20 text-base-content/70 group-hover:bg-base-content group-hover:text-base-100 group-hover:border-base-content transition-colors">
+            <span class="material-symbols-outlined text-xl">groups</span>
           </div>
-          <div class='flex flex-col'>
+          <div class="flex flex-col">
             <h3
-              class='mono text-sm font-bold text-base-content group-hover:text-base-content transition-colors mb-1'>
+              class="mono text-sm font-bold text-base-content group-hover:text-base-content transition-colors mb-1">
               Liderazgo Tecnológico
             </h3>
             <p
-              class='text-base-content/50 text-xs leading-relaxed group-hover:text-base-content/70 transition-colors'>
+              class="text-base-content/50 text-xs leading-relaxed group-hover:text-base-content/70 transition-colors">
               Guiar equipos multifuncionales enfocados en mejores prácticas.
             </p>
           </div>
         </div>
       </div>
     </section>
-  </div>
 
-  <!-- Latest Publications Section -->
-  <section
-    class='w-full bg-base-300/30 py-10 overflow-hidden'>
-    <div class='max-w-7xl mx-auto px-4 sm:px-6 space-y-8'>
-      <div class='flex flex-wrap items-center gap-4'>
-        <h2 class='mono text-lg font-bold text-base-content'>
-          LATEST_PUBLICATIONS
-        </h2>
-        <div class='hidden sm:block h-[1px] flex-grow bg-base-content/20'></div>
-        <div class='flex items-center gap-2 text-xs mono text-base-content/70'>
-          <a href='/archivo' class='hover:text-base-content transition-colors'>
-            VIEW_ARCHIVE
-          </a>
-          <span>|</span>
-          <a
-            href='/posts/page/2'
-            class='hover:text-base-content transition-colors'>
-            VIEW_RECENT_POSTS
-          </a>
+    {/* Latest Publications Section */}
+    <section
+      class="w-full bg-base-300/30 py-10 overflow-hidden"
+    >
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 space-y-8">
+        <div class="flex flex-wrap items-center gap-4">
+          <h2 class="mono text-lg font-bold text-base-content">
+            LATEST_PUBLICATIONS
+          </h2>
+          <div class="hidden sm:block h-[1px] flex-grow bg-base-content/20"></div>
+          <div class="flex items-center gap-2 text-xs mono text-base-content/70">
+            <a href="/archivo" class="hover:text-base-content transition-colors">
+              VIEW_ARCHIVE
+            </a>
+            <span>|</span>
+            <a
+              href="/posts/page/2"
+              class="hover:text-base-content transition-colors">
+              VIEW_RECENT_POSTS
+            </a>
+          </div>
+        </div>
+        <div
+          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
+          {latestPosts.map((post) => <PostCard post={post} lazyLoad={true} />)}
         </div>
       </div>
-      <div
-        class='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6'>
-        {latestPosts.map((post) => <PostCard post={post} lazyLoad={true} />)}
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Latest Videos Section -->
-  <section
-    class='w-full bg-base-200/30 py-5 overflow-hidden'>
-    <div class='max-w-7xl mx-auto px-4 sm:px-6 space-y-8'>
-      <div class='flex flex-wrap items-center gap-4'>
-        <h2 class='mono text-lg font-bold text-base-content'>LATEST_VIDEOS</h2>
-        <div class='hidden sm:block h-[1px] flex-grow bg-base-content/20'></div>
-        <div class='flex items-center gap-2 text-xs mono text-base-content/70'>
-          <a href='/videos' class='hover:text-base-content transition-colors'>
-            VIEW_ALL_VIDEOS
-          </a>
+    {/* Latest Videos Section */}
+    <section
+      class="w-full bg-base-200/30 py-5 overflow-hidden"
+    >
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 space-y-8">
+        <div class="flex flex-wrap items-center gap-4">
+          <h2 class="mono text-lg font-bold text-base-content">
+            LATEST_VIDEOS
+          </h2>
+          <div class="hidden sm:block h-[1px] flex-grow bg-base-content/20"></div>
+          <div class="flex items-center gap-2 text-xs mono text-base-content/70">
+            <a href="/videos" class="hover:text-base-content transition-colors">
+              VIEW_ALL_VIDEOS
+            </a>
+          </div>
+        </div>
+        <div
+          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
+          {
+            latestVideos.map((video) => (
+              <VideoCard
+                title={video.data.title}
+                videoId={video.data.videoId}
+                date={video.data.date}
+                description={video.data.description}
+                featured={video.data.featured}
+              />
+            ))
+          }
         </div>
       </div>
-      <div
-        class='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6'>
-        {
-          latestVideos.map((video) => (
-            <VideoCard
-              title={video.data.title}
-              videoId={video.data.videoId}
-              date={video.data.date}
-              description={video.data.description}
-              featured={video.data.featured}
-            />
-          ))
-        }
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Structured Data -->
-  <StructuredData type='organization' />
-  <StructuredData type='person' />
-  <StructuredData type='website' />
-</BlogLayout>
+    {/* Structured Data */}
+    <StructuredData type="organization" />
+    <StructuredData type="website" />
+  </BlogLayout>
