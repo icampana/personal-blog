@@ -1,4 +1,3 @@
-```
 ---
 title: Otimize seu perfil do LinkedIn e atraia mais oportunidades de trabalho!
 videoId: 8KynlmISQ7I
@@ -17,4 +16,3 @@ O que você aprenderá?
 ✔️ Dicas para que recrutadores e empresas o encontrem facilmente.
 
 👉 Não perca mais tempo! Torne seu perfil irresistível para empregadores e torne-se o profissional que todos procuram.
-```

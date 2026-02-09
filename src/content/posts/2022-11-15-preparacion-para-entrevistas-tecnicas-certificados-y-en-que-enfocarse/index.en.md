@@ -1,5 +1,5 @@
 ---
-title: Preparing for Technical Interviews: Where to Begin and What to Focus On
+title: "Preparing for Technical Interviews: Where to Begin and What to Focus On"
 date: 2022-11-18
 featuredImage: "/photos/interview-questions.png"
 description: When applying for a new technology job, especially with a company outside

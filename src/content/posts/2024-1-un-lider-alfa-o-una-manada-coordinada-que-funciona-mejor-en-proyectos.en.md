@@ -1,5 +1,5 @@
 ---
-title: An Alpha Leader or a Coordinated Pack: What Works Best in Projects?
+title: "An Alpha Leader or a Coordinated Pack: What Works Best in Projects?"
 date: 2024-01-07
 featuredImage: /thor-boston-terrier-focused.jpeg
 description: >-

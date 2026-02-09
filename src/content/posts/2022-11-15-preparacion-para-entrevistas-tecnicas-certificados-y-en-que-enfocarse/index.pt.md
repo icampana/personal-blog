@@ -1,5 +1,5 @@
 ---
-title: Preparação para entrevistas técnicas: por onde começar e no que focar
+title: "Preparação para entrevistas técnicas: por onde começar e no que focar"
 date: 2022-11-18
 featuredImage: "/photos/interview-questions.png"
 description: Quando você começa a se candidatar a um novo emprego na área de tecnologia
