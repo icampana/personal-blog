@@ -4,10 +4,29 @@ import { glob } from 'glob';
 import matter from 'gray-matter';
 import path from 'path';
 import { fileURLToPath } from 'url';
-import { getLanguageFromFilename, stripLanguageSuffix } from '../src/utils/i18n.js';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
+
+// Regex patterns for i18n
+const LANGUAGE_SUFFIX_REGEX = /\.(en|pt)(\.md)?$/i;
+
+/**
+ * Extract language suffix from filename
+ */
+function getLanguageFromFilename(filename) {
+  const match = filename.match(LANGUAGE_SUFFIX_REGEX);
+  return match ? match[1] : null;
+}
+
+/**
+ * Strip language suffix from filename
+ */
+function stripLanguageSuffix(filename) {
+  return filename.replace(LANGUAGE_SUFFIX_REGEX, (match, lang, ext) => {
+    return ext ? '.md' : '';
+  });
+}
 
 async function generateSearchIndex() {
   try {
