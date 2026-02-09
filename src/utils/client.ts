@@ -2,7 +2,7 @@ import type { CollectionEntry } from 'astro:content';
 import { format } from 'date-fns';
 import { es } from 'date-fns/locale';
 import type { Locale } from './i18n';
-import { stripLanguageSuffix } from './i18n';
+import { getCleanSlug, stripLanguageSuffix } from './i18n';
 
 export function formatDate(date: Date): string {
   return format(date, "d 'de' MMMM 'de' yyyy", { locale: es });
@@ -47,7 +47,9 @@ export function getPageUrl(
   if (page.data.path) {
     return `${localePrefix}/content${page.data.path}`;
   }
-  return `${localePrefix}/content/${page.slug}`;
+  // Use getCleanSlug to remove /index and language suffixes from the slug
+  const cleanSlug = getCleanSlug(page.slug);
+  return `${localePrefix}/content/${cleanSlug}`;
 }
 
 export function getProjectUrl(
@@ -59,7 +61,9 @@ export function getProjectUrl(
   if (project.data.path) {
     return `${localePrefix}/portafolio${project.data.path}`;
   }
-  return `${localePrefix}/portafolio/${project.slug}`;
+  // Use getCleanSlug to remove /index and language suffixes from the slug
+  const cleanSlug = getCleanSlug(project.slug);
+  return `${localePrefix}/portafolio/${cleanSlug}`;
 }
 
 export function getAllTags(posts: CollectionEntry<'posts'>[]): string[] {

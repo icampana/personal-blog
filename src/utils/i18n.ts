@@ -46,7 +46,7 @@ export function stripLanguageSuffix(filename: string): string {
 }
 
 /**
- * Get clean slug (without date prefix and language suffix)
+ * Get clean slug (without date prefix, language suffix, and /index)
  */
 export function getCleanSlug(slug: string): string {
   // Remove language suffix
@@ -57,6 +57,9 @@ export function getCleanSlug(slug: string): string {
     const parts = cleanSlug.split('-');
     cleanSlug = parts.slice(3).join('-');
   }
+
+  // Remove /index suffix for folder-based content (handles Spanish /index, English /indexen, Portuguese /indexpt)
+  cleanSlug = cleanSlug.replace(/\/?index(en|pt)?$/, '');
 
   return cleanSlug;
 }
