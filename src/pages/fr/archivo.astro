@@ -1,16 +1,16 @@
 ---
 import { getCollection } from 'astro:content';
 import { format } from 'date-fns';
-import { enUS } from 'date-fns/locale';
+import { fr } from 'date-fns/locale';
 import BlogLayout from '../../layouts/BlogLayout.astro';
 import { getLanguageFromFilename } from '../../utils/i18n';
 
-const title = 'Post Archive';
-const description = 'Explore all posts organized by date';
+const title = 'Archive des articles';
+const description = 'Explorez tous les articles organisés par date';
 
 // Get all posts and group them by year and month
 const allPosts = await getCollection('posts');
-const posts = allPosts.filter(post => getLanguageFromFilename(post.id) === 'en');
+const posts = allPosts.filter(post => getLanguageFromFilename(post.id) === 'fr');
 
 interface YearMonthGroup {
   year: string;
@@ -47,7 +47,7 @@ const archive: YearMonthGroup[] = Array.from(dateGroups.entries())
       .sort(([monthA], [monthB]) => parseInt(monthB) - parseInt(monthA)) // Sort months descending
       .map(([month, count]) => {
         const monthDate = new Date(parseInt(year), parseInt(month) - 1, 1);
-        const monthName = format(monthDate, 'MMMM', { locale: enUS });
+        const monthName = format(monthDate, 'MMMM', { locale: fr });
         const capitalizedMonth = monthName.charAt(0).toUpperCase() + monthName.slice(1);
 
         return {
@@ -72,14 +72,14 @@ const yearsSpan = archive.length > 0 ? `${archive[archive.length - 1].year} - ${
   <div class="px-2">
     <div class="mb-8">
       <h1 class="text-4xl font-bold mb-4">
-        Post Archive
+        Archive des articles
       </h1>
       <p class="text-lg text-base-content/70 mb-2">
-        {totalPosts} {totalPosts === 1 ? 'post published' : 'posts published'}
+        {totalPosts} {totalPosts === 1 ? 'article publié' : 'articles publiés'}
         {yearsSpan && <span> ({yearsSpan})</span>}
       </p>
       <p class="text-base text-base-content/60">
-        Explore all posts organized by date
+        Explorez tous les articles organisés par date
       </p>
     </div>
 
@@ -106,13 +106,13 @@ const yearsSpan = archive.length > 0 ? `${archive[archive.length - 1].year} - ${
 
     {archive.length === 0 && (
       <div class="alert alert-info">
-        <span>No posts available in the archive.</span>
+        <span>Aucun article disponible dans l'archive.</span>
       </div>
     )}
 
     <div class="mt-12 text-center">
       <a href="/fr/posts" class="btn btn-outline">
-        View all posts
+        Voir tous les articles
       </a>
     </div>
   </div>

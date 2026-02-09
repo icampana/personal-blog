@@ -7,13 +7,13 @@ import { getLanguageFromFilename } from '../../../utils/i18n';
 // Get all projects and sort by date
 const allProjects = await getCollection('projects');
 const projects = allProjects
-  .filter(project => getLanguageFromFilename(project.id) === 'en')
+  .filter(project => getLanguageFromFilename(project.id) === 'fr')
   .sort(
     (a, b) => new Date(b.data.date).getTime() - new Date(a.data.date).getTime(),
   );
 
 const title = 'Portfolio | Iván Gabriel';
-const description = 'Projects and work by Iván Gabriel. A selection of projects and work I have done throughout my professional career.';
+const description = 'Projets et travaux d\'Iván Gabriel. Une sélection de projets et travaux réalisés tout au long de ma carrière professionnelle.';
 ---
 
 <BlogLayout title={title} description={description} locale="fr">
@@ -21,7 +21,7 @@ const description = 'Projects and work by Iván Gabriel. A selection of projects
     <section class="space-y-4">
       <div class="flex items-center space-x-4">
         <h2 class="mono text-sm font-bold text-zinc-400 tracking-wider">
-          PROJECTS_DB
+          BASE_DE_PROJETS
         </h2>
         <div class="h-[1px] flex-grow bg-zinc-800"></div>
       </div>
