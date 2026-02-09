@@ -1,20 +1,22 @@
 ---
 import type { CollectionEntry } from 'astro:content';
+import type { Locale } from '../utils/i18n';
 import ImageGallery from '../components/ImageGallery';
 import { formatDate } from '../utils/client';
 import BlogLayout from './BlogLayout.astro';
 
 export interface Props {
   project: CollectionEntry<'projects'>;
+  locale?: Locale;
 }
 
-const { project } = Astro.props;
+const { project, locale } = Astro.props;
 const { title, description, galleryImage, techStack, liveUrl, repoUrl, date } =
   project.data;
 const { Content } = await project.render();
 ---
 
-<BlogLayout title={title} description={description}>
+<BlogLayout title={title} description={description} locale={locale}>
   <article class="max-w-4xl mx-auto">
     <!-- Project Header -->
     <header class="mb-8">
