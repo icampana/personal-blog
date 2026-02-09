@@ -10,7 +10,7 @@ export const LOCALES = {
 export type Locale = (typeof LOCALES)[keyof typeof LOCALES];
 
 // Regex patterns
-const LANGUAGE_SUFFIX_REGEX = /\.(en|pt)\.md$/i;
+const LANGUAGE_SUFFIX_REGEX = /\.(en|pt)(\.md)?$/i;
 const LOCALE_PREFIX_REGEX = /^(\/(en|pt)\/)/;
 
 /**
@@ -40,7 +40,9 @@ export function getLanguageFromFilename(filename: string): Locale | null {
  * Strip language suffix from filename
  */
 export function stripLanguageSuffix(filename: string): string {
-  return filename.replace(LANGUAGE_SUFFIX_REGEX, '.md');
+  return filename.replace(LANGUAGE_SUFFIX_REGEX, (match, lang, ext) => {
+    return ext ? '.md' : '';
+  });
 }
 
 /**
