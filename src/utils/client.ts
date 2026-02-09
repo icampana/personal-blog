@@ -2,6 +2,7 @@ import type { CollectionEntry } from 'astro:content';
 import { format } from 'date-fns';
 import { es } from 'date-fns/locale';
 import type { Locale } from './i18n';
+import { stripLanguageSuffix } from './i18n';
 
 export function formatDate(date: Date): string {
   return format(date, "d 'de' MMMM 'de' yyyy", { locale: es });
@@ -13,22 +14,28 @@ export function getPostUrl(
 ): string {
   const localePrefix = locale && locale !== 'es' ? `/${locale}` : '';
 
+  // Use post.id to derive clean slug because post.slug might have dots removed/modified
+  // stripLanguageSuffix returns filename with .md if it was .en.md, so we strip .md
+  let cleanSlug = stripLanguageSuffix(post.id).replace(/\.md$/i, '');
+
+  // Remove /index from the end if present (for folder-based posts)
+  cleanSlug = cleanSlug.replace(/\/index$/, '');
+
   if (post.data.path) {
     return `${localePrefix}/posts${post.data.path}`;
   }
 
   // Handle legacy date-based URLs
-  const slug = post.slug;
-  if (slug.match(/^\d{4}-\d{2}-\d{2}-/)) {
+  if (cleanSlug.match(/^\d{4}-\d{2}-\d{2}-/)) {
     // Extract date parts and slug from filename
-    const parts = slug.split('-');
+    const parts = cleanSlug.split('-');
     const year = parts[0];
     const month = parts[1];
     const postSlug = parts.slice(3).join('-');
     return `${localePrefix}/posts/${year}/${month}/${postSlug}`;
   }
 
-  return `${localePrefix}/posts/${slug}`;
+  return `${localePrefix}/posts/${cleanSlug}`;
 }
 
 export function getPageUrl(
