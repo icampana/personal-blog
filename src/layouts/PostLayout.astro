@@ -8,6 +8,9 @@ import { normalizeImagePath } from '../utils/imageUtils';
 import BlogLayout from './BlogLayout.astro';
 import { generateImgxUrl } from '../utils/imgxUtils';
 import type { Locale } from '../utils/i18n';
+import { getAvailableTranslations, getCleanSlug } from '../utils/i18n';
+import { getCollection } from 'astro:content';
+import { getPostUrl } from '../utils/client';
 
 export interface Props {
   post: CollectionEntry<'posts'>;
@@ -17,6 +20,21 @@ export interface Props {
 const { post, locale = 'es' } = Astro.props;
 const { title, description, featuredImage, tags, date } = post.data;
 const { Content } = await post.render();
+
+// Calculate translations
+const allPosts = await getCollection('posts');
+const cleanSlug = getCleanSlug(post.slug);
+const availableTranslations = await getAvailableTranslations(allPosts, cleanSlug);
+
+// Convert slugs to full URLs
+const translations: Partial<Record<Locale, string>> = {};
+for (const [lang, slug] of Object.entries(availableTranslations)) {
+  // Find the post object for this slug to generate the correct URL
+  const translatedPost = allPosts.find(p => p.slug === slug);
+  if (translatedPost) {
+    translations[lang as Locale] = getPostUrl(translatedPost, lang as Locale);
+  }
+}
 
 const readingTime = getReadingTime(post.body);
 const readingTimeText = locale === 'en'
