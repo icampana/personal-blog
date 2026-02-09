@@ -16,6 +16,7 @@ export interface Props {
   wordCount?: number;
   readingTime?: number;
   locale?: Locale;
+  translations?: Partial<Record<Locale, string>>;
 }
 
 const {
@@ -30,6 +31,7 @@ const {
   wordCount,
   readingTime,
   locale = 'es',
+  translations,
 } = Astro.props;
 ---
 
@@ -46,7 +48,7 @@ const {
   readingTime={readingTime}
   locale={locale}
 >
-  <Header />
+  <Header translations={translations} />
   <main class="max-w-7xl mx-auto px-4 sm:px-6 py-10 space-y-10 flex-grow overflow-hidden">
     <slot />
   </main>

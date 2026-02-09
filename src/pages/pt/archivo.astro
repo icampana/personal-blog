@@ -1,19 +1,16 @@
 ---
 import { getCollection } from 'astro:content';
 import { format } from 'date-fns';
-import { es } from 'date-fns/locale';
-import BlogLayout from '../layouts/BlogLayout.astro';
-import { getLanguageFromFilename } from '../utils/i18n';
+import { ptBR } from 'date-fns/locale';
+import BlogLayout from '../../layouts/BlogLayout.astro';
+import { getLanguageFromFilename } from '../../utils/i18n';
 
-const title = 'Archivo de Publicaciones';
-const description = 'Explora todas las publicaciones organizadas por fecha';
+const title = 'Arquivo de Publicações';
+const description = 'Explore todas as publicações organizadas por data';
 
 // Get all posts and group them by year and month
 const allPosts = await getCollection('posts');
-const posts = allPosts.filter(post => {
-  const lang = getLanguageFromFilename(post.id);
-  return lang === 'es' || lang === null;
-});
+const posts = allPosts.filter(post => getLanguageFromFilename(post.id) === 'pt');
 
 interface YearMonthGroup {
   year: string;
@@ -50,7 +47,7 @@ const archive: YearMonthGroup[] = Array.from(dateGroups.entries())
       .sort(([monthA], [monthB]) => parseInt(monthB) - parseInt(monthA)) // Sort months descending
       .map(([month, count]) => {
         const monthDate = new Date(parseInt(year), parseInt(month) - 1, 1);
-        const monthName = format(monthDate, 'MMMM', { locale: es });
+        const monthName = format(monthDate, 'MMMM', { locale: ptBR });
         const capitalizedMonth = monthName.charAt(0).toUpperCase() + monthName.slice(1);
 
         return {
@@ -71,18 +68,18 @@ const totalPosts = posts.length;
 const yearsSpan = archive.length > 0 ? `${archive[archive.length - 1].year} - ${archive[0].year}` : '';
 ---
 
-<BlogLayout title={title} description={description}>
+<BlogLayout title={title} description={description} locale="pt">
   <div class="px-2">
     <div class="mb-8">
       <h1 class="text-4xl font-bold mb-4">
-        Archivo de Publicaciones
+        Arquivo de Publicações
       </h1>
       <p class="text-lg text-base-content/70 mb-2">
-        {totalPosts} {totalPosts === 1 ? 'artículo publicado' : 'artículos publicados'}
+        {totalPosts} {totalPosts === 1 ? 'artigo publicado' : 'artigos publicados'}
         {yearsSpan && <span> ({yearsSpan})</span>}
       </p>
       <p class="text-base text-base-content/60">
-        Explora todas las publicaciones organizadas por fecha
+        Explore todas as publicações organizadas por data
       </p>
     </div>
 
@@ -94,7 +91,7 @@ const yearsSpan = archive.length > 0 ? `${archive[archive.length - 1].year} - ${
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
               {yearGroup.months.map((monthData) => (
                 <a
-                  href={`/by-date/${yearGroup.year}/${monthData.month}`}
+                  href={`/pt/by-date/${yearGroup.year}/${monthData.month}`}
                   class="btn btn-outline justify-between"
                 >
                   <span class="font-semibold">{monthData.monthName}</span>
@@ -109,13 +106,13 @@ const yearsSpan = archive.length > 0 ? `${archive[archive.length - 1].year} - ${
 
     {archive.length === 0 && (
       <div class="alert alert-info">
-        <span>No hay publicaciones disponibles en el archivo.</span>
+        <span>Não há publicações disponíveis no arquivo.</span>
       </div>
     )}
 
     <div class="mt-12 text-center">
-      <a href="/posts" class="btn btn-outline">
-        Ver todas las publicaciones
+      <a href="/pt/posts" class="btn btn-outline">
+        Ver todas as publicações
       </a>
     </div>
   </div>
