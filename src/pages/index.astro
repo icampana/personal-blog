@@ -10,11 +10,8 @@ import VideoCard from '../components/VideoCard.astro';
 import {
   getLanguageFromFilename,
   getLocaleFromPath,
-  LOCALES,
-  type Locale,
 } from '../utils/i18n';
 import { getPageUrl } from '../utils/client';
-import Header from '../components/Header.astro';
 
 // Detect current locale from URL
 const locale = getLocaleFromPath(Astro.url.pathname);
@@ -42,11 +39,7 @@ const latestVideos = localeVideos
   .slice(0, 3);
 
 // Localized title and description
-const title = locale === 'en'
-  ? 'Iván Gabriel | Portfolio & Blog'
-  : locale === 'pt'
-  ? 'Iván Gabriel | Portfólio & Blog'
-  : 'Iván Gabriel | Portfolio & Blog';
+const title = 'Iván Gabriel | Portafolio & Blog';
 
 const description = 'Tech entrepreneur and developer with 20+ years of experience leading international projects in media, fintech, and startups.';
 
@@ -136,7 +129,7 @@ const translations = {
                target='_blank'
                rel='noopener noreferrer'
                class='btn btn-ghost btn-sm text-blue-500 hover:bg-blue-50'
-               title={locale === 'en' ? 'Follow me on Twitter' : locale === 'pt' ? 'Siga-me no Twitter' : 'Sígueme en Twitter'}>
+               title='Sígueme en Twitter'>
               <title>Twitter</title>
               <svg class='w-5 h-5' fill='currentColor' viewBox='0 0 24 24'>
                 <path

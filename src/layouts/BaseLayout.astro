@@ -3,6 +3,7 @@ import { ViewTransitions } from 'astro:transitions';
 import ConsentBanner from '../components/ConsentBanner';
 import SEO from '../components/SEO.astro';
 import type { Locale } from '../utils/i18n';
+import { match } from 'ts-pattern';
 import '../styles/globals.css';
 
 export interface Props {
@@ -36,8 +37,10 @@ const {
 } = Astro.props;
 
 // Set language based on locale
-const lang = locale === 'en' ? 'en' : locale === 'pt' ? 'pt' : 'es';
-const localeCode = locale === 'en' ? 'en-US' : locale === 'pt' ? 'pt-BR' : 'es-ES';
+const lang = match(locale)
+  .with('en', () => 'en')
+  .with('pt', () => 'pt')
+  .otherwise(() => 'es');
 ---
 
 <!doctype html>
