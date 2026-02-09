@@ -2,6 +2,7 @@
 import { ViewTransitions } from 'astro:transitions';
 import ConsentBanner from '../components/ConsentBanner';
 import SEO from '../components/SEO.astro';
+import type { Locale } from '../utils/i18n';
 import '../styles/globals.css';
 
 export interface Props {
@@ -16,6 +17,7 @@ export interface Props {
   noindex?: boolean;
   wordCount?: number;
   readingTime?: number;
+  locale?: Locale;
 }
 
 const {
@@ -30,11 +32,16 @@ const {
   noindex,
   wordCount,
   readingTime,
+  locale = 'es',
 } = Astro.props;
+
+// Set language based on locale
+const lang = locale === 'en' ? 'en' : locale === 'pt' ? 'pt' : 'es';
+const localeCode = locale === 'en' ? 'en-US' : locale === 'pt' ? 'pt-BR' : 'es-ES';
 ---
 
 <!doctype html>
-<html lang='es'>
+<html lang={lang}>
   <head>
     <meta charset='UTF-8' />
     <meta name='viewport' content='width=device-width, initial-scale=1.0' />
@@ -74,6 +81,7 @@ const {
       noindex={noindex}
       wordCount={wordCount}
       readingTime={readingTime}
+      locale={locale}
     />
 
     <!-- Google Site Verification -->

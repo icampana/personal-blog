@@ -7,17 +7,23 @@ import { getReadingTime } from '../utils';
 import { normalizeImagePath } from '../utils/imageUtils';
 import BlogLayout from './BlogLayout.astro';
 import { generateImgxUrl } from '../utils/imgxUtils';
+import type { Locale } from '../utils/i18n';
 
 export interface Props {
   post: CollectionEntry<'posts'>;
+  locale?: Locale;
 }
 
-const { post } = Astro.props;
+const { post, locale = 'es' } = Astro.props;
 const { title, description, featuredImage, tags, date } = post.data;
 const { Content } = await post.render();
 
 const readingTime = getReadingTime(post.body);
-const readingTimeText = `${Math.round(readingTime.minutes)} minutos`;
+const readingTimeText = locale === 'en'
+  ? `${Math.round(readingTime.minutes)} min read`
+  : locale === 'pt'
+  ? `${Math.round(readingTime.minutes)} min de leitura`
+  : `${Math.round(readingTime.minutes)} minutos de lectura`;
 
 const imagePath = normalizeImagePath(featuredImage);
 ---
@@ -32,6 +38,7 @@ const imagePath = normalizeImagePath(featuredImage);
   tags={tags}
   wordCount={readingTime.words}
   readingTime={readingTime.minutes}
+  locale={locale}
 >
   <article class="max-w-4xl mx-auto">
     <!-- Featured Image -->

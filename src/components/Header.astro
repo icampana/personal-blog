@@ -2,6 +2,7 @@
 import { getCollection } from 'astro:content';
 import SearchComponent from './SearchComponent';
 import ThemeToggle from './ThemeToggle';
+import LanguageSwitcher from './LanguageSwitcher';
 import MobileMenu from './MobileMenu';
 
 // Get all pages for navigation
@@ -42,6 +43,7 @@ const siteTitle = 'IVÁN GABRIEL';
       }
     </div>
     <div class='flex items-center space-x-4'>
+      <LanguageSwitcher client:load />
       <MobileMenu client:load menuItems={menuItems} />
       <SearchComponent client:load />
       <ThemeToggle client:load />

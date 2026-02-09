@@ -38,16 +38,21 @@
     "test:content": "node scripts/test-content-rendering.js",
     "test:performance": "node scripts/analyze-performance.js",
     "test:mobile": "node scripts/test-mobile-responsiveness.js",
-    "test:final": "node scripts/run-final-tests.js"
+    "test:final": "node scripts/run-final-tests.js",
+    "translate": "node scripts/translate-content.mjs",
+    "translate:en": "node scripts/translate-content.mjs --target en",
+    "translate:pt": "node scripts/translate-content.mjs --target pt"
   },
   "dependencies": {
     "@astrojs/mdx": "^4.3.13",
     "@astrojs/react": "^4.4.2",
     "@astrojs/rss": "^4.0.15",
     "@astrojs/sitemap": "3.7.0",
+    "@google/generative-ai": "^0.24.1",
     "@tinacms/cli": "^2.1.3",
     "astro": "^5.17.1",
     "date-fns": "^4.1.0",
+    "dotenv": "^17.2.4",
     "flexsearch": "^0.8.212",
     "glob": "^11.1.0",
     "gray-matter": "^4.0.3",

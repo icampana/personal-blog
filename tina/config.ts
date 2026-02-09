@@ -29,12 +29,13 @@ const config: any = {
         name: 'posts',
         path: 'src/content/posts',
         match: {
-          include: '**/*',
+          include: '**/*.md',
+          exclude: '**/*.{en,pt}.md',
         },
         ui: {
           filename: {
             // Example of using a custom slugify function
-            slugify: (values) => {
+            slugify: (values: any) => {
               const articleDate = values?.date
                 ? new Date(values?.date)
                 : new Date();
@@ -63,7 +64,8 @@ const config: any = {
         name: 'pages',
         path: 'src/content/pages',
         match: {
-          include: '**/*',
+          include: '**/*.md',
+          exclude: '**/*.{en,pt}.md',
         },
         fields: [
           {
@@ -82,7 +84,8 @@ const config: any = {
         name: 'projects',
         path: 'src/content/projects',
         match: {
-          include: '**/*',
+          include: '**/*.md',
+          exclude: '**/*.{en,pt}.md',
         },
         fields: [
           {
@@ -101,7 +104,8 @@ const config: any = {
         name: 'videos',
         path: 'src/content/videos',
         match: {
-          include: '**/*',
+          include: '**/*.md',
+          exclude: '**/*.{en,pt}.md',
         },
         fields: [
           {

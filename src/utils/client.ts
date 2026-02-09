@@ -1,14 +1,20 @@
 import type { CollectionEntry } from 'astro:content';
 import { format } from 'date-fns';
 import { es } from 'date-fns/locale';
+import type { Locale } from './i18n';
 
 export function formatDate(date: Date): string {
   return format(date, "d 'de' MMMM 'de' yyyy", { locale: es });
 }
 
-export function getPostUrl(post: CollectionEntry<'posts'>): string {
+export function getPostUrl(
+  post: CollectionEntry<'posts'>,
+  locale?: Locale,
+): string {
+  const localePrefix = locale && locale !== 'es' ? `/${locale}` : '';
+
   if (post.data.path) {
-    return `/posts${post.data.path}`;
+    return `${localePrefix}/posts${post.data.path}`;
   }
 
   // Handle legacy date-based URLs
@@ -19,24 +25,34 @@ export function getPostUrl(post: CollectionEntry<'posts'>): string {
     const year = parts[0];
     const month = parts[1];
     const postSlug = parts.slice(3).join('-');
-    return `/posts/${year}/${month}/${postSlug}`;
+    return `${localePrefix}/posts/${year}/${month}/${postSlug}`;
   }
 
-  return `/posts/${slug}`;
+  return `${localePrefix}/posts/${slug}`;
 }
 
-export function getPageUrl(page: CollectionEntry<'pages'>): string {
+export function getPageUrl(
+  page: CollectionEntry<'pages'>,
+  locale?: Locale,
+): string {
+  const localePrefix = locale && locale !== 'es' ? `/${locale}` : '';
+
   if (page.data.path) {
-    return `/content${page.data.path}`;
+    return `${localePrefix}/content${page.data.path}`;
   }
-  return `/content/${page.slug}`;
+  return `${localePrefix}/content/${page.slug}`;
 }
 
-export function getProjectUrl(project: CollectionEntry<'projects'>): string {
+export function getProjectUrl(
+  project: CollectionEntry<'projects'>,
+  locale?: Locale,
+): string {
+  const localePrefix = locale && locale !== 'es' ? `/${locale}` : '';
+
   if (project.data.path) {
-    return `/portafolio${project.data.path}`;
+    return `${localePrefix}/portafolio${project.data.path}`;
   }
-  return `/portafolio/${project.slug}`;
+  return `${localePrefix}/portafolio/${project.slug}`;
 }
 
 export function getAllTags(posts: CollectionEntry<'posts'>[]): string[] {

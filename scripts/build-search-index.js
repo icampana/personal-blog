@@ -4,6 +4,7 @@ import { glob } from 'glob';
 import matter from 'gray-matter';
 import path from 'path';
 import { fileURLToPath } from 'url';
+import { getLanguageFromFilename, stripLanguageSuffix } from '../src/utils/i18n.js';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -39,7 +40,19 @@ async function generateSearchIndex() {
 
       if (data.title) {
         const slug = path.basename(file, '.md');
-        const url = data.path ? `/posts${data.path}` : `/posts/${slug}`;
+
+        // Detect language from filename
+        const locale = getLanguageFromFilename(file) || 'es';
+        const cleanSlug = stripLanguageSuffix(slug);
+
+        // Build URL with locale prefix
+        const url = data.path
+          ? (locale === 'es'
+              ? `/posts${data.path}`
+              : `/${locale}/posts${data.path}`)
+          : (locale === 'es'
+              ? `/posts/${cleanSlug}`
+              : `/${locale}/posts/${cleanSlug}`);
 
         const item = {
           id: id++,
@@ -50,6 +63,7 @@ async function generateSearchIndex() {
           tags: data.tags || [],
           date: data.date,
           type: 'post',
+          locale, // Add locale field
         };
 
         index.add(item);
@@ -68,7 +82,19 @@ async function generateSearchIndex() {
 
       if (data.title) {
         const slug = path.basename(file, '.md');
-        const url = data.path ? `/content${data.path}` : `/content/${slug}`;
+
+        // Detect language from filename
+        const locale = getLanguageFromFilename(file) || 'es';
+        const cleanSlug = stripLanguageSuffix(slug);
+
+        // Build URL with locale prefix
+        const url = data.path
+          ? (locale === 'es'
+              ? `/content${data.path}`
+              : `/${locale}/content${data.path}`)
+          : (locale === 'es'
+              ? `/content/${cleanSlug}`
+              : `/${locale}/content/${cleanSlug}`);
 
         const item = {
           id: id++,
@@ -78,6 +104,7 @@ async function generateSearchIndex() {
           summary: data.description || body.slice(0, 200),
           date: data.date,
           type: 'page',
+          locale,
         };
 
         index.add(item);
@@ -96,9 +123,19 @@ async function generateSearchIndex() {
 
       if (data.title) {
         const slug = path.basename(file, '.md');
+
+        // Detect language from filename
+        const locale = getLanguageFromFilename(file) || 'es';
+        const cleanSlug = stripLanguageSuffix(slug);
+
+        // Build URL with locale prefix
         const url = data.path
-          ? `/portafolio${data.path}`
-          : `/portafolio/${slug}`;
+          ? (locale === 'es'
+              ? `/portafolio${data.path}`
+              : `/${locale}/portafolio${data.path}`)
+          : (locale === 'es'
+              ? `/portafolio/${cleanSlug}`
+              : `/${locale}/portafolio/${cleanSlug}`);
 
         const item = {
           id: id++,
@@ -109,6 +146,7 @@ async function generateSearchIndex() {
           tags: data.techStack || [],
           date: data.date,
           type: 'project',
+          locale,
         };
 
         index.add(item);

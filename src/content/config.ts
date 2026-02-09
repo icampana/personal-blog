@@ -9,6 +9,7 @@ const posts = defineCollection({
     featuredImage: z.string().optional(),
     description: z.string().optional(),
     tags: z.array(z.string()).optional(),
+    locale: z.string().default('es').optional(),
     // Legacy fields from WordPress/Blogger migration
     wordpress_id: z.number().optional(),
     author: z.string().optional(),
