@@ -1,6 +1,7 @@
 ---
 import { generateImgxUrl } from '../utils/imgxUtils';
 import type { Locale } from '../utils/i18n';
+import { match } from 'ts-pattern';
 
 export interface Props {
   title?: string;
@@ -42,7 +43,11 @@ const {
 
 const siteUrl = 'https://ivan.campananaranjo.com';
 const fullTitle = title.includes('Iván Gabriel') ? title : `${title} | Iván Gabriel`;
-const localeCode = locale === 'en' ? 'en-US' : locale === 'pt' ? 'pt-BR' : 'es-ES';
+const localeCode = match(locale)
+  .with('en', () => 'en_US')
+  .with('es', () => 'es_ES')
+  .with('pt', () => 'pt_PT')
+  .otherwise(() => 'es_ES');
 
 // Helper function to determine image MIME type from file extension
 function getImageMimeType(imagePath: string): string {
