@@ -1,10 +1,9 @@
 ---
 import { type CollectionEntry, getCollection } from 'astro:content';
-import ProjectLayout from '../../../layouts/ProjectLayout.astro';
-import { getProjectUrl } from '../../../utils/client';
+import BlogLayout from '../../../layouts/BlogLayout.astro';
+import { getPageUrl } from '../../../utils/client';
 import {
   getLanguageFromFilename,
-  stripLanguageSuffix,
   stripLocalePrefix,
   LOCALES,
   type Locale,
@@ -12,22 +11,22 @@ import {
 } from '../../../utils/i18n';
 
 export async function getStaticPaths() {
-  const projects = await getCollection('projects');
+  const pages = await getCollection('pages');
 
-  // Get all Spanish projects (source of truth)
-  const spanishProjects = projects.filter(
-    (project) => getLanguageFromFilename(project.id) === LOCALES.DEFAULT || getLanguageFromFilename(project.id) === null,
+  // Get all Spanish pages (source of truth)
+  const spanishPages = pages.filter(
+    (page) => getLanguageFromFilename(page.id) === LOCALES.DEFAULT || getLanguageFromFilename(page.id) === null,
   );
 
-  return spanishProjects.map((project) => {
-    const cleanSlug = getCleanSlug(project.slug);
-    const url = getProjectUrl(project, LOCALES.PORTUGUESE);
-    // Remove locale prefix and the /portafolio path, then split into slug parts
+  return spanishPages.map((page) => {
+    const cleanSlug = getCleanSlug(page.slug);
+    const url = getPageUrl(page, LOCALES.PORTUGUESE);
+    // Remove locale prefix and the /content path, then split into slug parts
     const pathWithoutLocale = stripLocalePrefix(url);
-    const slugParts = pathWithoutLocale.replace('/portafolio/', '').split('/').filter(Boolean);
+    const slugParts = pathWithoutLocale.replace('/content/', '').split('/').filter(Boolean);
 
     // Check if translation exists
-    const translationExists = projects.some(
+    const translationExists = pages.some(
       (p) => {
         const pLang = getLanguageFromFilename(p.id);
         const pCleanSlug = getCleanSlug(p.slug);
@@ -35,21 +34,21 @@ export async function getStaticPaths() {
       },
     );
 
-    // If translation exists, use it; otherwise use Spanish project
-    const projectToRender = translationExists
-      ? projects.find(
+    // If translation exists, use it; otherwise use Spanish page
+    const pageToRender = translationExists
+      ? pages.find(
           (p) => {
             const pLang = getLanguageFromFilename(p.id);
             const pCleanSlug = getCleanSlug(p.slug);
             return pLang === LOCALES.PORTUGUESE && pCleanSlug === cleanSlug;
           },
         )
-      : project;
+      : page;
 
     return {
       params: { slug: slugParts.join('/') },
       props: {
-        project: projectToRender!,
+        page: pageToRender!,
         locale: LOCALES.PORTUGUESE,
         isFallback: !translationExists,
       },
@@ -58,15 +57,17 @@ export async function getStaticPaths() {
 }
 
 interface Props {
-  project: CollectionEntry<'projects'>;
+  page: CollectionEntry<'pages'>;
   locale: Locale;
   isFallback: boolean;
 }
 
-const { project, locale, isFallback } = Astro.props;
+const { page, locale, isFallback } = Astro.props;
+const { title, description } = page.data;
+const { Content } = await page.render();
 ---
 
-<ProjectLayout project={project} locale={locale}>
+<BlogLayout title={title} description={description} locale={locale}>
   <!-- Fallback banner -->
   {isFallback && (
     <div class="alert alert-warning mb-6" role="alert">
@@ -78,7 +79,20 @@ const { project, locale, isFallback } = Astro.props;
       </span>
     </div>
   )}
-</ProjectLayout>
+
+  <article class="max-w-4xl mx-auto">
+    <header class="mb-8">
+      <h1 class="text-4xl font-bold mb-4 text-base-content">{title}</h1>
+      {description && (
+        <p class="text-lg text-base-content/80 mb-6">{description}</p>
+      )}
+    </header>
+
+    <div class="prose prose-lg max-w-none">
+      <Content />
+    </div>
+  </article>
+</BlogLayout>
 
 <style>
   @reference "../../../styles/globals.css";

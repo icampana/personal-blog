@@ -1,5 +1,6 @@
 ---
 import type { CollectionEntry } from 'astro:content';
+import type { Locale } from '../utils/i18n';
 import { getProjectUrl } from '../utils/client';
 import { normalizeImagePath } from '../utils/imageUtils';
 import { generateImgxUrl } from '../utils/imgxUtils';
@@ -7,13 +8,14 @@ import { Image } from 'astro:assets';
 
 export interface Props {
   project: CollectionEntry<'projects'>;
+  locale?: Locale;
 }
 
-const { project } = Astro.props;
+const { project, locale } = Astro.props;
 const { title, description, galleryImage, techStack, liveUrl, repoUrl } =
   project.data;
 
-const projectUrl = getProjectUrl(project);
+const projectUrl = getProjectUrl(project, locale);
 const imagePath = normalizeImagePath(galleryImage?.[0]);
 ---
 
@@ -83,4 +85,4 @@ const imagePath = normalizeImagePath(galleryImage?.[0]);
         }
       </div>
     </div>
-</div>
+  </div>
