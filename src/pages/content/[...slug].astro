@@ -2,20 +2,26 @@
 import { type CollectionEntry, getCollection } from 'astro:content';
 import BlogLayout from '../../layouts/BlogLayout.astro';
 import { getPageUrl } from '../../utils/client';
+import { getLanguageFromFilename } from '../../utils/i18n';
 
 export async function getStaticPaths() {
   const pages = await getCollection('pages');
 
-  return pages.map((page) => {
-    const url = getPageUrl(page);
-    // Remove the /content prefix and split into slug parts
-    const slugParts = url.replace('/content/', '').split('/').filter(Boolean);
+  return pages
+    .filter(page => {
+      const lang = getLanguageFromFilename(page.id);
+      return lang === 'es' || lang === null;
+    })
+    .map((page) => {
+      const url = getPageUrl(page);
+      // Remove the /content prefix and split into slug parts
+      const slugParts = url.replace('/content/', '').split('/').filter(Boolean);
 
-    return {
-      params: { slug: slugParts.join('/') },
-      props: { page },
-    };
-  });
+      return {
+        params: { slug: slugParts.join('/') },
+        props: { page },
+      };
+    });
 }
 
 interface Props {

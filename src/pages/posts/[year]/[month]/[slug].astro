@@ -2,12 +2,17 @@
 import { getCollection } from 'astro:content';
 import PostLayout from '../../../../layouts/PostLayout.astro';
 import { getPostUrl } from '../../../../utils/client';
+import { getLanguageFromFilename } from '../../../../utils/i18n';
 
 export async function getStaticPaths() {
   const posts = await getCollection('posts');
   const paths: any[] = [];
 
   posts.forEach((post) => {
+    // Filter for Spanish posts only
+    const lang = getLanguageFromFilename(post.id);
+    if (lang !== 'es' && lang !== null) return;
+
     const postUrl = getPostUrl(post);
 
     // Check if this is a date-based URL pattern

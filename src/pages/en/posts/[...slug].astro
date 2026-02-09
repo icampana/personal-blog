@@ -21,7 +21,8 @@ export async function getStaticPaths() {
     .filter((post) => !getPostUrl(post).match(/^\/posts\/\d{4}\/\d{2}\//))
     .map((post) => {
       const url = getPostUrl(post, LOCALES.ENGLISH);
-      const slugParts = url.replace('/posts/', '').split('/').filter(Boolean);
+      // Remove the /en/posts/ prefix
+      const slugParts = url.replace('/en/posts/', '').split('/').filter(Boolean);
 
       return {
         params: { slug: slugParts.join('/') },
