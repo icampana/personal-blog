@@ -1,23 +1,19 @@
 ---
 import { getCollection } from 'astro:content';
-import VideoCard from '../components/VideoCard.astro';
-import BlogLayout from '../layouts/BlogLayout.astro';
-import { getLanguageFromFilename } from '../utils/i18n';
+import VideoCard from '../../components/VideoCard.astro';
+import BlogLayout from '../../layouts/BlogLayout.astro';
+import { getLanguageFromFilename } from '../../utils/i18n';
 
 const allVideos = await getCollection('videos');
 const videos = allVideos
-    .filter(video => {
-        const lang = getLanguageFromFilename(video.id);
-        return lang === 'es' || lang === null;
-    })
+    .filter(video => getLanguageFromFilename(video.id) === 'en')
     .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
 
-const title = 'Mis Videos';
-const description =
-    'Una lista curada de mis videos de YouTube sobre desarrollo, tecnología y más.';
+const title = 'My Videos';
+const description = 'A curated list of my YouTube videos about development, technology, and more.';
 ---
 
-<BlogLayout title={title} description={description}>
+<BlogLayout title={title} description={description} locale="en">
     <div class='max-w-7xl mx-auto px-6 py-12'>
         <header class='mb-12 text-center'>
             <h1
@@ -45,7 +41,7 @@ const description =
             ) : (
                 <div class='text-center py-12'>
                     <p class='text-lg text-base-content/60'>
-                        No hay videos publicados aún. ¡Pronto más contenido!
+                        No videos published yet. More content coming soon!
                     </p>
                 </div>
             )
