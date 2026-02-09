@@ -6,11 +6,11 @@ import { getLanguageFromFilename } from '../../utils/i18n';
 
 const allVideos = await getCollection('videos');
 const videos = allVideos
-    .filter(video => getLanguageFromFilename(video.id) === 'en')
+    .filter(video => getLanguageFromFilename(video.id) === 'fr')
     .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
 
-const title = 'My Videos';
-const description = 'A curated list of my YouTube videos about development, technology, and more.';
+const title = 'Mes Vidéos';
+const description = 'Une sélection de mes vidéos YouTube sur le développement, la technologie et plus encore.';
 ---
 
 <BlogLayout title={title} description={description} locale="fr">
@@ -41,7 +41,7 @@ const description = 'A curated list of my YouTube videos about development, tech
             ) : (
                 <div class='text-center py-12'>
                     <p class='text-lg text-base-content/60'>
-                        No videos published yet. More content coming soon!
+                        Aucune vidéo publiée pour le moment. Plus de contenu à venir !
                     </p>
                 </div>
             )
