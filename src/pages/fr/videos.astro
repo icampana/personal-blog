@@ -1,0 +1,50 @@
+---
+import { getCollection } from 'astro:content';
+import VideoCard from '../../components/VideoCard.astro';
+import BlogLayout from '../../layouts/BlogLayout.astro';
+import { getLanguageFromFilename } from '../../utils/i18n';
+
+const allVideos = await getCollection('videos');
+const videos = allVideos
+    .filter(video => getLanguageFromFilename(video.id) === 'en')
+    .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
+
+const title = 'My Videos';
+const description = 'A curated list of my YouTube videos about development, technology, and more.';
+---
+
+<BlogLayout title={title} description={description} locale="fr">
+    <div class='max-w-7xl mx-auto px-6 py-12'>
+        <header class='mb-12 text-center'>
+            <h1
+                class='text-4xl font-bold tracking-tight text-base-content md:text-5xl mb-4'>
+                {title}
+            </h1>
+            <p class='text-xl text-base-content/80 max-w-2xl mx-auto'>
+                {description}
+            </p>
+        </header>
+
+        {
+            videos.length > 0 ? (
+                <div class='grid gap-8 sm:grid-cols-2 lg:grid-cols-3'>
+                    {videos.map((video) => (
+                        <VideoCard
+                            title={video.data.title}
+                            videoId={video.data.videoId}
+                            date={video.data.date}
+                            description={video.data.description}
+                            featured={video.data.featured}
+                        />
+                    ))}
+                </div>
+            ) : (
+                <div class='text-center py-12'>
+                    <p class='text-lg text-base-content/60'>
+                        No videos published yet. More content coming soon!
+                    </p>
+                </div>
+            )
+        }
+    </div>
+</BlogLayout>

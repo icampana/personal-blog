@@ -41,6 +41,8 @@ const readingTimeText = locale === 'en'
   ? `${Math.round(readingTime.minutes)} min read`
   : locale === 'pt'
   ? `${Math.round(readingTime.minutes)} min de leitura`
+  : locale === 'fr'
+  ? `${Math.round(readingTime.minutes)} min de lecture`
   : `${Math.round(readingTime.minutes)} minutos de lectura`;
 
 const imagePath = normalizeImagePath(featuredImage);
@@ -79,10 +81,10 @@ const imagePath = normalizeImagePath(featuredImage);
 
       <div class="flex flex-wrap items-center gap-4 text-sm text-base-content/70 mb-4">
         <time datetime={date.toISOString()}>
-          {formatDate(date)}
+          {formatDate(date, locale)}
         </time>
         <span>•</span>
-        <span>{readingTimeText} de lectura</span>
+        <span>{readingTimeText}</span>
       </div>
 
       {description && (

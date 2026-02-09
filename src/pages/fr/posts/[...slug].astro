@@ -1,0 +1,168 @@
+---
+import { type CollectionEntry, getCollection } from 'astro:content';
+import PostLayout from '../../../layouts/PostLayout.astro';
+import { getPostUrl } from '../../../utils/client';
+import {
+  getLanguageFromFilename,
+  stripLanguageSuffix,
+  LOCALES,
+  type Locale,
+  getCleanSlug,
+} from '../../../utils/i18n';
+
+export async function getStaticPaths() {
+  const posts = await getCollection('posts');
+
+  // Get all Spanish posts (source of truth)
+  const spanishPosts = posts.filter(
+    (post) => getLanguageFromFilename(post.id) === LOCALES.DEFAULT,
+  );
+
+  return spanishPosts
+    .filter((post) => !getPostUrl(post).match(/^\/posts\/\d{4}\/\d{2}\//))
+    .map((post) => {
+      const cleanSlug = getCleanSlug(post.slug);
+      const url = getPostUrl(post, LOCALES.FRENCH);
+      // Remove the /fr/posts/ prefix
+      const slugParts = url.replace('/fr/posts/', '').split('/').filter(Boolean);
+
+      // Check if translation exists
+      const translationExists = posts.some(
+        (p) => {
+          const pLang = getLanguageFromFilename(p.id);
+          const pCleanSlug = getCleanSlug(p.slug);
+          return pLang === LOCALES.FRENCH && pCleanSlug === cleanSlug;
+        },
+      );
+
+      // If translation exists, use it; otherwise use Spanish post
+      const postToRender = translationExists
+        ? posts.find(
+            (p) => {
+              const pLang = getLanguageFromFilename(p.id);
+              const pCleanSlug = getCleanSlug(p.slug);
+              return pLang === LOCALES.FRENCH && pCleanSlug === cleanSlug;
+            },
+          )
+        : post;
+
+      return {
+        params: { slug: slugParts.join('/') },
+        props: {
+          post: postToRender!,
+          locale: LOCALES.FRENCH,
+          isFallback: !translationExists,
+        },
+      };
+    });
+}
+
+interface Props {
+  post: CollectionEntry<'posts'>;
+  locale: Locale;
+  isFallback: boolean;
+}
+
+const { post, locale, isFallback } = Astro.props;
+
+// Get related posts (posts with similar tags, French only or fallback to Spanish)
+const allPosts = await getCollection('posts');
+const frenchPosts = allPosts.filter(
+  (p) => getLanguageFromFilename(p.id) === LOCALES.FRENCH,
+);
+
+// Build a mapping of clean slugs to their translations
+const slugToTranslation = new Map();
+allPosts.forEach((p) => {
+  const cleanSlug = getCleanSlug(p.slug);
+  const lang = getLanguageFromFilename(p.id);
+  if (!slugToTranslation.has(cleanSlug)) {
+    slugToTranslation.set(cleanSlug, lang === LOCALES.FRENCH ? p : p);
+  } else {
+    // Prefer French if available
+    if (lang === LOCALES.FRENCH) {
+      slugToTranslation.set(cleanSlug, p);
+    }
+  }
+});
+
+const relatedPosts = Array.from(slugToTranslation.values())
+  .filter((otherPost) => {
+    if (otherPost.data.tags && post.data.tags && otherPost.id !== post.id) {
+      return otherPost.data.tags.some((tag: string) => post.data.tags?.includes(tag));
+    }
+    return false;
+  })
+  .slice(0, 3)
+  .sort(
+    (a, b) =>
+      new Date(b.data.date).getTime() - new Date(a.data.date).getTime(),
+  );
+---
+<PostLayout post={post} locale={locale}>
+  <!-- Fallback banner -->
+  {isFallback && (
+    <div class="alert alert-warning mb-6" role="alert">
+      <svg xmlns="http://www.w3.org/2000/svg" class="stroke-current shrink-0 h-6 w-6" fill="none" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+      </svg>
+      <span>
+        <strong>Note :</strong> Ce contenu n'est pas encore disponible en français. Affichage de la version originale en espagnol.
+      </span>
+    </div>
+  )}
+
+  <!-- Related posts section -->
+  {relatedPosts.length > 0 && (
+    <section class="mt-12 pt-8 border-t border-base-300">
+      <h3 class="text-2xl font-bold mb-6">Articles connexes</h3>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        {relatedPosts.map((relatedPost) => (
+          <div class="card bg-base-100 shadow-sm">
+            <div class="card-body p-4">
+              <h4 class="card-title text-sm">
+                <a
+                  href={getPostUrl(relatedPost, LOCALES.FRENCH)}
+                  class="hover:text-primary"
+                >
+                  {relatedPost.data.title}
+                </a>
+              </h4>
+              {relatedPost.data.description && (
+                <p class="text-xs text-base-content/70">
+                  {relatedPost.data.description.slice(0, 100)}...
+                </p>
+              )}
+            </div>
+          </div>
+        ))}
+      </div>
+    </section>
+  )}
+
+  <!-- Back to top button -->
+  <button
+    id="back-to-top"
+    class="fixed bottom-5 right-5 btn btn-circle btn-primary opacity-0 transition-opacity duration-300"
+    onclick="window.scrollTo({ top: 0, behavior: 'smooth' })"
+    type="button"
+  >
+    ↑
+  </button>
+</PostLayout>
+
+<script>
+  // Show/hide back to top button
+  window.addEventListener('scroll', () => {
+    const button = document.getElementById('back-to-top');
+    if (button) {
+      if (window.scrollY > 300) {
+        button.classList.remove('opacity-0');
+        button.classList.add('opacity-100');
+      } else {
+        button.classList.remove('opacity-100');
+        button.classList.add('opacity-0');
+      }
+    }
+  });
+</script>

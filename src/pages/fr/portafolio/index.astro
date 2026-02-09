@@ -1,0 +1,35 @@
+---
+import { getCollection } from 'astro:content';
+import ProjectCard from '../../../components/ProjectCard.astro';
+import BlogLayout from '../../../layouts/BlogLayout.astro';
+import { getLanguageFromFilename } from '../../../utils/i18n';
+
+// Get all projects and sort by date
+const allProjects = await getCollection('projects');
+const projects = allProjects
+  .filter(project => getLanguageFromFilename(project.id) === 'en')
+  .sort(
+    (a, b) => new Date(b.data.date).getTime() - new Date(a.data.date).getTime(),
+  );
+
+const title = 'Portfolio | Iván Gabriel';
+const description = 'Projects and work by Iván Gabriel. A selection of projects and work I have done throughout my professional career.';
+---
+
+<BlogLayout title={title} description={description} locale="fr">
+  <div class="space-y-10">
+    <section class="space-y-4">
+      <div class="flex items-center space-x-4">
+        <h2 class="mono text-sm font-bold text-zinc-400 tracking-wider">
+          PROJECTS_DB
+        </h2>
+        <div class="h-[1px] flex-grow bg-zinc-800"></div>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {projects.map((project) => (
+          <ProjectCard project={project} locale="fr" />
+        ))}
+      </div>
+    </section>
+  </div>
+</BlogLayout>

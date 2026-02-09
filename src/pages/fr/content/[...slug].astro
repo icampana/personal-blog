@@ -1,0 +1,119 @@
+---
+import { type CollectionEntry, getCollection } from 'astro:content';
+import BlogLayout from '../../../layouts/BlogLayout.astro';
+import { getPageUrl } from '../../../utils/client';
+import {
+  getLanguageFromFilename,
+  stripLocalePrefix,
+  LOCALES,
+  type Locale,
+  getCleanSlug,
+} from '../../../utils/i18n';
+
+export async function getStaticPaths() {
+  const pages = await getCollection('pages');
+
+  // Get all Spanish pages (source of truth)
+  const spanishPages = pages.filter(
+    (page) => getLanguageFromFilename(page.id) === LOCALES.DEFAULT || getLanguageFromFilename(page.id) === null,
+  );
+
+  return spanishPages.map((page) => {
+    const cleanSlug = getCleanSlug(page.slug);
+    const url = getPageUrl(page, LOCALES.FRENCH);
+    // Remove locale prefix and the /content path, then split into slug parts
+    const pathWithoutLocale = stripLocalePrefix(url);
+    const slugParts = pathWithoutLocale.replace('/content/', '').split('/').filter(Boolean);
+
+    // Check if translation exists
+    const translationExists = pages.some(
+      (p) => {
+        const pLang = getLanguageFromFilename(p.id);
+        const pCleanSlug = getCleanSlug(p.slug);
+        return pLang === LOCALES.FRENCH && pCleanSlug === cleanSlug;
+      },
+    );
+
+    // If translation exists, use it; otherwise use Spanish page
+    const pageToRender = translationExists
+      ? pages.find(
+          (p) => {
+            const pLang = getLanguageFromFilename(p.id);
+            const pCleanSlug = getCleanSlug(p.slug);
+            return pLang === LOCALES.FRENCH && pCleanSlug === cleanSlug;
+          },
+        )
+      : page;
+
+    return {
+      params: { slug: slugParts.join('/') },
+      props: {
+        page: pageToRender!,
+        locale: LOCALES.FRENCH,
+        isFallback: !translationExists,
+      },
+    };
+  });
+}
+
+interface Props {
+  page: CollectionEntry<'pages'>;
+  locale: Locale;
+  isFallback: boolean;
+}
+
+const { page, locale, isFallback } = Astro.props;
+const { title, description } = page.data;
+const { Content } = await page.render();
+---
+
+<BlogLayout title={title} description={description} locale={locale}>
+  <!-- Fallback banner -->
+  {isFallback && (
+    <div class="alert alert-warning mb-6" role="alert">
+      <svg xmlns="http://www.w3.org/2000/svg" class="stroke-current shrink-0 h-6 w-6" fill="none" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+      </svg>
+      <span>
+        <strong>Note:</strong> This content is not yet available in English. Displaying to original Spanish version.
+      </span>
+    </div>
+  )}
+
+  <article class="max-w-4xl mx-auto">
+    <header class="mb-8">
+      <h1 class="text-4xl font-bold mb-4 text-base-content">{title}</h1>
+      {description && (
+        <p class="text-lg text-base-content/80 mb-6">{description}</p>
+      )}
+    </header>
+
+    <div class="prose prose-lg max-w-none">
+      <Content />
+    </div>
+  </article>
+</BlogLayout>
+
+<style>
+  @reference "../../../styles/globals.css";
+
+  .prose {
+    @apply text-base-content;
+  }
+
+  .prose h1, .prose h2, .prose h3, .prose h4, .prose h5, .prose h6 {
+    @apply text-base-content;
+  }
+
+  .prose code {
+    @apply bg-base-200 text-base-content px-1 py-0.5 rounded;
+  }
+
+  .prose pre {
+    @apply bg-base-200 text-base-content;
+  }
+
+  .prose blockquote {
+    @apply border-l-primary text-base-content;
+  }
+</style>

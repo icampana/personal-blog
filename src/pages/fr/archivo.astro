@@ -1,0 +1,119 @@
+---
+import { getCollection } from 'astro:content';
+import { format } from 'date-fns';
+import { enUS } from 'date-fns/locale';
+import BlogLayout from '../../layouts/BlogLayout.astro';
+import { getLanguageFromFilename } from '../../utils/i18n';
+
+const title = 'Post Archive';
+const description = 'Explore all posts organized by date';
+
+// Get all posts and group them by year and month
+const allPosts = await getCollection('posts');
+const posts = allPosts.filter(post => getLanguageFromFilename(post.id) === 'en');
+
+interface YearMonthGroup {
+  year: string;
+  months: {
+    month: string;
+    monthName: string;
+    count: number;
+  }[];
+}
+
+const dateGroups = new Map<string, Map<string, number>>();
+
+// Group posts by year and month
+posts.forEach((post) => {
+  const date = new Date(post.data.date);
+  const year = date.getFullYear().toString();
+  const month = (date.getMonth() + 1).toString().padStart(2, '0');
+
+  if (!dateGroups.has(year)) {
+    dateGroups.set(year, new Map());
+  }
+
+  const yearGroup = dateGroups.get(year);
+  if (yearGroup) {
+    yearGroup.set(month, (yearGroup.get(month) || 0) + 1);
+  }
+});
+
+// Convert to sorted array structure
+const archive: YearMonthGroup[] = Array.from(dateGroups.entries())
+  .sort(([yearA], [yearB]) => parseInt(yearB) - parseInt(yearA)) // Sort years descending
+  .map(([year, monthsMap]) => {
+    const months = Array.from(monthsMap.entries())
+      .sort(([monthA], [monthB]) => parseInt(monthB) - parseInt(monthA)) // Sort months descending
+      .map(([month, count]) => {
+        const monthDate = new Date(parseInt(year), parseInt(month) - 1, 1);
+        const monthName = format(monthDate, 'MMMM', { locale: enUS });
+        const capitalizedMonth = monthName.charAt(0).toUpperCase() + monthName.slice(1);
+
+        return {
+          month,
+          monthName: capitalizedMonth,
+          count,
+        };
+      });
+
+    return {
+      year,
+      months,
+    };
+  });
+
+// Calculate total posts
+const totalPosts = posts.length;
+const yearsSpan = archive.length > 0 ? `${archive[archive.length - 1].year} - ${archive[0].year}` : '';
+---
+
+<BlogLayout title={title} description={description} locale="fr">
+  <div class="px-2">
+    <div class="mb-8">
+      <h1 class="text-4xl font-bold mb-4">
+        Post Archive
+      </h1>
+      <p class="text-lg text-base-content/70 mb-2">
+        {totalPosts} {totalPosts === 1 ? 'post published' : 'posts published'}
+        {yearsSpan && <span> ({yearsSpan})</span>}
+      </p>
+      <p class="text-base text-base-content/60">
+        Explore all posts organized by date
+      </p>
+    </div>
+
+    <div class="space-y-8">
+      {archive.map((yearGroup) => (
+        <div class="card bg-base-200">
+          <div class="card-body">
+            <h2 class="card-title text-3xl mb-4">{yearGroup.year}</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+              {yearGroup.months.map((monthData) => (
+                <a
+                  href={`/fr/by-date/${yearGroup.year}/${monthData.month}`}
+                  class="btn btn-outline justify-between"
+                >
+                  <span class="font-semibold">{monthData.monthName}</span>
+                  <span class="badge badge-primary">{monthData.count}</span>
+                </a>
+              ))}
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+
+    {archive.length === 0 && (
+      <div class="alert alert-info">
+        <span>No posts available in the archive.</span>
+      </div>
+    )}
+
+    <div class="mt-12 text-center">
+      <a href="/fr/posts" class="btn btn-outline">
+        View all posts
+      </a>
+    </div>
+  </div>
+</BlogLayout>
