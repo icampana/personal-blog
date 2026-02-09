@@ -1,11 +1,11 @@
 ---
 import { getCollection } from 'astro:content';
 import { format } from 'date-fns';
-import { es } from 'date-fns/locale';
-import PostCard from '../../../components/PostCard.astro';
-import BlogLayout from '../../../layouts/BlogLayout.astro';
-import { sortPostsByDate } from '../../../utils/client';
-import { getLanguageFromFilename } from '../../../utils/i18n';
+import { ptBR } from 'date-fns/locale';
+import PostCard from '../../../../components/PostCard.astro';
+import BlogLayout from '../../../../layouts/BlogLayout.astro';
+import { sortPostsByDate } from '../../../../utils/client';
+import { getLanguageFromFilename } from '../../../../utils/i18n';
 
 export async function getStaticPaths() {
   const allPosts = await getCollection('posts');
@@ -13,9 +13,8 @@ export async function getStaticPaths() {
 
   // Group posts by year/month
   allPosts.forEach((post) => {
-    // Filter for Spanish posts
-    const lang = getLanguageFromFilename(post.id);
-    if (lang !== 'es' && lang !== null) return;
+    // Filter for Portuguese posts
+    if (getLanguageFromFilename(post.id) !== 'pt') return;
 
     const date = new Date(post.data.date);
     const year = date.getFullYear().toString();
@@ -40,23 +39,23 @@ export async function getStaticPaths() {
 const { posts, year, month } = Astro.props;
 const sortedPosts = sortPostsByDate(posts);
 
-// Format the month name in Spanish
+// Format the month name in Portuguese
 const monthDate = new Date(parseInt(year), parseInt(month) - 1, 1);
-const monthName = format(monthDate, 'MMMM', { locale: es });
+const monthName = format(monthDate, 'MMMM', { locale: ptBR });
 const capitalizedMonth = monthName.charAt(0).toUpperCase() + monthName.slice(1);
 
-const title = `Artículos de ${capitalizedMonth} ${year}`;
-const description = `Todos los artículos publicados en ${capitalizedMonth} de ${year}`;
+const title = `Artigos de ${capitalizedMonth} ${year}`;
+const description = `Todos os artigos publicados em ${capitalizedMonth} de ${year}`;
 ---
 
-<BlogLayout title={title} description={description}>
+<BlogLayout title={title} description={description} locale="pt">
   <div class="px-2">
     <div class="mb-8">
       <h1 class="text-4xl font-bold mb-4">
-        Artículos de {capitalizedMonth} {year}
+        Artigos de {capitalizedMonth} {year}
       </h1>
       <p class="text-lg text-base-content/70">
-        {sortedPosts.length} {sortedPosts.length === 1 ? 'artículo publicado' : 'artículos publicados'}
+        {sortedPosts.length} {sortedPosts.length === 1 ? 'artigo publicado' : 'artigos publicados'}
       </p>
     </div>
 
@@ -67,8 +66,8 @@ const description = `Todos los artículos publicados en ${capitalizedMonth} de $
     </div>
 
     <div class="mt-12 text-center">
-      <a href="/posts" class="btn btn-outline">
-        ← Ver todas las publicaciones
+      <a href="/pt/posts" class="btn btn-outline">
+        ← Ver todas as publicações
       </a>
     </div>
   </div>
