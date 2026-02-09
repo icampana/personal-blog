@@ -164,7 +164,7 @@ const imagePhoto = generateImgxUrl(
               target='_blank'
               rel='noopener noreferrer'
               class='btn btn-ghost btn-sm text-gray-700 hover:bg-gray-50'
-              title='Mi perfil en GitHub'>
+               title={locale === 'en' ? 'My GitHub profile' : locale === 'pt' ? 'Meu perfil no GitHub' : 'Mi perfil en GitHub'}>
               <title>GitHub</title>
               <svg class='w-5 h-5' fill='currentColor' viewBox='0 0 24 24'>
                 <path
@@ -178,7 +178,7 @@ const imagePhoto = generateImgxUrl(
               target='_blank'
               rel='noopener noreferrer'
               class='btn btn-ghost btn-sm text-blue-700 hover:bg-blue-50'
-              title='Mi perfil en LinkedIn'>
+               title={locale === 'en' ? 'My LinkedIn profile' : locale === 'pt' ? 'Meu perfil no LinkedIn' : 'Mi perfil en LinkedIn'}>
               <title>LinkedIn</title>
               <svg class='w-5 h-5' fill='currentColor' viewBox='0 0 24 24'>
                 <path
@@ -192,7 +192,7 @@ const imagePhoto = generateImgxUrl(
               target='_blank'
               rel='noopener noreferrer'
               class='btn btn-ghost btn-sm text-red-600 hover:bg-red-50'
-              title='Mi canal de YouTube'>
+               title={locale === 'en' ? 'My YouTube channel' : locale === 'pt' ? 'Meu canal do YouTube' : 'Mi canal de YouTube'}>
               <title>YouTube</title>
               <svg class='w-5 h-5' fill='currentColor' viewBox='0 0 24 24'>
                 <path
@@ -202,7 +202,7 @@ const imagePhoto = generateImgxUrl(
             </a>
 
             <a
-              href='https://anchor.fm/e-van'
+              href={locale === 'en' || locale === 'pt' ? '/en' : 'https://anchor.fm/e-van'}
               target='_blank'
               rel='noopener noreferrer'
               class='btn btn-ghost btn-sm text-orange-600 hover:bg-orange-50'

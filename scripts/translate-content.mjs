@@ -42,7 +42,7 @@ const PROMPTS = {
     3. TERMINOLOGY: Use standard industry terms (Stack, Deployment, Pipeline, CI/CD, etc).
     4. TONE: Professional, "Senior Engineer" voice.
     5. FORMAT: Return ONLY the raw Markdown content. No wrapper text, no explanations.
-    6. YAML FORMAT: Ensure frontmatter is valid YAML (preserve quotes, proper indentation).
+    6. YAML FORMAT: Ensure frontmatter is valid YAML. IMPORTANT: If the title contains a colon (:), you MUST wrap the title in double quotes. Example: title: "My Title: Subtitle"
 
     Input Content:
   `,
@@ -56,7 +56,7 @@ const PROMPTS = {
     3. TERMINOLOGY: Use standard Brazilian Portuguese tech terms (banco de dados, implementação, lançamento, etc).
     4. TONE: Professional, "Senior Engineer" voice.
     5. FORMAT: Return ONLY the raw Markdown content. No wrapper text, no explanations.
-    6. YAML FORMAT: Ensure frontmatter is valid YAML (preserve quotes, proper indentation).
+    6. YAML FORMAT: Ensure frontmatter is valid YAML. IMPORTANT: If the title contains a colon (:), you MUST wrap the title in double quotes. Example: title: "My Title: Subtitle"
 
     Input Content:
   `,
