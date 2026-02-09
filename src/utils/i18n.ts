@@ -5,19 +5,20 @@ export const LOCALES = {
   DEFAULT: 'es',
   ENGLISH: 'en',
   PORTUGUESE: 'pt',
+  FRENCH: 'fr',
 } as const;
 
 export type Locale = (typeof LOCALES)[keyof typeof LOCALES];
 
 // Regex patterns
-const LANGUAGE_SUFFIX_REGEX = /\.(en|pt)(\.md)?$/i;
-const LOCALE_PREFIX_REGEX = /^(\/(en|pt)\/)/;
+const LANGUAGE_SUFFIX_REGEX = /\.(en|pt|fr)(\.md)?$/i;
+const LOCALE_PREFIX_REGEX = /^(\/(en|pt|fr)\/)/;
 
 /**
  * Extract language from URL path
  */
 export function getLocaleFromPath(pathname: string): Locale {
-  const match = pathname.match(/^\/(en|pt)\//);
+  const match = pathname.match(/^\/(en|pt|fr)\//);
   return (match?.[1] as Locale) || LOCALES.DEFAULT;
 }
 
@@ -58,7 +59,7 @@ export function getCleanSlug(slug: string): string {
     cleanSlug = parts.slice(3).join('-');
   }
 
-  // Remove /index suffix for folder-based content (handles Spanish /index, English /indexen, Portuguese /indexpt)
+  // Remove /index suffix for folder-based content (handles Spanish /index, English /indexen, Portuguese /indexpt, French /indexfr)
   cleanSlug = cleanSlug.replace(/\/?index(en|pt)?$/, '');
 
   return cleanSlug;

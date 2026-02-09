@@ -1,11 +1,29 @@
 import type { CollectionEntry } from 'astro:content';
 import { format } from 'date-fns';
-import { es } from 'date-fns/locale';
+import {
+  type Locale as DateFnsLocale,
+  es as esLocale,
+  fr as frLocale,
+  pt as ptLocale,
+} from 'date-fns/locale';
 import type { Locale } from './i18n';
 import { getCleanSlug, stripLanguageSuffix } from './i18n';
 
-export function formatDate(date: Date): string {
-  return format(date, "d 'de' MMMM 'de' yyyy", { locale: es });
+const DATE_LOCALES: Partial<Record<Locale, DateFnsLocale>> = {
+  es: esLocale,
+  pt: ptLocale,
+  fr: frLocale,
+};
+
+export function formatDate(date: Date, locale: Locale = 'es'): string {
+  const dateLocale = DATE_LOCALES[locale];
+  const formatString =
+    locale === 'en'
+      ? 'MMMM d, yyyy'
+      : locale === 'fr'
+        ? 'd MMMM yyyy'
+        : "d 'de' MMMM 'de' yyyy";
+  return format(date, formatString, { locale: dateLocale });
 }
 
 export function getPostUrl(
