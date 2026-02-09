@@ -70,6 +70,7 @@
     "striptags": "^3.2.0",
     "theme-change": "^2.5.0",
     "tinacms": "^3.4.0",
+    "ts-pattern": "^5.9.0",
     "unist-util-visit": "^5.0.0"
   },
   "pnpm": {
