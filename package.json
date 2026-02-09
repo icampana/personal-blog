@@ -41,7 +41,8 @@
     "test:final": "node scripts/run-final-tests.js",
     "translate": "node scripts/translate-content.mjs",
     "translate:en": "node scripts/translate-content.mjs --target en",
-    "translate:pt": "node scripts/translate-content.mjs --target pt"
+    "translate:pt": "node scripts/translate-content.mjs --target pt",
+    "translate:fr": "node scripts/translate-content.mjs --target fr"
   },
   "dependencies": {
     "@astrojs/mdx": "^4.3.13",
