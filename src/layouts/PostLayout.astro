@@ -11,6 +11,7 @@ import type { Locale } from '../utils/i18n';
 import { getAvailableTranslations, getCleanSlug } from '../utils/i18n';
 import { getCollection } from 'astro:content';
 import { getPostUrl } from '../utils/client';
+import { match } from 'ts-pattern';
 
 export interface Props {
   post: CollectionEntry<'posts'>;
@@ -37,13 +38,11 @@ for (const [lang, slug] of Object.entries(availableTranslations)) {
 }
 
 const readingTime = getReadingTime(post.body);
-const readingTimeText = locale === 'en'
-  ? `${Math.round(readingTime.minutes)} min read`
-  : locale === 'pt'
-  ? `${Math.round(readingTime.minutes)} min de leitura`
-  : locale === 'fr'
-  ? `${Math.round(readingTime.minutes)} min de lecture`
-  : `${Math.round(readingTime.minutes)} minutos de lectura`;
+const readingTimeText = match(locale)
+  .with('en', () => `${Math.round(readingTime.minutes)} min read`)
+  .with('pt', () => `${Math.round(readingTime.minutes)} min de leitura`)
+  .with('fr', () => `${Math.round(readingTime.minutes)} min de lecture`)
+  .otherwise(() => `${Math.round(readingTime.minutes)} minutos de lectura`);
 
 const imagePath = normalizeImagePath(featuredImage);
 ---
