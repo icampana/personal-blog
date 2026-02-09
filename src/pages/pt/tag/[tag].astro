@@ -1,0 +1,64 @@
+---
+import { getCollection } from 'astro:content';
+import PostCard from '../../../components/PostCard.astro';
+import BlogLayout from '../../../layouts/BlogLayout.astro';
+import { getAllTags, getPostsByTag, sortPostsByDate } from '../../../utils/client';
+import { getLanguageFromFilename } from '../../../utils/i18n';
+
+export async function getStaticPaths() {
+  const allPosts = await getCollection('posts');
+  // Filter for Portuguese posts only
+  const portuguesePosts = allPosts.filter(post => getLanguageFromFilename(post.id) === 'pt');
+  
+  const allTags = getAllTags(portuguesePosts);
+
+  return allTags.map((tag) => ({
+    params: { tag: tag.toLowerCase() },
+    props: { tag, posts: portuguesePosts },
+  }));
+}
+
+const { tag, posts } = Astro.props;
+
+// Filter by tag using the pre-filtered posts passed from getStaticPaths
+const tagPosts = sortPostsByDate(getPostsByTag(posts, tag));
+
+const title = `Artigos marcados com "${tag}"`;
+const description = `Todos os artigos do blog marcados com ${tag}`;
+---
+
+<BlogLayout title={title} description={description} locale="pt">
+  <div class="px-2">
+    <div class="mb-8">
+      <h1 class="text-4xl font-bold mb-4">
+        Artigos marcados com "{tag}"
+      </h1>
+      <p class="text-lg text-base-content/70">
+        {tagPosts.length} {tagPosts.length === 1 ? 'artigo encontrado' : 'artigos encontrados'}
+      </p>
+    </div>
+
+    {tagPosts.length > 0 ? (
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {tagPosts.map((post) => (
+          <PostCard post={post} />
+        ))}
+      </div>
+    ) : (
+      <div class="text-center py-12">
+        <p class="text-xl text-base-content/60 mb-4">
+          Não foram encontrados artigos com esta etiqueta.
+        </p>
+        <a href="/pt/tag" class="btn btn-primary">
+          Ver todas as etiquetas
+        </a>
+      </div>
+    )}
+
+    <div class="mt-12 text-center">
+      <a href="/pt/tag" class="btn btn-outline">
+        ← Ver todas as etiquetas
+      </a>
+    </div>
+  </div>
+</BlogLayout>

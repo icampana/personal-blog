@@ -1,0 +1,64 @@
+---
+import { getCollection } from 'astro:content';
+import PostCard from '../../../components/PostCard.astro';
+import BlogLayout from '../../../layouts/BlogLayout.astro';
+import { getAllTags, getPostsByTag, sortPostsByDate } from '../../../utils/client';
+import { getLanguageFromFilename } from '../../../utils/i18n';
+
+export async function getStaticPaths() {
+  const allPosts = await getCollection('posts');
+  // Filter for English posts only
+  const englishPosts = allPosts.filter(post => getLanguageFromFilename(post.id) === 'en');
+  
+  const allTags = getAllTags(englishPosts);
+
+  return allTags.map((tag) => ({
+    params: { tag: tag.toLowerCase() },
+    props: { tag, posts: englishPosts },
+  }));
+}
+
+const { tag, posts } = Astro.props;
+
+// Filter by tag using the pre-filtered posts passed from getStaticPaths
+const tagPosts = sortPostsByDate(getPostsByTag(posts, tag));
+
+const title = `Articles tagged with "${tag}"`;
+const description = `All blog articles tagged with ${tag}`;
+---
+
+<BlogLayout title={title} description={description} locale="en">
+  <div class="px-2">
+    <div class="mb-8">
+      <h1 class="text-4xl font-bold mb-4">
+        Articles tagged with "{tag}"
+      </h1>
+      <p class="text-lg text-base-content/70">
+        {tagPosts.length} {tagPosts.length === 1 ? 'article found' : 'articles found'}
+      </p>
+    </div>
+
+    {tagPosts.length > 0 ? (
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {tagPosts.map((post) => (
+          <PostCard post={post} />
+        ))}
+      </div>
+    ) : (
+      <div class="text-center py-12">
+        <p class="text-xl text-base-content/60 mb-4">
+          No articles found with this tag.
+        </p>
+        <a href="/en/tag" class="btn btn-primary">
+          View all tags
+        </a>
+      </div>
+    )}
+
+    <div class="mt-12 text-center">
+      <a href="/en/tag" class="btn btn-outline">
+        ← View all tags
+      </a>
+    </div>
+  </div>
+</BlogLayout>

@@ -3,28 +3,34 @@ import { getCollection } from 'astro:content';
 import PostCard from '../../components/PostCard.astro';
 import BlogLayout from '../../layouts/BlogLayout.astro';
 import { getAllTags, getPostsByTag, sortPostsByDate } from '../../utils/client';
+import { getLanguageFromFilename } from '../../utils/i18n';
 
 export async function getStaticPaths() {
   const allPosts = await getCollection('posts');
-  const allTags = getAllTags(allPosts);
+  // Filter for Spanish posts only (default locale)
+  const spanishPosts = allPosts.filter(post => {
+    const lang = getLanguageFromFilename(post.id);
+    return lang === 'es' || lang === null;
+  });
+  
+  const allTags = getAllTags(spanishPosts);
 
   return allTags.map((tag) => ({
     params: { tag: tag.toLowerCase() },
-    props: { tag },
+    props: { tag, posts: spanishPosts },
   }));
 }
 
-const { tag } = Astro.props;
+const { tag, posts } = Astro.props;
 
-// Get all posts and filter by tag
-const allPosts = await getCollection('posts');
-const tagPosts = sortPostsByDate(getPostsByTag(allPosts, tag));
+// Filter by tag using the pre-filtered posts passed from getStaticPaths
+const tagPosts = sortPostsByDate(getPostsByTag(posts, tag));
 
 const title = `Artículos etiquetados con "${tag}"`;
 const description = `Todos los artículos del blog etiquetados con ${tag}`;
 ---
 
-<BlogLayout title={title} description={description}>
+<BlogLayout title={title} description={description} locale="es">
   <div class="px-2">
     <div class="mb-8">
       <h1 class="text-4xl font-bold mb-4">
