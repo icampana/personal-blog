@@ -9,7 +9,7 @@ dotenv.config();
 
 // Configuration
 const SOURCE_LANG = 'es';
-const TARGET_LANGUAGES = ['en', 'pt']; // Translate to both English and Portuguese
+const TARGET_LANGUAGES = ['en', 'pt', 'fr']; // Translate to English, Portuguese, and French
 const CONTENT_DIRS = [
   'src/content/posts',
   'src/content/pages',
@@ -60,6 +60,20 @@ const PROMPTS = {
 
     Input Content:
   `,
+  fr: `
+    Role: Senior Technical Translator (French)
+    Task: Translate the following Markdown content from Spanish to French
+
+    Strict Rules:
+    1. PRESERVE Frontmatter: Only translate 'title' and 'description' values. Keep all keys exactly as is.
+    2. CODE BLOCKS: Do NOT translate content inside \`\`\` blocks or inline code.
+    3. TERMINOLOGY: Use standard French tech terms (base de données, implémentation, déploiement, etc).
+    4. TONE: Professional, "Senior Engineer" voice.
+    5. FORMAT: Return ONLY the raw Markdown content. No wrapper text, no explanations.
+    6. YAML FORMAT: Ensure frontmatter is valid YAML. IMPORTANT: If the title contains a colon (:), you MUST wrap the title in double quotes. Example: title: "My Title: Subtitle"
+
+    Input Content:
+  `,
 };
 
 async function translateFile(filePath, targetLang) {
@@ -100,7 +114,7 @@ async function translateFile(filePath, targetLang) {
 
     try {
       const result = await model.generateContent(prompt);
-      const translatedContent = result.response.text();
+      let translatedContent = result.response.text();
 
       // Validate that we got content back
       if (!translatedContent || translatedContent.length < 10) {
@@ -109,6 +123,12 @@ async function translateFile(filePath, targetLang) {
         );
         return;
       }
+
+      // Remove markdown code block wrappers if present
+      // Sometimes Gemini wraps output in ```markdown or ```yaml blocks
+      translatedContent = translatedContent
+        .replace(/^```(markdown|yaml)?\n?/i, '')
+        .replace(/\n?```$/i, '');
 
       // Ensure directory exists
       await fs.mkdir(path.dirname(targetPath), { recursive: true });
@@ -133,9 +153,9 @@ async function translateFile(filePath, targetLang) {
 
 async function processDirectory(dir) {
   try {
-    // Find all .md files (excluding .en.md and .pt.md)
+    // Find all .md files (excluding .en.md, .pt.md, and .fr.md)
     const files = await glob(`${dir}/**/*.md`, {
-      ignore: ['**/*.en.md', '**/*.pt.md'],
+      ignore: ['**/*.en.md', '**/*.pt.md', '**/*.fr.md'],
     });
 
     console.log(`📂 Found ${files.length} source files in ${dir}`);
@@ -145,7 +165,7 @@ async function processDirectory(dir) {
 
     for (const file of files) {
       // Only process non-language-specific files (Spanish originals)
-      if (!file.match(/\.(en|pt)\.md$/i)) {
+      if (!file.match(/\.(en|pt|fr)\.md$/i)) {
         for (const targetLang of TARGET_LANGUAGES) {
           await translateFile(file, targetLang);
         }

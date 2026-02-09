@@ -1,19 +1,21 @@
 # Translation Workflow
 
-This project supports multilanguage content (Spanish, English, Portuguese) using a file-based approach with automated translation via Gemini AI.
+This project supports multilanguage content (Spanish, English, Portuguese, French) using a file-based approach with automated translation via Gemini AI.
 
 ## Architecture
 
 - **Default Language**: Spanish (`es`) - Source of truth.
-- **Supported Languages**: English (`en`), Portuguese (`pt`).
+- **Supported Languages**: English (`en`), Portuguese (`pt`), French (`fr`).
 - **File Structure**:
   - Spanish (Original): `content/posts/my-post.md`
   - English (Generated): `content/posts/my-post.en.md`
   - Portuguese (Generated): `content/posts/my-post.pt.md`
+  - French (Generated): `content/posts/my-post.fr.md`
 - **Routing**:
   - Spanish: `/posts/my-post`
   - English: `/en/posts/my-post`
   - Portuguese: `/pt/posts/my-post`
+  - French: `/fr/posts/my-post`
 
 ## How to Translate Content
 
@@ -46,17 +48,22 @@ Run the following commands in your terminal:
     pnpm run translate:pt
     ```
 
+-   **Translate only to French**:
+    ```bash
+    pnpm run translate:fr
+    ```
+
 ### How it Works
 
 1.  The script scans `src/content/posts`, `src/content/pages`, `src/content/projects`, and `src/content/videos`.
-2.  It identifies source files (`.md`) that do not have a corresponding `.en.md` or `.pt.md` file.
+2.  It identifies source files (`.md`) that do not have a corresponding `.en.md`, `.pt.md`, or `.fr.md` file.
 3.  It sends the content to Gemini API with a specific prompt to translate frontmatter and markdown body while preserving structure.
 4.  It saves the translated file with the correct suffix.
 
 ## CMS Integration (TinaCMS)
 
 -   **Editing**: You only edit the **Spanish** versions in TinaCMS.
--   **Visibility**: The CMS is configured to hide `.en.md` and `.pt.md` files to prevent confusion.
+-   **Visibility**: The CMS is configured to hide `.en.md`, `.pt.md`, and `.fr.md` files to prevent confusion.
 -   **Workflow**:
     1.  Write/Edit post in Spanish via TinaCMS.
     2.  Save changes.
