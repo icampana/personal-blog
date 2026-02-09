@@ -68,7 +68,11 @@ async function translateFile(filePath, targetLang) {
     const { data, content } = matter(fileContent);
 
     // Check if post is recent enough (2022 onwards)
-    if (data.date) {
+    // EXCEPTION: Always translate pages and projects regardless of date
+    const isPage = filePath.includes('src/content/pages');
+    const isProject = filePath.includes('src/content/projects');
+    
+    if (data.date && !isPage && !isProject) {
       const postDate = new Date(data.date);
       if (postDate < DATE_CUTOFF) {
         console.log(
