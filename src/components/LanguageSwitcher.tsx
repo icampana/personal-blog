@@ -11,16 +11,18 @@ const LANGUAGE_LABELS: Record<Locale, string> = {
   es: 'Español',
   en: 'English',
   pt: 'Português',
+  fr: 'Français',
 };
 
 const LANGUAGE_FLAGS: Record<Locale, string> = {
   es: '🇪🇸',
   en: '🇺🇸',
   pt: '🇵🇹',
+  fr: '🇫🇷',
 };
 
 export default function LanguageSwitcher({
-  availableLanguages = ['es', 'en', 'pt'],
+  availableLanguages = ['es', 'en', 'pt', 'fr'],
   currentLocale,
   translations,
 }: LanguageSwitcherProps) {
@@ -32,7 +34,7 @@ export default function LanguageSwitcher({
       return;
     }
     const path = window.location.pathname;
-    const match = path.match(/^\/(en|pt)\//);
+    const match = path.match(/^\/(en|pt|fr)\//);
     setLocale((match?.[1] as Locale) || 'es');
   }, [currentLocale]);
 
@@ -48,7 +50,7 @@ export default function LanguageSwitcher({
     let newPath: string;
 
     // Remove current locale prefix if present
-    const pathWithoutLocale = path.replace(/^\/(en|pt)/, '');
+    const pathWithoutLocale = path.replace(/^\/(en|pt|fr)/, '');
 
     if (targetLocale === 'es') {
       newPath = pathWithoutLocale || '/';
