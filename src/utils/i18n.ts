@@ -60,7 +60,7 @@ export function getCleanSlug(slug: string): string {
   }
 
   // Remove /index suffix for folder-based content (handles Spanish /index, English /indexen, Portuguese /indexpt, French /indexfr)
-  cleanSlug = cleanSlug.replace(/\/?index(en|pt)?$/, '');
+  cleanSlug = cleanSlug.replace(/\/?index(en|pt|fr)?$/, '');
 
   return cleanSlug;
 }
