@@ -15,7 +15,9 @@ Se você quer escalar suas soluções e parar de "queimar" tokens desnecessariam
 
 ## O Fantasma na Máquina: O "Context Rot" e a Gestão de Tokens
 
-Um dos maiores desafios no desenvolvimento assistido por IA é a degradação do contexto. À medida que uma conversa se alonga, o modelo tende a perder o fio das decisões anteriores, o que gera inconsistências e alucinações. Em média, o contexto começa a perder "conexões" a [partir de cerca de 60%](https://www.youtube.com/watch?v=XqA3k0iM2xo), por isso é ideal usar uma ferramenta que permita ver o uso do contexto atual (tanto Claude quanto Kilocode permitem vê-lo na tela, e o Opencode tem uma extensão para fazer o mesmo). Por isso, o ideal é, por exemplo, fazer o planejamento e, após terminá-lo, passá-lo para um arquivo markdown para poder usá-lo como referência e, finalmente, limpar o contexto (iniciar uma nova sessão) para começar a execução usando esse plano gerado com um contexto limpo, por isso é preciso dedicar muito tempo a ter um plano muito bom. De fato, nas últimas versões do Claude Code, isso já é feito automaticamente.
+Um dos maiores desafios no desenvolvimento assistido por IA é a degradação do contexto. À medida que uma conversa se alonga, o modelo tende a perder o fio das decisões anteriores, o que gera inconsistências e alucinações. Em média, o contexto começa a perder "conexões" a partir de cerca de 60%, por isso é ideal usar uma ferramenta que permita ver o uso do contexto atual (tanto Claude quanto Kilocode permitem vê-lo na tela, e o Opencode tem uma extensão para fazer o mesmo). Por isso, o ideal é, por exemplo, fazer o planejamento e, após terminá-lo, passá-lo para um arquivo markdown para poder usá-lo como referência e, finalmente, limpar o contexto (iniciar uma nova sessão) para começar a execução usando esse plano gerado com um contexto limpo, por isso é preciso dedicar muito tempo a ter um plano muito bom. De fato, nas últimas versões do Claude Code, isso já é feito automaticamente.
+
+[The Biggest Problem in AI Right Now Isn't Model Size - It's Context Management](https://www.youtube.com/watch?v=XqA3k0iM2xo)
 
 Para combater isso, a chave não é dar mais informação, mas sim informação melhor estruturada. É aqui que ferramentas como o Model Context Protocol (MCP) e sistemas de recuperação semântica fazem a diferença.
 
@@ -29,15 +31,15 @@ Muitos desenvolvedores cometem o erro de anexar arquivos inteiros ao chat. Eu ta
 
 Diferente de um simples grep, ler um arquivo `.ts` completo ou inclusive com rip-grep, que é uma grande melhoria sobre o grep normal para desenvolvedores, a Serena utiliza integrações do Language Server Protocol (LSP) para permitir que o agente "navegue" pelo código em nível de símbolos:
 
-*   **Busca Cirúrgica**: Em vez de ler 500 linhas, o agente usa `find_symbol` para extrair apenas a definição de uma classe ou função específica.
-*   **Mapeamento de Relacionamentos**: Com `find_referencing_symbols`, o agente pode entender quem está chamando uma função antes de modificá-la, evitando efeitos colaterais indesejados.
-*   **Edição de Alta Precisão**: Utiliza ferramentas como `insert_after_symbol` ou `replace_symbol_content`, o que garante que as alterações respeitem a sintaxe e a estrutura da linguagem sem reescrever arquivos inteiros.
+* **Busca Cirúrgica**: Em vez de ler 500 linhas, o agente usa `find_symbol` para extrair apenas a definição de uma classe ou função específica.
+* **Mapeamento de Relacionamentos**: Com `find_referencing_symbols`, o agente pode entender quem está chamando uma função antes de modificá-la, evitando efeitos colaterais indesejados.
+* **Edição de Alta Precisão**: Utiliza ferramentas como `insert_after_symbol` ou `replace_symbol_content`, o que garante que as alterações respeitem a sintaxe e a estrutura da linguagem sem reescrever arquivos inteiros.
 
 **Por que ajuda tanto?**
 
-*   **Economia de Tokens (até 70%)**: Ao enviar apenas os fragmentos relevantes (snippets) em vez de arquivos massivos, você reduz drasticamente o consumo da sua cota diária.
-*   **Mitigação de Alucinações:** Menos ruído no contexto significa que o modelo tem "foco a laser" na lógica que realmente importa.
-*   **Escalabilidade**: É a única forma viável de trabalhar em monorepos ou grandes bases de código onde é fisicamente impossível carregar todo o contexto em uma única janela.
+* **Economia de Tokens (até 70%)**: Ao enviar apenas os fragmentos relevantes (snippets) em vez de arquivos massivos, você reduz drasticamente o consumo da sua cota diária.
+* **Mitigação de Alucinações:** Menos ruído no contexto significa que o modelo tem "foco a laser" na lógica que realmente importa.
+* **Escalabilidade**: É a única forma viável de trabalhar em monorepos ou grandes bases de código onde é fisicamente impossível carregar todo o contexto em uma única janela.
 
 ### Spec-Driven Development (SDD): O fim da improvisação
 
@@ -47,9 +49,9 @@ Frameworks como [GSD (Get Shit Done)](https://github.com/gsd-build/get-shit-done
 
 #### O Workflow Ideal:
 
-*   **Context Engineering:** Definir o stack, as regras de estilo e a arquitetura base, no caso do GSD cria uma pasta `planning` com toda a documentação muito detalhada, como se fosse um plano de software padrão (Engenharia de Software 101).
-*   **Planejamento XML:** Os agentes processam melhor as instruções quando estão estruturadas (ex. tags `<task>`, `<verify>`, `<done>`).
-*   **Ciclo de Verificação:** Cada tarefa deve incluir uma etapa de validação automática antes de ser considerada terminada.
+* **Context Engineering:** Definir o stack, as regras de estilo e a arquitetura base, no caso do GSD cria uma pasta `planning` com toda a documentação muito detalhada, como se fosse um plano de software padrão (Engenharia de Software 101).
+* **Planejamento XML:** Os agentes processam melhor as instruções quando estão estruturadas (ex. tags `<task>`, `<verify>`, `<done>`).
+* **Ciclo de Verificação:** Cada tarefa deve incluir uma etapa de validação automática antes de ser considerada terminada.
 
 ![](/photos/2026/spec-driven.png)
 
@@ -67,14 +69,15 @@ Para parar de queimar tokens e começar a operar com precisão cirúrgica, você
 
 Antes de começar, certifique-se de ter instalado:
 
-*   **Python** (3.10+).
-*   Um cliente compatível com MCP (**Claude**, **Cursor**, **Open Code** ou **Windsurf**).
+* **Python** (3.10+).
+* Um cliente compatível com MCP (**Claude**, **Cursor**, **Open Code** ou **Windsurf**).
 
 ### 1. Pré-requisitos
 
 A melhor forma é utilizá-lo através do `uvx`; isso permite que a última versão seja automaticamente baixada e executada:
 
 Se você usa mac ou linux, pode usar homebrew:
+
 ```
 brew install uv
 ```
@@ -148,9 +151,9 @@ Se você vir que o agente utiliza ferramentas como `find_symbol` ou `find_refere
 
 ### 4. Dicas
 
-*   **Evite o ruído:** Você não precisa ter 20 servidores MCP ativos. Mantenha Serena como sua ferramenta principal para navegação de código e ative outros (como Google Calendar ou Slack) apenas quando a tarefa exigir; atualmente, eu só tenho 2 MCPs sempre ativos, Serena e SequentialThinking, o resto foi tudo para Skills.
-*   **Lazy Loading:** Lembre-se que Serena se destaca em projetos grandes. Se você está em um projeto de 3 arquivos, a diferença será mínima, mas em um **monorepo**, Serena é o que permitirá que você continue operando quando outros ficarem sem cota de tokens.
-*   **Problemas comuns:** Se a Serena não encontrar um símbolo, pode ser uma questão de indexação do LSP. Não force o agente; às vezes um simples `ls` ou `cat` manual ajuda a reorientar o contexto.
+* **Evite o ruído:** Você não precisa ter 20 servidores MCP ativos. Mantenha Serena como sua ferramenta principal para navegação de código e ative outros (como Google Calendar ou Slack) apenas quando a tarefa exigir; atualmente, eu só tenho 2 MCPs sempre ativos, Serena e SequentialThinking, o resto foi tudo para Skills.
+* **Lazy Loading:** Lembre-se que Serena se destaca em projetos grandes. Se você está em um projeto de 3 arquivos, a diferença será mínima, mas em um **monorepo**, Serena é o que permitirá que você continue operando quando outros ficarem sem cota de tokens.
+* **Problemas comuns:** Se a Serena não encontrar um símbolo, pode ser uma questão de indexação do LSP. Não force o agente; às vezes um simples `ls` ou `cat` manual ajuda a reorientar o contexto.
 
 ![](/photos/2026/use-cases.png)
 
