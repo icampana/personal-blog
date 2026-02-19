@@ -45,24 +45,23 @@ export default function LanguageSwitcher({
       return;
     }
 
-    // Fallback: Try to map the current path
+    // Fallback: Construct URL from current path
     const path = window.location.pathname;
-    let newPath: string;
 
     // Remove current locale prefix if present
     const pathWithoutLocale = path.replace(/^\/(en|pt|fr)/, '');
 
     if (targetLocale === 'es') {
-      newPath = pathWithoutLocale || '/';
+      // For Spanish, just remove any existing locale prefix
+      window.location.href = pathWithoutLocale || '/';
     } else {
-      // Ensure we don't double slash
+      // For other locales, add locale prefix to the clean path
       const cleanPath = pathWithoutLocale.startsWith('/')
         ? pathWithoutLocale
         : `/${pathWithoutLocale}`;
-      newPath = `/${targetLocale}${cleanPath}`;
+      window.location.href =
+        `/${targetLocale}${cleanPath}` || `/${targetLocale}/`;
     }
-
-    window.location.href = newPath;
   };
 
   return (
