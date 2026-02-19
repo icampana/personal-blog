@@ -50,11 +50,14 @@ Marcos de trabajo como [GSD (Get Shit Done)](https://github.com/gsd-build/get-sh
 * **Context Engineering:** Definir el stack, las reglas de estilo y la arquitectura base,  en el caso de GSD crea una carpeta planning con toda la documentación muy detallada, como si un plan de software estándar (Ingeniería de Software 101).
 * **Planificación XML:** Los agentes procesan mejor las instrucciones cuando están estructuradas (ej. etiquetas \<task>, \<verify>, \<done>).
 * **Ciclo de Verificación:** Cada tarea debe incluir un paso de validación automática antes de considerarse terminada.
-*
+
+![](/photos/2026/spec-driven.png)
 
 ### Sequential Thinking: El Proceso Cognitivo
 
 A veces, el modelo intenta resolver problemas complejos de un solo golpe. El uso de servidores MCP como el de [Sequential Thinking](https://mcpservers.org/servers/modelcontextprotocol/sequentialthinking) permite que la IA "piense en voz alta" y divida el problema en pasos secuenciales. Esto transforma a la IA de una herramienta generativa a un agente con capacidad de razonamiento crítico, capaz de admitir cuando una ruta no es viable y probar una alternativa antes de entregarte un resultado fallido.
+
+![](/photos/2026/sequential-thinking.png)
 
 ## Guía de Instalación y Configuración de Serena MCP
 
@@ -147,6 +150,8 @@ Si ves que el agente utiliza herramientas como `find_symbol` o `find_referencing
 * **Evita el ruido:** No necesitas tener activos 20 servidores MCP. Mantén Serena como tu herramienta principal para navegación de código y solo activa otros (como Google Calendar o Slack) cuando la tarea lo exija, en la actualidad yo sólo tengo 2 MCPs siempre activos, Serena y SequentialThinking, el resto se fue todo a Skills.
 * **Lazy Loading:** Recuerda que Serena brilla en proyectos grandes. Si estás en un proyecto de 3 archivos, la diferencia será mínima, pero en un **monorepo**, Serena es lo que te permitirá seguir operando cuando otros se queden sin cuota de tokens.
 * **Problemas comunes:** Si Serena no encuentra un símbolo, puede ser un tema de indexación del LSP. No fuerces al agente; a veces un simple `ls` o `cat` manual ayuda a reorientar el contexto.
+
+![](/photos/2026/use-cases.png)
 
 ## Reflexión Final
 
