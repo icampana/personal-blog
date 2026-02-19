@@ -5,22 +5,31 @@ import { getReadingTime } from '../utils';
 import { normalizeImagePath } from '../utils/imageUtils';
 import { generateImgxUrl } from '../utils/imgxUtils';
 import { Image } from 'astro:assets';
+import type { Locale } from '../utils/i18n';
 
 export interface Props {
   post: CollectionEntry<'posts'>;
+  locale?: Locale;
   lazyLoad?: boolean;
 }
 
-const { post, lazyLoad = true } = Astro.props;
+const { post, locale = 'es', lazyLoad = true } = Astro.props;
 const { title, description, featuredImage, tags, date } = post.data;
 
 const readingTime = getReadingTime(post.body);
-const readingTimeText = `${Math.round(readingTime.minutes)} minutos`;
+const readingTimeText = `${Math.round(readingTime.minutes)} ${locale === 'en' ? 'min read' : locale === 'pt' ? 'minutos' : locale === 'fr' ? 'min lecture' : 'minutos'}`;
 
 const imagePath = normalizeImagePath(featuredImage);
 
-const postUrl = getPostUrl(post);
+const postUrl = getPostUrl(post, locale);
 const summary = description || post.body.slice(0, 200) + '...';
+
+const readingTimeLabel: Record<Locale, string> = {
+  es: 'Lectura:',
+  en: 'Reading:',
+  pt: 'Leitura:',
+  fr: 'Lecture:',
+};
 ---
 
 <div
@@ -60,7 +69,7 @@ const summary = description || post.body.slice(0, 200) + '...';
         <div class='flex flex-wrap gap-2 mb-4'>
           {tags.map((tag) => (
             <a
-              href={`/tag/${tag.toLowerCase()}`}
+              href={`${locale === 'es' ? '' : `/${locale}`}/tag/${tag.toLowerCase()}`}
               class='px-2 py-1 bg-base-200 text-base-content mono text-xs border border-base-content/20 rounded hover:border-[var(--accent-neon)] hover:text-[var(--accent-neon)] transition-colors'>
               {tag}
             </a>
@@ -72,10 +81,10 @@ const summary = description || post.body.slice(0, 200) + '...';
     <div
       class='flex justify-between items-center text-xs text-base-content/50 mt-auto'>
       <time datetime={date.toISOString()} class='capitalize'>
-        {formatDate(date)}
+        {formatDate(date, locale)}
       </time>
       <div>
-        <em>Lectura:</em>
+        <em>{readingTimeLabel[locale]}</em>
         {readingTimeText}
       </div>
     </div>
