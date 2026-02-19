@@ -1,5 +1,5 @@
 ---
-title: "Optimizing Context and Skills in AI"
+title: Optimizing Context and Skills in AI
 date: 2026-02-18T01:13:24.506Z
 featuredImage: /photos/2026/portada-ia-optimizacion.png
 description: Stuck in "Vibe Coding"? Discover how to reduce token usage by up to 70% and improve AI precision in large codebases with Model Context Protocol.
@@ -15,7 +15,9 @@ If you want to scale your solutions and stop "burning" tokens unnecessarily, it'
 
 ## The Ghost in the Machine: "Context Rot" and Token Management
 
-One of the biggest challenges in AI-assisted development is context degradation. As a conversation lengthens, the model tends to lose track of previous decisions, leading to inconsistencies and hallucinations. On average, context begins to lose "connections" at [around 60%](https://www.youtube.com/watch?v=XqA3k0iM2xo), which is why it's ideal to use a tool that shows current context usage (both Claude and Kilocode display this on screen, and Opencode has an extension for the same). Therefore, it's best to, for example, complete the planning phase, then transfer it to a Markdown file for reference, and finally clear the context (start a new session) to begin execution with a clean context, which is why dedicating significant time to a robust plan is essential. In fact, recent versions of Claude Code automate this process.
+One of the biggest challenges in AI-assisted development is context degradation. As a conversation lengthens, the model tends to lose track of previous decisions, leading to inconsistencies and hallucinations. On average, context begins to lose "connections" at around 60%, which is why it's ideal to use a tool that shows current context usage (both Claude and Kilocode display this on screen, and Opencode has an extension for the same). Therefore, it's best to, for example, complete the planning phase, then transfer it to a Markdown file for reference, and finally clear the context (start a new session) to begin execution with a clean context, which is why dedicating significant time to a robust plan is essential. In fact, recent versions of Claude Code automate this process.
+
+[The Biggest Problem in AI Right Now Isn't Model Size - It's Context Management](https://www.youtube.com/watch?v=XqA3k0iM2xo)
 
 To combat this, the key isn't to provide more information, but better-structured information. This is where tools like the Model Context Protocol (MCP) and semantic retrieval systems make a difference.
 
@@ -29,15 +31,15 @@ Many developers make the mistake of attaching entire files to the chat. I've don
 
 Unlike a simple grep, reading a full .ts file, or even using rip-grep (which is a significant improvement over standard grep for developers), Serena utilizes Language Server Protocol (LSP) integrations to allow the agent to "navigate" through code at the symbol level:
 
-*   **Surgical Search**: Instead of reading 500 lines, the agent uses `find_symbol` to extract only the definition of a specific class or function.
-*   **Relationship Mapping**: With `find_referencing_symbols`, the agent can understand who is calling a function before modifying it, preventing unintended side effects.
-*   **High-Precision Editing**: It uses tools like `insert_after_symbol` or `replace_symbol_content`, which ensures changes respect the language's syntax and structure without rewriting entire files.
+* **Surgical Search**: Instead of reading 500 lines, the agent uses `find_symbol` to extract only the definition of a specific class or function.
+* **Relationship Mapping**: With `find_referencing_symbols`, the agent can understand who is calling a function before modifying it, preventing unintended side effects.
+* **High-Precision Editing**: It uses tools like `insert_after_symbol` or `replace_symbol_content`, which ensures changes respect the language's syntax and structure without rewriting entire files.
 
 **Why is it so helpful?**
 
-*   **Token Savings (up to 70%)**: By sending only relevant snippets instead of massive files, you drastically reduce your daily quota consumption.
-*   **Hallucination Mitigation**: Less noise in the context means the model has "laser focus" on the logic that truly matters.
-*   **Scalability**: It's the only viable way to work in monorepos or large codebases where it's physically impossible to load the entire context into a single window.
+* **Token Savings (up to 70%)**: By sending only relevant snippets instead of massive files, you drastically reduce your daily quota consumption.
+* **Hallucination Mitigation**: Less noise in the context means the model has "laser focus" on the logic that truly matters.
+* **Scalability**: It's the only viable way to work in monorepos or large codebases where it's physically impossible to load the entire context into a single window.
 
 ### Spec-Driven Development (SDD): The End of Improvisation
 
@@ -47,9 +49,9 @@ Frameworks like [GSD (Get Shit Done)](https://github.com/gsd-build/get-shit-done
 
 #### The Ideal Workflow:
 
-*   **Context Engineering:** Define the stack, style rules, and base architecture; in the case of GSD, it creates a `planning` folder with highly detailed documentation, much like a standard software plan (Software Engineering 101).
-*   **XML Planning:** Agents process instructions better when they are structured (e.g., `<task>`, `<verify>`, `<done>` tags).
-*   **Verification Cycle:** Each task must include an automated validation step before being considered complete.
+* **Context Engineering:** Define the stack, style rules, and base architecture; in the case of GSD, it creates a `planning` folder with highly detailed documentation, much like a standard software plan (Software Engineering 101).
+* **XML Planning:** Agents process instructions better when they are structured (e.g., `<task>`, `<verify>`, `<done>` tags).
+* **Verification Cycle:** Each task must include an automated validation step before being considered complete.
 
 ![](/photos/2026/spec-driven.png)
 
@@ -67,14 +69,15 @@ To stop burning tokens and start operating with surgical precision, you need to 
 
 Before you begin, ensure you have the following installed:
 
-*   **Python** (3.10+).
-*   An MCP-compatible client (**Claude**, **Cursor**, **Open Code**, or **Windsurf**).
+* **Python** (3.10+).
+* An MCP-compatible client (**Claude**, **Cursor**, **Open Code**, or **Windsurf**).
 
 ### 1. Prerequisites
 
 The best way is to use it via `uvx`, which automatically downloads and executes the latest version:
 
 If you use Mac or Linux, you can use Homebrew:
+
 ```
 brew install uv
 ```
@@ -149,9 +152,9 @@ If you see the agent using tools like `find_symbol` or `find_referencing_symbols
 
 ### 4. Tips
 
-*   **Avoid Noise:** You don't need 20 active MCP servers. Keep Serena as your primary tool for code navigation and only activate others (like Google Calendar or Slack) when the task requires it. Currently, I only keep 2 MCPs consistently active, Serena and SequentialThinking; the rest have been moved to Skills.
-*   **Lazy Loading:** Remember that Serena shines in large projects. If you're working on a 3-file project, the difference will be minimal, but in a **monorepo**, Serena is what will allow you to keep operating when others run out of token quota.
-*   **Common Issues:** If Serena can't find a symbol, it might be an LSP indexing issue. Don't force the agent; sometimes a simple `ls` or `cat` manually helps reorient the context.
+* **Avoid Noise:** You don't need 20 active MCP servers. Keep Serena as your primary tool for code navigation and only activate others (like Google Calendar or Slack) when the task requires it. Currently, I only keep 2 MCPs consistently active, Serena and SequentialThinking; the rest have been moved to Skills.
+* **Lazy Loading:** Remember that Serena shines in large projects. If you're working on a 3-file project, the difference will be minimal, but in a **monorepo**, Serena is what will allow you to keep operating when others run out of token quota.
+* **Common Issues:** If Serena can't find a symbol, it might be an LSP indexing issue. Don't force the agent; sometimes a simple `ls` or `cat` manually helps reorient the context.
 
 ![](/photos/2026/use-cases.png)
 
