@@ -103,8 +103,18 @@ export async function getAvailableTranslations(
     const postLanguage = getLanguageFromFilename(post.id);
     const postCleanSlug = getCleanSlug(post.slug);
 
-    if (postCleanSlug === baseSlug && postLanguage) {
-      translations[postLanguage] = post.slug;
+    // Only add if clean slug matches
+    if (postCleanSlug === baseSlug) {
+      if (postLanguage) {
+        // Add language-specific translation
+        translations[postLanguage] = post.slug;
+      } else {
+        // Add Spanish post as default (no translation needed)
+        // Only add if Spanish not already present
+        if (!translations['es']) {
+          translations['es'] = post.slug;
+        }
+      }
     }
   }
 
