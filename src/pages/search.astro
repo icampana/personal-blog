@@ -26,7 +26,7 @@ const recentPosts = sortPostsByDate(allPosts).slice(0, 6);
       <h2 class="text-2xl font-bold mb-6">Publicaciones recientes</h2>
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {recentPosts.map((post) => (
-          <PostCard post={post} />
+          <PostCard post={post} locale="es" />
         ))}
       </div>
     </div>

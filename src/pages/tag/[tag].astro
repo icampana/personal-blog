@@ -44,7 +44,7 @@ const description = `Todos los artículos del blog etiquetados con ${tag}`;
     {tagPosts.length > 0 ? (
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {tagPosts.map((post) => (
-          <PostCard post={post} />
+          <PostCard post={post} locale="es" />
         ))}
       </div>
     ) : (

@@ -2,11 +2,20 @@
 import { type CollectionEntry, getCollection } from 'astro:content';
 import PostLayout from '../../layouts/PostLayout.astro';
 import { getPostUrl } from '../../utils/client';
+import { getLanguageFromFilename } from '../../utils/i18n';
 
 export async function getStaticPaths() {
   const posts = await getCollection('posts');
 
-  return posts
+  // Only include Spanish posts (no language suffix or explicit 'es')
+  const spanishPosts = posts.filter(
+    (post) => {
+      const lang = getLanguageFromFilename(post.id);
+      return lang === 'es' || lang === null;
+    }
+  );
+
+  return spanishPosts
     .filter((post) => !getPostUrl(post).match(/^\/posts\/\d{4}\/\d{2}\//))
     .map((post) => {
       const url = getPostUrl(post);
@@ -41,7 +50,7 @@ const relatedPosts = allPosts
   .slice(0, 3);
 ---
 
-<PostLayout post={post}>
+<PostLayout post={post} locale="es">
   <!-- Related posts section -->
   {relatedPosts.length > 0 && (
     <section class="mt-12 pt-8 border-t border-base-300">

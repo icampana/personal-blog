@@ -13,13 +13,17 @@ import {
 export async function getStaticPaths() {
   const posts = await getCollection('posts');
 
-  // Get all Spanish posts (source of truth)
+  // Get all Spanish posts (source of truth for slug generation)
+  // Spanish posts have no language suffix (returns null from getLanguageFromFilename)
   const spanishPosts = posts.filter(
-    (post) => getLanguageFromFilename(post.id) === LOCALES.DEFAULT,
+    (post) => {
+      const lang = getLanguageFromFilename(post.id);
+      return lang === null || lang === LOCALES.DEFAULT;
+    },
   );
 
   return spanishPosts
-    .filter((post) => !getPostUrl(post).match(/^\/posts\/\d{4}\/\d{2}\//))
+    .filter((post) => !getPostUrl(post, LOCALES.FRENCH).match(/^\/fr\/posts\/\d{4}\/\d{2}\//))
     .map((post) => {
       const cleanSlug = getCleanSlug(post.slug);
       const url = getPostUrl(post, LOCALES.FRENCH);
@@ -65,28 +69,13 @@ interface Props {
 
 const { post, locale, isFallback } = Astro.props;
 
-// Get related posts (posts with similar tags, French only or fallback to Spanish)
+// Get related posts (French only)
 const allPosts = await getCollection('posts');
 const frenchPosts = allPosts.filter(
   (p) => getLanguageFromFilename(p.id) === LOCALES.FRENCH,
 );
 
-// Build a mapping of clean slugs to their translations
-const slugToTranslation = new Map();
-allPosts.forEach((p) => {
-  const cleanSlug = getCleanSlug(p.slug);
-  const lang = getLanguageFromFilename(p.id);
-  if (!slugToTranslation.has(cleanSlug)) {
-    slugToTranslation.set(cleanSlug, lang === LOCALES.FRENCH ? p : p);
-  } else {
-    // Prefer French if available
-    if (lang === LOCALES.FRENCH) {
-      slugToTranslation.set(cleanSlug, p);
-    }
-  }
-});
-
-const relatedPosts = Array.from(slugToTranslation.values())
+const relatedPosts = frenchPosts
   .filter((otherPost) => {
     if (otherPost.data.tags && post.data.tags && otherPost.id !== post.id) {
       return otherPost.data.tags.some((tag: string) => post.data.tags?.includes(tag));
