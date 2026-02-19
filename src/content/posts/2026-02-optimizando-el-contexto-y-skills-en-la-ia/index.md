@@ -61,6 +61,23 @@ A veces, el modelo intenta resolver problemas complejos de un solo golpe. El uso
 
 ![](/photos/2026/sequential-thinking.png)
 
+## Usa Skills, no MCPs para tareas determinísticas
+
+El gran beneficio es el Ahorro Masivo de Tokens (Eficiencia de "Progressive Disclosure", o Revelación Progresiva), eso es el beneficio más tangible es económico y de rendimiento.
+- **El problema**: Si pones todas tus reglas, guías de estilo y scripts en el "System Prompt", llenas la ventana de contexto inmediatamente. Esto hace que la IA sea lenta y costosa.
+- **La solución (Skills)**: Las Skills funcionan bajo el principio de "Revelación Progresiva". La IA solo carga en su memoria el nombre y la descripción del Skill. Solo cuando tú le pides algo relacionado (ej. "Revisa este PR"), la IA carga las instrucciones pesadas de ese Skill específico.
+- **Resultado**: Mantienes tu contexto limpio y evitas la "podredumbre del contexto" (context rot), lo que reduce costos y evita que la IA se confunda con instrucciones irrelevantes.
+
+### Determinismo vs. Alucinación
+Las Skills permiten ejecutar acciones determinísticas (predecibles) en lugar de creativas.
+- **Ejemplo**: En lugar de pedirle a la IA que "trate de formatear" un archivo (lo cual puede inventar sintaxis), usas un Skill que ejecuta un script real (como Prettier o un linter) o sigue una plantilla estricta.  Inclusive puedes tener templates incluidos en el Skill, por ejemplo un template para generar un nuevo endpoint REST que siempre siga la misma estructura.
+- **Ejemplo**: Un Skill para añadir licencias (license-header-adder) asegura que cada archivo nuevo tenga el copyright exacto de tu empresa, sin que tengas que recordárselo en cada prompt.
+
+### Estandarización del Equipo (El "Experto en Proyecto")
+Las Skills convierten a modelos genéricos (como Gemini o Claude) en especialistas de tu proyecto.
+- **Ejemplo**: Puedes crear un Skill global de "Code Review" que obligue a la IA a verificar puntos específicos (seguridad, manejo de errores) antes de aprobar algo.
+- **Ejemplo**: A diferencia de las "Custom Instructions" que se aplican siempre, las Skills son modulares y portátiles. Puedes compartir una carpeta .github/skills o .agent/skills con tu equipo, y todos los agentes (Copilot, Claude Code, Antigravity) seguirán los mismos estándares automáticamente
+
 ## Guía de Instalación y Configuración de Serena MCP
 
 Para dejar de quemar tokens y empezar a operar con precisión quirúrgica, necesitas integrar **Serena** en tu "Neural Link" (tu entorno de desarrollo). Aquí tienes los pasos exactos para configurar este MCP en los clientes más populares.

@@ -61,6 +61,26 @@ Sometimes, the model attempts to solve complex problems in a single go. Using MC
 
 ![](/photos/2026/sequential-thinking.png)
 
+## Use Skills, not MCPs for deterministic tasks
+
+The primary advantage is **Massive Token Savings** (Progressive Disclosure efficiency). This is the most tangible benefit in terms of both cost and performance.
+
+- **The Problem**: If you cram all your rules, style guides, and scripts into the "System Prompt," you saturate the context window immediately. This makes the AI slow and expensive.
+- **The Solution (Skills)**: Skills operate under the principle of "Progressive Disclosure." The AI only loads the Skill's name and description into memory. Only when you request a related task (e.g., "Review this PR") does the AI load the heavy instructions for that specific Skill.
+- **Result**: You keep your context clean and avoid "context rot," which reduces costs and prevents the AI from getting confused by irrelevant instructions.
+
+### Determinism vs. Hallucination
+Skills allow for deterministic (predictable) actions rather than creative ones.
+
+- **Example**: Instead of asking the AI to "try to format" a file (which can result in hallucinated syntax), you use a Skill that executes a real script (like Prettier or a linter) or follows a strict template. You can even include templates within the Skill—for instance, a template for generating a new REST endpoint that always follows the same structure.
+- **Example**: A license-header-adder Skill ensures every new file has your company's exact copyright without you having to remind the AI in every prompt.
+
+### Team Standardization (The "Project Expert")
+Skills turn generic models (like Gemini or Claude) into specialists for your specific project.
+
+- **Example**: You can create a global "Code Review" Skill that forces the AI to verify specific points (security, error handling) before approving anything.
+- **Example**: Unlike "Custom Instructions" that apply globally, Skills are modular and portable. You can share a `.github/skills` or `.agent/skills` folder with your team, and all agents (Copilot, Claude Code, Antigravity) will follow the same standards automatically.
+
 ## Serena MCP Installation and Configuration Guide
 
 To stop burning tokens and start operating with surgical precision, you need to integrate **Serena** into your "Neural Link" (your development environment). Here are the exact steps to configure this MCP in the most popular clients.
