@@ -2,7 +2,7 @@
 title: Optimisation du Contexte et des Compétences de l'IA
 date: 2026-02-18T01:13:24.506Z
 featuredImage: /photos/2026/portada-ia-optimizacion.png
-description: "Bloqué dans le 'Vibe Coding' ? Découvrez comment réduire jusqu'à 70% l'utilisation des tokens et améliorer la précision de l'IA dans les grandes bases de code avec Model Context Protocol."
+description: Bloqué dans le 'Vibe Coding' ? Découvrez comment réduire jusqu'à 70% l'utilisation des tokens et améliorer la précision de l'IA dans les grandes bases de code avec Model Context Protocol.
 tags:
   - IA
   - Development
@@ -15,7 +15,9 @@ Si vous souhaitez faire évoluer vos solutions et cesser de "brûler" des tokens
 
 ## Le Fantôme dans la Machine : La "Pourriture du Contexte" et la Gestion des Tokens
 
-L'un des plus grands défis du développement assisté par l'IA est la dégradation du contexte. Au fur et à mesure qu'une conversation s'allonge, le modèle a tendance à perdre le fil des décisions précédentes, ce qui génère des incohérences et des hallucinations. En moyenne, le contexte commence à perdre des "connexions" [à partir d'environ 60%](https://www.youtube.com/watch?v=XqA3k0iM2xo), c'est pourquoi il est idéal d'utiliser un outil qui permet de visualiser l'utilisation du contexte actuel (Claude et Kilocode permettent de le voir à l'écran, et Opencode dispose d'une extension pour faire de même). Il est donc préférable, par exemple, de faire la planification et, une fois celle-ci terminée, de la transférer dans un fichier Markdown pour pouvoir l'utiliser comme référence et enfin de nettoyer le contexte (démarrer une nouvelle session) afin de pouvoir commencer l'exécution en utilisant ce plan généré avec un contexte propre. C'est pourquoi il faut consacrer beaucoup de temps à l'élaboration d'un très bon plan. En fait, les dernières versions de Claude Code le font déjà automatiquement.
+L'un des plus grands défis du développement assisté par l'IA est la dégradation du contexte. Au fur et à mesure qu'une conversation s'allonge, le modèle a tendance à perdre le fil des décisions précédentes, ce qui génère des incohérences et des hallucinations. En moyenne, le contexte commence à perdre des "connexions" à partir d'environ 60%, c'est pourquoi il est idéal d'utiliser un outil qui permet de visualiser l'utilisation du contexte actuel (Claude et Kilocode permettent de le voir à l'écran, et Opencode dispose d'une extension pour faire de même). Il est donc préférable, par exemple, de faire la planification et, une fois celle-ci terminée, de la transférer dans un fichier Markdown pour pouvoir l'utiliser comme référence et enfin de nettoyer le contexte (démarrer une nouvelle session) afin de pouvoir commencer l'exécution en utilisant ce plan généré avec un contexte propre. C'est pourquoi il faut consacrer beaucoup de temps à l'élaboration d'un très bon plan. En fait, les dernières versions de Claude Code le font déjà automatiquement.
+
+[The Biggest Problem in AI Right Now Isn't Model Size - It's Context Management](https://www.youtube.com/watch?v=XqA3k0iM2xo)
 
 Pour lutter contre cela, la clé n'est pas de donner plus d'informations, mais des informations mieux structurées. C'est là que des outils comme le Model Context Protocol (MCP) et les systèmes de récupération sémantique font la différence.
 
@@ -29,15 +31,15 @@ De nombreux développeurs commettent l'erreur de joindre des fichiers entiers au
 
 Contrairement à un simple grep, à la lecture d'un fichier .ts complet ou même à rip-grep, qui est une grande amélioration par rapport au grep normal pour les développeurs, Serena utilise les intégrations du Language Server Protocol (LSP) pour permettre à l'agent de "naviguer" dans le code au niveau des symboles :
 
-*   **Recherche Chirurgicale** : Au lieu de lire 500 lignes, l'agent utilise `find_symbol` pour extraire uniquement la définition d'une classe ou d'une fonction spécifique.
-*   **Cartographie des Relations** : Avec `find_referencing_symbols`, l'agent peut comprendre qui appelle une fonction avant de la modifier, évitant ainsi les effets secondaires indésirables.
-*   **Édition de Haute Précision** : Elle utilise des outils tels que ***`insert_after_symbol`*** ou ***`replace_symbol_content`***, ce qui garantit que les modifications respectent la syntaxe et la structure du langage sans réécrire des fichiers entiers.
+* **Recherche Chirurgicale** : Au lieu de lire 500 lignes, l'agent utilise `find_symbol` pour extraire uniquement la définition d'une classe ou d'une fonction spécifique.
+* **Cartographie des Relations** : Avec `find_referencing_symbols`, l'agent peut comprendre qui appelle une fonction avant de la modifier, évitant ainsi les effets secondaires indésirables.
+* **Édition de Haute Précision** : Elle utilise des outils tels que ***`insert_after_symbol`*** ou ***`replace_symbol_content`***, ce qui garantit que les modifications respectent la syntaxe et la structure du langage sans réécrire des fichiers entiers.
 
 **Pourquoi est-ce si utile ?**
 
-*   **Économie de Tokens (jusqu'à 70%)** : En n'envoyant que les fragments pertinents (snippets) au lieu de fichiers massifs, vous réduisez drastiquement la consommation de votre quota quotidien.
-*   **Atténuation des Hallucinations :** Moins de bruit dans le contexte signifie que le modèle a un "focus laser" sur la logique qui importe vraiment.
-*   **Scalabilité** : C'est la seule façon viable de travailler sur des monorepos ou de grandes bases de code où il est physiquement impossible de charger tout le contexte dans une seule fenêtre.
+* **Économie de Tokens (jusqu'à 70%)** : En n'envoyant que les fragments pertinents (snippets) au lieu de fichiers massifs, vous réduisez drastiquement la consommation de votre quota quotidien.
+* **Atténuation des Hallucinations :** Moins de bruit dans le contexte signifie que le modèle a un "focus laser" sur la logique qui importe vraiment.
+* **Scalabilité** : C'est la seule façon viable de travailler sur des monorepos ou de grandes bases de code où il est physiquement impossible de charger tout le contexte dans une seule fenêtre.
 
 ### Développement Piloté par Spécification (SDD) : La fin de l'improvisation
 
@@ -47,9 +49,9 @@ Des frameworks comme [GSD (Get Shit Done)](https://github.com/gsd-build/get-shit
 
 #### Le Workflow Idéal :
 
-*   **Ingénierie du Contexte :** Définir la stack, les règles de style et l'architecture de base. Dans le cas de GSD, cela crée un dossier planning avec une documentation très détaillée, comme un plan logiciel standard (Ingénierie Logicielle 101).
-*   **Planification XML :** Les agents traitent mieux les instructions lorsqu'elles sont structurées (ex. balises `<task>`, `<verify>`, `<done>`).
-*   **Cycle de Vérification :** Chaque tâche doit inclure une étape de validation automatique avant d'être considérée comme terminée.
+* **Ingénierie du Contexte :** Définir la stack, les règles de style et l'architecture de base. Dans le cas de GSD, cela crée un dossier planning avec une documentation très détaillée, comme un plan logiciel standard (Ingénierie Logicielle 101).
+* **Planification XML :** Les agents traitent mieux les instructions lorsqu'elles sont structurées (ex. balises `<task>`, `<verify>`, `<done>`).
+* **Cycle de Vérification :** Chaque tâche doit inclure une étape de validation automatique avant d'être considérée comme terminée.
 
 ![](/photos/2026/spec-driven.png)
 
@@ -67,14 +69,15 @@ Pour cesser de "brûler" des tokens et commencer à opérer avec une précision 
 
 Avant de commencer, assurez-vous d'avoir installé :
 
-*   **Python** (3.10+).
-*   Un client compatible avec MCP (**Claude**, **Cursor**, **Open Code** ou **Windsurf**).
+* **Python** (3.10+).
+* Un client compatible avec MCP (**Claude**, **Cursor**, **Open Code** ou **Windsurf**).
 
 ### 1. Prérequis
 
 La meilleure façon de l'utiliser est via uvx, cela permet de télécharger et d'exécuter automatiquement la dernière version :
 
 Si vous utilisez Mac ou Linux, vous pouvez utiliser Homebrew :
+
 ```
 brew install uv
 ```
@@ -149,9 +152,9 @@ Si vous constatez que l'agent utilise des outils comme `find_symbol` ou `find_re
 
 ### 4. Astuces
 
-*   **Évitez le bruit :** Vous n'avez pas besoin d'avoir 20 serveurs MCP actifs. Gardez Serena comme votre outil principal pour la navigation de code et n'activez les autres (comme Google Calendar ou Slack) que lorsque la tâche l'exige. Actuellement, je n'ai que 2 MCPs toujours actifs, Serena et SequentialThinking, le reste est passé en "Skills".
-*   **Chargement Paresseux (Lazy Loading) :** N'oubliez pas que Serena excelle dans les grands projets. Si vous travaillez sur un projet de 3 fichiers, la différence sera minime, mais dans un **monorepo**, Serena est ce qui vous permettra de continuer à opérer lorsque d'autres n'auront plus de quota de tokens.
-*   **Problèmes courants :** Si Serena ne trouve pas un symbole, cela peut être un problème d'indexation du LSP. Ne forcez pas l'agent ; parfois un simple `ls` ou `cat` manuel aide à réorienter le contexte.
+* **Évitez le bruit :** Vous n'avez pas besoin d'avoir 20 serveurs MCP actifs. Gardez Serena comme votre outil principal pour la navigation de code et n'activez les autres (comme Google Calendar ou Slack) que lorsque la tâche l'exige. Actuellement, je n'ai que 2 MCPs toujours actifs, Serena et SequentialThinking, le reste est passé en "Skills".
+* **Chargement Paresseux (Lazy Loading) :** N'oubliez pas que Serena excelle dans les grands projets. Si vous travaillez sur un projet de 3 fichiers, la différence sera minime, mais dans un **monorepo**, Serena est ce qui vous permettra de continuer à opérer lorsque d'autres n'auront plus de quota de tokens.
+* **Problèmes courants :** Si Serena ne trouve pas un symbole, cela peut être un problème d'indexation du LSP. Ne forcez pas l'agent ; parfois un simple `ls` ou `cat` manuel aide à réorienter le contexte.
 
 ![](/photos/2026/use-cases.png)
 
