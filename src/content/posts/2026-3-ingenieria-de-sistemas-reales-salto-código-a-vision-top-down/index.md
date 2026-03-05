@@ -2,6 +2,10 @@
 title: 'Ingeniería de Sistemas Reales: El Salto del Código a la Visión Top-Down'
 date: 2026-03-04T15:32:11.427Z
 featuredImage: /photos/2026-03/pensamiento-sistemico.png
+description: |-
+  Muchos profesionales en el sector de TI llegan a un punto de inflexión tras una década de carrera: dominan su stack, han sobrevivido a decenas de deliveries críticos y sus peer reviews son impecables. Sin embargo, se sienten estancados. Siguen viendo el software como una serie de piezas técnicas que deben encajar, cuando la realidad es que el software es solo un órgano dentro de un organismo vivo mucho más complejo: la organización.
+
+  El salto de Senior a Tech Lead o Arquitecto no se logra acumulando certificaciones de AWS o aprendiendo el framework de moda. Se logra cambiando el lente con el que observamos la realidad. Para trascender, debemos integrar el pensamiento sistémico.
 tags:
   - SystemsThinking
   - Development
