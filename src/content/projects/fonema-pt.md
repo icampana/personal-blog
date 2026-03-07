@@ -5,8 +5,6 @@ description: >-
   Herramienta educativa interactiva para aprender la pronunciación del
   portugués europeo. Incluye 21 fonemas críticos con audio de referencia
   generado mediante síntesis de voz.
-galleryImage:
-  - /photos/fonema-pt-screenshot.png
 techStack:
   - React
   - TypeScript
@@ -42,7 +40,7 @@ Cree un "soundboard" fonético interactivo que incluye:
 - Audio generado con voz sintética de alta calidad (pt-PT-DuarteNeural)
 - Reproducción sin latencia gracias a precarga de audio
 - Interfaz responsive con código de colores por categoría
-- Soporte multilingüe (ES/EN/PT)
+- Soporte multilingüe (ES/EN/PT/FR)
 
 ## Tecnología
 

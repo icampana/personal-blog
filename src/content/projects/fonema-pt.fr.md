@@ -5,8 +5,6 @@ description: >-
   Outil éducatif interactif pour apprendre la prononciation du portugais
   européen. Inclut 21 phonèmes critiques avec audio de référence généré
   par synthèse vocale.
-galleryImage:
-  - /photos/fonema-pt-screenshot.png
 techStack:
   - React
   - TypeScript
