@@ -63,11 +63,6 @@
   to = "/"
   status = 301
 
-[[redirects]]
-  from = "/wp-login.php/"
-  to = "/"
-  status = 301
-
 # Legacy pagination redirects
 [[redirects]]
   from = "/1"

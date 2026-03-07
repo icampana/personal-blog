@@ -4,7 +4,6 @@ import { describe, expect, it } from 'vitest';
 const redirects = {
   // WordPress login redirects
   '/wp-login.php': '/',
-  '/wp-login.php/': '/',
 
   // Legacy pagination redirects (single digit pages)
   '/1': '/posts/page/1',
@@ -42,7 +41,6 @@ describe('URL Compatibility and Routing', () => {
   describe('Legacy URL Redirects', () => {
     it('should redirect WordPress login URLs', () => {
       expect(redirects['/wp-login.php']).toBe('/');
-      expect(redirects['/wp-login.php/']).toBe('/');
     });
 
     it('should redirect legacy pagination URLs', () => {

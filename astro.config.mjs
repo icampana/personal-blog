@@ -73,7 +73,6 @@ export default defineConfig({
   redirects: {
     // WordPress login redirects
     '/wp-login.php': '/',
-    '/wp-login.php/': '/',
 
     // Legacy pagination redirects (single digit pages)
     '/1': '/posts/page/1',
