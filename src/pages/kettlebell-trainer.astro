@@ -1,0 +1,19 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import KettlebellTrainer from '../components/kettlebell/KettlebellTrainer';
+---
+
+<BaseLayout
+  title="Entrenador de Pesas Rusas | Iván Campana"
+  description="Genera entrenamientos personalizados con pesas rusas y mancuernas. Selecciona zonas musculares, dificultad y tipo de entrenamiento."
+>
+  <Header />
+  <main class="flex-1">
+    <div class="container mx-auto px-4 py-8">
+      <KettlebellTrainer client:load />
+    </div>
+  </main>
+  <Footer />
+</BaseLayout>
