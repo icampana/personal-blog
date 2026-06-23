@@ -2,7 +2,7 @@
 title: Comment créer votre équipe numérique avec Gemini
 videoId: _oYKaBO75nU
 date: 2026-01-27T00:00:00.000Z
-description: "De nombreux entrepreneurs estiment que la technologie complique plus qu'elle n'aide. Dans cette vidéo, je vous montre comment passer de la simple "discussion" avec l'intelligence artificielle à la construction d'une équipe numérique qui vous assiste réellement dans vos tâches quotidiennes. Nous allons configurer trois assistants spécialisés qui travaillent avec vos propres informations et documents, vous permettant ainsi d'accroître votre productivité au coût le plus bas possible.\n\n\U0001F680 Ce que vous apprendrez dans cette vidéo :\nConfiguration d'Experts : Comment utiliser les Gemmes de Gemini pour créer des profils avec des rôles, des règles et des comportements spécifiques."
+description: "De nombreux entrepreneurs estiment que la technologie complique plus qu'elle n'aide. Dans cette vidéo, je vous montre comment passer de la simple \"discussion\" avec l'intelligence artificielle à la construction d'une équipe numérique qui vous assiste réellement dans vos tâches quotidiennes. Nous allons configurer trois assistants spécialisés qui travaillent avec vos propres informations et documents, vous permettant ainsi d'accroître votre productivité au coût le plus bas possible.\n\n\U0001F680 Ce que vous apprendrez dans cette vidéo :\nConfiguration d'Experts : Comment utiliser les Gemmes de Gemini pour créer des profils avec des rôles, des règles et des comportements spécifiques."
 featured: true
 ---
 
