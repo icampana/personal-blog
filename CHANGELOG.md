@@ -7,6 +7,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Security
+- Resolved 16 Dependabot alerts via pnpm overrides: `dompurify` ^3.2.5, `js-yaml` ^4.2.0, `yaml` ^2.8.4, `launch-editor` ^2.14.1, and `graphiql` ^3.2.0.
+- Patched `gray-matter@4.0.3` to use js-yaml 4 compatible `load`/`dump` APIs.
+- Fixed unescaped double quotes in `src/content/videos/Cmo-crear-tu-staff-digital-con-Gemini.fr.md` frontmatter for js-yaml 4 strict parsing.
+- Regenerated `pnpm-lock.yaml` patch hash to match `patches/gray-matter@4.0.3.patch` and fix frozen installs.
+
 ### Changed
 - Upgraded Astro framework from 5.x to 7.0.0.
 - Upgraded `@astrojs/mdx` to 7.0.0, `@astrojs/react` to 6.0.0, `@vitejs/plugin-react` to 6.0.3, `vite` to 8.1.0, `@astrojs/markdown-remark` to 7.2.0, and `marked` to 18.0.5.
