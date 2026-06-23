@@ -23,6 +23,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Fixed
 - Fixed `scripts/validate-content.js` image parsing to correctly handle absolute `/photos/` paths, angle-bracket URLs with spaces, and quoted titles.
 - Fixed unclosed `<div>` in `src/pages/index.astro`.
+- Fixed Netlify production build OOM by aligning `NODE_VERSION`/`PNPM_VERSION` with local toolchain and adding `NODE_OPTIONS=--max-old-space-size=6144`.
 
 ### Removed
 - Legacy `src/content/config.ts` content collection configuration file.

@@ -3,9 +3,10 @@
   command = "pnpm run build"
 
 [build.environment]
-  NODE_VERSION = "20"
-  PNPM_VERSION = "9"
+  NODE_VERSION = "22"
+  PNPM_VERSION = "10"
   NETLIFY_NEXT_PLUGIN_SKIP = "true"
+  NODE_OPTIONS = "--max-old-space-size=6144"
 
 # Build settings
 [context.production]
