@@ -22,7 +22,7 @@ overrides:
 
 patchedDependencies:
   gray-matter@4.0.3:
-    hash: 6867093d18e007f9f610b1c4c6871b64734503b546ffcd3bc7a3675dd11f2188
+    hash: 82198c3ee34e2823c4e9793c5209cf97bd566d5610c3f6582dc3f044ca423d6f
     path: patches/gray-matter@4.0.3.patch
 
 importers:
@@ -67,7 +67,7 @@ importers:
         version: 13.0.6
       gray-matter:
         specifier: ^4.0.3
-        version: 4.0.3(patch_hash=6867093d18e007f9f610b1c4c6871b64734503b546ffcd3bc7a3675dd11f2188)
+        version: 4.0.3(patch_hash=82198c3ee34e2823c4e9793c5209cf97bd566d5610c3f6582dc3f044ca423d6f)
       marked:
         specifier: ^18.0.5
         version: 18.0.5
@@ -9425,7 +9425,7 @@ snapshots:
       fs-extra: 11.3.5
       glob-parent: 6.0.2
       graphql: 15.8.0
-      gray-matter: 4.0.3(patch_hash=6867093d18e007f9f610b1c4c6871b64734503b546ffcd3bc7a3675dd11f2188)
+      gray-matter: 4.0.3(patch_hash=82198c3ee34e2823c4e9793c5209cf97bd566d5610c3f6582dc3f044ca423d6f)
       isomorphic-git: 1.38.5
       js-sha1: 0.6.0
       js-yaml: 4.2.0
@@ -11411,7 +11411,7 @@ snapshots:
 
   graphql@15.8.0: {}
 
-  gray-matter@4.0.3(patch_hash=6867093d18e007f9f610b1c4c6871b64734503b546ffcd3bc7a3675dd11f2188):
+  gray-matter@4.0.3(patch_hash=82198c3ee34e2823c4e9793c5209cf97bd566d5610c3f6582dc3f044ca423d6f):
     dependencies:
       js-yaml: 4.2.0
       kind-of: 6.0.3
