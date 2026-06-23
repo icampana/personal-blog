@@ -32,7 +32,6 @@ vi.mock('astro:content', () => ({
       return [
         {
           id: 'test-post-1.md',
-          slug: 'test-post-1',
           body: 'This is a test post about JavaScript',
           collection: 'posts',
           data: {
@@ -45,7 +44,6 @@ vi.mock('astro:content', () => ({
         },
         {
           id: 'test-post-2.md',
-          slug: 'test-post-2',
           body: 'This is another test post about React',
           collection: 'posts',
           data: {

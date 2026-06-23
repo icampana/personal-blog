@@ -20,7 +20,7 @@ export async function getStaticPaths() {
   );
 
   return spanishProjects.map((project) => {
-    const cleanSlug = getCleanSlug(project.slug);
+    const cleanSlug = getCleanSlug(project.id);
     const url = getProjectUrl(project, LOCALES.PORTUGUESE);
     // Remove locale prefix and the /portafolio path, then split into slug parts
     const pathWithoutLocale = stripLocalePrefix(url);
@@ -30,7 +30,7 @@ export async function getStaticPaths() {
     const translationExists = projects.some(
       (p) => {
         const pLang = getLanguageFromFilename(p.id);
-        const pCleanSlug = getCleanSlug(p.slug);
+        const pCleanSlug = getCleanSlug(p.id);
         return pLang === LOCALES.PORTUGUESE && pCleanSlug === cleanSlug;
       },
     );
@@ -40,7 +40,7 @@ export async function getStaticPaths() {
       ? projects.find(
           (p) => {
             const pLang = getLanguageFromFilename(p.id);
-            const pCleanSlug = getCleanSlug(p.slug);
+            const pCleanSlug = getCleanSlug(p.id);
             return pLang === LOCALES.PORTUGUESE && pCleanSlug === cleanSlug;
           },
         )

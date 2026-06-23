@@ -1,5 +1,6 @@
 // @ts-check
 
+import { unified } from '@astrojs/markdown-remark';
 import mdx from '@astrojs/mdx';
 import react from '@astrojs/react';
 import sitemap from '@astrojs/sitemap';
@@ -27,16 +28,20 @@ export default defineConfig({
     inlineStylesheets: 'auto',
   },
   vite: {
-    // @ts-ignore - Temporary Vite version mismatch: @tailwindcss/vite uses Vite 6.x types,
-    // but Astro 5.x requires Vite 7.x. This will be resolved when Tailwind updates to Vite 7.x.
     plugins: [tailwindcss()],
     build: {
       rollupOptions: {
         output: {
-          manualChunks: {
-            'react-vendor': ['react', 'react-dom'],
-            'search-vendor': ['flexsearch'],
-            'utils-vendor': ['date-fns'],
+          manualChunks(id) {
+            if (/node_modules\/(react|react-dom)\//.test(id)) {
+              return 'react-vendor';
+            }
+            if (/node_modules\/flexsearch\//.test(id)) {
+              return 'search-vendor';
+            }
+            if (/node_modules\/date-fns\//.test(id)) {
+              return 'utils-vendor';
+            }
           },
         },
       },
@@ -46,24 +51,26 @@ export default defineConfig({
     },
   },
   markdown: {
-    remarkPlugins: [
-      remarkGfm,
-      remarkBreaks,
-      remarkEmoji,
-      remarkDirective,
-      unifiedAdmonitions,
-      remarkYoutube,
-    ],
-    rehypePlugins: [
-      rehypeSlug,
-      [
-        rehypeHighlight,
-        {
-          ignoreMissing: true,
-          plainText: ['txt', 'text'],
-        },
+    processor: unified({
+      remarkPlugins: [
+        remarkGfm,
+        remarkBreaks,
+        remarkEmoji,
+        remarkDirective,
+        unifiedAdmonitions,
+        remarkYoutube,
       ],
-    ],
+      rehypePlugins: [
+        rehypeSlug,
+        [
+          rehypeHighlight,
+          {
+            ignoreMissing: true,
+            plainText: ['txt', 'text'],
+          },
+        ],
+      ],
+    }),
     shikiConfig: {
       theme: 'github-dark',
       wrap: true,

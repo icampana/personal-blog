@@ -1,5 +1,5 @@
 ---
-import type { CollectionEntry } from 'astro:content';
+import { type CollectionEntry, render } from 'astro:content';
 import type { Locale } from '../utils/i18n';
 import ImageGallery from '../components/ImageGallery';
 import { formatDate } from '../utils/client';
@@ -13,7 +13,7 @@ export interface Props {
 const { project, locale } = Astro.props;
 const { title, description, galleryImage, techStack, liveUrl, repoUrl, date } =
   project.data;
-const { Content } = await project.render();
+const { Content } = await render(project);
 ---
 
 <BlogLayout title={title} description={description} locale={locale}>

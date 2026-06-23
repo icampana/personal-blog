@@ -1,8 +1,8 @@
 # AI CONTEXT & ARCHITECTURAL MAP
-> Last Updated: January 30, 2026
+> Last Updated: June 23, 2026
 
 ## 1. Tech Stack & Versions
-- **Core Framework**: Astro 5.15.7 (static site generator)
+- **Core Framework**: Astro 7.0.0 (static site generator)
 - **Content Management**: TinaCMS 2.9.0 (headless CMS)
 - **Styling**: Tailwind CSS 4.1.17 + DaisyUI 5.3.10
 - **State/Data**: Content Collections (Astro), FlexSearch (search indexing)
@@ -68,7 +68,7 @@ scripts/
 - **Scoped Styles**: Use `@reference` directive in Astro components that use theme variables
 
 ### Content Management
-- **Frontmatter**: Zod schemas in `src/content/config.ts`
+- **Frontmatter**: Zod schemas in `src/content.config.ts`
 - **CMS Fields**: Custom field definitions in `tina/templates/`
 - **Media**: Uploads stored in `public/photos/`
 

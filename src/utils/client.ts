@@ -32,7 +32,7 @@ export function getPostUrl(
 ): string {
   const localePrefix = locale && locale !== 'es' ? `/${locale}` : '';
 
-  // Use post.id to derive clean slug because post.slug might have dots removed/modified
+  // Use post.id to derive clean slug because post.id might have dots removed/modified
   // stripLanguageSuffix returns filename with .md if it was .en.md, so we strip .md
   let cleanSlug = stripLanguageSuffix(post.id).replace(/\.md$/i, '');
 
@@ -66,7 +66,7 @@ export function getPageUrl(
     return `${localePrefix}/content${page.data.path}`;
   }
   // Use getCleanSlug to remove /index and language suffixes from the slug
-  const cleanSlug = getCleanSlug(page.slug);
+  const cleanSlug = getCleanSlug(page.id);
   return `${localePrefix}/content/${cleanSlug}`;
 }
 
@@ -80,7 +80,7 @@ export function getProjectUrl(
     return `${localePrefix}/portafolio${project.data.path}`;
   }
   // Use getCleanSlug to remove /index and language suffixes from the slug
-  const cleanSlug = getCleanSlug(project.slug);
+  const cleanSlug = getCleanSlug(project.id);
   return `${localePrefix}/portafolio/${cleanSlug}`;
 }
 

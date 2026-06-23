@@ -145,17 +145,17 @@ describe('URL Compatibility and Routing', () => {
 
     it('should generate consistent post URLs', () => {
       const mockPost = {
-        slug: 'test-post',
+        id: 'test-post',
         data: { path: undefined },
       };
 
-      const expectedUrl = `/posts/${mockPost.slug}`;
+      const expectedUrl = `/posts/${mockPost.id}`;
       expect(expectedUrl).toBe('/posts/test-post');
     });
 
     it('should generate consistent page URLs', () => {
       const mockPage = {
-        slug: 'about',
+        id: 'about',
         data: { path: '/sobre-el-autor' },
       };
 
@@ -165,11 +165,11 @@ describe('URL Compatibility and Routing', () => {
 
     it('should generate consistent project URLs', () => {
       const mockProject = {
-        slug: 'test-project',
+        id: 'test-project',
         data: { path: undefined },
       };
 
-      const expectedUrl = `/portafolio/${mockProject.slug}`;
+      const expectedUrl = `/portafolio/${mockProject.id}`;
       expect(expectedUrl).toBe('/portafolio/test-project');
     });
   });
