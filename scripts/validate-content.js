@@ -82,15 +82,37 @@ function validateFrontmatter(data, type, filePath) {
 }
 
 /**
+ * Parse the URL from a markdown image's link portion.
+ * Handles optional angle brackets and quoted titles.
+ */
+function parseMarkdownImageUrl(inner) {
+  let url = inner.trim();
+
+  // Strip optional enclosing angle brackets (used for URLs with spaces)
+  if (url.startsWith('<')) {
+    const closeIndex = url.indexOf('>');
+    if (closeIndex > 0) {
+      url = url.slice(1, closeIndex);
+    }
+  }
+
+  // Strip optional quoted title at the end
+  url = url.replace(/\s+["'][^"']*["']\s*$/, '').trim();
+
+  return url;
+}
+
+/**
  * Extract image references from markdown content
  */
 function extractImageReferences(content) {
   const images = [];
 
-  // Match markdown images: ![alt](src)
-  const markdownImages = content.match(/!\[.*?\]\((.*?)\)/g) || [];
+  // Match markdown images: ![alt](src) or ![alt](src "title")
+  const markdownImages = content.match(/!\[.*?\]\(([^)]*)\)/g) || [];
   markdownImages.forEach((match) => {
-    const src = match.match(/!\[.*?\]\((.*?)\)/)[1];
+    const inner = match.match(/!\[.*?\]\(([^)]*)\)/)[1];
+    const src = parseMarkdownImageUrl(inner);
     if (src && !src.startsWith('http')) {
       images.push(src);
     }
@@ -124,7 +146,7 @@ function checkImageExists(imagePath) {
     normalizedPath = `/photos/${normalizedPath}`;
   }
 
-  const fullPath = path.join(PUBLIC_DIR, normalizedPath);
+  const fullPath = path.join(PUBLIC_DIR, normalizedPath.replace(/^\//, ''));
   return fs.existsSync(fullPath);
 }
 

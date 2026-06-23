@@ -14,7 +14,6 @@ import {
 // Mock data
 const mockPost: CollectionEntry<'posts'> = {
   id: 'test-post.md',
-  slug: 'test-post',
   body: 'This is a test post with some content that should take about 1 minute to read.',
   collection: 'posts',
   data: {
@@ -29,7 +28,6 @@ const mockPost: CollectionEntry<'posts'> = {
 
 const mockPage: CollectionEntry<'pages'> = {
   id: 'about.md',
-  slug: 'about',
   body: 'About page content',
   collection: 'pages',
   data: {
@@ -42,7 +40,6 @@ const mockPage: CollectionEntry<'pages'> = {
 
 const mockProject: CollectionEntry<'projects'> = {
   id: 'test-project.md',
-  slug: 'test-project',
   body: 'Project description',
   collection: 'projects',
   data: {
@@ -128,13 +125,11 @@ describe('Utility Functions', () => {
       {
         ...mockPost,
         id: 'post2.md',
-        slug: 'post2',
         data: { ...mockPost.data, tags: ['javascript', 'react'] },
       },
       {
         ...mockPost,
         id: 'post3.md',
-        slug: 'post3',
         data: { ...mockPost.data, tags: ['python'] },
       },
     ] as CollectionEntry<'posts'>[];

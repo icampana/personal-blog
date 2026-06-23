@@ -11,7 +11,7 @@ import {
   getLanguageFromFilename,
   getLocaleFromPath,
 } from '../utils/i18n';
-import { getPageUrl } from '../utils/client';
+
 
 // Detect current locale from URL
 const locale = getLocaleFromPath(Astro.url.pathname);
@@ -53,15 +53,6 @@ const imagePhoto = generateImgxUrl(
 );
 
 
-
-// Build menu items from filtered pages
-const menuItems = [
-  { url: '/', title: 'HOME' },
-  { url: '/videos', title: 'VIDEOS' },
-  { url: '/portafolio', title: 'PORTFOLIO' },
-  { url: '/archivo', title: 'ARCHIVE' },
-  ...allPosts.map((post) => getPageUrl(post)),
-];
 
 // Build translations object for LanguageSwitcher
 const translations = {
@@ -349,4 +340,5 @@ const translations = {
     {/* Structured Data */}
     <StructuredData type="organization" />
     <StructuredData type="website" />
-  </BlogLayout>
+  </div>
+</BlogLayout>

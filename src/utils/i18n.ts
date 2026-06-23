@@ -11,7 +11,9 @@ export const LOCALES = {
 export type Locale = (typeof LOCALES)[keyof typeof LOCALES];
 
 // Regex patterns
-const LANGUAGE_SUFFIX_REGEX = /\.(en|pt|fr)(\.md)?$/i;
+// The glob loader appends locale suffixes both as `.en` and `en` depending on the filename,
+// so accept an optional leading dot and an optional `.md` extension.
+const LANGUAGE_SUFFIX_REGEX = /\.?(en|pt|fr)(\.md)?$/i;
 const LOCALE_PREFIX_REGEX = /^(\/(en|pt|fr)\/)/;
 
 /**
@@ -50,8 +52,8 @@ export function stripLanguageSuffix(filename: string): string {
  * Get clean slug (without date prefix, language suffix, and /index)
  */
 export function getCleanSlug(slug: string): string {
-  // Remove language suffix
-  let cleanSlug = stripLanguageSuffix(slug);
+  // Remove language suffix and file extension
+  let cleanSlug = stripLanguageSuffix(slug).replace(/\.md$/i, '');
 
   // Remove date prefix if present (YYYY-MM-DD-)
   if (cleanSlug.match(/^\d{4}-\d{2}-\d{2}-/)) {
@@ -59,8 +61,8 @@ export function getCleanSlug(slug: string): string {
     cleanSlug = parts.slice(3).join('-');
   }
 
-  // Remove /index suffix for folder-based content (handles Spanish /index, English /indexen, Portuguese /indexpt, French /indexfr)
-  cleanSlug = cleanSlug.replace(/\/?index(en|pt|fr)?$/, '');
+  // Remove /index suffix for folder-based content (handles Spanish /index and dotted/dotless translations)
+  cleanSlug = cleanSlug.replace(/\/?index\.?(en|pt|fr)?$/, '');
 
   return cleanSlug;
 }
@@ -85,7 +87,7 @@ export async function hasTranslation(
 ): Promise<boolean> {
   return posts.some((post) => {
     const postLanguage = getLanguageFromFilename(post.id);
-    const postCleanSlug = getCleanSlug(post.slug);
+    const postCleanSlug = getCleanSlug(post.id);
     return postLanguage === locale && postCleanSlug === baseSlug;
   });
 }
@@ -101,18 +103,18 @@ export async function getAvailableTranslations(
 
   for (const post of posts) {
     const postLanguage = getLanguageFromFilename(post.id);
-    const postCleanSlug = getCleanSlug(post.slug);
+    const postCleanSlug = getCleanSlug(post.id);
 
     // Only add if clean slug matches
     if (postCleanSlug === baseSlug) {
       if (postLanguage) {
         // Add language-specific translation
-        translations[postLanguage] = post.slug;
+        translations[postLanguage] = post.id;
       } else {
         // Add Spanish post as default (no translation needed)
         // Only add if Spanish not already present
         if (!translations['es']) {
-          translations['es'] = post.slug;
+          translations['es'] = post.id;
         }
       }
     }

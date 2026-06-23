@@ -25,7 +25,7 @@ export async function getStaticPaths() {
   return spanishPosts
     .filter((post) => !getPostUrl(post, LOCALES.ENGLISH).match(/^\/en\/posts\/\d{4}\/\d{2}\//))
     .map((post) => {
-      const cleanSlug = getCleanSlug(post.slug);
+      const cleanSlug = getCleanSlug(post.id);
       const url = getPostUrl(post, LOCALES.ENGLISH);
       // Remove the /en/posts/ prefix
       const slugParts = url.replace('/en/posts/', '').split('/').filter(Boolean);
@@ -34,7 +34,7 @@ export async function getStaticPaths() {
       const translationExists = posts.some(
         (p) => {
           const pLang = getLanguageFromFilename(p.id);
-          const pCleanSlug = getCleanSlug(p.slug);
+          const pCleanSlug = getCleanSlug(p.id);
           return pLang === LOCALES.ENGLISH && pCleanSlug === cleanSlug;
         },
       );
@@ -44,7 +44,7 @@ export async function getStaticPaths() {
         ? posts.find(
             (p) => {
               const pLang = getLanguageFromFilename(p.id);
-              const pCleanSlug = getCleanSlug(p.slug);
+              const pCleanSlug = getCleanSlug(p.id);
               return pLang === LOCALES.ENGLISH && pCleanSlug === cleanSlug;
             },
           )

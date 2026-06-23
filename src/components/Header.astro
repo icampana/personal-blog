@@ -21,7 +21,7 @@ const pages = await getCollection('pages');
 // Group pages by their clean slug (e.g., "about-me")
 const pageGroups = new Map<string, typeof pages>();
 for (const page of pages) {
-  const cleanSlug = getCleanSlug(page.slug);
+  const cleanSlug = getCleanSlug(page.id);
   if (!pageGroups.has(cleanSlug)) {
     pageGroups.set(cleanSlug, []);
   }

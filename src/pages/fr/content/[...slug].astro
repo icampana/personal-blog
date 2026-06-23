@@ -1,5 +1,5 @@
 ---
-import { type CollectionEntry, getCollection } from 'astro:content';
+import { type CollectionEntry, getCollection, render } from 'astro:content';
 import BlogLayout from '../../../layouts/BlogLayout.astro';
 import { getPageUrl } from '../../../utils/client';
 import {
@@ -19,7 +19,7 @@ export async function getStaticPaths() {
   );
 
   return spanishPages.map((page) => {
-    const cleanSlug = getCleanSlug(page.slug);
+    const cleanSlug = getCleanSlug(page.id);
     const url = getPageUrl(page, LOCALES.FRENCH);
     // Remove locale prefix and the /content path, then split into slug parts
     const pathWithoutLocale = stripLocalePrefix(url);
@@ -29,7 +29,7 @@ export async function getStaticPaths() {
     const translationExists = pages.some(
       (p) => {
         const pLang = getLanguageFromFilename(p.id);
-        const pCleanSlug = getCleanSlug(p.slug);
+        const pCleanSlug = getCleanSlug(p.id);
         return pLang === LOCALES.FRENCH && pCleanSlug === cleanSlug;
       },
     );
@@ -39,7 +39,7 @@ export async function getStaticPaths() {
       ? pages.find(
           (p) => {
             const pLang = getLanguageFromFilename(p.id);
-            const pCleanSlug = getCleanSlug(p.slug);
+            const pCleanSlug = getCleanSlug(p.id);
             return pLang === LOCALES.FRENCH && pCleanSlug === cleanSlug;
           },
         )
@@ -64,7 +64,7 @@ interface Props {
 
 const { page, locale, isFallback } = Astro.props;
 const { title, description } = page.data;
-const { Content } = await page.render();
+const { Content } = await render(page);
 ---
 
 <BlogLayout title={title} description={description} locale={locale}>

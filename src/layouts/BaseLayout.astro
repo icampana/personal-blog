@@ -1,5 +1,5 @@
 ---
-import { ViewTransitions } from 'astro:transitions';
+import { ClientRouter } from 'astro:transitions';
 import ConsentBanner from '../components/ConsentBanner';
 import SEO from '../components/SEO.astro';
 import type { Locale } from '../utils/i18n';
@@ -95,7 +95,7 @@ const lang = match(locale)
     />
 
     <!-- View Transitions -->
-    <ViewTransitions />
+    <ClientRouter />
 
     <script is:inline>
       // Initialize theme - avoid flash of wrong theme
