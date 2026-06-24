@@ -1,0 +1,34 @@
+---
+import Layout from '../layouts/BlogLayout.astro';
+import FonemaSoundboard from '../components/FonemaSoundboard';
+
+const pageData = {
+	title: 'Fonema PT-PT',
+	subtitle: 'Guía de Pronunciación del Portugués Europeo',
+	description:
+		'Herramienta interactiva para aprender a pronunciar correctamente los fonemas más importantes del portugués de Portugal. Escucha cada sonido con palabras de referencia.',
+	instructions: 'Haz clic en cualquier tarjeta para escuchar la pronunciación. Cada fonema incluye una palabra ancla para contexto.',
+	categoryLabels: {
+		vowel: 'Vocales',
+		nasal: 'Vocales Nasales',
+		consonant: 'Consonantes Especiales',
+	},
+};
+---
+
+<Layout
+	title="Fonema PT-PT - Aprende la Pronunciación del Portugués Europeo"
+	description="Herramienta educativa interactiva para aprender los fonemas del portugués de Portugal. Escucha y practica la pronunciación correcta."
+	locale="es"
+>
+	<div class="py-8 md:py-12">
+		<FonemaSoundboard {...pageData} client:load />
+	</div>
+
+	<div class="max-w-4xl mx-auto px-4 mt-12 pt-8 border-t border-base-300">
+		<p class="text-sm text-base-content/50 text-center">
+			Generado con voz sintética pt-PT-DuarteNeural • Audio de referencia para
+			aprendizaje
+		</p>
+	</div>
+</Layout>

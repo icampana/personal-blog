@@ -1,5 +1,6 @@
 // @ts-check
 
+import { unified } from '@astrojs/markdown-remark';
 import mdx from '@astrojs/mdx';
 import react from '@astrojs/react';
 import sitemap from '@astrojs/sitemap';
@@ -19,15 +20,8 @@ export default defineConfig({
   site: 'https://ivan.campananaranjo.com',
   output: 'static',
   image: {
-    domains: ['igcn-ws.imgix.net'],
-    remotePatterns: [
-      {
-        protocol: 'https',
-        hostname: 'igcn-ws.imgix.net',
-        port: '',
-        pathname: '/**',
-      },
-    ],
+    // Don't configure imgix here - we want to pass imgix URLs through without build-time validation
+    // This allows using imgix URLs that may not exist yet during the build
   },
   integrations: [react(), sitemap(), mdx()],
   build: {
@@ -38,10 +32,16 @@ export default defineConfig({
     build: {
       rollupOptions: {
         output: {
-          manualChunks: {
-            'react-vendor': ['react', 'react-dom'],
-            'search-vendor': ['flexsearch'],
-            'utils-vendor': ['date-fns'],
+          manualChunks(id) {
+            if (/node_modules\/(react|react-dom)\//.test(id)) {
+              return 'react-vendor';
+            }
+            if (/node_modules\/flexsearch\//.test(id)) {
+              return 'search-vendor';
+            }
+            if (/node_modules\/date-fns\//.test(id)) {
+              return 'utils-vendor';
+            }
           },
         },
       },
@@ -51,24 +51,26 @@ export default defineConfig({
     },
   },
   markdown: {
-    remarkPlugins: [
-      remarkGfm,
-      remarkBreaks,
-      remarkEmoji,
-      remarkDirective,
-      unifiedAdmonitions,
-      remarkYoutube,
-    ],
-    rehypePlugins: [
-      rehypeSlug,
-      [
-        rehypeHighlight,
-        {
-          ignoreMissing: true,
-          plainText: ['txt', 'text'],
-        },
+    processor: unified({
+      remarkPlugins: [
+        remarkGfm,
+        remarkBreaks,
+        remarkEmoji,
+        remarkDirective,
+        unifiedAdmonitions,
+        remarkYoutube,
       ],
-    ],
+      rehypePlugins: [
+        rehypeSlug,
+        [
+          rehypeHighlight,
+          {
+            ignoreMissing: true,
+            plainText: ['txt', 'text'],
+          },
+        ],
+      ],
+    }),
     shikiConfig: {
       theme: 'github-dark',
       wrap: true,
@@ -78,7 +80,6 @@ export default defineConfig({
   redirects: {
     // WordPress login redirects
     '/wp-login.php': '/',
-    '/wp-login.php/': '/',
 
     // Legacy pagination redirects (single digit pages)
     '/1': '/posts/page/1',

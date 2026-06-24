@@ -2,11 +2,20 @@
 import { type CollectionEntry, getCollection } from 'astro:content';
 import ProjectLayout from '../../layouts/ProjectLayout.astro';
 import { getProjectUrl } from '../../utils/client';
+import {
+  getLanguageFromFilename,
+  LOCALES,
+} from '../../utils/i18n';
 
 export async function getStaticPaths() {
   const projects = await getCollection('projects');
 
-  return projects.map((project) => {
+  // Filter only Spanish projects (exclude .en.md and .pt.md)
+  const spanishProjects = projects.filter(
+    (project) => getLanguageFromFilename(project.id) === LOCALES.DEFAULT || getLanguageFromFilename(project.id) === null,
+  );
+
+  return spanishProjects.map((project) => {
     const url = getProjectUrl(project);
     // Remove the /portafolio prefix and split into slug parts
     const slugParts = url

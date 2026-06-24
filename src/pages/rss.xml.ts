@@ -1,9 +1,14 @@
 import { getCollection } from 'astro:content';
 import rss from '@astrojs/rss';
 import { getPostUrl, sortPostsByDate } from '../utils/client';
+import { getLanguageFromFilename } from '../utils/i18n';
 
 export async function GET(context: { site?: string }) {
-  const posts = await getCollection('posts');
+  const allPosts = await getCollection('posts');
+  const posts = allPosts.filter((post) => {
+    const lang = getLanguageFromFilename(post.id);
+    return lang === 'es' || lang === null;
+  });
   const sortedPosts = sortPostsByDate(posts);
 
   return rss({

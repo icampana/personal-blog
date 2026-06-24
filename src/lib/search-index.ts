@@ -22,9 +22,9 @@ export function createSearchIndex(
   posts.forEach((post) => {
     searchItems.push({
       title: post.data.title,
-      url: post.data.path ? `/posts${post.data.path}` : `/posts/${post.slug}`,
-      content: post.body,
-      summary: getSummary(post.body),
+      url: post.data.path ? `/posts${post.data.path}` : `/posts/${post.id}`,
+      content: post.body ?? '',
+      summary: getSummary(post.body ?? ''),
       tags: post.data.tags,
       date: post.data.date.toISOString(),
       type: 'post',
@@ -35,11 +35,9 @@ export function createSearchIndex(
   pages.forEach((page) => {
     searchItems.push({
       title: page.data.title,
-      url: page.data.path
-        ? `/content${page.data.path}`
-        : `/content/${page.slug}`,
-      content: page.body,
-      summary: getSummary(page.body),
+      url: page.data.path ? `/content${page.data.path}` : `/content/${page.id}`,
+      content: page.body ?? '',
+      summary: getSummary(page.body ?? ''),
       date: page.data.date.toISOString(),
       type: 'page',
     });
@@ -51,9 +49,9 @@ export function createSearchIndex(
       title: project.data.title,
       url: project.data.path
         ? `/portafolio${project.data.path}`
-        : `/portafolio/${project.slug}`,
-      content: project.body,
-      summary: getSummary(project.body),
+        : `/portafolio/${project.id}`,
+      content: project.body ?? '',
+      summary: getSummary(project.body ?? ''),
       tags: project.data.techStack,
       date: project.data.date.toISOString(),
       type: 'project',

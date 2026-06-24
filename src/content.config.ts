@@ -1,7 +1,9 @@
-import { defineCollection, z } from 'astro:content';
+import { defineCollection } from 'astro:content';
+import { glob } from 'astro/loaders';
+import { z } from 'astro/zod';
 
 const posts = defineCollection({
-  type: 'content',
+  loader: glob({ pattern: '**/*.{md,mdx}', base: './src/content/posts' }),
   schema: z.object({
     title: z.string(),
     date: z.coerce.date(),
@@ -9,6 +11,7 @@ const posts = defineCollection({
     featuredImage: z.string().optional(),
     description: z.string().optional(),
     tags: z.array(z.string()).optional(),
+    locale: z.string().default('es').optional(),
     // Legacy fields from WordPress/Blogger migration
     wordpress_id: z.number().optional(),
     author: z.string().optional(),
@@ -19,7 +22,7 @@ const posts = defineCollection({
 });
 
 const pages = defineCollection({
-  type: 'content',
+  loader: glob({ pattern: '**/*.{md,mdx}', base: './src/content/pages' }),
   schema: z.object({
     title: z.string(),
     date: z.coerce.date(),
@@ -34,7 +37,7 @@ const pages = defineCollection({
 });
 
 const projects = defineCollection({
-  type: 'content',
+  loader: glob({ pattern: '**/*.{md,mdx}', base: './src/content/projects' }),
   schema: z.object({
     title: z.string(),
     date: z.coerce.date(),
@@ -47,8 +50,21 @@ const projects = defineCollection({
   }),
 });
 
+const videos = defineCollection({
+  loader: glob({ pattern: '**/*.{md,mdx}', base: './src/content/videos' }),
+  schema: z.object({
+    title: z.string(),
+    description: z.string().optional(),
+    date: z.coerce.date(),
+    videoId: z.string(),
+    tags: z.array(z.string()).optional(),
+    featured: z.boolean().optional(),
+  }),
+});
+
 export const collections = {
   posts,
   pages,
   projects,
+  videos,
 };

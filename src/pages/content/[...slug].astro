@@ -1,21 +1,27 @@
 ---
-import { type CollectionEntry, getCollection } from 'astro:content';
+import { type CollectionEntry, getCollection, render } from 'astro:content';
 import BlogLayout from '../../layouts/BlogLayout.astro';
 import { getPageUrl } from '../../utils/client';
+import { getLanguageFromFilename } from '../../utils/i18n';
 
 export async function getStaticPaths() {
   const pages = await getCollection('pages');
 
-  return pages.map((page) => {
-    const url = getPageUrl(page);
-    // Remove the /content prefix and split into slug parts
-    const slugParts = url.replace('/content/', '').split('/').filter(Boolean);
+  return pages
+    .filter(page => {
+      const lang = getLanguageFromFilename(page.id);
+      return lang === 'es' || lang === null;
+    })
+    .map((page) => {
+      const url = getPageUrl(page);
+      // Remove the /content prefix and split into slug parts
+      const slugParts = url.replace('/content/', '').split('/').filter(Boolean);
 
-    return {
-      params: { slug: slugParts.join('/') },
-      props: { page },
-    };
-  });
+      return {
+        params: { slug: slugParts.join('/') },
+        props: { page },
+      };
+    });
 }
 
 interface Props {
@@ -24,15 +30,15 @@ interface Props {
 
 const { page } = Astro.props;
 const { title, description } = page.data;
-const { Content } = await page.render();
+const { Content } = await render(page);
 ---
 
 <BlogLayout title={title} description={description}>
   <article class="max-w-4xl mx-auto">
     <header class="mb-8">
-      <h1 class="text-4xl font-bold mb-4">{title}</h1>
+      <h1 class="text-4xl font-bold mb-4 text-base-content">{title}</h1>
       {description && (
-        <p class="text-lg text-gray-700 mb-6">{description}</p>
+        <p class="text-lg text-base-content/80 mb-6">{description}</p>
       )}
     </header>
 

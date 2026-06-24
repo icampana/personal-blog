@@ -26,7 +26,7 @@ const ContentPagePreview = ({ entry }: ContentPagePreviewProps) => {
   }
 
   const date = formatISO(endOfDay(new Date(data.date || 0)));
-  const htmlBody = marked(data?.body || '');
+  const htmlBody = marked.parse(data?.body || '');
 
   const page = {
     title: data.title || '',

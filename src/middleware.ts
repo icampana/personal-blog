@@ -1,8 +1,16 @@
 import { defineMiddleware } from 'astro:middleware';
+import { getLocaleFromPath } from './utils/i18n';
 
 export const onRequest = defineMiddleware(async (context, next) => {
   const { url, redirect } = context;
   const pathname = url.pathname;
+
+  // Detect language from URL
+  const locale = getLocaleFromPath(pathname);
+
+  // Store locale in context for use in pages
+  context.locals.locale = locale;
+  context.locals.originalPathname = pathname;
 
   // Handle Gatsby format posts: /YYYY-MM-DD-slug -> /posts/YYYY-MM-DD-slug
   const gatsbyPostMatch = pathname.match(

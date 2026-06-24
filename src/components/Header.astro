@@ -2,64 +2,92 @@
 import { getCollection } from 'astro:content';
 import SearchComponent from './SearchComponent';
 import ThemeToggle from './ThemeToggle';
+import LanguageSwitcher from './LanguageSwitcher';
+import MobileMenu from './MobileMenu';
+import type { Locale } from '../utils/i18n';
+import { getPageUrl } from '../utils/client';
+import { getLanguageFromFilename, getCleanSlug, LOCALES } from '../utils/i18n';
+
+interface Props {
+  translations?: Partial<Record<Locale, string>>;
+  locale?: Locale;
+}
+
+const { translations, locale = 'es' } = Astro.props;
 
 // Get all pages for navigation
 const pages = await getCollection('pages');
 
+// Group pages by their clean slug (e.g., "about-me")
+const pageGroups = new Map<string, typeof pages>();
+for (const page of pages) {
+  const cleanSlug = getCleanSlug(page.id);
+  if (!pageGroups.has(cleanSlug)) {
+    pageGroups.set(cleanSlug, []);
+  }
+  pageGroups.get(cleanSlug)!.push(page);
+}
+
+// Build menu items with best-match strategy
+const navPages: { url: string; title: string }[] = [];
+
+for (const [, group] of pageGroups) {
+  // Sort by priority: current locale > Spanish > other
+  const currentLocalePage = group.find(
+    (p) => getLanguageFromFilename(p.id) === locale
+  );
+  const spanishPage = group.find(
+    (p) => getLanguageFromFilename(p.id) === null || getLanguageFromFilename(p.id) === LOCALES.DEFAULT
+  );
+  
+  // Select the best page for content, but always generate URL for current locale
+  // This enables the fallback banner to work correctly
+  const pageToRender = currentLocalePage || spanishPage || group[0];
+  
+  if (pageToRender) {
+    navPages.push({
+      url: getPageUrl(pageToRender, locale),
+      title: pageToRender.data.title,
+    });
+  }
+}
+
 const menuItems = [
-  { url: '/', title: 'Home' },
-  { url: '/portafolio', title: 'Portfolio' },
-  { url: '/archivo', title: 'Archivo' },
-  ...pages.map((page) => ({
-    url: page.data.path ? `/content${page.data.path}` : `/content/${page.slug}`,
-    title: page.data.title,
-  })),
+  { url: locale === 'es' ? '/' : `/${locale}`, title: 'HOME' },
+  { url: locale === 'es' ? '/videos' : `/${locale}/videos`, title: 'VIDEOS' },
+  { url: locale === 'es' ? '/portafolio' : `/${locale}/portafolio`, title: 'PORTFOLIO' },
+  { url: locale === 'es' ? '/archivo' : `/${locale}/archivo`, title: 'ARCHIVE' },
+  ...navPages,
 ];
 
-const siteTitle = 'Iván Gabriel';
+const siteTitle = 'IVÁN GABRIEL';
 ---
 
-<header>
-  <div class="navbar bg-neutral text-neutral-content">
-    <div class="navbar-start">
-      <div class="dropdown">
-        <button type="button" tabindex="0" class="btn btn-ghost btn-circle">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            class="h-5 w-5"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-          >
-            <title>Menu</title>
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              d="M4 6h16M4 12h16M4 18h7"
-            />
-          </svg>
-        </button>
-        <ul class="menu menu-md dropdown-content bg-neutral rounded-box z-[1] mt-3 w-52 p-2 shadow">
-          {menuItems.map((item) => (
-            <li>
-              <a href={item.url}>{item.title}</a>
-            </li>
-          ))}
-        </ul>
-      </div>
+<nav
+  class='sticky top-0 z-50 bg-base-100/80 backdrop-blur-md border-b border-base-content/20'>
+  <div class='max-w-7xl mx-auto px-6 h-16 flex items-center justify-between'>
+    <div class='flex items-center space-x-2'>
+      <div class='w-3 h-3 rounded-full bg-[var(--accent-neon)]'></div>
+      <span class='mono font-bold tracking-tighter text-xl text-base-content'
+        >{siteTitle}</span
+      >
     </div>
-    <div class="navbar-center">
-      <a class="btn btn-ghost text-xl" href="/">
-        {siteTitle}
-      </a>
+    <div class='hidden md:flex items-center space-x-8'>
+      {
+        menuItems.map((item) => (
+          <a
+            class='mono text-sm font-medium text-base-content hover:text-[var(--accent-neon)] transition-colors'
+            href={item.url}>
+            {item.title}
+          </a>
+        ))
+      }
     </div>
-    <div class="navbar-end">
+    <div class='flex items-center space-x-4'>
+      <LanguageSwitcher client:load translations={translations} />
+      <MobileMenu client:load menuItems={menuItems} />
       <SearchComponent client:load />
       <ThemeToggle client:load />
     </div>
   </div>
-  <div>
-    <slot />
-  </div>
-</header>
+</nav>

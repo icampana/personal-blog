@@ -5,62 +5,87 @@ import { getReadingTime } from '../utils';
 import { normalizeImagePath } from '../utils/imageUtils';
 import { generateImgxUrl } from '../utils/imgxUtils';
 import { Image } from 'astro:assets';
+import type { Locale } from '../utils/i18n';
 
 export interface Props {
   post: CollectionEntry<'posts'>;
+  locale?: Locale;
   lazyLoad?: boolean;
 }
 
-const { post, lazyLoad = true } = Astro.props;
+const { post, locale = 'es', lazyLoad = true } = Astro.props;
 const { title, description, featuredImage, tags, date } = post.data;
 
 const readingTime = getReadingTime(post.body);
-const readingTimeText = `${Math.round(readingTime.minutes)} minutos`;
+const readingTimeText = `${Math.round(readingTime.minutes)} ${locale === 'en' ? 'min read' : locale === 'pt' ? 'minutos' : locale === 'fr' ? 'min lecture' : 'minutos'}`;
 
 const imagePath = normalizeImagePath(featuredImage);
 
-const postUrl = getPostUrl(post);
+const postUrl = getPostUrl(post, locale);
 const summary = description || post.body.slice(0, 200) + '...';
+
+const readingTimeLabel: Record<Locale, string> = {
+  es: 'Lectura:',
+  en: 'Reading:',
+  pt: 'Leitura:',
+  fr: 'Lecture:',
+};
 ---
 
-<div class="card bg-base-100 shadow-xl">
-  <figure>
-    <a href={postUrl} aria-label={`Leer el post: ${title}`}>
+<div
+  class='dashboard-panel flex flex-col rounded-xl overflow-hidden hover:scale-[1.02] transition-transform duration-300 border border-[var(--border-panel)] bg-[var(--bg-panel)] w-full'>
+  <figure class='overflow-hidden w-full'>
+    <a
+      href={postUrl}
+      class='block aspect-[2/1] md:aspect-video w-full'
+      aria-label={`Leer el post: ${title}`}>
       <Image
-        src={imagePath.startsWith('http') || imagePath.startsWith('//') ? imagePath : generateImgxUrl(imagePath, 400, 225)}
+        src={imagePath.startsWith('http') || imagePath.startsWith('//')
+          ? imagePath
+          : generateImgxUrl(imagePath, 400, 225)}
         alt={title}
-        class="object-cover w-full h-48"
+        class='w-full h-full object-cover'
         loading={lazyLoad ? 'lazy' : 'eager'}
-        width="400"
-        height="225"
+        width='400'
+        height='225'
       />
     </a>
   </figure>
-  <div class="card-body">
-    <h2 class="card-title">
-      <a href={postUrl} class="hover:text-primary">{title}</a>
+  <div class='p-6 flex flex-col flex-1'>
+    <h2
+      class='mono text-lg font-bold text-base-content mb-2 hover:text-[var(--accent-neon)] transition-colors'>
+      <a
+        href={postUrl}
+        class='hover:text-[var(--accent-neon)] transition-colors'>
+        {title}
+      </a>
     </h2>
-    <p class="text-sm text-base-content/70">{summary}</p>
+    <p class='text-base-content/70 text-sm leading-relaxed mb-4'>
+      {summary}
+    </p>
 
-    {tags && tags.length > 0 && (
-      <div class="card-actions justify-end">
-        {tags.map((tag) => (
-          <a
-            href={`/tag/${tag.toLowerCase()}`}
-            class="badge badge-info hover:badge-primary"
-          >
-            {tag}
-          </a>
-        ))}
-      </div>
-    )}
+    {
+      tags && tags.length > 0 && (
+        <div class='flex flex-wrap gap-2 mb-4'>
+          {tags.map((tag) => (
+            <a
+              href={`${locale === 'es' ? '' : `/${locale}`}/tag/${tag.toLowerCase()}`}
+              class='px-2 py-1 bg-base-200 text-base-content mono text-xs border border-base-content/20 rounded hover:border-[var(--accent-neon)] hover:text-[var(--accent-neon)] transition-colors'>
+              {tag}
+            </a>
+          ))}
+        </div>
+      )
+    }
 
-    <div class="card-footer text-xs mt-4 flex justify-between items-center">
-      <time datetime={date.toISOString()} class="capitalize text-accent">
-        {formatDate(date)}
+    <div
+      class='flex justify-between items-center text-xs text-base-content/50 mt-auto'>
+      <time datetime={date.toISOString()} class='capitalize'>
+        {formatDate(date, locale)}
       </time>
-      <div class="text-base-content/60">
-        <em>Lectura:</em> {readingTimeText}
+      <div>
+        <em>{readingTimeLabel[locale]}</em>
+        {readingTimeText}
       </div>
     </div>
   </div>

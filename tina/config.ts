@@ -29,12 +29,13 @@ const config: any = {
         name: 'posts',
         path: 'src/content/posts',
         match: {
-          include: '**/*',
+          include: '**/*.md',
+          exclude: '**/*.{en,pt}.md',
         },
         ui: {
           filename: {
             // Example of using a custom slugify function
-            slugify: (values) => {
+            slugify: (values: any) => {
               const articleDate = values?.date
                 ? new Date(values?.date)
                 : new Date();
@@ -63,7 +64,8 @@ const config: any = {
         name: 'pages',
         path: 'src/content/pages',
         match: {
-          include: '**/*',
+          include: '**/*.md',
+          exclude: '**/*.{en,pt}.md',
         },
         fields: [
           {
@@ -82,7 +84,8 @@ const config: any = {
         name: 'projects',
         path: 'src/content/projects',
         match: {
-          include: '**/*',
+          include: '**/*.md',
+          exclude: '**/*.{en,pt}.md',
         },
         fields: [
           {
@@ -93,6 +96,56 @@ const config: any = {
             isBody: true,
           },
           ...projectFields(),
+        ],
+      },
+      {
+        format: 'md',
+        label: 'Videos',
+        name: 'videos',
+        path: 'src/content/videos',
+        match: {
+          include: '**/*.md',
+          exclude: '**/*.{en,pt}.md',
+        },
+        fields: [
+          {
+            type: 'string',
+            name: 'title',
+            label: 'Title',
+            isTitle: true,
+            required: true,
+          },
+          {
+            type: 'string',
+            name: 'videoId',
+            label: 'YouTube Video ID',
+            required: true,
+          },
+          {
+            type: 'datetime',
+            name: 'date',
+            label: 'Date',
+            required: true,
+          },
+          {
+            type: 'string',
+            name: 'description',
+            label: 'Description',
+            ui: {
+              component: 'textarea',
+            },
+          },
+          {
+            type: 'boolean',
+            name: 'featured',
+            label: 'Featured',
+          },
+          {
+            type: 'rich-text',
+            name: 'body',
+            label: 'Body',
+            isBody: true,
+          },
         ],
       },
     ],

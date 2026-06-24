@@ -1,0 +1,62 @@
+export const ui = {
+  es: {
+    'nav.home': 'HOME',
+    'nav.videos': 'VIDEOS',
+    'nav.portfolio': 'PORTAFOLIO',
+    'nav.archive': 'ARCHIVO',
+    'lang.switch': 'EN',
+    'lang.english': 'English',
+    'lang.spanish': 'Español',
+    'lang.portuguese': 'Português',
+    'search.placeholder': 'Buscar...',
+    'posts.related': 'Artículos relacionados',
+    back_to_top: '↑',
+    'tag.label': 'Artículos etiquetados con',
+    'tag.found_one': 'artículo encontrado',
+    'tag.found_many': 'artículos encontrados',
+    'tag.not_found': 'No se encontraron artículos con esta etiqueta',
+    'tag.all': 'Ver todas las etiquetas',
+  },
+  en: {
+    'nav.home': 'HOME',
+    'nav.videos': 'VIDEOS',
+    'nav.portfolio': 'PORTFOLIO',
+    'nav.archive': 'ARCHIVE',
+    'lang.switch': 'ES',
+    'lang.english': 'English',
+    'lang.spanish': 'Español',
+    'lang.portuguese': 'Português',
+    'search.placeholder': 'Search...',
+    'posts.related': 'Related Articles',
+    back_to_top: '↑',
+    'tag.label': 'Articles tagged with',
+    'tag.found_one': 'article found',
+    'tag.found_many': 'articles found',
+    'tag.not_found': 'No articles found with this tag',
+    'tag.all': 'View all tags',
+  },
+  pt: {
+    'nav.home': 'HOME',
+    'nav.videos': 'VIDEOS',
+    'nav.portfolio': 'PORTFOLIO',
+    'nav.archive': 'ARQUIVO',
+    'lang.switch': 'ES',
+    'lang.english': 'English',
+    'lang.spanish': 'Español',
+    'lang.portuguese': 'Português',
+    'search.placeholder': 'Pesquisar...',
+    'posts.related': 'Artigos Relacionados',
+    back_to_top: '↑',
+    'tag.label': 'Artigos marcados com',
+    'tag.found_one': 'artigo encontrado',
+    'tag.found_many': 'artigos encontrados',
+    'tag.not_found': 'Nenhum artigo encontrado com esta etiqueta',
+    'tag.all': 'Ver todas as etiquetas',
+  },
+} as const;
+
+export function useTranslations(lang: keyof typeof ui) {
+  return function t(key: keyof (typeof ui)[typeof lang]) {
+    return ui[lang]?.[key] || ui['es'][key];
+  };
+}

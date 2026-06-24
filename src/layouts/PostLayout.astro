@@ -7,17 +7,42 @@ import { getReadingTime } from '../utils';
 import { normalizeImagePath } from '../utils/imageUtils';
 import BlogLayout from './BlogLayout.astro';
 import { generateImgxUrl } from '../utils/imgxUtils';
+import type { Locale } from '../utils/i18n';
+import { getAvailableTranslations, getCleanSlug } from '../utils/i18n';
+import { getCollection, render } from 'astro:content';
+import { getPostUrl } from '../utils/client';
+import { match } from 'ts-pattern';
 
 export interface Props {
   post: CollectionEntry<'posts'>;
+  locale?: Locale;
 }
 
-const { post } = Astro.props;
+const { post, locale = 'es' } = Astro.props;
 const { title, description, featuredImage, tags, date } = post.data;
-const { Content } = await post.render();
+const { Content } = await render(post);
+
+// Calculate translations
+const allPosts = await getCollection('posts');
+const cleanSlug = getCleanSlug(post.id);
+const availableTranslations = await getAvailableTranslations(allPosts, cleanSlug);
+
+// Convert slugs to full URLs
+const translations: Partial<Record<Locale, string>> = {};
+for (const [lang, slug] of Object.entries(availableTranslations)) {
+  // Find the post object for this slug to generate the correct URL
+  const translatedPost = allPosts.find(p => p.id === slug);
+  if (translatedPost) {
+    translations[lang as Locale] = getPostUrl(translatedPost, lang as Locale);
+  }
+}
 
 const readingTime = getReadingTime(post.body);
-const readingTimeText = `${Math.round(readingTime.minutes)} minutos`;
+const readingTimeText = match(locale)
+  .with('en', () => `${Math.round(readingTime.minutes)} min read`)
+  .with('pt', () => `${Math.round(readingTime.minutes)} min de leitura`)
+  .with('fr', () => `${Math.round(readingTime.minutes)} min de lecture`)
+  .otherwise(() => `${Math.round(readingTime.minutes)} minutos de lectura`);
 
 const imagePath = normalizeImagePath(featuredImage);
 ---
@@ -32,6 +57,8 @@ const imagePath = normalizeImagePath(featuredImage);
   tags={tags}
   wordCount={readingTime.words}
   readingTime={readingTime.minutes}
+  locale={locale}
+  translations={translations}
 >
   <article class="max-w-4xl mx-auto">
     <!-- Featured Image -->
@@ -50,18 +77,18 @@ const imagePath = normalizeImagePath(featuredImage);
 
     <!-- Post Header -->
     <header class="mb-8">
-      <h1 class="text-4xl font-bold mb-4">{title}</h1>
+      <h1 class="text-4xl font-bold mb-4 text-base-content">{title}</h1>
 
-      <div class="flex flex-wrap items-center gap-4 text-sm text-gray-600 mb-4">
+      <div class="flex flex-wrap items-center gap-4 text-sm text-base-content/70 mb-4">
         <time datetime={date.toISOString()}>
-          {formatDate(date)}
+          {formatDate(date, locale)}
         </time>
         <span>•</span>
-        <span>{readingTimeText} de lectura</span>
+        <span>{readingTimeText}</span>
       </div>
 
       {description && (
-        <p class="text-lg text-gray-700 mb-6">{description}</p>
+        <p class="text-lg text-base-content/80 mb-6">{description}</p>
       )}
 
       {tags && tags.length > 0 && (

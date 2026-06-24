@@ -1,42 +1,87 @@
 import type { CollectionEntry } from 'astro:content';
 import { format } from 'date-fns';
-import { es } from 'date-fns/locale';
+import {
+  type Locale as DateFnsLocale,
+  es as esLocale,
+  fr as frLocale,
+  pt as ptLocale,
+} from 'date-fns/locale';
+import type { Locale } from './i18n';
+import { getCleanSlug, stripLanguageSuffix } from './i18n';
 
-export function formatDate(date: Date): string {
-  return format(date, "d 'de' MMMM 'de' yyyy", { locale: es });
+const DATE_LOCALES: Partial<Record<Locale, DateFnsLocale>> = {
+  es: esLocale,
+  pt: ptLocale,
+  fr: frLocale,
+};
+
+export function formatDate(date: Date, locale: Locale = 'es'): string {
+  const dateLocale = DATE_LOCALES[locale];
+  const formatString =
+    locale === 'en'
+      ? 'MMMM d, yyyy'
+      : locale === 'fr'
+        ? 'd MMMM yyyy'
+        : "d 'de' MMMM 'de' yyyy";
+  return format(date, formatString, { locale: dateLocale });
 }
 
-export function getPostUrl(post: CollectionEntry<'posts'>): string {
+export function getPostUrl(
+  post: CollectionEntry<'posts'>,
+  locale?: Locale,
+): string {
+  const localePrefix = locale && locale !== 'es' ? `/${locale}` : '';
+
+  // Use post.id to derive clean slug because post.id might have dots removed/modified
+  // stripLanguageSuffix returns filename with .md if it was .en.md, so we strip .md
+  let cleanSlug = stripLanguageSuffix(post.id).replace(/\.md$/i, '');
+
+  // Remove /index from the end if present (for folder-based posts)
+  cleanSlug = cleanSlug.replace(/\/index$/, '');
+
   if (post.data.path) {
-    return `/posts${post.data.path}`;
+    return `${localePrefix}/posts${post.data.path}`;
   }
 
   // Handle legacy date-based URLs
-  const slug = post.slug;
-  if (slug.match(/^\d{4}-\d{2}-\d{2}-/)) {
+  if (cleanSlug.match(/^\d{4}-\d{2}-\d{2}-/)) {
     // Extract date parts and slug from filename
-    const parts = slug.split('-');
+    const parts = cleanSlug.split('-');
     const year = parts[0];
     const month = parts[1];
     const postSlug = parts.slice(3).join('-');
-    return `/posts/${year}/${month}/${postSlug}`;
+    return `${localePrefix}/posts/${year}/${month}/${postSlug}`;
   }
 
-  return `/posts/${slug}`;
+  return `${localePrefix}/posts/${cleanSlug}`;
 }
 
-export function getPageUrl(page: CollectionEntry<'pages'>): string {
+export function getPageUrl(
+  page: CollectionEntry<'pages'>,
+  locale?: Locale,
+): string {
+  const localePrefix = locale && locale !== 'es' ? `/${locale}` : '';
+
   if (page.data.path) {
-    return `/content${page.data.path}`;
+    return `${localePrefix}/content${page.data.path}`;
   }
-  return `/content/${page.slug}`;
+  // Use getCleanSlug to remove /index and language suffixes from the slug
+  const cleanSlug = getCleanSlug(page.id);
+  return `${localePrefix}/content/${cleanSlug}`;
 }
 
-export function getProjectUrl(project: CollectionEntry<'projects'>): string {
+export function getProjectUrl(
+  project: CollectionEntry<'projects'>,
+  locale?: Locale,
+): string {
+  const localePrefix = locale && locale !== 'es' ? `/${locale}` : '';
+
   if (project.data.path) {
-    return `/portafolio${project.data.path}`;
+    return `${localePrefix}/portafolio${project.data.path}`;
   }
-  return `/portafolio/${project.slug}`;
+  // Use getCleanSlug to remove /index and language suffixes from the slug
+  const cleanSlug = getCleanSlug(project.id);
+  return `${localePrefix}/portafolio/${cleanSlug}`;
 }
 
 export function getAllTags(posts: CollectionEntry<'posts'>[]): string[] {

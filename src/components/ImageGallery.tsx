@@ -1,4 +1,3 @@
-import type React from 'react';
 import { useCallback, useEffect, useState } from 'react';
 import { generateImgxUrl } from '../utils/imgxUtils';
 
@@ -23,11 +22,11 @@ interface ImageGalleryProps {
   lazy?: boolean;
 }
 
-const ImageGallery: React.FC<ImageGalleryProps> = ({
+export default function ImageGallery({
   images,
   title,
   lazy = true,
-}) => {
+}: ImageGalleryProps) {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isLightboxOpen, setIsLightboxOpen] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
@@ -297,6 +296,4 @@ const ImageGallery: React.FC<ImageGalleryProps> = ({
       )}
     </>
   );
-};
-
-export default ImageGallery;
+}

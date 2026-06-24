@@ -32,7 +32,7 @@ const BlogPostPreview = async ({ entry }: BlogPostPreviewProps) => {
 
   const featuredImage = data.featuredImage?.replace('/public', '') || '';
   const date = formatISO(endOfDay(new Date(data.date || 0)));
-  const htmlBody = await marked(data?.body || '');
+  const htmlBody = marked.parse(data?.body || '');
 
   const post = {
     title: data.title || '',

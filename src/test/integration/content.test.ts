@@ -3,8 +3,7 @@ import { describe, expect, it, vi } from 'vitest';
 // Mock Astro content collections
 const mockPosts = [
   {
-    id: 'test-post-1.md',
-    slug: 'test-post-1',
+    id: 'test-post-1',
     collection: 'posts',
     data: {
       title: 'Test Post 1',
@@ -16,8 +15,7 @@ const mockPosts = [
     body: 'This is the content of test post 1',
   },
   {
-    id: 'test-post-2.md',
-    slug: 'test-post-2',
+    id: 'test-post-2',
     collection: 'posts',
     data: {
       title: 'Test Post 2',
@@ -32,8 +30,7 @@ const mockPosts = [
 
 const mockPages = [
   {
-    id: 'about.md',
-    slug: 'about',
+    id: 'about',
     collection: 'pages',
     data: {
       title: 'About',
@@ -47,8 +44,7 @@ const mockPages = [
 
 const mockProjects = [
   {
-    id: 'project-1.md',
-    slug: 'project-1',
+    id: 'project-1',
     collection: 'projects',
     data: {
       title: 'Test Project',

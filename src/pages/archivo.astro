@@ -3,12 +3,17 @@ import { getCollection } from 'astro:content';
 import { format } from 'date-fns';
 import { es } from 'date-fns/locale';
 import BlogLayout from '../layouts/BlogLayout.astro';
+import { getLanguageFromFilename } from '../utils/i18n';
 
 const title = 'Archivo de Publicaciones';
 const description = 'Explora todas las publicaciones organizadas por fecha';
 
 // Get all posts and group them by year and month
 const allPosts = await getCollection('posts');
+const posts = allPosts.filter(post => {
+  const lang = getLanguageFromFilename(post.id);
+  return lang === 'es' || lang === null;
+});
 
 interface YearMonthGroup {
   year: string;
@@ -22,7 +27,7 @@ interface YearMonthGroup {
 const dateGroups = new Map<string, Map<string, number>>();
 
 // Group posts by year and month
-allPosts.forEach((post) => {
+posts.forEach((post) => {
   const date = new Date(post.data.date);
   const year = date.getFullYear().toString();
   const month = (date.getMonth() + 1).toString().padStart(2, '0');
@@ -62,7 +67,7 @@ const archive: YearMonthGroup[] = Array.from(dateGroups.entries())
   });
 
 // Calculate total posts
-const totalPosts = allPosts.length;
+const totalPosts = posts.length;
 const yearsSpan = archive.length > 0 ? `${archive[archive.length - 1].year} - ${archive[0].year}` : '';
 ---
 
