@@ -89,8 +89,7 @@
       "lodash": "^4.17.23",
       "lodash-es": "^4.17.23",
       "yaml": "^2.8.4",
-      "launch-editor": "^2.14.1",
-      "graphiql": "^3.2.0"
+      "launch-editor": "^2.14.1"
     },
     "patchedDependencies": {
       "gray-matter@4.0.3": "patches/gray-matter@4.0.3.patch"

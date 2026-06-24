@@ -8,7 +8,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 ### Security
-- Resolved 16 Dependabot alerts via pnpm overrides: `dompurify` ^3.2.5, `js-yaml` ^4.2.0, `yaml` ^2.8.4, `launch-editor` ^2.14.1, and `graphiql` ^3.2.0.
+- Resolved 15 Dependabot alerts via pnpm overrides: `dompurify` ^3.2.5, `js-yaml` ^4.2.0, `yaml` ^2.8.4, and `launch-editor` ^2.14.1.
+- Reverted `graphiql` override: v3.9.0 drops `graphiql.min.css` from its `exports` map, breaking `@tinacms/app` at build time. Risk is negligible (admin-only dev tool).
 - Patched `gray-matter@4.0.3` to use js-yaml 4 compatible `load`/`dump` APIs.
 - Fixed unescaped double quotes in `src/content/videos/Cmo-crear-tu-staff-digital-con-Gemini.fr.md` frontmatter for js-yaml 4 strict parsing.
 - Regenerated `pnpm-lock.yaml` patch hash to match `patches/gray-matter@4.0.3.patch` and fix frozen installs.
