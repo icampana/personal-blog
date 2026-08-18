@@ -39,6 +39,7 @@ export default config({
       format: { contentField: 'body' },
       schema: {
         title: fields.slug({ name: { label: 'Title' } }),
+        date: fields.date({ label: 'Date' }),
         path: fields.text({ label: 'Path' }),
         description: fields.text({
           label: 'Short Description',
@@ -86,6 +87,7 @@ export default config({
         videoId: fields.text({ label: 'YouTube Video ID' }),
         date: fields.date({ label: 'Date' }),
         description: fields.text({ label: 'Description', multiline: true }),
+        tags: fields.array(fields.text({ label: 'Tag' }), { label: 'Tags' }),
         featured: fields.checkbox({ label: 'Featured' }),
         body: fields.markdoc({ label: 'Body', extension: 'md' }),
       },

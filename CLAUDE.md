@@ -128,6 +128,8 @@ Keystatic (`@keystatic/astro` + `@keystatic/core`) runs in local mode and provid
 
 **IMPORTANT**: The Keystatic admin is served at `/keystatic` in development only. Do NOT create `src/pages/keystatic/[...route].astro` or a production admin page — the integration handles the route in dev, and there is no production admin.
 
+**⚠️ Title renames change URLs**: all Keystatic collections use `slugField: 'title'`, so editing a published post's title renames the file (e.g. `es/2023-01-15-mi-post.md`) and changes its URL. Do not casually retitle published posts — if a title must change, update the slug/URL and add a redirect accordingly.
+
 ### Search Implementation
 
 Full-text search powered by Fuse.js with pre-built indexes:
