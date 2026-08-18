@@ -1,0 +1,1803 @@
+{
+  "strict": {
+    "ok": [
+      "2020-12-26-vale-la-pena-entrenar-con-kettlebells",
+      "2021-01-04-vue-js-vs-react",
+      "2021-09-14-mi-top-de-extensiones-para-vscode",
+      "2022-03-24-tips-para-mejorar-tu-cv-y-mostrar-mejor-tus-capacidades",
+      "2022-11-15-preparacion-para-entrevistas-tecnicas-certificados-y-en-que-enfocarse",
+      "2023-10-30-elegir-nosql-vs-relacionales",
+      "2023-11-06-salarios-desarrolladores-latam-remoto",
+      "2023-11-tech-wars-duelo-de-tecnologias-en-empresas-y-startups",
+      "2023-11-usando-chatgpt-como-tu-mentor-para-mejorar-como-programador",
+      "2024-1-un-lider-alfa-o-una-manada-coordinada-que-funciona-mejor-en-proyectos",
+      "2025-10-usar-ia-como-asistente-de-codigo-sin-perder-el-control-ni-la-responsabilidad",
+      "2025-11-conviertete-el-kibernetes-de-tu-ia",
+      "2025-3-cómo-usar-ia-localmente-con-ollama",
+      "2025-4-tus-commits-son-un-desastre-aprende-a-estandarizarlos-con-commitlint-husky-y-commitizen",
+      "2026-02-optimizando-el-contexto-y-skills-en-la-ia",
+      "2026-08-how-i-work-with-ai-agents-context-and-memory",
+      "2026-1-el-efecto-rafa-gorgori-ralph-wiggum-la-ia-no-es-un-genio-sino-tu-asistente-mas-distraido",
+      "2026-3-ingenieria-de-sistemas-reales-salto-código-a-vision-top-down",
+      "feature-switches-integracion-desarrollo-2013",
+      "patrones-diseno-react-juniors-2023-10"
+    ],
+    "failed": [
+      {
+        "slug": "2004-06-24-13-gracias-y-las-desgracias-de-los",
+        "error": "Invalid data for \"2004-06-24-13-gracias-y-las-desgracias-de-los\" in collection \"posts\":\n: Key on object value \"author\" is not allowed"
+      },
+      {
+        "slug": "2004-06-24-yeyito-el-pequeo-impetuoso",
+        "error": "Invalid data for \"2004-06-24-yeyito-el-pequeo-impetuoso\" in collection \"posts\":\n: Key on object value \"author\" is not allowed"
+      },
+      {
+        "slug": "2004-06-30-lo-etreo-y-lo-irrea",
+        "error": "Invalid data for \"2004-06-30-lo-etreo-y-lo-irrea\" in collection \"posts\":\n: Key on object value \"author\" is not allowed"
+      },
+      {
+        "slug": "2004-07-05-mujeres-de-lujo-artculos-de-3ra",
+        "error": "Invalid data for \"2004-07-05-mujeres-de-lujo-artculos-de-3ra\" in collection \"posts\":\n: Key on object value \"author\" is not allowed"
+      },
+      {
+        "slug": "2004-07-12-el-bar-de-moe-en-guayaqui",
+        "error": "Invalid data for \"2004-07-12-el-bar-de-moe-en-guayaqui\" in collection \"posts\":\n: Key on object value \"author\" is not allowed"
+      },
+      {
+        "slug": "2004-07-23-libros-e-ebooks",
+        "error": "Invalid data for \"2004-07-23-libros-e-ebooks\" in collection \"posts\":\n: Key on object value \"author\" is not allowed"
+      },
+      {
+        "slug": "2004-08-11-un-grito-en-el-silencio",
+        "error": "Invalid data for \"2004-08-11-un-grito-en-el-silencio\" in collection \"posts\":\n: Key on object value \"author\" is not allowed"
+      },
+      {
+        "slug": "2004-09-12-lo-inconsciente-del-subconciente",
+        "error": "Invalid data for \"2004-09-12-lo-inconsciente-del-subconciente\" in collection \"posts\":\n: Key on object value \"author\" is not allowed"
+      },
+      {
+        "slug": "2004-09-26-musik-una-aplicacin-para-manejar-tu",
+        "error": "Invalid data for \"2004-09-26-musik-una-aplicacin-para-manejar-tu\" in collection \"posts\":\n: Key on object value \"author\" is not allowed"
+      },
+      {
+        "slug": "2004-09-27-amigos-con-derechos-vaciles-y-mucho-ms",
+        "error": "Invalid data for \"2004-09-27-amigos-con-derechos-vaciles-y-mucho-ms\" in collection \"posts\":\n: Key on object value \"author\" is not allowed"
+      },
+      {
+        "slug": "2004-09-28-cmo-chequear-si-alguien-te-tiene",
+        "error": "Invalid data for \"2004-09-28-cmo-chequear-si-alguien-te-tiene\" in collection \"posts\":\n: Key on object value \"author\" is not allowed"
+      },
+      {
+        "slug": "2004-10-01-el-tunel-del-tiempo",
+        "error": "Invalid data for \"2004-10-01-el-tunel-del-tiempo\" in collection \"posts\":\n: Key on object value \"author\" is not allowed"
+      },
+      {
+        "slug": "2004-10-02-otro-truquito-rpido-de-la-red-msn",
+        "error": "Invalid data for \"2004-10-02-otro-truquito-rpido-de-la-red-msn\" in collection \"posts\":\n: Key on object value \"author\" is not allowed"
+      },
+      {
+        "slug": "2004-10-07-se-termin-al-fin",
+        "error": "Invalid data for \"2004-10-07-se-termin-al-fin\" in collection \"posts\":\n: Key on object value \"author\" is not allowed"
+      },
+      {
+        "slug": "2004-10-20-cambio-un-arma-por-una-flor",
+        "error": "Invalid data for \"2004-10-20-cambio-un-arma-por-una-flor\" in collection \"posts\":\n: Key on object value \"author\" is not allowed"
+      },
+      {
+        "slug": "2004-10-28-la-luna-sangrante-y-los-lobos",
+        "error": "Invalid data for \"2004-10-28-la-luna-sangrante-y-los-lobos\" in collection \"posts\":\n: Key on object value \"author\" is not allowed"
+      },
+      {
+        "slug": "2004-11-08-la-muerte-de-mi-compu",
+        "error": "Invalid data for \"2004-11-08-la-muerte-de-mi-compu\" in collection \"posts\":\n: Key on object value \"author\" is not allowed"
+      },
+      {
+        "slug": "2004-11-14-el-final-de-mi-carrera-y-el-inicio-de",
+        "error": "Invalid data for \"2004-11-14-el-final-de-mi-carrera-y-el-inicio-de\" in collection \"posts\":\n: Key on object value \"author\" is not allowed"
+      },
+      {
+        "slug": "2004-11-20-existen-las-surfer-girls",
+        "error": "Invalid data for \"2004-11-20-existen-las-surfer-girls\" in collection \"posts\":\n: Key on object value \"author\" is not allowed"
+      },
+      {
+        "slug": "2004-11-24-ecuador-en-jazz",
+        "error": "Invalid data for \"2004-11-24-ecuador-en-jazz\" in collection \"posts\":\n: Key on object value \"author\" is not allowed"
+      },
+      {
+        "slug": "2004-11-27-las-mujeres-ecuatorianas-no-son-guapas",
+        "error": "Invalid data for \"2004-11-27-las-mujeres-ecuatorianas-no-son-guapas\" in collection \"posts\":\n: Key on object value \"author\" is not allowed"
+      },
+      {
+        "slug": "2004-12-03-leyes-de-trnsito-y-los-peatones",
+        "error": "Invalid data for \"2004-12-03-leyes-de-trnsito-y-los-peatones\" in collection \"posts\":\n: Key on object value \"author\" is not allowed"
+      },
+      {
+        "slug": "2004-12-07-la-marcha-turca-de-la-ruinas-de-atena",
+        "error": "Invalid data for \"2004-12-07-la-marcha-turca-de-la-ruinas-de-atena\" in collection \"posts\":\n: Key on object value \"author\" is not allowed"
+      },
+      {
+        "slug": "2004-12-12-mis-locuras",
+        "error": "Invalid data for \"2004-12-12-mis-locuras\" in collection \"posts\":\n: Key on object value \"author\" is not allowed"
+      },
+      {
+        "slug": "2004-12-16-blogs-beers",
+        "error": "Invalid data for \"2004-12-16-blogs-beers\" in collection \"posts\":\n: Key on object value \"author\" is not allowed"
+      },
+      {
+        "slug": "2004-12-17-la-procesin",
+        "error": "Invalid data for \"2004-12-17-la-procesin\" in collection \"posts\":\n: Key on object value \"author\" is not allowed"
+      },
+      {
+        "slug": "2004-12-25-tiempo-de-navidad",
+        "error": "Invalid data for \"2004-12-25-tiempo-de-navidad\" in collection \"posts\":\n: Key on object value \"author\" is not allowed"
+      },
+      {
+        "slug": "2005-01-02-los-viejos",
+        "error": "Invalid data for \"2005-01-02-los-viejos\" in collection \"posts\":\n: Key on object value \"author\" is not allowed"
+      },
+      {
+        "slug": "2005-01-06-problemas-sin-solucin-o-soluciones-sin-2",
+        "error": "Invalid data for \"2005-01-06-problemas-sin-solucin-o-soluciones-sin-2\" in collection \"posts\":\n: Key on object value \"author\" is not allowed"
+      },
+      {
+        "slug": "2005-01-08-mi-primera-accin-del-ao-p",
+        "error": "Invalid data for \"2005-01-08-mi-primera-accin-del-ao-p\" in collection \"posts\":\n: Key on object value \"author\" is not allowed"
+      },
+      {
+        "slug": "2005-01-17-2-de-los-mejores-conciertos-los-que-he",
+        "error": "Invalid data for \"2005-01-17-2-de-los-mejores-conciertos-los-que-he\" in collection \"posts\":\n: Key on object value \"author\" is not allowed"
+      },
+      {
+        "slug": "2005-01-17-con-esto-arranco-bueno",
+        "error": "Invalid data for \"2005-01-17-con-esto-arranco-bueno\" in collection \"posts\":\n: Key on object value \"author\" is not allowed"
+      },
+      {
+        "slug": "2005-01-17-esta-es-la-comparacin-del-fono-que",
+        "error": "Invalid data for \"2005-01-17-esta-es-la-comparacin-del-fono-que\" in collection \"posts\":\n: Key on object value \"author\" is not allowed"
+      },
+      {
+        "slug": "2005-01-17-los-lentes-que-utilizaba-cuando-estaba",
+        "error": "Invalid data for \"2005-01-17-los-lentes-que-utilizaba-cuando-estaba\" in collection \"posts\":\n: Key on object value \"author\" is not allowed"
+      },
+      {
+        "slug": "2005-01-17-snif-snif-nuestra-ya-olvidada-moneda",
+        "error": "Invalid data for \"2005-01-17-snif-snif-nuestra-ya-olvidada-moneda\" in collection \"posts\":\n: Key on object value \"author\" is not allowed"
+      },
+      {
+        "slug": "2005-01-17-un-regalito-que-me-hizo-mi-mam-despus",
+        "error": "Invalid data for \"2005-01-17-un-regalito-que-me-hizo-mi-mam-despus\" in collection \"posts\":\n: Key on object value \"author\" is not allowed"
+      },
+      {
+        "slug": "2005-01-17-un-spiderman-hecho-de-lanita-p-se",
+        "error": "Invalid data for \"2005-01-17-un-spiderman-hecho-de-lanita-p-se\" in collection \"posts\":\n: Key on object value \"author\" is not allowed"
+      },
+      {
+        "slug": "2005-01-17-una-piedra-del-mediterrneo-qu-diablos",
+        "error": "Invalid data for \"2005-01-17-una-piedra-del-mediterrneo-qu-diablos\" in collection \"posts\":\n: Key on object value \"author\" is not allowed"
+      },
+      {
+        "slug": "2005-01-22-la-dualidad",
+        "error": "Invalid data for \"2005-01-22-la-dualidad\" in collection \"posts\":\n: Key on object value \"author\" is not allowed"
+      },
+      {
+        "slug": "2005-01-24-el-poder-de-los-sin-poder",
+        "error": "Invalid data for \"2005-01-24-el-poder-de-los-sin-poder\" in collection \"posts\":\n: Key on object value \"author\" is not allowed"
+      },
+      {
+        "slug": "2005-02-06-la-tecnologa-y-la-nueva-antropologa",
+        "error": "Invalid data for \"2005-02-06-la-tecnologa-y-la-nueva-antropologa\" in collection \"posts\":\n: Key on object value \"author\" is not allowed"
+      },
+      {
+        "slug": "2005-02-09-mi-carnava",
+        "error": "Invalid data for \"2005-02-09-mi-carnava\" in collection \"posts\":\n: Key on object value \"author\" is not allowed"
+      },
+      {
+        "slug": "2005-02-14-todos-tenemos-un-precio",
+        "error": "Invalid data for \"2005-02-14-todos-tenemos-un-precio\" in collection \"posts\":\n: Key on object value \"author\" is not allowed"
+      },
+      {
+        "slug": "2005-02-15-10-maneras-de-obtener-un-password",
+        "error": "Invalid data for \"2005-02-15-10-maneras-de-obtener-un-password\" in collection \"posts\":\n: Key on object value \"author\" is not allowed"
+      },
+      {
+        "slug": "2005-02-20-el-fin-de-las-versiones-piratas-de",
+        "error": "Invalid data for \"2005-02-20-el-fin-de-las-versiones-piratas-de\" in collection \"posts\":\n: Key on object value \"author\" is not allowed"
+      },
+      {
+        "slug": "2005-02-25-la-amistad-y-nuestros-recuerdos-de-la",
+        "error": "Invalid data for \"2005-02-25-la-amistad-y-nuestros-recuerdos-de-la\" in collection \"posts\":\n: Key on object value \"author\" is not allowed"
+      },
+      {
+        "slug": "2005-03-07-andromana",
+        "error": "Invalid data for \"2005-03-07-andromana\" in collection \"posts\":\n: Key on object value \"author\" is not allowed"
+      },
+      {
+        "slug": "2005-03-19-super-actualizacin",
+        "error": "Invalid data for \"2005-03-19-super-actualizacin\" in collection \"posts\":\n: Key on object value \"author\" is not allowed"
+      },
+      {
+        "slug": "2005-03-20-la-posta-musica",
+        "error": "Invalid data for \"2005-03-20-la-posta-musica\" in collection \"posts\":\n: Key on object value \"author\" is not allowed"
+      },
+      {
+        "slug": "2005-04-04-i-still-believe-in-your-eyes",
+        "error": "Invalid data for \"2005-04-04-i-still-believe-in-your-eyes\" in collection \"posts\":\n: Key on object value \"author\" is not allowed"
+      },
+      {
+        "slug": "2005-04-06-cmo-agregar-contenido-rss-tu-pgina-sin",
+        "error": "Invalid data for \"2005-04-06-cmo-agregar-contenido-rss-tu-pgina-sin\" in collection \"posts\":\n: Key on object value \"author\" is not allowed"
+      },
+      {
+        "slug": "2005-04-11-estilos-y-efectos",
+        "error": "Invalid data for \"2005-04-11-estilos-y-efectos\" in collection \"posts\":\n: Key on object value \"author\" is not allowed"
+      },
+      {
+        "slug": "2005-04-12-seguimos-los-sueos-nos-siguen-nosotros",
+        "error": "Invalid data for \"2005-04-12-seguimos-los-sueos-nos-siguen-nosotros\" in collection \"posts\":\n: Key on object value \"author\" is not allowed"
+      },
+      {
+        "slug": "2005-04-15-concurso-20blogs-edicin-2005",
+        "error": "Invalid data for \"2005-04-15-concurso-20blogs-edicin-2005\" in collection \"posts\":\n: Key on object value \"author\" is not allowed"
+      },
+      {
+        "slug": "2005-04-18-strength-of-woman",
+        "error": "Invalid data for \"2005-04-18-strength-of-woman\" in collection \"posts\":\n: Key on object value \"author\" is not allowed"
+      },
+      {
+        "slug": "2005-04-22-ya-soy-abuelo",
+        "error": "Invalid data for \"2005-04-22-ya-soy-abuelo\" in collection \"posts\":\n: Key on object value \"author\" is not allowed"
+      },
+      {
+        "slug": "2005-04-28-las-recetas-de-la-abuela",
+        "error": "Invalid data for \"2005-04-28-las-recetas-de-la-abuela\" in collection \"posts\":\n: Key on object value \"author\" is not allowed"
+      },
+      {
+        "slug": "2005-05-02-de-linajes-apellidos-y-dems",
+        "error": "Invalid data for \"2005-05-02-de-linajes-apellidos-y-dems\" in collection \"posts\":\n: Key on object value \"author\" is not allowed"
+      },
+      {
+        "slug": "2005-05-10-capturando-imgenes-con-el-celu",
+        "error": "Invalid data for \"2005-05-10-capturando-imgenes-con-el-celu\" in collection \"posts\":\n: Key on object value \"author\" is not allowed"
+      },
+      {
+        "slug": "2005-05-13-viendo-ms-all-de-lo-evidente",
+        "error": "Invalid data for \"2005-05-13-viendo-ms-all-de-lo-evidente\" in collection \"posts\":\n: Key on object value \"author\" is not allowed"
+      },
+      {
+        "slug": "2005-05-27-el-poder-de-la-mente-nuestro-don",
+        "error": "Invalid data for \"2005-05-27-el-poder-de-la-mente-nuestro-don\" in collection \"posts\":\n: Key on object value \"author\" is not allowed"
+      },
+      {
+        "slug": "2005-05-31-la-vida-es-una-verga-lo-importante-es",
+        "error": "Invalid data for \"2005-05-31-la-vida-es-una-verga-lo-importante-es\" in collection \"posts\":\n: Key on object value \"author\" is not allowed"
+      },
+      {
+        "slug": "2005-06-23-25-horas-al-daaaa-vida-miiaaaa",
+        "error": "Invalid data for \"2005-06-23-25-horas-al-daaaa-vida-miiaaaa\" in collection \"posts\":\n: Key on object value \"author\" is not allowed"
+      },
+      {
+        "slug": "2005-06-25-pagando-piso",
+        "error": "Invalid data for \"2005-06-25-pagando-piso\" in collection \"posts\":\n: Key on object value \"author\" is not allowed"
+      },
+      {
+        "slug": "2005-06-27-nios-de-casa",
+        "error": "Invalid data for \"2005-06-27-nios-de-casa\" in collection \"posts\":\n: Key on object value \"author\" is not allowed"
+      },
+      {
+        "slug": "2005-07-08-sueos-infantiles-y-un-ao-ms",
+        "error": "Invalid data for \"2005-07-08-sueos-infantiles-y-un-ao-ms\" in collection \"posts\":\n: Key on object value \"author\" is not allowed"
+      },
+      {
+        "slug": "2005-07-10-la-proyeccin-persona",
+        "error": "Invalid data for \"2005-07-10-la-proyeccin-persona\" in collection \"posts\":\n: Key on object value \"author\" is not allowed"
+      },
+      {
+        "slug": "2005-07-15-geekie-cmo-usar-el-winamp-para-mostrar",
+        "error": "Invalid data for \"2005-07-15-geekie-cmo-usar-el-winamp-para-mostrar\" in collection \"posts\":\n: Key on object value \"author\" is not allowed"
+      },
+      {
+        "slug": "2005-07-26-pensamientos-apologa-de-un-chiro",
+        "error": "Invalid data for \"2005-07-26-pensamientos-apologa-de-un-chiro\" in collection \"posts\":\n: Key on object value \"author\" is not allowed"
+      },
+      {
+        "slug": "2005-08-09-pensamientos-entre-lo-imaginario-y-lo",
+        "error": "Invalid data for \"2005-08-09-pensamientos-entre-lo-imaginario-y-lo\" in collection \"posts\":\n: Key on object value \"author\" is not allowed"
+      },
+      {
+        "slug": "2005-08-23-anuncio-se-busca-padres-o-madres",
+        "error": "Invalid data for \"2005-08-23-anuncio-se-busca-padres-o-madres\" in collection \"posts\":\n: Key on object value \"author\" is not allowed"
+      },
+      {
+        "slug": "2005-08-26-msica-suea",
+        "error": "Invalid data for \"2005-08-26-msica-suea\" in collection \"posts\":\n: Key on object value \"author\" is not allowed"
+      },
+      {
+        "slug": "2005-09-01-curiosidades-comics-gratis",
+        "error": "Invalid data for \"2005-09-01-curiosidades-comics-gratis\" in collection \"posts\":\n: Key on object value \"author\" is not allowed"
+      },
+      {
+        "slug": "2005-09-02-pensamientos-porqu-las-mujeren-te",
+        "error": "Invalid data for \"2005-09-02-pensamientos-porqu-las-mujeren-te\" in collection \"posts\":\n: Key on object value \"author\" is not allowed"
+      },
+      {
+        "slug": "2005-09-07-debo-ser-fan-del-islam-segn-este-tes",
+        "error": "Invalid data for \"2005-09-07-debo-ser-fan-del-islam-segn-este-tes\" in collection \"posts\":\n: Key on object value \"author\" is not allowed"
+      },
+      {
+        "slug": "2005-09-08-iguana-gigante-detiene-el-trfico",
+        "error": "Invalid data for \"2005-09-08-iguana-gigante-detiene-el-trfico\" in collection \"posts\":\n: Key on object value \"author\" is not allowed"
+      },
+      {
+        "slug": "2005-09-08-robame",
+        "error": "Invalid data for \"2005-09-08-robame\" in collection \"posts\":\n: Key on object value \"author\" is not allowed"
+      },
+      {
+        "slug": "2005-09-10-la-laptop-ideal-de-cualquier",
+        "error": "Invalid data for \"2005-09-10-la-laptop-ideal-de-cualquier\" in collection \"posts\":\n: Key on object value \"author\" is not allowed"
+      },
+      {
+        "slug": "2005-09-11-batida-de-pelcula-en-plena-victor",
+        "error": "Invalid data for \"2005-09-11-batida-de-pelcula-en-plena-victor\" in collection \"posts\":\n: Key on object value \"author\" is not allowed"
+      },
+      {
+        "slug": "2005-09-13-linux-en-casa",
+        "error": "Invalid data for \"2005-09-13-linux-en-casa\" in collection \"posts\":\n: Key on object value \"author\" is not allowed"
+      },
+      {
+        "slug": "2005-09-17-regeneracin-urbana-y-degeneracin",
+        "error": "Invalid data for \"2005-09-17-regeneracin-urbana-y-degeneracin\" in collection \"posts\":\n: Key on object value \"author\" is not allowed"
+      },
+      {
+        "slug": "2005-09-23-y-los-viejitos-dijeron-tirar-tirar-que",
+        "error": "Invalid data for \"2005-09-23-y-los-viejitos-dijeron-tirar-tirar-que\" in collection \"posts\":\n: Key on object value \"author\" is not allowed"
+      },
+      {
+        "slug": "2005-09-25-ecuador-entre-los-10-mejores-destinos",
+        "error": "Invalid data for \"2005-09-25-ecuador-entre-los-10-mejores-destinos\" in collection \"posts\":\n: Key on object value \"author\" is not allowed"
+      },
+      {
+        "slug": "2005-09-28-palm-m515",
+        "error": "Invalid data for \"2005-09-28-palm-m515\" in collection \"posts\":\n: Key on object value \"author\" is not allowed"
+      },
+      {
+        "slug": "2005-09-28-unas-cuantas-imgenes-del-ecuador-de",
+        "error": "Invalid data for \"2005-09-28-unas-cuantas-imgenes-del-ecuador-de\" in collection \"posts\":\n: Key on object value \"author\" is not allowed"
+      },
+      {
+        "slug": "2005-09-30-cmo-conectar-los-parlantes-de-la-compu",
+        "error": "Invalid data for \"2005-09-30-cmo-conectar-los-parlantes-de-la-compu\" in collection \"posts\":\n: Key on object value \"author\" is not allowed"
+      },
+      {
+        "slug": "2005-10-05-conexin-banda-ancha-sin-lmites",
+        "error": "Invalid data for \"2005-10-05-conexin-banda-ancha-sin-lmites\" in collection \"posts\":\n: Key on object value \"author\" is not allowed"
+      },
+      {
+        "slug": "2005-10-07-mis-desrdenes-psicolgicos",
+        "error": "Invalid data for \"2005-10-07-mis-desrdenes-psicolgicos\" in collection \"posts\":\n: Key on object value \"author\" is not allowed"
+      },
+      {
+        "slug": "2005-10-09-contaminacin-visual-y-menta",
+        "error": "Invalid data for \"2005-10-09-contaminacin-visual-y-menta\" in collection \"posts\":\n: Key on object value \"author\" is not allowed"
+      },
+      {
+        "slug": "2005-10-18-mi-primer-programa-para-celular",
+        "error": "Invalid data for \"2005-10-18-mi-primer-programa-para-celular\" in collection \"posts\":\n: Key on object value \"author\" is not allowed"
+      },
+      {
+        "slug": "2005-10-27-mi-encuentro-con-la-justicia-y-la",
+        "error": "Invalid data for \"2005-10-27-mi-encuentro-con-la-justicia-y-la\" in collection \"posts\":\n: Key on object value \"author\" is not allowed"
+      },
+      {
+        "slug": "2005-10-28-publicidad-gratuita",
+        "error": "Invalid data for \"2005-10-28-publicidad-gratuita\" in collection \"posts\":\n: Key on object value \"author\" is not allowed"
+      },
+      {
+        "slug": "2005-10-31-patrizia-laquidara-jazz-fusin-y-pasin",
+        "error": "Invalid data for \"2005-10-31-patrizia-laquidara-jazz-fusin-y-pasin\" in collection \"posts\":\n: Key on object value \"author\" is not allowed"
+      },
+      {
+        "slug": "2005-11-09-resumen-y-flas",
+        "error": "Invalid data for \"2005-11-09-resumen-y-flas\" in collection \"posts\":\n: Key on object value \"author\" is not allowed"
+      },
+      {
+        "slug": "2005-11-20-machala-city-boy",
+        "error": "Invalid data for \"2005-11-20-machala-city-boy\" in collection \"posts\":\n: Key on object value \"author\" is not allowed"
+      },
+      {
+        "slug": "2005-11-22-berni-zeg-la-ladilla-y-fumanc",
+        "error": "Invalid data for \"2005-11-22-berni-zeg-la-ladilla-y-fumanc\" in collection \"posts\":\n: Key on object value \"author\" is not allowed"
+      },
+      {
+        "slug": "2005-11-27-ser-o-no-ser-maldita-corrupcin",
+        "error": "Invalid data for \"2005-11-27-ser-o-no-ser-maldita-corrupcin\" in collection \"posts\":\n: Key on object value \"author\" is not allowed"
+      },
+      {
+        "slug": "2005-12-03-para-qu-meterse-un-gimnasio",
+        "error": "Invalid data for \"2005-12-03-para-qu-meterse-un-gimnasio\" in collection \"posts\":\n: Key on object value \"author\" is not allowed"
+      },
+      {
+        "slug": "2005-12-21-amar-con-el-corazn-pensando-con-la",
+        "error": "Invalid data for \"2005-12-21-amar-con-el-corazn-pensando-con-la\" in collection \"posts\":\n: Key on object value \"author\" is not allowed"
+      },
+      {
+        "slug": "2005-12-23-y-si-hoy-muero",
+        "error": "Invalid data for \"2005-12-23-y-si-hoy-muero\" in collection \"posts\":\n: Key on object value \"author\" is not allowed"
+      },
+      {
+        "slug": "2006-01-06-problemas-sin-solucin-o-soluciones-sin",
+        "error": "Invalid data for \"2006-01-06-problemas-sin-solucin-o-soluciones-sin\" in collection \"posts\":\n: Key on object value \"author\" is not allowed"
+      },
+      {
+        "slug": "2006-01-09-fin-de-semana-de-ciclismo",
+        "error": "Invalid data for \"2006-01-09-fin-de-semana-de-ciclismo\" in collection \"posts\":\n: Key on object value \"author\" is not allowed"
+      },
+      {
+        "slug": "2006-01-13-contrato-de-virginidad",
+        "error": "Invalid data for \"2006-01-13-contrato-de-virginidad\" in collection \"posts\":\n: Key on object value \"author\" is not allowed"
+      },
+      {
+        "slug": "2006-01-13-costumbre-o-ley-del-borrego",
+        "error": "Invalid data for \"2006-01-13-costumbre-o-ley-del-borrego\" in collection \"posts\":\n: Key on object value \"author\" is not allowed"
+      },
+      {
+        "slug": "2006-01-24-chapeta-haloscan",
+        "error": "Invalid data for \"2006-01-24-chapeta-haloscan\" in collection \"posts\":\n: Key on object value \"author\" is not allowed"
+      },
+      {
+        "slug": "2006-02-01-cinco-hbitos-extraos",
+        "error": "Invalid data for \"2006-02-01-cinco-hbitos-extraos\" in collection \"posts\":\n: Key on object value \"author\" is not allowed"
+      },
+      {
+        "slug": "2006-02-02-mi-peor-accidente-de-trnsito",
+        "error": "Invalid data for \"2006-02-02-mi-peor-accidente-de-trnsito\" in collection \"posts\":\n: Key on object value \"author\" is not allowed"
+      },
+      {
+        "slug": "2006-02-03-encuesta-sobre-entretenimiento-movi",
+        "error": "Invalid data for \"2006-02-03-encuesta-sobre-entretenimiento-movi\" in collection \"posts\":\n: Key on object value \"author\" is not allowed"
+      },
+      {
+        "slug": "2006-02-06-el-poder-de-los-rumores",
+        "error": "Invalid data for \"2006-02-06-el-poder-de-los-rumores\" in collection \"posts\":\n: Key on object value \"author\" is not allowed"
+      },
+      {
+        "slug": "2006-02-14-el-verdadero-final-de-doraemon",
+        "error": "Invalid data for \"2006-02-14-el-verdadero-final-de-doraemon\" in collection \"posts\":\n: Key on object value \"author\" is not allowed"
+      },
+      {
+        "slug": "2006-02-23-make-wish-or-maybe-3-wishes",
+        "error": "Invalid data for \"2006-02-23-make-wish-or-maybe-3-wishes\" in collection \"posts\":\n: Key on object value \"author\" is not allowed"
+      },
+      {
+        "slug": "2006-03-02-las-nuevas-costumbres",
+        "error": "Invalid data for \"2006-03-02-las-nuevas-costumbres\" in collection \"posts\":\n: Key on object value \"author\" is not allowed"
+      },
+      {
+        "slug": "2006-03-07-sguele-el-rastro-tus-comentarios-en",
+        "error": "Invalid data for \"2006-03-07-sguele-el-rastro-tus-comentarios-en\" in collection \"posts\":\n: Key on object value \"author\" is not allowed"
+      },
+      {
+        "slug": "2006-03-11-no-tiene-precio",
+        "error": "Invalid data for \"2006-03-11-no-tiene-precio\" in collection \"posts\":\n: Key on object value \"author\" is not allowed"
+      },
+      {
+        "slug": "2006-03-15-tu-nombre-en-japons",
+        "error": "Invalid data for \"2006-03-15-tu-nombre-en-japons\" in collection \"posts\":\n: Key on object value \"author\" is not allowed"
+      },
+      {
+        "slug": "2006-03-16-los-chinos-le-ganaron-al-mi",
+        "error": "Invalid data for \"2006-03-16-los-chinos-le-ganaron-al-mi\" in collection \"posts\":\n: Key on object value \"author\" is not allowed"
+      },
+      {
+        "slug": "2006-03-19-bsqueda-rpida-en-el-diccionario-de-la",
+        "error": "Invalid data for \"2006-03-19-bsqueda-rpida-en-el-diccionario-de-la\" in collection \"posts\":\n: Key on object value \"author\" is not allowed"
+      },
+      {
+        "slug": "2006-04-01-el-software-en-ecuador",
+        "error": "Invalid data for \"2006-04-01-el-software-en-ecuador\" in collection \"posts\":\n: Key on object value \"author\" is not allowed"
+      },
+      {
+        "slug": "2006-04-05-nunca-ms-te-olvides-de-las-llaves",
+        "error": "Invalid data for \"2006-04-05-nunca-ms-te-olvides-de-las-llaves\" in collection \"posts\":\n: Key on object value \"author\" is not allowed"
+      },
+      {
+        "slug": "2006-04-11-porqu-no-nos-hacen-caso-los-alumnos",
+        "error": "Invalid data for \"2006-04-11-porqu-no-nos-hacen-caso-los-alumnos\" in collection \"posts\":\n: Key on object value \"author\" is not allowed"
+      },
+      {
+        "slug": "2006-05-07-descargando-videos-de-youtube",
+        "error": "Invalid data for \"2006-05-07-descargando-videos-de-youtube\" in collection \"posts\":\n: Key on object value \"author\" is not allowed"
+      },
+      {
+        "slug": "2006-06-13-hasta-qu-punto-podras-cambiar",
+        "error": "Invalid data for \"2006-06-13-hasta-qu-punto-podras-cambiar\" in collection \"posts\":\n: Key on object value \"author\" is not allowed"
+      },
+      {
+        "slug": "2006-06-28-de-alegras-mundiales-y-falsos",
+        "error": "Invalid data for \"2006-06-28-de-alegras-mundiales-y-falsos\" in collection \"posts\":\n: Key on object value \"author\" is not allowed"
+      },
+      {
+        "slug": "2006-06-29-mujeres-protegidas-o-enjauladas",
+        "error": "Invalid data for \"2006-06-29-mujeres-protegidas-o-enjauladas\" in collection \"posts\":\n: Key on object value \"author\" is not allowed"
+      },
+      {
+        "slug": "2006-07-05-compartiendo-gustos-musicales",
+        "error": "Invalid data for \"2006-07-05-compartiendo-gustos-musicales\" in collection \"posts\":\n: Key on object value \"author\" is not allowed"
+      },
+      {
+        "slug": "2006-07-10-round-one-fig",
+        "error": "Invalid data for \"2006-07-10-round-one-fig\" in collection \"posts\":\n: Key on object value \"author\" is not allowed"
+      },
+      {
+        "slug": "2006-07-30-ex-umbra-ut-lumen",
+        "error": "Invalid data for \"2006-07-30-ex-umbra-ut-lumen\" in collection \"posts\":\n: Key on object value \"author\" is not allowed"
+      },
+      {
+        "slug": "2006-08-10-no-i-will-not-fix-your-computer",
+        "error": "Invalid data for \"2006-08-10-no-i-will-not-fix-your-computer\" in collection \"posts\":\n: Key on object value \"author\" is not allowed"
+      },
+      {
+        "slug": "2006-08-28-sexy-o-no",
+        "error": "Invalid data for \"2006-08-28-sexy-o-no\" in collection \"posts\":\n: Key on object value \"author\" is not allowed"
+      },
+      {
+        "slug": "2006-08-31-el-alcohol-saca-los-recuerdos",
+        "error": "Invalid data for \"2006-08-31-el-alcohol-saca-los-recuerdos\" in collection \"posts\":\n: Key on object value \"author\" is not allowed"
+      },
+      {
+        "slug": "2006-09-07-vaya-frase",
+        "error": "Invalid data for \"2006-09-07-vaya-frase\" in collection \"posts\":\n: Key on object value \"author\" is not allowed"
+      },
+      {
+        "slug": "2006-09-11-sobre-los-planes-de-gobierno",
+        "error": "Invalid data for \"2006-09-11-sobre-los-planes-de-gobierno\" in collection \"posts\":\n: Key on object value \"author\" is not allowed"
+      },
+      {
+        "slug": "2006-09-19-csi-ecuador-p",
+        "error": "Invalid data for \"2006-09-19-csi-ecuador-p\" in collection \"posts\":\n: Key on object value \"author\" is not allowed"
+      },
+      {
+        "slug": "2006-10-01-instructablesco",
+        "error": "Invalid data for \"2006-10-01-instructablesco\" in collection \"posts\":\n: Key on object value \"author\" is not allowed"
+      },
+      {
+        "slug": "2006-10-11-mis-viejos-escritos",
+        "error": "Invalid data for \"2006-10-11-mis-viejos-escritos\" in collection \"posts\":\n: Key on object value \"author\" is not allowed"
+      },
+      {
+        "slug": "2006-10-26-patito-de-pan",
+        "error": "Invalid data for \"2006-10-26-patito-de-pan\" in collection \"posts\":\n: Key on object value \"author\" is not allowed"
+      },
+      {
+        "slug": "2006-11-07-la-historia-de-alvarito",
+        "error": "Invalid data for \"2006-11-07-la-historia-de-alvarito\" in collection \"posts\":\n: Key on object value \"author\" is not allowed"
+      },
+      {
+        "slug": "2006-11-10-amigos-y-poltica",
+        "error": "Invalid data for \"2006-11-10-amigos-y-poltica\" in collection \"posts\":\n: Key on object value \"author\" is not allowed"
+      },
+      {
+        "slug": "2006-11-13-potenciando-el-open-source-para",
+        "error": "Invalid data for \"2006-11-13-potenciando-el-open-source-para\" in collection \"posts\":\n: Key on object value \"author\" is not allowed"
+      },
+      {
+        "slug": "2006-11-22-promocionando",
+        "error": "Invalid data for \"2006-11-22-promocionando\" in collection \"posts\":\n: Key on object value \"author\" is not allowed"
+      },
+      {
+        "slug": "2006-11-25-virtualphotographer",
+        "error": "Invalid data for \"2006-11-25-virtualphotographer\" in collection \"posts\":\n: Key on object value \"author\" is not allowed"
+      },
+      {
+        "slug": "2006-12-08-sexo-comunicacin-siglo-21-y-los-mismo",
+        "error": "Invalid data for \"2006-12-08-sexo-comunicacin-siglo-21-y-los-mismo\" in collection \"posts\":\n: Key on object value \"author\" is not allowed"
+      },
+      {
+        "slug": "2006-12-20-sobreviviendo-un-sco-con-cobol-y",
+        "error": "Invalid data for \"2006-12-20-sobreviviendo-un-sco-con-cobol-y\" in collection \"posts\":\n: Key on object value \"author\" is not allowed"
+      },
+      {
+        "slug": "2006-12-29-controlando-tu-msica-desde-el-celular",
+        "error": "Invalid data for \"2006-12-29-controlando-tu-msica-desde-el-celular\" in collection \"posts\":\n: Key on object value \"author\" is not allowed"
+      },
+      {
+        "slug": "2007-01-21-saliendo-de-un-mundo-mudo",
+        "error": "Invalid data for \"2007-01-21-saliendo-de-un-mundo-mudo\" in collection \"posts\":\n: Key on object value \"author\" is not allowed"
+      },
+      {
+        "slug": "2007-01-27-el-famoso-meme-de-las-6-cosas",
+        "error": "Invalid data for \"2007-01-27-el-famoso-meme-de-las-6-cosas\" in collection \"posts\":\n: Key on object value \"author\" is not allowed"
+      },
+      {
+        "slug": "2007-03-21-lemmings-en-lnea",
+        "error": "Invalid data for \"2007-03-21-lemmings-en-lnea\" in collection \"posts\":\n: Key on object value \"author\" is not allowed"
+      },
+      {
+        "slug": "2007-03-22-cmo-volver-loca-una-mujer-en-la-cama",
+        "error": "Invalid data for \"2007-03-22-cmo-volver-loca-una-mujer-en-la-cama\" in collection \"posts\":\n: Key on object value \"author\" is not allowed"
+      },
+      {
+        "slug": "2007-03-27-google-talk-en-firefox",
+        "error": "Invalid data for \"2007-03-27-google-talk-en-firefox\" in collection \"posts\":\n: Key on object value \"author\" is not allowed"
+      },
+      {
+        "slug": "2007-04-20-mi-versin-de-la-laptop-de-100",
+        "error": "Invalid data for \"2007-04-20-mi-versin-de-la-laptop-de-100\" in collection \"posts\":\n: Key on object value \"author\" is not allowed"
+      },
+      {
+        "slug": "2007-04-22-embriagados-por-brisas-del-guayas",
+        "error": "Invalid data for \"2007-04-22-embriagados-por-brisas-del-guayas\" in collection \"posts\":\n: Key on object value \"author\" is not allowed"
+      },
+      {
+        "slug": "2007-05-18-porqu-debe-haber-slo-una-mujer-para-un",
+        "error": "Invalid data for \"2007-05-18-porqu-debe-haber-slo-una-mujer-para-un\" in collection \"posts\":\n: Key on object value \"author\" is not allowed"
+      },
+      {
+        "slug": "2007-07-03-thank-you-come-again",
+        "error": "Invalid data for \"2007-07-03-thank-you-come-again\" in collection \"posts\":\n: Key on object value \"author\" is not allowed"
+      },
+      {
+        "slug": "2007-07-10-sacrificio-vs-xito-vs-satisfaccin",
+        "error": "Invalid data for \"2007-07-10-sacrificio-vs-xito-vs-satisfaccin\" in collection \"posts\":\n: Key on object value \"author\" is not allowed"
+      },
+      {
+        "slug": "2007-09-17-al-fin-vacaciones",
+        "error": "Invalid data for \"2007-09-17-al-fin-vacaciones\" in collection \"posts\":\n: Key on object value \"author\" is not allowed"
+      },
+      {
+        "slug": "2008-01-15-alberto-plaza-yo-te-seguir",
+        "error": "Invalid data for \"2008-01-15-alberto-plaza-yo-te-seguir\" in collection \"posts\":\n: Key on object value \"author\" is not allowed"
+      },
+      {
+        "slug": "2008-01-22-la-vida-se-complica-o-nos-complicamos",
+        "error": "Invalid data for \"2008-01-22-la-vida-se-complica-o-nos-complicamos\" in collection \"posts\":\n: Key on object value \"author\" is not allowed"
+      },
+      {
+        "slug": "2008-02-02-adis-un-amigo",
+        "error": "Invalid data for \"2008-02-02-adis-un-amigo\" in collection \"posts\":\n: Key on object value \"author\" is not allowed"
+      },
+      {
+        "slug": "2008-02-26-la-ltima-luz",
+        "error": "Invalid data for \"2008-02-26-la-ltima-luz\" in collection \"posts\":\n: Key on object value \"author\" is not allowed"
+      },
+      {
+        "slug": "2008-03-05-bolivariano-wtf",
+        "error": "Invalid data for \"2008-03-05-bolivariano-wtf\" in collection \"posts\":\n: Key on object value \"author\" is not allowed"
+      },
+      {
+        "slug": "2008-03-12-mi-regalo-de-cumple-zoob-toys",
+        "error": "Invalid data for \"2008-03-12-mi-regalo-de-cumple-zoob-toys\" in collection \"posts\":\n: Key on object value \"author\" is not allowed"
+      },
+      {
+        "slug": "2008-03-14-esto-es-eso-ecuafornia",
+        "error": "Invalid data for \"2008-03-14-esto-es-eso-ecuafornia\" in collection \"posts\":\n: Key on object value \"author\" is not allowed"
+      },
+      {
+        "slug": "2008-04-02-de-anglicismos-y-ms",
+        "error": "Invalid data for \"2008-04-02-de-anglicismos-y-ms\" in collection \"posts\":\n: Key on object value \"author\" is not allowed"
+      },
+      {
+        "slug": "2008-04-08-qu-difcil-que-es-comer-sano-en-la",
+        "error": "Invalid data for \"2008-04-08-qu-difcil-que-es-comer-sano-en-la\" in collection \"posts\":\n: Key on object value \"author\" is not allowed"
+      },
+      {
+        "slug": "2008-04-21-desde-el-inicio-de-los-tiempos-los",
+        "error": "Invalid data for \"2008-04-21-desde-el-inicio-de-los-tiempos-los\" in collection \"posts\":\n: Key on object value \"author\" is not allowed"
+      },
+      {
+        "slug": "2008-04-23-ecuatoriano-va-al-google-summer-of-code",
+        "error": "Invalid data for \"2008-04-23-ecuatoriano-va-al-google-summer-of-code\" in collection \"posts\":\n: Key on object value \"author\" is not allowed"
+      },
+      {
+        "slug": "2008-05-16-mis-hroes",
+        "error": "Invalid data for \"2008-05-16-mis-hroes\" in collection \"posts\":\n: Key on object value \"author\" is not allowed"
+      },
+      {
+        "slug": "2008-05-29-cmo-convertir-los-videos-de",
+        "error": "Invalid data for \"2008-05-29-cmo-convertir-los-videos-de\" in collection \"posts\":\n: Key on object value \"author\" is not allowed"
+      },
+      {
+        "slug": "2008-06-17-coloreando-dibujos-con-el-gimp",
+        "error": "Invalid data for \"2008-06-17-coloreando-dibujos-con-el-gimp\" in collection \"posts\":\n: Key on object value \"author\" is not allowed"
+      },
+      {
+        "slug": "2008-07-15-completo-incompleto-jarabe-de-palo",
+        "error": "Invalid data for \"2008-07-15-completo-incompleto-jarabe-de-palo\" in collection \"posts\":\n: Key on object value \"author\" is not allowed"
+      },
+      {
+        "slug": "2008-07-17-el-que-quiera-entender-que-entienda",
+        "error": "Invalid data for \"2008-07-17-el-que-quiera-entender-que-entienda\" in collection \"posts\":\n: Key on object value \"author\" is not allowed"
+      },
+      {
+        "slug": "2008-07-17-super-consumo-super-premios",
+        "error": "Invalid data for \"2008-07-17-super-consumo-super-premios\" in collection \"posts\":\n: Key on object value \"author\" is not allowed"
+      },
+      {
+        "slug": "2008-07-18-palabras-de-juan-montalvo",
+        "error": "Invalid data for \"2008-07-18-palabras-de-juan-montalvo\" in collection \"posts\":\n: Key on object value \"author\" is not allowed"
+      },
+      {
+        "slug": "2008-07-19-roberto-gabriel-el-beb-volador",
+        "error": "Invalid data for \"2008-07-19-roberto-gabriel-el-beb-volador\" in collection \"posts\":\n: Key on object value \"author\" is not allowed"
+      },
+      {
+        "slug": "2008-07-20-10-razones-por-las-que-los",
+        "error": "Invalid data for \"2008-07-20-10-razones-por-las-que-los\" in collection \"posts\":\n: Key on object value \"author\" is not allowed"
+      },
+      {
+        "slug": "2008-07-22-leer-seores-y-seoras",
+        "error": "Invalid data for \"2008-07-22-leer-seores-y-seoras\" in collection \"posts\":\n: Key on object value \"author\" is not allowed"
+      },
+      {
+        "slug": "2008-07-23-el-fantasma-en-la-mquina",
+        "error": "Invalid data for \"2008-07-23-el-fantasma-en-la-mquina\" in collection \"posts\":\n: Key on object value \"author\" is not allowed"
+      },
+      {
+        "slug": "2008-07-23-inoportuna-jorge-drexler",
+        "error": "Invalid data for \"2008-07-23-inoportuna-jorge-drexler\" in collection \"posts\":\n: Key on object value \"author\" is not allowed"
+      },
+      {
+        "slug": "2008-07-28-los-niji-en-la-web",
+        "error": "Invalid data for \"2008-07-28-los-niji-en-la-web\" in collection \"posts\":\n: Key on object value \"author\" is not allowed"
+      },
+      {
+        "slug": "2008-07-28-un-mundo-insensible-y-torcido",
+        "error": "Invalid data for \"2008-07-28-un-mundo-insensible-y-torcido\" in collection \"posts\":\n: Key on object value \"author\" is not allowed"
+      },
+      {
+        "slug": "2008-07-29-la-importancia-de-un-te-quiero",
+        "error": "Invalid data for \"2008-07-29-la-importancia-de-un-te-quiero\" in collection \"posts\":\n: Key on object value \"author\" is not allowed"
+      },
+      {
+        "slug": "2008-07-29-mejorar",
+        "error": "Invalid data for \"2008-07-29-mejorar\" in collection \"posts\":\n: Key on object value \"author\" is not allowed"
+      },
+      {
+        "slug": "2008-07-30-el-primer-emo-ecuatoriano",
+        "error": "Invalid data for \"2008-07-30-el-primer-emo-ecuatoriano\" in collection \"posts\":\n: Key on object value \"author\" is not allowed"
+      },
+      {
+        "slug": "2008-08-02-reinvntate",
+        "error": "Invalid data for \"2008-08-02-reinvntate\" in collection \"posts\":\n: Key on object value \"author\" is not allowed"
+      },
+      {
+        "slug": "2008-08-04-cuando-te-sobra-amor",
+        "error": "Invalid data for \"2008-08-04-cuando-te-sobra-amor\" in collection \"posts\":\n: Key on object value \"author\" is not allowed"
+      },
+      {
+        "slug": "2008-08-06-un-clavo-saca-otro-clavo",
+        "error": "Invalid data for \"2008-08-06-un-clavo-saca-otro-clavo\" in collection \"posts\":\n: Key on object value \"author\" is not allowed"
+      },
+      {
+        "slug": "2008-08-07-viaje-al-cajas-azuay-ecuador",
+        "error": "Invalid data for \"2008-08-07-viaje-al-cajas-azuay-ecuador\" in collection \"posts\":\n: Key on object value \"author\" is not allowed"
+      },
+      {
+        "slug": "2008-08-10-inspiracion-forzada",
+        "error": "Invalid data for \"2008-08-10-inspiracion-forzada\" in collection \"posts\":\n: Key on object value \"author\" is not allowed"
+      },
+      {
+        "slug": "2008-08-11-pelculas-msica-y-vandalismo",
+        "error": "Invalid data for \"2008-08-11-pelculas-msica-y-vandalismo\" in collection \"posts\":\n: Key on object value \"author\" is not allowed"
+      },
+      {
+        "slug": "2008-08-14-comfortably-numb",
+        "error": "Invalid data for \"2008-08-14-comfortably-numb\" in collection \"posts\":\n: Key on object value \"author\" is not allowed"
+      },
+      {
+        "slug": "2008-08-14-gustos-y-disgustos",
+        "error": "Invalid data for \"2008-08-14-gustos-y-disgustos\" in collection \"posts\":\n: Key on object value \"author\" is not allowed"
+      },
+      {
+        "slug": "2008-08-15-el-peligro-de-la-falta-de-privacidad",
+        "error": "Invalid data for \"2008-08-15-el-peligro-de-la-falta-de-privacidad\" in collection \"posts\":\n: Key on object value \"author\" is not allowed"
+      },
+      {
+        "slug": "2008-08-18-with-little-help-from-my-friends",
+        "error": "Invalid data for \"2008-08-18-with-little-help-from-my-friends\" in collection \"posts\":\n: Key on object value \"author\" is not allowed"
+      },
+      {
+        "slug": "2008-08-19-siempre-listos",
+        "error": "Invalid data for \"2008-08-19-siempre-listos\" in collection \"posts\":\n: Key on object value \"author\" is not allowed"
+      },
+      {
+        "slug": "2008-08-20-para-reflexionar-un-poco",
+        "error": "Invalid data for \"2008-08-20-para-reflexionar-un-poco\" in collection \"posts\":\n: Key on object value \"author\" is not allowed"
+      },
+      {
+        "slug": "2008-08-22-al-finnnnn",
+        "error": "Invalid data for \"2008-08-22-al-finnnnn\" in collection \"posts\":\n: Key on object value \"author\" is not allowed"
+      },
+      {
+        "slug": "2008-08-25-la-belleza-oculta",
+        "error": "Invalid data for \"2008-08-25-la-belleza-oculta\" in collection \"posts\":\n: Key on object value \"author\" is not allowed"
+      },
+      {
+        "slug": "2008-08-26-rincones-escondidos-de-la-ciudad",
+        "error": "Invalid data for \"2008-08-26-rincones-escondidos-de-la-ciudad\" in collection \"posts\":\n: Key on object value \"author\" is not allowed"
+      },
+      {
+        "slug": "2008-08-27-lo-necesario-y-lo-superficia",
+        "error": "Invalid data for \"2008-08-27-lo-necesario-y-lo-superficia\" in collection \"posts\":\n: Key on object value \"author\" is not allowed"
+      },
+      {
+        "slug": "2008-08-29-imprudencia-e-inoportunidad",
+        "error": "Invalid data for \"2008-08-29-imprudencia-e-inoportunidad\" in collection \"posts\":\n: Key on object value \"author\" is not allowed"
+      },
+      {
+        "slug": "2008-08-30-procrastinacin",
+        "error": "Invalid data for \"2008-08-30-procrastinacin\" in collection \"posts\":\n: Key on object value \"author\" is not allowed"
+      },
+      {
+        "slug": "2008-09-01-anger-managemen",
+        "error": "Invalid data for \"2008-09-01-anger-managemen\" in collection \"posts\":\n: Key on object value \"author\" is not allowed"
+      },
+      {
+        "slug": "2008-09-01-la-batalla-entre-el-odio-y-el-amor",
+        "error": "Invalid data for \"2008-09-01-la-batalla-entre-el-odio-y-el-amor\" in collection \"posts\":\n: Key on object value \"author\" is not allowed"
+      },
+      {
+        "slug": "2008-09-04-funcionamiento-del-cerebro",
+        "error": "Invalid data for \"2008-09-04-funcionamiento-del-cerebro\" in collection \"posts\":\n: Key on object value \"author\" is not allowed"
+      },
+      {
+        "slug": "2008-09-04-genialidad-en-menos",
+        "error": "Invalid data for \"2008-09-04-genialidad-en-menos\" in collection \"posts\":\n: Key on object value \"author\" is not allowed"
+      },
+      {
+        "slug": "2008-09-05-reprogramando-el-cerebro-nos-jodimos-s",
+        "error": "Invalid data for \"2008-09-05-reprogramando-el-cerebro-nos-jodimos-s\" in collection \"posts\":\n: Key on object value \"author\" is not allowed"
+      },
+      {
+        "slug": "2008-09-07-vaya-comedia",
+        "error": "Invalid data for \"2008-09-07-vaya-comedia\" in collection \"posts\":\n: Key on object value \"author\" is not allowed"
+      },
+      {
+        "slug": "2008-09-09-universidad-para-personas-especiales",
+        "error": "Invalid data for \"2008-09-09-universidad-para-personas-especiales\" in collection \"posts\":\n: Key on object value \"author\" is not allowed"
+      },
+      {
+        "slug": "2008-09-11-entendiendo-un-suicida",
+        "error": "Invalid data for \"2008-09-11-entendiendo-un-suicida\" in collection \"posts\":\n: Key on object value \"author\" is not allowed"
+      },
+      {
+        "slug": "2008-09-12-cuidado-te-curan-de-espanto-en-la",
+        "error": "Invalid data for \"2008-09-12-cuidado-te-curan-de-espanto-en-la\" in collection \"posts\":\n: Key on object value \"author\" is not allowed"
+      },
+      {
+        "slug": "2008-09-15-5-aos",
+        "error": "Invalid data for \"2008-09-15-5-aos\" in collection \"posts\":\n: Key on object value \"author\" is not allowed"
+      },
+      {
+        "slug": "2008-09-17-venciendo-miedos-y-paseando-en-e",
+        "error": "Invalid data for \"2008-09-17-venciendo-miedos-y-paseando-en-e\" in collection \"posts\":\n: Key on object value \"author\" is not allowed"
+      },
+      {
+        "slug": "2008-09-24-lo-que-hace-la-ignorancia",
+        "error": "Invalid data for \"2008-09-24-lo-que-hace-la-ignorancia\" in collection \"posts\":\n: Key on object value \"author\" is not allowed"
+      },
+      {
+        "slug": "2008-09-28-noche-de-danza-jazz-blues-y-bossa",
+        "error": "Invalid data for \"2008-09-28-noche-de-danza-jazz-blues-y-bossa\" in collection \"posts\":\n: Key on object value \"author\" is not allowed"
+      },
+      {
+        "slug": "2008-10-11-el-ataque-de-las-frutas-mutantes-de",
+        "error": "Invalid data for \"2008-10-11-el-ataque-de-las-frutas-mutantes-de\" in collection \"posts\":\n: Key on object value \"author\" is not allowed"
+      },
+      {
+        "slug": "2008-10-12-blackbird-across-universe",
+        "error": "Invalid data for \"2008-10-12-blackbird-across-universe\" in collection \"posts\":\n: Key on object value \"author\" is not allowed"
+      },
+      {
+        "slug": "2008-10-17-recordar-viejos-tiempos",
+        "error": "Invalid data for \"2008-10-17-recordar-viejos-tiempos\" in collection \"posts\":\n: Key on object value \"author\" is not allowed"
+      },
+      {
+        "slug": "2008-10-20-sobreviv-mi-ltima-luna-llena",
+        "error": "Invalid data for \"2008-10-20-sobreviv-mi-ltima-luna-llena\" in collection \"posts\":\n: Key on object value \"author\" is not allowed"
+      },
+      {
+        "slug": "2008-10-25-entre-amigos",
+        "error": "Invalid data for \"2008-10-25-entre-amigos\" in collection \"posts\":\n: Key on object value \"author\" is not allowed"
+      },
+      {
+        "slug": "2008-10-27-maldita-humanidad-o-sociedad",
+        "error": "Invalid data for \"2008-10-27-maldita-humanidad-o-sociedad\" in collection \"posts\":\n: Key on object value \"author\" is not allowed"
+      },
+      {
+        "slug": "2008-11-04-intentos-de-fotografa",
+        "error": "Invalid data for \"2008-11-04-intentos-de-fotografa\" in collection \"posts\":\n: Key on object value \"author\" is not allowed"
+      },
+      {
+        "slug": "2008-11-05-hablemos-de-cultura",
+        "error": "Invalid data for \"2008-11-05-hablemos-de-cultura\" in collection \"posts\":\n: Key on object value \"author\" is not allowed"
+      },
+      {
+        "slug": "2008-11-10-un-tributo-las-bubis",
+        "error": "Invalid data for \"2008-11-10-un-tributo-las-bubis\" in collection \"posts\":\n: Key on object value \"author\" is not allowed"
+      },
+      {
+        "slug": "2008-11-14-la-religin-nos-facilita-las-cosas",
+        "error": "Invalid data for \"2008-11-14-la-religin-nos-facilita-las-cosas\" in collection \"posts\":\n: Key on object value \"author\" is not allowed"
+      },
+      {
+        "slug": "2008-11-18-hroes-o-herpes",
+        "error": "Invalid data for \"2008-11-18-hroes-o-herpes\" in collection \"posts\":\n: Key on object value \"author\" is not allowed"
+      },
+      {
+        "slug": "2008-11-25-recuerdos-regreso-la-inocencia-y-msica",
+        "error": "Invalid data for \"2008-11-25-recuerdos-regreso-la-inocencia-y-msica\" in collection \"posts\":\n: Key on object value \"author\" is not allowed"
+      },
+      {
+        "slug": "2008-11-29-15-minutos-de-un-chef",
+        "error": "Invalid data for \"2008-11-29-15-minutos-de-un-chef\" in collection \"posts\":\n: Key on object value \"author\" is not allowed"
+      },
+      {
+        "slug": "2008-12-03-mami-que-ser-lo-que-quiere-el-negro",
+        "error": "Invalid data for \"2008-12-03-mami-que-ser-lo-que-quiere-el-negro\" in collection \"posts\":\n: Key on object value \"author\" is not allowed"
+      },
+      {
+        "slug": "2008-12-05-qu-es-lo-que-quiero-conocer",
+        "error": "Invalid data for \"2008-12-05-qu-es-lo-que-quiero-conocer\" in collection \"posts\":\n: Key on object value \"author\" is not allowed"
+      },
+      {
+        "slug": "2008-12-05-si-no-estoy-aqu",
+        "error": "Invalid data for \"2008-12-05-si-no-estoy-aqu\" in collection \"posts\":\n: Key on object value \"author\" is not allowed"
+      },
+      {
+        "slug": "2008-12-08-facebook-toolbar",
+        "error": "Invalid data for \"2008-12-08-facebook-toolbar\" in collection \"posts\":\n: Key on object value \"author\" is not allowed"
+      },
+      {
+        "slug": "2008-12-08-frases-de-odio",
+        "error": "Invalid data for \"2008-12-08-frases-de-odio\" in collection \"posts\":\n: Key on object value \"author\" is not allowed"
+      },
+      {
+        "slug": "2008-12-09-el-hijo-ecuatoriano-no-reconocido-de",
+        "error": "Invalid data for \"2008-12-09-el-hijo-ecuatoriano-no-reconocido-de\" in collection \"posts\":\n: Key on object value \"author\" is not allowed"
+      },
+      {
+        "slug": "2008-12-11-oligofrenia",
+        "error": "Invalid data for \"2008-12-11-oligofrenia\" in collection \"posts\":\n: Key on object value \"author\" is not allowed"
+      },
+      {
+        "slug": "2008-12-16-cmo-evitar-que-el-firefox-se-lleve-e",
+        "error": "Invalid data for \"2008-12-16-cmo-evitar-que-el-firefox-se-lleve-e\" in collection \"posts\":\n: Key on object value \"author\" is not allowed"
+      },
+      {
+        "slug": "2008-12-19-les-presento-el-chiphone",
+        "error": "Invalid data for \"2008-12-19-les-presento-el-chiphone\" in collection \"posts\":\n: Key on object value \"author\" is not allowed"
+      },
+      {
+        "slug": "2008-12-19-una-invitacin-visitar-puteadasgratisco",
+        "error": "Invalid data for \"2008-12-19-una-invitacin-visitar-puteadasgratisco\" in collection \"posts\":\n: Key on object value \"author\" is not allowed"
+      },
+      {
+        "slug": "2008-12-20-para-quienes-no-saben-qu-regalar-en",
+        "error": "Invalid data for \"2008-12-20-para-quienes-no-saben-qu-regalar-en\" in collection \"posts\":\n: Key on object value \"author\" is not allowed"
+      },
+      {
+        "slug": "2008-12-23-porqu-poner-recto-el-asiento-de-un-avin",
+        "error": "Invalid data for \"2008-12-23-porqu-poner-recto-el-asiento-de-un-avin\" in collection \"posts\":\n: Key on object value \"author\" is not allowed"
+      },
+      {
+        "slug": "2008-12-26-mi-primer-intento",
+        "error": "Invalid data for \"2008-12-26-mi-primer-intento\" in collection \"posts\":\n: Key on object value \"author\" is not allowed"
+      },
+      {
+        "slug": "2008-12-28-mi-novia-manual-de-instrucciones",
+        "error": "Invalid data for \"2008-12-28-mi-novia-manual-de-instrucciones\" in collection \"posts\":\n: Key on object value \"author\" is not allowed"
+      },
+      {
+        "slug": "2009-01-01-el-ltimo-post-del-2008",
+        "error": "Invalid data for \"2009-01-01-el-ltimo-post-del-2008\" in collection \"posts\":\n: Key on object value \"author\" is not allowed"
+      },
+      {
+        "slug": "2009-01-05-nuevo-ao-sueo-cumplido-playa-y-diversin",
+        "error": "Invalid data for \"2009-01-05-nuevo-ao-sueo-cumplido-playa-y-diversin\" in collection \"posts\":\n: Key on object value \"author\" is not allowed"
+      },
+      {
+        "slug": "2009-01-06-delincuentes-con-perfil-en-hi5-s",
+        "error": "Invalid data for \"2009-01-06-delincuentes-con-perfil-en-hi5-s\" in collection \"posts\":\n: Key on object value \"author\" is not allowed"
+      },
+      {
+        "slug": "2009-01-10-paso-pegao-pegao-al-feizbuk",
+        "error": "Invalid data for \"2009-01-10-paso-pegao-pegao-al-feizbuk\" in collection \"posts\":\n: Key on object value \"author\" is not allowed"
+      },
+      {
+        "slug": "2009-01-11-nueva-cerveza-redds-slo-para-mujeres",
+        "error": "Invalid data for \"2009-01-11-nueva-cerveza-redds-slo-para-mujeres\" in collection \"posts\":\n: Key on object value \"author\" is not allowed"
+      },
+      {
+        "slug": "2009-01-12-pinche-delincuencia",
+        "error": "Invalid data for \"2009-01-12-pinche-delincuencia\" in collection \"posts\":\n: Key on object value \"author\" is not allowed"
+      },
+      {
+        "slug": "2009-01-14-qu-son-los-verdaderos-amigos",
+        "error": "Invalid data for \"2009-01-14-qu-son-los-verdaderos-amigos\" in collection \"posts\":\n: Key on object value \"author\" is not allowed"
+      },
+      {
+        "slug": "2009-01-15-y-hasta-que-lleg-mi-beb",
+        "error": "Invalid data for \"2009-01-15-y-hasta-que-lleg-mi-beb\" in collection \"posts\":\n: Key on object value \"author\" is not allowed"
+      },
+      {
+        "slug": "2009-01-16-aprovechando-la-penumbra",
+        "error": "Invalid data for \"2009-01-16-aprovechando-la-penumbra\" in collection \"posts\":\n: Key on object value \"author\" is not allowed"
+      },
+      {
+        "slug": "2009-01-19-cmo-seguir-un-blog-o-compartir-un",
+        "error": "Invalid data for \"2009-01-19-cmo-seguir-un-blog-o-compartir-un\" in collection \"posts\":\n: Key on object value \"author\" is not allowed"
+      },
+      {
+        "slug": "2009-01-20-comer-manicho-tomar-zhumir-y-usar",
+        "error": "Invalid data for \"2009-01-20-comer-manicho-tomar-zhumir-y-usar\" in collection \"posts\":\n: Key on object value \"author\" is not allowed"
+      },
+      {
+        "slug": "2009-01-22-social-protocol-big-bang-theory",
+        "error": "Invalid data for \"2009-01-22-social-protocol-big-bang-theory\" in collection \"posts\":\n: Key on object value \"author\" is not allowed"
+      },
+      {
+        "slug": "2009-01-26-pornofnica-y-oliviah-funky-style",
+        "error": "Invalid data for \"2009-01-26-pornofnica-y-oliviah-funky-style\" in collection \"posts\":\n: Key on object value \"author\" is not allowed"
+      },
+      {
+        "slug": "2009-01-27-photofunia",
+        "error": "Invalid data for \"2009-01-27-photofunia\" in collection \"posts\":\n: Key on object value \"author\" is not allowed"
+      },
+      {
+        "slug": "2009-01-29-recuerdos-caidos",
+        "error": "Invalid data for \"2009-01-29-recuerdos-caidos\" in collection \"posts\":\n: Key on object value \"author\" is not allowed"
+      },
+      {
+        "slug": "2009-01-31-los-pendejos-y-zeitgeis",
+        "error": "Invalid data for \"2009-01-31-los-pendejos-y-zeitgeis\" in collection \"posts\":\n: Key on object value \"author\" is not allowed"
+      },
+      {
+        "slug": "2009-02-03-angry-man-training-method",
+        "error": "Invalid data for \"2009-02-03-angry-man-training-method\" in collection \"posts\":\n: Key on object value \"author\" is not allowed"
+      },
+      {
+        "slug": "2009-02-07-analfabetismo-digita",
+        "error": "Invalid data for \"2009-02-07-analfabetismo-digita\" in collection \"posts\":\n: Key on object value \"author\" is not allowed"
+      },
+      {
+        "slug": "2009-02-09-curiosidad-olvidada",
+        "error": "Invalid data for \"2009-02-09-curiosidad-olvidada\" in collection \"posts\":\n: Key on object value \"author\" is not allowed"
+      },
+      {
+        "slug": "2009-02-10-si-senor",
+        "error": "Invalid data for \"2009-02-10-si-senor\" in collection \"posts\":\n: Key on object value \"author\" is not allowed"
+      },
+      {
+        "slug": "2009-02-11-sobre-las-donaciones-de-supermaxi",
+        "error": "Invalid data for \"2009-02-11-sobre-las-donaciones-de-supermaxi\" in collection \"posts\":\n: Key on object value \"author\" is not allowed"
+      },
+      {
+        "slug": "2009-02-15-me-gustan-las-velas",
+        "error": "Invalid data for \"2009-02-15-me-gustan-las-velas\" in collection \"posts\":\n: Key on object value \"author\" is not allowed"
+      },
+      {
+        "slug": "2009-02-18-parte-de-lo-que-me-gusta-hacer",
+        "error": "Invalid data for \"2009-02-18-parte-de-lo-que-me-gusta-hacer\" in collection \"posts\":\n: Key on object value \"author\" is not allowed"
+      },
+      {
+        "slug": "2009-02-25-waiting-for-sunse",
+        "error": "Invalid data for \"2009-02-25-waiting-for-sunse\" in collection \"posts\":\n: Key on object value \"author\" is not allowed"
+      },
+      {
+        "slug": "2009-02-26-no-es-amor",
+        "error": "Invalid data for \"2009-02-26-no-es-amor\" in collection \"posts\":\n: Key on object value \"author\" is not allowed"
+      },
+      {
+        "slug": "2009-03-02-cambios-de-personalidad",
+        "error": "Invalid data for \"2009-03-02-cambios-de-personalidad\" in collection \"posts\":\n: Key on object value \"author\" is not allowed"
+      },
+      {
+        "slug": "2009-03-06-caos-sistemas-y-comunicacion",
+        "error": "Invalid data for \"2009-03-06-caos-sistemas-y-comunicacion\" in collection \"posts\":\n: Key on object value \"author\" is not allowed"
+      },
+      {
+        "slug": "2009-03-10-torta-de-cumpleanos-geek",
+        "error": "Invalid data for \"2009-03-10-torta-de-cumpleanos-geek\" in collection \"posts\":\n: Key on object value \"author\" is not allowed"
+      },
+      {
+        "slug": "2009-03-10-y-llegaron-los-28",
+        "error": "Invalid data for \"2009-03-10-y-llegaron-los-28\" in collection \"posts\":\n: Key on object value \"author\" is not allowed"
+      },
+      {
+        "slug": "2009-03-16-aprovechando-la-fallita-de-seguridad",
+        "error": "Invalid data for \"2009-03-16-aprovechando-la-fallita-de-seguridad\" in collection \"posts\":\n: Key on object value \"author\" is not allowed"
+      },
+      {
+        "slug": "2009-03-20-somos-parte-de-la-solucion-o-de",
+        "error": "Invalid data for \"2009-03-20-somos-parte-de-la-solucion-o-de\" in collection \"posts\":\n: Key on object value \"author\" is not allowed"
+      },
+      {
+        "slug": "2009-03-27-cansancio-dolor-y-estres-convertidos-en",
+        "error": "Invalid data for \"2009-03-27-cansancio-dolor-y-estres-convertidos-en\" in collection \"posts\":\n: Key on object value \"author\" is not allowed"
+      },
+      {
+        "slug": "2009-03-27-sera-de-creerles",
+        "error": "Invalid data for \"2009-03-27-sera-de-creerles\" in collection \"posts\":\n: Key on object value \"author\" is not allowed"
+      },
+      {
+        "slug": "2009-03-30-fotos-y-ciclopaseo",
+        "error": "Invalid data for \"2009-03-30-fotos-y-ciclopaseo\" in collection \"posts\":\n: Key on object value \"author\" is not allowed"
+      },
+      {
+        "slug": "2009-03-30-mi-pedacito-de-locura",
+        "error": "Invalid data for \"2009-03-30-mi-pedacito-de-locura\" in collection \"posts\":\n: Key on object value \"author\" is not allowed"
+      },
+      {
+        "slug": "2009-03-31-buena-frase",
+        "error": "Invalid data for \"2009-03-31-buena-frase\" in collection \"posts\":\n: Key on object value \"author\" is not allowed"
+      },
+      {
+        "slug": "2009-04-01-luis-rueda-un-rockero-hasta-las-mismas",
+        "error": "Invalid data for \"2009-04-01-luis-rueda-un-rockero-hasta-las-mismas\" in collection \"posts\":\n: Key on object value \"author\" is not allowed"
+      },
+      {
+        "slug": "2009-04-01-te-extrano-un-poco",
+        "error": "Invalid data for \"2009-04-01-te-extrano-un-poco\" in collection \"posts\":\n: Key on object value \"author\" is not allowed"
+      },
+      {
+        "slug": "2009-04-03-luna-lunita-lunera",
+        "error": "Invalid data for \"2009-04-03-luna-lunita-lunera\" in collection \"posts\":\n: Key on object value \"author\" is not allowed"
+      },
+      {
+        "slug": "2009-04-03-vicky-cristina-barcelona",
+        "error": "Invalid data for \"2009-04-03-vicky-cristina-barcelona\" in collection \"posts\":\n: Key on object value \"author\" is not allowed"
+      },
+      {
+        "slug": "2009-04-07-transito-y-trafico-latinoamericano",
+        "error": "Invalid data for \"2009-04-07-transito-y-trafico-latinoamericano\" in collection \"posts\":\n: Key on object value \"author\" is not allowed"
+      },
+      {
+        "slug": "2009-04-21-pedaleando-por-la-tierra",
+        "error": "Invalid data for \"2009-04-21-pedaleando-por-la-tierra\" in collection \"posts\":\n: Key on object value \"author\" is not allowed"
+      },
+      {
+        "slug": "2009-04-22-ivan-gabriel-el-bruto",
+        "error": "Invalid data for \"2009-04-22-ivan-gabriel-el-bruto\" in collection \"posts\":\n: Key on object value \"author\" is not allowed"
+      },
+      {
+        "slug": "2009-04-25-vaya-letrerito-de-clausura",
+        "error": "Invalid data for \"2009-04-25-vaya-letrerito-de-clausura\" in collection \"posts\":\n: Key on object value \"author\" is not allowed"
+      },
+      {
+        "slug": "2009-04-27-guayaquil-pueblo-chico-y-las",
+        "error": "Invalid data for \"2009-04-27-guayaquil-pueblo-chico-y-las\" in collection \"posts\":\n: Key on object value \"author\" is not allowed"
+      },
+      {
+        "slug": "2009-04-29-correo-basura-borbotones",
+        "error": "Invalid data for \"2009-04-29-correo-basura-borbotones\" in collection \"posts\":\n: Key on object value \"author\" is not allowed"
+      },
+      {
+        "slug": "2009-05-07-ayudando-al-enemigo-y-siendo-herido-en",
+        "error": "Invalid data for \"2009-05-07-ayudando-al-enemigo-y-siendo-herido-en\" in collection \"posts\":\n: Key on object value \"author\" is not allowed"
+      },
+      {
+        "slug": "2009-05-13-good-bye-my-lover-good-by-my-friend-you",
+        "error": "Invalid data for \"2009-05-13-good-bye-my-lover-good-by-my-friend-you\" in collection \"posts\":\n: Key on object value \"author\" is not allowed"
+      },
+      {
+        "slug": "2009-05-14-correo-contactos-y-calendario-via-pus",
+        "error": "Invalid data for \"2009-05-14-correo-contactos-y-calendario-via-pus\" in collection \"posts\":\n: Key on object value \"author\" is not allowed"
+      },
+      {
+        "slug": "2009-05-15-mocca-jazz-funk-y-unas-yerbas-mas",
+        "error": "Invalid data for \"2009-05-15-mocca-jazz-funk-y-unas-yerbas-mas\" in collection \"posts\":\n: Key on object value \"author\" is not allowed"
+      },
+      {
+        "slug": "2009-05-20-veces-me-hacen-pensar-que-en-serio-hay",
+        "error": "Invalid data for \"2009-05-20-veces-me-hacen-pensar-que-en-serio-hay\" in collection \"posts\":\n: Key on object value \"author\" is not allowed"
+      },
+      {
+        "slug": "2009-05-25-funk-mocca",
+        "error": "Invalid data for \"2009-05-25-funk-mocca\" in collection \"posts\":\n: Key on object value \"author\" is not allowed"
+      },
+      {
+        "slug": "2009-05-27-xenofobia-impunidad-e-intolerancia",
+        "error": "Invalid data for \"2009-05-27-xenofobia-impunidad-e-intolerancia\" in collection \"posts\":\n: Key on object value \"author\" is not allowed"
+      },
+      {
+        "slug": "2009-06-01-te-amo",
+        "error": "Invalid data for \"2009-06-01-te-amo\" in collection \"posts\":\n: Key on object value \"author\" is not allowed"
+      },
+      {
+        "slug": "2009-06-02-overloaded",
+        "error": "Invalid data for \"2009-06-02-overloaded\" in collection \"posts\":\n: Key on object value \"author\" is not allowed"
+      },
+      {
+        "slug": "2009-06-07-mi-iphone-con-beatmania",
+        "error": "Invalid data for \"2009-06-07-mi-iphone-con-beatmania\" in collection \"posts\":\n: Key on object value \"author\" is not allowed"
+      },
+      {
+        "slug": "2009-06-09-playa-personal-completa",
+        "error": "Invalid data for \"2009-06-09-playa-personal-completa\" in collection \"posts\":\n: Key on object value \"author\" is not allowed"
+      },
+      {
+        "slug": "2009-06-15-domingo-de-elecciones-y-un-encuentro",
+        "error": "Invalid data for \"2009-06-15-domingo-de-elecciones-y-un-encuentro\" in collection \"posts\":\n: Key on object value \"author\" is not allowed"
+      },
+      {
+        "slug": "2009-06-18-solucionando-el-problema-con-pacificard",
+        "error": "Invalid data for \"2009-06-18-solucionando-el-problema-con-pacificard\" in collection \"posts\":\n: Key on object value \"author\" is not allowed"
+      },
+      {
+        "slug": "2009-06-23-libre-5-anos-despues",
+        "error": "Invalid data for \"2009-06-23-libre-5-anos-despues\" in collection \"posts\":\n: Key on object value \"author\" is not allowed"
+      },
+      {
+        "slug": "2009-06-25-con-razon-muchos-no-aprenden-la-leccion",
+        "error": "Invalid data for \"2009-06-25-con-razon-muchos-no-aprenden-la-leccion\" in collection \"posts\":\n: Key on object value \"author\" is not allowed"
+      },
+      {
+        "slug": "2009-06-27-volver-creer",
+        "error": "Invalid data for \"2009-06-27-volver-creer\" in collection \"posts\":\n: Key on object value \"author\" is not allowed"
+      },
+      {
+        "slug": "2009-06-29-encuentren-el-rostro",
+        "error": "Invalid data for \"2009-06-29-encuentren-el-rostro\" in collection \"posts\":\n: Key on object value \"author\" is not allowed"
+      },
+      {
+        "slug": "2009-06-29-will-vs-fate-voluntad-versus-destino",
+        "error": "Invalid data for \"2009-06-29-will-vs-fate-voluntad-versus-destino\" in collection \"posts\":\n: Key on object value \"author\" is not allowed"
+      },
+      {
+        "slug": "2009-06-29-wtf-en-una-piscina",
+        "error": "Invalid data for \"2009-06-29-wtf-en-una-piscina\" in collection \"posts\":\n: Key on object value \"author\" is not allowed"
+      },
+      {
+        "slug": "2009-07-01-quienes-somos-los-ecuatorianos",
+        "error": "Invalid data for \"2009-07-01-quienes-somos-los-ecuatorianos\" in collection \"posts\":\n: Key on object value \"author\" is not allowed"
+      },
+      {
+        "slug": "2009-07-06-being-agent-of-chaos",
+        "error": "Invalid data for \"2009-07-06-being-agent-of-chaos\" in collection \"posts\":\n: Key on object value \"author\" is not allowed"
+      },
+      {
+        "slug": "2009-07-06-mis-recomendados-para-el-iphone",
+        "error": "Invalid data for \"2009-07-06-mis-recomendados-para-el-iphone\" in collection \"posts\":\n: Key on object value \"author\" is not allowed"
+      },
+      {
+        "slug": "2009-07-20-para-pensar-un-poco",
+        "error": "Invalid data for \"2009-07-20-para-pensar-un-poco\" in collection \"posts\":\n: Key on object value \"author\" is not allowed"
+      },
+      {
+        "slug": "2009-07-21-tentacion",
+        "error": "Invalid data for \"2009-07-21-tentacion\" in collection \"posts\":\n: Key on object value \"author\" is not allowed"
+      },
+      {
+        "slug": "2009-07-23-audioboo",
+        "error": "Invalid data for \"2009-07-23-audioboo\" in collection \"posts\":\n: Key on object value \"author\" is not allowed"
+      },
+      {
+        "slug": "2009-07-24-y-seguimos-con-los-cuentos",
+        "error": "Invalid data for \"2009-07-24-y-seguimos-con-los-cuentos\" in collection \"posts\":\n: Key on object value \"author\" is not allowed"
+      },
+      {
+        "slug": "2009-08-11-twitter-blackberries-privacidad-y",
+        "error": "Invalid data for \"2009-08-11-twitter-blackberries-privacidad-y\" in collection \"posts\":\n: Key on object value \"author\" is not allowed"
+      },
+      {
+        "slug": "2010-04-26-papa-y-mama",
+        "error": "Invalid data for \"2010-04-26-papa-y-mama\" in collection \"posts\":\n: Key on object value \"author\" is not allowed"
+      },
+      {
+        "slug": "2010-06-06-la-salida-faci",
+        "error": "Invalid data for \"2010-06-06-la-salida-faci\" in collection \"posts\":\n: Key on object value \"author\" is not allowed"
+      },
+      {
+        "slug": "2010-09-27-adaptacion-y-limites",
+        "error": "Invalid data for \"2010-09-27-adaptacion-y-limites\" in collection \"posts\":\n: Key on object value \"author\" is not allowed"
+      },
+      {
+        "slug": "2010-10-01-estados-de-animo-y-el-efecto-de-las",
+        "error": "Invalid data for \"2010-10-01-estados-de-animo-y-el-efecto-de-las\" in collection \"posts\":\n: Key on object value \"author\" is not allowed"
+      },
+      {
+        "slug": "2010-12-28-de-propositos-y-motivaciones",
+        "error": "Invalid data for \"2010-12-28-de-propositos-y-motivaciones\" in collection \"posts\":\n: Key on object value \"author\" is not allowed"
+      },
+      {
+        "slug": "2011-01-10-ejercitarse-en-casa-funciona",
+        "error": "Invalid data for \"2011-01-10-ejercitarse-en-casa-funciona\" in collection \"posts\":\n: Key on object value \"author\" is not allowed"
+      },
+      {
+        "slug": "2011-01-12-tips-para-volver-loca-una-mujer-en-la",
+        "error": "Invalid data for \"2011-01-12-tips-para-volver-loca-una-mujer-en-la\" in collection \"posts\":\n: Key on object value \"author\" is not allowed"
+      },
+      {
+        "slug": "2011-02-09-se-aprende-todo-en-la-universidad",
+        "error": "Invalid data for \"2011-02-09-se-aprende-todo-en-la-universidad\" in collection \"posts\":\n: Key on object value \"author\" is not allowed"
+      },
+      {
+        "slug": "2011-03-21-cable-tierra",
+        "error": "Invalid data for \"2011-03-21-cable-tierra\" in collection \"posts\":\n: Key on object value \"author\" is not allowed"
+      },
+      {
+        "slug": "2011-05-26-kaffe-fika",
+        "error": "Invalid data for \"2011-05-26-kaffe-fika\" in collection \"posts\":\n: Key on object value \"author\" is not allowed"
+      },
+      {
+        "slug": "2012-05-05-la-muerte-como-agente-de-cambio",
+        "error": "Invalid data for \"2012-05-05-la-muerte-como-agente-de-cambio\" in collection \"posts\":\n: Key on object value \"author\" is not allowed"
+      },
+      {
+        "slug": "2012-05-27-la-comunicacion-en-la-era-de-la",
+        "error": "Invalid data for \"2012-05-27-la-comunicacion-en-la-era-de-la\" in collection \"posts\":\n: Key on object value \"author\" is not allowed"
+      },
+      {
+        "slug": "2012-06-18-mi-experiencia-como-un-iron-runner",
+        "error": "Invalid data for \"2012-06-18-mi-experiencia-como-un-iron-runner\" in collection \"posts\":\n: Key on object value \"author\" is not allowed"
+      },
+      {
+        "slug": "2012-11-21-entrenamiento-hiit-para-principiantes",
+        "error": "Invalid data for \"2012-11-21-entrenamiento-hiit-para-principiantes\" in collection \"posts\":\n: Key on object value \"author\" is not allowed"
+      },
+      {
+        "slug": "2013-03-28-decisiones-dificiles",
+        "error": "Invalid data for \"2013-03-28-decisiones-dificiles\" in collection \"posts\":\n: Key on object value \"author\" is not allowed"
+      },
+      {
+        "slug": "2013-04-19-ejercicio-extremo-o-extrema-locura",
+        "error": "Invalid data for \"2013-04-19-ejercicio-extremo-o-extrema-locura\" in collection \"posts\":\n: Key on object value \"author\" is not allowed"
+      },
+      {
+        "slug": "2013-08-13-desarrollando-software-por-libra",
+        "error": "Invalid data for \"2013-08-13-desarrollando-software-por-libra\" in collection \"posts\":\n: Key on object value \"author\" is not allowed"
+      },
+      {
+        "slug": "2013-09-02-desconexion-y-reconexion",
+        "error": "Invalid data for \"2013-09-02-desconexion-y-reconexion\" in collection \"posts\":\n: Key on object value \"author\" is not allowed"
+      },
+      {
+        "slug": "2013-11-24-temor-caer",
+        "error": "Invalid data for \"2013-11-24-temor-caer\" in collection \"posts\":\n: Key on object value \"author\" is not allowed"
+      },
+      {
+        "slug": "2014-03-22-un-fin-de-semana-con-los-heroes",
+        "error": "Invalid data for \"2014-03-22-un-fin-de-semana-con-los-heroes\" in collection \"posts\":\n: Key on object value \"author\" is not allowed"
+      },
+      {
+        "slug": "2015-01-09-we-losers-nosotros-los-perdedores",
+        "error": "Invalid data for \"2015-01-09-we-losers-nosotros-los-perdedores\" in collection \"posts\":\n: Key on object value \"author\" is not allowed"
+      },
+      {
+        "slug": "2015-04-20-emprendimiento-startups-y-co-working",
+        "error": "Invalid data for \"2015-04-20-emprendimiento-startups-y-co-working\" in collection \"posts\":\n: Key on object value \"author\" is not allowed"
+      },
+      {
+        "slug": "2015-12-23-descubriendo-la-comunidad-del-cono-sur",
+        "error": "Invalid data for \"2015-12-23-descubriendo-la-comunidad-del-cono-sur\" in collection \"posts\":\n: Key on object value \"author\" is not allowed"
+      },
+      {
+        "slug": "2016-06-16-abrirle-la-puerta-la-felicidad",
+        "error": "Invalid data for \"2016-06-16-abrirle-la-puerta-la-felicidad\" in collection \"posts\":\n: Key on object value \"author\" is not allowed"
+      },
+      {
+        "slug": "2017-03-13-un-ano-despues-de-startup-chile",
+        "error": "Invalid data for \"2017-03-13-un-ano-despues-de-startup-chile\" in collection \"posts\":\n: Key on object value \"author\" is not allowed"
+      },
+      {
+        "slug": "2017-08-12-trabajo-remoto-ecuador-posible",
+        "error": "Invalid data for \"2017-08-12-trabajo-remoto-ecuador-posible\" in collection \"posts\":\n: Key on object value \"author\" is not allowed"
+      },
+      {
+        "slug": "2017-08-31-pedalear-una-ciudad-sin-caminos",
+        "error": "Invalid data for \"2017-08-31-pedalear-una-ciudad-sin-caminos\" in collection \"posts\":\n: Key on object value \"author\" is not allowed"
+      },
+      {
+        "slug": "2018-06-10-que-paso-con-el-ecuador-de-bernard",
+        "error": "Invalid data for \"2018-06-10-que-paso-con-el-ecuador-de-bernard\" in collection \"posts\":\n: Key on object value \"author\" is not allowed"
+      },
+      {
+        "slug": "2019-01-29-volver-a-construir-sitios-solo-con-html-js-y-css",
+        "error": "Invalid data for \"2019-01-29-volver-a-construir-sitios-solo-con-html-js-y-css\" in collection \"posts\":\n: Key on object value \"author\" is not allowed"
+      },
+      {
+        "slug": "2020-02-06-guía-básica-para-trabajar-con-clientes-foráneos-eeuu-europa-siendo-latino",
+        "error": "Invalid data for \"2020-02-06-guía-básica-para-trabajar-con-clientes-foráneos-eeuu-europa-siendo-latino\" in collection \"posts\":\n: Key on object value \"path\" is not allowed"
+      },
+      {
+        "slug": "2020-12-15-kit-de-productividad-de-un-nomada-digital",
+        "error": "Invalid data for \"2020-12-15-kit-de-productividad-de-un-nomada-digital\" in collection \"posts\":\n: Key on object value \"path\" is not allowed"
+      },
+      {
+        "slug": "2022-10-01-donde-encontrar-ofertas-de-trabajo-remoto",
+        "error": "Invalid data for \"2022-10-01-donde-encontrar-ofertas-de-trabajo-remoto\" in collection \"posts\":\n: Key on object value \"_template\" is not allowed"
+      },
+      {
+        "slug": "como-preparar-tu-cambio-de-carrera-hacia-tecnologia",
+        "error": "Invalid data for \"como-preparar-tu-cambio-de-carrera-hacia-tecnologia\" in collection \"posts\":\n: Key on object value \"_template\" is not allowed"
+      },
+      {
+        "slug": "inmigrar-como-trabajador-remoto-nomada-digital-en-2023",
+        "error": "Invalid data for \"inmigrar-como-trabajador-remoto-nomada-digital-en-2023\" in collection \"posts\":\n: Key on object value \"_template\" is not allowed"
+      },
+      {
+        "slug": "madurez-profesional-en-ti-que-separa-a-un-junior-de-un-senior",
+        "error": "Invalid data for \"madurez-profesional-en-ti-que-separa-a-un-junior-de-un-senior\" in collection \"posts\":\n: Key on object value \"_template\" is not allowed"
+      }
+    ]
+  },
+  "body": {
+    "ok": [
+      "2004-06-24-13-gracias-y-las-desgracias-de-los",
+      "2004-06-24-yeyito-el-pequeo-impetuoso",
+      "2004-06-30-lo-etreo-y-lo-irrea",
+      "2004-07-05-mujeres-de-lujo-artculos-de-3ra",
+      "2004-07-12-el-bar-de-moe-en-guayaqui",
+      "2004-07-23-libros-e-ebooks",
+      "2004-08-11-un-grito-en-el-silencio",
+      "2004-09-12-lo-inconsciente-del-subconciente",
+      "2004-09-26-musik-una-aplicacin-para-manejar-tu",
+      "2004-09-27-amigos-con-derechos-vaciles-y-mucho-ms",
+      "2004-09-28-cmo-chequear-si-alguien-te-tiene",
+      "2004-10-01-el-tunel-del-tiempo",
+      "2004-10-02-otro-truquito-rpido-de-la-red-msn",
+      "2004-10-07-se-termin-al-fin",
+      "2004-10-20-cambio-un-arma-por-una-flor",
+      "2004-10-28-la-luna-sangrante-y-los-lobos",
+      "2004-11-08-la-muerte-de-mi-compu",
+      "2004-11-14-el-final-de-mi-carrera-y-el-inicio-de",
+      "2004-11-20-existen-las-surfer-girls",
+      "2004-11-24-ecuador-en-jazz",
+      "2004-11-27-las-mujeres-ecuatorianas-no-son-guapas",
+      "2004-12-03-leyes-de-trnsito-y-los-peatones",
+      "2004-12-07-la-marcha-turca-de-la-ruinas-de-atena",
+      "2004-12-12-mis-locuras",
+      "2004-12-16-blogs-beers",
+      "2004-12-17-la-procesin",
+      "2004-12-25-tiempo-de-navidad",
+      "2005-01-02-los-viejos",
+      "2005-01-06-problemas-sin-solucin-o-soluciones-sin-2",
+      "2005-01-08-mi-primera-accin-del-ao-p",
+      "2005-01-17-2-de-los-mejores-conciertos-los-que-he",
+      "2005-01-17-con-esto-arranco-bueno",
+      "2005-01-17-esta-es-la-comparacin-del-fono-que",
+      "2005-01-17-los-lentes-que-utilizaba-cuando-estaba",
+      "2005-01-17-snif-snif-nuestra-ya-olvidada-moneda",
+      "2005-01-17-un-regalito-que-me-hizo-mi-mam-despus",
+      "2005-01-17-un-spiderman-hecho-de-lanita-p-se",
+      "2005-01-17-una-piedra-del-mediterrneo-qu-diablos",
+      "2005-01-22-la-dualidad",
+      "2005-01-24-el-poder-de-los-sin-poder",
+      "2005-02-06-la-tecnologa-y-la-nueva-antropologa",
+      "2005-02-09-mi-carnava",
+      "2005-02-14-todos-tenemos-un-precio",
+      "2005-02-15-10-maneras-de-obtener-un-password",
+      "2005-02-20-el-fin-de-las-versiones-piratas-de",
+      "2005-02-25-la-amistad-y-nuestros-recuerdos-de-la",
+      "2005-03-07-andromana",
+      "2005-03-19-super-actualizacin",
+      "2005-03-20-la-posta-musica",
+      "2005-04-04-i-still-believe-in-your-eyes",
+      "2005-04-06-cmo-agregar-contenido-rss-tu-pgina-sin",
+      "2005-04-11-estilos-y-efectos",
+      "2005-04-12-seguimos-los-sueos-nos-siguen-nosotros",
+      "2005-04-15-concurso-20blogs-edicin-2005",
+      "2005-04-18-strength-of-woman",
+      "2005-04-22-ya-soy-abuelo",
+      "2005-04-28-las-recetas-de-la-abuela",
+      "2005-05-02-de-linajes-apellidos-y-dems",
+      "2005-05-10-capturando-imgenes-con-el-celu",
+      "2005-05-13-viendo-ms-all-de-lo-evidente",
+      "2005-05-27-el-poder-de-la-mente-nuestro-don",
+      "2005-05-31-la-vida-es-una-verga-lo-importante-es",
+      "2005-06-23-25-horas-al-daaaa-vida-miiaaaa",
+      "2005-06-25-pagando-piso",
+      "2005-06-27-nios-de-casa",
+      "2005-07-08-sueos-infantiles-y-un-ao-ms",
+      "2005-07-10-la-proyeccin-persona",
+      "2005-07-15-geekie-cmo-usar-el-winamp-para-mostrar",
+      "2005-07-26-pensamientos-apologa-de-un-chiro",
+      "2005-08-09-pensamientos-entre-lo-imaginario-y-lo",
+      "2005-08-23-anuncio-se-busca-padres-o-madres",
+      "2005-08-26-msica-suea",
+      "2005-09-01-curiosidades-comics-gratis",
+      "2005-09-02-pensamientos-porqu-las-mujeren-te",
+      "2005-09-07-debo-ser-fan-del-islam-segn-este-tes",
+      "2005-09-08-iguana-gigante-detiene-el-trfico",
+      "2005-09-08-robame",
+      "2005-09-10-la-laptop-ideal-de-cualquier",
+      "2005-09-11-batida-de-pelcula-en-plena-victor",
+      "2005-09-13-linux-en-casa",
+      "2005-09-17-regeneracin-urbana-y-degeneracin",
+      "2005-09-23-y-los-viejitos-dijeron-tirar-tirar-que",
+      "2005-09-25-ecuador-entre-los-10-mejores-destinos",
+      "2005-09-28-palm-m515",
+      "2005-09-28-unas-cuantas-imgenes-del-ecuador-de",
+      "2005-09-30-cmo-conectar-los-parlantes-de-la-compu",
+      "2005-10-05-conexin-banda-ancha-sin-lmites",
+      "2005-10-07-mis-desrdenes-psicolgicos",
+      "2005-10-09-contaminacin-visual-y-menta",
+      "2005-10-18-mi-primer-programa-para-celular",
+      "2005-10-27-mi-encuentro-con-la-justicia-y-la",
+      "2005-10-28-publicidad-gratuita",
+      "2005-10-31-patrizia-laquidara-jazz-fusin-y-pasin",
+      "2005-11-09-resumen-y-flas",
+      "2005-11-20-machala-city-boy",
+      "2005-11-22-berni-zeg-la-ladilla-y-fumanc",
+      "2005-11-27-ser-o-no-ser-maldita-corrupcin",
+      "2005-12-03-para-qu-meterse-un-gimnasio",
+      "2005-12-21-amar-con-el-corazn-pensando-con-la",
+      "2005-12-23-y-si-hoy-muero",
+      "2006-01-06-problemas-sin-solucin-o-soluciones-sin",
+      "2006-01-09-fin-de-semana-de-ciclismo",
+      "2006-01-13-contrato-de-virginidad",
+      "2006-01-13-costumbre-o-ley-del-borrego",
+      "2006-01-24-chapeta-haloscan",
+      "2006-02-01-cinco-hbitos-extraos",
+      "2006-02-02-mi-peor-accidente-de-trnsito",
+      "2006-02-03-encuesta-sobre-entretenimiento-movi",
+      "2006-02-06-el-poder-de-los-rumores",
+      "2006-02-14-el-verdadero-final-de-doraemon",
+      "2006-02-23-make-wish-or-maybe-3-wishes",
+      "2006-03-02-las-nuevas-costumbres",
+      "2006-03-07-sguele-el-rastro-tus-comentarios-en",
+      "2006-03-11-no-tiene-precio",
+      "2006-03-15-tu-nombre-en-japons",
+      "2006-03-16-los-chinos-le-ganaron-al-mi",
+      "2006-03-19-bsqueda-rpida-en-el-diccionario-de-la",
+      "2006-04-01-el-software-en-ecuador",
+      "2006-04-05-nunca-ms-te-olvides-de-las-llaves",
+      "2006-04-11-porqu-no-nos-hacen-caso-los-alumnos",
+      "2006-05-07-descargando-videos-de-youtube",
+      "2006-06-13-hasta-qu-punto-podras-cambiar",
+      "2006-06-28-de-alegras-mundiales-y-falsos",
+      "2006-06-29-mujeres-protegidas-o-enjauladas",
+      "2006-07-05-compartiendo-gustos-musicales",
+      "2006-07-10-round-one-fig",
+      "2006-07-30-ex-umbra-ut-lumen",
+      "2006-08-10-no-i-will-not-fix-your-computer",
+      "2006-08-28-sexy-o-no",
+      "2006-08-31-el-alcohol-saca-los-recuerdos",
+      "2006-09-07-vaya-frase",
+      "2006-09-11-sobre-los-planes-de-gobierno",
+      "2006-09-19-csi-ecuador-p",
+      "2006-10-01-instructablesco",
+      "2006-10-11-mis-viejos-escritos",
+      "2006-10-26-patito-de-pan",
+      "2006-11-07-la-historia-de-alvarito",
+      "2006-11-10-amigos-y-poltica",
+      "2006-11-13-potenciando-el-open-source-para",
+      "2006-11-22-promocionando",
+      "2006-11-25-virtualphotographer",
+      "2006-12-08-sexo-comunicacin-siglo-21-y-los-mismo",
+      "2006-12-20-sobreviviendo-un-sco-con-cobol-y",
+      "2006-12-29-controlando-tu-msica-desde-el-celular",
+      "2007-01-21-saliendo-de-un-mundo-mudo",
+      "2007-01-27-el-famoso-meme-de-las-6-cosas",
+      "2007-03-21-lemmings-en-lnea",
+      "2007-03-22-cmo-volver-loca-una-mujer-en-la-cama",
+      "2007-03-27-google-talk-en-firefox",
+      "2007-04-20-mi-versin-de-la-laptop-de-100",
+      "2007-04-22-embriagados-por-brisas-del-guayas",
+      "2007-05-18-porqu-debe-haber-slo-una-mujer-para-un",
+      "2007-07-03-thank-you-come-again",
+      "2007-07-10-sacrificio-vs-xito-vs-satisfaccin",
+      "2007-09-17-al-fin-vacaciones",
+      "2008-01-15-alberto-plaza-yo-te-seguir",
+      "2008-01-22-la-vida-se-complica-o-nos-complicamos",
+      "2008-02-02-adis-un-amigo",
+      "2008-02-26-la-ltima-luz",
+      "2008-03-05-bolivariano-wtf",
+      "2008-03-12-mi-regalo-de-cumple-zoob-toys",
+      "2008-03-14-esto-es-eso-ecuafornia",
+      "2008-04-02-de-anglicismos-y-ms",
+      "2008-04-08-qu-difcil-que-es-comer-sano-en-la",
+      "2008-04-21-desde-el-inicio-de-los-tiempos-los",
+      "2008-04-23-ecuatoriano-va-al-google-summer-of-code",
+      "2008-05-16-mis-hroes",
+      "2008-05-29-cmo-convertir-los-videos-de",
+      "2008-06-17-coloreando-dibujos-con-el-gimp",
+      "2008-07-15-completo-incompleto-jarabe-de-palo",
+      "2008-07-17-el-que-quiera-entender-que-entienda",
+      "2008-07-17-super-consumo-super-premios",
+      "2008-07-18-palabras-de-juan-montalvo",
+      "2008-07-19-roberto-gabriel-el-beb-volador",
+      "2008-07-20-10-razones-por-las-que-los",
+      "2008-07-22-leer-seores-y-seoras",
+      "2008-07-23-el-fantasma-en-la-mquina",
+      "2008-07-23-inoportuna-jorge-drexler",
+      "2008-07-28-los-niji-en-la-web",
+      "2008-07-28-un-mundo-insensible-y-torcido",
+      "2008-07-29-la-importancia-de-un-te-quiero",
+      "2008-07-29-mejorar",
+      "2008-07-30-el-primer-emo-ecuatoriano",
+      "2008-08-02-reinvntate",
+      "2008-08-04-cuando-te-sobra-amor",
+      "2008-08-06-un-clavo-saca-otro-clavo",
+      "2008-08-07-viaje-al-cajas-azuay-ecuador",
+      "2008-08-10-inspiracion-forzada",
+      "2008-08-11-pelculas-msica-y-vandalismo",
+      "2008-08-14-comfortably-numb",
+      "2008-08-14-gustos-y-disgustos",
+      "2008-08-15-el-peligro-de-la-falta-de-privacidad",
+      "2008-08-18-with-little-help-from-my-friends",
+      "2008-08-19-siempre-listos",
+      "2008-08-20-para-reflexionar-un-poco",
+      "2008-08-22-al-finnnnn",
+      "2008-08-25-la-belleza-oculta",
+      "2008-08-26-rincones-escondidos-de-la-ciudad",
+      "2008-08-27-lo-necesario-y-lo-superficia",
+      "2008-08-29-imprudencia-e-inoportunidad",
+      "2008-08-30-procrastinacin",
+      "2008-09-01-anger-managemen",
+      "2008-09-01-la-batalla-entre-el-odio-y-el-amor",
+      "2008-09-04-funcionamiento-del-cerebro",
+      "2008-09-04-genialidad-en-menos",
+      "2008-09-05-reprogramando-el-cerebro-nos-jodimos-s",
+      "2008-09-07-vaya-comedia",
+      "2008-09-09-universidad-para-personas-especiales",
+      "2008-09-11-entendiendo-un-suicida",
+      "2008-09-12-cuidado-te-curan-de-espanto-en-la",
+      "2008-09-15-5-aos",
+      "2008-09-17-venciendo-miedos-y-paseando-en-e",
+      "2008-09-24-lo-que-hace-la-ignorancia",
+      "2008-09-28-noche-de-danza-jazz-blues-y-bossa",
+      "2008-10-11-el-ataque-de-las-frutas-mutantes-de",
+      "2008-10-12-blackbird-across-universe",
+      "2008-10-17-recordar-viejos-tiempos",
+      "2008-10-20-sobreviv-mi-ltima-luna-llena",
+      "2008-10-25-entre-amigos",
+      "2008-10-27-maldita-humanidad-o-sociedad",
+      "2008-11-04-intentos-de-fotografa",
+      "2008-11-05-hablemos-de-cultura",
+      "2008-11-10-un-tributo-las-bubis",
+      "2008-11-14-la-religin-nos-facilita-las-cosas",
+      "2008-11-18-hroes-o-herpes",
+      "2008-11-25-recuerdos-regreso-la-inocencia-y-msica",
+      "2008-11-29-15-minutos-de-un-chef",
+      "2008-12-03-mami-que-ser-lo-que-quiere-el-negro",
+      "2008-12-05-qu-es-lo-que-quiero-conocer",
+      "2008-12-05-si-no-estoy-aqu",
+      "2008-12-08-facebook-toolbar",
+      "2008-12-08-frases-de-odio",
+      "2008-12-09-el-hijo-ecuatoriano-no-reconocido-de",
+      "2008-12-11-oligofrenia",
+      "2008-12-16-cmo-evitar-que-el-firefox-se-lleve-e",
+      "2008-12-19-les-presento-el-chiphone",
+      "2008-12-19-una-invitacin-visitar-puteadasgratisco",
+      "2008-12-20-para-quienes-no-saben-qu-regalar-en",
+      "2008-12-23-porqu-poner-recto-el-asiento-de-un-avin",
+      "2008-12-26-mi-primer-intento",
+      "2008-12-28-mi-novia-manual-de-instrucciones",
+      "2009-01-01-el-ltimo-post-del-2008",
+      "2009-01-05-nuevo-ao-sueo-cumplido-playa-y-diversin",
+      "2009-01-06-delincuentes-con-perfil-en-hi5-s",
+      "2009-01-10-paso-pegao-pegao-al-feizbuk",
+      "2009-01-11-nueva-cerveza-redds-slo-para-mujeres",
+      "2009-01-12-pinche-delincuencia",
+      "2009-01-14-qu-son-los-verdaderos-amigos",
+      "2009-01-15-y-hasta-que-lleg-mi-beb",
+      "2009-01-16-aprovechando-la-penumbra",
+      "2009-01-19-cmo-seguir-un-blog-o-compartir-un",
+      "2009-01-20-comer-manicho-tomar-zhumir-y-usar",
+      "2009-01-22-social-protocol-big-bang-theory",
+      "2009-01-26-pornofnica-y-oliviah-funky-style",
+      "2009-01-27-photofunia",
+      "2009-01-29-recuerdos-caidos",
+      "2009-01-31-los-pendejos-y-zeitgeis",
+      "2009-02-03-angry-man-training-method",
+      "2009-02-07-analfabetismo-digita",
+      "2009-02-09-curiosidad-olvidada",
+      "2009-02-10-si-senor",
+      "2009-02-11-sobre-las-donaciones-de-supermaxi",
+      "2009-02-15-me-gustan-las-velas",
+      "2009-02-18-parte-de-lo-que-me-gusta-hacer",
+      "2009-02-25-waiting-for-sunse",
+      "2009-02-26-no-es-amor",
+      "2009-03-02-cambios-de-personalidad",
+      "2009-03-06-caos-sistemas-y-comunicacion",
+      "2009-03-10-torta-de-cumpleanos-geek",
+      "2009-03-10-y-llegaron-los-28",
+      "2009-03-16-aprovechando-la-fallita-de-seguridad",
+      "2009-03-20-somos-parte-de-la-solucion-o-de",
+      "2009-03-27-cansancio-dolor-y-estres-convertidos-en",
+      "2009-03-27-sera-de-creerles",
+      "2009-03-30-fotos-y-ciclopaseo",
+      "2009-03-30-mi-pedacito-de-locura",
+      "2009-03-31-buena-frase",
+      "2009-04-01-luis-rueda-un-rockero-hasta-las-mismas",
+      "2009-04-01-te-extrano-un-poco",
+      "2009-04-03-luna-lunita-lunera",
+      "2009-04-03-vicky-cristina-barcelona",
+      "2009-04-07-transito-y-trafico-latinoamericano",
+      "2009-04-21-pedaleando-por-la-tierra",
+      "2009-04-22-ivan-gabriel-el-bruto",
+      "2009-04-25-vaya-letrerito-de-clausura",
+      "2009-04-27-guayaquil-pueblo-chico-y-las",
+      "2009-04-29-correo-basura-borbotones",
+      "2009-05-07-ayudando-al-enemigo-y-siendo-herido-en",
+      "2009-05-13-good-bye-my-lover-good-by-my-friend-you",
+      "2009-05-14-correo-contactos-y-calendario-via-pus",
+      "2009-05-15-mocca-jazz-funk-y-unas-yerbas-mas",
+      "2009-05-20-veces-me-hacen-pensar-que-en-serio-hay",
+      "2009-05-25-funk-mocca",
+      "2009-05-27-xenofobia-impunidad-e-intolerancia",
+      "2009-06-01-te-amo",
+      "2009-06-02-overloaded",
+      "2009-06-07-mi-iphone-con-beatmania",
+      "2009-06-09-playa-personal-completa",
+      "2009-06-15-domingo-de-elecciones-y-un-encuentro",
+      "2009-06-18-solucionando-el-problema-con-pacificard",
+      "2009-06-23-libre-5-anos-despues",
+      "2009-06-25-con-razon-muchos-no-aprenden-la-leccion",
+      "2009-06-27-volver-creer",
+      "2009-06-29-encuentren-el-rostro",
+      "2009-06-29-will-vs-fate-voluntad-versus-destino",
+      "2009-06-29-wtf-en-una-piscina",
+      "2009-07-01-quienes-somos-los-ecuatorianos",
+      "2009-07-06-being-agent-of-chaos",
+      "2009-07-06-mis-recomendados-para-el-iphone",
+      "2009-07-20-para-pensar-un-poco",
+      "2009-07-21-tentacion",
+      "2009-07-23-audioboo",
+      "2009-07-24-y-seguimos-con-los-cuentos",
+      "2009-08-11-twitter-blackberries-privacidad-y",
+      "2010-04-26-papa-y-mama",
+      "2010-06-06-la-salida-faci",
+      "2010-09-27-adaptacion-y-limites",
+      "2010-10-01-estados-de-animo-y-el-efecto-de-las",
+      "2010-12-28-de-propositos-y-motivaciones",
+      "2011-01-10-ejercitarse-en-casa-funciona",
+      "2011-01-12-tips-para-volver-loca-una-mujer-en-la",
+      "2011-02-09-se-aprende-todo-en-la-universidad",
+      "2011-03-21-cable-tierra",
+      "2011-05-26-kaffe-fika",
+      "2012-05-05-la-muerte-como-agente-de-cambio",
+      "2012-05-27-la-comunicacion-en-la-era-de-la",
+      "2012-06-18-mi-experiencia-como-un-iron-runner",
+      "2012-11-21-entrenamiento-hiit-para-principiantes",
+      "2013-03-28-decisiones-dificiles",
+      "2013-04-19-ejercicio-extremo-o-extrema-locura",
+      "2013-08-13-desarrollando-software-por-libra",
+      "2013-09-02-desconexion-y-reconexion",
+      "2013-11-24-temor-caer",
+      "2014-03-22-un-fin-de-semana-con-los-heroes",
+      "2015-01-09-we-losers-nosotros-los-perdedores",
+      "2015-04-20-emprendimiento-startups-y-co-working",
+      "2015-12-23-descubriendo-la-comunidad-del-cono-sur",
+      "2016-06-16-abrirle-la-puerta-la-felicidad",
+      "2017-03-13-un-ano-despues-de-startup-chile",
+      "2017-08-12-trabajo-remoto-ecuador-posible",
+      "2017-08-31-pedalear-una-ciudad-sin-caminos",
+      "2018-06-10-que-paso-con-el-ecuador-de-bernard",
+      "2019-01-29-volver-a-construir-sitios-solo-con-html-js-y-css",
+      "2020-02-06-guía-básica-para-trabajar-con-clientes-foráneos-eeuu-europa-siendo-latino",
+      "2020-12-15-kit-de-productividad-de-un-nomada-digital",
+      "2020-12-26-vale-la-pena-entrenar-con-kettlebells",
+      "2021-01-04-vue-js-vs-react",
+      "2021-09-14-mi-top-de-extensiones-para-vscode",
+      "2022-03-24-tips-para-mejorar-tu-cv-y-mostrar-mejor-tus-capacidades",
+      "2022-10-01-donde-encontrar-ofertas-de-trabajo-remoto",
+      "2022-11-15-preparacion-para-entrevistas-tecnicas-certificados-y-en-que-enfocarse",
+      "2023-10-30-elegir-nosql-vs-relacionales",
+      "2023-11-06-salarios-desarrolladores-latam-remoto",
+      "2023-11-tech-wars-duelo-de-tecnologias-en-empresas-y-startups",
+      "2023-11-usando-chatgpt-como-tu-mentor-para-mejorar-como-programador",
+      "2024-1-un-lider-alfa-o-una-manada-coordinada-que-funciona-mejor-en-proyectos",
+      "2025-10-usar-ia-como-asistente-de-codigo-sin-perder-el-control-ni-la-responsabilidad",
+      "2025-11-conviertete-el-kibernetes-de-tu-ia",
+      "2025-3-cómo-usar-ia-localmente-con-ollama",
+      "2025-4-tus-commits-son-un-desastre-aprende-a-estandarizarlos-con-commitlint-husky-y-commitizen",
+      "2026-02-optimizando-el-contexto-y-skills-en-la-ia",
+      "2026-08-how-i-work-with-ai-agents-context-and-memory",
+      "2026-1-el-efecto-rafa-gorgori-ralph-wiggum-la-ia-no-es-un-genio-sino-tu-asistente-mas-distraido",
+      "2026-3-ingenieria-de-sistemas-reales-salto-código-a-vision-top-down",
+      "como-preparar-tu-cambio-de-carrera-hacia-tecnologia",
+      "feature-switches-integracion-desarrollo-2013",
+      "inmigrar-como-trabajador-remoto-nomada-digital-en-2023",
+      "madurez-profesional-en-ti-que-separa-a-un-junior-de-un-senior",
+      "patrones-diseno-react-juniors-2023-10"
+    ],
+    "failed": []
+  },
+  "notes": {
+    "strictFailuresAreFrontmatter": true,
+    "bodyFailuresAreMarkdocAstErrors": true,
+    "markdocErrorsDoNotThrow": true
+  }
+}
