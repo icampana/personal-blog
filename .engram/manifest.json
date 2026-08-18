@@ -1,0 +1,13 @@
+{
+  "version": 1,
+  "chunks": [
+    {
+      "id": "db08e58f",
+      "created_by": "icampana",
+      "created_at": "2026-08-18T23:05:34Z",
+      "sessions": 9,
+      "memories": 23,
+      "prompts": 47
+    }
+  ]
+}
