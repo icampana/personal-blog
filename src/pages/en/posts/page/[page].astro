@@ -1,11 +1,11 @@
 ---
 import { getCollection } from 'astro:content';
-import PostsList from '../../../components/PostsList.astro';
-import { getPostsByLocale, LOCALES, POSTS_PER_PAGE } from '../../../utils/i18n';
+import PostsList from '../../../../components/PostsList.astro';
+import { getPostsByLocale, LOCALES, POSTS_PER_PAGE } from '../../../../utils/i18n';
 
 export async function getStaticPaths() {
   const allPosts = await getCollection('posts');
-  const posts = getPostsByLocale(allPosts, LOCALES.DEFAULT);
+  const posts = getPostsByLocale(allPosts, LOCALES.ENGLISH);
   const totalPages = Math.ceil(posts.length / POSTS_PER_PAGE);
 
   return Array.from({ length: totalPages }, (_, i) => ({
@@ -16,15 +16,15 @@ export async function getStaticPaths() {
 const { page } = Astro.params;
 const currentPage = parseInt(page || '1', 10);
 
-const title = `Publicaciones - Página ${currentPage}`;
-const description = `Lista de publicaciones del blog - Página ${currentPage}`;
+const title = `Posts - Page ${currentPage}`;
+const description = `Blog publications list - Page ${currentPage}`;
 ---
 
 <PostsList
-  locale={LOCALES.DEFAULT}
+  locale={LOCALES.ENGLISH}
   currentPage={currentPage}
-  baseUrl="/posts"
+  baseUrl="/en/posts"
   title={title}
   description={description}
-  heading="Lista de publicaciones por fecha"
+  heading="List of publications by date"
 />

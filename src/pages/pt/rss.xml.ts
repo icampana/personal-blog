@@ -1,13 +1,11 @@
 import { getCollection } from 'astro:content';
 import rss from '@astrojs/rss';
 import { getPostUrl, sortPostsByDate } from '../../utils/client';
-import { getLanguageFromFilename } from '../../utils/i18n';
+import { getPostsByLocale, LOCALES } from '../../utils/i18n';
 
 export async function GET(context: { site?: string }) {
   const allPosts = await getCollection('posts');
-  const posts = allPosts.filter(
-    (post) => getLanguageFromFilename(post.id) === 'pt',
-  );
+  const posts = getPostsByLocale(allPosts, LOCALES.PORTUGUESE);
   const sortedPosts = sortPostsByDate(posts);
 
   return rss({

@@ -1,17 +1,15 @@
 import { getCollection } from 'astro:content';
 import rss from '@astrojs/rss';
 import { getPostUrl, sortPostsByDate } from '../../utils/client';
-import { getLanguageFromFilename } from '../../utils/i18n';
+import { getPostsByLocale, LOCALES } from '../../utils/i18n';
 
 export async function GET(context: { site?: string }) {
   const allPosts = await getCollection('posts');
-  const posts = allPosts.filter(
-    (post) => getLanguageFromFilename(post.id) === 'en',
-  );
+  const posts = getPostsByLocale(allPosts, LOCALES.FRENCH);
   const sortedPosts = sortPostsByDate(posts);
 
   return rss({
-    title: 'Iván Gabriel - Blog (English)',
+    title: 'Iván Gabriel - Blog (Français)',
     description:
       'Diary of a Computer Scientist, Entrepreneur, Developer, and Full-time Curious Mind.',
     site: context.site

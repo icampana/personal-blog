@@ -1,0 +1,16 @@
+---
+import PostsList from '../../../components/PostsList.astro';
+import { LOCALES } from '../../../utils/i18n';
+
+const title = 'Todas as Publicações';
+const description = 'Lista completa de todas as publicações do blog';
+---
+
+<PostsList
+  locale={LOCALES.PORTUGUESE}
+  currentPage={1}
+  baseUrl="/pt/posts"
+  title={title}
+  description={description}
+  heading="Lista de publicações por data"
+/>

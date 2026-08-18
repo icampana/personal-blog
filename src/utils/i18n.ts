@@ -10,6 +10,9 @@ export const LOCALES = {
 
 export type Locale = (typeof LOCALES)[keyof typeof LOCALES];
 
+// Posts per page for paginated post lists
+export const POSTS_PER_PAGE = 12;
+
 // Regex patterns
 // The glob loader appends locale suffixes both as `.en` and `en` depending on the filename,
 // so accept an optional leading dot and an optional `.md` extension.
@@ -89,6 +92,44 @@ export async function hasTranslation(
     const postLanguage = getLanguageFromFilename(post.id);
     const postCleanSlug = getCleanSlug(post.id);
     return postLanguage === locale && postCleanSlug === baseSlug;
+  });
+}
+
+/**
+ * Filter posts by locale.
+ *
+ * Uses collection-aware detection: the glob loader produces dotless ids
+ * (foo.en.md -> "fooen"), so a Spanish slug that naturally ends in "en"/"fr"/"pt"
+ * (e.g. "...-commitizen") must NOT be treated as a translation. A post is a
+ * translation only when its stem (id minus language suffix, ignoring /index)
+ * exists as a Spanish post id in the collection.
+ */
+export function getPostsByLocale(
+  posts: CollectionEntry<'posts'>[],
+  locale: Locale,
+): CollectionEntry<'posts'>[] {
+  const ids = new Set(posts.map((post) => post.id));
+
+  const getLang = (id: string): Locale | null => {
+    for (const lang of ['en', 'fr', 'pt'] as const) {
+      if (id.endsWith(lang)) {
+        // Strip the suffix and any folder /index marker, then check the stem
+        // is a real Spanish post (translation source of truth).
+        const stem = id.slice(0, -lang.length).replace(/\/index$/, '');
+        if (ids.has(stem) || ids.has(`${stem}/index`)) {
+          return lang;
+        }
+      }
+    }
+    return null;
+  };
+
+  return posts.filter((post) => {
+    const lang = getLang(post.id);
+    if (locale === LOCALES.DEFAULT) {
+      return lang === null || lang === LOCALES.DEFAULT;
+    }
+    return lang === locale;
   });
 }
 
