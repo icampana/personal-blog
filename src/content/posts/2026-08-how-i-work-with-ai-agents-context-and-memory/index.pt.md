@@ -30,11 +30,15 @@ Para a camada privada, uso **Engram**, um armazenamento local em SQLite + FTS5 q
 
 Que quando você volta a trabalhar no projeto, em vez de ter que explicar novamente o que fez nas últimas sessões, você tem um histórico que pode ser pesquisado semanticamente, com decisões, ajustes e explicações que o agente pode encontrar facilmente. Inclusive, já aconteceu de eu pedir uma mudança e o agente me responder “Tem certeza? Isso vai contra o que fizemos há 2 semanas”, até me lembrando do que eu mesmo entreguei.
 
+![Engram](/photos/2026/engram-banner.png)
+
 ## A wiki do repositório é a memória pública
 
 E é aqui que entra a segunda camada de que eu falava, porque se Engram é o que o agente lembra em particular, [OpenWiki](https://github.com/langchain-ai/openwiki) é o que o repositório guarda em público. Uma *wiki* própria que vive dentro da base de código (*codebase*), novamente sob openwiki/, e que a próxima pessoa, ou a próxima sessão, lê como fonte de verdade do estado atual do projeto. Não um *changelog* que ninguém lê, mas sim a documentação real, enraizada nos arquivos, na história do Git e nas decisões que já foram tomadas. A ferramenta oficial se integra com o GitHub e pode ser acionada após um *merge*, no entanto, se você quiser fazer isso manualmente (funciona muito bem também), existe um [plugin para Claude Code](https://github.com/SoulKyu/openwiki-cc) (facilmente adaptável como *skill* a qualquer outro agente que cumpra a mesma função).
 
 A integração ao meu fluxo segue uma única regra: após qualquer mudança que afete a arquitetura, uma convenção ou um *workflow*, executo *`/openwiki:wiki update`* antes de dar o *ticket* por finalizado. O bom é que é idempotente, faz um *snapshot* da *wiki* antes e depois e só atualiza o que realmente mudou. Assim, executá-lo frequentemente é barato e executá-lo raramente é o que o torna caro. O padrão completo fica assim: Engram é o que a próxima sessão lembra, OpenWiki é o que a próxima pessoa lê, e você precisa de ambas, não apenas uma. Se você seguir a estrutura recomendada, isso ajuda o agente a encontrar respostas muito mais facilmente. No meu caso, inclusive, me ajudou a encontrar partes obsoletas da aplicação, seções que precisam de atualização, e mantém a ideia da engenharia básica de que a documentação deve estar sempre atualizada.
+
+![OpenWiki](/photos/2026/openwiki-lockup.png)
 
 ## A janela de contexto é um orçamento, não uma lata de lixo
 

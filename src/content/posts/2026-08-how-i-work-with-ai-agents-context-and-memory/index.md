@@ -33,6 +33,8 @@ Cualquier modelo olvida todo lo que hicieron en cuanto termina la sesión, para 
 
 Para la capa privada uso **Engram**, un almacén local en SQLite + FTS5 que sobrevive entre sesiones y hasta a la compactación de contexto, donde guardas observaciones tipadas y te marca un conflicto en vez de sobrescribir en silencio cuando una memoria nueva contradice a una vieja, así que terminas con una conversación que carga su propia historia en vez de un chat sin estado que empieza de cero cada lunes ([github.com/Gentleman-Programming/engram](https://github.com/Gentleman-Programming/engram)). Lo uso de forma proactiva, no cuando me lo piden: contexto al inicio de la sesión, una búsqueda antes de empezar cualquier cosa que pueda haberse tocado antes, un guardado inmediatamente después de cualquier decisión o cambio de convención, y un resumen antes de cerrar, y suena a overhead hasta que te das cuenta de que la alternativa es redescubrir, y redecidir, lo mismo cada semana.
 
+![Engram](/photos/2026/engram-banner.png)
+
 #### ¿Qué es lo que genera esto?
 
 Que cuando vuelves a comenzar a trabajar en el proyecto en lugar de volver a explicar lo que hiciste en las últimas sesiones, tienes un histórico que se puede buscar de forma semántica, con decisiones, ajustes, explicaciones que el agente puede encontrar fácilmente, inclusive ha llegado a pasar que pido un cambio y el agente me puede responder “Estás seguro? eso va en contra de lo que hicimos hace 2 semanas”, hasta me recuerda a mi mismo qué fue lo que entregué.
@@ -42,6 +44,8 @@ Que cuando vuelves a comenzar a trabajar en el proyecto en lugar de volver a exp
 Y acá es donde entra la segunda capa de la que te hablaba, porque si Engram es lo que el agente recuerda en privado, [OpenWiki](https://github.com/langchain-ai/openwiki) es lo que el repo guarda en público, una wiki propia que vive dentro del codebase, otra vez bajo openwiki/, y que la próxima persona, o la próxima sesión, lee como fuente de verdad del estado actual del proyecto, no un changelog que nadie lee, sino la documentación real, enraizada en los archivos, la historia de git y las decisiones que ya se tomaron, la herramienta oficial se integra con github y se puede gatillar después de un merge , sin embargo si lo quieres hacer manualmente (funciona muy bien también), existe un [plugin para Claude Code](https://github.com/SoulKyu/openwiki-cc) (fácilmente adaptable como skill a cualquier otro agente que cumple la misma función.
 
 La integración a mi flujo es una sola regla: después de cualquier cambio que mueva la arquitectura, una convención o un workflow, corro *`/openwiki:wiki update`* antes de dar el ticket por terminado, y lo bueno es que es idempotente, hace un snapshot del wiki antes y después y solo actualiza lo que de verdad cambió, así que correrlo seguido es barato y correrlo rara vez es lo que lo vuelve caro, y el patrón completo queda así: Engram es lo que recuerda la próxima sesión, OpenWiki es lo que lee la próxima persona, y necesitas ambas, no una sola.  Si sigues la estructura recomendada te ayuda a que el agente encuentre respuestas mucho más fácil, en mi caso inclusive me ha ayudado para encontrar partes obsoletas de la aplicación, secciones que necesitan actualización y se mantiene la idea de la ingeniería básica que es que siempre la documentación esté al día
+
+![OpenWiki](/photos/2026/openwiki-lockup.png)
 
 ## La ventana de contexto es un presupuesto, no un tacho de basura
 

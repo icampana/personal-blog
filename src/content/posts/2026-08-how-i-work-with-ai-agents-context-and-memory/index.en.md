@@ -31,6 +31,8 @@ Any model forgets everything it did as soon as the session ends. For this, I use
 
 For the private layer, I use **Engram**, a local store in SQLite + FTS5 that survives across sessions and even context compaction. You store typed observations, and it flags a conflict instead of silently overwriting when new memory contradicts old, so you end up with a conversation that carries its own history instead of a stateless chat that starts from scratch every Monday ([github.com/Gentleman-Programming/engram](https://www.npmjs.com/package/@colbymchenry/codegraph)). I use it proactively, not when asked: context at the start of the session, a search before beginning anything that might have been touched before, a save immediately after any decision or convention change, and a summary before closing. It sounds like overhead until you realize the alternative is rediscovering, and redeciding, the same thing every week.
 
+![Engram](/photos/2026/engram-banner.png)
+
 #### What does this generate?
 
 When you return to working on the project, instead of re-explaining what you did in previous sessions, you have a searchable history with decisions, adjustments, and explanations that the agent can easily find. It has even happened that I ask for a change and the agent can respond, "Are you sure? That goes against what we did two weeks ago," even reminding me what I delivered.
@@ -40,6 +42,8 @@ When you return to working on the project, instead of re-explaining what you did
 And this is where the second layer I was talking about comes in. Because if Engram is what the agent remembers privately, [OpenWiki](https://github.com/langchain-ai/openwiki) is what the repo stores publicly—its own wiki that lives within the codebase, again under `openwiki/`, and which the next person, or the next session, reads as the source of truth for the project's current state. Not a changelog nobody reads, but the real documentation, rooted in the files, the git history, and the decisions already made. The official tool integrates with GitHub and can be triggered after a merge; however, if you want to do it manually (it also works very well), there is a [plugin for Claude Code](https://github.com/SoulKyu/openwiki-cc) (easily adaptable as a skill to any other agent that fulfills the same function).
 
 The integration into my workflow is a single rule: after any change that affects architecture, a convention, or a workflow, I run *`/openwiki:wiki update`* before marking the ticket as complete. The good thing is that it's idempotent; it takes a snapshot of the wiki before and after and only updates what truly changed. So, running it often is cheap, and running it rarely is what makes it expensive. The complete pattern is: Engram is what the next session remembers, OpenWiki is what the next person reads, and you need both, not just one. Following the recommended structure helps the agent find answers much easier. In my case, it has even helped me find obsolete parts of the application, sections that need updating, and it maintains the basic engineering idea that documentation should always be up-to-date.
+
+![OpenWiki](/photos/2026/openwiki-lockup.png)
 
 ## The Context Window is a Budget, Not a Trash Can
 

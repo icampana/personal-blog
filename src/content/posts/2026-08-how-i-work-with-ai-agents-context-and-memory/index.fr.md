@@ -36,11 +36,15 @@ Pour la couche privée, j'utilise **Engram**, un stockage local dans SQLite + FT
 
 Lorsque vous reprenez le travail sur le projet, au lieu de devoir réexpliquer ce que vous avez fait lors des dernières sessions, vous disposez d'un historique consultable sémantiquement, avec des décisions, des ajustements, des explications que l'agent peut facilement trouver. Il est même arrivé que je demande un changement et que l'agent me réponde : "Êtes-vous sûr ? Cela va à l'encontre de ce que nous avons fait il y a deux semaines." Il me rappelle même ce que j'ai livré.
 
+![Engram](/photos/2026/engram-banner.png)
+
 ## La wiki du dépôt est la mémoire publique
 
 Et c'est ici qu'intervient la deuxième couche dont je vous parlais, car si Engram est ce dont l'agent se souvient en privé, [OpenWiki](https://github.com/langchain-ai/openwiki) est ce que le dépôt conserve en public : une wiki propre qui vit au sein de la codebase, encore une fois sous `openwiki/`, et que la prochaine personne, ou la prochaine session, lit comme source de vérité de l'état actuel du projet. Ce n'est pas un changelog que personne ne lit, mais une documentation réelle, enracinée dans les fichiers, l'historique Git et les décisions déjà prises. L'outil officiel s'intègre à GitHub et peut être déclenché après un merge ; cependant, si vous souhaitez le faire manuellement (cela fonctionne très bien aussi), il existe un [plugin pour Claude Code](https://github.com/SoulKyu/openwiki-cc) (facilement adaptable comme "skill" à tout autre agent qui remplit la même fonction).
 
 L'intégration à mon flux de travail suit une seule règle : après tout changement affectant l'architecture, une convention ou un workflow, j'exécute *`/openwiki:wiki update`* avant de considérer le ticket comme terminé. L'avantage est que c'est idempotent : il prend un instantané du wiki avant et après et ne met à jour que ce qui a réellement changé. Ainsi, l'exécuter souvent est peu coûteux et l'exécuter rarement est ce qui le rend coûteux. Le modèle complet est le suivant : Engram est ce dont se souvient la prochaine session, OpenWiki est ce que lit la prochaine personne, et vous avez besoin des deux, pas d'une seule. Si vous suivez la structure recommandée, cela aide l'agent à trouver des réponses beaucoup plus facilement. Dans mon cas, cela m'a même aidé à trouver des parties obsolètes de l'application, des sections nécessitant une mise à jour, et cela maintient l'idée d'ingénierie de base selon laquelle la documentation doit toujours être à jour.
+
+![OpenWiki](/photos/2026/openwiki-lockup.png)
 
 ## La fenêtre de contexte est un budget, pas une poubelle
 
