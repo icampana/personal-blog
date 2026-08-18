@@ -46,7 +46,6 @@ pnpm run prebuild
 ```bash
 pnpm run build:production
 ```
-- Builds TinaCMS (`tinacms build`)
 - Generates search index (`node scripts/build-search-index.js`)
 - Builds Astro site (`astro build`)
 

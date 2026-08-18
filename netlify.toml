@@ -207,12 +207,6 @@
   to = "/posts/:slug"
   status = 301
 
-# Admin panel redirect for TinaCMS
-[[redirects]]
-  from = "/admin/*"
-  to = "/admin/index.html"
-  status = 200
-
 # SPA fallback for client-side routing
 [[redirects]]
   from = "/*"
