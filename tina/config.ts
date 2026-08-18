@@ -29,8 +29,8 @@ const config: any = {
         name: 'posts',
         path: 'src/content/posts',
         match: {
-          include: '**/*.md',
-          exclude: '**/*.{en,pt}.md',
+          include: '**/*',
+          exclude: '**/*.{en,pt}',
         },
         ui: {
           filename: {
@@ -64,8 +64,8 @@ const config: any = {
         name: 'pages',
         path: 'src/content/pages',
         match: {
-          include: '**/*.md',
-          exclude: '**/*.{en,pt}.md',
+          include: '**/*',
+          exclude: '**/*.{en,pt}',
         },
         fields: [
           {
@@ -84,8 +84,8 @@ const config: any = {
         name: 'projects',
         path: 'src/content/projects',
         match: {
-          include: '**/*.md',
-          exclude: '**/*.{en,pt}.md',
+          include: '**/*',
+          exclude: '**/*.{en,pt}',
         },
         fields: [
           {
@@ -104,8 +104,8 @@ const config: any = {
         name: 'videos',
         path: 'src/content/videos',
         match: {
-          include: '**/*.md',
-          exclude: '**/*.{en,pt}.md',
+          include: '**/*',
+          exclude: '**/*.{en,pt}',
         },
         fields: [
           {
