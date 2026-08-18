@@ -52,7 +52,13 @@ export default config({
           label: 'Short Description',
           multiline: true,
         }),
-        body: fields.markdoc({ label: 'Body', extension: 'md', options: { image: { directory: 'public/photos', publicPath: '/photos' } } }),
+        body: fields.markdoc({
+          label: 'Body',
+          extension: 'md',
+          options: {
+            image: { directory: 'public/photos', publicPath: '/photos' },
+          },
+        }),
       },
     }),
     projects: collection({
@@ -81,7 +87,13 @@ export default config({
         }),
         liveUrl: fields.url({ label: 'Live URL' }),
         repoUrl: fields.url({ label: 'Repo URL' }),
-        body: fields.markdoc({ label: 'Body', extension: 'md', options: { image: { directory: 'public/photos', publicPath: '/photos' } } }),
+        body: fields.markdoc({
+          label: 'Body',
+          extension: 'md',
+          options: {
+            image: { directory: 'public/photos', publicPath: '/photos' },
+          },
+        }),
       },
     }),
     videos: collection({
@@ -96,7 +108,13 @@ export default config({
         description: fields.text({ label: 'Description', multiline: true }),
         tags: fields.array(fields.text({ label: 'Tag' }), { label: 'Tags' }),
         featured: fields.checkbox({ label: 'Featured' }),
-        body: fields.markdoc({ label: 'Body', extension: 'md', options: { image: { directory: 'public/photos', publicPath: '/photos' } } }),
+        body: fields.markdoc({
+          label: 'Body',
+          extension: 'md',
+          options: {
+            image: { directory: 'public/photos', publicPath: '/photos' },
+          },
+        }),
       },
     }),
   },
