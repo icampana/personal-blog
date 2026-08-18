@@ -4,6 +4,7 @@ import { unified } from '@astrojs/markdown-remark';
 import mdx from '@astrojs/mdx';
 import react from '@astrojs/react';
 import sitemap from '@astrojs/sitemap';
+import keystatic from '@keystatic/astro';
 import tailwindcss from '@tailwindcss/vite';
 import { defineConfig } from 'astro/config';
 import rehypeHighlight from 'rehype-highlight';
@@ -23,7 +24,16 @@ export default defineConfig({
     // Don't configure imgix here - we want to pass imgix URLs through without build-time validation
     // This allows using imgix URLs that may not exist yet during the build
   },
-  integrations: [react(), sitemap(), mdx()],
+  integrations: [
+    react(),
+    sitemap(),
+    mdx(),
+    // Keystatic local mode needs SSR routes (prerender: false), which a static
+    // build without an adapter cannot emit. The plan scopes the admin to dev
+    // only ("No production admin surface yet"), so the integration is
+    // registered only outside production builds.
+    ...(process.env.NODE_ENV === 'production' ? [] : [keystatic()]),
+  ],
   build: {
     inlineStylesheets: 'auto',
   },
