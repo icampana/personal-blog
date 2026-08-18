@@ -54,3 +54,6 @@ public/build-info.json
 
 ## Skip Claude local files
 .claude
+
+# git worktrees
+.worktrees/
