@@ -2,7 +2,7 @@ User-agent: *
 Allow: /
 
 # Disallow admin and system files
-Disallow: /admin/
+Disallow: /keystatic/
 Disallow: /_astro/
 Disallow: /api/
 
