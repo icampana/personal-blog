@@ -14,10 +14,42 @@ export type Locale = (typeof LOCALES)[keyof typeof LOCALES];
 export const POSTS_PER_PAGE = 12;
 
 // Regex patterns
-// The glob loader appends locale suffixes both as `.en` and `en` depending on the filename,
-// so accept an optional leading dot and an optional `.md` extension.
-const LANGUAGE_SUFFIX_REGEX = /\.?(en|pt|fr)(\.md)?$/i;
 const LOCALE_PREFIX_REGEX = /^(\/(en|pt|fr)\/)/;
+
+// Locale is now the first path segment of a collection id (es/foo, en/foo).
+const LOCALE_SEGMENT = new Set(['es', 'en', 'pt', 'fr']);
+
+/**
+ * Extract language from a content collection id (first path segment).
+ */
+export function getLanguageFromFilename(id: string): Locale | null {
+  const first = id.split('/')[0];
+  return LOCALE_SEGMENT.has(first) ? (first as Locale) : null;
+}
+
+/**
+ * Strip the locale prefix segment from a collection id.
+ */
+export function stripLanguageSuffix(id: string): string {
+  const lang = getLanguageFromFilename(id);
+  return lang ? id.slice(lang.length + 1) : id;
+}
+
+/**
+ * Get clean slug (without locale prefix, date prefix, extension, and /index).
+ */
+export function getCleanSlug(slug: string): string {
+  let cleanSlug = stripLanguageSuffix(slug)
+    .replace(/\.md$/i, '')
+    .replace(/\/?index$/, '');
+
+  if (cleanSlug.match(/^\d{4}-\d{2}-\d{2}-/)) {
+    const parts = cleanSlug.split('-');
+    cleanSlug = parts.slice(3).join('-');
+  }
+
+  return cleanSlug;
+}
 
 /**
  * Extract language from URL path
@@ -32,42 +64,6 @@ export function getLocaleFromPath(pathname: string): Locale {
  */
 export function stripLocalePrefix(pathname: string): string {
   return pathname.replace(LOCALE_PREFIX_REGEX, '/');
-}
-
-/**
- * Extract language suffix from filename
- */
-export function getLanguageFromFilename(filename: string): Locale | null {
-  const match = filename.match(LANGUAGE_SUFFIX_REGEX);
-  return match ? (match[1] as Locale) : null;
-}
-
-/**
- * Strip language suffix from filename
- */
-export function stripLanguageSuffix(filename: string): string {
-  return filename.replace(LANGUAGE_SUFFIX_REGEX, (match, lang, ext) => {
-    return ext ? '.md' : '';
-  });
-}
-
-/**
- * Get clean slug (without date prefix, language suffix, and /index)
- */
-export function getCleanSlug(slug: string): string {
-  // Remove language suffix and file extension
-  let cleanSlug = stripLanguageSuffix(slug).replace(/\.md$/i, '');
-
-  // Remove date prefix if present (YYYY-MM-DD-)
-  if (cleanSlug.match(/^\d{4}-\d{2}-\d{2}-/)) {
-    const parts = cleanSlug.split('-');
-    cleanSlug = parts.slice(3).join('-');
-  }
-
-  // Remove /index suffix for folder-based content (handles Spanish /index and dotted/dotless translations)
-  cleanSlug = cleanSlug.replace(/\/?index\.?(en|pt|fr)?$/, '');
-
-  return cleanSlug;
 }
 
 /**
@@ -96,41 +92,13 @@ export async function hasTranslation(
 }
 
 /**
- * Filter posts by locale.
- *
- * Uses collection-aware detection: the glob loader produces dotless ids
- * (foo.en.md -> "fooen"), so a Spanish slug that naturally ends in "en"/"fr"/"pt"
- * (e.g. "...-commitizen") must NOT be treated as a translation. A post is a
- * translation only when its stem (id minus language suffix, ignoring /index)
- * exists as a Spanish post id in the collection.
+ * Filter posts by locale (derived from the first path segment).
  */
 export function getPostsByLocale(
   posts: CollectionEntry<'posts'>[],
   locale: Locale,
 ): CollectionEntry<'posts'>[] {
-  const ids = new Set(posts.map((post) => post.id));
-
-  const getLang = (id: string): Locale | null => {
-    for (const lang of ['en', 'fr', 'pt'] as const) {
-      if (id.endsWith(lang)) {
-        // Strip the suffix and any folder /index marker, then check the stem
-        // is a real Spanish post (translation source of truth).
-        const stem = id.slice(0, -lang.length).replace(/\/index$/, '');
-        if (ids.has(stem) || ids.has(`${stem}/index`)) {
-          return lang;
-        }
-      }
-    }
-    return null;
-  };
-
-  return posts.filter((post) => {
-    const lang = getLang(post.id);
-    if (locale === LOCALES.DEFAULT) {
-      return lang === null || lang === LOCALES.DEFAULT;
-    }
-    return lang === locale;
-  });
+  return posts.filter((post) => getLanguageFromFilename(post.id) === locale);
 }
 
 /**
