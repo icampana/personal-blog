@@ -8,6 +8,7 @@ export default config({
       label: 'Posts (ES)',
       slugField: 'title',
       path: 'src/content/posts/es/*',
+      entryLayout: 'content',
       format: { contentField: 'body' },
       schema: {
         title: fields.slug({ name: { label: 'Title' } }),
@@ -29,6 +30,12 @@ export default config({
         body: fields.markdoc({
           label: 'Body',
           extension: 'md',
+          options: {
+            image: {
+              directory: 'public/photos',
+              publicPath: '/photos',
+            },
+          },
         }),
       },
     }),
@@ -45,7 +52,7 @@ export default config({
           label: 'Short Description',
           multiline: true,
         }),
-        body: fields.markdoc({ label: 'Body', extension: 'md' }),
+        body: fields.markdoc({ label: 'Body', extension: 'md', options: { image: { directory: 'public/photos', publicPath: '/photos' } } }),
       },
     }),
     projects: collection({
@@ -74,7 +81,7 @@ export default config({
         }),
         liveUrl: fields.url({ label: 'Live URL' }),
         repoUrl: fields.url({ label: 'Repo URL' }),
-        body: fields.markdoc({ label: 'Body', extension: 'md' }),
+        body: fields.markdoc({ label: 'Body', extension: 'md', options: { image: { directory: 'public/photos', publicPath: '/photos' } } }),
       },
     }),
     videos: collection({
@@ -89,7 +96,7 @@ export default config({
         description: fields.text({ label: 'Description', multiline: true }),
         tags: fields.array(fields.text({ label: 'Tag' }), { label: 'Tags' }),
         featured: fields.checkbox({ label: 'Featured' }),
-        body: fields.markdoc({ label: 'Body', extension: 'md' }),
+        body: fields.markdoc({ label: 'Body', extension: 'md', options: { image: { directory: 'public/photos', publicPath: '/photos' } } }),
       },
     }),
   },
