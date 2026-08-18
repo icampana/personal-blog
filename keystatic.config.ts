@@ -16,6 +16,7 @@ export default config({
           label: 'Short Description',
           multiline: true,
         }),
+        path: fields.text({ label: 'Path' }),
         tags: fields.array(fields.text({ label: 'Tag' }), {
           label: 'Tags',
           itemLabel: (props) => props.value || 'Tag',
