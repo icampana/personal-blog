@@ -11,7 +11,6 @@ tags:
   - Live Abroad
   - Remote Work
   - Digital Nomad
-_template: posts
 ---
 
 Au moment d'écrire cet article, nous traversons ce que le Forum Économique Mondial de Davos a défini comme une « polycrise », c'est-à-dire de multiples crises se déroulant simultanément. Cela ne présente pas un scénario très encourageant en général, mais historiquement, cela a toujours été bien plus prononcé pour l'Amérique latine (LATAM). Parmi les facteurs qui s'entremêlent :

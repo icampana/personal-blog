@@ -1,12 +1,7 @@
 ---
-author: ivan
-comments: true
 date: 2006-03-07 09:54:00+00:00
 path: /2006/03/sguele-el-rastro-tus-comentarios-en
 title: Síguele el rastro a tus comentarios en blogger
-wordpress_id: 947
-categories:
-  - Sin categoría
 ---
 
 Una de las pocas cosas que extraño de haloscan es la posibilidad de leer los comentarios de los posts utilizando un lector de feeds RSS, con lo cual no tenía que estar revisando si alguien había comentado algo en una de las publicaciones.

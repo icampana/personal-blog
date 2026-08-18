@@ -1,12 +1,7 @@
 ---
-author: ivan
-comments: true
 date: 2011-03-21 01:15:00+00:00
 path: /2011/03/cable-tierra
 title: Cable a tierra...
-wordpress_id: 732
-categories:
-  - Sin categoría
 tags:
   - Locuras
   - Pensamientos

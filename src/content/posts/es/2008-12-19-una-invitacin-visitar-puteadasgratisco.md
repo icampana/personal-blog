@@ -1,12 +1,7 @@
 ---
-author: ivan
-comments: true
 date: 2008-12-19 11:39:00+00:00
 path: /2008/12/una-invitacin-visitar-puteadasgratisco
 title: Una invitación a visitar puteadasgratis.com por cortesía de Sex And The City
-wordpress_id: 822
-categories:
-  - Sin categoría
 tags:
   - Amigos
   - Pensamientos

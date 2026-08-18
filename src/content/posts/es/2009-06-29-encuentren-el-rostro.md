@@ -1,8 +1,4 @@
 ---
-author: ivan
-categories:
-- Sin categoría
-comments: true
 date: 2009-06-29 05:58:00
 featuredImage: /photos/img_1385-Modificada.jpg
 path: /2009/06/encuentren-el-rostro
@@ -12,7 +8,6 @@ tags:
 - Locuras
 - Personal
 title: ¡Encuentren el rostro!
-wordpress_id: 749
 ---
 
 [![](/photos/img_1385-Modificada.jpg)](<http://4.bp.blogspot.com/_T2UWuNJg3dQ/SkgSUlPP9yI/AAAAAAAACB0/SFQ0xQQ6hss/s1600-h/img_1385+(Modificada).jpg>)

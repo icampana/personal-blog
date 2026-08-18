@@ -1,12 +1,7 @@
 ---
-author: ivan
-comments: true
 date: 2005-05-31 09:45:00+00:00
 path: /2005/05/la-vida-es-una-verga-lo-importante-es
 title: La vida es una verga, lo importante es no entregarle el culo
-wordpress_id: 998
-categories:
-  - Sin categoría
 tags:
   - Pensamientos
   - Personal

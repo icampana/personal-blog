@@ -1,12 +1,7 @@
 ---
-author: ivan
-comments: true
 date: 2009-03-31 19:31:00+00:00
 path: /2009/03/buena-frase
 title: ¡¡Buena Frase!!
-wordpress_id: 779
-categories:
-  - Sin categoría
 ---
 
 Esto me pasa por escribir sandeces en el [facebook](https://www.facebook.com).. ja ja.. la frase que puse fue: "Quiero tener vacaciones pagadas... de por vida!!"

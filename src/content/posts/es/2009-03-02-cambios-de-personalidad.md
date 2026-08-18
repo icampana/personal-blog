@@ -1,12 +1,7 @@
 ---
-author: ivan
-comments: true
 date: 2009-03-02 03:09:00+00:00
 path: /2009/03/cambios-de-personalidad
 title: Cambios de personalidad...
-wordpress_id: 789
-categories:
-  - Sin categoría
 tags:
   - Locuras
   - Pensamientos

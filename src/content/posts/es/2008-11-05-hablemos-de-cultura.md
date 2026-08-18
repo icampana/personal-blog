@@ -1,15 +1,10 @@
 ---
-author: ivan
-categories:
-- Sin categoría
-comments: true
 date: 2008-11-05 10:09:00
 featuredImage: /photos/Image000.jpg
 path: /2008/11/hablemos-de-cultura
 tags:
 - Curiosidades
 title: Hablemos de cultura
-wordpress_id: 837
 ---
 
 [![](/photos/Image000.jpg)](https://3.bp.blogspot.com/_T2UWuNJg3dQ/SRErJmP9hqI/AAAAAAAABJU/ZJYBKMiVoYY/s1600-h/Image000.jpg)Para variar con mis extravagancias, mientras estuve en la universidad estudiando Ing. en Informática me dio por tomar clases de otra carrera (bueno, realmente era una obligación, pero yo pedí permiso para tomar materias de la carrera de gestión de diseño y comunicación audiovisual que son un poco alejadas de lo mío). Entre las materias que cursé estuvo una bastante peculiar, llamada Cultura y Comunicación.

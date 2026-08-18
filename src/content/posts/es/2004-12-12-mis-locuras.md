@@ -1,12 +1,7 @@
 ---
-author: ivan
-comments: true
 date: 2004-12-12 08:28:00+00:00
 path: /2004/12/mis-locuras
 title: Mis locuras
-wordpress_id: 1037
-categories:
-  - Sin categoría
 ---
 
 Desde hace un tiempo mantengo un pequeño [blog](https://minicuentos.blogspot.com/) dentro del cual comparto espacio con una [amiga](https://nitadp.blogspot.com/) para contar las locuras que escribimos, realmente la idea es que quien quiera unirse avise y listo, claro el único requisito es que esté medio loco como nosotros o simplemente que quiera escribir algún cuentito, historia, fábula o cualquier locura.. :P

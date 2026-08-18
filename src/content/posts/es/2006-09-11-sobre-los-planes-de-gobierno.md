@@ -1,15 +1,10 @@
 ---
-author: ivan
-categories:
-- Sin categoría
-comments: true
 date: 2006-09-11 10:10:00
 featuredImage: /photos/ghost_rider.jpg
 path: /2006/09/sobre-los-planes-de-gobierno
 tags:
 - Política
 title: Sobre los planes de gobierno
-wordpress_id: 928
 ---
 
 [![](https://photos1.blogger.com/blogger/5311/455/320/ghost_rider.jpg)](https://photos1.blogger.com/blogger/5311/455/1600/ghost_rider.jpg)Después de ver tanto político en estos días y ante la proximidad de las elecciones, al menos sería bueno saber cuáles son las propuestas de cada uno de los diferentes candidatos. De acuerdo a la ley y en base al apoyo que brindará el Tribunal Supremo Electoral, dichos planes de gobierno deben estar disponibles para ser evaluados y poder tomar una decisión.

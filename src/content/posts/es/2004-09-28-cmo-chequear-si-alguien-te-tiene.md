@@ -1,12 +1,7 @@
 ---
-author: ivan
-comments: true
 date: 2004-09-28 11:13:00+00:00
 path: /2004/09/cmo-chequear-si-alguien-te-tiene
 title: Cómo chequear si alguien  te tiene bloqueado en el messenger
-wordpress_id: 1050
-categories:
-  - Sin categoría
 tags:
   - Geek
   - Tecnología

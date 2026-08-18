@@ -1,12 +1,7 @@
 ---
-author: ivan
-comments: true
 date: 2006-10-11 05:29:00+00:00
 path: /2006/10/mis-viejos-escritos
 title: Mis viejos escritos
-wordpress_id: 925
-categories:
-  - Sin categoría
 tags:
   - Cuentos
   - Escritos

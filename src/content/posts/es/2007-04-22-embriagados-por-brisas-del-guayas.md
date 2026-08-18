@@ -1,12 +1,7 @@
 ---
-author: ivan
-comments: true
 date: 2007-04-22 00:01:00+00:00
 path: /2007/04/embriagados-por-brisas-del-guayas
 title: Embriagados por brisas del Guayas
-wordpress_id: 908
-categories:
-  - Sin categoría
 tags:
   - Personal
   - Recuerdos

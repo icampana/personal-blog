@@ -1,8 +1,4 @@
 ---
-author: ivan
-categories:
-- Sin categoría
-comments: true
 date: 2008-09-12 05:31:00
 featuredImage: /photos/GC_Blogpic2_metrovi2.jpg
 path: /2008/09/cuidado-te-curan-de-espanto-en-la
@@ -11,7 +7,6 @@ tags:
 - Guayaquil
 - Locuras
 title: ¡Cuidado te curan de espanto en la metrovía!
-wordpress_id: 849
 ---
 
 [![](/photos/GC_Blogpic2_metrovi2.jpg)](https://4.bp.blogspot.com/_T2UWuNJg3dQ/SMm6djFS95I/AAAAAAAAA2c/ga6rsH86ZYo/s1600-h/GC_Blogpic2_metrovi2.jpg)Esta frase la escuché de una amiga que me contaba que ella había dejado de utilizar la metrovía a pesar de que llegaba más rápido a su trabajo porque a la hora pico (en la mañana entre las 7 y 9 AM) que todo el mundo entra al colegio y al trabajo.

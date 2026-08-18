@@ -1,12 +1,7 @@
 ---
-author: ivan
-comments: true
 date: 2008-09-11 04:54:00+00:00
 path: /2008/09/entendiendo-un-suicida
 title: Entendiendo a un suicida...
-wordpress_id: 850
-categories:
-  - Sin categoría
 tags:
   - Curiosidades
   - Personal

@@ -1,12 +1,7 @@
 ---
-author: ivan
-comments: true
 date: 2008-04-23 21:19:00+00:00
 path: /2008/04/ecuatoriano-va-al-google-summer-of-code
 title: Ecuatoriano va al Google Summer of Code
-wordpress_id: 893
-categories:
-  - Sin categoría
 ---
 
 Esta información me llegó a través de una lista de correo, comparto con el mundo la información. Da gusto saber que los ecuatorianos sigan abriéndose camino para demostrarle al mundo que somos más que un pequeño país lleno de flores y más que simplemente las islas galápagos.

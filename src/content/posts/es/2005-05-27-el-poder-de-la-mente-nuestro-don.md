@@ -1,12 +1,7 @@
 ---
-author: ivan
-comments: true
 date: 2005-05-27 05:19:00+00:00
 path: /2005/05/el-poder-de-la-mente-nuestro-don
 title: El poder de la mente, nuestro don olvidado...
-wordpress_id: 999
-categories:
-  - Sin categoría
 ---
 
 En general la gente ve a las personas que pueden hacer uso de un nivel mayor de facultades psíquicas o tan sólo de nivel mental medio como freaks, personajes extraños o seres salidos de algún cuento. A pesar de no compartir esa opinión los comprendo, pues está en la naturaleza humana rechazar todo lo que nos es extraño.

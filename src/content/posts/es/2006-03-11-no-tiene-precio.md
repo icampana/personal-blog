@@ -1,12 +1,7 @@
 ---
-author: ivan
-comments: true
 date: 2006-03-11 04:36:00+00:00
 path: /2006/03/no-tiene-precio
 title: ¡No tiene precio!
-wordpress_id: 946
-categories:
-  - Sin categoría
 ---
 
 Lamentablemente gracias a los publicistas de Mastercard esa frase se ha vuelto muy común o repetida, utilizada inclusive muchas veces para bromas, pero hay momentos en los que realmente se hace válida, para mí al menos hoy lo ha sido.

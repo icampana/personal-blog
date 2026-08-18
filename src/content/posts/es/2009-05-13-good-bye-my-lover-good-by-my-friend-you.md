@@ -1,8 +1,4 @@
 ---
-author: ivan
-categories:
-- Sin categoría
-comments: true
 date: 2009-05-13 21:16:00
 featuredImage: /photos/pdas.jpg
 path: /2009/05/good-bye-my-lover-good-by-my-friend-you
@@ -11,7 +7,6 @@ tags:
 - Locuras
 - Tecnología
 title: Good Bye My Lover, Good By My Friend, You have been the one for me
-wordpress_id: 766
 ---
 
 [![](/photos/pdas.jpg)](https://1.bp.blogspot.com/_T2UWuNJg3dQ/Sgry7JLAjtI/AAAAAAAABfs/AZMYQfxPjL8/s1600-h/pdas.jpg)Una vez más una exagerada con el título, pero me causó gracia al pensarlo, por si alguien no lo sabe, esa es una canción de James Blunt.

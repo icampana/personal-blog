@@ -1,12 +1,7 @@
 ---
-author: ivan
-comments: true
 date: 2006-11-22 01:14:00+00:00
 path: /2006/11/promocionando
 title: Promocionando
-wordpress_id: 920
-categories:
-  - Sin categoría
 ---
 
 Hace unos días decían en un programa de la televisión que el arma secreta en estas elecciones había sido el uso de algunas "nuevas tecnologías", el principal objeto de análisis en el programa era YouTube, ya que muchos de los mensajes del candidato Correa fueron publicados a través de ese sitio y se había logrado entrar en un espacio poco explorado anteriormente y con costo cero.

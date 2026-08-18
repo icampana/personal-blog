@@ -1,12 +1,7 @@
 ---
-author: ivan
-comments: true
 date: 2004-12-03 11:37:00+00:00
 path: /2004/12/leyes-de-trnsito-y-los-peatones
 title: Leyes de tránsito y los peatones guayacos
-wordpress_id: 1039
-categories:
-  - Sin categoría
 ---
 
 Llevo un par de días pensando en este tema que ya me imagino tendrá algunos detractores, pero buee... igual ahí va, durante la semana que acaba de morir, mi hermano estuvo en las calles debido a que participaba en la actividad colegial conocida como "educación vial". Conversando un poco con él me contaba de forma casi anecdótica que mientras estaban en las calles del centro de la ciudad muchos fueron abucheados y hasta insultados porque querían enseñarles cuales eran las leyes de transito para los peatones (a la voz de.. qué me va a venir a enseñar un peladito cagado como tú).

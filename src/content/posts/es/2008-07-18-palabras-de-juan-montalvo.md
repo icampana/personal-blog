@@ -1,12 +1,7 @@
 ---
-author: ivan
-comments: true
 date: 2008-07-18 10:36:00+00:00
 path: /2008/07/palabras-de-juan-montalvo
 title: Palabras de Juan Montalvo
-wordpress_id: 886
-categories:
-  - Sin categoría
 tags:
   - Frases
   - Locuras

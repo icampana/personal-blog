@@ -8,7 +8,6 @@ description: >-
 tags:
   - Jobs
   - Career Switch
-_template: posts
 ---
 
 Ces dernières années, de plus en plus de personnes s'intéressent à une réorientation professionnelle, notamment vers la technologie, compte tenu du déficit existant (oui, malgré les [licenciements des GAFAM](https://cincodias.elpais.com/cincodias/2023/01/24/opinion/1674563983_274509.html) - Google, Amazon, Facebook, Spotify, etc.). La demande de professionnels de la technologie n'a pas diminué. La grande différence est que si vous commencez à chercher un emploi maintenant, l'accent sera beaucoup plus mis sur l'efficacité (c'est-à-dire qu'on recherchera des personnes capables de prouver qu'elles peuvent résoudre des problèmes, qu'elles maîtrisent la pensée critique, comprennent parfaitement la problématique et proposent une solution réalisable). L'objectif est que l'investissement réalisé dans les nouvelles embauches génère un retour sur investissement dans les plus brefs délais.

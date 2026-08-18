@@ -1,8 +1,4 @@
 ---
-author: ivan
-categories:
-- Sin categoría
-comments: true
 date: 2005-07-26 12:31:00
 featuredImage: /photos/no_money.jpg
 path: /2005/07/pensamientos-apologa-de-un-chiro
@@ -12,7 +8,6 @@ tags:
 - Locuras
 - Tips
 title: 'Pensamientos: Apología de un chiro...'
-wordpress_id: 991
 ---
 
 [![](https://photos1.blogger.com/blogger/5311/455/200/no_money.jpg)](https://photos1.blogger.com/blogger/5311/455/1600/no_money.jpg)Ante todo para quien no conozca el léxico utilizado en Ecuador, se conoce como chiro a toda aquella persona que se encuentre con un límite de dinero bastante restringido (por no decir que es necesario controlar todos y cada uno de los gastos, en pocas palabras quien no tiene un centavo o apenas tiene uno partido por la mitad** :P**).

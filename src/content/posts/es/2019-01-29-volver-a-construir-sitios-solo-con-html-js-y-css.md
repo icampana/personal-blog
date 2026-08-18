@@ -1,10 +1,4 @@
 ---
-author: ivan
-categories:
-- Aprendizaje
-- Geek
-- Web Development
-comments: false
 date: 2019-01-29 01:53:00
 featuredImage: /photos/html-css-js.png
 path: /2019/01/volver-a-construir-sitios-solo-con-html-js-y-css
@@ -14,7 +8,6 @@ tags:
 - javascript
 - web development
 title: ¿Volver a construir sitios sólo con HTML, JS y CSS?
-wordpress_id: 1822
 ---
 
 Cuando comencé a crear sitios webs (mi primer encuentro con el HTML fue en 1996 mientras hacía prácticas del colegio) lo único con lo que contábamos era HTML y algo mínimo de Javascript o VBScript (Sí, eso existió alguna vez), los resultados eran bastante rudimentarios, pero solucionaba la necesidad básica, toda la información era estática y necesitábamos actualizar archivo por archivo si había algún cambio. En 1997 apareció el CSS y fue en ese momento la mayor mejora para comenzar a darle una apariencia agradable a un sitio web.

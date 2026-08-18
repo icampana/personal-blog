@@ -1,8 +1,4 @@
 ---
-author: ivan
-categories:
-- Sin categoría
-comments: true
 date: 2008-09-01 04:18:00
 featuredImage: /photos/tyler-durden.jpg
 path: /2008/08/anger-managemen
@@ -11,7 +7,6 @@ tags:
 - Pensamientos
 - Personal
 title: Anger Management!
-wordpress_id: 857
 ---
 
 [![](/photos/tyler-durden.jpg)](https://3.bp.blogspot.com/_T2UWuNJg3dQ/SLsoXc_sK8I/AAAAAAAAA18/SrWOtsH3qfc/s1600-h/tyler-durden.jpg)Y no me refiero precisamente a la película, aunque tiene cierta relación, en momentos de mucho estrés he llegado a entender el porqué de la necesidad de algo así como "Fight Club", cuando los límites de la racionalidad no nos permiten simplemente apagar esa parte de nuestro cerebro que genera la ira lo único que podemos hacer es canalizarla y qué mejor que la actividad física, o me van a decir que no se sienten mejor luego de haber generado un nivel alto de [endorfinas](https://es.wikipedia.org/wiki/Beta-Endorfina) que nos sirvan como "analgésico" o sedantes naturales.

@@ -1,12 +1,7 @@
 ---
-author: ivan
-comments: true
 date: 2004-11-27 11:18:00+00:00
 path: /2004/11/las-mujeres-ecuatorianas-no-son-guapas
 title: ¿Las mujeres ecuatorianas no son guapas?
-wordpress_id: 1040
-categories:
-  - Sin categoría
 tags:
   - Ciudad
   - Ecuador

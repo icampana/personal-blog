@@ -1,8 +1,4 @@
 ---
-author: ivan
-categories:
-- Sin categoría
-comments: true
 date: 2009-01-20 12:02:00
 featuredImage: /photos/weight-watchers-snickers-candy-bar-recipe.jpg
 path: /2009/01/comer-manicho-tomar-zhumir-y-usar
@@ -13,7 +9,6 @@ tags:
 - Novedades
 - Política
 title: A comer Manicho, tomar Zhumir y usar Menticol!
-wordpress_id: 805
 ---
 
 [![](/photos/weight-watchers-snickers-candy-bar-recipe.jpg)](https://4.bp.blogspot.com/_T2UWuNJg3dQ/SXXhyTQvTaI/AAAAAAAABTg/czr5URiHVRY/s1600-h/weight+watchers+snickers+candy+bar+recipe.jpg)Ya es oficial [la noticia](https://www.eluniverso.com/2009/01/20/1/1356/AED7B00FD56B4CD2BE4B6A3D2CD978FF.html), se aprobó la limitación de las importaciones y la subida a los aranceles de 627 productos, la lista de productos no se conocerá entre hoy y el jueves, una vez que esté publicado en el registro oficial.

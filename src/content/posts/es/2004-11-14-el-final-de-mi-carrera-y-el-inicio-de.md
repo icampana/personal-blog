@@ -1,12 +1,7 @@
 ---
-author: ivan
-comments: true
 date: 2004-11-14 23:04:00+00:00
 path: /2004/11/el-final-de-mi-carrera-y-el-inicio-de
 title: El final de MI carrera y el inicio de LA carrera
-wordpress_id: 1043
-categories:
-  - Sin categoría
 tags:
   - Pensamientos
   - Personal

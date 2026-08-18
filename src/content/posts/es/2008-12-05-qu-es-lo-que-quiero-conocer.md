@@ -1,8 +1,4 @@
 ---
-author: ivan
-categories:
-- Sin categoría
-comments: true
 date: 2008-12-05 03:33:00
 featuredImage: /photos/diva_nicotina.jpg
 path: /2008/12/qu-es-lo-que-quiero-conocer
@@ -12,7 +8,6 @@ tags:
 - Música
 - Personal
 title: ¿Qué es lo que quiero conocer?
-wordpress_id: 830
 ---
 
 [![](/photos/diva_nicotina.jpg)](https://1.bp.blogspot.com/_T2UWuNJg3dQ/SThgiK06xiI/AAAAAAAABNo/fou6wc4zyHo/s1600-h/diva_nicotina.jpg)Por esas cosas de la vida terminé conversando un rato con el dueño de [Diva Nicotina](https://www.myspace.com/divanicotina), un café habano muy bueno en el cerro Santa Ana. No sabía que tenían una [página](https://www.myspace.com/divanicotina), y una de las cosas que me pareció super buena al entrar al sitio es lo que buscan conocer:

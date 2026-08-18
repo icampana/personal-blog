@@ -1,12 +1,7 @@
 ---
-author: ivan
-comments: true
 date: 2004-06-30 11:46:00+00:00
 path: /2004/06/lo-etreo-y-lo-irrea
 title: Lo etéreo y lo irreal
-wordpress_id: 1058
-categories:
-  - Sin categoría
 ---
 
 Mientras conversaba con una amiga sobre un montón de cosas salió una frase que me puso a pensar (una vez más.. je je), la frase fue: "A todos nos gusta sufrir y que se hagan l@s apretad@s.

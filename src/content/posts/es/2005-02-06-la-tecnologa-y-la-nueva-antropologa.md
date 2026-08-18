@@ -1,12 +1,7 @@
 ---
-author: ivan
-comments: true
 date: 2005-02-06 01:40:00+00:00
 path: /2005/02/la-tecnologa-y-la-nueva-antropologa
 title: La tecnología y la nueva antropología
-wordpress_id: 1020
-categories:
-  - Sin categoría
 tags:
   - Amigos
   - Personal

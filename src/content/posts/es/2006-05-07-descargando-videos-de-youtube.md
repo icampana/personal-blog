@@ -1,13 +1,8 @@
 ---
-author: ivan
-categories:
-- Sin categoría
-comments: true
 date: 2006-05-07 03:08:00
 featuredImage: /photos/logo_tagline_sm.png
 path: /2006/05/descargando-videos-de-youtube
 title: Descargando videos de Youtube
-wordpress_id: 939
 ---
 
 Ya que últimamente se me han estado acabando las baterías antes de poder pensar si quiera en escribir algo (y de paso ya me quedé sin internet en la casa :S), al menos voy a publicar algo simpático que encontré hace un tiempo.

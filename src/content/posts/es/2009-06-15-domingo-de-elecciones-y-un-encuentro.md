@@ -1,12 +1,7 @@
 ---
-author: ivan
-comments: true
 date: 2009-06-15 22:40:00+00:00
 path: /2009/06/domingo-de-elecciones-y-un-encuentro
 title: Domingo de elecciones y un encuentro con la idiosincracia latinoamericana
-wordpress_id: 756
-categories:
-  - Sin categoría
 tags:
   - Locuras
   - Pensamientos

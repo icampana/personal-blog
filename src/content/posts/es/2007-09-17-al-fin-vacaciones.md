@@ -1,12 +1,7 @@
 ---
-author: ivan
-comments: true
 date: 2007-09-17 00:00:00+00:00
 path: /2007/09/al-fin-vacaciones
 title: Al fin vacaciones!!
-wordpress_id: 904
-categories:
-  - Sin categoría
 tags:
   - Personal
   - Vacaciones

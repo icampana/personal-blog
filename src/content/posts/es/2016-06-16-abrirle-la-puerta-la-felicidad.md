@@ -1,9 +1,4 @@
 ---
-author: ivan
-categories:
-- Aprendizaje
-- Pensamientos
-comments: true
 date: 2016-06-16 06:31:00
 featuredImage: /photos/the-secret-to11-1.jpg
 path: /2016/06/abrirle-la-puerta-la-felicidad
@@ -12,7 +7,6 @@ tags:
 - Pensamientos
 - Personal
 title: Abrirle la puerta a la felicidad...
-wordpress_id: 715
 ---
 
 El título puede sonar un poco, o más bien bastante raro... Inclusive recuerdo que hace mucho una amiga me decía, volviste a escribir en tu blog, algo te pasa... No es la idea, pero sí tenía razón, cuando algo pasa por mi cabeza mis dedos se mueven.

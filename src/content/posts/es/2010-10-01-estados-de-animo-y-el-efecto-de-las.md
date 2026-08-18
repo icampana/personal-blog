@@ -1,8 +1,4 @@
 ---
-author: ivan
-categories:
-- Sin categoría
-comments: true
 date: 2010-10-01 13:01:00
 featuredImage: /photos/social_networking.jpg
 path: /2010/10/estados-de-animo-y-el-efecto-de-las
@@ -11,7 +7,6 @@ tags:
 - Pensamientos
 - Psicología
 title: Estados de ánimo y el efecto de las redes sociales...
-wordpress_id: 737
 ---
 
 En los últimos tiempos un sinnúmero de personas de repente comenzaron a hablar sobre redes sociales, aparecieron los "Social Media Experts" y demás personajes que aseguran saber cómo aprovechar las "nuevas" redes sociales...  ¿Porqué pongo entre comillas la palabra nuevas?  Simple, las relaciones sociales siguen siendo las mismas desde hace mucho tiempo, y no me refiero a Facebook, ni Hi5, ni cualquier otra de las sitios que se les pueda venir a la cabeza al escuchar "Red Social".

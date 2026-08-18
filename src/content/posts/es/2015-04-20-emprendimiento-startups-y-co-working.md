@@ -1,11 +1,4 @@
 ---
-author: ivan
-categories:
-- Aprendizaje
-- Emprendimiento
-- Empresa
-- Recuerdos
-comments: true
 date: 2015-04-20 09:16:00
 featuredImage: /photos/start-ups-1.jpg
 path: /2015/04/emprendimiento-startups-y-co-working
@@ -14,7 +7,6 @@ tags:
 - Empresa
 - Personal
 title: Emprendimiento, Startups y Co-Working
-wordpress_id: 717
 ---
 
 Cuando nos juntamos entre 5 compañeros de universidad y decidimos emprender, lanzar un producto y hacer una empresa, lo único en lo que pensamos es en que teníamos una buena idea, ganas y apenas estábamos por terminar nuestros estudios, parecía el momento perfecto.

@@ -1,12 +1,7 @@
 ---
-author: ivan
-comments: true
 date: 2006-03-16 04:11:00+00:00
 path: /2006/03/los-chinos-le-ganaron-al-mi
 title: ¡Los chinos le ganaron al M.I.T.!
-wordpress_id: 944
-categories:
-  - Sin categoría
 ---
 
 [![](https://www.informativos.telecinco.es/imgsed/portatil_060315_300.jpg)](https://www.informativos.telecinco.es/imgsed/portatil_060315_300.jpg)Me enteré por [Telecinco](https://www.informativos.telecinco.es/ordenadores_portatiles/china/baratos/dn_21975.htm) que en China a partir de Junio comenzarán a vender laptops de 100 dólares. A diferencia del plan que tenía el MIT(como dirían algunos agringados el EM-AY-TI ) en conjunto con las Naciones Unidas, esto no es para favorecer a las naciones en desarrollo, sino simplemente para vender.

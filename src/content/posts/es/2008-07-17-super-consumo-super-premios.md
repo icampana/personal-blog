@@ -1,8 +1,4 @@
 ---
-author: ivan
-categories:
-- Sin categoría
-comments: true
 date: 2008-07-17 09:30:00
 featuredImage: /photos/ticket_tia.jpg
 path: /2008/07/super-consumo-super-premios
@@ -11,7 +7,6 @@ tags:
 - Locuras
 - Personal
 title: Super consumo, super premios!!
-wordpress_id: 887
 ---
 
 Esto sí que me alegró el día, o como dicen los gringos "this one made my day".

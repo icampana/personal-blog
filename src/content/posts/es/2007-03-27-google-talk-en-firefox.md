@@ -1,8 +1,4 @@
 ---
-author: ivan
-categories:
-- Sin categoría
-comments: true
 date: 2007-03-27 05:02:00
 featuredImage: /photos/431642738_c1d486d8aa_m.jpg
 path: /2007/03/google-talk-en-firefox
@@ -11,7 +7,6 @@ tags:
 - Tecnología
 - Tips
 title: Google Talk en Firefox
-wordpress_id: 911
 ---
 
 [![](https://farm1.static.flickr.com/157/431642738_c1d486d8aa_m.jpg)](https://farm1.static.flickr.com/157/431642738_c1d486d8aa_m.jpg)Algo super interesante que encontré mientras leía las noticias, todos los que tienen una cuenta con gmail ahora podrán utilizar google talk inclusive sin tenerlo instalado, a través del Google Talk Gadget.

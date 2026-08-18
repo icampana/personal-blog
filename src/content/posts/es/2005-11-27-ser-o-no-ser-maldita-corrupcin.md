@@ -1,13 +1,8 @@
 ---
-author: ivan
-categories:
-- Sin categoría
-comments: true
 date: 2005-11-27 11:25:00
 featuredImage: /photos/corrupcion.jpg
 path: /2005/11/ser-o-no-ser-maldita-corrupcin
 title: Ser o no ser, Maldita corrupción...
-wordpress_id: 963
 ---
 
 [![](https://photos1.blogger.com/blogger/5311/455/200/corrupcion.jpg)](https://photos1.blogger.com/blogger/5311/455/1600/corrupcion.png)Ser o no ser, una de las frases más repetidas alrededor del mundo, acuñada hace mucho tiempo y aún con validez...

@@ -1,8 +1,4 @@
 ---
-author: ivan
-categories:
-- Sin categoría
-comments: true
 date: 2008-08-10 06:10:00
 featuredImage: /photos/oscura-inspiracion.jpg
 path: /2008/08/inspiracion-forzada
@@ -11,7 +7,6 @@ tags:
 - Pensamientos
 - Personal
 title: Inspiración forzada...
-wordpress_id: 871
 ---
 
 [![](/photos/oscura-inspiracion.jpg)](https://3.bp.blogspot.com/_T2UWuNJg3dQ/SJ5CGe4dj0I/AAAAAAAAAyA/Lyl5oHWSxug/s1600-h/oscura+inspiracion.jpg)Para quien pase por aquí de vez en cuando se habrá dado cuenta que ha habido un movimiento mucho mayor de lo normal, siempre he considerado este pequeño espacio como un lugar para decir cosas y si es posible llegar a transmitir algo, que no sea simplemente una idea vana o sólo un comentario soso. Claro está que eso no es una tarea fácil, es como pensar en estar constantemente inspirado en temas sobre los que se pueda escribir, prioritariamente que no sean noticias o curiosidades.

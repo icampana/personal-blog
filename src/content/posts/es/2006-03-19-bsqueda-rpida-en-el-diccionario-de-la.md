@@ -1,13 +1,8 @@
 ---
-author: ivan
-categories:
-- Sin categoría
-comments: true
 date: 2006-03-19 01:14:00
 featuredImage: /photos/ejemplo_boton.jpg
 path: /2006/03/bsqueda-rpida-en-el-diccionario-de-la
 title: Búsqueda rápida en el diccionario de la RAE
-wordpress_id: 943
 ---
 
 [![](https://photos1.blogger.com/blogger/5311/455/200/ejemplo_boton.jpg)](https://photos1.blogger.com/blogger/5311/455/1600/ejemplo_boton.jpg)A pesar de que algunos por ahí parece que no conocen mucho el significado de la palabra ortografía :P (Sorry si alguien se ofende), hay otras personas a las que creo les interesará mucho este pequeño tip.

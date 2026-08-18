@@ -1,12 +1,7 @@
 ---
-author: ivan
-comments: true
 date: 2008-03-14 00:02:00+00:00
 path: /2008/03/esto-es-eso-ecuafornia
 title: Esto es eso - Ecuafornia
-wordpress_id: 897
-categories:
-  - Sin categoría
 tags:
   - Ecuador
   - Música

@@ -1,12 +1,7 @@
 ---
-author: ivan
-comments: true
 date: 2006-06-13 18:49:00+00:00
 path: /2006/06/hasta-qu-punto-podras-cambiar
 title: ¿Hasta qué punto podrías cambiar?
-wordpress_id: 938
-categories:
-  - Sin categoría
 ---
 
 Para variar me he desaparecido de acá, pero no he olvidado a mi pequeño rincón del mundo donde publico mis locuras :P

@@ -1,8 +1,4 @@
 ---
-author: ivan
-categories:
-- Sin categoría
-comments: true
 date: 2015-12-23 10:53:00
 featuredImage: /photos/logo-1024-1.png
 path: /2015/12/descubriendo-la-comunidad-del-cono-sur
@@ -12,7 +8,6 @@ tags:
 - Empresa
 - Geek
 title: Descubriendo la comunidad del cono sur
-wordpress_id: 716
 ---
 
 Hace apenas poco más de una semana terminó el primer [Drupal Camp en Santiago de Chile](https://camp.drupalchile.org/es), el cual, además de ser el primero en el país, tenía una característica muy especial y es que se desarrolló en la sede de las Naciones Unidas para la [CEPAL](https://cepal.org/) (Comisión Económica para América Latina y el Caribe), lo cual no sólo le dotaba de una solemnidad adicional, sino que servía como el marco perfecto para el encuentro de los diferentes representantes de cada uno de los países que participarían en el evento.

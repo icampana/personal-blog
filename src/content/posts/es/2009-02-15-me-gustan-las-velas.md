@@ -1,8 +1,4 @@
 ---
-author: ivan
-categories:
-- Sin categoría
-comments: true
 date: 2009-02-15 09:14:00
 featuredImage: /photos/img_0195.jpg
 path: /2009/02/me-gustan-las-velas
@@ -10,7 +6,6 @@ tags:
 - Curiosidades
 - Fotografías
 title: Me gustan las velas :)
-wordpress_id: 793
 ---
 
 [![](/photos/img_0195.jpg)](https://1.bp.blogspot.com/_T2UWuNJg3dQ/SZeW7-X0CKI/AAAAAAAABVo/9_oYZ1-jREw/s1600-h/img_0195.jpg)

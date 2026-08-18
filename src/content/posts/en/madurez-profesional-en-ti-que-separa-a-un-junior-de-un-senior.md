@@ -7,7 +7,6 @@ description: >-
 tags:
   - Software Engineering
   - Recruitment
-_template: posts
 ---
 
 In the realm of technology professionals, a persistent discussion often centers on the criteria for transitioning between career levels, the number of distinct levels, and the implications of operating at each.

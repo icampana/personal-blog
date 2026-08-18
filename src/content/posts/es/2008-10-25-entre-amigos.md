@@ -1,8 +1,4 @@
 ---
-author: ivan
-categories:
-- Sin categoría
-comments: true
 date: 2008-10-25 10:57:00
 featuredImage: /photos/Imagen052.jpg
 path: /2008/10/entre-amigos
@@ -12,7 +8,6 @@ tags:
 - Pensamientos
 - Personal
 title: Entre amigos...
-wordpress_id: 840
 ---
 
 [![](/photos/Imagen052.jpg)](https://2.bp.blogspot.com/_T2UWuNJg3dQ/SQK1xZSIs8I/AAAAAAAAA_Q/_34mVLM9oAY/s1600-h/Imagen052.jpg)"Siempre he dependido de la bondad de los extraños"

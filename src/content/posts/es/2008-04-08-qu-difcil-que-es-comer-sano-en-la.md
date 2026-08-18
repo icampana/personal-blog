@@ -1,8 +1,4 @@
 ---
-author: ivan
-categories:
-- Sin categoría
-comments: true
 date: 2008-04-08 10:00:00
 featuredImage: /photos/Imagen021.jpg
 path: /2008/04/qu-difcil-que-es-comer-sano-en-la
@@ -10,7 +6,6 @@ tags:
 - Comida
 - Curiosidades
 title: ¡Qué difícil que es comer sano en la ciudad!
-wordpress_id: 895
 ---
 
 [![](/photos/Imagen021.jpg)](https://3.bp.blogspot.com/_T2UWuNJg3dQ/R_r84eHlJjI/AAAAAAAAAW8/IgUqLQJLfHQ/s1600-h/Imagen021.jpg)A mis cortos 27 años (al menos yo considero que no es nada lo que apenas he vivido) y con mi contextura (quienes me conocen saben que siempre he sido bastante delgado), resulté teniendo un nivel de colesterol alto: 280, siendo el máximo 200 y el estándar 140.

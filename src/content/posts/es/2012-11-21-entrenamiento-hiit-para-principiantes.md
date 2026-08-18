@@ -1,8 +1,4 @@
 ---
-author: ivan
-categories:
-- Sin categoría
-comments: true
 date: 2012-11-21 12:36:00
 featuredImage: /photos/HIIT-exercises-300x223-1.jpg
 path: /2012/11/entrenamiento-hiit-para-principiantes
@@ -10,7 +6,6 @@ tags:
 - Entretenimiento
 - Fitness
 title: Entrenamiento HIIT para principiantes
-wordpress_id: 727
 ---
 
 A pedido de una amiga armé una rutina de entrenamiento para mejorar el nivel de resistencia cardio-pulmonar en corto tiempo basado en el método HIIT (High Intensity Interval Trainning) y se me ocurrió que quizá valdría la pena compartirlo con el mundo.   Es importante recalcar que es un entrenamiento que si bien es corto (va desde los 5 minutos hasta los 20) exige mucho más que uno normal de una hora o más.

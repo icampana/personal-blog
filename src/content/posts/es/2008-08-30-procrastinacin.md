@@ -1,8 +1,4 @@
 ---
-author: ivan
-categories:
-- Sin categoría
-comments: true
 date: 2008-08-30 19:59:00
 featuredImage: /photos/blackboard_procrastinate2.jpg
 path: /2008/08/procrastinacin
@@ -11,7 +7,6 @@ tags:
 - Pensamientos
 - Personal
 title: Procrastinación
-wordpress_id: 858
 ---
 
 [![](/photos/blackboard_procrastinate2.jpg)](https://2.bp.blogspot.com/_T2UWuNJg3dQ/SLltkgMccGI/AAAAAAAAA10/wxDFDRSatVs/s1600-h/blackboard_procrastinate2.jpg)De acuerdo al diccionario de la Real Academia Española:

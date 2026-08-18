@@ -1,8 +1,5 @@
 ---
-wordpress_id: 1061
 path: /sobre-el-autor
-author: ivan
-comments: false
 title: À Propos de Moi
 date: 2020-12-18T00:00:00.000Z
 ---

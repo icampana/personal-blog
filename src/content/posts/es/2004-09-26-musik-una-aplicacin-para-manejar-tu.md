@@ -1,12 +1,7 @@
 ---
-author: ivan
-comments: true
 date: 2004-09-26 04:11:00+00:00
 path: /2004/09/musik-una-aplicacin-para-manejar-tu
 title: Musik | una aplicación para manejar tu biblioteca musical...
-wordpress_id: 1052
-categories:
-  - Sin categoría
 ---
 
 Dando vueltas en la red me topé casi por casualidad con este reproductor y biblioteca de audio llamado [wxMusik](https://musik.berlios.de/), a primera instancia no me pareció la gran cosa, pues casi lo mismo puede hacer el winamp, lo interesante es que es [Open Source](https://www.opensource.org/) y que corre en Windows, Linux y Mac; así que decidí probarlo a ver qué tal.

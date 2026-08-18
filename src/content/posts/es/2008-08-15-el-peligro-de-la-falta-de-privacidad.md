@@ -1,8 +1,4 @@
 ---
-author: ivan
-categories:
-- Sin categoría
-comments: true
 date: 2008-08-15 09:02:00
 featuredImage: /photos/ftsurv.jpg
 path: /2008/08/el-peligro-de-la-falta-de-privacidad
@@ -11,7 +7,6 @@ tags:
 - Personal
 - Tecnología
 title: El peligro de la falta de privacidad
-wordpress_id: 867
 ---
 
 [![](/photos/ftsurv.jpg)](https://2.bp.blogspot.com/_T2UWuNJg3dQ/SKVH8UohLzI/AAAAAAAAA0I/S7S_iSKi0Wg/s1600-h/ftsurv.jpg)El momento que a alguno de nosotros se le metió la idea en la cabeza por X razón de comenzar a escribir en un blog, ya sea por hobbie, por necedad o por el simple hecho de tener una ventana al mundo, todos corremos el mismo riesgo, no saber hasta qué punto podemos ser nosotros mismos sin dar demasiada información sobre lo que somos y lo que hacemos.

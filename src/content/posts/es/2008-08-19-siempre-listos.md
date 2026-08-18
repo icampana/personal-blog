@@ -1,8 +1,4 @@
 ---
-author: ivan
-categories:
-- Sin categoría
-comments: true
 date: 2008-08-19 09:25:00
 featuredImage: /photos/baden-powel.png
 path: /2008/08/siempre-listos
@@ -12,7 +8,6 @@ tags:
 - Recuerdos
 - Scouts
 title: Siempre Listos
-wordpress_id: 865
 ---
 
 [![](/photos/baden-powel.png)](https://1.bp.blogspot.com/_T2UWuNJg3dQ/SKpOVuwWKVI/AAAAAAAAA0k/7XtAksfgWx4/s1600-h/baden+powel.png)

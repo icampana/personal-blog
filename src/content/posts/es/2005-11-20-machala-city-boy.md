@@ -1,8 +1,4 @@
 ---
-author: ivan
-categories:
-- Sin categoría
-comments: true
 date: 2005-11-20 05:34:00
 featuredImage: /photos/parque_central.jpg
 path: /2005/11/machala-city-boy
@@ -10,7 +6,6 @@ tags:
 - Pedagogía
 - Viajes
 title: Machala City Boy
-wordpress_id: 965
 ---
 
 [![](https://photos1.blogger.com/blogger/5311/455/200/parque_central.jpg)](https://photos1.blogger.com/blogger/5311/455/1600/parque_central.jpg)[![](https://photos1.blogger.com/blogger/5311/455/200/enredo%20de%20cables.jpg)](https://photos1.blogger.com/blogger/5311/455/1600/enredo%20de%20cables.jpg)[![](https://photos1.blogger.com/blogger/5311/455/200/clase2.jpg)](https://photos1.blogger.com/blogger/5311/455/1600/clase2.jpg)[![](https://photos1.blogger.com/blogger/5311/455/200/clase1.jpg)](https://photos1.blogger.com/blogger/5311/455/1600/clase1.jpg)Bastante atrasado en cuanto al tiempo para escribir esto, pero de igual forma no quería dejarlo pasar. La semana pasada estuve fuera de la ciudad debido a que tenía que ir a dar un curso intensivo sobre redes de computadoras en la Universidad Técnica de Machala, está de más decir que me encontraba un poco ansioso, más que nada por la experiencia de darle clases a un grupo tan grande de personas (tenía 2 turnos, el primero con 62 alumnos y el 2do con 50).

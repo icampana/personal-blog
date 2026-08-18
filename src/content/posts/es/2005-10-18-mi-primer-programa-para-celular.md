@@ -1,13 +1,8 @@
 ---
-author: ivan
-categories:
-- Sin categoría
-comments: true
 date: 2005-10-18 06:36:00
 featuredImage: /photos/midp.jpg
 path: /2005/10/mi-primer-programa-para-celular
 title: Mi primer programa para celular
-wordpress_id: 970
 ---
 
 [![](https://photos1.blogger.com/blogger/5311/455/320/midp.jpg)](https://photos1.blogger.com/blogger/5311/455/1600/midp.jpg)Después de todo parece que la falta de Internet en la casa sirve de algo, hace unos días vendí [mi Palm](https://ivan.campananaranjo.com/2005/09/28/palm-m515/), más que nada porque realmente le estaba dando muy poco uso(las citas y los contactos los sincronizo con el móvil y la compu), además el dinero nunca viene mal.

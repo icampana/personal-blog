@@ -1,13 +1,8 @@
 ---
-author: ivan
-categories:
-- Sin categoría
-comments: true
 date: 2005-01-17 19:02:00
 featuredImage: /photos/telefonos.jpg
 path: /2005/01/esta-es-la-comparacin-del-fono-que
 title: No Content Found
-wordpress_id: 1030
 ---
 
 [![](https://photos1.blogger.com/img/39/1190/320/telefonos.jpg)](https://photos1.blogger.com/img/39/1190/640/telefonos.jpg)  

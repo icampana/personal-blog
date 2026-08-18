@@ -1,12 +1,7 @@
 ---
-author: ivan
-comments: true
 date: 2008-07-15 22:10:00+00:00
 path: /2008/07/completo-incompleto-jarabe-de-palo
 title: Completo incompleto, Jarabe de Palo
-wordpress_id: 889
-categories:
-  - Sin categoría
 tags:
   - Letras
   - Música

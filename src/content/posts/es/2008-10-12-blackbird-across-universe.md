@@ -1,12 +1,7 @@
 ---
-author: ivan
-comments: true
 date: 2008-10-12 09:42:00+00:00
 path: /2008/10/blackbird-across-universe
 title: Blackbird - Across The Universe
-wordpress_id: 843
-categories:
-  - Sin categoría
 tags:
   - Música
   - Pensamientos

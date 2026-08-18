@@ -1,12 +1,7 @@
 ---
-author: ivan
-comments: true
 date: 2005-10-28 04:55:00+00:00
 path: /2005/10/publicidad-gratuita
 title: Publicidad gratuita
-wordpress_id: 968
-categories:
-  - Sin categoría
 ---
 
 Una nota rápida, para quienes no lo saben, desde hace ya más de 2 años formamos una empresa con un grupo de compañeros de la universidad ([USM](https://www.usm.edu.ec)), hemos pasado por un montón de experiencias y es grato recordar los cambios que hemos tenido.

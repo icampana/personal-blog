@@ -1,12 +1,7 @@
 ---
-author: ivan
-comments: true
 date: 2008-02-02 06:55:00+00:00
 path: /2008/02/adis-un-amigo
 title: Adiós a un amigo
-wordpress_id: 901
-categories:
-  - Sin categoría
 tags:
   - Palabras
   - Pensamientos

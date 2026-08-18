@@ -1,12 +1,7 @@
 ---
-author: ivan
-comments: true
 date: 2009-01-10 01:44:00+00:00
 path: /2009/01/paso-pegao-pegao-al-feizbuk
 title: Paso pegao, Pegao al FeizBuk
-wordpress_id: 813
-categories:
-  - Sin categoría
 tags:
   - Chistes
   - Curiosidades

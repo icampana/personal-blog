@@ -1,11 +1,4 @@
 ---
-author: ivan
-categories:
-- Aprendizaje
-- Emprendimiento
-- Empresa
-- Tecnología
-comments: true
 date: 2017-03-13 06:26:25
 featuredImage: /photos/article-sup-chile-e1489386563729.jpg
 path: /2017/03/un-ano-despues-de-startup-chile
@@ -13,7 +6,6 @@ tags:
 - Chile
 - Startup
 title: Un año después de Startup Chile
-wordpress_id: 1760
 ---
 
 Hace poco más de un año atrás estaba casi listo para comenzar una aventura llamada "Startup Chile" con nuestro proyecto [Mingamos](https://mingamos.com), sentado en el aeropuerto Comodoro Arturo Merino Benítez (SCL), esperando a que llegara mi socia. Habíamos arrancado cerca de un año antes, después de muchas conversaciones, horas y horas de planificación e intercambiar viajes entre Guayaquil y Quito.

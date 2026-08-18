@@ -1,8 +1,4 @@
 ---
-author: ivan
-categories:
-- Sin categoría
-comments: true
 date: 2009-03-30 17:28:00
 featuredImage: /photos/img_0803.jpg
 path: /2009/03/mi-pedacito-de-locura
@@ -10,7 +6,6 @@ tags:
 - Locuras
 - Personal
 title: Mi pedacito de locura :)
-wordpress_id: 780
 ---
 
 Aunque el fin de semana me terminé dedicando a otras cosas (como habrán visto por el post anterior) y aún no me echan una mano con la pintura (refiriéndome a pintar como artista), igual estoy contento del resultado que tuve con mi habitación... Hace poco comentaba que "tematicé" mi habitación, pues bien el tema que tiene es, la playa... o de manera un poco más específica Montañita... ¿Porqué?

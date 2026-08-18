@@ -1,8 +1,4 @@
 ---
-author: ivan
-categories:
-- Sin categoría
-comments: true
 date: 2009-06-25 18:08:00
 featuredImage: /photos/hedgehogSOLENT2708_800x495.jpg
 path: /2009/06/con-razon-muchos-no-aprenden-la-leccion
@@ -11,7 +7,6 @@ tags:
 - Pensamientos
 - Psicología
 title: Con razón muchos no aprenden la lección...
-wordpress_id: 753
 ---
 
 Mientras realizaba un trabajo para el diplomado que estoy cursando, terminé encontrando información muy interesante que una vez más, no estaba buscando... Arrancando con la siguiente cita:

@@ -1,12 +1,7 @@
 ---
-author: ivan
-comments: true
 date: 2004-09-27 20:54:00+00:00
 path: /2004/09/amigos-con-derechos-vaciles-y-mucho-ms
 title: Amigos con derechos, vaciles y mucho más (aka) Revuelos y wadillas
-wordpress_id: 1051
-categories:
-  - Sin categoría
 ---
 
 El domingo anterior, mientras leía el especial dominical del periódico me encontré con un artículo bastante peculiar, hablando de las fugaces y perecibles relaciones de los jóvenes hoy en día. El proceso tal y como lo describían es bastante simple, salir una noche, gustarse y enrrollarse o "vacilar", terminando en besos y caricias atrevidas o sino en sexo.

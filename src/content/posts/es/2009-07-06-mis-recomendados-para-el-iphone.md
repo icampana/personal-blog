@@ -1,12 +1,7 @@
 ---
-author: ivan
-comments: true
 date: 2009-07-06 02:20:00+00:00
 path: /2009/07/mis-recomendados-para-el-iphone
 title: Mis recomendados para el iPhone
-wordpress_id: 747
-categories:
-  - Sin categoría
 tags:
   - Curiosidades
   - iPhone

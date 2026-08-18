@@ -1,12 +1,7 @@
 ---
-author: ivan
-comments: true
 date: 2008-11-18 10:28:00+00:00
 path: /2008/11/hroes-o-herpes
 title: Héroes o Herpes
-wordpress_id: 834
-categories:
-  - Sin categoría
 tags:
   - Curiosidades
   - Héroes

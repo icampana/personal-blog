@@ -1,12 +1,7 @@
 ---
-author: ivan
-comments: true
 date: 2006-02-01 06:24:00+00:00
 path: /2006/02/cinco-hbitos-extraos
 title: Cinco hábitos extraños
-wordpress_id: 954
-categories:
-  - Sin categoría
 ---
 
 [Pepe](https://pepezurita.blogspot.com/2006/01/cinco-extraos-hbitos.html) me ha retado y estas son las cosas más extrañas que hago (aunque me tardé un poquito en responder :P ) :

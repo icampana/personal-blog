@@ -1,12 +1,7 @@
 ---
-author: ivan
-comments: true
 date: 2006-01-24 04:17:00+00:00
 path: /2006/01/chapeta-haloscan
 title: Chapeta Haloscan
-wordpress_id: 955
-categories:
-  - Sin categoría
 ---
 
 Siguiendo la iniciativa de [Nita-](https://nitadp.blogspot.com/2006/01/aviso-de-retiro-de-comentarios.html) de eliminar los comentarios de Haloscan de su sitio de blogger, también he procedido a hacer lo mismo, eso junto con la activación del "Trackback" o lo más parecido que puso blogger que es "Links a este post".

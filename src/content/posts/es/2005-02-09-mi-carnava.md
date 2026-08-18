@@ -1,8 +1,4 @@
 ---
-author: ivan
-categories:
-- Sin categoría
-comments: true
 date: 2005-02-09 09:48:00
 featuredImage: /photos/collage.jpg
 path: /2005/02/mi-carnava
@@ -11,7 +7,6 @@ tags:
 - Personal
 - Vacaciones
 title: Mi Carnaval
-wordpress_id: 1019
 ---
 
 [![](https://photos1.blogger.com/img/39/1190/320/collage.jpg)](https://photos1.blogger.com/img/39/1190/640/collage.jpg) Entre ir a "divertirme" entre la cantidad abominable de gente en las playas que "juegan" a lanzarse globos de agua y pintarse de todos los colores, preferí quedarme en casa y pasar un buen rato con mi [novia](https://nitadp.blogspot.com/) y mis amigos.

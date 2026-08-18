@@ -1,13 +1,8 @@
 ---
-author: ivan
-categories:
-- Sin categoría
-comments: true
 date: 2005-01-17 19:11:00
 featuredImage: /photos/spiderman-dedo.jpg
 path: /2005/01/un-spiderman-hecho-de-lanita-p-se
 title: No Content Found
-wordpress_id: 1025
 ---
 
 [![](https://photos1.blogger.com/img/39/1190/320/spiderman%20dedo.jpg)](https://photos1.blogger.com/img/39/1190/640/spiderman%20dedo.jpg)  

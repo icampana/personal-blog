@@ -1,12 +1,7 @@
 ---
-author: ivan
-comments: true
 date: 2008-07-23 04:07:00+00:00
 path: /2008/07/inoportuna-jorge-drexler
 title: Inoportuna, Jorge Drexler
-wordpress_id: 882
-categories:
-  - Sin categoría
 tags:
   - Curiosidades
   - Letras

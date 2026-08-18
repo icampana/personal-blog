@@ -1,13 +1,8 @@
 ---
-author: ivan
-categories:
-- Sin categoría
-comments: true
 date: 2004-12-25 02:20:00
 featuredImage: /photos/xmas_e-van.jpg
 path: /2004/12/tiempo-de-navidad
 title: Tiempo de navidad
-wordpress_id: 1034
 ---
 
 [![](https://photos1.blogger.com/img/39/1190/320/xmas_e-van.jpg)](https://photos1.blogger.com/img/39/1190/640/xmas_e-van.jpg)Navidad, tiempo de muchas cosas, de regalos para todos, un montón de patrañas inventads y demás. Por si acaso no es que odie la navidad, sino que las personas se esmeran mucho en decir que es tiempo de paz, tiempo de amor, tiempo de hacer hasta lo imposible para cambiar al mundo.... y es que acaso el resto de días del año no se puede???

@@ -1,15 +1,10 @@
 ---
-author: ivan
-categories:
-- Sin categoría
-comments: true
 date: 2005-01-17 19:06:00
 featuredImage: /photos/tickets.jpg
 path: /2005/01/2-de-los-mejores-conciertos-los-que-he
 tags:
 - Música
 title: Los mejores conciertos de mi vida
-wordpress_id: 1027
 ---
 
 [![](https://photos1.blogger.com/img/39/1190/320/tickets.jpg)](https://photos1.blogger.com/img/39/1190/640/tickets.jpg)

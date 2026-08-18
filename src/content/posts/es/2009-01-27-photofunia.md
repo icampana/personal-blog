@@ -1,8 +1,4 @@
 ---
-author: ivan
-categories:
-- Sin categoría
-comments: true
 date: 2009-01-27 10:43:00
 featuredImage: /photos/PhotoFunia_dc3c86.jpg
 path: /2009/01/photofunia
@@ -11,7 +7,6 @@ tags:
 - Fotografías
 - Tips
 title: Photofunia
-wordpress_id: 802
 ---
 
 Aunque originalmente iba a escribir sobre mi viacrucis para tratar de renovar mi licencia de conducir y mandar a la punta de un cuerno a la [CTG](https://www.ctg.gov.ec/) (ya llevo 2 días sin que me atiendan) he preferido hablar sobre algo más divertido que aunque a mi me llegó tarde (medio mundo ya lo está utilizando) me parece super entretenido, el sitio [PhotoFunia](https://www.photofunia.com/).

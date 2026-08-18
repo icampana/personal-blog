@@ -1,12 +1,7 @@
 ---
-author: ivan
-comments: true
 date: 2010-09-27 01:54:00+00:00
 path: /2010/09/adaptacion-y-limites
 title: Adaptación y límites
-wordpress_id: 738
-categories:
-  - Sin categoría
 tags:
   - Pensamientos
   - Psicología

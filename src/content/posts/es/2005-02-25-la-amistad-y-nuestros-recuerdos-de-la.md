@@ -1,8 +1,4 @@
 ---
-author: ivan
-categories:
-- Sin categoría
-comments: true
 date: 2005-02-25 10:27:00
 featuredImage: /photos/palito.jpg
 path: /2005/02/la-amistad-y-nuestros-recuerdos-de-la
@@ -11,7 +7,6 @@ tags:
 - Locuras
 - Personal
 title: La amistad y nuestros recuerdos de la infancia
-wordpress_id: 1015
 ---
 
 [![](https://photos1.blogger.com/img/39/1190/320/palito.jpg)](https://photos1.blogger.com/img/39/1190/640/palito.jpg)Hoy he tenido el viaje más largo de mi vida, no por la distancia, sino por el recorrido... Luego de mucho tiempo sin vernos me reuní con Christian, mi amigo de la niñez, nos conocemos desde que teníamos 9 años de edad, en aquella época nos dedicabamos a crear nuestras historias, a vivir de las cosas sencillas que nos hacían reír, recordamos desde las veces que nos peleabamos hasta cuando me acompañaba a pagar las cuotas de mi bicicleta, que yo como buen testarudo dije que me la compraría con mi propio dinero, sin pedirle a nadie (aunque lo sacaba de lo que no me gastaba en la escuela y de los periódicos que iba a vender al centro de reciclaje..)

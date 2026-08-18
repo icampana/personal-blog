@@ -1,12 +1,7 @@
 ---
-author: ivan
-comments: true
 date: 2005-03-07 01:02:00+00:00
 path: /2005/03/andromana
 title: Andromanía
-wordpress_id: 1014
-categories:
-  - Sin categoría
 ---
 
 Las cosas que uno se entera sin querer, je je... Yo hasta ahora había escuchado la típica palabrita, Ninfomanía o ninfomaníaca, para algunos hombres la primera idea que le viene a la cabeza es alguna fantasía loca o sino alguna película de tipo exótico de bajo presupuesto.

@@ -1,8 +1,4 @@
 ---
-author: ivan
-categories:
-- Sin categoría
-comments: true
 date: 2008-11-10 10:14:00
 featuredImage: /photos/breast.jpg
 path: /2008/11/un-tributo-las-bubis
@@ -10,7 +6,6 @@ tags:
 - Locuras
 - Personal
 title: Un tributo a las Bubis
-wordpress_id: 836
 ---
 
 [![](/photos/breast.jpg)](https://1.bp.blogspot.com/_T2UWuNJg3dQ/SRfYZnRltYI/AAAAAAAABJg/5rBzKiU1rZk/s1600-h/breast.jpg)Bubis, pechos, chichis, tetas, senos, mamas, etc... Montones de nombres para referirse a un mismo elemento, los pechos de una mujer. Hace poco mientras tonteaba un poco en el facebook vi que un amigo se había agregado como "fan" de las tetas, me pareció muy gracioso y me uní también al club de fans, luego una amiga en son de broma me dijo que no podía creer que yo fuera de "esos".

@@ -1,12 +1,7 @@
 ---
-author: ivan
-comments: true
 date: 2004-10-28 08:19:00+00:00
 path: /2004/10/la-luna-sangrante-y-los-lobos
 title: La luna sangrante y los lobos deambulantes
-wordpress_id: 1045
-categories:
-  - Sin categoría
 ---
 
 ![Eclipse Lunar](https://amautacorp.com/staff/e-van/pictures/luna_roja.jpg) Por inusual que parezca siempre me he sentido extrañamente influenciado por la luna, cada vez que se acerca la luna llena. Hoy sin saberlo me había estado sintiendo bastante extraño, de forma un poco inexplicable hasta que una amiga me dijo por la noche, ¿estás viendo el eclipse lunar?

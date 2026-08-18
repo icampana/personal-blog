@@ -1,8 +1,4 @@
 ---
-author: ivan
-categories:
-- Sin categoría
-comments: true
 date: 2008-03-12 03:36:00
 featuredImage: /photos/2327432322_defabe74b5_m.jpg
 path: /2008/03/mi-regalo-de-cumple-zoob-toys
@@ -11,7 +7,6 @@ tags:
 - Juegos
 - Personal
 title: 'Mi regalo de cumple: Zoob Toys'
-wordpress_id: 898
 ---
 
 [![](https://farm4.static.flickr.com/3282/2327432322_defabe74b5_m.jpg)](https://www.flickr.com/photos/76321258@N00/2327432322/)

@@ -1,12 +1,7 @@
 ---
-author: ivan
-comments: true
 date: 2008-12-26 01:58:00+00:00
 path: /2008/12/mi-primer-intento
 title: Mi primer intento con el Saxo!
-wordpress_id: 818
-categories:
-  - Sin categoría
 tags:
   - Locuras
   - Música

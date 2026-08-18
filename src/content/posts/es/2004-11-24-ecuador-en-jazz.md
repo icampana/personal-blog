@@ -1,12 +1,7 @@
 ---
-author: ivan
-comments: true
 date: 2004-11-24 08:47:00+00:00
 path: /2004/11/ecuador-en-jazz
 title: Ecuador en Jazz
-wordpress_id: 1041
-categories:
-  - Sin categoría
 tags:
   - Curiosidades
   - Música

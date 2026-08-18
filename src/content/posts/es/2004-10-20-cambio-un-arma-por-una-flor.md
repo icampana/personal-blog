@@ -1,12 +1,7 @@
 ---
-author: ivan
-comments: true
 date: 2004-10-20 11:42:00+00:00
 path: /2004/10/cambio-un-arma-por-una-flor
 title: Cambio un arma por una flor
-wordpress_id: 1046
-categories:
-  - Sin categoría
 tags:
   - Curiosidades
 ---

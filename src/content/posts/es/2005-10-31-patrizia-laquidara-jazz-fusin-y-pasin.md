@@ -1,13 +1,8 @@
 ---
-author: ivan
-categories:
-- Sin categoría
-comments: true
 date: 2005-10-31 10:37:00
 featuredImage: /photos/laquidara2.jpg
 path: /2005/10/patrizia-laquidara-jazz-fusin-y-pasin
 title: Patrizia Laquidara, jazz, fusión y pasión
-wordpress_id: 967
 ---
 
 [![](https://photos1.blogger.com/blogger/5311/455/200/laquidara2.jpg)](https://photos1.blogger.com/blogger/5311/455/1600/laquidara2.jpg)[![](https://photos1.blogger.com/blogger/5311/455/200/laquidara.jpg)](https://photos1.blogger.com/blogger/5311/455/1600/laquidara.jpg)[![](https://photos1.blogger.com/blogger/5311/455/1600/bentivoglio03.jpg)](https://photos1.blogger.com/blogger/5311/455/1600/bentivoglio03.jpg)Casi sin pensarlo o planificarlo llegué a escuchar el nombre de esta artista italiana que me dejó estupefacto, no sólo llama la atención por su belleza, sino por su sencillez y por la increíble voz que tiene.

@@ -1,12 +1,7 @@
 ---
-author: ivan
-comments: true
 date: 2005-12-21 09:30:00+00:00
 path: /2005/12/amar-con-el-corazn-pensando-con-la
 title: Amar con el corazón, pensando con la cabeza
-wordpress_id: 961
-categories:
-  - Sin categoría
 ---
 
 No sé si el título haya sido precisamente bien escogido, pero fue lo primero que se me vino a la cabeza mientras organizaba las ideas para este post.

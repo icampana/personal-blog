@@ -1,8 +1,4 @@
 ---
-author: ivan
-categories:
-- Sin categoría
-comments: true
 date: 2008-12-19 11:57:00
 featuredImage: /photos/DSC03878.jpg
 path: /2008/12/les-presento-el-chiphone
@@ -11,7 +7,6 @@ tags:
 - Geek
 - Tecnología
 title: Les Presento el ChIphone
-wordpress_id: 821
 ---
 
 Hace mucho que no escribía algo así de Nerd por acá... ja ja ja... Por alguna extraña razón (aparte de ser medio geek) las personas que me conocen creen que lo sé todo o que puedo reparar cuanta cosa se me cruce por delante y aunque es verdad que he salido adelante con muchos experimentos no es que soy el Dr. Frankenstein ( aunque sí tengo mi título de electrónica básica al menos :P)

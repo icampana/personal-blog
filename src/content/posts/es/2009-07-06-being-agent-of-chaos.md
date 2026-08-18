@@ -1,12 +1,7 @@
 ---
-author: ivan
-comments: true
 date: 2009-07-06 21:02:00+00:00
 path: /2009/07/being-agent-of-chaos
 title: Being an agent of chaos...
-wordpress_id: 746
-categories:
-  - Sin categoría
 tags:
   - Curiosidades
   - Pensamientos

@@ -1,8 +1,4 @@
 ---
-author: ivan
-categories:
-- Sin categoría
-comments: true
 date: 2009-02-03 10:55:00
 featuredImage: /photos/6.13-angry-man.jpg
 path: /2009/02/angry-man-training-method
@@ -11,7 +7,6 @@ tags:
 - Locuras
 - Personal
 title: The Angry Man Training Method
-wordpress_id: 799
 ---
 
 [![](/photos/6.13-angry-man.jpg)](https://3.bp.blogspot.com/_T2UWuNJg3dQ/SYficAbVTrI/AAAAAAAABVI/FBpfSBI0QF0/s1600-h/6.13+angry+man.jpg)Este método de "entrenamiento" lo utilicé hace algunos años mientras vivía fuera del país, lo terminé empleando por algunas cosas que me pasaron y necesitaba una forma de desahogarme. Obviamente no iba a salir a buscar un fight club, así que lo más cercano fue ir todos los días al gimnasio y descargar la ira acumulada con ejercicio, al final el resultado fue bueno, logré un estado físico que no he vuelto a tener en siglos :P

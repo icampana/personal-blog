@@ -1,8 +1,4 @@
 ---
-author: ivan
-categories:
-- Sin categoría
-comments: true
 date: 2009-06-02 09:54:00
 featuredImage: /photos/bcp034008.jpg
 path: /2009/06/overloaded
@@ -10,7 +6,6 @@ tags:
 - Locuras
 - Personal
 title: Overloaded
-wordpress_id: 759
 ---
 
 [![](/photos/bcp034008.jpg)](https://3.bp.blogspot.com/_T2UWuNJg3dQ/SiU9Yw84WLI/AAAAAAAABiA/N04oWIqSbVI/s1600-h/bcp034008.jpg)No es secreto para nadie que del año pasado al actual pasaron muchísimas cosas en mi vida, algunas no las he publicado de manera explícita porque creo que pertenecen netamente al plano personal y allí deben quedarse...

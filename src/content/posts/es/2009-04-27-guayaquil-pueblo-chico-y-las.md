@@ -1,8 +1,4 @@
 ---
-author: ivan
-categories:
-- Sin categoría
-comments: true
 date: 2009-04-27 19:35:00
 featuredImage: /photos/ciudad324.jpg
 path: /2009/04/guayaquil-pueblo-chico-y-las
@@ -11,7 +7,6 @@ tags:
 - Personal
 - Política
 title: Guayaquil pueblo chico y las incongruencias de sus votos
-wordpress_id: 769
 ---
 
 [![](/photos/ciudad324.jpg)](https://3.bp.blogspot.com/_T2UWuNJg3dQ/SfXNRiu9SMI/AAAAAAAABeE/P_yLxrBA_fY/s1600-h/ciudad324.jpg)El día de ayer (26 de abril de 2009) tuvimos elecciones en Ecuador y me tocó el deber cívico de estar en una de las JRV (Juntas Receptoras del Voto), razón por la cual entré a las 7 de la mañana al Colegio 28 de mayo y salí a las 10 de la noche :S

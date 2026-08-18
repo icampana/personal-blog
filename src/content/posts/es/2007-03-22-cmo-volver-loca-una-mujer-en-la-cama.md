@@ -1,12 +1,7 @@
 ---
-author: ivan
-comments: true
 date: 2007-03-22 05:50:00+00:00
 path: /2007/03/cmo-volver-loca-una-mujer-en-la-cama
 title: Cómo volver loca a una mujer en la cama.
-wordpress_id: 912
-categories:
-  - Sin categoría
 tags:
   - Libros
   - Locuras

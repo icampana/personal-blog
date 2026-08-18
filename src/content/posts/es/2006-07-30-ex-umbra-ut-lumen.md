@@ -1,12 +1,7 @@
 ---
-author: ivan
-comments: true
 date: 2006-07-30 21:19:00+00:00
 path: /2006/07/ex-umbra-ut-lumen
 title: Ex Umbra Ut Lumen
-wordpress_id: 933
-categories:
-  - Sin categoría
 ---
 
 "Desde la sombra a la luz"

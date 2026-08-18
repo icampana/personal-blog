@@ -1,8 +1,4 @@
 ---
-author: ivan
-categories:
-- Sin categoría
-comments: true
 date: 2008-03-05 10:53:00
 featuredImage: /photos/Pantallazo-Mozilla-Firefox.png
 path: /2008/03/bolivariano-wtf
@@ -10,7 +6,6 @@ tags:
 - Curiosidades
 - Geek
 title: Bolivariano WTF
-wordpress_id: 899
 ---
 
 Esto no es reciente, pero me había olvidado de publicarlo, estaba utilizando los servicios en línea de mi banco a eso de las 11 de la noche, pero de repente "se fue de oreja" (o sea, error grave), pero lo peor es que en lugar de mostrarme una alerta con algo descriptivo y no tan "robótico", me salió este mensaje:

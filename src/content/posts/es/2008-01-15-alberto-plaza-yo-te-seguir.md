@@ -1,12 +1,7 @@
 ---
-author: ivan
-comments: true
 date: 2008-01-15 02:08:00+00:00
 path: /2008/01/alberto-plaza-yo-te-seguir
 title: Alberto Plaza - Yo te seguiré
-wordpress_id: 903
-categories:
-  - Sin categoría
 tags:
   - Mujeres
   - Música

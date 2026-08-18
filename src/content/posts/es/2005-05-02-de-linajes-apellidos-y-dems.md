@@ -1,13 +1,8 @@
 ---
-author: ivan
-categories:
-- Sin categoría
-comments: true
 date: 2005-05-02 10:32:00
 featuredImage: /photos/escudos_armas.jpg
 path: /2005/05/de-linajes-apellidos-y-dems
 title: De linajes, apellidos y demás...
-wordpress_id: 1002
 ---
 
 [![](https://photos1.blogger.com/img/39/1190/320/escudos_armas.jpg)](https://photos1.blogger.com/img/39/1190/640/escudos_armas.jpg)

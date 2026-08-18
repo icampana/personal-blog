@@ -8,7 +8,6 @@ description: >-
 tags:
   - Jobs
   - Career Switch
-_template: posts
 ---
 
 En los últimos años hay cada vez más personas interesadas en hacer un giro en su área de desarrollo profesional, especialmente hacia tecnología, tomando en cuenta el déficit existente (sí, a pesar de los [despidos de las Big Tech](https://cincodias.elpais.com/cincodias/2023/01/24/opinion/1674563983_274509.html) - Google, Amazon, Facebook, Spotify, etc-), la demanda por profesionales de tecnología no ha disminuido, la gran diferencia es que si comienzas a buscar trabajo ahora, existirá un enfoque mucho mayor hacia la eficiencia (es decir, buscarán personas que puedan demostrar que son capaces de resolver problemas, que manejen pensamiento crítico, entienden completamente la problemática y ofrecer una solución factible) puesto que la idea es lograr que esa inversión que realizarán en las nuevas contrataciones, pueda generar un retorno sobre la inversión en el menor tiempo posible.

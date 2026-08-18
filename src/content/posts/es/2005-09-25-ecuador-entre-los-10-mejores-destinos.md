@@ -1,14 +1,9 @@
 ---
-author: ivan
-categories:
-- Sin categoría
-comments: true
 date: 2005-09-25 00:17:00
 featuredImage: /photos/riachuelo.jpg
 path: /2005/09/ecuador-entre-los-10-mejores-destinos
 title: Ecuador entre los 10 mejores destinos para turismo de aventura según National
   Geographic Adventure
-wordpress_id: 977
 ---
 
 [![](https://photos1.blogger.com/blogger/5311/455/320/riachuelo.jpg)](https://photos1.blogger.com/blogger/5311/455/1600/riachuelo.jpg)Hoy me encontré con esa noticia en el periódico, mientras leía los detalles de la Feria Internacional de Turismo y de cómo se va a emplear 1 millón de dólares para promocionar al Ecuador en Estados Unidos y Canadá como destino turístico. Muy buena la idea creo yo, pues hay mucho que mostrar aún en el país. Me parece interesante que se trate de explotar el turismo de aventura en las distintas regiones.

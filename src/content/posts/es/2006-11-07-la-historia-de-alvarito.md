@@ -1,12 +1,7 @@
 ---
-author: ivan
-comments: true
 date: 2006-11-07 00:52:00+00:00
 path: /2006/11/la-historia-de-alvarito
 title: La historia de Alvarito
-wordpress_id: 923
-categories:
-  - Sin categoría
 tags:
   - Política
 ---

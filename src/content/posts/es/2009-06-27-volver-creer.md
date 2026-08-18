@@ -1,14 +1,7 @@
 ---
-author: ivan
-comments: true
 date: 2009-06-27 11:39:00+00:00
 path: /2009/06/volver-creer
 title: Volver a creer...
-wordpress_id: 752
-categories:
-  - Música
-post_format:
-  - Vídeo
 tags:
   - Mundo
   - Música

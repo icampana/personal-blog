@@ -1,12 +1,7 @@
 ---
-author: ivan
-comments: true
 date: 2013-09-02 17:21:00+00:00
 path: /2013/09/desconexion-y-reconexion
 title: Desconexión y Reconexión...
-wordpress_id: 721
-categories:
-  - Sin categoría
 tags:
   - Pensamientos
   - Personal

@@ -1,8 +1,4 @@
 ---
-author: ivan
-categories:
-- Sin categoría
-comments: true
 date: 2007-01-21 02:57:00
 featuredImage: /photos/audifonos.png
 path: /2007/01/saliendo-de-un-mundo-mudo
@@ -11,7 +7,6 @@ tags:
 - Pensamientos
 - Personal
 title: Saliendo de un mundo mudo
-wordpress_id: 915
 ---
 
 Durante las últimas semanas he estado con una sola idea metida en mi cabeza, VACACIONES.

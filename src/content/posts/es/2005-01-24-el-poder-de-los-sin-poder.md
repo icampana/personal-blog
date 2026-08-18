@@ -1,12 +1,7 @@
 ---
-author: ivan
-comments: true
 date: 2005-01-24 11:59:00+00:00
 path: /2005/01/el-poder-de-los-sin-poder
 title: El poder de los sin poder
-wordpress_id: 1021
-categories:
-  - Sin categoría
 ---
 
 Luego de haber sido despertado por un fuerte sismo(aún no sé la medida, pero asumo que pasó de los 4 puntos) en la madrugada, me quedé dando vueltas por la casa pensando en qué hacer para volver a dormir, intenté con galletas y leche, pero nada, así que pasé a postear sobre algo que me había dado vueltas en la cabeza por algún tiempo ya.

@@ -1,12 +1,7 @@
 ---
-author: ivan
-comments: true
 date: 2006-11-10 06:58:00+00:00
 path: /2006/11/amigos-y-poltica
 title: Amigos y Política
-wordpress_id: 922
-categories:
-  - Sin categoría
 tags:
   - Pensamientos
   - Política

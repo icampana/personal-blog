@@ -1,13 +1,8 @@
 ---
-author: ivan
-categories:
-- Sin categoría
-comments: true
 date: 2005-01-17 19:05:00
 featuredImage: /photos/sucres.jpg
 path: /2005/01/snif-snif-nuestra-ya-olvidada-moneda
 title: No Content Found
-wordpress_id: 1028
 ---
 
 [![](https://photos1.blogger.com/img/39/1190/320/sucres.jpg)](https://photos1.blogger.com/img/39/1190/640/sucres.jpg)  

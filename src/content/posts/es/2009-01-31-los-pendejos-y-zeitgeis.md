@@ -1,13 +1,8 @@
 ---
-author: ivan
-categories:
-- Sin categoría
-comments: true
 date: 2009-01-31 12:25:00
 featuredImage: /photos/Eres-un-Pendejo-Youre-My_B8B57720.jpg
 path: /2009/01/los-pendejos-y-zeitgeis
 title: Los pendejos y Zeitgeist!
-wordpress_id: 800
 ---
 
 [![](/photos/Eres-un-Pendejo-Youre-My_B8B57720.jpg)](https://2.bp.blogspot.com/_T2UWuNJg3dQ/SYP_MYe3eQI/AAAAAAAABVA/MkgKx4EA3Ao/s1600-h/Eres-un-Pendejo-Youre-My_B8B57720.jpg)Mientras más conozco al mundo y me entero de más cosas me queda más claro que Facundo Cabral tenía razón al decir esto en uno de sus diálogos:

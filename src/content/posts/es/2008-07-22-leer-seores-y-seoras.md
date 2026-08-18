@@ -1,12 +1,7 @@
 ---
-author: ivan
-comments: true
 date: 2008-07-22 02:43:00+00:00
 path: /2008/07/leer-seores-y-seoras
 title: ¡A leer señores y señoras!
-wordpress_id: 883
-categories:
-  - Sin categoría
 ---
 
 Al menos a todos los ecuatorianos nos toca leer poco más de 100 páginas que comprenden lo que podría ser nuestra nueva constitución, así que a leer se ha dicho, si quieren votar sí o quieren votar no, primero lean, háganlo a conciencia y de forma crítica, sin asumir cosas.

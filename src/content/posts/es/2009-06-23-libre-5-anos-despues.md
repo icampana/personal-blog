@@ -1,8 +1,4 @@
 ---
-author: ivan
-categories:
-- Sin categoría
-comments: true
 date: 2009-06-23 20:23:00
 featuredImage: /photos/img_1381-Modificada.jpg
 path: /2009/06/libre-5-anos-despues
@@ -10,7 +6,6 @@ tags:
 - Personal
 - Salud
 title: Libre, 5 años después...
-wordpress_id: 754
 ---
 
 [![](/photos/img_1381-Modificada.jpg)](<http://3.bp.blogspot.com/_T2UWuNJg3dQ/SkD29bMvsMI/AAAAAAAABoY/0c_o8QOyL2U/s1600-h/img_1381+(Modificada).jpg>)

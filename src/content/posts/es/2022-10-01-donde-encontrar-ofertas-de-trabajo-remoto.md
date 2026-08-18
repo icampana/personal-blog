@@ -8,7 +8,6 @@ description: >-
   permitan tener una buena oportunidad. 
 tags:
   - Remote Work
-_template: posts
 ---
 
 ## ¿Por Dónde Comenzar ?

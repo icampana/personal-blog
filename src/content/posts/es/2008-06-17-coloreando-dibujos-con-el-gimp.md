@@ -1,8 +1,4 @@
 ---
-author: ivan
-categories:
-- Sin categoría
-comments: true
 date: 2008-06-17 02:51:00
 featuredImage: /photos/avengers_sketchups_2_by_chachaman.jpg
 path: /2008/06/coloreando-dibujos-con-el-gimp
@@ -12,7 +8,6 @@ tags:
 - Gráficos
 - Personal
 title: Coloreando dibujos con el GIMP
-wordpress_id: 890
 ---
 
 Desde hace mucho que me intrigaba la idea de cómo lograban algunos efectos con las imágenes, sé que con un editor de imágenes y un poco de imaginación (y obviamente saber cómo usar las herramientas) se pueden hacer cosas muy interesantes y muy locas.

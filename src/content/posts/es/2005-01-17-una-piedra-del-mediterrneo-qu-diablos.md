@@ -1,13 +1,8 @@
 ---
-author: ivan
-categories:
-- Sin categoría
-comments: true
 date: 2005-01-17 19:14:00
 featuredImage: /photos/piedra-mediterraneo.jpg
 path: /2005/01/una-piedra-del-mediterrneo-qu-diablos
 title: No Content Found
-wordpress_id: 1024
 ---
 
 [![](https://photos1.blogger.com/img/39/1190/320/piedra%20mediterraneo.jpg)](https://photos1.blogger.com/img/39/1190/640/piedra%20mediterraneo.jpg)  

@@ -1,12 +1,7 @@
 ---
-author: ivan
-comments: true
 date: 2005-04-11 07:15:00+00:00
 path: /2005/04/estilos-y-efectos
 title: Estilos y efectos
-wordpress_id: 1009
-categories:
-  - Sin categoría
 ---
 
 - Efectos

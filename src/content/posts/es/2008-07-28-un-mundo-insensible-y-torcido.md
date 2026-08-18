@@ -1,8 +1,4 @@
 ---
-author: ivan
-categories:
-- Sin categoría
-comments: true
 date: 2008-07-28 05:55:00
 featuredImage: /photos/watchmen.jpg
 path: /2008/07/un-mundo-insensible-y-torcido
@@ -10,7 +6,6 @@ tags:
 - Locuras
 - Pensamientos
 title: Un mundo insensible y torcido
-wordpress_id: 879
 ---
 
 [![](/photos/watchmen.jpg)](https://3.bp.blogspot.com/_T2UWuNJg3dQ/SXeXOV_cj0I/AAAAAAAABTo/xqIZeG3ks5s/s1600-h/watchmen.jpg)Después de leer [The Watchmen](https://es.wikipedia.org/wiki/Watchmen) (debo confesar que lo leo recién porque me hicieron picar después de ver el trailer de la película y preferí leer primero el comic antes de que me caguen la historia en la película), recordé cuantas veces es necesario ver el mundo como si fuera un reloj para saber cómo las piezas encajan y hacen funcionar la compleja maquinaria que llamamos vida. Bueno, realmente no es compleja, somos nosotros los humanos los que nos empeñamos en complicarla.

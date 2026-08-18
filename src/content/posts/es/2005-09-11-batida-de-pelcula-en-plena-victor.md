@@ -1,13 +1,8 @@
 ---
-author: ivan
-categories:
-- Sin categoría
-comments: true
 date: 2005-09-11 11:21:00
 featuredImage: /photos/imagen0011.jpg
 path: /2005/09/batida-de-pelcula-en-plena-victor
 title: Batida de película en plena Victor Emilio y las Monjas
-wordpress_id: 981
 ---
 
 Viernes por la noche, después de un día de trabajo bastante movido me reuní con un viejo amigo del colegio por cuestiones de negocios, pero obviamente al final nos quedamos conversando de los amigos, de las novedades, lo que viene y lo que va, así que al final decidimos ir a continuar la conversación junto a mi [enamorada](https://nitadp.blogspot.com/) en el lugar de siempre (o al menos al que casi siempre voy :P) con unas chelas y patacones con queso.

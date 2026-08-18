@@ -1,13 +1,8 @@
 ---
-author: ivan
-categories:
-- Sin categoría
-comments: true
 date: 2005-12-23 06:33:00
 featuredImage: /photos/death_grim.png
 path: /2005/12/y-si-hoy-muero
 title: ¿Y si hoy muero?
-wordpress_id: 960
 ---
 
 Suena un poco freaky el título, quizá he estado viendo demasiadas películas, pero es algo que me ha estado dando vueltas por la cabeza. Noooo, no me refiero a pensamientos suicidas ni nada por el estilo, de hecho tengo un apego muuuuuy grande a mi vida, a pesar de que sea efímera y corta me gusta aprovecharla y tratar de vivirla al máximo.

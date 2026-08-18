@@ -8,7 +8,6 @@ description: >-
   uma boa oportunidade.
 tags:
   - Remote Work
-_template: posts
 ---
 
 ## Por Onde Começar?

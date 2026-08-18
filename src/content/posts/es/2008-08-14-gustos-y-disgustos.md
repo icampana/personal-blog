@@ -1,12 +1,7 @@
 ---
-author: ivan
-comments: true
 date: 2008-08-14 09:15:00+00:00
 path: /2008/08/gustos-y-disgustos
 title: Gustos y disgustos
-wordpress_id: 868
-categories:
-  - Sin categoría
 tags:
   - Ecuador
   - Locuras

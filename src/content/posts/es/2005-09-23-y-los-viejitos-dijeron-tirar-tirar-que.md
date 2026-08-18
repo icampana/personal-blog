@@ -1,12 +1,7 @@
 ---
-author: ivan
-comments: true
 date: 2005-09-23 07:27:00+00:00
 path: /2005/09/y-los-viejitos-dijeron-tirar-tirar-que
 title: Y los viejitos dijeron a tirar, a tirar que el mundo se va a acabar...
-wordpress_id: 978
-categories:
-  - Sin categoría
 ---
 
 Me sonó un poco cómico al principio, pero luego de leer el artículo resulto ser bastante válido el argumento por el cual en Dinamarca el gobierno está pagando para que los minusválidos y los abuelitos vean porno y tengan sexo con prostitutas.

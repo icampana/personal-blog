@@ -1,13 +1,8 @@
 ---
-author: ivan
-categories:
-- Sin categoría
-comments: true
 date: 2005-09-02 04:32:00
 featuredImage: /photos/happy-girlfriend1.jpg
 path: /2005/09/pensamientos-porqu-las-mujeren-te
 title: 'Pensamientos: ¿Porqué las mujeren te buscan más cuando no estás libre?'
-wordpress_id: 986
 ---
 
 [![](https://photos1.blogger.com/blogger/5311/455/320/happy-girlfriend1.jpg)](https://photos1.blogger.com/blogger/5311/455/1600/happy-girlfriend1.jpg)¿Será cierto lo que dice la canción sobre las mujeres, donde dice que a ellas les gustan los hombres casados?

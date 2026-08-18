@@ -1,8 +1,4 @@
 ---
-author: ivan
-categories:
-- Sin categoría
-comments: true
 date: 2008-07-29 10:39:00
 featuredImage: /photos/Romi.jpg
 path: /2008/07/la-importancia-de-un-te-quiero
@@ -11,7 +7,6 @@ tags:
 - Locuras
 - Pensamientos
 title: La importancia de un te quiero...
-wordpress_id: 877
 ---
 
 [![](/photos/Romi.jpg)](https://2.bp.blogspot.com/_T2UWuNJg3dQ/SI6WAvZ3d8I/AAAAAAAAAhg/oTqtk7LJQTo/s1600-h/Romi.jpg)Un poco contrario a lo que expresé en mi publicación anterior con respecto a lo analíticos que podemos ser algunos seres humanos, recordé que a pesar de ser así, tenemos ese otro lado que muchas veces sorprende a las personas.

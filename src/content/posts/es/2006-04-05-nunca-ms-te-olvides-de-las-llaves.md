@@ -1,12 +1,7 @@
 ---
-author: ivan
-comments: true
 date: 2006-04-05 22:24:00+00:00
 path: /2006/04/nunca-ms-te-olvides-de-las-llaves
 title: ¡Nunca más te olvides de las llaves!
-wordpress_id: 941
-categories:
-  - Sin categoría
 tags:
   - Curiosidades
   - Tecnología

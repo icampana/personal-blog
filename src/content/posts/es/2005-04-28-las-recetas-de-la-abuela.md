@@ -1,12 +1,7 @@
 ---
-author: ivan
-comments: true
 date: 2005-04-28 09:38:00+00:00
 path: /2005/04/las-recetas-de-la-abuela
 title: Las recetas de la abuela!!
-wordpress_id: 1003
-categories:
-  - Sin categoría
 ---
 
 Casi sin querer me tocó buscar un remedio casero para el dolor de oídos, asumí que encontraría algo que no saliera de lo común, no sé, tómate esto, ponte lo otro y ya. Pues la verdad es que no sólo encontré el remedio, sino todo un recetario que realmente pareciera hecho por mi abuela.

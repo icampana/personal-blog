@@ -1,12 +1,7 @@
 ---
-author: ivan
-comments: true
 date: 2005-02-20 23:15:00+00:00
 path: /2005/02/el-fin-de-las-versiones-piratas-de
 title: ¿El fin de las versiones piratas de Windows?
-wordpress_id: 1016
-categories:
-  - Sin categoría
 ---
 
 Sé que no es noticia nueva, pero me sigue dando vueltas por la cabeza la idea de qué va a pasar a partir de Junio cuando Microsoft aplique su política antipiratería, por la cual todas las copias no legítimas de Windows no podrán actualizarse de forma automática.

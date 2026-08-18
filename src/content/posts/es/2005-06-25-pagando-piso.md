@@ -1,14 +1,7 @@
 ---
-author: ivan
-comments: true
 date: 2005-06-25 23:21:00+00:00
 path: /2005/06/pagando-piso
 title: Pagando piso
-wordpress_id: 996
-categories:
-  - Sin categoría
-post_format:
-  - Minientrada
 ---
 
 Desde hace unas semanas me he estado fijando un poco en este fenómeno, cómo te cambian el valor de las cosas dependiendo de onde las encuentres... yo sé que se necesita cobrar de acuerdo al servicio y al producto que se recibe, pero normalmente por lo único que se termina pagando es por estar en un lugar que está bien adornado y en un lugar simpático.

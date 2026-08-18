@@ -1,12 +1,7 @@
 ---
-author: ivan
-comments: true
 date: 2004-10-02 03:13:00+00:00
 path: /2004/10/otro-truquito-rpido-de-la-red-msn
 title: Otro truquito rápido de la red msn
-wordpress_id: 1048
-categories:
-  - Sin categoría
 ---
 
 Un truquillo más que descubrí por ahí, si quieres ver el perfil de una persona y tienes su dirección de correo, puedes hacerlo directamente poniendo un link como este:

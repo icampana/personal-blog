@@ -1,12 +1,7 @@
 ---
-author: ivan
-comments: true
 date: 2005-01-06 05:35:00+00:00
 path: /2005/01/problemas-sin-solucin-o-soluciones-sin-2
 title: ¿Problemas sin solución o soluciones sin dueño?
-wordpress_id: 1032
-categories:
-  - Sin categoría
 ---
 
 Después de haber pasado las festividades de fin de año algo me queda claro, no hay duda que muchas personas suelen sentirse afectadas por la presión mental generada artificialmente por estas fechas, algunos aquejados por la falta de dinero y la "necesidad" de dar regalos o de celebrar de forma exagerada con más gastos implícitos.

@@ -1,8 +1,4 @@
 ---
-author: ivan
-categories:
-- Sin categoría
-comments: true
 date: 2009-01-22 18:18:00
 featuredImage: /photos/jim-parsons-sheldon-big-bang-theory-photo.jpg
 path: /2009/01/social-protocol-big-bang-theory
@@ -13,7 +9,6 @@ tags:
 - Psicología
 - Tv
 title: Social Protocol & The Big Bang Theory
-wordpress_id: 804
 ---
 
 [![](/photos/jim-parsons-sheldon-big-bang-theory-photo.jpg)](https://2.bp.blogspot.com/_T2UWuNJg3dQ/SXgGBrxhq3I/AAAAAAAABTw/KlKhgAyctWg/s1600-h/jim-parsons-sheldon-big-bang-theory-photo.jpg)Hace un tiempo ya había hablado del [Síndrome de Asperger](https://es.wikipedia.org/wiki/Asperger) cuando escribí el artículo sobre [Watchmen y su lógica](https://ivan.campananaranjo.com/2008/07/28/un-mundo-insensible-y-torcido/), esta vez vuelvo a hablar al respecto por una nueva serie (bueno, ya lleva más de un año al aire pero recién la conozco), [The Big Bang Theory](https://www.cbs.com/primetime/big_bang_theory/).

@@ -8,7 +8,6 @@ description: >-
 tags:
   - Jobs
   - Career Switch
-_template: posts
 ---
 
 In recent years, an increasing number of individuals are interested in pivoting their professional development, particularly towards technology. This trend is fueled by the existing talent deficit (yes, despite the recent [Big Tech layoffs](https://cincodias.elpais.com/cincodias/2023/01/24/opinion/1674563983_274509.html) - Google, Amazon, Facebook, Spotify, etc.). The demand for tech professionals has not diminished. The significant difference is that if you start job searching now, there will be a much stronger focus on efficiency. This means companies will seek candidates who can demonstrate problem-solving abilities, critical thinking, a thorough understanding of challenges, and the capacity to offer feasible solutions. The objective is to ensure that the investment made in new hires generates a return on investment as quickly as possible.

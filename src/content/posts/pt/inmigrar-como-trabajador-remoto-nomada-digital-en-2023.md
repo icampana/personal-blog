@@ -11,7 +11,6 @@ tags:
   - Live Abroad
   - Remote Work
   - Digital Nomad
-_template: posts
 ---
 
 Ao escrever este artigo, estamos passando pelo que foi definido no Fórum Econômico Mundial em Davos como uma "policrise", ou seja, múltiplas crises acontecendo ao mesmo tempo, o que não apresenta um cenário muito animador em geral. Historicamente, isso sempre foi mais forte para a LATAM (América Latina). Algumas das coisas que se misturam:

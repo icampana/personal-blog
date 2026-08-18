@@ -1,13 +1,8 @@
 ---
-author: ivan
-categories:
-- Sin categoría
-comments: true
 date: 2005-09-10 04:51:00
 featuredImage: /photos/laptop_atom.jpg
 path: /2005/09/la-laptop-ideal-de-cualquier
 title: La laptop ideal de cualquier informático!
-wordpress_id: 982
 ---
 
 [![](https://photos1.blogger.com/blogger/5311/455/200/laptop_atom.jpg)](https://photos1.blogger.com/blogger/5311/455/1600/laptop_atom.jpg)Hace unos pocos días se hizo el anuncio del lanzamiento de esta laptop de la compañía AtomChip, que estará disponible para finales de año.

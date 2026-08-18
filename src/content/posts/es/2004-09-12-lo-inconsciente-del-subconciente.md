@@ -1,12 +1,7 @@
 ---
-author: ivan
-comments: true
 date: 2004-09-12 11:17:00+00:00
 path: /2004/09/lo-inconsciente-del-subconciente
 title: Lo inconsciente del subconciente
-wordpress_id: 1053
-categories:
-  - Sin categoría
 ---
 
 Ultimamente he estado peleando mucho con 2 "personajes" muy particulares, el primero es mi parte consciente y la segunda mi subconsciente; les he puesto género para que se entienda mejor la perspectiva.

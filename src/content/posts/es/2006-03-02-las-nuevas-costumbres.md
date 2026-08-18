@@ -1,12 +1,7 @@
 ---
-author: ivan
-comments: true
 date: 2006-03-02 22:35:00+00:00
 path: /2006/03/las-nuevas-costumbres
 title: Las nuevas costumbres
-wordpress_id: 948
-categories:
-  - Sin categoría
 ---
 
 Durante el reciente feriado mi intención era pasar la mayor parte del tiempo vegetando, es decir, echadito en la cama, hamaca, sillón o lo que fuera que me permitiera estar el mayor tiempo posible sin hacer nada (eso incluye no rascarme la panza :P ). Sin embargo salieron un par de cosas inesperadas que me pusieron en movimiento, al final de cuentas terminé disfrutándolo de igual manera.

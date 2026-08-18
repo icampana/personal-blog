@@ -1,8 +1,4 @@
 ---
-author: ivan
-categories:
-- Sin categoría
-comments: true
 date: 2009-05-25 08:05:00
 featuredImage: /photos/4738_98611447296_674927296_1922889_4749393_n.jpg
 path: /2009/05/funk-mocca
@@ -12,7 +8,6 @@ tags:
 - Música
 - Personal
 title: Funk Mocca!
-wordpress_id: 762
 ---
 
 [![](/photos/4738_98611447296_674927296_1922889_4749393_n.jpg)](https://2.bp.blogspot.com/_T2UWuNJg3dQ/ShoL3iWPi7I/AAAAAAAABgs/xxqwtHsQIl4/s1600-h/4738_98611447296_674927296_1922889_4749393_n.jpg)Finalmente nos presentamos en el festival de Artes de la Universidad Santa María, aunque era un concurso realmente nosotros no fuimos con la idea de que teníamos que ganar o que íbamos a competir, simplemente queríamos poder hacer la música que queríamos y personalmente desde hace mucho quería tener el gusto de tocar con mis hermanos.

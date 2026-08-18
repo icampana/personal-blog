@@ -1,8 +1,4 @@
 ---
-author: ivan
-categories:
-- Sin categoría
-comments: true
 date: 2008-10-17 10:32:00
 featuredImage: /photos/Cains-BallRoom.jpg
 path: /2008/10/recordar-viejos-tiempos
@@ -12,7 +8,6 @@ tags:
 - Personal
 - Recuerdos
 title: Recordar viejos tiempos
-wordpress_id: 842
 ---
 
 [![](/photos/Cains-BallRoom.jpg)](https://3.bp.blogspot.com/_T2UWuNJg3dQ/SPuRQvZHUhI/AAAAAAAAA_I/roCzWG9PU_E/s1600-h/Cain%27s+BallRoom.jpg)A muchas personas les he escuchado decir esa frase, que quieren recordar viejos tiempos, hacer que las cosas sean como antes o volver a vivir las mismas experiencias, lamentablemente, por más ganas e intenciones que se pueda tener, no hay forma de volver atrás, las condiciones nunca serán las mismas, las personas tienen reacciones y formas de actuar diferentes con el paso del tiempo.

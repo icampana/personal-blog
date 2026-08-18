@@ -1,12 +1,7 @@
 ---
-author: ivan
-comments: true
 date: 2008-12-05 09:32:00+00:00
 path: /2008/12/si-no-estoy-aqu
 title: Si no estoy aquí
-wordpress_id: 829
-categories:
-  - Sin categoría
 tags:
   - Música
   - Personal

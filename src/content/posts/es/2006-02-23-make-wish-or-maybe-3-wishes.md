@@ -1,12 +1,7 @@
 ---
-author: ivan
-comments: true
 date: 2006-02-23 05:39:00+00:00
 path: /2006/02/make-wish-or-maybe-3-wishes
 title: Make a wish, or maybe 3 wishes...
-wordpress_id: 949
-categories:
-  - Sin categoría
 ---
 
 [![](https://www.3wishes.com/images/capedcrusader.jpg)](https://www.3wishes.com/images/capedcrusader.jpg)Una vez más he dejado abandonado un poco el blog (toca trabajar de vez en cuando pa' intentar sacar guiso :P ). Aún no publicaré cosas de peso (o sea, de las que tratan de hacer pensar), pero al menos pondré algo simpático.

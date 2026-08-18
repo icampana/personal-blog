@@ -1,12 +1,7 @@
 ---
-author: ivan
-comments: true
 date: 2005-10-27 08:09:00+00:00
 path: /2005/10/mi-encuentro-con-la-justicia-y-la
 title: Mi encuentro con la justicia... y la injusticia...
-wordpress_id: 969
-categories:
-  - Sin categoría
 ---
 
 Un poco tarde, pero igual ahí va la historia de mi fin de semana + lunes + martes...

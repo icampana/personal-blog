@@ -1,12 +1,7 @@
 ---
-author: ivan
-comments: true
 date: 2005-10-09 00:59:00+00:00
 path: /2005/10/contaminacin-visual-y-menta
 title: Contaminación visual y mental...
-wordpress_id: 971
-categories:
-  - Sin categoría
 ---
 
 No soy un maestro de la gramática ni de la ortografía (tan sólo el nivel normal), pero me gusta ver un texto bien escrito y mejor aún si es en español.

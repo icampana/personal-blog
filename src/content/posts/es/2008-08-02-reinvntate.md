@@ -1,12 +1,7 @@
 ---
-author: ivan
-comments: true
 date: 2008-08-02 08:59:00+00:00
 path: /2008/08/reinvntate
 title: Reinvéntate...
-wordpress_id: 875
-categories:
-  - Sin categoría
 tags:
   - Pensamientos
   - Personal

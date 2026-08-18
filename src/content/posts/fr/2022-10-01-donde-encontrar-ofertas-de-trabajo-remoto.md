@@ -7,7 +7,6 @@ description: >-
   mais il n'est pas si facile de trouver ces offres qui nous permettraient d'avoir une bonne opportunité.
 tags:
   - Remote Work
-_template: posts
 ---
 
 ## Par Où Commencer ?

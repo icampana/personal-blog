@@ -1,13 +1,8 @@
 ---
-author: ivan
-categories:
-- Sin categoría
-comments: true
 date: 2005-08-09 09:23:00
 featuredImage: /photos/entre2tierras.jpg
 path: /2005/08/pensamientos-entre-lo-imaginario-y-lo
 title: 'Pensamientos: Entre lo imaginario y lo real'
-wordpress_id: 990
 ---
 
 [![](https://photos1.blogger.com/blogger/5311/455/320/entre2tierras.jpg)](https://photos1.blogger.com/blogger/5311/455/1600/entre2tierras.jpg)Aún recuerdo la primera vez que lo escuché y se quedó dando vueltas en mi cabeza, qué es real y qué es imaginario... Sólo nuestra mente es la que decide, o por lo menos eso es lo que aparenta.

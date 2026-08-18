@@ -9,7 +9,6 @@ description: >-
 tags:
   - Software Engineering
   - Recruitment
-_template: posts
 ---
 
 Quando falamos de profissionais de tecnologia, a discussão eterna que costuma ocorrer é sobre em que momento se passa de um nível para outro, quantos níveis existem, e o que implica estar em um ou em outro.

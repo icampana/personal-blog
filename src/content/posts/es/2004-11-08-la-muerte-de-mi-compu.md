@@ -1,12 +1,7 @@
 ---
-author: ivan
-comments: true
 date: 2004-11-08 09:45:00+00:00
 path: /2004/11/la-muerte-de-mi-compu
 title: La muerte de mi compu!!!
-wordpress_id: 1044
-categories:
-  - Sin categoría
 ---
 
 Durante largas batallas me ha acompañado, pero al parecer no pudo soportar la carga y finalmente ha expirado, mi fiel compañera ha decidido parar, sin siquiera decirme por última vez Beep Beep

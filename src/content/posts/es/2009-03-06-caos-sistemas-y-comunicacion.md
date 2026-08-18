@@ -1,12 +1,7 @@
 ---
-author: ivan
-comments: true
 date: 2009-03-06 07:40:00+00:00
 path: /2009/03/caos-sistemas-y-comunicacion
 title: Caos, Sistemas y Comunicación...
-wordpress_id: 788
-categories:
-  - Sin categoría
 tags:
   - Aprendizaje
   - Curiosidades

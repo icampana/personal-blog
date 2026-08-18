@@ -1,8 +1,4 @@
 ---
-author: ivan
-categories:
-- Sin categoría
-comments: true
 date: 2008-08-22 09:23:00
 featuredImage: /photos/Imagen000.jpg
 path: /2008/08/al-finnnnn
@@ -11,7 +7,6 @@ tags:
 - Ecuador
 - Personal
 title: Al finnnnn!!!!
-wordpress_id: 863
 ---
 
 [![](/photos/Imagen000.jpg)](https://4.bp.blogspot.com/_T2UWuNJg3dQ/SK5UIOA3-eI/AAAAAAAAA00/j9usEIYBQjg/s1600-h/Imagen000.jpg)Las personas que me conocen saben que siempre he estado preocupado por ser de los tipos que les gusta respetar las leyes, arrancando desde cruzar las calles por el paso cebra o subir a un paso peatonal, muchas veces me veían como un bicho raro porque era el único que se quedaba sin cruzar la calle porque el semáforo estaba en rojo.

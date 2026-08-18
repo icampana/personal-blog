@@ -1,8 +1,4 @@
 ---
-author: ivan
-categories:
-- Sin categoría
-comments: true
 date: 2009-03-30 05:34:00
 featuredImage: /photos/3397140518_b0459c7350_m.jpg
 path: /2009/03/fotos-y-ciclopaseo
@@ -12,7 +8,6 @@ tags:
 - Fotografías
 - Personal
 title: Fotos y Ciclopaseo
-wordpress_id: 781
 ---
 
 Hace un tiempo que participé en los ciclopaseos con el grupo Ecuador Aventura, actualmente aunque no he participado (principalmente porque me robaron mi bici), he estado colaborando con la difusión de eventos y esta vez en cambio ayudé con las fotografías del último evento que hacía un recorrido por varios parques de la ciudad.

@@ -1,12 +1,7 @@
 ---
-author: ivan
-comments: true
 date: 2005-04-18 11:38:00+00:00
 path: /2005/04/strength-of-woman
 title: Strength of a Woman
-wordpress_id: 1005
-categories:
-  - Sin categoría
 tags:
   - Mujeres
   - Pensamientos

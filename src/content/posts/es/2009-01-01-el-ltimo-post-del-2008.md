@@ -1,8 +1,4 @@
 ---
-author: ivan
-categories:
-- Sin categoría
-comments: true
 date: 2009-01-01 07:46:00
 featuredImage: /photos/DSC03917.jpg
 path: /2009/01/el-ltimo-post-del-2008
@@ -11,7 +7,6 @@ tags:
 - Locuras
 - Personal
 title: El último post del 2008!
-wordpress_id: 816
 ---
 
 Para algunos en distintas partes del mundo hace algunas horas que el 2008 ya se acabó, por este lado del mundo aún nos quedan unas horas. Si bien el 2008 en lo personal dejó muchas cosas que preferiría olvidarlas me dejó también un montón de cosas que aprendí y como siempre, ayudarán a hacerme más fuerte y tener más experiencia. El 2009 para todos será un año difícil, no es noticia para nadie, una posible [estanflación](https://es.wikipedia.org/wiki/Estanflaci%C3%B3n), un nivel de incertidumbre que no nos deja claro qué va a pasar con muchas empresas, pero al final es un año más.

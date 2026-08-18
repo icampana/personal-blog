@@ -1,12 +1,7 @@
 ---
-author: ivan
-comments: true
 date: 2006-07-05 11:04:00+00:00
 path: /2006/07/compartiendo-gustos-musicales
 title: Compartiendo gustos musicales
-wordpress_id: 935
-categories:
-  - Sin categoría
 ---
 
 [![](https://imagegen.last.fm/RadioHead/artists/icampana.gif)](https://www.last.fm/user/icampana/?chartstyle=RadioHead) Esto es lo que se puede considerar mi "top 10" musical de la semana, pero no tuve que memorizarlo ni anotarlo en un papel, simplemente es lo que me la he pasado escuchando mientras trabajo o mientras leo alguna que otra noticia. ¿Cómo lo hice?

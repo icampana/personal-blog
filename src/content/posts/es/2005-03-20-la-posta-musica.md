@@ -1,12 +1,7 @@
 ---
-author: ivan
-comments: true
 date: 2005-03-20 11:48:00+00:00
 path: /2005/03/la-posta-musica
 title: La posta musical
-wordpress_id: 1012
-categories:
-  - Sin categoría
 ---
 
 Ante el pedido de [Nita](https://nitadp.blogspot.com/2005/03/la-posta-de-la-msica.html) y [Anisita](https://spaces.msn.com/members/aniblog/Blog/cns%211pqwf3yF42shpYevNXaVwEMg%21324.entry) (je je.... hasta suenan parecido :P) procedo a continuar con la posta musical.

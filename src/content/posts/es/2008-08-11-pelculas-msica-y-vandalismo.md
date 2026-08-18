@@ -1,8 +1,4 @@
 ---
-author: ivan
-categories:
-- Sin categoría
-comments: true
 date: 2008-08-11 13:51:00
 featuredImage: /photos/Lolita.jpg
 path: /2008/08/pelculas-msica-y-vandalismo
@@ -11,7 +7,6 @@ tags:
 - Curiosidades
 - Locuras
 title: Películas, Música y Vandalismo
-wordpress_id: 870
 ---
 
 Un fin de semana tranquilo hace necesario darle un poco de animación, así que aproveché el tiempo para compartir con amigos y recordar algunas cosas olvidadas, entre ellas algunas películas que desde hace tiempo quería volver a ver.

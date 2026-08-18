@@ -1,12 +1,7 @@
 ---
-author: ivan
-comments: true
 date: 2006-04-11 22:26:00+00:00
 path: /2006/04/porqu-no-nos-hacen-caso-los-alumnos
 title: ¿Porqué no nos hacen caso los alumnos?
-wordpress_id: 940
-categories:
-  - Sin categoría
 tags:
   - Pedagogía
 ---

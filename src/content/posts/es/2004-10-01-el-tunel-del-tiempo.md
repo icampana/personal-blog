@@ -1,13 +1,8 @@
 ---
-author: ivan
-categories:
-- Sin categoría
-comments: true
 date: 2004-10-01 11:15:00
 featuredImage: /photos/foto3.jpg
 path: /2004/10/el-tunel-del-tiempo
 title: El tunel del tiempo
-wordpress_id: 1049
 ---
 
 [![](https://photos1.blogger.com/img/39/1190/320/foto3.jpg)](https://photos1.blogger.com/img/39/1190/640/foto3.jpg)

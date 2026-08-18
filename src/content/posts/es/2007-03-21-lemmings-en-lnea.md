@@ -1,12 +1,7 @@
 ---
-author: ivan
-comments: true
 date: 2007-03-21 06:39:00+00:00
 path: /2007/03/lemmings-en-lnea
 title: ¡Lemmings en línea!
-wordpress_id: 913
-categories:
-  - Sin categoría
 tags:
   - Curiosidades
   - Juegos

@@ -1,8 +1,4 @@
 ---
-author: ivan
-categories:
-- Sin categoría
-comments: true
 date: 2009-01-26 03:08:00
 featuredImage: /photos/dsc04151.jpg
 path: /2009/01/pornofnica-y-oliviah-funky-style
@@ -10,7 +6,6 @@ tags:
 - Guayaquil
 - Música
 title: Pornofónica y OliviaH (Funky Style)
-wordpress_id: 803
 ---
 
 [![](/photos/dsc04151.jpg)](https://3.bp.blogspot.com/_T2UWuNJg3dQ/SXzkZ6VF_aI/AAAAAAAABUA/nidJOYbNZs4/s1600-h/dsc04151.jpg)Hace mucho que no escuchaba una voz que me cautivara tanto como la de esta preciosa cantante, el día viernes terminé de entender cómo una buena voz puede cambiar la percepción de una persona. La vi subir al escenario y me pareció una cara bonita, la escuché cantar y se convirtió en una Diosa.

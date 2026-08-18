@@ -1,12 +1,7 @@
 ---
-author: ivan
-comments: true
 date: 2006-01-06 05:43:00+00:00
 path: /2006/01/problemas-sin-solucin-o-soluciones-sin
 title: ¿Problemas sin solución o soluciones sin dueño?
-wordpress_id: 959
-categories:
-  - Sin categoría
 tags:
   - Pensamientos
   - Personal

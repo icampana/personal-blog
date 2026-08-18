@@ -11,7 +11,6 @@ tags:
   - Live Abroad
   - Remote Work
   - Digital Nomad
-_template: posts
 ---
 
 As of this writing, we are experiencing what the World Economic Forum in Davos defined as a "polycrisis"—multiple crises occurring simultaneously. This doesn't present a very encouraging scenario overall, but historically, it has always been significantly more impactful for LATAM (Latin America). Some of the converging factors include:

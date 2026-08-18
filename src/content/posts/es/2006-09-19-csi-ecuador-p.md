@@ -1,8 +1,4 @@
 ---
-author: ivan
-categories:
-- Sin categoría
-comments: true
 date: 2006-09-19 12:32:00
 featuredImage: /photos/cleanroom.jpg
 path: /2006/09/csi-ecuador-p
@@ -10,7 +6,6 @@ tags:
 - Curiosidades
 - Pensamientos
 title: CSI Ecuador :P
-wordpress_id: 927
 ---
 
 La verdad es que de CSI tuvo poco (ya me gustaría poder ser como esos tipos y poder descubrir quien estuvo en un lado tan sólo revisando el polvo que dejó :P ). De cualquier forma, la tarea que tuve que realizar ayer fue la de "forense" informático (aunque el término correcto es perito - dentro de una investigación legal -).

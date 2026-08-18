@@ -1,12 +1,7 @@
 ---
-author: ivan
-comments: true
 date: 2011-01-12 01:18:00+00:00
 path: /2011/01/tips-para-volver-loca-una-mujer-en-la
 title: ¿Tips para volver loca a una mujer en la cama?
-wordpress_id: 734
-categories:
-  - Sin categoría
 tags:
   - Aprendizaje
   - Mujeres

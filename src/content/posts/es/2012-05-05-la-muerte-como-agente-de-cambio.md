@@ -1,12 +1,7 @@
 ---
-author: ivan
-comments: true
 date: 2012-05-05 09:02:00+00:00
 path: /2012/05/la-muerte-como-agente-de-cambio
 title: La muerte como agente de cambio
-wordpress_id: 730
-categories:
-  - Sin categoría
 tags:
   - Escritos
   - Pensamientos

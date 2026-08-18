@@ -1,8 +1,4 @@
 ---
-author: ivan
-categories:
-- Sin categoría
-comments: true
 date: 2009-01-29 07:19:00
 featuredImage: /photos/2273147576_a46d34d44b_b.jpg
 path: /2009/01/recuerdos-caidos
@@ -11,7 +7,6 @@ tags:
 - Personal
 - Recuerdos
 title: Recuerdos caídos
-wordpress_id: 801
 ---
 
 Definitivamente ya quedó claro que el año de la Rata se acabó para mi... Bueno, para los chinos realmente, pero aplica en mi caso también... Comienza el año del Buey.... Aunque todavía tengo un par de ratas que envenenar, pero bueee, ya son de menor importancia...

@@ -1,8 +1,4 @@
 ---
-author: ivan
-categories:
-- Sin categoría
-comments: true
 date: 2009-04-29 20:34:00
 featuredImage: /photos/spam-mail.jpg
 path: /2009/04/correo-basura-borbotones
@@ -11,7 +7,6 @@ tags:
 - Publicidad
 - Tecnología
 title: Correo basura a borbotones
-wordpress_id: 768
 ---
 
 [![](/photos/spam-mail.jpg)](https://2.bp.blogspot.com/_T2UWuNJg3dQ/Sfh3yjSp6bI/AAAAAAAABeM/iH2gPNeFNdk/s1600-h/spam-mail.jpg)Esto creo que no es noticia para muchos, pero ver las estadísticas ya reales y tangibles es para volverse loco. Actualmente trabajo en una empresa que en su matriz tiene cerca de 350 empleados, cada uno con su dirección de correo y varios dominios para cada división de negocios. Esto quiere decir que recibimos un volumen constante de correos para poder trabajar, especialmente porque una de las actividades principales son las importaciones.

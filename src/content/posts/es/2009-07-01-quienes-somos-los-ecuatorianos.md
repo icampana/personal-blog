@@ -1,12 +1,7 @@
 ---
-author: ivan
-comments: true
 date: 2009-07-01 10:59:00+00:00
 path: /2009/07/quienes-somos-los-ecuatorianos
 title: ¿Quiénes somos los ecuatorianos?
-wordpress_id: 748
-categories:
-  - Sin categoría
 tags:
   - Ecuador
   - Pensamientos

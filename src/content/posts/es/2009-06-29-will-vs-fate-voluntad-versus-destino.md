@@ -1,12 +1,7 @@
 ---
-author: ivan
-comments: true
 date: 2009-06-29 00:40:00+00:00
 path: /2009/06/will-vs-fate-voluntad-versus-destino
 title: Will Vs Fate (Voluntad versus Destino)
-wordpress_id: 750
-categories:
-  - Sin categoría
 tags:
   - Locuras
   - Pensamientos

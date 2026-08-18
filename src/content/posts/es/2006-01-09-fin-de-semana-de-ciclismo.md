@@ -1,8 +1,4 @@
 ---
-author: ivan
-categories:
-- Sin categoría
-comments: true
 date: 2006-01-09 18:30:00
 featuredImage: /photos/Imagen026.jpg
 path: /2006/01/fin-de-semana-de-ciclismo
@@ -10,7 +6,6 @@ tags:
 - Ciclismo
 - Ciudad
 title: Fin de semana de ciclismo
-wordpress_id: 958
 ---
 
 [![](https://photos1.blogger.com/blogger/5311/455/200/Imagen026.jpg)](https://photos1.blogger.com/blogger/5311/455/1600/Imagen026.jpg)[![](https://photos1.blogger.com/blogger/5311/455/200/Imagen027.jpg)](https://photos1.blogger.com/blogger/5311/455/1600/Imagen027.jpg)[![](https://photos1.blogger.com/blogger/5311/455/200/Imagen025.jpg)](https://photos1.blogger.com/blogger/5311/455/1600/Imagen025.jpg)Luego de que me hayan reprendido varias veces por no arreglar mi bici, al fin pude ir a uno de los famosos ciclopaseos que organiza el club [Ecuador Aventura](https://www.ecuadoraventura.org)([www.ecuadoraventura.org](https://www.ecuadoraventura.org)). Me parece una propuesta interesante en lugar de estar un domingo por la mañana echado en la cama sin saber qué hacer.

@@ -1,13 +1,8 @@
 ---
-author: ivan
-categories:
-- Sin categoría
-comments: true
 date: 2005-09-08 05:39:00
 featuredImage: /photos/Iguana2.jpg
 path: /2005/09/iguana-gigante-detiene-el-trfico
 title: ¡Iguana gigante detiene el tráfico!
-wordpress_id: 984
 ---
 
 [![](https://photos1.blogger.com/blogger/5311/455/320/Iguana2.jpg)](https://photos1.blogger.com/blogger/5311/455/1600/Iguana2.jpg)¡Es enorme, verde, con muchas escamas de colores y tiene garras de aproximadamente 50 cm de longitud!

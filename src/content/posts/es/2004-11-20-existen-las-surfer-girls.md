@@ -1,12 +1,7 @@
 ---
-author: ivan
-comments: true
 date: 2004-11-20 11:38:00+00:00
 path: /2004/11/existen-las-surfer-girls
 title: ¿Existen las surfer girls?
-wordpress_id: 1042
-categories:
-  - Sin categoría
 ---
 
 ![Surfer Girl](https://www.amautacorp.com/staff/e-van/pictures/surfer_girl.gif)Quienes me conocen y han estado cerca mío últimamente saben que la idea ha estado dando vueltas por mi cabeza, luego de escuchar una canción de los Caramelos de Cianuro, llamada Surfer Girl.

@@ -1,8 +1,4 @@
 ---
-author: ivan
-categories:
-- Sin categoría
-comments: true
 date: 2013-04-19 19:15:00
 featuredImage: /photos/exhaustion_main-1.jpg
 path: /2013/04/ejercicio-extremo-o-extrema-locura
@@ -11,7 +7,6 @@ tags:
 - Guayaquil
 - Pensamientos
 title: ¿Ejercicio extremo o extrema locura?
-wordpress_id: 724
 ---
 
 Una noticia que generó múltiples reacciones en las redes sociales en los últimos días fue la [muerte de Cinthya Nivelo](https://www.telegrafo.com.ec/noticias/judicial/item/participante-de-war-race-fallece-por-presunta-deshidratacion.html) durante una competencia en Guayaquil conocida como "War Race", debo confesar que estuve tentado a inscribirme en esa carrera, inclusive un familiar me lanzó la idea porque sabía que antes yo ya había participado en carreras de obstáculos y me dijo que la acompañe bajo la excusa de que ella quería participar y yo "ya tenía experiencia", además de que la habían animado en el gimnasio para que asistiera.

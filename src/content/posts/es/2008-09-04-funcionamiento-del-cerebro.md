@@ -1,12 +1,7 @@
 ---
-author: ivan
-comments: true
 date: 2008-09-04 22:42:00+00:00
 path: /2008/09/funcionamiento-del-cerebro
 title: Funcionamiento del cerebro
-wordpress_id: 854
-categories:
-  - Sin categoría
 tags:
   - Curiosidades
   - Locuras

@@ -1,8 +1,4 @@
 ---
-author: ivan
-categories:
-- Sin categoría
-comments: true
 date: 2008-12-08 12:00:00
 featuredImage: /photos/Facebook-Toolbar.jpg
 path: /2008/12/facebook-toolbar
@@ -12,7 +8,6 @@ tags:
 - Tecnología
 - Tips
 title: Facebook Toolbar
-wordpress_id: 827
 ---
 
 [![](/photos/Facebook-Toolbar.jpg)](https://3.bp.blogspot.com/_T2UWuNJg3dQ/STy_FgIabDI/AAAAAAAABOA/lhlqK8DaQ38/s1600-h/Facebook+Toolbar.jpg)Aunque siempre he sido enemigo de tener mucha información pública en cualquier red social, arrancando porque se pierde privacidad y se le facilita el trabajo a los que quieren hacer [ingeniería social](https://es.wikipedia.org/wiki/Ingenier%C3%ADa_social_%28seguridad_inform%C3%A1tica%29). Al final terminé cediendo y utilizándo el servicio para entretenerme un rato.

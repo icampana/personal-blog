@@ -1,12 +1,7 @@
 ---
-author: ivan
-comments: true
 date: 2004-12-16 20:06:00+00:00
 path: /2004/12/blogs-beers
 title: Blogs & Beers
-wordpress_id: 1036
-categories:
-  - Sin categoría
 tags:
   - Locuras
 ---

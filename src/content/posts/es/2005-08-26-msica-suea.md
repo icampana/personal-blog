@@ -1,12 +1,7 @@
 ---
-author: ivan
-comments: true
 date: 2005-08-26 06:21:00+00:00
 path: /2005/08/msica-suea
 title: 'Música: Sueña'
-wordpress_id: 988
-categories:
-  - Sin categoría
 tags:
   - Ecuador
   - Música

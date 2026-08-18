@@ -1,8 +1,4 @@
 ---
-author: ivan
-categories:
-- Sin categoría
-comments: true
 date: 2012-06-18 05:25:00
 featuredImage: /photos/IronPost-1.jpg
 path: /2012/06/mi-experiencia-como-un-iron-runner
@@ -12,7 +8,6 @@ tags:
 - Personal
 - Recuerdos
 title: Mi experiencia como un Iron Runner
-wordpress_id: 728
 ---
 
 Si hace exactamente 15 años me hubieran preguntado qué deporte practicaba, mi respuesta clásica era "macateta" ( [matatenas](https://es.wikipedia.org/wiki/Matatenas), payana o jacks como lo conocen en otras partes del mundo) y la verdad es que ni eso, el único momento en el que practicaba lo más cercano a un deporte era en las clases de educación física del colegio y eso específicamente porque era obligatorio, al igual que durante muchos años lo fue el pertenecer a un equipo de fútbol, el momento que ya no fue obligatorio de inmediato dejé de hacerlo.

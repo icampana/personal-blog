@@ -1,12 +1,7 @@
 ---
-author: ivan
-comments: true
 date: 2008-04-02 06:40:00+00:00
 path: /2008/04/de-anglicismos-y-ms
 title: De anglicismos y más
-wordpress_id: 896
-categories:
-  - Sin categoría
 tags:
   - Ecuador
   - Idiomas

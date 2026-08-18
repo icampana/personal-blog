@@ -1,12 +1,7 @@
 ---
-author: ivan
-comments: true
 date: 2010-12-28 13:21:00+00:00
 path: /2010/12/de-propositos-y-motivaciones
 title: De propósitos y motivaciones
-wordpress_id: 736
-categories:
-  - Sin categoría
 tags:
   - Palabras
   - Pensamientos

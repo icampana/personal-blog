@@ -1,13 +1,8 @@
 ---
-author: ivan
-categories:
-- Sin categoría
-comments: true
 date: 2005-01-08 23:00:00
 featuredImage: /photos/antes_s.jpg
 path: /2005/01/mi-primera-accin-del-ao-p
 title: Mi primera acción del año :P
-wordpress_id: 1031
 ---
 
 Entre una cosa y otra no he tenido tiempo de postear nada, se suponía que iba a poner esto para el 2 de enero que fue cuando lo hice, pero en fin... je je je.. aquí va...

@@ -1,12 +1,7 @@
 ---
-author: ivan
-comments: true
 date: 2005-11-09 08:35:00+00:00
 path: /2005/11/resumen-y-flas
 title: Resumen y flash
-wordpress_id: 966
-categories:
-  - Sin categoría
 ---
 
 Como para no decir que no me doy tiempo de escribir algo, pongo las cosas un poco al día a quien le interese saber :P

@@ -1,8 +1,4 @@
 ---
-author: ivan
-categories:
-- Sin categoría
-comments: true
 date: 2012-05-27 11:26:00
 featuredImage: /photos/redes_moviles-1.jpg
 path: /2012/05/la-comunicacion-en-la-era-de-la
@@ -10,7 +6,6 @@ tags:
 - Comunicación
 - Pensamientos
 title: La comunicación en la era de la hiperconectividad
-wordpress_id: 729
 ---
 
 Hace 3 años mientras era el único informático en un lugar lleno de publicistas, marqueteros, creativos, diseñadores y relacionistas públicos; me sorprendió que un tema recurrente tenía toques que iban de la mano de lo que yo conozco, tecnología, y no por cosas del azar, sino más bien porque cada vez forma parte de manera más cercana y frecuente el uso de las TICs (Tecnologías de la Información y la Comunicación) en nuestro día a día y en diferentes ámbitos.

@@ -1,12 +1,7 @@
 ---
-author: ivan
-categories:
-- Sin categoría
-comments: true
 date: 2006-07-10 21:52:00
 path: /2006/07/round-one-fig
 title: Round one, Fight!!!
-wordpress_id: 934
 ---
 
 Probablemente medio mundo haya comentado respecto al cabezaso de Zidane en la final del mundial, aunque yo lo vi en las repeticiones igual me causó risa, lo que me parece más gracioso aún son todas las burlas que le han hecho por Internet, acá pongo el que me pareció el más cómico:

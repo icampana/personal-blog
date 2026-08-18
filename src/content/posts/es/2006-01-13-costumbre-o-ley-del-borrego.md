@@ -1,13 +1,8 @@
 ---
-author: ivan
-categories:
-- Sin categoría
-comments: true
 date: 2006-01-13 05:38:00
 featuredImage: /photos/buseta_paradero_red.jpg
 path: /2006/01/costumbre-o-ley-del-borrego
 title: ¿Costumbre o ley del borrego?
-wordpress_id: 957
 ---
 
 [![](https://photos1.blogger.com/blogger/5311/455/200/buseta_paradero_red.jpg)](https://photos1.blogger.com/blogger/5311/455/1600/buseta_paradero_red.jpg)[![](https://photos1.blogger.com/blogger/5311/455/200/paradero_catolica_rojo.jpg)](https://photos1.blogger.com/blogger/5311/455/1600/paradero_catolica_rojo.jpg)Hace unos días mientras estaba esperando un bus en la acera frontal de la Universidad Católica Santiago de Guayaquil me percaté que un coche estaba estacionado justo en frente a donde estabamos parados todos (al lado del paso peatonal que comunica esa acera con la universidad). Por un momento pensé, pero que lerdo este tipo, si alguien quiere parar un bus no va a poder porque el tipo está estacionado justo donde deberían estar los buses y va a tocar pegar la carrera.

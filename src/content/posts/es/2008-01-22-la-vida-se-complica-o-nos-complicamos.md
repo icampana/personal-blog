@@ -1,12 +1,7 @@
 ---
-author: ivan
-comments: true
 date: 2008-01-22 08:34:00+00:00
 path: /2008/01/la-vida-se-complica-o-nos-complicamos
 title: La vida se complica o nos complicamos la vida?
-wordpress_id: 902
-categories:
-  - Sin categoría
 tags:
   - Pensamientos
   - Personal

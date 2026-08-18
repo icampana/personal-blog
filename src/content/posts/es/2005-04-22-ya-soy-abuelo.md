@@ -1,13 +1,8 @@
 ---
-author: ivan
-categories:
-- Sin categoría
-comments: true
 date: 2005-04-22 18:31:00
 featuredImage: /photos/gateeta.jpg
 path: /2005/04/ya-soy-abuelo
 title: Ya soy abuelo!
-wordpress_id: 1004
 ---
 
 [![](https://photos1.blogger.com/img/39/1190/320/gateeta.jpg)](https://photos1.blogger.com/img/39/1190/640/gateeta.jpg)

@@ -1,12 +1,7 @@
 ---
-author: ivan
-comments: true
 date: 2005-03-19 04:22:00+00:00
 path: /2005/03/super-actualizacin
 title: ¡Super Actualización!
-wordpress_id: 1013
-categories:
-  - Sin categoría
 ---
 
 Para quienes se hayan dado cuenta, me he alejado un poco de acá, no por que me guste, sino porque me quedé sin conexión en casa (estoy por resolverlo en estos días). Por lo pronto un par de cosas sobre las que quería comentar:

@@ -1,8 +1,4 @@
 ---
-author: ivan
-categories:
-- Sin categoría
-comments: true
 date: 2009-04-22 00:16:00
 featuredImage: /photos/IvanGabriel-El-Bruto.png
 path: /2009/04/ivan-gabriel-el-bruto
@@ -11,7 +7,6 @@ tags:
 - Entretenimiento
 - Juegos
 title: Iván Gabriel "El Bruto"
-wordpress_id: 772
 ---
 
 [![](/photos/IvanGabriel-El-Bruto.png)](https://2.bp.blogspot.com/_T2UWuNJg3dQ/Se4rRukDnpI/AAAAAAAABdc/lMnXOaz1mFc/s1600-h/IvanGabriel+El+Bruto.png)

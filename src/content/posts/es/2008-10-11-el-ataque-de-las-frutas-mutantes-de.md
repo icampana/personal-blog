@@ -1,8 +1,4 @@
 ---
-author: ivan
-categories:
-- Sin categoría
-comments: true
 date: 2008-10-11 06:44:00
 featuredImage: /photos/fruitpromo.jpg
 path: /2008/10/el-ataque-de-las-frutas-mutantes-de
@@ -12,7 +8,6 @@ tags:
 - Juegos
 - Linux
 title: ¡El ataque de las frutas mutantes del espacio exterior!
-wordpress_id: 844
 ---
 
 [![](/photos/fruitpromo.jpg)](https://4.bp.blogspot.com/_T2UWuNJg3dQ/SPAGjtRD9XI/AAAAAAAAA_A/mGP3hCFRDX8/s1600-h/fruitpromo.jpg)Después de aproximadamente 3 semanas de mucho estress al fin puedo descansar, de hecho he pasado casi todo el día durmiendo :P

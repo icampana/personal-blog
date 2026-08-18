@@ -1,8 +1,4 @@
 ---
-author: ivan
-categories:
-- Sin categoría
-comments: true
 date: 2008-08-20 19:03:00
 featuredImage: /photos/bambu2.jpg
 path: /2008/08/para-reflexionar-un-poco
@@ -11,7 +7,6 @@ tags:
 - Pensamientos
 - Tips
 title: Para reflexionar un poco...
-wordpress_id: 864
 ---
 
 [![](/photos/bambu2.jpg)](https://4.bp.blogspot.com/_T2UWuNJg3dQ/SKwtBsBXndI/AAAAAAAAA0s/INFmN-f-s9Q/s1600-h/bambu2.jpg)

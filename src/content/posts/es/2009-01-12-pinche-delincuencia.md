@@ -1,8 +1,4 @@
 ---
-author: ivan
-categories:
-- Sin categoría
-comments: true
 date: 2009-01-12 22:26:00
 featuredImage: /photos/Imagen035.jpg
 path: /2009/01/pinche-delincuencia
@@ -12,7 +8,6 @@ tags:
 - Ciudad
 - Personal
 title: Pinche delincuencia!
-wordpress_id: 810
 ---
 
 [![](/photos/Imagen035.jpg)](https://2.bp.blogspot.com/_T2UWuNJg3dQ/SWt9SNm0fxI/AAAAAAAABSI/SUeVXL1wy4E/s1600-h/Imagen035.jpg)Esto fue lo que me encontré en la mañana antes de salir al trabajo... ¿Qué es? O más bien, qué era... La cadena de mi bicicleta. Pasó montón tiempo fuera y nunca le pasó nada, la única noche que dudo un poco en guardarla y se la roban :S

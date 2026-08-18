@@ -1,12 +1,7 @@
 ---
-author: ivan
-comments: true
 date: 2004-07-23 00:01:00+00:00
 path: /2004/07/libros-e-ebooks
 title: Libros-E (eBooks).
-wordpress_id: 1055
-categories:
-  - Sin categoría
 ---
 
 Alguna vez se ha encontrado en el internet simplemente viendo a la pantalla sin saber qué revisar, o qué más ver, qué tal leer un buen libro, de algún clásico. Y qué mejor que poder descargar el libro y llevarlo donde quiera y de forma gratuita.

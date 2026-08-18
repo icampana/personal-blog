@@ -1,12 +1,7 @@
 ---
-author: ivan
-comments: true
 date: 2004-12-17 11:10:00+00:00
 path: /2004/12/la-procesin
 title: La procesión
-wordpress_id: 1035
-categories:
-  - Sin categoría
 ---
 
 Mientras escuchaba una muy buena canción de Kevin Johansen llamada "La procesión" pensaba un poco en las cosas que me han pasado casi durante toda la vida y casi las había tomado como parte del día a día. No creo ser nadie fuera de lo común, pero si de algo me puedo jactar es de que la gente llega a confiar mucho en mi con facilidad.

@@ -1,12 +1,7 @@
 ---
-author: ivan
-comments: true
 date: 2008-07-19 11:17:00+00:00
 path: /2008/07/roberto-gabriel-el-beb-volador
 title: Roberto Gabriel, el bebé volador...
-wordpress_id: 885
-categories:
-  - Sin categoría
 tags:
   - Escritos
   - Locuras

@@ -1,12 +1,7 @@
 ---
-author: ivan
-comments: true
 date: 2008-12-16 22:45:00+00:00
 path: /2008/12/cmo-evitar-que-el-firefox-se-lleve-e
 title: Cómo evitar que el firefox se lleve el "foco" al abrir una ventana
-wordpress_id: 823
-categories:
-  - Sin categoría
 tags:
   - Curiosidades
   - Tecnología

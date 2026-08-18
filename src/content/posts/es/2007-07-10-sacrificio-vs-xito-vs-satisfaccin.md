@@ -1,8 +1,4 @@
 ---
-author: ivan
-categories:
-- Sin categoría
-comments: true
 date: 2007-07-10 07:43:00
 featuredImage: /photos/archangel.jpg
 path: /2007/07/sacrificio-vs-xito-vs-satisfaccin
@@ -10,7 +6,6 @@ tags:
 - Pensamientos
 - Personal
 title: Sacrificio vs Éxito vs Satisfacción
-wordpress_id: 905
 ---
 
 [![](/photos/archangel.jpg)](https://4.bp.blogspot.com/_T2UWuNJg3dQ/RpL_PsjduRI/AAAAAAAAALQ/2UX46JBgctw/s1600-h/archangel.jpg)Estas tres palabras no necesariamente deberían estar relacionadas, pero últimamente han rondado mi cabeza, lo que quiero alcanzar, cómo lo quiero alcanzar y a qué precio.

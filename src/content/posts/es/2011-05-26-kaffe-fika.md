@@ -1,8 +1,4 @@
 ---
-author: ivan
-categories:
-- Sin categoría
-comments: true
 date: 2011-05-26
 featuredImage: "/photos/kaffe_fika-1.jpg"
 path: "/2011/05/kaffe-fika"
@@ -12,7 +8,6 @@ tags:
 - Ecuador
 - Ocio
 title: Kaffe & Fika
-wordpress_id: 731
 
 ---
 Ecuador es conocido por ser exportador de cacao, banano, camarones y granos de café; sin embargo no se lo reconoce por exportar productos terminados, buena parte de nuestro cacao termina siendo convertido en chocolate en alguna otra parte del mundo, suiza por ejemplo, acá apenas nos acostumbramos a consumir sucedáneos, lo mismo pasa con otros productos, como el café.

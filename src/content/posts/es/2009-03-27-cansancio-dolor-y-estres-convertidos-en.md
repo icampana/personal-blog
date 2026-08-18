@@ -1,8 +1,4 @@
 ---
-author: ivan
-categories:
-- Sin categoría
-comments: true
 date: 2009-03-27 20:02:00
 featuredImage: /photos/cansancio.jpg
 path: /2009/03/cansancio-dolor-y-estres-convertidos-en
@@ -11,7 +7,6 @@ tags:
 - Locuras
 - Personal
 title: Cansancio, dolor y estrés convertidos en alegría...
-wordpress_id: 782
 ---
 
 [![](/photos/cansancio.jpg)](https://4.bp.blogspot.com/_T2UWuNJg3dQ/SczwYVese7I/AAAAAAAABaA/ydTErahvyDg/s1600-h/cansancio.jpg)

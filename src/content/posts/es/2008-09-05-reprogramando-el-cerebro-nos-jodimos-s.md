@@ -1,12 +1,7 @@
 ---
-author: ivan
-comments: true
 date: 2008-09-05 19:38:00+00:00
 path: /2008/09/reprogramando-el-cerebro-nos-jodimos-s
 title: Reprogramando el cerebro... Nos jodimos :S
-wordpress_id: 853
-categories:
-  - Sin categoría
 tags:
   - Curiosidades
   - Tecnología

@@ -1,8 +1,4 @@
 ---
-author: ivan
-categories:
-- Sin categoría
-comments: true
 date: 2008-09-01 10:02:00
 featuredImage: /photos/lovehate.jpg
 path: /2008/09/la-batalla-entre-el-odio-y-el-amor
@@ -10,7 +6,6 @@ tags:
 - Locuras
 - Pensamientos
 title: La batalla entre el odio y el amor
-wordpress_id: 856
 ---
 
 [![](/photos/lovehate.jpg)](https://3.bp.blogspot.com/_T2UWuNJg3dQ/SLt-6AYpjeI/AAAAAAAAA2E/eGyRSMQOHL4/s1600-h/lovehate.jpg)Algo que siempre me ha gustado al contar historias es darles un carácter a los personajes, inclusive si no tienen una forma física o son conceptos abstractos, por ejemplo una vez describí cómo sería el país si fuera un ser humano, que va creciendo, tiene edad, amigos, pasa por la pubertad, envejece, aprende, etc...

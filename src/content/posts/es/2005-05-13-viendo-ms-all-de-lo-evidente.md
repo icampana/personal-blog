@@ -1,12 +1,7 @@
 ---
-author: ivan
-comments: true
 date: 2005-05-13 07:45:00+00:00
 path: /2005/05/viendo-ms-all-de-lo-evidente
 title: Viendo más allá de lo evidente
-wordpress_id: 1000
-categories:
-  - Sin categoría
 ---
 
 ¿Alguna vez se les ha ocurrido caminar viendo lo que no ven los demás? Viendo lo que está más allá de lo evidente (y no me refiero a los Thundercats.. je je).

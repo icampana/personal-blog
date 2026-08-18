@@ -1,8 +1,4 @@
 ---
-author: ivan
-categories:
-- Sin categoría
-comments: true
 date: 2009-01-05 10:16:00
 featuredImage: /photos/dsc04008-Modificada.jpg
 path: /2009/01/nuevo-ao-sueo-cumplido-playa-y-diversin
@@ -16,7 +12,6 @@ tags:
 - Viajes
 - Videos
 title: Nuevo año, sueño cumplido, playa y diversión!
-wordpress_id: 815
 ---
 
 [![Preparación previa](/photos/dsc04008-Modificada.jpg)](https://1.bp.blogspot.com/_T2UWuNJg3dQ/SWF_0H2B-jI/AAAAAAAABQY/4AcwqseRYeA/s1600-h/dsc04008+%28Modificada%29.jpg)Este inicio de año fue bastante diferente a los anteriores, en lugar de utilizar mi dinero para gastarlo en una fiesta costosa de fin de año o reunirme con amigos me acosté a dormir temprano la noche del 31 al primero para poder utilizar ese mismo dinero en algo mucho más divertido y que disfruto mucho más, viajar!

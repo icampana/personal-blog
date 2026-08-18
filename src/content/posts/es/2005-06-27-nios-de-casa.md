@@ -1,12 +1,7 @@
 ---
-author: ivan
-comments: true
 date: 2005-06-27 19:42:00+00:00
 path: /2005/06/nios-de-casa
 title: Niños de casa
-wordpress_id: 995
-categories:
-  - Sin categoría
 ---
 
 Hace mucho tiempo que no escuchaba ese término, ahora que lo vuelvo a escuchar me pregunto:

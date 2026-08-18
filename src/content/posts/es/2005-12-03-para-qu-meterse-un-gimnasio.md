@@ -1,12 +1,7 @@
 ---
-author: ivan
-comments: true
 date: 2005-12-03 19:50:00+00:00
 path: /2005/12/para-qu-meterse-un-gimnasio
 title: ¿Para qué meterse a un gimnasio?
-wordpress_id: 962
-categories:
-  - Sin categoría
 ---
 
 Hace 3 semanas que he regresado al gimnasio después de un largo tiempo sin poder ir, más que nada porque estaba comenzando a subir de peso más de la cuenta y porque estaba un poco corto de dinero :P. La primera vez que fui a un gimnasio fue en 2do año de universidad, nunca le había prestado mucha atención hasta que uno de mis amigos me propuso ir a un gimnasio para tener algo que hacer en el tiempo libre (por eso extraño esa época :P).

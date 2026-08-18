@@ -1,13 +1,8 @@
 ---
-author: ivan
-categories:
-- Sin categoría
-comments: true
 date: 2005-09-17 05:27:00
 featuredImage: /photos/gye1.jpg
 path: /2005/09/regeneracin-urbana-y-degeneracin
 title: Regeneración Urbana y Degeneración Social
-wordpress_id: 979
 ---
 
 [![](https://photos1.blogger.com/blogger/5311/455/200/gye1.jpg)](https://photos1.blogger.com/blogger/5311/455/1600/gye1.jpg)Desde el año 2000 tenemos lo que se ha denominado la "Regeneración Urbana de la Ciudad de Guayaquil", se recuperó espacios que antes eran intransitables, se obtuvo nuevos espacios turísticos y se potenció los existentes. Es loable la tarea, no digo que sea perfecta (después de todo sigue siendo hecha por humanos), pero se ha intentado mantener un buen nivel y dotar de nuevos espacios.

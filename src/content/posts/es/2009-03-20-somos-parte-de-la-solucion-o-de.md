@@ -1,8 +1,4 @@
 ---
-author: ivan
-categories:
-- Sin categoría
-comments: true
 date: 2009-03-20 02:12:00
 featuredImage: /photos/einstein.jpg
 path: /2009/03/somos-parte-de-la-solucion-o-de
@@ -12,7 +8,6 @@ tags:
 - Personal
 - Política
 title: ¿Somos parte de la solución o del problema?
-wordpress_id: 784
 ---
 
 [![](/photos/einstein.jpg)](https://2.bp.blogspot.com/_T2UWuNJg3dQ/ScK3xflcKTI/AAAAAAAABZw/StisfsXmtfc/s1600-h/einstein.jpg)

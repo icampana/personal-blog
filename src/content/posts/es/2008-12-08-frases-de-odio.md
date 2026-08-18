@@ -1,12 +1,7 @@
 ---
-author: ivan
-comments: true
 date: 2008-12-08 12:24:00+00:00
 path: /2008/12/frases-de-odio
 title: Frases de Odio
-wordpress_id: 826
-categories:
-  - Sin categoría
 tags:
   - Curiosidades
   - Pensamientos

@@ -1,12 +1,7 @@
 ---
-author: ivan
-comments: true
 date: 2009-06-18 09:16:00+00:00
 path: /2009/06/solucionando-el-problema-con-pacificard
 title: Solucionando el problema con Pacificard y Linux :S
-wordpress_id: 755
-categories:
-  - Sin categoría
 tags:
   - Linux
   - Tecnología

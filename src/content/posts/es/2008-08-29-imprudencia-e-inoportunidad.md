@@ -1,12 +1,7 @@
 ---
-author: ivan
-comments: true
 date: 2008-08-29 11:59:00+00:00
 path: /2008/08/imprudencia-e-inoportunidad
 title: Imprudencia e inoportunidad
-wordpress_id: 859
-categories:
-  - Sin categoría
 tags:
   - Amigos
   - Curiosidades

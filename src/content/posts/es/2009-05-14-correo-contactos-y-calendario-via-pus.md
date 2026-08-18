@@ -1,8 +1,4 @@
 ---
-author: ivan
-categories:
-- Sin categoría
-comments: true
 date: 2009-05-14 18:37:00
 featuredImage: /photos/mobile_138740c_en.png
 path: /2009/05/correo-contactos-y-calendario-via-pus
@@ -11,7 +7,6 @@ tags:
 - Tecnología
 - Tips
 title: Correo, Contactos y Calendario vía Push
-wordpress_id: 765
 ---
 
 [![](/photos/mobile_138740c_en.png)](https://1.bp.blogspot.com/_T2UWuNJg3dQ/SgwhFgFIhlI/AAAAAAAABf0/tsFIh1hX_uU/s1600-h/mobile_138740c_en.gif)Un post cortito, algo muy interesante que tiene el iPhone y recientemente está terminando de montar RIM para los Blackberry es el soporte para recibir notificaciones "push", que principalmente funcionan con servidores de correo Exchange, aunque hay otros que dan el servicio como Google.

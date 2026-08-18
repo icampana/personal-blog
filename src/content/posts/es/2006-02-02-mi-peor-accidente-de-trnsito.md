@@ -1,12 +1,7 @@
 ---
-author: ivan
-comments: true
 date: 2006-02-02 09:32:00+00:00
 path: /2006/02/mi-peor-accidente-de-trnsito
 title: Mi peor accidente de tránsito
-wordpress_id: 953
-categories:
-  - Sin categoría
 ---
 
 [Rudd-o](https://www.rudd-o.com) hace algunos días me puso la [tarea](https://rudd-o.com/archives/2006/01/30/meme-del-dia-mi-peor-accidente-de-transito/) de contar mi peor accidente de tránsito, la gente que me conoce desde el colegio probablemente la ha escuchado muchas veces, otros lo escucharan por primera vez. Aprovechando la situación he decidido contar la historia diferente a como siempre lo solía hacer, lo contaré no como sucedió cronológicamente, sino de la forma como yo lo viví (ya luego entenderán a que me refiero).

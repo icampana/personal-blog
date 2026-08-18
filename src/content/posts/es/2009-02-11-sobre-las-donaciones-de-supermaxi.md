@@ -1,12 +1,7 @@
 ---
-author: ivan
-comments: true
 date: 2009-02-11 21:02:00+00:00
 path: /2009/02/sobre-las-donaciones-de-supermaxi
 title: Sobre las donaciones de Supermaxi
-wordpress_id: 794
-categories:
-  - Sin categoría
 tags:
   - Ciudad
   - Ecuador

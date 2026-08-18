@@ -1,13 +1,8 @@
 ---
-author: ivan
-categories:
-- Sin categoría
-comments: true
 date: 2008-09-28 11:31:00
 featuredImage: /photos/RochiVernaza2.jpg
 path: /2008/09/noche-de-danza-jazz-blues-y-bossa
 title: Noche de danza, jazz, blues y bossa
-wordpress_id: 845
 ---
 
 [![](/photos/RochiVernaza2.jpg)](https://4.bp.blogspot.com/_T2UWuNJg3dQ/SN_SlOue5gI/AAAAAAAAA-4/5Vs8C7PEnD4/s1600-h/RochiVernaza2.jpg)La noche de ayer resultó más relajada de lo normal, comenzando con que debido a las votaciones de hoy había ley seca y todo el mundo estaba en casa o regresaba temprano, por mi parte recibí una invitación a una velada cuyo objetivo era hacer un recorrido por la historia del jazz.

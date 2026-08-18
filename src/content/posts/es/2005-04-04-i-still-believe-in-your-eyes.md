@@ -1,12 +1,7 @@
 ---
-author: ivan
-comments: true
 date: 2005-04-04 06:32:00+00:00
 path: /2005/04/i-still-believe-in-your-eyes
 title: I still Believe in your eyes
-wordpress_id: 1011
-categories:
-  - Sin categoría
 ---
 
 Mi amiga [Ani](https://spaces.msn.com/members/aniblog/) decidió usar un nick que me sonó un tanto curioso, pregunté la razón por la cual lo usaba y asumo que por razones personales prefirió guardarse la respuesta. Pero luego de pensar un poco en lo que significaba en español y sumándole un par de acontecimientos recientes en mi vida... no sé, se sintió algo raro...

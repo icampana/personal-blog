@@ -1,12 +1,7 @@
 ---
-author: ivan
-comments: true
 date: 2005-10-05 00:00:00+00:00
 path: /2005/10/conexin-banda-ancha-sin-lmites
 title: Conexión a banda ancha sin límites!
-wordpress_id: 973
-categories:
-  - Sin categoría
 ---
 
 Al parecer me he enterado un poco tarde y he visto que algunos bloggers ya han comentado al respecto, pero de igual forma me sumo para tratar de promover la propuesta.

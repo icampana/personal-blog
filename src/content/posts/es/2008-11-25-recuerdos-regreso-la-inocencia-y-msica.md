@@ -1,8 +1,4 @@
 ---
-author: ivan
-categories:
-- Sin categoría
-comments: true
 date: 2008-11-25 09:44:00
 featuredImage: /photos/capitan_memo.jpg
 path: /2008/11/recuerdos-regreso-la-inocencia-y-msica
@@ -11,7 +7,6 @@ tags:
 - Locuras
 - Personal
 title: Recuerdos, regreso a la inocencia y música en la sangre...
-wordpress_id: 833
 ---
 
 Estas últimas semanas he estado haciendo un viaje en el tiempo y sin haberlo planificado, desde volver a pasar muchísimo tiempo con mi mejor amigo del colegio hasta volver a hacer cosas que prácticamente ya tenía olvidadas. De repente me volví a sentir como si el tiempo no hubiera pasado, como si la única preocupación tendría que ser el pensar en qué vamos a hacer el fin de semana.

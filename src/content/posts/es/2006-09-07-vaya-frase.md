@@ -1,12 +1,7 @@
 ---
-author: ivan
-comments: true
 date: 2006-09-07 06:08:00+00:00
 path: /2006/09/vaya-frase
 title: ¡¡Vaya frase!!
-wordpress_id: 929
-categories:
-  - Sin categoría
 ---
 
 <blockquote>"Una mujer es capaz de cortarte las pelotas, cocinarlas con cebollas y obligarte a que te las comas, sin dejar de sonreír un solo momento"</blockquote>

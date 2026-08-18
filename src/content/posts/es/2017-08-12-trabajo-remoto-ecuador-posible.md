@@ -1,16 +1,13 @@
 ---
-author: ivan
 tags:
 - Educación
 - Remote Work
 - Empresa
 - Tecnología
-comments: true
 date: 2017-08-12 04:16:42
 featuredImage: /photos/working-remotely.jpg
 path: /2017/08/trabajo-remoto-ecuador-posible
 title: 'Trabajo remoto en Ecuador: ¿Es posible?'
-wordpress_id: 1772
 ---
 
 ## ¿Qué es el trabajo remoto o teletrabajo?

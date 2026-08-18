@@ -1,13 +1,8 @@
 ---
-author: ivan
-categories:
-- Sin categoría
-comments: true
 date: 2006-06-28 06:25:00
 featuredImage: /photos/bandera_ecuador.jpg
 path: /2006/06/de-alegras-mundiales-y-falsos
 title: De alegrías mundiales y falsos patriotas
-wordpress_id: 937
 ---
 
 [![](https://photos1.blogger.com/blogger/5311/455/200/bandera_ecuador.jpg)](https://photos1.blogger.com/blogger/5311/455/1600/bandera_ecuador.jpg)Un poco tarde pero no he querido quedarme con la espinita en la garganta, es decir, con ganas de expresar lo que ha pasado por mi cabeza a partir de este mundial de fútbol.

@@ -1,8 +1,4 @@
 ---
-author: ivan
-categories:
-- Sin categoría
-comments: true
 date: 2008-12-23 09:33:00
 featuredImage: /photos/airline_seating.jpg
 path: /2008/12/porqu-poner-recto-el-asiento-de-un-avin
@@ -12,7 +8,6 @@ tags:
 - Pensamientos
 - Personal
 title: ¿Porqué poner recto el asiento de un avión?
-wordpress_id: 819
 ---
 
 [![](/photos/airline_seating.jpg)](https://4.bp.blogspot.com/_T2UWuNJg3dQ/SVBugRTwdrI/AAAAAAAABPI/ATP8M74SDjk/s1600-h/airline_seating.jpg)Esto me sacó de casillas casi llegando a Guayaquil en un vuelo corto desde Quito, la azafata pide que por favor pongamos los asientos rectos y pasa verificando uno por uno, un gordo con cara de creerse la mamá de tarzán se acomoda y luego de que la azafata pasa hace un ademán de que le importa un pepino y vuelve a reclinar el asiento.

@@ -1,8 +1,4 @@
 ---
-author: ivan
-categories:
-- Sin categoría
-comments: true
 date: 2009-02-18 17:13:00
 featuredImage: /photos/img_0355.jpg
 path: /2009/02/parte-de-lo-que-me-gusta-hacer
@@ -12,7 +8,6 @@ tags:
 - Palabras
 - Personal
 title: Parte de lo que me gusta hacer...
-wordpress_id: 792
 ---
 
 ¡Hace unos días me dijeron, realmente tienes mucho tiempo libre! Y la verdad es que no, no tengo mucho tiempo libre, simplemente que el que tengo lo estoy aprovechando a manos llenas, tratando de hacer la mayor cantidad de cosas que me diviertan.

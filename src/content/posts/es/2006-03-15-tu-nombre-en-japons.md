@@ -1,12 +1,7 @@
 ---
-author: ivan
-comments: true
 date: 2006-03-15 01:07:00+00:00
 path: /2006/03/tu-nombre-en-japons
 title: Tu nombre en japonés! ;)
-wordpress_id: 945
-categories:
-  - Sin categoría
 ---
 
 [![](https://www.japanhero.com/Graphics/Tokusatsu/jiban/jiban1%20%28L%29.jpg)](https://www.japanhero.com/Graphics/Tokusatsu/jiban/jiban1%20%28L%29.jpg)¿Anata-sama no namae ha?\*\*

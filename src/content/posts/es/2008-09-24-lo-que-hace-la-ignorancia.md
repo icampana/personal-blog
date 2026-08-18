@@ -1,12 +1,7 @@
 ---
-author: ivan
-comments: true
 date: 2008-09-24 11:58:00+00:00
 path: /2008/09/lo-que-hace-la-ignorancia
 title: Lo que hace la ignorancia
-wordpress_id: 846
-categories:
-  - Sin categoría
 tags:
   - Cine
   - Curiosidades

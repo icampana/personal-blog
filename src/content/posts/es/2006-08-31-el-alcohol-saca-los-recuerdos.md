@@ -1,12 +1,7 @@
 ---
-author: ivan
-comments: true
 date: 2006-08-31 11:24:00+00:00
 path: /2006/08/el-alcohol-saca-los-recuerdos
 title: ¡El alcohol saca los recuerdos!
-wordpress_id: 930
-categories:
-  - Sin categoría
 tags:
   - Locuras
   - Pensamientos

@@ -1,8 +1,4 @@
 ---
-author: ivan
-categories:
-- Sin categoría
-comments: true
 date: 2008-12-03 10:40:00
 featuredImage: /photos/memin-pinguin.jpg
 path: /2008/12/mami-que-ser-lo-que-quiere-el-negro
@@ -10,7 +6,6 @@ tags:
 - Pensamientos
 - Personal
 title: ¿Mami, que será lo que quiere el negro?
-wordpress_id: 831
 ---
 
 [![](/photos/memin-pinguin.jpg)](https://3.bp.blogspot.com/_T2UWuNJg3dQ/STYhxMQybqI/AAAAAAAABNg/WD8h9IV4Q5U/s1600-h/memin-pinguin.jpg)¿Llegar a la casa blanca? Na' ese fue Obama y de paso ya lo consiguió, así que se acabó el misterio... :P

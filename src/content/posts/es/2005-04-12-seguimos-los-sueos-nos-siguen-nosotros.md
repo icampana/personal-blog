@@ -1,12 +1,7 @@
 ---
-author: ivan
-comments: true
 date: 2005-04-12 10:37:00+00:00
 path: /2005/04/seguimos-los-sueos-nos-siguen-nosotros
 title: Seguimos los sueños, nos siguen a nosotros o nos pasan por encima?
-wordpress_id: 1008
-categories:
-  - Sin categoría
 ---
 
 Revisando el blog de mi estimada [Lirrakbar](https://lirrakbar.blogspot.com/2005/04/just-believe.html) pasaron un par de ideas por mi cabeza sobre aquello que normalmente llamamos sueños, yo soy un soñador empedernido, pero a la vez soy un hombre que se guía por muchos pragmatismos, quizá suene un tanto incoherente, pero es la forma que encontré para balancearme.

@@ -1,13 +1,8 @@
 ---
-author: ivan
-categories:
-- Sin categoría
-comments: true
 date: 2005-05-10 09:24:00
 featuredImage: /photos/collage_camara.jpg
 path: /2005/05/capturando-imgenes-con-el-celu
 title: Capturando imágenes con el celu
-wordpress_id: 1001
 ---
 
 [![](https://photos1.blogger.com/img/39/1190/320/collage_camara.jpg)](https://photos1.blogger.com/img/39/1190/640/collage_camara.jpg)

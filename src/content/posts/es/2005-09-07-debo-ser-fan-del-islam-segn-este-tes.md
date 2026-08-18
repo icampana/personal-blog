@@ -1,12 +1,7 @@
 ---
-author: ivan
-comments: true
 date: 2005-09-07 06:20:00+00:00
 path: /2005/09/debo-ser-fan-del-islam-segn-este-tes
 title: Debo ser Fan del Islam según este Test!
-wordpress_id: 985
-categories:
-  - Sin categoría
 ---
 
 Según un test que me pasó el pana Rudd-O por mi forma de pensar yo debería ser miembro del Islam, no sé que tan acertado pueda ser el test pero por lo menos me entretuvo un poco, según yo me considero más cercano al Agnosticismo, pero acá me apareció como tercera opción.

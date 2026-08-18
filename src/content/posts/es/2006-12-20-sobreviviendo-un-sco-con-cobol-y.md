@@ -1,8 +1,4 @@
 ---
-author: ivan
-categories:
-- Sin categoría
-comments: true
 date: 2006-12-20 07:09:00
 featuredImage: /photos/ServerIBM.jpg
 path: /2006/12/sobreviviendo-un-sco-con-cobol-y
@@ -11,7 +7,6 @@ tags:
 - Locuras
 - Tecnología
 title: Sobreviviendo a un SCO con COBOL y pasando a Linux
-wordpress_id: 917
 ---
 
 Este post sí que es bien geek, acá el personaje que ven en la foto fue mi suplicio durante la última semana, me hizo sudar sangre, pero al final vencí al [monstruo](https://es.wikipedia.org/wiki/Monstruo)!!  

@@ -1,12 +1,7 @@
 ---
-author: ivan
-comments: true
 date: 2004-07-05 06:02:00+00:00
 path: /2004/07/mujeres-de-lujo-artculos-de-3ra
 title: Mujeres de lujo, artículos de 3ra
-wordpress_id: 1057
-categories:
-  - Sin categoría
 ---
 
 Durante toda esta semana he estado metido en la feria de computación Compu2004, predominaba la tecnología, las ventas y las mujeres exhuberantes; cosa normal en estos días de la comercialización despiadada sin pensar en las implicaciones.

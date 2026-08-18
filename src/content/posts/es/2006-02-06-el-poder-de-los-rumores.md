@@ -1,12 +1,7 @@
 ---
-author: ivan
-comments: true
 date: 2006-02-06 10:16:00+00:00
 path: /2006/02/el-poder-de-los-rumores
 title: El poder de los rumores
-wordpress_id: 951
-categories:
-  - Sin categoría
 ---
 
 [![](https://www.emergencemarketing.com/images/whisper%20small.jpg)](https://www.emergencemarketing.com/images/whisper%20small.jpg)Ante todo, debo confesar que al escribir este post me encontraba un tanto enojado, aún así trataré de mantener la cabeza fría para ser lo más objetivo posible.

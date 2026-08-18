@@ -1,12 +1,7 @@
 ---
-author: ivan
-comments: true
 date: 2008-10-20 00:07:00+00:00
 path: /2008/10/sobreviv-mi-ltima-luna-llena
 title: Sobreviví a mi última luna llena :)
-wordpress_id: 841
-categories:
-  - Sin categoría
 tags:
   - Personal
 ---

@@ -1,12 +1,7 @@
 ---
-author: ivan
-comments: true
 date: 2006-11-13 03:18:00+00:00
 path: /2006/11/potenciando-el-open-source-para
 title: Potenciando el Open Source para negocios o educación
-wordpress_id: 921
-categories:
-  - Sin categoría
 tags:
   - Tecnología
 ---

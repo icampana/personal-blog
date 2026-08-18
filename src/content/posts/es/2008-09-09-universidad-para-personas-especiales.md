@@ -1,12 +1,7 @@
 ---
-author: ivan
-comments: true
 date: 2008-09-09 04:20:00+00:00
 path: /2008/09/universidad-para-personas-especiales
 title: ¿Universidad para personas "especiales"?
-wordpress_id: 851
-categories:
-  - Sin categoría
 tags:
   - Curiosidades
   - Personal

@@ -1,12 +1,7 @@
 ---
-author: ivan
-comments: true
 date: 2004-12-07 12:46:00+00:00
 path: /2004/12/la-marcha-turca-de-la-ruinas-de-atena
 title: La Marcha turca de la ruinas de Atena, por Beethoven
-wordpress_id: 1038
-categories:
-  - Sin categoría
 ---
 
 Alguno de los que pasan por aquí y leen esto han escuchado acaso la Marcha turca de la ruinas de Atena, compuesto por Beethoven... ?? Pues les cuento que sí y no sólo una vez, sino miles de veces. La han repetido, la han tarateado inclusive.. je je je... a que no adivinan cuál es??

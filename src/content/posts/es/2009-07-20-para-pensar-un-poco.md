@@ -1,12 +1,7 @@
 ---
-author: ivan
-comments: true
 date: 2009-07-20 02:38:00+00:00
 path: /2009/07/para-pensar-un-poco
 title: Para pensar un poco...
-wordpress_id: 745
-categories:
-  - Sin categoría
 tags:
   - Palabras
   - Pensamientos

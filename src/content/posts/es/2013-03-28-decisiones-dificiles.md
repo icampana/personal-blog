@@ -1,12 +1,7 @@
 ---
-author: ivan
-comments: true
 date: 2013-03-28 17:48:00+00:00
 path: /2013/03/decisiones-dificiles
 title: Decisiones difíciles...
-wordpress_id: 725
-categories:
-  - Sin categoría
 tags:
   - Aprendizaje
   - Pensamientos

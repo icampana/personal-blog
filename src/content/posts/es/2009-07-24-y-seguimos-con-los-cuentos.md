@@ -1,12 +1,7 @@
 ---
-author: ivan
-comments: true
 date: 2009-07-24 00:44:00+00:00
 path: /2009/07/y-seguimos-con-los-cuentos
 title: Y seguimos con los cuentos...
-wordpress_id: 742
-categories:
-  - Sin categoría
 tags:
   - Cuentos
   - Escritos

@@ -1,12 +1,7 @@
 ---
-author: ivan
-comments: true
 date: 2005-04-06 18:31:00+00:00
 path: /2005/04/cmo-agregar-contenido-rss-tu-pgina-sin
 title: Cómo agregar contenido RSS a tu página sin programación :P
-wordpress_id: 1010
-categories:
-  - Sin categoría
 ---
 
 Para los que no tengan idea de qué es un contenido RSS aquí va un mini-resumen, fue pensado originalmente para sitios de noticias o aquellos cuyo contenido cambie con mucha frecuencia, la idea es poder distribuir su contenido de forma sencillla y con una interfaz estándar, para que cualquier persona pueda acceder a este contenido.

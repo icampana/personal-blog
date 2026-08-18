@@ -1,12 +1,7 @@
 ---
-author: ivan
-comments: true
 date: 2009-04-01 10:37:00+00:00
 path: /2009/04/te-extrano-un-poco
 title: Te Extraño Un Poco
-wordpress_id: 777
-categories:
-  - Sin categoría
 tags:
   - Memes
   - Música

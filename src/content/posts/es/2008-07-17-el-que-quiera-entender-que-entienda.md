@@ -1,12 +1,7 @@
 ---
-author: ivan
-comments: true
 date: 2008-07-17 03:31:00+00:00
 path: /2008/07/el-que-quiera-entender-que-entienda
 title: El que quiera entender que entienda - Mago de Oz
-wordpress_id: 888
-categories:
-  - Sin categoría
 ---
 
 Últimamente he estado revisando todas las canciones de mi colección que no he escuchado en años (gracias al fabuloso [Amarok](https://amarok.kde.org/)) y me he encontrado con joyitas que casi mi memoria había olvidado, aunque todavía me quedan unos cuantos días de música por escuchar.

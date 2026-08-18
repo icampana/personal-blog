@@ -1,8 +1,4 @@
 ---
-author: ivan
-categories:
-- Sin categoría
-comments: true
 date: 2008-10-27 04:34:00
 featuredImage: /photos/babelposter.jpg
 path: /2008/10/maldita-humanidad-o-sociedad
@@ -10,7 +6,6 @@ tags:
 - Cine
 - Pensamientos
 title: Maldita humanidad... ¿o Sociedad?
-wordpress_id: 839
 ---
 
 [![](/photos/babelposter.jpg)](https://2.bp.blogspot.com/_T2UWuNJg3dQ/SQUMsS6pqHI/AAAAAAAABIg/TfXJfNMId-s/s1600-h/babelposter.jpg)Poniéndome al día nuevamente en películas, terminé viendo 2 películas un tanto viejas, del 2006 y 2007 respectivamente, [Babel](https://www.imdb.com/title/tt0449467/) y [XXY](https://www.imdb.com/title/tt0995829/). Aunque de temáticas muy diferentes ambas resaltaban problemas del mundo.

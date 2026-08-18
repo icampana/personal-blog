@@ -8,7 +8,6 @@ description: >-
   genuine advantage.
 tags:
   - Remote Work
-_template: posts
 ---
 
 ## Where to Start?

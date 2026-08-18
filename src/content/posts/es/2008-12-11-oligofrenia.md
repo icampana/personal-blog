@@ -1,12 +1,7 @@
 ---
-author: ivan
-comments: true
 date: 2008-12-11 18:28:00+00:00
 path: /2008/12/oligofrenia
 title: Oligofrenia
-wordpress_id: 824
-categories:
-  - Sin categoría
 tags:
   - Curiosidades
   - Locuras

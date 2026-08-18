@@ -1,12 +1,7 @@
 ---
-author: ivan
-comments: true
 date: 2009-05-27 22:54:00+00:00
 path: /2009/05/xenofobia-impunidad-e-intolerancia
 title: Xenofobia, Impunidad e Intolerancia
-wordpress_id: 761
-categories:
-  - Sin categoría
 tags:
   - Amigos
   - Ira

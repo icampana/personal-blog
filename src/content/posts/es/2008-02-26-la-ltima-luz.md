@@ -1,12 +1,7 @@
 ---
-author: ivan
-comments: true
 date: 2008-02-26 07:37:00+00:00
 path: /2008/02/la-ltima-luz
 title: La última luz
-wordpress_id: 900
-categories:
-  - Sin categoría
 tags:
   - Pensamientos
   - Personal

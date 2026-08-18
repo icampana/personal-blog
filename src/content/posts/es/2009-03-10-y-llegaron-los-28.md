@@ -1,12 +1,7 @@
 ---
-author: ivan
-comments: true
 date: 2009-03-10 10:48:00+00:00
 path: /2009/03/y-llegaron-los-28
 title: Y llegaron los 28!
-wordpress_id: 787
-categories:
-  - Sin categoría
 tags:
   - Locuras
   - Palabras

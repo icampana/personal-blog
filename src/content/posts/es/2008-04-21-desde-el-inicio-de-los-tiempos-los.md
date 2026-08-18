@@ -1,13 +1,8 @@
 ---
-author: ivan
-categories:
-- Sin categoría
-comments: true
 date: 2008-04-21 04:37:00
 featuredImage: /photos/hombresvsmujerescolorweb.jpg
 path: /2008/04/desde-el-inicio-de-los-tiempos-los
 title: Diferencias entre hombres y mujeres
-wordpress_id: 894
 ---
 
 [![](/photos/hombresvsmujerescolorweb.jpg)](https://3.bp.blogspot.com/_T2UWuNJg3dQ/SAvUNSp4UfI/AAAAAAAAAXE/pfLXHxjNyeI/s1600-h/hombresvsmujerescolorweb.jpg)  

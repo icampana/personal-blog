@@ -1,13 +1,8 @@
 ---
-author: ivan
-categories:
-- Sin categoría
-comments: true
 date: 2005-01-02 01:34:00
 featuredImage: /photos/viejos-2004-005.jpg
 path: /2005/01/los-viejos
 title: Los viejos
-wordpress_id: 1033
 ---
 
 [![](https://photos1.blogger.com/img/39/1190/320/viejos%20-%202004%20005.jpg)](https://photos1.blogger.com/img/39/1190/640/viejos%20-%202004%20005.jpg)Recorriendo la ciudad me topé con algunos de estos animalitos, je je, una costumbre típica en nuestra tierra, despedir el año quemando el "año viejo" representado por personajes públicos o salidos de la TV y las películas, hechos a punta de papel, pintura y almidón...

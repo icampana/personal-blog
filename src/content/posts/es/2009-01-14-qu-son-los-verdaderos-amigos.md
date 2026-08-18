@@ -1,8 +1,4 @@
 ---
-author: ivan
-categories:
-- Sin categoría
-comments: true
 date: 2009-01-14 19:26:00
 featuredImage: /photos/dsc04133.jpg
 path: /2009/01/qu-son-los-verdaderos-amigos
@@ -11,7 +7,6 @@ tags:
 - Pensamientos
 - Personal
 title: ¿Qué son los verdaderos amigos?
-wordpress_id: 809
 ---
 
 [![](/photos/dsc04133.jpg)](https://2.bp.blogspot.com/_T2UWuNJg3dQ/SW33IS_Na4I/AAAAAAAABSQ/a4CMJng4K_s/s1600-h/dsc04133.jpg)Más de una vez hemos escuchado la frase en cualquier lugar del planeta de que los verdaderos amigos son los del colegio, que en la universidad no se va a hacer amigos, simplemente habrá algunos por conveniencia... Y muchos lo han asimilado como una ley, pero qué es lo que hay detrás de todo esto, un análisis simple lo puede clarificar...

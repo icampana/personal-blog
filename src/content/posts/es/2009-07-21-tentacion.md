@@ -1,12 +1,7 @@
 ---
-author: ivan
-comments: true
 date: 2009-07-21 15:14:00+00:00
 path: /2009/07/tentacion
 title: Tentación...
-wordpress_id: 744
-categories:
-  - Sin categoría
 tags:
   - Comunicación
   - Locuras

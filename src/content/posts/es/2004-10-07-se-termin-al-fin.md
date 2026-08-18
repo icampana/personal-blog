@@ -1,12 +1,7 @@
 ---
-author: ivan
-comments: true
 date: 2004-10-07 11:32:00+00:00
 path: /2004/10/se-termin-al-fin
 title: Se terminó al fin!!
-wordpress_id: 1047
-categories:
-  - Sin categoría
 ---
 
 Después de muchas noches sin dormir, streess, carreras de un lado pa' el otro y estar cerca de morirnos (literalmente, en el último día casi chocamos un par de veces en el carro del chino). Pos hemos entregado nuestra famosa memoria -tesis-.

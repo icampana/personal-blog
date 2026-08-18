@@ -1,8 +1,4 @@
 ---
-author: ivan
-categories:
-- Sin categoría
-comments: true
 date: 2009-02-25 09:52:00
 featuredImage: /photos/3308516954_6478bc0dd2_m.jpg
 path: /2009/02/waiting-for-sunse
@@ -12,7 +8,6 @@ tags:
 - Vacaciones
 - Viajes
 title: Waiting for the Sunset
-wordpress_id: 791
 ---
 
 [![](https://farm4.static.flickr.com/3597/3308516954_6478bc0dd2_m.jpg)](https://www.flickr.com/photos/ivangabriel/3308516954/)  

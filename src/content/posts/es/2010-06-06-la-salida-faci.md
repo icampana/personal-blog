@@ -1,12 +1,7 @@
 ---
-author: ivan
-comments: true
 date: 2010-06-06 07:06:00+00:00
 path: /2010/06/la-salida-faci
 title: La salida fácil...
-wordpress_id: 739
-categories:
-  - Sin categoría
 tags:
   - Aprendizaje
   - Frases

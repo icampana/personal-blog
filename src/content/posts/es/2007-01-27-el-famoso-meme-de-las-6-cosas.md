@@ -1,12 +1,7 @@
 ---
-author: ivan
-comments: true
 date: 2007-01-27 20:44:00+00:00
 path: /2007/01/el-famoso-meme-de-las-6-cosas
 title: El famoso meme de las 6 cosas
-wordpress_id: 914
-categories:
-  - Sin categoría
 tags:
   - Curiosidades
   - Memes
