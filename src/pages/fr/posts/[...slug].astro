@@ -15,7 +15,7 @@ export async function getStaticPaths() {
   const posts = await getCollection('posts');
 
   // Get all Spanish posts (source of truth for slug generation)
-  // Spanish posts have no language suffix (returns null from getLanguageFromFilename)
+  // Spanish posts use the es/ locale segment (source of truth for slug generation)
   const spanishPosts = posts.filter(
     (post) => {
       const lang = getLanguageFromFilename(post.id);

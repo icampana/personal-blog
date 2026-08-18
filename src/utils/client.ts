@@ -32,8 +32,7 @@ export function getPostUrl(
 ): string {
   const localePrefix = locale && locale !== 'es' ? `/${locale}` : '';
 
-  // Use post.id to derive clean slug because post.id might have dots removed/modified
-  // stripLanguageSuffix returns filename with .md if it was .en.md, so we strip .md
+  // Use post.id to derive clean slug: strip the locale prefix segment, then the .md extension
   let cleanSlug = stripLanguageSuffix(post.id).replace(/\.md$/i, '');
 
   // Remove /index from the end if present (for folder-based posts)

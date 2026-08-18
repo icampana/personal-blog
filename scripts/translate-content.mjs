@@ -11,10 +11,10 @@ dotenv.config();
 const SOURCE_LANG = 'es';
 const TARGET_LANGUAGES = ['en', 'pt', 'fr']; // Translate to English, Portuguese, and French
 const CONTENT_DIRS = [
-  'src/content/posts',
-  'src/content/pages',
-  'src/content/projects',
-  'src/content/videos',
+  'src/content/posts/es',
+  'src/content/pages/es',
+  'src/content/projects/es',
+  'src/content/videos/es',
 ];
 const API_KEY = process.env.GEMINI_API_KEY;
 
@@ -96,8 +96,8 @@ async function translateFile(filePath, targetLang) {
       }
     }
 
-    // Generate target path
-    const targetPath = filePath.replace(/\.md$/, `.${targetLang}.md`);
+    // Generate target path: src/content/posts/es/foo.md -> src/content/posts/en/foo.md
+    const targetPath = filePath.replace('/es/', `/${targetLang}/`);
 
     // Check if translation already exists
     try {
@@ -153,31 +153,21 @@ async function translateFile(filePath, targetLang) {
 
 async function processDirectory(dir) {
   try {
-    // Find all .md files (excluding .en.md, .pt.md, and .fr.md)
-    const files = await glob(`${dir}/**/*.md`, {
-      ignore: ['**/*.en.md', '**/*.pt.md', '**/*.fr.md'],
-    });
+    // Find all .md files (es/ dirs contain only Spanish sources now)
+    const files = await glob(`${dir}/**/*.md`);
 
     console.log(`📂 Found ${files.length} source files in ${dir}`);
 
     let processed = 0;
-    let skipped = 0;
 
     for (const file of files) {
-      // Only process non-language-specific files (Spanish originals)
-      if (!file.match(/\.(en|pt|fr)\.md$/i)) {
-        for (const targetLang of TARGET_LANGUAGES) {
-          await translateFile(file, targetLang);
-        }
-        processed++;
-      } else {
-        skipped++;
+      for (const targetLang of TARGET_LANGUAGES) {
+        await translateFile(file, targetLang);
       }
+      processed++;
     }
 
-    console.log(
-      `📊 ${dir}: ${processed} processed, ${skipped} skipped (already translated)`,
-    );
+    console.log(`📊 ${dir}: ${processed} processed`);
   } catch (error) {
     console.error(`❌ Error processing directory ${dir}:`, error.message);
   }

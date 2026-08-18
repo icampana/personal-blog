@@ -57,3 +57,4 @@ public/build-info.json
 
 # git worktrees
 .worktrees/
+.superpowers/

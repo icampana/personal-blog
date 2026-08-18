@@ -6,11 +6,12 @@ This project supports multilanguage content (Spanish, English, Portuguese, Frenc
 
 - **Default Language**: Spanish (`es`) - Source of truth.
 - **Supported Languages**: English (`en`), Portuguese (`pt`), French (`fr`).
-- **File Structure**:
-  - Spanish (Original): `content/posts/my-post.md`
-  - English (Generated): `content/posts/my-post.en.md`
-  - Portuguese (Generated): `content/posts/my-post.pt.md`
-  - French (Generated): `content/posts/my-post.fr.md`
+- **File Structure** (per-locale directories, one dir per content type):
+  - Spanish (Original): `content/posts/es/my-post.md`
+  - English (Generated): `content/posts/en/my-post.md`
+  - Portuguese (Generated): `content/posts/pt/my-post.md`
+  - French (Generated): `content/posts/fr/my-post.md`
+- **Locale is derived from the first path segment** (`es/`, `en/`, `pt/`, `fr/`) — not a filename suffix. The same layout applies to `src/content/pages`, `src/content/projects`, and `src/content/videos`.
 - **Routing**:
   - Spanish: `/posts/my-post`
   - English: `/en/posts/my-post`
@@ -55,28 +56,28 @@ Run the following commands in your terminal:
 
 ### How it Works
 
-1.  The script scans `src/content/posts`, `src/content/pages`, `src/content/projects`, and `src/content/videos`.
-2.  It identifies source files (`.md`) that do not have a corresponding `.en.md`, `.pt.md`, or `.fr.md` file.
+1.  The script scans the Spanish source dirs: `src/content/posts/es`, `src/content/pages/es`, `src/content/projects/es`, and `src/content/videos/es`.
+2.  For each `.md` source it looks for the target file (e.g. `posts/en/my-post.md`) and skips it if it already exists.
 3.  It sends the content to Gemini API with a specific prompt to translate frontmatter and markdown body while preserving structure.
-4.  It saves the translated file with the correct suffix.
+4.  It saves the translated file into the target locale dir (`en|pt|fr/<slug>.md`).
 
-## CMS Integration (TinaCMS)
+## CMS Integration (Keystatic)
 
--   **Editing**: You only edit the **Spanish** versions in TinaCMS.
--   **Visibility**: The CMS is configured to hide `.en.md`, `.pt.md`, and `.fr.md` files to prevent confusion.
+-   **Editing**: You only edit the **Spanish** versions in Keystatic (collections point at the `es/` dirs only; the admin lives at `/keystatic` in dev).
+-   **Visibility**: The CMS only exposes `es/` content, so generated translations can't be accidentally edited.
 -   **Workflow**:
-    1.  Write/Edit post in Spanish via TinaCMS.
+    1.  Write/Edit post in Spanish via Keystatic.
     2.  Save changes.
     3.  Run `pnpm run translate` locally or in CI/CD to generate translations.
 
 ## Manual Overrides
 
 If you need to manually correct a translation:
-1.  Open the specific file (e.g., `src/content/posts/my-post.en.md`).
+1.  Open the specific file (e.g., `src/content/posts/en/my-post.md`).
 2.  Edit the text.
 3.  **Note**: If you delete the file, the translation script will regenerate it from the Spanish source on the next run.
 
 ## Troubleshooting
 
 -   **Build Errors**: If a translation fails (e.g., invalid YAML), delete the generated file and run the script again.
--   **Missing Translations**: Ensure the source file is a valid `.md` file and not excluded by the script (currently filters for content from 2022 onwards).
+-   **Missing Translations**: Ensure the source file is a valid `.md` file in an `es/` dir and not excluded by the script (currently filters for content from 2022 onwards).

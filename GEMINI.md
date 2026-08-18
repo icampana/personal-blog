@@ -4,13 +4,13 @@ This document provides context for the Gemini AI assistant to understand the pro
 
 ## Project Overview
 
-This is a blog website built with Astro and TypeScript. It uses Astro's native content collections to manage content from Markdown files and TinaCMS for a visual editor. The styling is done with Tailwind CSS and daisyUI. The blog is entirely in **Spanish**.
+This is a blog website built with Astro and TypeScript. It uses Astro's native content collections to manage content from Markdown files and Keystatic for a visual editor (dev only). The styling is done with Tailwind CSS and daisyUI. The blog's source of truth is entirely in **Spanish**.
 
 ## Key Technologies
 
 - **Framework:** Astro
 - **Language:** TypeScript
-- **Content:** Astro Content Collections (from Markdown files), TinaCMS
+- **Content:** Astro Content Collections (from Markdown files), Keystatic
 - **Styling:** Tailwind CSS, daisyUI
 - **Linting:** Biome (previously ESLint)
 - **Package Manager:** PNPM
@@ -27,11 +27,11 @@ This project uses Biome for linting and formatting. The configuration is defined
 - `public`: Contains static assets.
 - `styles`: Contains global CSS files.
 - `lib`: Contains library code, such as the search index generation.
-- `tina`: Contains the TinaCMS configuration.
+- `keystatic.config.ts`: Contains the Keystatic configuration (local mode, Spanish-only collections).
 
 ## Important Commands
 
-- `pnpm dev`: Starts the development server with Turbopack and TinaCMS.
+- `pnpm dev`: Starts the Astro dev server with the Keystatic admin at `/keystatic`.
 - `pnpm build`: Builds the project, including the search index, and the Astro application.
 - `pnpm start`: Starts the production server.
 - `pnpm lint`: Lints the codebase using Biome.

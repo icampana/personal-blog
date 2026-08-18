@@ -8,24 +8,18 @@ import { fileURLToPath } from 'url';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-// Regex patterns for i18n
-const LANGUAGE_SUFFIX_REGEX = /\.(en|pt)(\.md)?$/i;
-
-/**
- * Extract language suffix from filename
- */
+// Locale is the first path segment: es/foo.md, en/foo.md
 function getLanguageFromFilename(filename) {
-  const match = filename.match(LANGUAGE_SUFFIX_REGEX);
-  return match ? match[1] : null;
+  const first = filename.split('/')[0];
+  return ['es', 'en', 'pt', 'fr'].includes(first) ? first : null;
 }
 
 /**
  * Strip language suffix from filename
  */
 function stripLanguageSuffix(filename) {
-  return filename.replace(LANGUAGE_SUFFIX_REGEX, (match, lang, ext) => {
-    return ext ? '.md' : '';
-  });
+  const locale = getLanguageFromFilename(filename);
+  return locale ? filename.split('/').slice(1).join('/') : filename;
 }
 
 async function generateSearchIndex() {
@@ -58,11 +52,13 @@ async function generateSearchIndex() {
       const { data, content: body } = matter(content);
 
       if (data.title) {
-        const slug = path.basename(file, '.md');
+        // file is repo-relative (src/content/posts/es/foo.md); strip the
+        // content prefix so the locale is the first path segment
+        const fileRelative = file.replace(/^src\/content\/posts\//, '');
 
         // Detect language from filename
-        const locale = getLanguageFromFilename(file) || 'es';
-        const cleanSlug = stripLanguageSuffix(slug);
+        const locale = getLanguageFromFilename(fileRelative) || 'es';
+        const cleanSlug = path.basename(stripLanguageSuffix(fileRelative), '.md');
 
         // Build URL with locale prefix
         const url = data.path
@@ -100,11 +96,13 @@ async function generateSearchIndex() {
       const { data, content: body } = matter(content);
 
       if (data.title) {
-        const slug = path.basename(file, '.md');
+        // file is repo-relative (src/content/pages/es/foo.md); strip the
+        // content prefix so the locale is the first path segment
+        const fileRelative = file.replace(/^src\/content\/pages\//, '');
 
         // Detect language from filename
-        const locale = getLanguageFromFilename(file) || 'es';
-        const cleanSlug = stripLanguageSuffix(slug);
+        const locale = getLanguageFromFilename(fileRelative) || 'es';
+        const cleanSlug = path.basename(stripLanguageSuffix(fileRelative), '.md');
 
         // Build URL with locale prefix
         const url = data.path
@@ -141,11 +139,13 @@ async function generateSearchIndex() {
       const { data, content: body } = matter(content);
 
       if (data.title) {
-        const slug = path.basename(file, '.md');
+        // file is repo-relative (src/content/projects/es/foo.md); strip the
+        // content prefix so the locale is the first path segment
+        const fileRelative = file.replace(/^src\/content\/projects\//, '');
 
         // Detect language from filename
-        const locale = getLanguageFromFilename(file) || 'es';
-        const cleanSlug = stripLanguageSuffix(slug);
+        const locale = getLanguageFromFilename(fileRelative) || 'es';
+        const cleanSlug = path.basename(stripLanguageSuffix(fileRelative), '.md');
 
         // Build URL with locale prefix
         const url = data.path

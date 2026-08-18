@@ -7,7 +7,7 @@ import { getLanguageFromFilename } from '../../utils/i18n';
 export async function getStaticPaths() {
   const posts = await getCollection('posts');
 
-  // Only include Spanish posts (no language suffix or explicit 'es')
+  // Only include Spanish posts (es/ locale segment)
   const spanishPosts = posts.filter(
     (post) => {
       const lang = getLanguageFromFilename(post.id);

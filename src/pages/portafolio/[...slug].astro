@@ -10,7 +10,7 @@ import {
 export async function getStaticPaths() {
   const projects = await getCollection('projects');
 
-  // Filter only Spanish projects (exclude .en.md and .pt.md)
+  // Filter only Spanish projects (es/ locale segment)
   const spanishProjects = projects.filter(
     (project) => getLanguageFromFilename(project.id) === LOCALES.DEFAULT || getLanguageFromFilename(project.id) === null,
   );
