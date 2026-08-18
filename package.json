@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "tinacms dev -c \"astro dev\"",
     "build": "pnpm run build:production",
-    "build:production": "pnpm run prebuild && tinacms build && node scripts/build-search-index.js && astro build && pnpm run postbuild",
+    "build:production": "pnpm run prebuild && node scripts/build-tina-conditional.js && node scripts/build-search-index.js && astro build && pnpm run postbuild",
     "build:preview": "pnpm run prebuild && node scripts/build-search-index.js && astro build",
     "build:content": "astro build",
     "build:index": "node scripts/build-search-index.js",
