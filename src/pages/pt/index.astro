@@ -7,13 +7,11 @@ import { sortPostsByDate } from '../../utils/client';
 import { generateImgxUrl } from '../../utils/imgxUtils';
 import { Image } from 'astro:assets';
 import VideoCard from '../../components/VideoCard.astro';
-import { getLanguageFromFilename, LOCALES } from '../../utils/i18n';
+import { getLanguageFromFilename, getPostsByLocale, LOCALES } from '../../utils/i18n';
 
 // Filter Portuguese posts only
 const allPosts = await getCollection('posts');
-const portuguesePosts = allPosts.filter(
-  (post) => getLanguageFromFilename(post.id) === LOCALES.PORTUGUESE,
-);
+const portuguesePosts = getPostsByLocale(allPosts, LOCALES.PORTUGUESE);
 const latestPosts = sortPostsByDate(portuguesePosts).slice(0, 3);
 
 // Filter Portuguese videos
@@ -276,12 +274,12 @@ const translations = {
         </h2>
         <div class="hidden sm:block h-[1px] flex-grow bg-base-content/20"></div>
         <div class="flex items-center gap-2 text-xs mono text-base-content/70">
-          <a href="/archivo" class="hover:text-base-content transition-colors">
+          <a href="/pt/archivo" class="hover:text-base-content transition-colors">
             VER_ARQUIVO
           </a>
           <span>|</span>
           <a
-            href="/posts/page/2"
+            href="/pt/posts/page/2"
             class="hover:text-base-content transition-colors">
             VER_POSTS_RECENTES
           </a>
@@ -302,7 +300,7 @@ const translations = {
         <h2 class="mono text-lg font-bold text-base-content">ÚLTIMOS_VÍDEOS</h2>
         <div class="hidden sm:block h-[1px] flex-grow bg-base-content/20"></div>
         <div class="flex items-center gap-2 text-xs mono text-base-content/70">
-          <a href="/videos" class="hover:text-base-content transition-colors">
+          <a href="/pt/videos" class="hover:text-base-content transition-colors">
             VER_TODOS_OS_VÍDEOS
           </a>
         </div>

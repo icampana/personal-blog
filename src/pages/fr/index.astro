@@ -7,13 +7,11 @@ import { sortPostsByDate } from '../../utils/client';
 import { generateImgxUrl } from '../../utils/imgxUtils';
 import { Image } from 'astro:assets';
 import VideoCard from '../../components/VideoCard.astro';
-import { getLanguageFromFilename, LOCALES } from '../../utils/i18n';
+import { getLanguageFromFilename, getPostsByLocale, LOCALES } from '../../utils/i18n';
 
 // Filter French posts only
 const allPosts = await getCollection('posts');
-const frenchPosts = allPosts.filter(
-  (post) => getLanguageFromFilename(post.id) === LOCALES.FRENCH,
-);
+const frenchPosts = getPostsByLocale(allPosts, LOCALES.FRENCH);
 const latestPosts = sortPostsByDate(frenchPosts).slice(0, 3);
 
 // Filter French videos

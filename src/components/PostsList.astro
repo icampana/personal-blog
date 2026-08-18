@@ -1,0 +1,46 @@
+---
+import { getCollection } from 'astro:content';
+import BlogLayout from '../layouts/BlogLayout.astro';
+import { sortPostsByDate } from '../utils/client';
+import { getPostsByLocale, POSTS_PER_PAGE, type Locale } from '../utils/i18n';
+import Pagination from './Pagination.astro';
+import PostCard from './PostCard.astro';
+
+export interface Props {
+  locale: Locale;
+  currentPage: number;
+  baseUrl: string;
+  title: string;
+  description: string;
+  heading: string;
+}
+
+const { locale, currentPage, baseUrl, title, description, heading } = Astro.props;
+
+const allPosts = await getCollection('posts');
+const posts = sortPostsByDate(getPostsByLocale(allPosts, locale));
+
+const totalPages = Math.ceil(posts.length / POSTS_PER_PAGE);
+const startIndex = (currentPage - 1) * POSTS_PER_PAGE;
+const paginatedPosts = posts.slice(startIndex, startIndex + POSTS_PER_PAGE);
+---
+
+<BlogLayout title={title} description={description} locale={locale}>
+  <div class="px-2">
+    <h1 class="font-sans font-bold text-2xl mb-6">
+      {heading}
+    </h1>
+
+    <div class="mx-auto py-5 grid grid-cols-1 lg:grid-cols-3 gap-6">
+      {paginatedPosts.map((post) => (
+        <PostCard post={post} locale={locale} />
+      ))}
+    </div>
+
+    <Pagination
+      currentPage={currentPage}
+      totalPages={totalPages}
+      baseUrl={baseUrl}
+    />
+  </div>
+</BlogLayout>

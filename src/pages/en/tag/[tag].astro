@@ -3,12 +3,12 @@ import { getCollection } from 'astro:content';
 import PostCard from '../../../components/PostCard.astro';
 import BlogLayout from '../../../layouts/BlogLayout.astro';
 import { getAllTags, getPostsByTag, sortPostsByDate } from '../../../utils/client';
-import { getLanguageFromFilename } from '../../../utils/i18n';
+import { getPostsByLocale, LOCALES } from '../../../utils/i18n';
 
 export async function getStaticPaths() {
   const allPosts = await getCollection('posts');
   // Filter for English posts only
-  const englishPosts = allPosts.filter(post => getLanguageFromFilename(post.id) === 'en');
+  const englishPosts = getPostsByLocale(allPosts, LOCALES.ENGLISH);
   
   const allTags = getAllTags(englishPosts);
 

@@ -4,6 +4,7 @@ import PostLayout from '../../../layouts/PostLayout.astro';
 import { getPostUrl } from '../../../utils/client';
 import {
   getLanguageFromFilename,
+  getPostsByLocale,
   stripLanguageSuffix,
   LOCALES,
   type Locale,
@@ -71,9 +72,7 @@ const { post, locale, isFallback } = Astro.props;
 
 // Get related posts (English only)
 const allPosts = await getCollection('posts');
-const englishPosts = allPosts.filter(
-  (p) => getLanguageFromFilename(p.id) === LOCALES.ENGLISH,
-);
+const englishPosts = getPostsByLocale(allPosts, LOCALES.ENGLISH);
 
 const relatedPosts = englishPosts
   .filter((otherPost) => {

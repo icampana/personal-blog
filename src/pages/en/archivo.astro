@@ -3,14 +3,14 @@ import { getCollection } from 'astro:content';
 import { format } from 'date-fns';
 import { enUS } from 'date-fns/locale';
 import BlogLayout from '../../layouts/BlogLayout.astro';
-import { getLanguageFromFilename } from '../../utils/i18n';
+import { getPostsByLocale, LOCALES } from '../../utils/i18n';
 
 const title = 'Post Archive';
 const description = 'Explore all posts organized by date';
 
 // Get all posts and group them by year and month
 const allPosts = await getCollection('posts');
-const posts = allPosts.filter(post => getLanguageFromFilename(post.id) === 'en');
+const posts = getPostsByLocale(allPosts, LOCALES.ENGLISH);
 
 interface YearMonthGroup {
   year: string;
