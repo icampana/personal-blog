@@ -67,7 +67,7 @@
     "remark-directive": "^4.0.0",
     "remark-emoji": "^5.0.2",
     "remark-gfm": "^4.0.1",
-    "sharp": "^0.35.2",
+    "sharp": "^0.35.4",
     "striptags": "^3.2.0",
     "theme-change": "^3.0.4",
     "ts-pattern": "^5.9.0",
@@ -99,7 +99,7 @@
       "nanoid@3": "3.3.18",
       "nanoid@5": "5.1.16",
       "postcss": "^8.5.23",
-      "sharp": "^0.35.2",
+      "sharp": "^0.35.4",
       "svgo": "^4.0.2",
       "undici": "^7.29.0"
     },
