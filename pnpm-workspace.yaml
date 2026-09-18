@@ -10,3 +10,44 @@ onlyBuiltDependencies:
   - '@tailwindcss/oxide'
   - esbuild
   - sharp
+
+allowBuilds:
+  esbuild: true
+
+overrides:
+  baseline-browser-mapping: ^2.11.0
+  browserslist: ^4.28.7
+  devalue: ^5.9.2
+  dompurify: ^3.4.13
+  mermaid: ^10.9.8
+  jsonpath-plus: ^10.2.0
+  esbuild: ^0.25.0
+  js-yaml: ^4.3.2
+  mdast-util-to-hast: ^13.2.1
+  qs: ^6.14.1
+  react-router: ^6.30.2
+  diff: ^5.2.2
+  lodash: ^4.17.23
+  lodash-es: ^4.17.23
+  smol-toml: ^1.7.1
+  yaml: ^2.8.4
+  launch-editor: ^2.14.1
+  body-parser: ^1.20.6
+  brace-expansion@2: 2.1.4
+  brace-expansion@5: 5.0.9
+  fast-uri: ^3.1.6
+  fast-xml-parser: ^5.10.1
+  immutable: ^5.1.8
+  linkify-it: ^5.0.2
+  markdown-it: ^14.2.0
+  nanoid@3: 3.3.18
+  nanoid@5: 5.1.16
+  postcss: ^8.5.23
+  sharp: ^0.35.4
+  svgo: ^4.1.0
+  undici: ^7.29.0
+  vitest: ^4.1.11
+  '@vitest/mocker': ^4.1.11
+
+patchedDependencies:
+  gray-matter@4.0.3: patches/gray-matter@4.0.3.patch
