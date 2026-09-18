@@ -4,7 +4,7 @@
 
 [build.environment]
   NODE_VERSION = "22"
-  PNPM_VERSION = "10"
+  PNPM_VERSION = "12"
   NETLIFY_NEXT_PLUGIN_SKIP = "true"
   NODE_OPTIONS = "--max-old-space-size=6144"
 
