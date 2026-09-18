@@ -19,9 +19,12 @@ import WorkoutDisplay from './WorkoutDisplay';
 type Step = 'equipment' | 'bodyparts' | 'configure' | 'workout' | 'saved';
 
 export default function KettlebellTrainer() {
-  const [step, setStep] = useState<Step>('equipment');
+  const storedEquipment = loadEquipment();
+  const [step, setStep] = useState<Step>(
+    storedEquipment ? 'bodyparts' : 'equipment',
+  );
   const [equipment, setEquipment] = useState<EquipmentProfile>(
-    loadEquipment() ?? { ...DEFAULT_EQUIPMENT },
+    storedEquipment ?? { ...DEFAULT_EQUIPMENT },
   );
   const [bodyParts, setBodyParts] = useState<BodyPart[]>([]);
   const [difficulty, setDifficulty] = useState<Difficulty>('intermediate');
@@ -98,7 +101,7 @@ export default function KettlebellTrainer() {
   return (
     <div className="max-w-4xl mx-auto p-4">
       {/* Header */}
-      <div className="text-center mb-8">
+      <div className="text-center mb-8 no-print">
         <h1 className="text-3xl md:text-4xl font-bold mb-2">
           🏋️ Entrenador de Pesas Rusas
         </h1>
@@ -109,7 +112,7 @@ export default function KettlebellTrainer() {
 
       {/* Navigation Tabs (visible when not on saved page) */}
       {step !== 'saved' && (
-        <div className="flex items-center justify-between mb-6 bg-base-200 rounded-lg p-2">
+        <div className="flex items-center justify-between mb-6 bg-base-200 rounded-lg p-2 no-print">
           {steps.map((s) => {
             const isActive = s.key === step;
             const isPast =
@@ -127,7 +130,7 @@ export default function KettlebellTrainer() {
                       : 'text-base-content/50'
                 }`}
                 onClick={() => {
-                  if (isPast) setStep(s.key);
+                  if (isPast || s.key === 'equipment') setStep(s.key);
                 }}
               >
                 <span className="material-symbols-outlined text-lg">
@@ -141,7 +144,7 @@ export default function KettlebellTrainer() {
       )}
 
       {/* Action buttons */}
-      <div className="flex gap-2 mb-6">
+      <div className="flex gap-2 mb-6 no-print">
         {step !== 'equipment' && step !== 'saved' && (
           <button
             type="button"

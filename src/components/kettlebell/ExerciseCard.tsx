@@ -15,6 +15,7 @@ export default function ExerciseCard({
   onToggle,
 }: Props) {
   const [showDetails, setShowDetails] = useState(false);
+  const [showVideo, setShowVideo] = useState(false);
   const { exercise, reps, sets, weightLabel, side } = workoutExercise;
 
   const equipmentIcon = exercise.equipment === 'kettlebell' ? '🏋️' : '🔩';
@@ -102,30 +103,49 @@ export default function ExerciseCard({
             </div>
           </div>
 
-          {/* Expand button */}
-          <button
-            type="button"
-            className="btn btn-ghost btn-sm btn-circle"
-            onClick={() => setShowDetails(!showDetails)}
-            aria-label={
-              showDetails ? 'Ocultar detalles' : 'Ver detalles del ejercicio'
-            }
-          >
-            <span className="material-symbols-outlined text-sm">
-              {showDetails ? 'expand_less' : 'expand_more'}
-            </span>
-          </button>
+          <div className="flex items-center gap-1">
+            {youtubeUrl && (
+              <button
+                type="button"
+                className={`btn btn-xs ${
+                  showVideo ? 'btn-primary' : 'btn-ghost'
+                } gap-1`}
+                onClick={() => setShowVideo(!showVideo)}
+                aria-label={showVideo ? 'Ocultar video' : 'Ver video'}
+                title={showVideo ? 'Ocultar video' : 'Ver video demostrativo'}
+              >
+                <span className="material-symbols-outlined text-xs">
+                  {showVideo ? 'visibility_off' : 'play_circle'}
+                </span>
+                <span className="hidden sm:inline">Video</span>
+              </button>
+            )}
+
+            {/* Expand button */}
+            <button
+              type="button"
+              className="btn btn-ghost btn-sm btn-circle"
+              onClick={() => setShowDetails(!showDetails)}
+              aria-label={
+                showDetails ? 'Ocultar detalles' : 'Ver detalles del ejercicio'
+              }
+            >
+              <span className="material-symbols-outlined text-sm">
+                {showDetails ? 'expand_less' : 'expand_more'}
+              </span>
+            </button>
+          </div>
         </div>
 
-        {/* Video Section — always visible */}
-        {youtubeUrl && thumbnailUrl ? (
+        {/* Video Section — on demand */}
+        {showVideo && youtubeUrl && thumbnailUrl && (
           <a
             href={youtubeUrl}
             target="_blank"
             rel="noopener noreferrer"
             className="block mt-3 rounded-lg overflow-hidden border border-base-300 hover:border-primary transition-colors"
           >
-            <div className="relative">
+            <div className="relative max-w-md mx-auto">
               <img
                 src={thumbnailUrl}
                 alt={`Video: ${exercise.nameEs}`}
@@ -145,16 +165,9 @@ export default function ExerciseCard({
               <span className="material-symbols-outlined text-xs">
                 play_circle
               </span>
-              Ver en YouTube
+              Ver en YouTube ↗
             </div>
           </a>
-        ) : (
-          <div className="flex items-center gap-2 mt-3 px-3 py-2 bg-base-200 rounded-lg text-xs text-base-content/50">
-            <span className="material-symbols-outlined text-sm">
-              videocam_off
-            </span>
-            <span>Video demostrativo próximamente</span>
-          </div>
         )}
 
         {/* Expanded Details */}
