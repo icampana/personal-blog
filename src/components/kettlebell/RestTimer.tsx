@@ -14,6 +14,7 @@ export default function RestTimer({
   const [seconds, setSeconds] = useState(initialSeconds);
   const [running, setRunning] = useState(true);
   const [paused, setPaused] = useState(false);
+  const [minimized, setMinimized] = useState(false);
   const intervalRef = useRef<ReturnType<typeof setInterval> | null>(null);
   const audioCtxRef = useRef<AudioContext | null>(null);
 
@@ -102,8 +103,83 @@ export default function RestTimer({
   const circumference = 2 * Math.PI * 54; // radius 54
   const dashOffset = circumference - (progress / 100) * circumference;
 
+  if (minimized) {
+    return (
+      <div className="fixed bottom-4 right-4 z-50 bg-base-100 border-2 border-primary shadow-2xl rounded-2xl p-3 flex items-center gap-3 no-print">
+        <div className="flex flex-col">
+          <span className="text-xs text-base-content/70 font-medium">
+            ⏱️ {blockName}
+          </span>
+          <span
+            className={`text-xl font-mono font-bold ${
+              seconds <= 5 ? 'text-error' : 'text-primary'
+            }`}
+          >
+            {formatTime(seconds)}
+          </span>
+        </div>
+        <div className="flex items-center gap-1">
+          {seconds === 0 ? (
+            <button
+              type="button"
+              className="btn btn-xs btn-primary"
+              onClick={onDone}
+            >
+              Listo
+            </button>
+          ) : (
+            <>
+              <button
+                type="button"
+                className="btn btn-xs btn-circle btn-ghost"
+                onClick={() => setPaused(!paused)}
+                aria-label={paused ? 'Reanudar' : 'Pausar'}
+              >
+                <span className="material-symbols-outlined text-sm">
+                  {paused ? 'play_arrow' : 'pause'}
+                </span>
+              </button>
+              <button
+                type="button"
+                className="btn btn-xs btn-circle btn-ghost"
+                onClick={() => {
+                  setSeconds(0);
+                  setRunning(false);
+                }}
+                aria-label="Saltar descanso"
+              >
+                <span className="material-symbols-outlined text-sm">
+                  skip_next
+                </span>
+              </button>
+            </>
+          )}
+          <button
+            type="button"
+            className="btn btn-xs btn-circle btn-ghost"
+            onClick={() => setMinimized(false)}
+            aria-label="Maximizar temporizador"
+            title="Maximizar temporizador"
+          >
+            <span className="material-symbols-outlined text-sm">
+              open_in_full
+            </span>
+          </button>
+          <button
+            type="button"
+            className="btn btn-xs btn-circle btn-ghost"
+            onClick={onDone}
+            aria-label="Cerrar temporizador"
+          >
+            <span className="material-symbols-outlined text-sm">close</span>
+          </button>
+        </div>
+      </div>
+    );
+  }
+
   return (
-    <div className="fixed inset-0 bg-black/60 flex items-center justify-center z-50">
+    <div className="fixed inset-0 bg-black/60 flex items-center justify-center z-50 no-print">
       <div className="card bg-base-100 shadow-2xl w-80">
         <div className="card-body items-center text-center p-6">
           <h3 className="text-lg font-bold mb-1">⏱️ Descanso</h3>
@@ -162,6 +238,7 @@ export default function RestTimer({
                 type="button"
                 className="btn btn-circle"
                 onClick={() => setPaused(!paused)}
+                aria-label={paused ? 'Reanudar' : 'Pausar'}
               >
                 <span className="material-symbols-outlined">
                   {paused ? 'play_arrow' : 'pause'}
@@ -174,13 +251,26 @@ export default function RestTimer({
                   setSeconds(0);
                   setRunning(false);
                 }}
+                aria-label="Saltar descanso"
               >
                 <span className="material-symbols-outlined">skip_next</span>
               </button>
               <button
                 type="button"
                 className="btn btn-circle btn-ghost"
+                onClick={() => setMinimized(true)}
+                title="Minimizar (ver ejercicios)"
+                aria-label="Minimizar temporizador"
+              >
+                <span className="material-symbols-outlined">
+                  close_fullscreen
+                </span>
+              </button>
+              <button
+                type="button"
+                className="btn btn-circle btn-ghost"
                 onClick={onDone}
+                aria-label="Cerrar temporizador"
               >
                 <span className="material-symbols-outlined">close</span>
               </button>

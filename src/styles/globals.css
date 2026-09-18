@@ -264,3 +264,31 @@ pre code.hljs{display:block;overflow-x:auto;padding:1em}code.hljs{padding:3px 5p
 [data-theme="night"] .hljs-title.function_ {
   color: #d2a8ff;
 }
+
+/* Print optimizations for workout exporter */
+@media print {
+  header,
+  footer,
+  nav,
+  .no-print {
+    display: none !important;
+  }
+
+  body {
+    background: #ffffff !important;
+    color: #111111 !important;
+    font-size: 10.5pt !important;
+  }
+
+  .print-clean {
+    border: none !important;
+    box-shadow: none !important;
+    background: transparent !important;
+  }
+
+  .page-break-inside-avoid {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+}
+
