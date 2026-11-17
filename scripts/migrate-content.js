@@ -75,7 +75,7 @@ function transformFrontmatter(data, type) {
 /**
  * Transform image paths for Astro
  */
-function transformImagePath(imagePath) {
+export function transformImagePath(imagePath) {
   if (!imagePath || imagePath.startsWith('http')) {
     return imagePath;
   }
@@ -86,7 +86,7 @@ function transformImagePath(imagePath) {
   }
 
   if (imagePath.startsWith('../')) {
-    return imagePath.replace('../', '/');
+    return imagePath.replace(/^(\.\.\/)+/, '/');
   }
 
   // Ensure path starts with /
@@ -346,4 +346,6 @@ async function main() {
   console.log('3. Review migrated content for any manual adjustments needed');
 }
 
-main().catch(console.error);
+if (import.meta.url === `file://${process.argv[1]}`) {
+  main().catch(console.error);
+}

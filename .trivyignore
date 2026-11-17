@@ -1,0 +1,2 @@
+# picomatch <= 4.0.7 ReDoS (GHSA-fc5q-39xc-vjpf): no patched version published upstream yet; used only at static build/dev time on local repo paths.
+CVE-2026-112366
