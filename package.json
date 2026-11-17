@@ -1,7 +1,7 @@
 {
   "name": "icampana-blog",
   "type": "module",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "scripts": {
     "dev": "astro dev",
     "build": "pnpm run build:production",
@@ -43,7 +43,7 @@
     "translate:fr": "node scripts/translate-content.mjs --target fr"
   },
   "dependencies": {
-    "@astrojs/markdown-remark": "^7.2.0",
+    "@astrojs/markdown-remark": "^7.3.9",
     "@astrojs/mdx": "^7.0.0",
     "@astrojs/react": "^6.0.0",
     "@astrojs/rss": "^4.0.19",
@@ -51,11 +51,11 @@
     "@google/generative-ai": "^0.24.1",
     "@keystatic/astro": "^6.0.0",
     "@keystatic/core": "^0.6.7",
-    "astro": "^7.2.8",
+    "astro": "^7.4.12",
     "date-fns": "^4.4.0",
     "dotenv": "^17.4.2",
     "flexsearch": "^0.8.212",
-    "glob": "^13.0.6",
+    "glob": "^14.0.6",
     "gray-matter": "^4.0.3",
     "marked": "^18.0.5",
     "react": "^19.2.7",
@@ -67,7 +67,7 @@
     "remark-directive": "^4.0.0",
     "remark-emoji": "^5.0.2",
     "remark-gfm": "^4.0.1",
-    "sharp": "^0.35.4",
+    "sharp": "^0.35.5",
     "striptags": "^3.2.0",
     "theme-change": "^3.0.4",
     "ts-pattern": "^5.9.0",
@@ -82,12 +82,12 @@
     "@types/react": "^19.2.17",
     "@types/react-dom": "^19.2.3",
     "@vitejs/plugin-react": "^6.0.3",
-    "@vitest/coverage-v8": "^4.1.11",
+    "@vitest/coverage-v8": "^4.1.12",
     "daisyui": "^5.5.23",
     "jsdom": "^29.1.1",
     "tailwindcss": "^4.3.1",
     "typescript": "^5.9.3",
-    "vite": "^8.1.0",
-    "vitest": "^4.1.11"
+    "vite": "^8.3.8",
+    "vitest": "^4.1.12"
   }
 }
