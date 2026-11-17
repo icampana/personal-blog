@@ -1,4 +1,5 @@
 import { describe, expect, it } from 'vitest';
+import { transformImagePath } from '../../../scripts/migrate-content.js';
 import { resolveTarget } from '../../../scripts/migrate-layout.mjs';
 
 describe('resolveTarget', () => {
@@ -41,5 +42,16 @@ describe('resolveTarget', () => {
     // both map to es/foo.md -> collision must be caught by the caller
     expect(resolveTarget('foo.md')).toBe('es/foo.md');
     expect(resolveTarget('foo/index.md')).toBe('es/foo.md');
+  });
+});
+
+describe('transformImagePath', () => {
+  it('strips all leading ../ segments instead of only the first occurrence', () => {
+    expect(transformImagePath('../photos/2020/pic.png')).toBe(
+      '/photos/2020/pic.png',
+    );
+    expect(transformImagePath('../../photos/2020/pic.png')).toBe(
+      '/photos/2020/pic.png',
+    );
   });
 });
