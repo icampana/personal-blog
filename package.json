@@ -51,7 +51,7 @@
     "@google/generative-ai": "^0.24.1",
     "@keystatic/astro": "^6.0.0",
     "@keystatic/core": "^0.6.9",
-    "astro": "^7.4.12",
+    "astro": "^7.4.13",
     "date-fns": "^4.4.0",
     "dotenv": "^18.0.10",
     "flexsearch": "^0.8.212",
