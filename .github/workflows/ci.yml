@@ -196,7 +196,7 @@ jobs:
           path: ./dist
 
       - name: Deploy to Netlify Preview
-        uses: nwtgck/actions-netlify@v3.0
+        uses: nwtgck/actions-netlify@v4.0
         with:
           publish-dir: './dist'
           github-token: ${{ secrets.GITHUB_TOKEN }}
@@ -236,7 +236,7 @@ jobs:
         run: pnpm run build:production
 
       - name: Deploy to Netlify Production
-        uses: nwtgck/actions-netlify@v3.0
+        uses: nwtgck/actions-netlify@v4.0
         with:
           publish-dir: './dist'
           production-branch: main
