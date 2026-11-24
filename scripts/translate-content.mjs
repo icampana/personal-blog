@@ -1,7 +1,7 @@
 import fs from 'fs/promises';
 import path from 'path';
 import matter from 'gray-matter';
-import { GoogleGenerativeAI } from '@google/generative-ai';
+import { GoogleGenAI } from '@google/genai';
 import dotenv from 'dotenv';
 import { glob } from 'glob';
 
@@ -23,9 +23,9 @@ if (!API_KEY) {
   process.exit(1);
 }
 
-const genAI = new GoogleGenerativeAI(API_KEY);
+const ai = new GoogleGenAI({ apiKey: API_KEY });
 // Using Gemini 2.5 Flash
-const model = genAI.getGenerativeModel({ model: 'gemini-2.5-flash' });
+const MODEL_NAME = 'gemini-2.5-flash';
 
 // Date filter: only translate content from 2022 onwards
 const DATE_CUTOFF = new Date('2022-01-01');
@@ -113,8 +113,11 @@ async function translateFile(filePath, targetLang) {
     const prompt = `${PROMPTS[targetLang]}\n\n${fileContent}`;
 
     try {
-      const result = await model.generateContent(prompt);
-      let translatedContent = result.response.text();
+      const result = await ai.models.generateContent({
+        model: MODEL_NAME,
+        contents: prompt,
+      });
+      let translatedContent = result.text;
 
       // Validate that we got content back
       if (!translatedContent || translatedContent.length < 10) {
